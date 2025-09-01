@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Amidone Grotesk Cut";
+  src: url("./assets/fonts/AmidoneGrotesk.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amidone Grotesk Cut", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.LandingPage {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1e1e1e;
+  background-image: url("./assets/images/book.png");
+  background-size: 650px;
+  background-repeat: no-repeat;
+  background-position-x: 550px;
+  background-position-y: 50px;
+}
+
+.auth {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1e1e1e;
+  overflow: hidden;
+}
+
+/* Sliding background image */
+.auth::before {
+  content: "";
+  position: absolute;
+  bottom: -700px; /* start offscreen */
+  left: 85px; /* same as your original x position */
+  width: 650px;
+  height: 650px;
+  background-image: url("./assets/images/blding.png");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: slideUp 1.5s ease forwards;
+}
+
+/* Content fade-in */
+.auth-content {
+  opacity: 0;
+  transform: translateY(-30px); /* slight move from bottom */
+  animation: fadeInUp 4s ease forwards;
+  animation-delay: 0.5s; /* starts after image starts moving */
+}
+
+/* Keyframes for image slide up */
+@keyframes slideUp {
+  to {
+    bottom: 40px; /* final y position */
+  }
+}
+
+/* Keyframes for content fade-in */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bs {
+  color: #dad7b6;
+  font-size: 440px;
+  position: absolute;
+  left: 120px;
+  top: 40px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.quote {
+  color: #dad7b6;
+  font-size: 28px;
+  position: absolute;
+  top: 45px;
+  left: 220px;
+}
+
+.companion {
+  color: #faf9f6;
+  font-size: 100px;
+  position: absolute;
+  left: 380px;
+  bottom: 147px !important;
+}
+
+.button {
+  position: absolute;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #faf9f6;
+  border: 4px solid #dad7b6;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 0;
+  height: 0;
+  background-color: #dad7b6;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.button:hover {
+  color: #545334;
+}
+
+.sentence {
+  color: #faf9f6;
+  position: absolute;
+  font-size: 28px;
+  top: 240px;
+  right: 110px;
+}
+
+.floating-element {
+  position: absolute;
+  z-index: 0;
+  animation: floatSail 12s ease-in-out infinite alternate;
+}
+
+.floating-element img {
+  display: block;
+  width: 70px; /* default size, override inline if needed */
+  height: auto;
+}
+
+/* Subtle, peaceful float */
+@keyframes floatSail {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(3px, -5px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-3px, 3px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(2px, -2px) rotate(0.5deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
