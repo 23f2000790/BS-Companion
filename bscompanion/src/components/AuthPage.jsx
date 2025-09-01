@@ -98,9 +98,15 @@ const AuthPage = () => {
 
   return (
     <div className="auth">
+      {/* Floating elements with slide animations */}
       <div
-        className="floating-element"
-        style={{ bottom: "50px", left: "140px", animationDuration: "12s" }}
+        className="floating-element slide-left"
+        style={{
+          bottom: "50px",
+          left: "140px",
+          animationDuration: "7s",
+          animationDelay: "0.2s",
+        }}
       >
         <img
           src={benchele}
@@ -108,9 +114,15 @@ const AuthPage = () => {
           style={{ width: "80px", height: "auto" }}
         />
       </div>
+
       <div
-        className="floating-element"
-        style={{ top: "100px", right: "150px", animationDuration: "15s" }}
+        className="floating-element slide-right"
+        style={{
+          top: "100px",
+          right: "150px",
+          animationDuration: "5s",
+          animationDelay: "0.4s",
+        }}
       >
         <img
           src={bookele}
@@ -118,9 +130,15 @@ const AuthPage = () => {
           style={{ width: "90px", height: "auto" }}
         />
       </div>
+
       <div
-        className="floating-element"
-        style={{ top: "50px", left: "100px", animationDuration: "13s" }}
+        className="floating-element slide-left"
+        style={{
+          top: "50px",
+          left: "100px",
+          animationDuration: "6s",
+          animationDelay: "0.6s",
+        }}
       >
         <img
           src={clockele}
@@ -128,9 +146,15 @@ const AuthPage = () => {
           style={{ width: "70px", height: "auto" }}
         />
       </div>
+
       <div
-        className="floating-element"
-        style={{ top: "140px", left: "690px", animationDuration: "14s" }}
+        className="floating-element slide-right"
+        style={{
+          top: "140px",
+          left: "690px",
+          animationDuration: "4s",
+          animationDelay: "0.8s",
+        }}
       >
         <img
           src={diceele}
@@ -138,9 +162,15 @@ const AuthPage = () => {
           style={{ width: "120px", height: "auto" }}
         />
       </div>
+
       <div
-        className="floating-element"
-        style={{ top: "370px", right: "220px", animationDuration: "16s" }}
+        className="floating-element slide-right"
+        style={{
+          top: "370px",
+          right: "220px",
+          animationDuration: "8s",
+          animationDelay: "1s",
+        }}
       >
         <img
           src={flowerele}
@@ -148,9 +178,15 @@ const AuthPage = () => {
           style={{ width: "75px", height: "auto" }}
         />
       </div>
+
       <div
-        className="floating-element"
-        style={{ top: "500px", left: "750px", animationDuration: "18s" }}
+        className="floating-element slide-right"
+        style={{
+          top: "500px",
+          left: "750px",
+          animationDuration: "9s",
+          animationDelay: "1.2s",
+        }}
       >
         <img
           src={paperele}
@@ -158,9 +194,15 @@ const AuthPage = () => {
           style={{ width: "65px", height: "auto" }}
         />
       </div>
+
       <div
-        className="floating-element"
-        style={{ bottom: "40px", right: "360px", animationDuration: "20s" }}
+        className="floating-element slide-right"
+        style={{
+          bottom: "40px",
+          right: "360px",
+          animationDuration: "10s",
+          animationDelay: "1.4s",
+        }}
       >
         <img
           src={penele}
@@ -169,6 +211,7 @@ const AuthPage = () => {
         />
       </div>
 
+      {/* Back button */}
       <button
         className="button"
         onClick={() => navigate("/")}
@@ -185,6 +228,7 @@ const AuthPage = () => {
         <IoIosArrowBack style={{ fontSize: "1.5rem" }} />
       </button>
 
+      {/* Auth content */}
       <div
         className="auth-content"
         style={{

@@ -16,17 +16,29 @@ html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/images/book.png");
+  background-color: #1e1e1e;
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position-x: 360px;
+  background-position-y: 200px;
 }
 
 .LandingPage {
   min-height: 100vh;
   width: 100%;
-  background-color: #1e1e1e;
-  background-image: url("./assets/images/book.png");
-  background-size: 650px;
-  background-repeat: no-repeat;
-  background-position-x: 550px;
-  background-position-y: 50px;
+  padding-top: 120px;
+  background: transparent;
+}
+
+.page2 {
+  min-height: 100vh;
+  overflow: visible;
+  width: 100%;
+  background: transparent;
 }
 
 .auth {
@@ -156,16 +168,38 @@ body {
 .floating-element {
   position: absolute;
   z-index: 0;
+  opacity: 0; /* start hidden */
+  transform: translateX(var(--slideX, 0)) translateY(0);
   animation: floatSail 12s ease-in-out infinite alternate;
 }
 
-.floating-element img {
-  display: block;
-  width: 70px; /* default size, override inline if needed */
-  height: auto;
+/* Left-side elements slide in from left */
+.floating-element.slide-left {
+  --slideX: -100px;
+  animation: slideIn 1s ease forwards,
+    floatSail 12s ease-in-out infinite alternate;
 }
 
-/* Subtle, peaceful float */
+/* Right-side elements slide in from right */
+.floating-element.slide-right {
+  --slideX: 100px;
+  animation: slideIn 1s ease forwards,
+    floatSail 12s ease-in-out infinite alternate;
+}
+
+/* Slide-in animation using CSS variable */
+@keyframes slideIn {
+  0% {
+    transform: translateX(var(--slideX)) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Floating animation stays the same, relative to current position */
 @keyframes floatSail {
   0% {
     transform: translate(0px, 0px) rotate(0deg);

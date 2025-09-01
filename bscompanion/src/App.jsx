@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Router>
       <div data-scroll-container>
-        <div data-scroll-section>
+        <div data-scroll data-scroll-section>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/auth" element={<AuthPage />} />

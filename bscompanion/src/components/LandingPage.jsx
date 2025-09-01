@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Spline from "@splinetool/react-spline";
 
 // Helper function to decode JWT
 const isTokenValid = (token) => {
@@ -39,24 +40,8 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="LandingPage">
-      <div style={{ position: "absolute", left: 120, top: 40 }}>
-        <h1 className="bs" style={{ position: "relative", left: 0, top: 0 }}>
-          BS
-        </h1>
-        <h3
-          className="companion"
-          style={{
-            position: "relative",
-            left: 260,
-            bottom: 100,
-          }}
-        >
-          Companion
-        </h3>
-      </div>
-
-      <div className="navbar">
+    <div>
+      <div className="navbar" style={{ zIndex: 2 }}>
         <button
           className="button"
           style={{ top: 40, right: 30 }}
@@ -79,21 +64,73 @@ const LandingPage = () => {
         >
           &ensp;BS Documents&ensp;
         </button>
-        <h3 className="quote">Practice. Connect. Grow.</h3>
       </div>
+      <div className="LandingPage">
+        <h3 className="quote">Practice. Connect. Grow.</h3>
+        <div style={{ position: "absolute", left: 120, top: 40 }}>
+          <h1 className="bs" style={{ position: "relative", left: 0, top: 0 }}>
+            BS
+          </h1>
+          <h3
+            className="companion"
+            style={{
+              position: "relative",
+              left: 260,
+              bottom: 100,
+            }}
+          >
+            Companion
+          </h3>
+        </div>
 
-      <h3 style={{ textAlign: "center" }} className="sentence">
-        <strong>
-          One-Stop Platform
-          <br />
-          for your
-          <br />
-          BS Data Science
-          <br />
-          Academics and
-          <br /> Connections.
-        </strong>
-      </h3>
+        <h3 style={{ textAlign: "center" }} className="sentence">
+          <strong>
+            One-Stop Platform
+            <br />
+            for your
+            <br />
+            BS Data Science
+            <br />
+            Academics and
+            <br /> Connections.
+          </strong>
+        </h3>
+      </div>
+      <div
+        className="page2"
+        style={{
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        {/* <div
+          style={{
+            backgroundColor: "#1e1e1e",
+            position: "absolute",
+            top: "2090px",
+            left: "750px",
+            width: "160px",
+            height: "60px",
+            zIndex: 2,
+          }}
+        ></div> */}
+
+        <iframe
+          src="https://my.spline.design/particles-IG4AV43mOynm3aZRSOaygiO3/"
+          frameBorder="0"
+          style={{
+            border: "none",
+            position: "absolute",
+            top: "1600px",
+            left: "0px",
+            width: "60%",
+            height: "80%",
+          }}
+          title="Spline 3D Scene"
+        ></iframe>
+      </div>
+      <div style={{ height: "100vh" }}></div>
+      <div style={{ height: "100vh" }}></div>
     </div>
   );
 };
