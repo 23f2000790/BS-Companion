@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dicebear/core": "^9.2.4",
+    "@dicebear/lorelei": "^9.2.4",
     "@google/model-viewer": "^4.1.0",
     "@splinetool/react-spline": "^4.1.0",
     "axios": "^1.11.0",

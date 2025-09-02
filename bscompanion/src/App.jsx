@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import "./index.css";
 import LocomotiveScroll from "locomotive-scroll";
-import LandingPage from "./components/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AuthPage from "./components/AuthPage";
-import Dashboard from "./components/Dashboard";
-import Onboarding from "./components/Onboarding";
+
+// Lazy load components
+const LandingPage = lazy(() => import("./components/LandingPage"));
+const AuthPage = lazy(() => import("./components/AuthPage"));
+const Dashboard = lazy(() => import("./components/Dashboard"));
+const Onboarding = lazy(() => import("./components/Onboarding"));
 
 const App = () => {
   useEffect(() => {
@@ -21,12 +23,22 @@ const App = () => {
     <Router>
       <div data-scroll-container>
         <div data-scroll data-scroll-section>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/auth" element={<AuthPage />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/onboarding" element={<Onboarding />} />
-          </Routes>
+          {/* Suspense will show fallback until lazy components load */}
+          <Suspense
+            fallback={
+              <div className="loader-container">
+                <div className="spinner"></div>
+                <h3 className="loading-text">Loading...</h3>
+              </div>
+            }
+          >
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/auth" element={<AuthPage />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/onboarding" element={<Onboarding />} />
+            </Routes>
+          </Suspense>
         </div>
       </div>
     </Router>

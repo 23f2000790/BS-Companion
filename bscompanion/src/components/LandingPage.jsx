@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Spline from "@splinetool/react-spline";
 
@@ -17,16 +17,28 @@ const isTokenValid = (token) => {
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const [checkingAuth, setCheckingAuth] = useState(true);
 
-  // Redirect if user is already logged in and token is valid
   useEffect(() => {
+    // Check if we already verified auth in this session
+    const alreadyChecked = sessionStorage.getItem("authChecked");
+
+    if (alreadyChecked) {
+      setCheckingAuth(false);
+      return;
+    }
+
     const token = localStorage.getItem("token");
+
     if (token && isTokenValid(token)) {
       navigate("/dashboard");
     } else {
-      // Remove invalid or expired token
       localStorage.removeItem("token");
       localStorage.removeItem("user");
+      setTimeout(() => {
+        setCheckingAuth(false);
+        sessionStorage.setItem("authChecked", "true"); // Mark as done
+      }, 800);
     }
   }, [navigate]);
 
@@ -38,6 +50,16 @@ const LandingPage = () => {
     button.style.setProperty("--x", `${x}px`);
     button.style.setProperty("--y", `${y}px`);
   };
+
+  // ✅ Show loader until auth check is done
+  if (checkingAuth) {
+    return (
+      <div className="loader-container">
+        <div className="spinner"></div>
+        <h3 className="loading-text">Checking Authentication...</h3>
+      </div>
+    );
+  }
 
   return (
     <div className="landing">
@@ -103,18 +125,6 @@ const LandingPage = () => {
           height: "100vh",
         }}
       >
-        {/* <div
-          style={{
-            backgroundColor: "#1e1e1e",
-            position: "absolute",
-            top: "2090px",
-            left: "750px",
-            width: "160px",
-            height: "60px",
-            zIndex: 2,
-          }}
-        ></div> */}
-
         <iframe
           src="https://my.spline.design/particles-IG4AV43mOynm3aZRSOaygiO3/"
           frameBorder="0"

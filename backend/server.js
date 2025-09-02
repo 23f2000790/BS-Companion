@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import User from "./models/User.js";
+import { verifyToken } from "./middleware/auth.js";
 
 dotenv.config();
 const app = express();
@@ -104,6 +105,51 @@ app.get("/getuser", async (req, res) => {
     res.json(user);
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+// -------------------- User Onboarding --------------------
+app.post("/useronboarding", verifyToken, async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const {
+      username,
+      avatar,
+      gender,
+      state,
+      city,
+      bloodGroup,
+      currentLevel,
+      subjects,
+    } = req.body;
+
+    // Update user details
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      {
+        name: username,
+        avatar,
+        gender,
+        state,
+        city,
+        bloodGroup,
+        currentLevel,
+        subjects,
+      },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json({
+      message: "Onboarding completed successfully",
+      user: updatedUser,
+    });
+  } catch (err) {
+    console.error("Error in onboarding:", err);
+    res.status(500).json({ message: "Server error" });
   }
 });
 

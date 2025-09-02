@@ -6,6 +6,13 @@ const userSchema = new mongoose.Schema({
   password: String,
   photoURL: String,
   googleId: { type: String, unique: true, sparse: true },
+  avatar: String,
+  gender: String,
+  state: String,
+  city: String,
+  bloodGroup: String,
+  currentLevel: String,
+  subjects: [String],
 });
 
 export default mongoose.model("User", userSchema);
