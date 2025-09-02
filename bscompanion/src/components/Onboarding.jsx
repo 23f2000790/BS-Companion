@@ -111,163 +111,166 @@ const Onboarding = () => {
 
   return (
     <div className="onboarding">
-      <div
-        style={{ padding: "30px", display: "flex", justifyContent: "center" }}
-      >
-        <div style={{ width: "450px" }}>
-          <h1 style={{ marginBottom: "20px" }}>
-            Welcome! Tell us more about you
-          </h1>
-          <form
-            onSubmit={handleSubmit}
-            style={{ display: "flex", flexDirection: "column", gap: "15px" }}
-          >
-            {/* Username */}
-            <input
-              type="text"
-              placeholder="How would you like to be called?"
-              value={form.username}
-              onChange={(e) => setForm({ ...form, username: e.target.value })}
-              className="input-box"
-              required
-            />
-
-            {/* State Dropdown */}
-            <select
-              value={form.state}
-              onChange={(e) =>
-                setForm({ ...form, state: e.target.value, city: "" })
-              }
-              className="input-box"
+      <div className="onboarding-wrapper">
+        <div
+          style={{ padding: "30px", display: "flex", justifyContent: "center" }}
+          className="onboarding-form"
+        >
+          <div style={{ width: "450px" }}>
+            <h1 style={{ marginBottom: "20px", color: "#dad8b6" }}>
+              Welcome! Tell us more about you
+            </h1>
+            <form
+              onSubmit={handleSubmit}
+              style={{ display: "flex", flexDirection: "column", gap: "15px" }}
             >
-              <option value="">Select State / UT</option>
-              {loadingStates ? (
-                <option>Loading...</option>
-              ) : (
-                states.map((state) => (
-                  <option key={state.iso2} value={state.iso2}>
-                    {state.name}
-                  </option>
-                ))
-              )}
-            </select>
-
-            {/* City Dropdown */}
-            <select
-              value={form.city}
-              onChange={(e) => setForm({ ...form, city: e.target.value })}
-              className="input-box"
-              disabled={!form.state}
-            >
-              <option value="">
-                {loadingCities
-                  ? "Loading..."
-                  : form.state
-                  ? "Select City / Town"
-                  : "Select State First"}
-              </option>
-              {cities.map((city) => (
-                <option key={city.id} value={city.name}>
-                  {city.name}
-                </option>
-              ))}
-            </select>
-
-            {/* Current Level */}
-            <select
-              value={form.currentLevel}
-              onChange={(e) =>
-                setForm({
-                  ...form,
-                  currentLevel: e.target.value,
-                  subjects: [],
-                })
-              }
-              className="input-box"
-              required
-            >
-              <option value="">Select Current Level</option>
-              {Object.keys(levels).map((level) => (
-                <option key={level} value={level}>
-                  {level}
-                </option>
-              ))}
-            </select>
-
-            {/* Subjects */}
-            {form.currentLevel && (
-              <div>
-                <p style={{ marginBottom: "5px" }}>Subjects Opted:</p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "5px",
-                    marginLeft: "5px",
-                  }}
-                >
-                  {levels[form.currentLevel].map((subject) => (
-                    <label key={subject} style={{ cursor: "pointer" }}>
-                      <input
-                        type="checkbox"
-                        value={subject}
-                        checked={form.subjects.includes(subject)}
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setForm({
-                              ...form,
-                              subjects: [...form.subjects, subject],
-                            });
-                          } else {
-                            setForm({
-                              ...form,
-                              subjects: form.subjects.filter(
-                                (s) => s !== subject
-                              ),
-                            });
-                          }
-                        }}
-                      />{" "}
-                      {subject}
-                    </label>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Blood Group + Info Tooltip */}
-            <div className="blood-container">
-              <select
-                value={form.bloodGroup}
-                onChange={(e) =>
-                  setForm({ ...form, bloodGroup: e.target.value })
-                }
+              {/* Username */}
+              <input
+                type="text"
+                placeholder="How would you like to be called?"
+                value={form.username}
+                onChange={(e) => setForm({ ...form, username: e.target.value })}
                 className="input-box"
                 required
+              />
+
+              {/* State Dropdown */}
+              <select
+                value={form.state}
+                onChange={(e) =>
+                  setForm({ ...form, state: e.target.value, city: "" })
+                }
+                className="input-box"
               >
-                <option value="">Select Blood Group</option>
-                {bloodGroups.map((group) => (
-                  <option key={group} value={group}>
-                    {group}
+                <option value="">Select State / UT</option>
+                {loadingStates ? (
+                  <option>Loading...</option>
+                ) : (
+                  states.map((state) => (
+                    <option key={state.iso2} value={state.iso2}>
+                      {state.name}
+                    </option>
+                  ))
+                )}
+              </select>
+
+              {/* City Dropdown */}
+              <select
+                value={form.city}
+                onChange={(e) => setForm({ ...form, city: e.target.value })}
+                className="input-box"
+                disabled={!form.state}
+              >
+                <option value="">
+                  {loadingCities
+                    ? "Loading..."
+                    : form.state
+                    ? "Select City / Town"
+                    : "Select State First"}
+                </option>
+                {cities.map((city) => (
+                  <option key={city.id} value={city.name}>
+                    {city.name}
                   </option>
                 ))}
               </select>
 
-              {/* Tooltip */}
-              <div className="tooltip-container">
-                <div className="tooltip-icon">i</div>
-                <span className="tooltip-text">
-                  We ask this so that in case of an emergency, users from your
-                  city with the same blood group can be notified.
-                </span>
-              </div>
-            </div>
+              {/* Current Level */}
+              <select
+                value={form.currentLevel}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    currentLevel: e.target.value,
+                    subjects: [],
+                  })
+                }
+                className="input-box"
+                required
+              >
+                <option value="">Select Current Level</option>
+                {Object.keys(levels).map((level) => (
+                  <option key={level} value={level}>
+                    {level}
+                  </option>
+                ))}
+              </select>
 
-            {/* Submit Button */}
-            <button type="submit" className="submit-btn">
-              Continue
-            </button>
-          </form>
+              {/* Subjects */}
+              {form.currentLevel && (
+                <div style={{ color: "#dad8b6" }}>
+                  <p style={{ marginBottom: "5px" }}>Subjects Opted:</p>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "5px",
+                      marginLeft: "5px",
+                    }}
+                  >
+                    {levels[form.currentLevel].map((subject) => (
+                      <label key={subject} style={{ cursor: "pointer" }}>
+                        <input
+                          type="checkbox"
+                          value={subject}
+                          checked={form.subjects.includes(subject)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setForm({
+                                ...form,
+                                subjects: [...form.subjects, subject],
+                              });
+                            } else {
+                              setForm({
+                                ...form,
+                                subjects: form.subjects.filter(
+                                  (s) => s !== subject
+                                ),
+                              });
+                            }
+                          }}
+                        />{" "}
+                        {subject}
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Blood Group + Info Tooltip */}
+              <div className="blood-container">
+                <select
+                  value={form.bloodGroup}
+                  onChange={(e) =>
+                    setForm({ ...form, bloodGroup: e.target.value })
+                  }
+                  className="input-box"
+                  required
+                >
+                  <option value="">Select Blood Group</option>
+                  {bloodGroups.map((group) => (
+                    <option key={group} value={group}>
+                      {group}
+                    </option>
+                  ))}
+                </select>
+
+                {/* Tooltip */}
+                <div className="tooltip-container">
+                  <div className="tooltip-icon">i</div>
+                  <span className="tooltip-text">
+                    We ask this so that in case of an emergency, users from your
+                    city with the same blood group can be notified.
+                  </span>
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <button type="submit" className="submit-btn">
+                Continue
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
