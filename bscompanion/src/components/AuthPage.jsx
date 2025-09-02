@@ -47,10 +47,14 @@ const AuthPage = () => {
         photoURL,
       });
 
-      const { token, user } = res.data;
+      const { token, user, isNew } = res.data;
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
-      navigate("/profile");
+      if (isNew) {
+        navigate("/onboarding");
+      } else {
+        navigate("/dashboard");
+      }
     } catch (err) {
       console.error(err.response?.data || err.message);
       setError("Google sign-in failed. Try again.");
@@ -83,11 +87,15 @@ const AuthPage = () => {
           : "http://localhost:5000/auth/login";
 
       const res = await axios.post(url, { name, email, password });
-      const { token, user } = res.data;
+      const { token, user, isNew } = res.data;
 
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
-      navigate("/profile");
+      if (isNew) {
+        navigate("/onboarding");
+      } else {
+        navigate("/dashboard");
+      }
     } catch (err) {
       console.error(err.response?.data || err.message);
       setError(err.response?.data?.message || "Authentication failed.");

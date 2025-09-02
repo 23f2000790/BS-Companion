@@ -34,7 +34,7 @@ app.post("/auth/register", async (req, res) => {
       expiresIn: "7d",
     });
 
-    res.json({ token, user });
+    res.json({ token, user, isNew: true });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
@@ -69,11 +69,13 @@ app.post("/auth/google", async (req, res) => {
     const { name, email, photoURL } = req.body;
 
     let user = await User.findOne({ email });
+    let isNew = false;
 
     // Create user if not exists
     if (!user) {
       user = new User({ name, email, photoURL });
       await user.save();
+      isNew = true;
     }
 
     // Create JWT
@@ -81,10 +83,27 @@ app.post("/auth/google", async (req, res) => {
       expiresIn: "7d",
     });
 
-    res.json({ token, user });
+    res.json({ token, user, isNew });
   } catch (error) {
     console.error("Error in Google Auth:", error);
     res.status(500).json({ message: "Server error" });
+  }
+});
+
+// -------------------- Fetch User --------------------
+app.get("/getuser", async (req, res) => {
+  try {
+    const authHeader = req.headers["authorization"];
+    if (!authHeader) return res.status(401).json({ message: "No token" });
+
+    const token = authHeader.split(" ")[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const user = await User.findById(decoded.id);
+    if (!user) return res.status(404).json({ message: "User not found" });
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
 });
 

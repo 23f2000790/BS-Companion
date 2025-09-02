@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const ProfilePage = () => {
+const Dashboard = () => {
   const navigate = useNavigate();
 
   const LogoutUser = () => {
@@ -11,13 +11,16 @@ const ProfilePage = () => {
     navigate("/");
   };
 
-  const getProfile = async () => {
+  const getUser = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/profile", {
+      const res = await axios.get("http://localhost:5000/getuser", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      console.log("Profile:", res.data);
+      const email = res.data.email;
+      const username = res.data.name;
+      const userid = res.data._id;
+      console.log(email, username, userid);
     } catch (err) {
       console.error(
         "Error fetching profile:",
@@ -27,7 +30,7 @@ const ProfilePage = () => {
   };
 
   useEffect(() => {
-    getProfile();
+    getUser();
   }, []);
 
   return (
@@ -39,4 +42,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default Dashboard;

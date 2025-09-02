@@ -4,7 +4,8 @@ import LocomotiveScroll from "locomotive-scroll";
 import LandingPage from "./components/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AuthPage from "./components/AuthPage";
-import ProfilePage from "./components/ProfilePage";
+import Dashboard from "./components/Dashboard";
+import Onboarding from "./components/Onboarding";
 
 const App = () => {
   useEffect(() => {
@@ -23,7 +24,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/auth" element={<AuthPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/onboarding" element={<Onboarding />} />
           </Routes>
         </div>
       </div>

@@ -22,7 +22,7 @@ const LandingPage = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token && isTokenValid(token)) {
-      navigate("/profile");
+      navigate("/dashboard");
     } else {
       // Remove invalid or expired token
       localStorage.removeItem("token");
@@ -40,7 +40,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div>
+    <div className="landing">
       <div className="navbar" style={{ zIndex: 2 }}>
         <button
           className="button"
@@ -122,9 +122,11 @@ const LandingPage = () => {
             border: "none",
             position: "absolute",
             top: "1600px",
-            left: "0px",
+            left: "-200px",
             width: "60%",
             height: "80%",
+            transform: "scale(1.2)",
+            transformOrigin: "top left",
           }}
           title="Spline 3D Scene"
         ></iframe>

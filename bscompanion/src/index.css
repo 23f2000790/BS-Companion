@@ -18,6 +18,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.landing {
   background-image: url("./assets/images/book.png");
   background-color: #1e1e1e;
   background-size: 1000px;
