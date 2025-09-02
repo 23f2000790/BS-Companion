@@ -72,7 +72,7 @@ body {
   opacity: 0;
   transform: translateY(-30px); /* slight move from bottom */
   animation: fadeInUp 4s ease forwards;
-  animation-delay: 0.5s; /* starts after image starts moving */
+  animation-delay: 0.3s; /* starts after image starts moving */
 }
 
 /* Keyframes for image slide up */
@@ -363,4 +363,18 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.onboarding {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1e1e1e;
+  overflow: hidden;
+  background-image: url("./assets/images/plane.png");
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: 52rem;
+  background-position-x: 650px;
+  background-position-y: -80px;
 }

@@ -102,7 +102,7 @@ app.get("/getuser", async (req, res) => {
 
     const user = await User.findById(decoded.id);
     if (!user) return res.status(404).json({ message: "User not found" });
-    res.json(user);
+    res.json({ user, needsOnboarding: !user.onboardingCompleted });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -135,6 +135,7 @@ app.post("/useronboarding", verifyToken, async (req, res) => {
         bloodGroup,
         currentLevel,
         subjects,
+        onboardingCompleted: true,
       },
       { new: true, runValidators: true }
     );

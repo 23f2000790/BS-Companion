@@ -2,8 +2,8 @@ import React, { useEffect, Suspense, lazy } from "react";
 import "./index.css";
 import LocomotiveScroll from "locomotive-scroll";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
 
-// Lazy load components
 const LandingPage = lazy(() => import("./components/LandingPage"));
 const AuthPage = lazy(() => import("./components/AuthPage"));
 const Dashboard = lazy(() => import("./components/Dashboard"));
@@ -21,26 +21,39 @@ const App = () => {
 
   return (
     <Router>
-      <div data-scroll-container>
-        <div data-scroll data-scroll-section>
-          {/* Suspense will show fallback until lazy components load */}
-          <Suspense
-            fallback={
-              <div className="loader-container">
-                <div className="spinner"></div>
-                <h3 className="loading-text">Loading...</h3>
-              </div>
-            }
-          >
+      <Suspense
+        fallback={
+          <div className="loader-container">
+            <div className="spinner"></div>
+            <h3 className="loading-text">Loading...</h3>
+          </div>
+        }
+      >
+        <div data-scroll-container>
+          <div data-scroll data-scroll-section>
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/auth" element={<AuthPage />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/onboarding" element={<Onboarding />} />
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute requireOnboardingComplete={true}>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/onboarding"
+                element={
+                  <ProtectedRoute requireOnboardingComplete={false}>
+                    <Onboarding />
+                  </ProtectedRoute>
+                }
+              />
             </Routes>
-          </Suspense>
+          </div>
         </div>
-      </div>
+      </Suspense>
     </Router>
   );
 };

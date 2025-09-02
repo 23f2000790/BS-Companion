@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import Spline from "@splinetool/react-spline";
 
-// Helper function to decode JWT
+// Helper: decode JWT and check expiry
 const isTokenValid = (token) => {
   if (!token) return false;
   try {
     const payload = JSON.parse(atob(token.split(".")[1]));
-    const currentTime = Date.now() / 1000; // in seconds
+    const currentTime = Date.now() / 1000;
     return payload.exp > currentTime;
   } catch (err) {
     console.error("Invalid token:", err);
@@ -20,26 +21,35 @@ const LandingPage = () => {
   const [checkingAuth, setCheckingAuth] = useState(true);
 
   useEffect(() => {
-    // Check if we already verified auth in this session
-    const alreadyChecked = sessionStorage.getItem("authChecked");
+    const checkAuthAndOnboarding = async () => {
+      const token = localStorage.getItem("token");
 
-    if (alreadyChecked) {
-      setCheckingAuth(false);
-      return;
-    }
+      if (token && isTokenValid(token)) {
+        try {
+          const res = await axios.get("http://localhost:5000/getuser", {
+            headers: { Authorization: `Bearer ${token}` },
+          });
 
-    const token = localStorage.getItem("token");
-
-    if (token && isTokenValid(token)) {
-      navigate("/dashboard");
-    } else {
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
-      setTimeout(() => {
+          if (res.data.needsOnboarding) {
+            navigate("/onboarding");
+          } else {
+            navigate("/dashboard");
+          }
+        } catch (err) {
+          console.error("Error fetching user:", err);
+          localStorage.removeItem("token");
+          localStorage.removeItem("user");
+          setCheckingAuth(false);
+        }
+      } else {
+        // No valid token → show landing page
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
         setCheckingAuth(false);
-        sessionStorage.setItem("authChecked", "true"); // Mark as done
-      }, 800);
-    }
+      }
+    };
+
+    checkAuthAndOnboarding();
   }, [navigate]);
 
   const handleMouseMove = (e) => {
@@ -51,7 +61,6 @@ const LandingPage = () => {
     button.style.setProperty("--y", `${y}px`);
   };
 
-  // ✅ Show loader until auth check is done
   if (checkingAuth) {
     return (
       <div className="loader-container">
@@ -87,6 +96,7 @@ const LandingPage = () => {
           &ensp;BS Documents&ensp;
         </button>
       </div>
+
       <div className="LandingPage">
         <h3 className="quote">Practice. Connect. Grow.</h3>
         <div style={{ position: "absolute", left: 120, top: 40 }}>
@@ -118,6 +128,7 @@ const LandingPage = () => {
           </strong>
         </h3>
       </div>
+
       <div
         className="page2"
         style={{
@@ -141,6 +152,7 @@ const LandingPage = () => {
           title="Spline 3D Scene"
         ></iframe>
       </div>
+
       <div style={{ height: "100vh" }}></div>
       <div style={{ height: "100vh" }}></div>
     </div>

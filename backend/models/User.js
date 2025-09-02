@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema({
   bloodGroup: String,
   currentLevel: String,
   subjects: [String],
+  onboardingCompleted: { type: Boolean, default: false },
 });
 
 export default mongoose.model("User", userSchema);

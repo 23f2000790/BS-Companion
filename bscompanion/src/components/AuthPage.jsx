@@ -25,13 +25,34 @@ const AuthPage = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [activeTab, setActiveTab] = useState("login"); // 'login' or 'register'
-  const [hoveredTab, setHoveredTab] = useState(null); // track hovered tab button
+  const [activeTab, setActiveTab] = useState("login");
+  const [hoveredTab, setHoveredTab] = useState(null);
 
   // Email/password state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // Common success handler
+  const handleAuthSuccess = async (token, user) => {
+    localStorage.setItem("token", token);
+    localStorage.setItem("user", JSON.stringify(user));
+
+    try {
+      const checkRes = await axios.get("http://localhost:5000/getuser", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      if (checkRes.data.needsOnboarding) {
+        navigate("/onboarding");
+      } else {
+        navigate("/dashboard");
+      }
+    } catch (err) {
+      console.error("Failed to verify onboarding state:", err);
+      navigate("/auth");
+    }
+  };
 
   // Google sign-in
   const handleGoogleSignIn = async () => {
@@ -47,14 +68,8 @@ const AuthPage = () => {
         photoURL,
       });
 
-      const { token, user, isNew } = res.data;
-      localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
-      if (isNew) {
-        navigate("/onboarding");
-      } else {
-        navigate("/dashboard");
-      }
+      const { token, user } = res.data;
+      await handleAuthSuccess(token, user);
     } catch (err) {
       console.error(err.response?.data || err.message);
       setError("Google sign-in failed. Try again.");
@@ -87,15 +102,8 @@ const AuthPage = () => {
           : "http://localhost:5000/auth/login";
 
       const res = await axios.post(url, { name, email, password });
-      const { token, user, isNew } = res.data;
-
-      localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
-      if (isNew) {
-        navigate("/onboarding");
-      } else {
-        navigate("/dashboard");
-      }
+      const { token, user } = res.data;
+      await handleAuthSuccess(token, user);
     } catch (err) {
       console.error(err.response?.data || err.message);
       setError(err.response?.data?.message || "Authentication failed.");
@@ -106,7 +114,7 @@ const AuthPage = () => {
 
   return (
     <div className="auth">
-      {/* Floating elements with slide animations */}
+      {/* Floating elements */}
       <div
         className="floating-element slide-left"
         style={{
@@ -116,13 +124,8 @@ const AuthPage = () => {
           animationDelay: "0.2s",
         }}
       >
-        <img
-          src={benchele}
-          alt="Element 1"
-          style={{ width: "80px", height: "auto" }}
-        />
+        <img src={benchele} alt="Element 1" style={{ width: "80px" }} />
       </div>
-
       <div
         className="floating-element slide-right"
         style={{
@@ -132,13 +135,8 @@ const AuthPage = () => {
           animationDelay: "0.4s",
         }}
       >
-        <img
-          src={bookele}
-          alt="Element 2"
-          style={{ width: "90px", height: "auto" }}
-        />
+        <img src={bookele} alt="Element 2" style={{ width: "90px" }} />
       </div>
-
       <div
         className="floating-element slide-left"
         style={{
@@ -148,13 +146,8 @@ const AuthPage = () => {
           animationDelay: "0.6s",
         }}
       >
-        <img
-          src={clockele}
-          alt="Element 3"
-          style={{ width: "70px", height: "auto" }}
-        />
+        <img src={clockele} alt="Element 3" style={{ width: "70px" }} />
       </div>
-
       <div
         className="floating-element slide-right"
         style={{
@@ -164,59 +157,40 @@ const AuthPage = () => {
           animationDelay: "0.8s",
         }}
       >
-        <img
-          src={diceele}
-          alt="Element 4"
-          style={{ width: "120px", height: "auto" }}
-        />
+        <img src={diceele} alt="Element 4" style={{ width: "120px" }} />
       </div>
-
       <div
         className="floating-element slide-right"
         style={{
           top: "370px",
           right: "220px",
-          animationDuration: "8s",
+          animationDuration: "6s",
           animationDelay: "1s",
         }}
       >
-        <img
-          src={flowerele}
-          alt="Element 5"
-          style={{ width: "75px", height: "auto" }}
-        />
+        <img src={flowerele} alt="Element 5" style={{ width: "75px" }} />
       </div>
-
       <div
         className="floating-element slide-right"
         style={{
           top: "500px",
           left: "750px",
-          animationDuration: "9s",
+          animationDuration: "7s",
           animationDelay: "1.2s",
         }}
       >
-        <img
-          src={paperele}
-          alt="Element 6"
-          style={{ width: "65px", height: "auto" }}
-        />
+        <img src={paperele} alt="Element 6" style={{ width: "65px" }} />
       </div>
-
       <div
         className="floating-element slide-right"
         style={{
           bottom: "40px",
           right: "360px",
-          animationDuration: "10s",
+          animationDuration: "5s",
           animationDelay: "1.4s",
         }}
       >
-        <img
-          src={penele}
-          alt="Element 7"
-          style={{ width: "70px", height: "auto" }}
-        />
+        <img src={penele} alt="Element 7" style={{ width: "70px" }} />
       </div>
 
       {/* Back button */}
@@ -227,7 +201,7 @@ const AuthPage = () => {
         style={{
           top: "12px",
           left: "12px",
-          padding: "3px 10px 3px 9px",
+          padding: "3px 10px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -264,8 +238,6 @@ const AuthPage = () => {
               borderRadius: "25px",
               border: "1px solid #ccc",
               backgroundColor: activeTab === "login" ? "#fff" : "#f0f0f0",
-              cursor: "pointer",
-              transition: "transform 0.2s ease, box-shadow 0.2s ease",
               transform:
                 hoveredTab === "login" ? "translateY(-5px)" : "translateY(0)",
               boxShadow:
@@ -274,7 +246,6 @@ const AuthPage = () => {
           >
             Login
           </button>
-
           <button
             onClick={() => setActiveTab("register")}
             onMouseEnter={() => setHoveredTab("register")}
@@ -284,8 +255,6 @@ const AuthPage = () => {
               borderRadius: "25px",
               border: "1px solid #ccc",
               backgroundColor: activeTab === "register" ? "#fff" : "#f0f0f0",
-              cursor: "pointer",
-              transition: "transform 0.2s ease, box-shadow 0.2s ease",
               transform:
                 hoveredTab === "register"
                   ? "translateY(-5px)"
@@ -313,7 +282,6 @@ const AuthPage = () => {
             borderRadius: "50px",
             border: "none",
             backgroundColor: "#fff",
-            color: "#1e1e1e",
             cursor: loading ? "not-allowed" : "pointer",
             marginBottom: "20px",
           }}
@@ -350,13 +318,11 @@ const AuthPage = () => {
               onChange={(e) => setName(e.target.value)}
               style={{
                 padding: "10px",
-                fontSize: "14px",
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
             />
           )}
-
           <input
             type="email"
             placeholder="Email"
@@ -364,12 +330,10 @@ const AuthPage = () => {
             onChange={(e) => setEmail(e.target.value)}
             style={{
               padding: "10px",
-              fontSize: "14px",
               borderRadius: "5px",
               border: "1px solid #ccc",
             }}
           />
-
           <input
             type="password"
             placeholder="Password"
@@ -377,12 +341,10 @@ const AuthPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             style={{
               padding: "10px",
-              fontSize: "14px",
               borderRadius: "5px",
               border: "1px solid #ccc",
             }}
           />
-
           <button
             type="submit"
             disabled={loading}
