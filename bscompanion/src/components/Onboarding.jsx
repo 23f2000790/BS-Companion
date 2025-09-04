@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { State, City } from "country-state-city";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -49,54 +50,27 @@ const Onboarding = () => {
     bloodGroup: "",
   });
 
-  // Fetch Indian states on mount
+  // ✅ Fetch Indian states on mount
   useEffect(() => {
-    const fetchStates = async () => {
-      setLoadingStates(true);
-      try {
-        const response = await axios.get(
-          "https://api.countrystatecity.in/v1/countries/IN/states",
-          {
-            headers: {
-              "X-CSCAPI-KEY": process.env.REACT_APP_CSC_API_KEY,
-            },
-          }
-        );
-        setStates(response.data);
-      } catch (err) {
-        console.error("Error fetching states:", err);
-      } finally {
-        setLoadingStates(false);
-      }
-    };
-    fetchStates();
+    setLoadingStates(true);
+    const indianStates = State.getStatesOfCountry("IN"); // Use ISO code for India
+    setStates(indianStates);
+    setLoadingStates(false);
   }, []);
 
-  // Fetch cities when a state is selected
+  // ✅ Fetch cities based on selected state
   useEffect(() => {
-    const fetchCities = async () => {
-      if (!form.state) return;
-      setLoadingCities(true);
-      try {
-        const response = await axios.get(
-          `https://api.countrystatecity.in/v1/countries/IN/states/${form.state}/cities`,
-          {
-            headers: {
-              "X-CSCAPI-KEY": process.env.REACT_APP_CSC_API_KEY,
-            },
-          }
-        );
-        setCities(response.data);
-      } catch (err) {
-        console.error("Error fetching cities:", err);
-      } finally {
-        setLoadingCities(false);
-      }
-    };
-    fetchCities();
+    if (!form.state) {
+      setCities([]);
+      return;
+    }
+    setLoadingCities(true);
+    const selectedCities = City.getCitiesOfState("IN", form.state);
+    setCities(selectedCities);
+    setLoadingCities(false);
   }, [form.state]);
 
-  // Submit handler
+  // ✅ Submit handler
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -141,13 +115,14 @@ const Onboarding = () => {
                   setForm({ ...form, state: e.target.value, city: "" })
                 }
                 className="input-box"
+                required
               >
                 <option value="">Select State / UT</option>
                 {loadingStates ? (
                   <option>Loading...</option>
                 ) : (
                   states.map((state) => (
-                    <option key={state.iso2} value={state.iso2}>
+                    <option key={state.isoCode} value={state.isoCode}>
                       {state.name}
                     </option>
                   ))
@@ -160,6 +135,7 @@ const Onboarding = () => {
                 onChange={(e) => setForm({ ...form, city: e.target.value })}
                 className="input-box"
                 disabled={!form.state}
+                required
               >
                 <option value="">
                   {loadingCities
@@ -169,7 +145,7 @@ const Onboarding = () => {
                     : "Select State First"}
                 </option>
                 {cities.map((city) => (
-                  <option key={city.id} value={city.name}>
+                  <option key={city.name} value={city.name}>
                     {city.name}
                   </option>
                 ))}
@@ -237,7 +213,7 @@ const Onboarding = () => {
                 </div>
               )}
 
-              {/* Blood Group + Info Tooltip */}
+              {/* Blood Group + Tooltip */}
               <div className="blood-container">
                 <select
                   value={form.bloodGroup}
