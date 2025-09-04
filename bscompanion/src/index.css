@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------UNIVERSAL CSS------------------------------------------- */
+/*--------------------------------------------------------------------------------------------------- */
 @font-face {
   font-family: "Amidone Grotesk Cut";
   src: url("./assets/fonts/AmidoneGrotesk.ttf") format("truetype");
@@ -20,6 +23,9 @@ body {
   padding: 0;
 }
 
+/*--------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------LANDING PAGE CSS---------------------------------------- */
+/*--------------------------------------------------------------------------------------------------- */
 .landing {
   background-image: url("./assets/images/book.png");
   background-color: #1e1e1e;
@@ -42,52 +48,6 @@ body {
   overflow: visible;
   width: 100%;
   background: transparent;
-}
-
-.auth {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  background-color: #1e1e1e;
-  overflow: hidden;
-}
-
-/* Sliding background image */
-.auth::before {
-  content: "";
-  position: absolute;
-  bottom: -700px; /* start offscreen */
-  left: 85px; /* same as your original x position */
-  width: 650px;
-  height: 650px;
-  background-image: url("./assets/images/blding.png");
-  background-size: 600px;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: slideUp 1.5s ease forwards;
-}
-
-/* Content fade-in */
-.auth-content {
-  opacity: 0;
-  transform: translateY(-30px); /* slight move from bottom */
-  animation: fadeInUp 4s ease forwards;
-  animation-delay: 0.3s; /* starts after image starts moving */
-}
-
-/* Keyframes for image slide up */
-@keyframes slideUp {
-  to {
-    bottom: 40px; /* final y position */
-  }
-}
-
-/* Keyframes for content fade-in */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .bs {
@@ -168,6 +128,55 @@ body {
   right: 110px;
 }
 
+/*--------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------AUTH PAGE CSS------------------------------------------- */
+/*--------------------------------------------------------------------------------------------------- */
+.auth {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1e1e1e;
+  overflow: hidden;
+}
+
+/* Sliding background image */
+.auth::before {
+  content: "";
+  position: absolute;
+  bottom: -700px; /* start offscreen */
+  left: 85px; /* same as your original x position */
+  width: 650px;
+  height: 650px;
+  background-image: url("./assets/images/blding.png");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: slideUp 1.5s ease forwards;
+}
+
+/* Content fade-in */
+.auth-content {
+  opacity: 0;
+  transform: translateY(-30px); /* slight move from bottom */
+  animation: fadeInUp 4s ease forwards;
+  animation-delay: 0.3s; /* starts after image starts moving */
+}
+
+/* Keyframes for image slide up */
+@keyframes slideUp {
+  to {
+    bottom: 40px; /* final y position */
+  }
+}
+
+/* Keyframes for content fade-in */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .floating-element {
   position: absolute;
   z-index: 0;
@@ -221,8 +230,9 @@ body {
   }
 }
 
-/* ------------------------------------------New Page----------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
 /* -----------------------------------------On Boarding--------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
 
 .input-box {
   padding: 10px;
@@ -373,13 +383,17 @@ body {
   min-height: 100vh;
   width: 100%;
   background-color: #1e1e1e;
-  overflow: auto;
-  background-image: url("./assets/images/plane.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* ✅ Prevent scrollbar flicker during animation */
+
+  /* background-image: url("./assets/images/plane.png");
   background-repeat: no-repeat;
   background-position: contain;
-  background-size: 52rem;
+  background-size: 40rem;
   background-position-x: 650px;
-  background-position-y: -80px;
+  background-position-y: -80px; */
 }
 
 .onboarding-form {
@@ -391,4 +405,157 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 140px;
+}
+
+.poster-container {
+  position: relative;
+  width: 800px; /* ⬆ Increased from 600px */
+  height: 600px; /* ⬆ Increased from 450px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  /* Bigger plane background */
+  background-image: url("/assets/images/plane.png");
+  background-repeat: no-repeat;
+  background-size: 50rem; /* ⬆ Increased from 40rem */
+  background-position-x: center; /* Center horizontally */
+  background-position-y: -100px; /* Slightly higher so tail isn't cut */
+}
+
+.plane {
+  position: absolute;
+  width: 650px; /* ⬆ bigger so edges aren’t cut */
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.default-plane {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.plane-down {
+  transform: translateY(500px);
+  opacity: 0;
+}
+
+/* Posters */
+.state-poster {
+  position: fixed;
+  top: 50%; /* ✅ middle of screen */
+  left: 70%;
+  transform: translate(-50%, -50%); /* ✅ perfectly centered */
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  z-index: 10;
+}
+
+/* Slide-in animation (poster comes from top) */
+.poster-slide-in {
+  animation: slideIn 0.9s ease forwards;
+  z-index: 20; /* New poster stays on top */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -150%); /* start above */
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%); /* center */
+    opacity: 1;
+  }
+}
+
+/* Slide-out animation (poster goes till bottom of page) */
+.poster-slide-out {
+  animation: slideOut 1.2s ease forwards;
+  z-index: 15; /* Old poster goes behind new poster */
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, calc(100vh + 50%)); /* ✅ slide past bottom */
+    opacity: 0;
+  }
+}
+
+/* 📱 Mobile / Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .onboarding {
+    flex-direction: column; /* Stack vertically */
+    padding: 20px;
+  }
+
+  .onboarding-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .onboarding-form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .poster-container {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .state-poster {
+    position: relative; /* No fixed position on mobile */
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%); /* Horizontal center only */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translate(-50%, -150%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, 0); /* Center for mobile stack */
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, calc(100% + 100vh));
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .input-box,
+  .submit-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .tooltip-text {
+    width: 200px;
+    font-size: 12px;
+  }
 }

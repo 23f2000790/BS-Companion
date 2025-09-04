@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { State, City } from "country-state-city";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import PosterCarousel from "./PosterCarousel";
 
 const levels = {
   Foundational: [
@@ -53,7 +54,7 @@ const Onboarding = () => {
   // ✅ Fetch Indian states on mount
   useEffect(() => {
     setLoadingStates(true);
-    const indianStates = State.getStatesOfCountry("IN"); // Use ISO code for India
+    const indianStates = State.getStatesOfCountry("IN");
     setStates(indianStates);
     setLoadingStates(false);
   }, []);
@@ -85,11 +86,12 @@ const Onboarding = () => {
 
   return (
     <div className="onboarding">
-      <div className="onboarding-wrapper">
-        <div
-          style={{ padding: "30px", display: "flex", justifyContent: "center" }}
-          className="onboarding-form"
-        >
+      <div
+        className="onboarding-wrapper"
+        style={{ display: "flex", justifyContent: "center", gap: "60px" }}
+      >
+        {/* ✅ Onboarding Form */}
+        <div style={{ padding: "30px" }} className="onboarding-form">
           <div style={{ width: "450px" }}>
             <h1 style={{ marginBottom: "20px", color: "#dad8b6" }}>
               Welcome! Tell us more about you
@@ -221,7 +223,6 @@ const Onboarding = () => {
                     setForm({ ...form, bloodGroup: e.target.value })
                   }
                   className="input-box"
-                  required
                 >
                   <option value="">Select Blood Group</option>
                   {bloodGroups.map((group) => (
@@ -247,6 +248,11 @@ const Onboarding = () => {
               </button>
             </form>
           </div>
+        </div>
+
+        {/* ✅ PlanePoster Integration */}
+        <div style={{ marginTop: "50px" }}>
+          <PosterCarousel selectedState={form.state} />
         </div>
       </div>
     </div>
