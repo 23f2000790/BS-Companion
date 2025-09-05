@@ -6,6 +6,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import User from "./models/User.js";
 import { verifyToken } from "./middleware/auth.js";
+import questionsRoute from "./routes/questions.js";
 
 dotenv.config();
 const app = express();
@@ -13,6 +14,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use("/api/questions", questionsRoute);
 
 // Environment variables
 const JWT_SECRET = process.env.JWT_SECRET || "yoursecretkey";

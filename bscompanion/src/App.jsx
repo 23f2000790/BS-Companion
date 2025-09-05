@@ -3,6 +3,7 @@ import "./index.css";
 import LocomotiveScroll from "locomotive-scroll";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Quiz from "./components/Quiz";
 
 const LandingPage = lazy(() => import("./components/LandingPage"));
 const AuthPage = lazy(() => import("./components/AuthPage"));
@@ -47,6 +48,14 @@ const App = () => {
                 element={
                   <ProtectedRoute requireOnboardingComplete={false}>
                     <Onboarding />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/quiz/:subject"
+                element={
+                  <ProtectedRoute requireOnboardingComplete={true}>
+                    <Quiz />
                   </ProtectedRoute>
                 }
               />
