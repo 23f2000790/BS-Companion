@@ -83,7 +83,7 @@ async function seedDatabase() {
           const oldQuestions = mergedPapers[exam] || [];
           const newQuestions = subject.papers[exam] || [];
 
-          // Create a set of existing keys for dedup
+          // Dedup key: question + term + exam
           const seen = new Set(
             oldQuestions.map((q) => `${q.question}::${q.term || ""}::${exam}`)
           );
@@ -106,7 +106,7 @@ async function seedDatabase() {
         existing.papers = mergedPapers;
         await existing.save();
         console.log(
-          `🔄 Updated subject: ${subject.subjectName} (+${newCount}, skipped ${skippedCount})`
+          `🔄 Updated subject: ${subject.subjectName} (+${newCount} new, skipped ${skippedCount})`
         );
       } else {
         await Subject.create(subject);

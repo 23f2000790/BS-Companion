@@ -1,6 +1,237 @@
 [
   {
     "subject": "System Commands",
+    "question": "What will be the output of the following script?\n\n```bash\necho -ne \"a\\tb\"\necho -ne \" \\tc\"\necho -ne \" \\td\"\necho -ne \" \\te\\tf\"\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "```text\na b\n c\n  d\n  e f\n```",
+      "B": "```text\na b  c  d  e f\n```",
+      "C": "```text\na b\nc\nd\ne f\n```",
+      "D": "```text\na\\tb\n \\tc\n \\td\n \\te\\tf\n```"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Following entry is made to a crontab. When is the script `/home/garima/premodel.sh` scheduled to get executed.\n\n```bash\n5 0 * * 1 /home/garima/premodel.sh\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Job Scheduling (Cron)",
+    "options": {
+      "A": "Every Monday at 00:05",
+      "B": "Every Monday at 05:00",
+      "C": "Everyday at 08:00",
+      "D": "Everyday at 08:05 in May"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Based on the provided help information for `ls` and `xargs`, select the bash function `cdlmd` that changes the current working directory to the recently modified directory in the current directory.",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "```bash\ncdlmd() {\n    ls | head -1 | cd\n}\n```",
+      "B": "```bash\ncdlmd() {\n    ls -t -d */ | xargs cd\n}\n```",
+      "C": "```bash\ncdlmd() {\n    ls -t -d */ | head -1 | xargs cd\n}\n```",
+      "D": "```bash\ncdlmd() {\n    ls -g | head -1 | xargs cd\n}\n```"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following command prints all the keys present in an bash associative array.",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "$arr",
+      "B": "$arr[@]",
+      "C": "${!arr[@]}",
+      "D": "${arr[@]}"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Contents of the current working directory are given below.\n\n```shell\n$ ls -R\n.:\na  b\n\n./a:\nfile0  file1  file2  file3  file4\n\n./b:\nfile10  file3  file4  file5  file6\n```\n\nSelect all the file(s) that will be present in the directory `a` after the execution of the following script.\n\n```bash\ncd a\nfor i in *; do\n    ls ../b | grep $i && mv $i ../b\ndone\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "file0",
+      "B": "file1",
+      "C": "file2",
+      "D": "file3",
+      "E": "file4",
+      "F": "file5",
+      "G": "file6",
+      "H": "file10"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "```bash\nwhile read -r line; do\n    if [[ $line =~ ^[[:digit:]].*[[:digit:]]$ ]]; then\n        echo $line\n    fi\ndone < file1 > file2\ndiff file1 file2\n```\n\nSelect a scenario before the execution of the script from the following options such that upon execution of the above script, no lines will be printed to the terminal.",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "file1 and file2 have the same number of lines",
+      "B": "file2 being the copy of file1",
+      "C": "file2 contains all the lines that start and end with a number",
+      "D": "file1 contains all the lines that start and end with a number"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following command would print lines with Alice or Rabbit with total count of lines of their occurrences at the end of the output from `alice.txt` file.",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "`grep 'Alice|Rabbit' alice.txt | grep -c 'Alice|Rabbit'`",
+      "B": "`grep -E 'Alice|Rabbit' alice.txt| grep -E -c 'Alice|Rabbit'`",
+      "C": "`grep 'Alice\\|Rabbit' alice.txt; grep -c 'Alice\\|Rabbit' alice.txt`",
+      "D": "`grep -E 'Alice|Rabbit' alice.txt; grep -E -c 'Alice|Rabbit' alice.txt`"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "For the given regular expression (regex) identify the correct statement(s) from the following options. Note that the Extended Regular Expression (ERE) is used.\n\n```text\n^((.)\\2|(.).\\3|(.)(.)\\5\\4)$\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "This regex will match with 1 character palindrome",
+      "B": "This regex will match with 2 character palindrome",
+      "C": "This regex will match with 3 character palindrome",
+      "D": "This regex will match with 4 character palindrome"
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "A student named Meena wrote a shell script `exoc.sh` such that every time `main.py` is changed (change in modification time) the shell script is executed on python script file. Apparently, her code had some issues. Identify all the flaws from the following options to facilitate debugging the script and the execution steps.\n\n**Script: `exoc.sh`**\n```python\n#!/usr/bin/python3\n\nwhile true; do\n lmt=$(stat -c %Y \"$1\")\n if [[ \"$lmt\" == \"$plmt\" ]]; then\n  clear\n  echo \"[$(date +\"%H:%M:%S\") STARTED]\"\n  python3 \"$1\"\n  echo \"[$(date +\"%H:%M:%S\") ENDED]\"\n fi\n plmt=\"$lmt\"\n sleep 1\ndone\n```\n\n**Execution**\n```bash\n$ ls -l\ntotal 16K\ndrwxrwxr-x  2 meena meena 4.0K Apr  9 10:53 ./\ndrwxr-xr-x 34 meena meena  12K Apr  9 10:52 ../\n-rwxrwxr-x  1 meena meena   52 Apr  9 10:52 exoc.sh\n-rw-rw-r--  1 meena meena  462 Apr  9 10:53 main.py\n$ echo main.py | ./exoc.sh\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "Incorrect interpreter in the first line on `exoc.sh`",
+      "B": "Incorrect condition in if statement",
+      "C": "Incorrect assignment to the variable `lmt`",
+      "D": "Incorrect assignment to the variable `plmt`",
+      "E": "Incorrect execution; The proper execution should be `./exoc.sh main.py`",
+      "F": "Incorrect execution; The proper execution should be `exoc.sh main.py`"
+    },
+    "correctOption": ["A", "B", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What will be the outcome of the command `sed -i '/./,$!d' file.txt`?",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Delete all empty lines in the file `file.txt`",
+      "B": "Delete all lines with '.' character in the file `file.txt`",
+      "C": "Delete all empty lines before the first non-empty line in the file `file.txt`",
+      "D": "Delete all empty lines after the last non-empty line in the file `file.txt`"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Given the file `test.csv` with content shown below. Select the sed command(s) that will filter lines with abbreviated regions.\n\n```bash\n$ cat test.csv\nname,phone,email,region\nMadan,1-158-662-4996,madan-raja@outlook.ca,GA\nPersaud,1-877-704-5869,persaud@google.edu,Meghalaya\nSrivas,1-516-922-8416,k-srivas@icloud.com,HR\nSwami,761-1395,swami@google.couk,Haryana\nSubram,981-5610,subram3142@yahoo.org,Karnataka\nNirmal,474-7526,nirmal@icloud.org,Madhya Pradesh\nSahni,151-8534,sahni@hotmail.ca,KA\nMahajan,1-548-689-8736,mahajan@icloud.couk,Bihar\nRana,1-528-385-7783,rana4716@yahoo.org,AN\n```\n\n**Expected output**\n\n```bash\nMadan,1-158-662-4996,madan-raja@outlook.ca,GA\nSrivas,1-516-922-8416,k-srivas@icloud.com,HR\nSahni,151-8534,sahni@hotmail.ca,KA\nRana,1-528-385-7783,rana4716@yahoo.org,AN\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "`sed -n '/[A-Z]\\{1\\}$/ p' test.csv`",
+      "B": "`sed -n '/,[[:upper:]]\\{2\\}$/ p' test.csv`",
+      "C": "`sed -n '/[[:alnum:]]\\{2\\}$/ p' test.csv`",
+      "D": "`sed -n '/[[:upper:]]\\{2\\}$/ p' test.csv`"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following SED command(s) would print lines with Alice or Rabbit from `alice.txt` file.",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "`sed -E 's/Alice\\|Rabbit//' alice.txt`",
+      "B": "`sed -E -n 's/Alice|Rabbit//' alice.txt`",
+      "C": "`sed -n '/Alice\\|Rabbit/ p' alice.txt`",
+      "D": "`sed -En '/Alice|Rabbit/ p' alice.txt`"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What will be the output of the following command?\n\n```bash\necho {a..c}{1..3} | tr ' ' '\\n' | awk '\n{\n    count+=NF\n    count2+=NR\n    count3+=length+1\n}\nEND {\n    print count, count2, count3\n}\n'\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "9 45 27",
+      "B": "9 9 18",
+      "C": "9 27 27",
+      "D": "9 27 18"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "**file.csv**\n```bash\nSahni,151-8534,sahni@hotmail.ca,KA\nMahajan,1-548-689-8736,mahajan@icloud.co.uk,Bihar\nRana,1-528-385-7783,rana4716@yahoo.org,AN\n```\n\nGiven a CSV file `file.csv` with contents as shown above. Select AWK command(s) which can produce the output as shown below.\n\n**Expected Output**\n```bash\nSahni\n151-8534\nMahajan\n1-548-689-8736\nRana\n1-528-385-7783\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "`awk -F, '{print $1\"\\n\"$2}' file.csv`",
+      "B": "`awk 'BEGIN{FS=\",\";OFS=\"\\n\"}{print $1 $2}' file.csv`",
+      "C": "`awk 'BEGIN{FS=\",\";ORS=\"\\n\"}{print $1,$2}' file.csv`",
+      "D": "`awk -F, '{print $1\"\\n\",$2}' file.csv`"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "In a working directory number of text files are present with varying sizes (varying number of lines). For the following AWK script executed in the working directory, what is true for the output from the following options?\n\n```bash\n#!/usr/bin/awk -f\n\nn < FNR {\n    n = FNR\n    nf = FILENAME\n}\nEND {\n    print nf\n}\n```",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "The file name with the maximum number of lines among the files that are passed as arguments is printed",
+      "B": "The file name that has the minimum number of lines among the files that are passed as arguments is printed",
+      "C": "The file name that is passed as the first file argument is printed",
+      "D": "The file name that is passed as the last file argument is printed"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
     "exam": "ET",
     "question": "Select the script to find and kill the process which is consuming more than 80% of the CPU.",
     "topic": "Shell Scripting",

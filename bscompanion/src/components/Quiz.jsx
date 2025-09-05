@@ -1,28 +1,69 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Quiz = () => {
   const { subject } = useParams();
-  const [exam, setExam] = useState("");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const {
+    exam,
+    topic: initialTopic,
+    numQuestions,
+    mode,
+  } = location.state || {};
+
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [loading, setLoading] = useState(false);
   const [current, setCurrent] = useState(0);
   const [finished, setFinished] = useState(false);
-  const [numQuestions, setNumQuestions] = useState(10);
   const [timeLeft, setTimeLeft] = useState(null);
   const [timerRunning, setTimerRunning] = useState(false);
   const [score, setScore] = useState(null);
+  const [checked, setChecked] = useState({});
+  const [topics, setTopics] = useState([]);
+  const [selectedTopic, setSelectedTopic] = useState(initialTopic || "");
 
+  // ✅ Fetch topics for subject
+  useEffect(() => {
+    const fetchTopics = async () => {
+      try {
+        const res = await axios.get(
+          "http://localhost:5000/api/questions/topics",
+          {
+            params: { subject },
+          }
+        );
+        setTopics(res.data || []);
+      } catch (err) {
+        console.error("❌ Error fetching topics:", err);
+      }
+    };
+    fetchTopics();
+  }, [subject]);
+
+  // ✅ Fetch questions
   const fetchQuestions = async () => {
-    if (!exam) return alert("Please select an exam first!");
+    if (!exam && !selectedTopic)
+      return alert("Please select an exam or topic first!");
 
     setLoading(true);
     try {
       const res = await axios.get("http://localhost:5000/api/questions", {
-        params: { subject, exam, limit: numQuestions },
+        params: {
+          subject,
+          exam,
+          topic: selectedTopic || "",
+          limit: numQuestions,
+        },
       });
+
+      if (!res.data || res.data.length === 0) {
+        alert("No questions found for this selection.");
+        return;
+      }
 
       setQuestions(res.data);
       setAnswers({});
@@ -30,9 +71,11 @@ const Quiz = () => {
       setFinished(false);
       setScore(null);
 
-      const totalTime = getTimeForQuestions(numQuestions);
-      setTimeLeft(totalTime);
-      setTimerRunning(true);
+      if (mode === "exam") {
+        const totalTime = getTimeForQuestions(numQuestions);
+        setTimeLeft(totalTime);
+        setTimerRunning(true);
+      }
     } catch (err) {
       console.error("❌ Error fetching questions:", err);
       alert("Failed to load questions. Please try again.");
@@ -41,12 +84,21 @@ const Quiz = () => {
     }
   };
 
-  // Timer
+  // ✅ Auto-fetch if topic already passed from Dashboard
   useEffect(() => {
+    if (initialTopic) {
+      fetchQuestions();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialTopic]);
+
+  // ✅ Timer
+  useEffect(() => {
+    if (mode !== "exam") return;
     if (!timerRunning || timeLeft === null) return;
 
     if (timeLeft <= 0) {
-      finishQuiz(); // auto finish
+      finishQuiz();
       return;
     }
 
@@ -55,7 +107,7 @@ const Quiz = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [timeLeft, timerRunning]);
+  }, [timeLeft, timerRunning, mode]);
 
   const formatTime = (secs) => {
     const h = String(Math.floor(secs / 3600)).padStart(2, "0");
@@ -64,20 +116,20 @@ const Quiz = () => {
     return `${h}:${m}:${s}`;
   };
 
-  // Handle answers
+  // ✅ Handle answers
   const handleAnswer = (index, value, multiple = false) => {
     setAnswers((prev) => {
       if (multiple) {
         const existing = prev[index] || [];
-        if (existing.includes(value)) {
-          return { ...prev, [index]: existing.filter((v) => v !== value) };
-        } else {
-          return { ...prev, [index]: [...existing, value] };
-        }
+        const updated = existing.includes(value)
+          ? existing.filter((v) => v !== value)
+          : [...existing, value];
+        return { ...prev, [index]: updated };
       } else {
         return { ...prev, [index]: value };
       }
     });
+    setChecked((prev) => ({ ...prev, [index]: false }));
   };
 
   const getTimeForQuestions = (count) => {
@@ -97,7 +149,7 @@ const Quiz = () => {
     }
   };
 
-  // Render question text with code & whitespace
+  // ✅ Render question text with code formatting
   const renderQuestion = (text) => {
     if (text.includes("```")) {
       const parts = text.split("```");
@@ -132,7 +184,7 @@ const Quiz = () => {
     );
   };
 
-  // Calculate score
+  // ✅ Calculate score
   const calculateScore = () => {
     let total = 0;
 
@@ -153,14 +205,12 @@ const Quiz = () => {
         const correctSet = new Set(correct);
         const userSet = new Set(userAns);
 
-        // If user selected any wrong option → 0
         for (let ans of userSet) {
           if (!correctSet.has(ans)) {
             return;
           }
         }
 
-        // Partial score
         const fraction = userSet.size / correctSet.size;
         total += fraction;
       }
@@ -179,41 +229,41 @@ const Quiz = () => {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Quiz for {subject}</h1>
-      {timerRunning && timeLeft !== null && (
+
+      {mode === "exam" && timerRunning && timeLeft !== null && (
         <h3 style={{ marginTop: "10px" }}>
           ⏳ Time Left: {formatTime(timeLeft)}
         </h3>
       )}
 
-      {!questions.length && !finished && (
-        <>
-          <label style={{ marginRight: "10px" }}>Number of Questions: </label>
+      {/* ✅ Topic Dropdown (only if no questions yet) */}
+      {topics.length > 0 && !questions.length && (
+        <div style={{ marginTop: "10px" }}>
+          <label>Topic (optional): </label>
           <select
-            value={numQuestions}
-            onChange={(e) => setNumQuestions(Number(e.target.value))}
+            value={selectedTopic}
+            onChange={(e) => setSelectedTopic(e.target.value)}
           >
-            <option value={10}>10</option>
-            <option value={20}>20</option>
-            <option value={30}>30</option>
-            <option value={40}>40</option>
-            <option value={50}>50</option>
+            <option value="">-- All Topics --</option>
+            {topics.map((t, i) => (
+              <option key={i} value={t}>
+                {t}
+              </option>
+            ))}
           </select>
+        </div>
+      )}
 
-          <select value={exam} onChange={(e) => setExam(e.target.value)}>
-            <option value="">-- Select Exam --</option>
-            <option value="quiz1">Quiz 1</option>
-            <option value="quiz2">Quiz 2</option>
-            <option value="ET">End Term (ET)</option>
-          </select>
-
-          <button onClick={fetchQuestions} style={{ marginLeft: "10px" }}>
-            Submit
-          </button>
-        </>
+      {/* Start Button */}
+      {!questions.length && !finished && (
+        <button onClick={fetchQuestions} style={{ marginTop: "15px" }}>
+          Start Quiz
+        </button>
       )}
 
       {loading && <p>Loading questions...</p>}
 
+      {/* Quiz Body */}
       {!finished && questions.length > 0 && (
         <div style={{ marginTop: "20px" }}>
           <div>
@@ -259,8 +309,32 @@ const Quiz = () => {
                 onChange={(e) => handleAnswer(current, e.target.value)}
               />
             )}
+
+            {/* Practice mode: check answer button */}
+            {mode === "practice" && answers[current] && !checked[current] && (
+              <div style={{ marginTop: "10px" }}>
+                <button
+                  onClick={() =>
+                    setChecked((prev) => ({ ...prev, [current]: true }))
+                  }
+                >
+                  Check Answer
+                </button>
+              </div>
+            )}
+
+            {/* Show correct answer only after checking */}
+            {mode === "practice" && checked[current] && (
+              <div style={{ marginTop: "10px", color: "green" }}>
+                ✅ Correct Answer:{" "}
+                {Array.isArray(questions[current].correctOption)
+                  ? questions[current].correctOption.join(", ")
+                  : questions[current].correctOption}
+              </div>
+            )}
           </div>
 
+          {/* Navigation */}
           <div style={{ marginTop: "20px" }}>
             <button
               onClick={() => setCurrent(current - 1)}
@@ -276,20 +350,21 @@ const Quiz = () => {
                 Next
               </button>
             ) : (
-              <button onClick={finishQuiz} style={{ marginLeft: "10px" }}>
-                Finish
-              </button>
+              mode === "exam" && (
+                <button onClick={finishQuiz} style={{ marginLeft: "10px" }}>
+                  Finish
+                </button>
+              )
             )}
           </div>
         </div>
       )}
 
-      {finished && (
+      {/* Exam Mode Results */}
+      {mode === "exam" && finished && (
         <div style={{ marginTop: "20px" }}>
           <h2>Results</h2>
-          <h3>
-            🎯 Score: {score?.toFixed(2)} / {questions.length}
-          </h3>
+          <h3>🎯 Score: {((score / questions.length) * 100).toFixed(2)}%</h3>
 
           {questions.map((q, i) => (
             <div key={i} style={{ marginBottom: "15px" }}>
@@ -311,6 +386,16 @@ const Quiz = () => {
             </div>
           ))}
         </div>
+      )}
+
+      {/* Leave Quiz Button */}
+      {(questions.length > 0 || finished) && (
+        <button
+          onClick={() => navigate("/dashboard")}
+          style={{ marginTop: "20px", background: "red", color: "white" }}
+        >
+          Leave Quiz
+        </button>
       )}
     </div>
   );
