@@ -7,7 +7,7 @@ const QuestionSchema = new mongoose.Schema({
 
   // Options are optional (for numerical/fill-in questions)
   options: {
-    type: Map,
+    type: Object,
     of: String,
     default: null, // For numerical questions
   },

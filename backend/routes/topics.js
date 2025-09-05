@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const { subject } = req.query;
+    const { subject, exam } = req.query;
     if (!subject) {
       return res.status(400).json({ message: "Missing subject" });
     }
@@ -16,18 +16,31 @@ router.get("/", async (req, res) => {
 
     let allQuestions = [];
 
-    // ✅ Safely collect questions from each exam
-    Object.values(subj.papers || {}).forEach((paper) => {
-      if (Array.isArray(paper)) {
-        allQuestions.push(...paper);
+    // make sure we’re working with plain object, not Mongoose doc
+    const papers =
+      typeof subj.papers?.toObject === "function"
+        ? subj.papers.toObject()
+        : subj.papers;
+
+    // ✅ If exam is provided, use only that exam’s questions
+    if (exam && papers?.[exam]) {
+      if (Array.isArray(papers[exam])) {
+        allQuestions = papers[exam];
       }
-    });
+    } else {
+      // ✅ Otherwise gather all questions from all papers
+      Object.values(papers || {}).forEach((paper) => {
+        if (Array.isArray(paper)) {
+          allQuestions.push(...paper);
+        }
+      });
+    }
 
     // ✅ Extract unique topics
     const topics = [
       ...new Set(allQuestions.map((q) => q.topic).filter(Boolean)),
     ];
-
+    console.log(topics);
     res.json(topics);
   } catch (err) {
     console.error("❌ Error fetching topics:", err);
