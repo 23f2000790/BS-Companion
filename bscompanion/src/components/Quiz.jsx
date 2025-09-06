@@ -269,6 +269,7 @@ const Quiz = () => {
               <strong>Q{current + 1}:</strong>{" "}
               {renderQuestion(questions[current].question)}
               {renderQuestion(questions[current].topic)}
+              {renderQuestion(questions[current].exam)}
             </p>
 
             {/* ✅ Updated rendering logic */}

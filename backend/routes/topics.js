@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
     const topics = [
       ...new Set(allQuestions.map((q) => q.topic).filter(Boolean)),
     ];
-    console.log(topics);
+
     res.json(topics);
   } catch (err) {
     console.error("❌ Error fetching topics:", err);

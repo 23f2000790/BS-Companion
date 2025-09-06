@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const QuestionSchema = new mongoose.Schema({
   question: { type: String, required: true },
+  exam: { type: String, required: true },
   term: { type: String },
   topic: { type: String },
 

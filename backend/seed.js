@@ -49,6 +49,7 @@ async function seedDatabase() {
 
       const formattedQuestion = {
         ...rest,
+        exam,
         options: options || null,
         correctOption,
         questionType,

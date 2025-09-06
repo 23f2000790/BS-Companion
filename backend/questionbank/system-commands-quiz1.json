@@ -1,0 +1,463 @@
+[
+  {
+    "subject": "System Commands",
+    "question": "Assume that the user is in the home directory `/home/user1`. What will be the current working directory after execution of the following commands?\n```bash\nmkdir app; mkdir app/public\ncd app || cd app/public\ntouch index.html\ncd\nmv image.png app/public\n```",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "/home/user1/app/public",
+      "B": "/home/user1/app",
+      "C": "/home/user1",
+      "D": "/app"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What will be the output of the following commands?\n```bash\nmkdir example; cd example\ntouch .file-{1..3}{a..c}; ls | wc -l\n```",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "9",
+      "B": "6",
+      "C": "3",
+      "D": "0"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider that we have a file named `example.txt`. After executing the commands below, a hard link (`example_a.txt`) and a soft link (`example_b.txt`) to `example.txt` are created. Choose the appropriate option from the following.\n```bash\nln example.txt example_a.txt\nln -s example.txt example_b.txt\n```",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "The inode numbers of `example.txt` and `example_a.txt` are different.",
+      "B": "The inode numbers of `example_a.txt` and `example_b.txt` are the same.",
+      "C": "The inode numbers of `example.txt` and `example_a.txt` are the same.",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following commands will correctly set the permissions to allow the owner and group to read, write, and execute the script `script.sh`, while denying all permissions to others?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "`chmod 600 script.sh`",
+      "B": "`chmod 770 script.sh`",
+      "C": "`chmod 740 script.sh`",
+      "D": "`chmod 750 script.sh`"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following shell variables can be used to get the return code of the last command?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "`$!`",
+      "B": "`$?`",
+      "C": "`$1`",
+      "D": "`$0`"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the following commands. After execution, which of the following represents the contents of `output.txt`?\n```bash\necho Hello > hello.txt\ncat hello.txt /blah.txt > output.txt 2>> output.txt\n```",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "```text\ncat: /blah.txt: No such file or directory\n```",
+      "B": "```text\nHello\ncat: /blah.txt: No such file or directory\n```",
+      "C": "```text\nHello\n```",
+      "D": "```text\ncat: /blah.txt: No such file or directory\nHello\n```"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Assume that we are in the home directory of user1. Which of the following commands will give us the count of files, other than text files (with a `.txt` extension) present in the current directory?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "`find /home/user1 -not -name *.txt | wc -l`",
+      "B": "`find /home/user1 -name *.txt | wc -l`",
+      "C": "`ls /home/user1 | grep -v \"(txt)$\"`",
+      "D": "`ls /home/user1 | grep \"(txt)$\" | wc -l`"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the JSON file `people.json` present in the current working directory. Which of the following commands can be used to extract the highest sequence number?\n```json\n{\n  \"people\": [\n    { \"firstName\": \"Alice\", \"sequence\": 26803 },\n    { \"firstName\": \"Bob\", \"sequence\": 8629 },\n    { \"firstName\": \"Charlie\", \"sequence\": 27799 },\n    { \"firstName\": \"Dan\", \"sequence\": 4749 }\n  ]\n}\n```",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "`cat people.json | egrep -o '[[:digit:]]+' | sort -nr | head -n 1`",
+      "B": "`cat people.json | egrep -o '[[:digit:]]+' | sort -n | head -n 1`",
+      "C": "`cat people.json | egrep -o '[[:digit:]]+' | sort -n | tail -n 1`",
+      "D": "`cat people.json | egrep -o '[[:digit:]]+' | sort -nr | tail -n 1`"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following ways can be used run the `sleep` command in the background for 5 minutes?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "`sleep 5;`",
+      "B": "`sleep 5m &;`",
+      "C": "`coproc sleep 300s;`",
+      "D": "`sleep 5m;`"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Hexadecimal color codes consist of a hash (`#`), followed by exactly six hexadecimal digits (0-9, A-F), e.g., `#1A2BCC`. Which of the following regular expressions (extended) will correctly match hexadecimal color codes?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "`^\\#\\([0-9A-Fa-f]\\)\\{6\\}$`",
+      "B": "`^\\#\\([0-9A-Fa-f]\\)+$`",
+      "C": "`^\\#\\([0-9A-Fa-f] [0-9A-Fa-f]\\)\\{3\\}$`",
+      "D": "`\\([0-9A-Fa-f]\\)\\{6\\}`"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the output of `ls -l` below.\n```text\ntotal 8\n-rw-r--r-- 1 admin work 96 Jan 16 07:21 example.txt\n-rwxr-xr-- 1 admin work 88 Jan 16 07:21 script.sh\n```\nWhat does `total 8` represent in the output of `ls -l`?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "The total number of files in the directory",
+      "B": "The total number of blocks used by the files and directories",
+      "C": "The total size of the directory in bytes",
+      "D": "The total number of links to the directory"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the output of `ls -l` below.\n```text\ntotal 8\n-rw-r--r-- 1 admin work 96 Jan 16 07:21 example.txt\n-rwxr-xr-- 1 admin work 88 Jan 16 07:21 script.sh\n```\nWhich of the following commands can be used to allow group users to edit `script.sh`?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "`chmod g+w script.sh`",
+      "B": "`chmod g+x script.sh`",
+      "C": "`chmod g-w script.sh`",
+      "D": "`chmod 700 script.sh`"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the output of `ls -l` below.\n```text\ntotal 8\n-rw-r--r-- 1 admin work 96 Jan 16 07:21 example.txt\n-rwxr-xr-- 1 admin work 88 Jan 16 07:21 script.sh\n```\nWhich of the following represents the correct file size of `example.txt`?",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "96 blocks",
+      "B": "96 bytes",
+      "C": "96 kilobytes",
+      "D": "96 bits"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the output of `ls -l` below.\n```text\ntotal 8\n-rw-r--r-- 1 admin work 96 Jan 16 07:21 example.txt\n-rwxr-xr-- 1 admin work 88 Jan 16 07:21 script.sh\n```\nThe output of the command `tail -n 10 example.txt` is:",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "the first 10 characters of the file example.txt",
+      "B": "the first 10 lines of the file example.txt",
+      "C": "the last 10 characters of the file example.txt",
+      "D": "the last 10 lines of the file example.txt"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the output of `ls -l` below.\n```text\ntotal 8\n-rw-r--r-- 1 admin work 96 Jan 16 07:21 example.txt\n-rwxr-xr-- 1 admin work 88 Jan 16 07:21 script.sh\n```\nSelect the appropriate option(s) regarding permissions of `script.sh`.",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "All users can execute `script.sh`",
+      "B": "All users can read `script.sh`",
+      "C": "Group users can execute `script.sh`",
+      "D": "Group users can edit `script.sh`"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the fundamental difference between a hard link and a symbolic link. Which statement best describes this difference?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "A hard link contains a copy of the original file's data, while a symbolic link does not.",
+      "B": "A hard link is essentially another name for the same file data (inode), while a symbolic link is a separate file containing the path to the original file.",
+      "C": "Hard links can cross filesystem boundaries, whereas symbolic links cannot.",
+      "D": "Hard links are exclusively used for pointing to directories, while symbolic links can only point to regular files."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "To display the first 7 lines and the last 3 lines of a file named config.txt, which combination of commands is correct?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "head -n 7 config.txt and tail -n 3 config.txt",
+      "B": "cat -first 7 config.txt and cat -last 3 config.txt",
+      "C": "less +7 config.txt and less -G3 config.txt",
+      "D": "display -s 1-7 config.txt and display -e 1-3 config.txt"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following options correctly matches all the ports to their respective services?\n1. 22 -> A. http\n2. 80 -> B. smtp\n3. 25 -> C. ssh\n4. 443 -> D. https",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "1-A, 2-B, 3-C, 4-D",
+      "B": "1-C, 2-A, 3-B, 4-D",
+      "C": "1-B, 2-D, 3-A, 4-C",
+      "D": "1-D, 2-C, 3-A, 4-B"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You are trying to connect to a remote server using its IP address with the command `ssh user@192.168.1.50`. However, the command takes a very long time and eventually fails, showing a \"Connection timed out\" error. What is a simple, initial step you could take to check a very basic reason for this failure?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Try using a different command-line editor like vi or emacs to launch the SSH command, as your current editor might be incompatible.",
+      "B": "Check if the remote server at 192.168.1.50 is powered on and reachable on the network using the `ping 192.168.1.50` command.",
+      "C": "Assume the SSH service (sshd) on the server has crashed and immediately try to restart it using a web-based control panel, if available.",
+      "D": "The server is likely using a non-standard port for SSH, so you should try connecting to common web ports like 80 or 443 instead."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the following editing task: Navigate to the very first line of the currently open file, remove that entire line, then save all changes, and finally exit the editor. Which of the following options correctly lists the command sequences to perform this task first in the vi editor and then in the nano editor?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "vi filename.txt (then in vi command mode):\n1G\ndd\n:wq\n\nnano filename.txt (then in nano):\nAlt+\\\nctrl+K\nctrl+O, Enter\nctrl+X",
+      "B": "vi filename.txt (then in vi command mode):\n:1\nD\nX\n\nnano filename.txt (then in nano):\nCtrl+Y\nAlt+Del\nctrl+s\nctrl+C",
+      "C": "vi filename.txt (then in vi command mode):\nG1\nX\n:w, then :q\n\nnano filename.txt (then in nano):\nctrl+B\nCtrl+D\nctrl+S\nctrl+Z",
+      "D": "vi filename.txt (then in vi command mode):\n1gg\ndd\n:q!\n\nnano filename.txt (then in nano):\nAlt+/\nctrl+K\nctrl+x (without saving)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "The primary function of the pipe operator ( | ) as in `command1 | command2` is to:",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "Run command1 and command2 in sequence, regardless of success.",
+      "B": "Send the stderr of command1 to the stdin of command2.",
+      "C": "Execute command2 only if command1 outputs data.",
+      "D": "Send the stdout of command1 to the stdin of command2."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You have two commands: `verify_data` and `create_report`. You want to execute `create_report` only if `verify_data` completes successfully. If `verify_data` is successful, the output of `create_report` should overwrite a file named final_report.txt. If `verify_data` fails, no report should be created. Which of the following command sequences correctly implements this logic?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "verify_data; create_report > final_report.txt",
+      "B": "verify_data || create_report > final_report.txt",
+      "C": "verify_data && create_report > final_report.txt",
+      "D": "verify_data | create_report > final_report.txt"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "A command `generate_raw_data` produces a stream of data on stdout and error messages on stderr. You need to pipe the raw data (stdout) to `process_stream` for processing. Simultaneously, you want to capture only the error messages (stderr) from `generate_raw_data` into a file named `raw_data_errors.log`, overwriting the log file each time. The final processed data from `process_stream` should appear on the terminal. Which command sequence correctly achieves this?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "generate_raw_data 2> raw_data_errors.log | process_stream",
+      "B": "generate_raw_data | process_stream 2> raw_data_errors.log",
+      "C": "generate_raw_data > process_stream 2> raw_data_errors.log",
+      "D": "(generate_raw_data & process_stream) 2> raw_data_errors.log"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "If you use the pattern `A.Z$` with grep (defaulting to BRE), what kind of lines would it match?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "Lines that contain 'A' followed by any character, then 'Z' anywhere on the line.",
+      "B": "Lines that start with 'A', have zero or more of any character (except newline) in between, and end with 'Z'.",
+      "C": "Lines that contain either 'A' or 'Z' at the very beginning or very end of the line.",
+      "D": "Lines that consist only of the characters 'A' and 'Z' with nothing in between."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider a file named data.txt with the content:\n1 apple\n2 apricot\n3 banana\n4 apply\n5 Apollo\nWhich of the following grep commands (using default BRE engine) would match all lines that start with 'ap'?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "grep 'ap*' data.txt",
+      "B": "grep '\\$ap' data.txt",
+      "C": "grep 'aps' data.txt",
+      "D": "grep ' ap' data.txt"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You have a file input.txt and you run the command: `grep -E '(Task|Project) ID: [0-9]+' input.txt > results.txt`. What is happening in this command?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "Lines starting with either 'Task' or 'Project', followed by ' ID: ' and one or more digits, will have their standard output redirected to overwrite results.txt.",
+      "B": "Lines containing 'Task' or 'Project' anywhere, followed by ' ID: ' and exactly one digit, will overwrite results.txt.",
+      "C": "Lines starting with 'Task' or 'Project', followed by ' ID: ' and one or more digits, are appended to results.txt.",
+      "D": "Only lines starting with 'Task' and containing 'Project ID: ' and some numbers are saved to results.txt."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What are the potential consequences of using the `>` redirection operator (e.g., command > file1)?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "The contents of file1 will be appended to if it exists.",
+      "B": "The contents of file1 will be overwritten if it exists.",
+      "C": "A new file1 will be created if it does not exist.",
+      "D": "The command will always ask for confirmation before modifying file1."
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following statements accurately describe parts of the `ls -lai /usr/bin` command and its expected output? (Select all that apply)",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "`ls` is the command to list directory contents.",
+      "B": "`-l` option enables a short listing format.",
+      "C": "`-a` option ensures that hidden files (starting with .) are not displayed.",
+      "D": "`-1` option displays the inode number of each file.",
+      "E": "The output would primarily consist of user command executable files."
+    },
+    "correctOption": ["A", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the file numbers.txt:\n1 123\n2 45a\n3 789\n4 b01\n5 2345\n6 111\nIf you run the command `grep '[[:digit:]]\\{3\\}' numbers.txt` (using BRE), how many lines will be matched?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": null,
+    "correctOption": "4",
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You want to create a new directory named `Backup` inside your `Temp` directory, then copy `report.txt` from `Documents` into this new `Backup` directory. Finally, you want to list the contents of the `Backup` directory. Which set of commands achieves this, assuming you are starting from `/home/user/`?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "mkdir /home/user/Temp/Backup\ncp /home/user/Documents/report.txt /home/user/Temp/Backup/\nls /home/user/Temp/Backup",
+      "B": "mk dir Temp/Backup\ncopy Documents/report.txt Temp/Backup/\nlist Temp/Backup",
+      "C": "cd Temp\nmkdir Backup\ncp ../Documents/report.txt Backup/\nls Backup",
+      "D": "newdir /home/user/Temp/Backup\nmove /home/user/Documents/report.txt /home/user/Temp/Backup/\ndir /home/user/Temp/Backup"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "To change the permissions of `report.txt` (currently `-rw-r--r--`) so that only the owner can read and write, the group can read, and others have no permissions, which command is correct, and what will the new permission string be?",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Command: chmod 750 /home/user/Documents/report.txt, New string: -rwxr-x---",
+      "B": "Command: chmod 640 /home/user/Documents/report.txt, New string: -rw-r-----",
+      "C": "Command: chmod 740 /home/user/Documents/report.txt, New string: -rw-r-----",
+      "D": "Command: chmod u=rw,g=r,o= /home/user/Documents/report.txt, New string: -rw-r-----"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  }
+]
