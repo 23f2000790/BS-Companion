@@ -41,19 +41,21 @@ const Dashboard = () => {
     GetUser();
   }, [navigate]);
 
-  // ✅ Fetch topics dynamically when subject is selected
+  // ✅ Fetch topics dynamically when subject OR exam changes
   useEffect(() => {
     if (selectedSubject) {
+      // build params dynamically (no empty strings)
+      const params = { subject: selectedSubject };
+      if (exam && exam.trim()) params.exam = exam;
+
       axios
-        .get("http://localhost:5000/api/topics", {
-          params: { subject: selectedSubject },
-        })
+        .get("http://localhost:5000/api/topics", { params })
         .then((res) => {
           setTopics(res.data || []);
         })
         .catch((err) => console.error("Error fetching topics:", err));
     }
-  }, [selectedSubject]);
+  }, [selectedSubject, exam]);
 
   if (!user) {
     return <h2>Loading user data...</h2>;
@@ -69,6 +71,7 @@ const Dashboard = () => {
     setSelectedSubject(subject);
     setShowModal(true);
     setSelectedTopic(""); // reset
+    setExam(""); // reset exam too
 
     try {
       const res = await axios.get("http://localhost:5000/api/topics", {
@@ -81,8 +84,9 @@ const Dashboard = () => {
   };
 
   const startQuiz = () => {
-    if (!exam) {
-      alert("Please select an exam");
+    // ✅ allow start if either exam or topic chosen
+    if (!exam && !selectedTopic) {
+      alert("Please select an exam or a topic");
       return;
     }
 
@@ -90,10 +94,10 @@ const Dashboard = () => {
     navigate(`/quiz/${selectedSubject}`, {
       state: {
         userId: user._id,
-        exam,
+        exam: exam?.trim() || null, // pass null if no exam
         numQuestions,
         mode,
-        topic: selectedTopic || null,
+        topic: selectedTopic?.trim() || null,
       },
     });
   };
@@ -157,8 +161,8 @@ const Dashboard = () => {
               <option value="ET">End Term (ET)</option>
             </select>
 
-            {/* ✅ Topic selection */}
-            <label style={{ marginTop: "10px" }}>Topic (optional):</label>
+            {/* Topic selection */}
+            <label style={{ marginTop: "10px" }}>Topic:</label>
             <select
               value={selectedTopic}
               onChange={(e) => setSelectedTopic(e.target.value)}

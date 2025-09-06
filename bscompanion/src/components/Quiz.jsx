@@ -26,16 +26,13 @@ const Quiz = () => {
   const [topics, setTopics] = useState([]);
   const [selectedTopic, setSelectedTopic] = useState(initialTopic || "");
 
-  // ✅ Fetch topics for subject
+  // Fetch topics for subject
   useEffect(() => {
     const fetchTopics = async () => {
       try {
-        const res = await axios.get(
-          "http://localhost:5000/api/questions/topics",
-          {
-            params: { subject },
-          }
-        );
+        const res = await axios.get("http://localhost:5000/api/topics", {
+          params: { subject },
+        });
         setTopics(res.data || []);
       } catch (err) {
         console.error("❌ Error fetching topics:", err);
@@ -44,7 +41,21 @@ const Quiz = () => {
     fetchTopics();
   }, [subject]);
 
-  // ✅ Fetch questions
+  // Ensure selectedTopic matches initialTopic once
+  useEffect(() => {
+    if (initialTopic) {
+      setSelectedTopic(initialTopic);
+    }
+  }, [initialTopic]);
+
+  // Fetch questions when exam or selectedTopic changes
+  useEffect(() => {
+    if (exam || selectedTopic) {
+      fetchQuestions();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exam, selectedTopic]);
+
   const fetchQuestions = async () => {
     if (!exam && !selectedTopic)
       return alert("Please select an exam or topic first!");
@@ -84,15 +95,7 @@ const Quiz = () => {
     }
   };
 
-  // ✅ Auto-fetch if topic already passed from Dashboard
-  useEffect(() => {
-    if (initialTopic) {
-      fetchQuestions();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialTopic]);
-
-  // ✅ Timer
+  // Timer
   useEffect(() => {
     if (mode !== "exam") return;
     if (!timerRunning || timeLeft === null) return;
@@ -116,7 +119,6 @@ const Quiz = () => {
     return `${h}:${m}:${s}`;
   };
 
-  // ✅ Handle answers
   const handleAnswer = (index, value, multiple = false) => {
     setAnswers((prev) => {
       if (multiple) {
@@ -149,7 +151,6 @@ const Quiz = () => {
     }
   };
 
-  // ✅ Render question text with code formatting
   const renderQuestion = (text) => {
     if (text.includes("```")) {
       const parts = text.split("```");
@@ -184,7 +185,6 @@ const Quiz = () => {
     );
   };
 
-  // ✅ Calculate score
   const calculateScore = () => {
     let total = 0;
 
@@ -236,7 +236,7 @@ const Quiz = () => {
         </h3>
       )}
 
-      {/* ✅ Topic Dropdown (only if no questions yet) */}
+      {/* Topic Dropdown */}
       {topics.length > 0 && !questions.length && (
         <div style={{ marginTop: "10px" }}>
           <label>Topic (optional): </label>
@@ -254,7 +254,6 @@ const Quiz = () => {
         </div>
       )}
 
-      {/* Start Button */}
       {!questions.length && !finished && (
         <button onClick={fetchQuestions} style={{ marginTop: "15px" }}>
           Start Quiz
@@ -263,16 +262,25 @@ const Quiz = () => {
 
       {loading && <p>Loading questions...</p>}
 
-      {/* Quiz Body */}
       {!finished && questions.length > 0 && (
         <div style={{ marginTop: "20px" }}>
           <div>
             <p>
               <strong>Q{current + 1}:</strong>{" "}
               {renderQuestion(questions[current].question)}
+              {renderQuestion(questions[current].topic)}
             </p>
 
-            {questions[current].options ? (
+            {/* ✅ Updated rendering logic */}
+            {questions[current].questionType === "numerical" ? (
+              <input
+                type="text"
+                placeholder="Enter your answer"
+                value={answers[current] || ""}
+                onChange={(e) => handleAnswer(current, e.target.value)}
+              />
+            ) : questions[current].options &&
+              Object.keys(questions[current].options).length > 0 ? (
               Object.entries(questions[current].options).map(([key, value]) => (
                 <div key={key}>
                   <label>
@@ -301,16 +309,8 @@ const Quiz = () => {
                   </label>
                 </div>
               ))
-            ) : (
-              <input
-                type="text"
-                placeholder="Enter your answer"
-                value={answers[current] || ""}
-                onChange={(e) => handleAnswer(current, e.target.value)}
-              />
-            )}
+            ) : null}
 
-            {/* Practice mode: check answer button */}
             {mode === "practice" && answers[current] && !checked[current] && (
               <div style={{ marginTop: "10px" }}>
                 <button
@@ -323,7 +323,6 @@ const Quiz = () => {
               </div>
             )}
 
-            {/* Show correct answer only after checking */}
             {mode === "practice" && checked[current] && (
               <div style={{ marginTop: "10px", color: "green" }}>
                 ✅ Correct Answer:{" "}
@@ -334,7 +333,6 @@ const Quiz = () => {
             )}
           </div>
 
-          {/* Navigation */}
           <div style={{ marginTop: "20px" }}>
             <button
               onClick={() => setCurrent(current - 1)}
@@ -360,7 +358,6 @@ const Quiz = () => {
         </div>
       )}
 
-      {/* Exam Mode Results */}
       {mode === "exam" && finished && (
         <div style={{ marginTop: "20px" }}>
           <h2>Results</h2>
@@ -388,7 +385,6 @@ const Quiz = () => {
         </div>
       )}
 
-      {/* Leave Quiz Button */}
       {(questions.length > 0 || finished) && (
         <button
           onClick={() => navigate("/dashboard")}

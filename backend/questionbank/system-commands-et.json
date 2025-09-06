@@ -1,6 +1,528 @@
 [
   {
     "subject": "System Commands",
+    "question": "What will be the output of the following command?\n\n`echo $(echo \"$((2+2))\")`",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "4",
+      "B": "$((2+2))",
+      "C": "((2+2))",
+      "D": "$4"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following commands will correctly extract the filename from a path stored in a variable `file=\"/home/user/data.txt\"`?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "basename $file",
+      "B": "echo ${file##*/}",
+      "C": "rev <<< $file | cut -d'/' -f1 | rev",
+      "D": "echo $file | awk -F'/' '{print $NF}'",
+      "E": "All of these"
+    },
+    "correctOption": "E",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider the command:\n\n`find . -type f -name \"*.log\" -exec grep -q \"FAILED\" {} \\; -print`\n\nWhat does it do?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Finds .log files containing the word \"FAILED\"",
+      "B": "Prints all log filenames regardless of content",
+      "C": "Finds .log files that do not contain \"FAILED\"",
+      "D": "Causes a syntax error"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You are a system administrator managing a Linux server (Ubuntu 22.04) that hosts a web application. Users have recently reported that the web application is intermittently inaccessible. You need to troubleshoot the issue.\n\nUpon logging into the server, you are given the following tasks:\n\n1. Check if the system has an active internet connection.\n2. Identify the IP address assigned to the system's main network interface.\n3. Check if the server is able to resolve DNS names.\n4. Verify if the web application (running on port 8080) is actively listening.\n5. Check if any firewall is blocking incoming traffic on port 8080.\n\nWhich of the following commands (or sequence of commands) should you use to troubleshoot the issues described above?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "ping -c 4 google.com\nip a\ndig google.com\nnetstat -tuln | grep 8080\nufw status",
+      "B": "curl google.com\nifconfig -a\nnslookup google.com\nlsof i:8080\niptables -L",
+      "C": "traceroute google.com\nnmcli dev show\nhost google.com\nss -ltnp | grep 8080\nfirewall-cmd --list-all",
+      "D": "ping -c 4 8.8.8.8\nhostname -I\nwhois google.com\nnetstat -an | grep 80\niptables-save"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Match the scenario in Column A with the most appropriate editor from Column B:\n\n| Column A Scenario | Column B Editor |\n|---|---|\n| 1. Minimal shell environment with no full-screen editor | A. Ed |\n| 2. Power-user working on multi-buffer editing with custom scripting | B. nano |\n| 3. Quick edit to a config file via SSH with minimal UI | C. vi |\n| 4. Beginner writing a README file with basic navigation help | D. emacs |\n| 5. Writing a Lisp-based automation plugin for editing workflows | E. vim |",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "1-A, 2-E, 3-B, 4-D, 5-C",
+      "B": "1-B, 2-C, 3-A, 4-E, 5-D",
+      "C": "1-C, 2-A, 3-E, 4-B, 5-D",
+      "D": "1-A, 2-E, 3-C, 4-B, 5-D"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "To analyze system logs, you used the following command:\n\n`grep \"Failed password\" /var/log/auth.log | wc -l > failures.txt`\n\nWhat will the file `failures.txt` contain?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "The lines containing \"Failed password\"",
+      "B": "The total count of failed attempts",
+      "C": "An error message",
+      "D": "Nothing; output goes to screen"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You want to detect lines in `markup.txt` where an opening and closing HTML-like tag do not match (e.g., `<div>text</span>`).\n\nWhich command correctly finds such mismatches using backreferences and negative lookahead?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "grep -P '<(\\w+)>.*?</\\1>' markup.txt",
+      "B": "grep -P '<(\\w+)>.*?</(?!\\1)\\w+>' markup.txt",
+      "C": "grep -P '<(\\w+)>.*?</\\w+>' markup.txt",
+      "D": "grep -E '<(\\w+)>.*?</\\1>' markup.txt"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What does the following command do?\n\n`tar -czf archive.tgz --exclude='*.log' /home/user`",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Creates a .tgz archive of /home/user excluding files with .log extension",
+      "B": "Compresses only log files in /home/user",
+      "C": "Extracts archive.tgz ignoring .log files",
+      "D": "Lists .log files before archiving"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You have the following script:\n\n```bash\n#!/bin/bash\n\nflag=true\ncount=0\n\nwhile $flag; do\n\t((count++))\n\tif [[ $count -eq 3 ]]; then\n\t\tflag=false\n\tfi\ndone\n\necho \"Count is $count\"\n```\n\nWhat is the output?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "Count is 2",
+      "B": "Count is 3",
+      "C": "Count is 4",
+      "D": "Syntax error due to invalid Boolean comparison"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What does this command do?\n\n`sed ':a; /\\\\$/N; s/\\\\\\n//; ta' file.txt`",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Deletes all newlines",
+      "B": "Joins lines ending with \\ with the next line",
+      "C": "Replaces all \\n with a space",
+      "D": "Removes all backslashes"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Given a file `scores.txt` with contents:\n\n```\nJohn 80 90 70\nMary 85 75 95\nAlex 60 70 65\n```\n\nWhat will the following command print?\n\n`awk '{\n\tsum=0;\n\tfor(i=2; i<=NF; i++)\n\t\tsum+=$i\n\tprint $1, sum/(NF-1)\n}' scores.txt | sort -k2 -nr | head -1`",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "Alex 65",
+      "B": "John 80",
+      "C": "Mary 85",
+      "D": "Mary 85.0"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following commands can be used to prevent a package from being automatically updated via `apt`?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "apt-mark hold package-name",
+      "B": "dpkg --lock package-name",
+      "C": "Editing /etc/apt/preferences with a Pin-Priority",
+      "D": "apt-get freeze package-name"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "In a file `phrases.txt`, you have several lines with two words separated by space (e.g., \"hello world\"), and you want to swap the words (i.e., \"world hello\"). Which `sed` commands will do this using backreferences?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "sed -E 's/([a-zA-Z]+) ([a-zA-Z]+)/\\2 \\1/' phrases.txt",
+      "B": "sed 's/\\([a-zA-Z]*\\) \\([a-zA-Z]*\\)/\\2 \\1/' phrases.txt",
+      "C": "sed -E 's/(.+) (.+)/\\2 \\1/' phrases.txt",
+      "D": "sed 's/\\(.*\\) \\(.*\\)/\\2 \\1/' phrases.txt"
+    },
+    "correctOption": ["A", "B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following correctly exports a shell variable so that it becomes an environment variable available to child processes?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "export VAR; VAR=\"hello\"",
+      "B": "VAR=\"hello\"; export VAR",
+      "C": "VAR=\"hello\" | export VAR",
+      "D": "export VAR=\"hello\""
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You have the following script:\n\n```bash\n#!/bin/bash\nfor user in $(cat users.txt); do\n\techo \"User: $user\"\ndone\n```\n\nIf `users.txt` contains:\n\n```\nalice\nbob smith\ncarol\n```\n\nWhat will be printed? Choose all possible outputs.",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "User: alice",
+      "B": "User: bob smith",
+      "C": "User: bob and User: smith (separate)",
+      "D": "User: carol"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You have the following script:\n\n```bash\n#!/bin/bash\nfile=\"report.txt\"\n[[ -e \"$file\" ]] && rm \"$file\"\necho \"Report start\" >> \"$file\"\nif ! touch \"$file\" 2>/dev/null; then\n\techo \"Cannot write to file\"\nfi\n```\n\nAssuming `report.txt` is on a read-only file system, what happens?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "report.txt is deleted",
+      "B": "echo \"Report start\" fails",
+      "C": "\"Cannot write to file\" is printed",
+      "D": "Script terminates silently"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You added the following line to your crontab using `crontab -e`:\n\n`0 2 * * * /home/user/backup.sh >> /home/user/backup.log 2>&1`\n\nAssume `backup.sh` is executable and working. Which of the following are true?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Job Scheduling (Cron)",
+    "options": {
+      "A": "The job runs every day at 2:00 AM",
+      "B": "The output (stdout and stderr) is appended to backup.log",
+      "C": "If backup.sh is not executable, the job will still run via cron",
+      "D": "The cron job runs with a minimal environment, possibly missing variables like $PATH"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following `sed` commands can delete all blank lines and comment lines (starting with #) from a file?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "sed '/^\\s*$/d;/^\\s*#/d' file.conf",
+      "B": "sed -e '/^\\s*#/d' -e '/^\\s*$/d' file.conf",
+      "C": "sed '/^\\s*#|^\\s*$/d' file.conf",
+      "D": "sed '!/^#/d;!/^ /d' file.conf"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You run the following command:\n\n`grep -Eo '\\b[0-9]{4}\\b' file.txt | wc -l`\n\nThe file contains:\n\n```\nYear 1999 was great.\nThen came 2000-2010.\nIn 2023, things changed.\nHello 12345!\n```\n\nWhat is the output?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "question": "A tar archive contains:\n\n- 2 top-level directories\n- Each contains 3 subdirectories\n- Each subdirectory has 4 files\n\nWhat is the total number of entries extracted using `tar -xzf archive.tar.gz`?",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Basic Linux Commands",
+    "options": null,
+    "correctOption": 32,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What will be the output of the command\n\n`sort -n file1.txt file2.txt | awk '!seen[$1]++ {print $1, $2, $3}'`\n\ngiven the following content of file1.txt and file2.txt?\n\n**file1.txt**\n```\n101 John Doe\n103 Jane Smith\n105 Emma Brown\n107 William Harris\n109 Oliver Lewis\n```\n\n**file2.txt**\n```\n102 Michael Johnson\n103 Jane Smith\n106 Lily Evans\n107 William Harris\n110 Sophia Turner\n```",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "101 John Doe\n103 Jane Smith\n105 Emma Brown\n107 William Harris\n109 Oliver Lewis\n102 Michael Johnson\n103 Jane Smith\n106 Lily Evans\n107 William Harris\n110 Sophia Turner",
+      "B": "101 John Doe\n102 Michael Johnson\n103 Jane Smith\n105 Emma Brown\n106 Lily Evans\n107 William Harris\n109 Oliver Lewis\n110 Sophia Turner",
+      "C": "101 John Doe\n102 Michael Johnson\n103 Jane Smith\n103 Jane Smith\n105 Emma Brown\n106 Lily Evans\n107 William Harris\n107 William Harris\n109 Oliver Lewis",
+      "D": "101 John Doe\n103 Jane Smith\n106 Lily Evans\n107 William Harris\n110 Sophia Turner\n109 Oliver Lewis"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Schedule the script /home/user/backup.sh to meet the following requirements:\n\n1. The job should run at the 2nd minute of every hour, but only during weekdays (Monday to Friday).\n2. Additionally, the job must not run during the first and last days of each month.\n3. It should execute a script located at /home/user/backup.sh and log the output to /var/log/backup.log (append mode).\n\nWhich of the following exact crontab entry is used to schedule this job?",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Job Scheduling (Cron)",
+    "options": {
+      "A": "2 * * * 1-5 [ \"$(date +\\%d)\" -gt 1 ] && [ \"$(date +\\%d)\" -lt 31 ] && /home/user/backup.sh >> /var/log/backup.log 2>&1",
+      "B": "2 * * * 1-5 [ \"$(date +\\%d)\" -gt 1 ] && [ \"$(date +\\%d)\" -lt $(date -d \"$(date +\\%Y-\\%m-1) +1 month -1 day\" +\\%d) ] && /home/user/backup.sh >> /var/log/backup.log 2>&1",
+      "C": "2 * * * 1-5 [ \"$(date +\\%d)\" -gt1 ] && [ \"$(date +\\%d)\" -lt $(date -d \"$(date +\\%Y-%m-1) +1 month -1 day\" +\\%d) ] && /home/user/backup.sh > /var/log/backup.log",
+      "D": "2 * * * 1-5 [ \"$(date +\\%d)\" != \"1\" ] && [ \"$(date +\\%d)\" != \"31\" ] && /home/user/backup.sh >> /var/log/backup.log"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What is the primary purpose of this AWK script?\n\n```awk\n#!/usr/bin/awk -f\n{\n\tfor(i=1; i<=NF; i++) {\n\t\tword = tolower($i)\n\t\tgsub(/[^a-z]/, \"\", word)\n\t\tif (word != \"\")\n\t\t\tfreq[word]++\n\t}\n}\nEND {\n\tfor (word in freq) {\n\t\tprintf \"%-15s %d\\n\", word, freq[word]\n\t}\n}\n```",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "To convert contents of file to lowercase.",
+      "B": "To count the frequency of each word in a text file.",
+      "C": "To count the number of lines in a file.",
+      "D": "To replace all non-alphabetic characters in a file."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What does the following script do?\n\n`find /home -type f -name \"*.log\" -exec mv {} /sample/logs/ \\;`",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Deletes all .log files in /home.",
+      "B": "Lists all .log files in /sample/logs.",
+      "C": "Finds all .log files and backs them up.",
+      "D": "Renames .log files to .bak in /home."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Select a single sed command to achieve the following.\n\na) Find all lines that start with the word \"error\".\nb) Replace the word \"error\" with \"warning\" only on those lines.\nc) Append \" - needs review\" to the end of those same lines.",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "sed '/error/s/^/warning/; /error/s/$/ needs review/' file.txt",
+      "B": "sed '/^error/s/^[^]*/warning/; /^error/s/$/ needs review/' file.txt",
+      "C": "sed '/^error/s/^error/warning/; /^warning/s/$/ - needs review/' file.txt",
+      "D": "sed '/^error/s/$/ - needs review/; /^error/s/^error/warning/' file.txt"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Consider `current_permissions` contain the present permissions of a file. Which of the following shell script statements calculate the new permissions by removing the read permission?",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "new_permissions=$((current_permissions | ~0444))",
+      "B": "new_permissions=$((current_permissions & 0444))",
+      "C": "new_permissions=$((current_permissions & ~0444))",
+      "D": "new_permissions=$((current_permissions | 0444))"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Select a command to find all established suspicious TCP connections on port 80 using netstat.",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "netstat -tuln | grep LISTEN",
+      "B": "netstat -an | grep ':80' | grep ESTABLISHED",
+      "C": "netstat -r | grep ESTAB",
+      "D": "netstat -r | grep LISTEN"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following vi command is used to replace the word 'apple' with 'orange' only in lines 10 to 20 of a file, and appear at the beginning or end of the line, without case sensitive and without user interaction.",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": ":10,20s/^apple\\|apple$/ORANGE/ci",
+      "B": ":10,20s/^apple | apple$/ORANGE/gc",
+      "C": ":s/^apple\\|apple$/orange/gci",
+      "D": ":10,20s/^apple\\c\\|apple$\\c/orange/gi"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "Which of the following regular expression matches any price of the form of $3.45 or $23.32 or $400 in bash script.",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Regular Expressions (Regex)",
+    "options": {
+      "A": "^\\$[0-9]{2,}(\\.[0-9]{2})?$",
+      "B": "^\\$[0-9]+\\.[0-9]{3,}$",
+      "C": "^\\$[0-9]+\\.[0-9]{0,2}$",
+      "D": "^\\$[0-9]+(\\.[0-9]{2})?$"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What is the output of the following command?\n\n`date | tee file1 file2 | diff file1 file2`",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Display the today's date",
+      "B": "Nothing is printed",
+      "C": "list all the lines of file1 that do not match file2",
+      "D": "0"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What does the following sed script do?\n\n`sed 's/^\\([^,]*\\),\\([^,]*\\),\\(.*\\)/\\2,\\1,\\3/' file.csv`",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Deletes the first two fields in the CSV file.",
+      "B": "Swaps the first and second fields of the CSV file.",
+      "C": "Adds a new field to the CSV file.",
+      "D": "Replaces all commas in the CSV file with spaces."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What does the following shell command do?\n\n`tar --exclude='/remove/sample' -czvf backup.tar.gz /remove`",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "Compresses the /remove directory into a tarball, excluding the /sample subdirectory, and names it backup.tar.gz.",
+      "B": "Deletes the /sample subdirectory before creating a compressed tarball of /remove.",
+      "C": "Extracts the contents of backup.tar.gz to /remove, excluding the /sample directory.",
+      "D": "Lists the contents of /remove, ignoring the /sample subdirectory."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "You are working in a team with multiple developers using Git. One of your colleagues has created a feature branch from main, but over time, the main branch has received several commits. Your colleague is now attempting to merge the feature branch into main, but a conflict arises in a file that was modified both in the main branch and in the feature branch.\n\nHow would you resolve the conflict, ensuring that the feature branch is up-to-date with the latest changes from main and that no work is lost? Additionally, how would you ensure that this situation is prevented in the future?",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Basic Linux Commands",
+    "options": {
+      "A": "a. Merge the feature branch into main without updating main. Resolve conflicts directly in the merge commit.\nb. Regularly merge main into the feature branch to avoid future conflicts.",
+      "B": "a. Switch to the feature branch and run git pull origin feature-branch.\nb. Resolve the conflict directly in main, then push the changes.",
+      "C": "a. Ensure main is up-to-date by pulling the latest changes.\nb. Switch to the feature branch and merge main into it.\nc. Resolve the conflicts, commit the changes, and push the feature branch.\nd. Merge the feature branch into main via a pull request.\ne. Prevent future conflicts by encouraging regular updates between branches.",
+      "D": "a. Merge the feature branch into main without resolving conflicts.\nb. Use git reset to undo any conflicts and continue with the merge."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "question": "There are 3 variables defined as:\n\nvar1=\"Madras\"\nvar2=\"IITM\"\nvar3=\"NPTEL\"\n\nWhich of the following options are correct to display the values of the above three variables when the script is run in bash?",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": {
+      "A": "for i in {1..3}; do\n\techo \\$var\\$i\ndone",
+      "B": "for i in {1..3}; do\n\teval echo \\$var$i\ndone",
+      "C": "i=3\neval echo \\$var{1..\\$i}",
+      "D": "for i in {1..3}; do\n\techo var$i\ndone",
+      "E": "echo \\$var{1..3}"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What is the value of the BASH_SUBSHELL after executing the following command?\n\n`$(ls;(date; (file * | echo $BASH_SUBSHELL)))`",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "question": "What is the output of the following command?\n\n`sh -c 'exit 405'; echo $?`",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Shell Scripting",
+    "options": null,
+    "correctOption": 149,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
     "question": "What will be the output of the following script?\n\n```bash\necho -ne \"a\\tb\"\necho -ne \" \\tc\"\necho -ne \" \\td\"\necho -ne \" \\te\\tf\"\n```",
     "exam": "ET",
     "term": "Jan 2023",
