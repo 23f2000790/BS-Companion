@@ -1,0 +1,568 @@
+[
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Spreadsheet Applications",
+    "context": "From the converted csv file in previous question, you realize that the team 'Delhi Daredevil' has changed its name to 'Delhi Capital'.",
+    "question": "Using excel, you wish to replace the old name with a new name. It can be done in Excel using",
+    "options": {
+      "A": "Find and Replace",
+      "B": "Finding and Replacing",
+      "C": "Replace and Find",
+      "D": "Search and Replace"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following best describes the churn rate?",
+    "options": {
+      "A": "The number of new customers acquired in a given period",
+      "B": "The percentage of customers who stop using a product or service in a given period",
+      "C": "The amount of money earned from a customer in a given period",
+      "D": "The cost of acquiring a new customer"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following goods is likely to have the lowest marginal utility?",
+    "options": {
+      "A": "A necessity good.",
+      "B": "A luxury good.",
+      "C": "A good that the consumer has never tried before.",
+      "D": "A good that the consumer has consumed many times before."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "When does marginal utility become negative?",
+    "options": {
+      "A": "When a consumer consumes the first unit of a good.",
+      "B": "When the total utility of a good is zero.",
+      "C": "When the total utility of a good is at its maximum.",
+      "D": "When the consumer reaches the point of overconsumption."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "If the price of a product increases by 20% and the quantity demanded decreases by 10%, what is the price elasticity of demand?",
+    "options": {
+      "A": "2",
+      "B": "0.5",
+      "C": "1",
+      "D": "1.5"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "The current ratio is a measure of:",
+    "options": {
+      "A": "A company's ability to pay its long-term debt obligations.",
+      "B": "A company's liquidity and short-term solvency.",
+      "C": "A company's ability to generate profits.",
+      "D": "A company's efficiency in managing its inventory."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A Company has current assets of $750,000 and current liabilities of $250,000. What is the current ratio of the company?",
+    "options": {
+      "A": "3",
+      "B": "1",
+      "C": "1.5",
+      "D": "0.33"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A/B testing is used for:",
+    "options": {
+      "A": "Measuring the churn rate of a product",
+      "B": "Comparing two versions of a product to determine which one performs better",
+      "C": "Increasing the price of a product to maximize revenue",
+      "D": "Reducing the number of features of a product to make it simpler"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757356534/bdmjan20231_dqsffh.png",
+    "context": "Consider the following graphical representation of the Average of Credit Scores of Approved and Declined Credit Applications.\n",
+    "question": "Which of the following statements stands TRUE?\nStatement A: The average of Credit Scores of customers getting declined remains more or less constant throughout the months\nStatement B: Average Credit Scores of customers getting approved have increased over time\nStatement C: Average Credit Scores of customers getting approved have decreased over time\nStatement D: Grand Total Average has no correlation with whether the decline rate reduces or increases",
+    "options": {
+      "A": "Statements A, B, and D are TRUE",
+      "B": "Statements A, C, and D are TRUE",
+      "C": "Only Statement C is TRUE, and A being TRUE is ambiguous.",
+      "D": "Both Statements A and C are true"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757357216/bdmjan20232_rr3cxu.png",
+    "context": "Consider the following graph representing the volume sales through an E-Commerce run distribution center through 15 days.\n",
+    "question": "Which among the following explains Thursday's volume being more than the rest of the days?\nStatement 1: There was a Black Friday sale on Thursday\nStatement 2: It's possible that Thursday's data is the only day occouring thrice among in the 15 day data\nStatement 3: It is not possible to judge trends with this less information\nStatement 4: One of the thursdays could be a public holiday/ online sale festival day",
+    "options": {
+      "A": "Statement 1 is correct",
+      "B": "Statements 1,2,4 are correct",
+      "C": "Statements 2,4 are correct",
+      "D": "Statement 3 is correct"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Spreadsheet Applications",
+    "context": "There is a column containing multiple courses a student has registered for like \"BDM, TDS, BA, Python, English II\"",
+    "question": "How can you separate these courses/words into distinct cells like this:\n\nFrom | BDM, TDS, BA, Python, English II\n---|---\nTo | BDM | TDS | BA | Python | English II",
+    "options": {
+      "A": "Use the \"Split\" function in Excel/Google Sheets.",
+      "B": "Use the \"Find and Replace\" feature in Excel/Google Sheets.",
+      "C": "Use the \"Wrap Text\" feature in Excel/Google Sheets.",
+      "D": "Use the \"Text to Columns\" feature in Excel/Google Sheets."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Spreadsheet Applications",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757357286/bdmjan20233_yi546m.png",
+    "context": "Consider the following screenshot. Consider a situation where the company takes 2.5% as a commission on all application amounts for processing the application.\n",
+    "question": "Which among the following will be the correct syntax to put in the formula box for cell 12?",
+    "options": {
+      "A": "=IF(F2=$“Approved”, $E2*0.025,0)",
+      "B": "=IF(F2=\"Approved\", $E2*0.035,0)",
+      "C": "=IF(F2=\"Approved\", E2*$K$1,0)",
+      "D": "=IF(F2=\"Approved\" THEN=E2*0.035 ELSE=0)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Calculate the given subquestion for Gear Broaching Process for Week 1\n\n| Parameters | Week 1 |\n|---|---|\n| No. of Shifts/ Day | 3 |\n| No. of Working Days in the Week | 6 |\n| No. of Hours/Shift | 8 |\n| Number of Shifts lost due to maintenance | 3 |\n| Designed Speed of Broaching Process (per hour) | 60 |\n| Total Product Output | 6243 |\n| Scrap (S) | 501 |",
+    "question": "Availability - % (upto one decimal point)",
+    "options": null,
+    "correctOption": { "min": 82, "max": 84 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Calculate the given subquestion for Gear Broaching Process for Week 1\n\n| Parameters | Week 1 |\n|---|---|\n| No. of Shifts/ Day | 3 |\n| No. of Working Days in the Week | 6 |\n| No. of Hours/Shift | 8 |\n| Number of Shifts lost due to maintenance | 3 |\n| Designed Speed of Broaching Process (per hour) | 60 |\n| Total Product Output | 6243 |\n| Scrap (S) | 501 |",
+    "question": "Performance % (upto one decimal point)",
+    "options": null,
+    "correctOption": { "min": 86, "max": 87.5 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Calculate the given subquestion for Gear Broaching Process for Week 1\n\n| Parameters | Week 1 |\n|---|---|\n| No. of Shifts/ Day | 3 |\n| No. of Working Days in the Week | 6 |\n| No. of Hours/Shift | 8 |\n| Number of Shifts lost due to maintenance | 3 |\n| Designed Speed of Broaching Process (per hour) | 60 |\n| Total Product Output | 6243 |\n| Scrap (S) | 501 |",
+    "question": "Quality % (upto one decimal point)",
+    "options": null,
+    "correctOption": { "min": 91, "max": 93 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Calculate the given subquestion for Gear Broaching Process for Week 1\n\n| Parameters | Week 1 |\n|---|---|\n| No. of Shifts/ Day | 3 |\n| No. of Working Days in the Week | 6 |\n| No. of Hours/Shift | 8 |\n| Number of Shifts lost due to maintenance | 3 |\n| Designed Speed of Broaching Process (per hour) | 60 |\n| Total Product Output | 6243 |\n| Scrap (S) | 501 |",
+    "question": "OEE (Enter a number between 0 and 1 up to 3 decimal places)",
+    "options": null,
+    "correctOption": { "min": 0.6, "max": 0.72 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757357428/bdmjan20234_ivyxnl.png",
+    "context": "Answer the given subquestions concerning the Hobbing process of gear manufacturing.\n\nTotal Output of Gear casts after Hobbing: 2600.\nCost of Hobbing: INR 33 per Gear cast, Raw Material Cost: INR 37 per Gear Cast",
+    "question": "Scrap Percentage after broaching process %",
+    "options": null,
+    "correctOption": { "min": 4.02, "max": 4.06 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757357428/bdmjan20234_ivyxnl.png",
+    "context": "Answer the given subquestions concerning the Hobbing process of gear manufacturing.\n\nTotal Output of Gear casts after Hobbing: 2600.\nCost of Hobbing: INR 33 per Gear cast, Raw Material Cost: INR 37 per Gear Cast",
+    "question": "Loss due to scrap after broaching",
+    "options": null,
+    "correctOption": { "min": 7150, "max": 7500 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757357583/bdmjan20235_yuh2ir.png",
+    "context": "Consider the following dataset:\n\nHere all the factors are \"more the better\". You can combine all the criteria as :\nComposite Score= Sum of all criteria on the same scale",
+    "question": "Rank the above candidates and choose the correct ranking from the below options",
+    "options": {
+      "A": "Alpha > Tango > Gamma > Beta",
+      "B": "Gamma > Tango > Beta> Alpha",
+      "C": "Alpha < Gamma < Tango < Beta",
+      "D": "Gamma < Tango < Beta < Alpha"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757357685/bdmjan20236_niur7o.png",
+    "context": "Consider the following Volume Sales Data for 4 different SKUs.",
+    "question": "Analyze and interpret - which of the following datasets qualifies the Volume Pareto criteria?",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In project management, the Pareto Principle can be used to:",
+    "options": {
+      "A": "Allocate equal time and resources to all project tasks.",
+      "B": "Focus on the tasks with the most impact on project success.",
+      "C": "Address only the tasks with immediate deadlines.",
+      "D": "Apply to projects but not to daily operations."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "You oversee the inventory management of gear assemblies in a manufacturing facility. The particulars of the inventory are as follows:\nStarting Inventory: 150 units\nDaily Usage: 8 units\nLead Time: 7 days\nSafety Stock: 25 units\nBased on the above data, answer the given subquestions.",
+    "question": "Based on this information, at what inventory level should you trigger a re-order for gear assemblies?",
+    "options": {
+      "A": "Initiate a re-order when the inventory level drops to 56 units",
+      "B": "Initiate a re-order when the inventory level drops to 81 units",
+      "C": "Initiate a re-order when the inventory level drops to 94 units",
+      "D": "Initiate a re-order when the inventory level drops to 79 units"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "You oversee the inventory management of gear assemblies in a manufacturing facility. The particulars of the inventory are as follows:\nStarting Inventory: 150 units\nDaily Usage: 8 units\nLead Time: 7 days\nSafety Stock: 25 units\nBased on the above data, answer the given subquestions.",
+    "question": "After how many days should you trigger a re-order",
+    "options": {
+      "A": "7 Days",
+      "B": "14 Days",
+      "C": "17 Days",
+      "D": "9 Days"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is a key benefit of using data analysis in HR operations?",
+    "options": {
+      "A": "It eliminates the need for human judgment in decision-making.",
+      "B": "It provides a standardized approach to all HR processes.",
+      "C": "It enables data-driven decision-making to improve HR strategies and outcomes.",
+      "D": "It only focuses on quantitative data and ignores qualitative factors."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "How do you lock the column reference in the \"col_index_num\" parameter of the VLOOKUP function to prevent it from changing when copying the formula?",
+    "options": {
+      "A": "By using absolute cell references (e.g., $A$2).",
+      "B": "By using relative cell references (e.g., A2).",
+      "C": "By using mixed cell references (e.g., $A2).",
+      "D": "By using named ranges."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What sets \"nudges\" apart from traditional regulations or enforcement?",
+    "options": {
+      "A": "Nudges primarily use only financial rewards.",
+      "B": "Nudges gently influence behavior without force or coercion.",
+      "C": "Nudges are limited to public policy, excluding corporate practices.",
+      "D": "Nudges never involve strict mandates or restrictions."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A company is testing two different display features (A and B) on their website's homepage to determine which one leads to a higher conversion rate.\nDuring the experiment, they tracked the number of visitors who clicked on the \"Sign Up\" button and calculated the conversion rate for each version.\nThe results are as follows:\n• Version A: 500 visitors, 25 conversions\n• Version B: 550 visitors, 40 conversions\nCalculate the conversion rates for both Version A and Version B. Based on the results, which version had a higher conversion rate, and what is the approx percentage difference between the two conversion rates (in %)?",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359092/bdmmay20231_zxvgbo.png",
+    "context": "Consider the following data set and answer the given subquestions.",
+    "question": "Which applicant will face the most difficulty in repaying the loan?",
+    "options": {
+      "A": "Applicant F",
+      "B": "Applicant G",
+      "C": "Applicant H",
+      "D": "Applicant I",
+      "E": "Applicant J"
+    },
+    "correctOption": "E",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359092/bdmmay20231_zxvgbo.png",
+    "context": "Consider the following data set and answer the given subquestions.",
+    "question": "If any credit score of 700 and above is considered equally acceptable, then which applicant is the most risky for the lender?",
+    "options": {
+      "A": "Applicant F",
+      "B": "Applicant G",
+      "C": "Applicant H",
+      "D": "Applicant I",
+      "E": "Applicant J"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359092/bdmmay20231_zxvgbo.png",
+    "context": "Consider the following data set and answer the given subquestions.",
+    "question": "If the primary factor for loan approval is the applicant's income, which applicant is likely to have the easiest time getting their loan approved?",
+    "options": {
+      "A": "Applicant F",
+      "B": "Applicant G",
+      "C": "Applicant H",
+      "D": "Applicant I",
+      "E": "Applicant J"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359092/bdmmay20232_b2ahf8.png",
+    "context": "A company is analyzing the effectiveness of different recruitment channels for hiring new employees based on the number of applications received, the number of candidates shortlisted, and the ease of applying scores (on a scale of 1 (min) to 5 (max)) for each recruitment channel.\nPlease follow the instructions below to answer the given subquestion.\nMake your selection based on your analysis of the effectiveness scores of the recruitment channels.\n\nInstructions:\n- Normalize Ease of Applying Scores\n- Calculate Effectiveness Score: Calculate the effectiveness score for each recruitment channel by multiplying the ratio of shortlisted candidates to applications by the normalized ease of applying score.\n- Rank the Channels: Rank the recruitment channels based on their calculated effectiveness scores. The higher the effectiveness score, the more effective the channel.",
+    "question": "Which is the most effective recruitment channel?",
+    "options": {
+      "A": "Job Boards",
+      "B": "Campus Recruiting",
+      "C": "Social Media",
+      "D": "Employee Referrals"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359092/bdmmay20233_kwjrae.png",
+    "context": "TechCo conducted an extensive A/B test to evaluate the effectiveness of a new Subscription Upgrade feature on user engagement.\nThe control and test groups were carefully balanced to ensure equal representation. The table below presents detailed engagement metrics before and after the introduction of the Subscription Upgrade feature.",
+    "question": "Based on the given data, which of the following statement is true? [Select all that apply]",
+    "options": {
+      "A": "The new Subscription Upgrade feature led to a significant increase in the average session duration for both control and test groups.",
+      "B": "Both the control and test groups experienced a decrease in the average number of sessions per user after the introduction of the Subscription Upgrade feature.",
+      "C": "The Subscription Upgrade feature had a more pronounced impact on increasing the average number of sessions per user in the test group compared to the control group.",
+      "D": "The average session duration decreased in the control group but increased in the test group after the introduction of the Subscription Upgrade feature.",
+      "E": "The increase in the average number of sessions per user was higher in the control group compared to the test group due to the Subscription Upgrade feature."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359093/bdmmay20234_g9tgws.png",
+    "context": null,
+    "question": "Calculate the Overall Equipment Effectiveness (OEE) of the Assembly Line Equipment for the month of July.",
+    "options": null,
+    "correctOption": { "min": 0.81, "max": 0.83 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A reduction in the price of a product from $20 to $16 leads to a 15% increase in demand for the product. Calculate the price elasticity of demand for this product.",
+    "options": null,
+    "correctOption": [0.75, -0.75],
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359093/bdmmay20235_l8haxb.png",
+    "context": null,
+    "question": " Using the provided dataset, rank the candidates based on the given factors and choose the correct ranking from the options below. Consider the following dataset:  ",
+    "options": {
+      "A": "Lavisha > Aisha > Esha > Sasha",
+      "B": "Esha > Lavisha > Sasha > Aisha",
+      "C": "Aisha > Lavisha > Sasha > Esha",
+      "D": "Sasha > Esha> Lavisha > Aisha"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757359093/bdmmay20236_sg1ebv.png",
+    "context": "Using the data in table and figure below, match the curve in column-A to its representative cost in column-B (assume all units produced are sold).",
+    "question": "Match the curves to the corresponding cost types.",
+    "options": {
+      "A": "I-(a), II-(c), III-(b)",
+      "B": "II-(a), I-(c), III-(b)",
+      "C": "II-(a), II-(c), I-(b)",
+      "D": "IV-(a), II-(c), III-(b)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "An increase in Monisha's income decreases her demand for Glucon-D. Then, for Monisha, Glucon-D is",
+    "options": {
+      "A": "A complement to any good",
+      "B": "A normal good",
+      "C": "An inferior good",
+      "D": "A substitute to any good"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  }
+]

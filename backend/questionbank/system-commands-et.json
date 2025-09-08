@@ -1006,7 +1006,7 @@
     "context": "for i in {6..15}; do\nsleep 3 &\nsleep 1 && kill \\$!\ndone",
     "question": "How long will the following script run (in seconds)?",
     "options": null,
-    "correctOption": "10",
+    "correctOption": 10,
     "questionType": "numerical"
   },
   {
@@ -1028,7 +1028,7 @@
     "context": "awk '\n{\nx[NR]=$1; y[NR]=$2\nx_sum+=$1; y_sum+=$2\n}\nEND {\nx_mean=x_sum/NR; y_mean=y_sum/NR\ndenom_x_sq=0; denom_y_sq=0\nfor (i in x) {\nnum+=(x[i]-x_mean)*(y[i]-y_mean)\ndenom_x_sq+=(x[i]-x_mean)^2\ndenom_y_sq+=(y[i]-y_mean)^2\n}\nprint num/(denom_x_sq^0.5 * denom_y_sq^0.5)\n}\n' << EOF\n1 2\n3 4\n5 6\n7 8\nEOF",
     "question": "What will be the output from the following script which calculates the Pearson correlation coefficient for the given data?",
     "options": null,
-    "correctOption": "1",
+    "correctOption": 1,
     "questionType": "numerical"
   },
   {
@@ -1247,7 +1247,7 @@
     "context": "#!/usr/bin/bash\n(sleep 5; echo \"Task 1 done\") &\n(sleep 10; echo \"Task 2 done\") &\n(sleep 3; echo \"Task 3 done\") &\nwait\necho \"All tasks completed\"",
     "question": "How many seconds will it take for the string 'All tasks completed' to be printed after executing this script?",
     "options": null,
-    "correctOption": "10",
+    "correctOption": 10,
     "questionType": "numerical"
   },
   {
@@ -1258,7 +1258,7 @@
     "context": "The current date is 'Fri Aug 16 10:00:00 IST 2024'. Given the file list below:\n\n-rw-r--r-- 1 user group 512 Aug 11 08:30 report.txt\n-rw-r--r-- 1 user group 1024 Aug 12 10:00 summary.txt\n-rw-r--r-- 1 user group 2048 Aug 13 11:15 notes.txt\n-rw-r--r-- 1 user group 4096 Aug 14 14:45 plan.txt\n-rw-r--r-- 1 user group 2048 Aug 10 09:50 outline.txt\n-rw-r--r-- 1 user group 1024 Aug 15 12:20 draft.txt\n-rw-r--r-- 1 user group 4096 Aug 16 09:00 final.txt",
     "question": "How many files will the command `find /home/user/docs -type f -name \"*.txt\" -mtime -5 | wc -l` count?",
     "options": null,
-    "correctOption": "5",
+    "correctOption": 5,
     "questionType": "numerical"
   },
   {
@@ -1482,7 +1482,7 @@
     "context": "#!/bin/bash\ntoggle(){\n for i in {1..4}; do\n  if [ $((i % 2)) -eq 0 ]; then\n   echo -n \"1\"\n  else\n   echo -n \"0\"\n  fi\n sleep 0.3\n done\n}\nfor i in {1..3}; do #first loop\ndone\ntoggle",
     "question": "How many 1's are printed after the first loop in the script has completed execution?",
     "options": null,
-    "correctOption": "2",
+    "correctOption": 2,
     "questionType": "numerical"
   },
   {
@@ -1493,7 +1493,7 @@
     "context": "#!/bin/bash\ntoggle(){\n for i in {1..4}; do\n  if [ $((i % 2)) -eq 0 ]; then\n   echo -n \"1\"\n  else\n   echo -n \"0\"\n  fi\n sleep 0.3\n done\n}\nfor i in {1..3}; do #first loop\ndone\ntoggle\nfor i in {1..2}; do #second loop\ndone\ntoggle & \nwait",
     "question": "How many 0's are printed after the second loop (excluding the first loop) has completed execution?",
     "options": null,
-    "correctOption": "2",
+    "correctOption": 2,
     "questionType": "numerical"
   },
   {
@@ -1730,7 +1730,7 @@
     "context": "A file named `file1.txt` has four lines.",
     "question": "Based on the output of `diff file1.txt file2.txt` shown as `4c4,5`, how many lines does `file2.txt` have?",
     "options": null,
-    "correctOption": "5",
+    "correctOption": 5,
     "questionType": "numerical"
   },
   {
@@ -1913,7 +1913,7 @@
     "context": "```bash\nprn_num(){\n  for c in 9 8 7; do\n    sleep 0.25\n    echo -n $c\n  done\n}\nfor i in {1..3}; do #first loop\n  prn_num\ndone\n```",
     "question": "Based on the provided script, what is the output of the first loop?",
     "options": null,
-    "correctOption": "987987987",
+    "correctOption": 987987987,
     "questionType": "numerical"
   },
   {
@@ -1924,7 +1924,7 @@
     "context": "```bash\nprn_num(){\n  for c in 9 8 7; do\n    sleep 0.25\n    echo -n $c\n  done\n}\n# ... (first loop)\nfor i in {1,2}; do #second loop\n  prn_um &\ndone\n```",
     "question": "Based on the provided script, what is the output of the second loop?",
     "options": null,
-    "correctOption": "998877",
+    "correctOption": 998877,
     "questionType": "numerical"
   }
 ]

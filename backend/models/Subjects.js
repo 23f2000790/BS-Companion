@@ -7,6 +7,11 @@ const QuestionSchema = new mongoose.Schema({
     default: null, // Defaults to null if not provided
   },
 
+  // ADDED: Optional field for an image URL
+  image: {
+    type: String,
+  },
+
   question: { type: String, required: true },
   exam: { type: String, required: true },
   term: { type: String },

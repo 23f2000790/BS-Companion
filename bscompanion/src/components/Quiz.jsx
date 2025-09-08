@@ -179,21 +179,63 @@ const Quiz = () => {
 
   const calculateScore = () => {
     let total = 0;
+
     questions.forEach((q, i) => {
       const userAns = answers[i];
       const correct = q.correctOption;
-      if (q.questionType === "single" || q.questionType === "numerical") {
+
+      if (q.questionType === "single") {
         if (
           userAns &&
-          userAns.toString().trim() === correct.toString().trim()
+          userAns.toString().trim().toLowerCase() ===
+            correct.toString().trim().toLowerCase()
         ) {
           total += 1;
         }
+      } else if (q.questionType === "numerical") {
+        if (userAns === null || userAns === undefined || userAns === "") return;
+
+        const normalizedUserAns = userAns.toString().trim().toLowerCase();
+
+        // CASE 1: Range {min, max}
+        if (
+          typeof correct === "object" &&
+          !Array.isArray(correct) &&
+          correct.min !== undefined &&
+          correct.max !== undefined
+        ) {
+          const userVal = parseFloat(userAns);
+          if (
+            !isNaN(userVal) &&
+            userVal >= correct.min &&
+            userVal <= correct.max
+          ) {
+            total += 1;
+          }
+        }
+
+        // CASE 2: Multiple possible numerical answers [2, -2]
+        else if (Array.isArray(correct)) {
+          if (correct.some((ans) => parseFloat(ans) === parseFloat(userAns))) {
+            total += 1;
+          }
+        }
+
+        // CASE 3: Single fixed value (number OR string)
+        else {
+          const normalizedCorrect = correct.toString().trim().toLowerCase();
+          if (normalizedUserAns === normalizedCorrect) {
+            total += 1;
+          }
+        }
       } else if (q.questionType === "multiple") {
         if (!Array.isArray(userAns) || userAns.length === 0) return;
+
         const correctSet = new Set(correct);
         const userSet = new Set(userAns);
-        if (userSet.size > correctSet.size) return; // More answers than correct ones
+
+        if (userSet.size > correctSet.size) return;
+
         let isSubset = true;
         for (let ans of userSet) {
           if (!correctSet.has(ans)) {
@@ -201,22 +243,24 @@ const Quiz = () => {
             break;
           }
         }
+
         if (isSubset) {
           const fraction = userSet.size / correctSet.size;
           total += fraction;
         }
       }
     });
+
     return total;
   };
 
   const finishQuiz = () => {
     const finalScore = calculateScore();
+    console.log("✅ Final Score:", finalScore); // <-- Debug here
     setScore(finalScore);
     setFinished(true);
     setTimerRunning(false);
   };
-
   // Conditional Rendering for the main content
   const renderContent = () => {
     if (loading) {
@@ -227,7 +271,12 @@ const Quiz = () => {
       return (
         <div className="results-container">
           <h2>Results</h2>
-          <h3>🎯 Score: {((score / questions.length) * 100).toFixed(2)}%</h3>
+          <h3>
+            🎯 Score:{" "}
+            {score !== null && questions.length > 0
+              ? ((score / questions.length) * 100).toFixed(2) + "%"
+              : "Calculating..."}
+          </h3>
           {questions.map((q, i) => (
             <div key={i} className="result-item">
               <p className="question-text">
@@ -240,9 +289,14 @@ const Quiz = () => {
               )}
               <p className="correct-answer">
                 ✅ Correct:{" "}
-                {Array.isArray(q.correctOption)
-                  ? q.correctOption.join(", ")
-                  : q.correctOption}
+                {
+                  Array.isArray(q.correctOption)
+                    ? q.correctOption.join(", ") // Case 1: Array → Join values
+                    : typeof q.correctOption === "object" &&
+                      q.correctOption !== null
+                    ? `Between ${q.correctOption.min} and ${q.correctOption.max}` // Case 2: Range → Show nicely
+                    : q.correctOption // Case 3: Single value
+                }
               </p>
               <p className="user-answer">
                 📝 Yours:{" "}
@@ -268,6 +322,11 @@ const Quiz = () => {
               <blockquote className="context-block">
                 {renderQuestion(q.context)}
               </blockquote>
+            )}
+            {q.image && (
+              <div className="image-container">
+                <img src={q.image} alt="Question related" />
+              </div>
             )}
           </div>
 
