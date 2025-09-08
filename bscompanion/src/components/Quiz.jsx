@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./quiz.css";
 
 const Quiz = () => {
   const { subject } = useParams();
@@ -73,6 +74,7 @@ const Quiz = () => {
 
       if (!res.data || res.data.length === 0) {
         alert("No questions found for this selection.");
+        navigate("/dashboard"); // Navigate back if no questions
         return;
       }
 
@@ -83,7 +85,7 @@ const Quiz = () => {
       setScore(null);
 
       if (mode === "exam") {
-        const totalTime = getTimeForQuestions(numQuestions);
+        const totalTime = getTimeForQuestions(res.data.length);
         setTimeLeft(totalTime);
         setTimerRunning(true);
       }
@@ -97,8 +99,7 @@ const Quiz = () => {
 
   // Timer
   useEffect(() => {
-    if (mode !== "exam") return;
-    if (!timerRunning || timeLeft === null) return;
+    if (mode !== "exam" || !timerRunning || timeLeft === null) return;
 
     if (timeLeft <= 0) {
       finishQuiz();
@@ -110,6 +111,7 @@ const Quiz = () => {
     }, 1000);
 
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, timerRunning, mode]);
 
   const formatTime = (secs) => {
@@ -127,14 +129,16 @@ const Quiz = () => {
           ? existing.filter((v) => v !== value)
           : [...existing, value];
         return { ...prev, [index]: updated };
-      } else {
-        return { ...prev, [index]: value };
       }
+      return { ...prev, [index]: value };
     });
     setChecked((prev) => ({ ...prev, [index]: false }));
   };
 
   const getTimeForQuestions = (count) => {
+    // Standard time per question (e.g., 90 seconds)
+    // return count * 90;
+    // Or keep your existing tiered logic
     switch (count) {
       case 10:
         return 20 * 60;
@@ -152,46 +156,32 @@ const Quiz = () => {
   };
 
   const renderQuestion = (text) => {
-    if (text.includes("```")) {
-      const parts = text.split("```");
-      return parts.map((part, i) =>
-        i % 2 === 1 ? (
-          <pre
-            key={i}
-            style={{
-              background: "#f4f4f4",
-              padding: "8px",
-              borderRadius: "4px",
-              overflowX: "auto",
-            }}
-          >
-            <code>{part}</code>
-          </pre>
-        ) : (
-          <span
-            key={i}
-            style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}
-          >
-            {part}
-          </span>
-        )
+    if (typeof text !== "string" || !text.includes("```")) {
+      return (
+        <span style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}>
+          {text}
+        </span>
       );
     }
-
-    return (
-      <span style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}>
-        {text}
-      </span>
+    const parts = text.split("```");
+    return parts.map((part, i) =>
+      i % 2 === 1 ? (
+        <pre key={i}>
+          <code>{part}</code>
+        </pre>
+      ) : (
+        <span key={i} style={{ whiteSpace: "pre-wrap" }}>
+          {part}
+        </span>
+      )
     );
   };
 
   const calculateScore = () => {
     let total = 0;
-
     questions.forEach((q, i) => {
       const userAns = answers[i];
       const correct = q.correctOption;
-
       if (q.questionType === "single" || q.questionType === "numerical") {
         if (
           userAns &&
@@ -200,22 +190,23 @@ const Quiz = () => {
           total += 1;
         }
       } else if (q.questionType === "multiple") {
-        if (!Array.isArray(userAns)) return;
-
+        if (!Array.isArray(userAns) || userAns.length === 0) return;
         const correctSet = new Set(correct);
         const userSet = new Set(userAns);
-
+        if (userSet.size > correctSet.size) return; // More answers than correct ones
+        let isSubset = true;
         for (let ans of userSet) {
           if (!correctSet.has(ans)) {
-            return;
+            isSubset = false;
+            break;
           }
         }
-
-        const fraction = userSet.size / correctSet.size;
-        total += fraction;
+        if (isSubset) {
+          const fraction = userSet.size / correctSet.size;
+          total += fraction;
+        }
       }
     });
-
     return total;
   };
 
@@ -226,157 +217,35 @@ const Quiz = () => {
     setTimerRunning(false);
   };
 
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Quiz for {subject}</h1>
+  // Conditional Rendering for the main content
+  const renderContent = () => {
+    if (loading) {
+      return <p>Loading questions...</p>;
+    }
 
-      {mode === "exam" && timerRunning && timeLeft !== null && (
-        <h3 style={{ marginTop: "10px" }}>
-          ⏳ Time Left: {formatTime(timeLeft)}
-        </h3>
-      )}
-
-      {/* Topic Dropdown */}
-      {topics.length > 0 && !questions.length && (
-        <div style={{ marginTop: "10px" }}>
-          <label>Topic (optional): </label>
-          <select
-            value={selectedTopic}
-            onChange={(e) => setSelectedTopic(e.target.value)}
-          >
-            <option value="">-- All Topics --</option>
-            {topics.map((t, i) => (
-              <option key={i} value={t}>
-                {t}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-
-      {!questions.length && !finished && (
-        <button onClick={fetchQuestions} style={{ marginTop: "15px" }}>
-          Start Quiz
-        </button>
-      )}
-
-      {loading && <p>Loading questions...</p>}
-
-      {!finished && questions.length > 0 && (
-        <div style={{ marginTop: "20px" }}>
-          <div>
-            <p>
-              <strong>Q{current + 1}:</strong>{" "}
-              {renderQuestion(questions[current].question)}
-              {renderQuestion(questions[current].topic)}
-              {renderQuestion(questions[current].exam)}
-            </p>
-
-            {/* ✅ Updated rendering logic */}
-            {questions[current].questionType === "numerical" ? (
-              <input
-                type="text"
-                placeholder="Enter your answer"
-                value={answers[current] || ""}
-                onChange={(e) => handleAnswer(current, e.target.value)}
-              />
-            ) : questions[current].options &&
-              Object.keys(questions[current].options).length > 0 ? (
-              Object.entries(questions[current].options).map(([key, value]) => (
-                <div key={key}>
-                  <label>
-                    <input
-                      type={
-                        questions[current].questionType === "multiple"
-                          ? "checkbox"
-                          : "radio"
-                      }
-                      name={`q-${current}`}
-                      value={key}
-                      checked={
-                        questions[current].questionType === "multiple"
-                          ? (answers[current] || []).includes(key)
-                          : answers[current] === key
-                      }
-                      onChange={(e) =>
-                        handleAnswer(
-                          current,
-                          e.target.value,
-                          questions[current].questionType === "multiple"
-                        )
-                      }
-                    />{" "}
-                    {value}
-                  </label>
-                </div>
-              ))
-            ) : null}
-
-            {mode === "practice" && answers[current] && !checked[current] && (
-              <div style={{ marginTop: "10px" }}>
-                <button
-                  onClick={() =>
-                    setChecked((prev) => ({ ...prev, [current]: true }))
-                  }
-                >
-                  Check Answer
-                </button>
-              </div>
-            )}
-
-            {mode === "practice" && checked[current] && (
-              <div style={{ marginTop: "10px", color: "green" }}>
-                ✅ Correct Answer:{" "}
-                {Array.isArray(questions[current].correctOption)
-                  ? questions[current].correctOption.join(", ")
-                  : questions[current].correctOption}
-              </div>
-            )}
-          </div>
-
-          <div style={{ marginTop: "20px" }}>
-            <button
-              onClick={() => setCurrent(current - 1)}
-              disabled={current === 0}
-            >
-              Previous
-            </button>
-            {current < questions.length - 1 ? (
-              <button
-                onClick={() => setCurrent(current + 1)}
-                style={{ marginLeft: "10px" }}
-              >
-                Next
-              </button>
-            ) : (
-              mode === "exam" && (
-                <button onClick={finishQuiz} style={{ marginLeft: "10px" }}>
-                  Finish
-                </button>
-              )
-            )}
-          </div>
-        </div>
-      )}
-
-      {mode === "exam" && finished && (
-        <div style={{ marginTop: "20px" }}>
+    if (finished) {
+      return (
+        <div className="results-container">
           <h2>Results</h2>
           <h3>🎯 Score: {((score / questions.length) * 100).toFixed(2)}%</h3>
-
           {questions.map((q, i) => (
-            <div key={i} style={{ marginBottom: "15px" }}>
-              <p>
+            <div key={i} className="result-item">
+              <p className="question-text">
                 <strong>Q{i + 1}:</strong> {renderQuestion(q.question)}
               </p>
-              <p>
-                ✅ Correct Answer:{" "}
+              {q.context && (
+                <blockquote className="context-block">
+                  {renderQuestion(q.context)}
+                </blockquote>
+              )}
+              <p className="correct-answer">
+                ✅ Correct:{" "}
                 {Array.isArray(q.correctOption)
                   ? q.correctOption.join(", ")
                   : q.correctOption}
               </p>
-              <p>
-                📝 Your Answer:{" "}
+              <p className="user-answer">
+                📝 Yours:{" "}
                 {Array.isArray(answers[i])
                   ? answers[i].join(", ")
                   : answers[i] || "Not answered"}
@@ -384,16 +253,153 @@ const Quiz = () => {
             </div>
           ))}
         </div>
-      )}
+      );
+    }
 
-      {(questions.length > 0 || finished) && (
-        <button
-          onClick={() => navigate("/dashboard")}
-          style={{ marginTop: "20px", background: "red", color: "white" }}
-        >
-          Leave Quiz
+    if (questions.length > 0) {
+      const q = questions[current];
+      return (
+        <>
+          <div className="question-block">
+            <p className="question-text">
+              <strong>Q{current + 1}:</strong> {renderQuestion(q.question)}
+            </p>
+            {q.context && (
+              <blockquote className="context-block">
+                {renderQuestion(q.context)}
+              </blockquote>
+            )}
+          </div>
+
+          <div className="options-container">
+            {q.questionType === "numerical" ? (
+              <input
+                type="text"
+                className="numerical-input" // Added a class for styling
+                placeholder="Enter your answer"
+                value={answers[current] || ""}
+                onChange={(e) => handleAnswer(current, e.target.value)}
+              />
+            ) : q.options && Object.keys(q.options).length > 0 ? (
+              Object.entries(q.options).map(([key, value]) => (
+                <label key={key} className="option-label">
+                  <input
+                    type={q.questionType === "multiple" ? "checkbox" : "radio"}
+                    name={`q-${current}`}
+                    value={key}
+                    checked={
+                      q.questionType === "multiple"
+                        ? (answers[current] || []).includes(key)
+                        : answers[current] === key
+                    }
+                    onChange={(e) =>
+                      handleAnswer(
+                        current,
+                        e.target.value,
+                        q.questionType === "multiple"
+                      )
+                    }
+                  />{" "}
+                  {value}
+                </label>
+              ))
+            ) : null}
+          </div>
+
+          {mode === "practice" && answers[current] && !checked[current] && (
+            <div className="practice-check">
+              <button
+                className="btn btn-primary"
+                onClick={() =>
+                  setChecked((prev) => ({ ...prev, [current]: true }))
+                }
+              >
+                Check Answer
+              </button>
+            </div>
+          )}
+
+          {mode === "practice" && checked[current] && (
+            <div className="correct-answer practice-feedback">
+              ✅ Correct Answer:{" "}
+              {Array.isArray(q.correctOption)
+                ? q.correctOption.join(", ")
+                : q.correctOption}
+            </div>
+          )}
+
+          <div className="navigation-buttons">
+            <button
+              className="btn btn-secondary"
+              onClick={() => setCurrent(current - 1)}
+              disabled={current === 0}
+            >
+              Previous
+            </button>
+            {current < questions.length - 1 ? (
+              <button
+                className="btn btn-primary"
+                onClick={() => setCurrent(current + 1)}
+              >
+                Next
+              </button>
+            ) : (
+              <button className="btn btn-primary" onClick={finishQuiz}>
+                Finish
+              </button>
+            )}
+          </div>
+        </>
+      );
+    }
+
+    // Initial state: Topic selection and Start button
+    return (
+      <div className="quiz-start-controls">
+        {topics.length > 0 && (
+          <div>
+            <label>Topic (optional): </label>
+            <select
+              value={selectedTopic}
+              onChange={(e) => setSelectedTopic(e.target.value)}
+            >
+              <option value="">-- All Topics --</option>
+              {topics.map((t, i) => (
+                <option key={i} value={t}>
+                  {t}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+        <button className="btn btn-primary" onClick={fetchQuestions}>
+          Start Quiz
         </button>
-      )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="quiz-page-wrapper">
+      <div className="quiz-container">
+        <div className="quiz-header">
+          <h1>Quiz for {subject}</h1>
+          {mode === "exam" && timerRunning && timeLeft !== null && (
+            <h3 className="timer">⏳ Time Left: {formatTime(timeLeft)}</h3>
+          )}
+        </div>
+
+        {renderContent()}
+
+        {(questions.length > 0 || finished) && (
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="btn btn-leave-quiz"
+          >
+            Leave Quiz
+          </button>
+        )}
+      </div>
     </div>
   );
 };

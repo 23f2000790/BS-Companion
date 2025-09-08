@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
 const QuestionSchema = new mongoose.Schema({
+  // NEW: Optional field for parent passages or instructions
+  context: {
+    type: String,
+    default: null, // Defaults to null if not provided
+  },
+
   question: { type: String, required: true },
   exam: { type: String, required: true },
   term: { type: String },

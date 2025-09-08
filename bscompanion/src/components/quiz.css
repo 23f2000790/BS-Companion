@@ -1,0 +1,194 @@
+/* --- Global Styles & Variables --- */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --light-bg: #f8f9fa;
+  --dark-text: #333;
+  --light-text: #666;
+  --border-color: #dee2e6;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --white-color: #ffffff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+  height: auto;
+}
+
+/* Styles are now scoped to this wrapper class to avoid conflicts.
+  The global 'body' style has been removed. 
+*/
+.quiz-page-wrapper {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  padding: 20px; /* Ensures padding around the quiz card */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* --- Main Quiz Container --- */
+.quiz-page-wrapper .quiz-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: var(--white-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Header & Timer --- */
+.quiz-page-wrapper .quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.quiz-page-wrapper .quiz-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.quiz-page-wrapper .timer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: var(--light-bg);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+/* --- Question & Options --- */
+.quiz-page-wrapper .question-block {
+  margin-bottom: 1.5rem;
+}
+
+.quiz-page-wrapper .question-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.quiz-page-wrapper .context-block {
+  background: #f9f9f9;
+  border-left: 4px solid #ccc;
+  margin: 15px 0;
+  padding: 15px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+  border-radius: 0 8px 8px 0;
+}
+
+.quiz-page-wrapper .options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-page-wrapper .option-label {
+  display: block;
+  background: var(--white-color);
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.quiz-page-wrapper .option-label:hover {
+  border-color: var(--primary-color);
+  background-color: #f0f8ff;
+}
+
+.quiz-page-wrapper .option-label input:checked {
+  accent-color: var(--primary-color);
+}
+
+/* --- Navigation & Action Buttons --- */
+.quiz-page-wrapper .navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.quiz-page-wrapper .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-page-wrapper .btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.quiz-page-wrapper .btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.quiz-page-wrapper .btn-secondary {
+  background-color: #6c757d;
+  color: var(--white-color);
+}
+
+.quiz-page-wrapper .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.quiz-page-wrapper .btn-leave-quiz {
+  background-color: var(--danger-color);
+  color: var(--white-color);
+  display: block;
+  margin: 20px auto 0;
+}
+
+.quiz-page-wrapper .btn:disabled {
+  background-color: #e9ecef;
+  color: #adb5bd;
+  cursor: not-allowed;
+}
+
+/* --- Results Screen --- */
+.quiz-page-wrapper .results-container h2,
+.quiz-page-wrapper .results-container h3 {
+  text-align: center;
+}
+
+.quiz-page-wrapper .results-container h3 {
+  font-size: 2rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.quiz-page-wrapper .result-item {
+  background: var(--white-color);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.quiz-page-wrapper .result-item p {
+  margin: 0.5rem 0;
+}
+
+.quiz-page-wrapper .correct-answer {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.quiz-page-wrapper .user-answer {
+  color: var(--dark-text);
+  font-weight: 500;
+}
