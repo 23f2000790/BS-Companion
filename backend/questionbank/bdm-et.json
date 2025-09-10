@@ -1296,5 +1296,1473 @@
     },
     "correctOption": "B",
     "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In the economic flow, what role do households typically play?",
+    "options": {
+      "A": "Suppliers of capital",
+      "B": "Producers of goods",
+      "C": "Consumers of goods and services",
+      "D": "Regulators of the economy"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What are the roles that the Government plays in the economic circular flow model?",
+    "options": {
+      "A": "Producer and Consumer",
+      "B": "Moderator and Participant",
+      "C": "Both Producer and Consumer & Moderator and Participant",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What kind of goods' demand decreases as income increases?",
+    "options": {
+      "A": "Superior Good",
+      "B": "Inferior Good",
+      "C": "Luxury Good",
+      "D": "Supply Good"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Spreadsheet Applications",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757526856/bdmmay20241_eqrtsz.png",
+    "context": null,
+    "question": "Which Excel formula should be used to count cells that meet multiple criteria?",
+    "options": {
+      "A": "COUNT(A2:A5,\"=Yes\",C3:C5,\"=Yes\")",
+      "B": "COUNTIFS(B2:B5,\"=Yes\",C2:C5,\"=Yes\")",
+      "C": "COUNTIF(B2:B5,\"=Yes\",C2:C5,\"=Yes\")",
+      "D": "COUNTA(C2:C5,\"=Yes\",D2:D5,\"=Yes\")"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is a comprehensive data source that covers every single household in a country?",
+    "options": {
+      "A": "Annual Survey of Industries",
+      "B": "National Sample Survey",
+      "C": "Census",
+      "D": "Economic Census"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is an example of a non-government data source?",
+    "options": {
+      "A": "Economic Census",
+      "B": "National Sample Survey",
+      "C": "Center for Monitoring Indian Economy (CMIE)",
+      "D": "Annual Survey of Industries"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "The number of heavy vehicle driving licenses issued can be used as a _________ of the potential market size for trucks. (Fill in the Blank with the appropriate response)",
+    "options": {
+      "A": "Lead Indicator",
+      "B": "Lag Indicator",
+      "C": "Supplement Indicator",
+      "D": "Surrogate Indicator"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following statements best describes the difference between a niche market and a mass market?",
+    "options": {
+      "A": "A niche market targets a small, specific group of customers with specialized needs, while a mass market targets a large, broad group of customers with general needs.",
+      "B": "A niche market involves offering lower-priced products to a wide audience, whereas a mass market involves offering high-end products to a small, exclusive group.",
+      "C": "A niche market typically requires large-scale advertising campaigns to reach a broad audience, while a mass market relies on word-of-mouth and targeted marketing.",
+      "D": "A niche market focuses on standard products that appeal to everyone, while a mass market customizes products to fit individual customer preferences."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "What does ABC analysis primarily focus on?",
+    "options": {
+      "A": "Classifying inventory items based on their unit cost",
+      "B": "Categorizing inventory items based on their reorder points",
+      "C": "Grouping inventory items based on their annual monetary usage",
+      "D": "Ranking inventory items based on their lead times"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following statements is not true about the benefits of implementing an ERP system?",
+    "options": {
+      "A": "Increased data redundancy",
+      "B": "Improved data accuracy and consistency",
+      "C": "Increased process efficiency",
+      "D": "Increased visibility into business operations"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is typically not a component of the \"job description\"?",
+    "options": {
+      "A": "Skills required for the job",
+      "B": "Key responsibilities",
+      "C": "Job performance indicators",
+      "D": "Recruitment process"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757526856/bdmmay20242_iq9fmp.png",
+    "context": null,
+    "question": "What indicates improvement in credit application processing?",
+    "options": {
+      "A": "Decrease in the declining rate of credit applications",
+      "B": "Increase in the approval rate of credit applications",
+      "C": "Both Decrease in the declining rate of credit applications & Increase in the approval rate of credit applications",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757527148/bdmmay20243_ivqc4k.png",
+    "context": null,
+    "question": "Which of the following is a common source for recruitment?",
+    "options": {
+      "A": "Hiring Portals",
+      "B": "Social and Professional Media",
+      "C": "Print Ads",
+      "D": "Employee Referrals"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "When should A/B test be done?",
+    "options": {
+      "A": "After deploying the model in real world",
+      "B": "After training the model, before testing on test data",
+      "C": "Before training the model",
+      "D": "Before deploying the model in real world"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "How do online payment companies make money?",
+    "options": {
+      "A": "Interest from loans/credit",
+      "B": "Transaction fees (a small cut from the transaction)",
+      "C": "Monthly subscription",
+      "D": "Both Interest from loans/credit and transaction fees"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What role does personalized recommendation play in nudging consumers on e-commerce sites?",
+    "options": {
+      "A": "To display clickbaits and flashy products to increase website traffic",
+      "B": "To offer the same discounts to all customers, ensuring fairness",
+      "C": "To suggest products based on browsing history, increasing the likelihood of purchase",
+      "D": "To highlight best-selling products only, irrespective of the user's interest"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757527148/bdmmay20244_ilcif9.png",
+    "context": null,
+    "question": "Match the Following",
+    "options": {
+      "A": "1-b,2-d,3-a,4-c",
+      "B": "1-d,2-b,3-c,4-a",
+      "C": "1-a,2-c,3-b,4-d",
+      "D": "1-c,2-a,3-d,4-b"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A customer makes a transaction through an online payments platform 'PayKaro' using 'BCCI Bank Credit Card' in Klipkart to buy a shoe. Which of the following is true chronologically?",
+    "options": {
+      "A": "Customer pays BCCI, BCCI pays Klipkart, Klipkart pays PayKaro",
+      "B": "BCCI pays PayKaro, PayKaro pays Klipkart, Customer pays BCCI",
+      "C": "Customer pays BCCI, BCCI pays PayKaro, PayKaro pays Klipkart",
+      "D": "Customer pays PayKaro, PayKaro pays BCCI, BCCI pays Klipkart"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Data Interpretation & Visualization",
+    "context": "Based on the data provided, answer the given subquestions",
+    "question": "Which SKU has the highest Days of Inventory?",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757527148/bdmmay20245_cyrvq4.png",
+    "options": {
+      "A": "LAP002",
+      "B": "LAP003",
+      "C": "LAP006",
+      "D": "LAP007"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the data provided, answer the given subquestions",
+    "question": "If the profit margin for the sale of a laptop is 10%, what is the total profit earned from the sale of LAP005?",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757527148/bdmmay20245_cyrvq4.png",
+    "options": {
+      "A": "42505",
+      "B": "40890",
+      "C": "41782",
+      "D": "40473"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757527148/bdmmay20245_cyrvq4.png",
+    "context": "Based on the data provided, answer the given subquestions",
+    "question": "What percentage of total revenue do the SKUs LAP004 and LAP005 contribute together?",
+    "options": {
+      "A": "10%",
+      "B": "20%",
+      "C": "15%",
+      "D": "25%"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "What is the OEE for the Friday shifts? (express in terms of %, e.g., if answer is 0.7359, express it as 73.59)",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757527148/bdmmay20243_ivqc4k.png",
+    "options": null,
+    "correctOption": {
+      "min": 92.5,
+      "max": 93.5
+    },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "What is the MAPE of the Thursday shifts?",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757527148/bdmmay20243_ivqc4k.png",
+    "options": {
+      "A": "0.1",
+      "B": "0.15",
+      "C": "0.2",
+      "D": "0.25"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In the context of economic flow, what do firms provide to households in exchange for labour?",
+    "options": {
+      "A": "Services",
+      "B": "Capital",
+      "C": "Wages",
+      "D": "Goods"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "Which Excel function can be used to search for a certain value from another table and retrieve a reference value based on the original table data?",
+    "options": {
+      "A": "SUM",
+      "B": "IF",
+      "C": "LINEST",
+      "D": "VLOOKUP"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is NOT a government source of economic data mentioned in the segment?",
+    "options": {
+      "A": "Economic Census",
+      "B": "Periodic Labour Force Survey (PLFS)",
+      "C": "Purchasing Managers' Index (PMI)",
+      "D": "National Sample Survey"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "What implication does a bimodal distribution in household transportation expenditure data point to?",
+    "options": {
+      "A": "Most households spend a similar amount on transportation",
+      "B": "There are two distinct groups of households based on transportation spending",
+      "C": "Transportation expenditure is evenly distributed across all households",
+      "D": "There is a negative correlation between income and transportation spending"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following factors is most critical in determining the market potential for a new product?",
+    "options": {
+      "A": "The size of the target market and percentage of potential customers interested in the product.",
+      "B": "Historical sale data of unrelated products.",
+      "C": "Cost of production and distribution.",
+      "D": "Current market share of existing products."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "What does the Days of Sales of Inventory indicate?",
+    "options": {
+      "A": "The average number of days required by a company to turn its inventory into sales.",
+      "B": "The number of days when inventory is zero in a year",
+      "C": "Total number of days when inventory sales is zero due to lack of inventory",
+      "D": "The average number of inventory stockout days in a month"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "Which of the following scenarios can be best expressed through a Bar chart?",
+    "options": {
+      "A": "Comparing expenditure trends of students.",
+      "B": "Comparing no. of scooter owners, no of bike owners vis- a- vis no of car owners.",
+      "C": "Showing relationship between temperature and time of the day.",
+      "D": "Analyzing correlation between no. of hours students study and their scores in exam"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "Which of the following is typically NOT performed when using a pivot table in data analysis ?",
+    "options": {
+      "A": "Filtering data to display only specific records.",
+      "B": "Creating new records in the original dataset.",
+      "C": "Grouping data by categories or fields to analyze trends and patterns.",
+      "D": "Summarizing data by aggregating values, such as sum, count, or average."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Swyft, a new taxi aggregator platform has developed a new recommendation engine called \"TinSage?\" and they want to test the recommendation engine by doing an A/B test. Can you identify the test and control groups?",
+    "options": {
+      "A": "Test: Random recommendation; Control: TinSage recommendation",
+      "B": "Test: Old model recommendation; Control: TinSage recommendation",
+      "C": "Test: TinSage recommendation; Control: Old model recommendation",
+      "D": "Test: Old model recommendation; Control: Random recommendation"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What is the primary goal of an A/B test?",
+    "options": {
+      "A": "Test the scalability of a model",
+      "B": "Compare two or more versions of a product or model to identify the best performer",
+      "C": "Measure hardware resource utilization",
+      "D": "Validate the hypothesis using historical data"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "How do online payment companies make money?",
+    "options": {
+      "A": "Interest from loans/credit",
+      "B": "Transaction fees (a small cut from the transaction)",
+      "C": "Monthly subscription",
+      "D": "Both Interest from loans/credit and transaction fees",
+      "E": "Ads"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A form created by HR that outlines the budgetary details, skills and capabilities required etc. is called",
+    "options": {
+      "A": "Indent",
+      "B": "Job Description",
+      "C": "Employee Referral",
+      "D": "Appraisal"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528450/bdmsept2024-1_vl7ic8.png",
+    "context": "Consider the following dataset:\nComposite Score= Sum of all criteria on the same scale",
+    "question": "Rank the above candidates and choose the correct ranking from the below options",
+    "options": {
+      "A": "Partha > Akanksha > Lavanya > Siva",
+      "B": "Akanksha > Lavanya > Siva> Partha",
+      "C": "Partha < Akanksha < Lavanya < Siva",
+      "D": "Akanksha < Lavanya < Siva< Partha"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528450/bdmsept2024-2_dum9kl.png",
+    "context": "PePhone is a FinTech firm that processes payments. Following are sources of revenue for the company - 3.5% of transaction amount as transaction fee from merchant for all types of transactions (credit and debit), 18% p.a. interest on credit transactions and incurs a loss of credit if not paid back.\nNote: Declined transactions will not get credit but customers will complete the payment through PePhone using their bank details.",
+    "question": "Calculate the overall profit for the company based on the below table - (Assume payback of credit in a year)",
+    "options": {
+      "A": "-167.50",
+      "B": "211.0",
+      "C": "197.74",
+      "D": "-162.18"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528450/bdmsept2024-3_uf6ats.png",
+    "context": "Based on the sample data answer the given subquestions.",
+    "question": "What is the market share of Product B as a percentage of total sale amount?",
+    "options": {
+      "A": "17.5",
+      "B": "16.2",
+      "C": "18.2",
+      "D": "19.3"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528450/bdmsept2024-3_uf6ats.png",
+    "context": "Based on the sample data answer the given subquestions.",
+    "question": "What percentage of total market share do products C and E hold together?",
+    "options": {
+      "A": "29.8%",
+      "B": "44%",
+      "C": "39.8%",
+      "D": "49.1%"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528450/bdmsept2024-4_yl7wt9.png",
+    "context": "Company HiringSoft wants to recruit Software Engineers for its new project. The hiring manager was tasked with choosing the appropriate hiring channel. The manager collected previous hiring data (provided in the table below) to help narrow down the appropriate channel. All channels advertised for the vacant positions on the same day.\nBased on the above data, answer the given subquestions",
+    "question": "If the hiring manager has to go only with the parameter, cost per candidate selected, which would be the most appropriate channel?",
+    "options": {
+      "A": "Direct Company Website",
+      "B": "Print Ads",
+      "C": "Employee Referrals",
+      "D": "Social and Professional Media"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528450/bdmsept2024-4_yl7wt9.png",
+    "context": "Company HiringSoft wants to recruit Software Engineers for its new project. The hiring manager was tasked with choosing the appropriate hiring channel. The manager collected previous hiring data (provided in the table below) to help narrow down the appropriate channel. All channels advertised for the vacant positions on the same day.\nBased on the above data, answer the given subquestions",
+    "question": "Which channel has the worst selection success rate? The Selection success rate is defined as the no. of candidates selected to the no. of applications shortlisted.",
+    "options": {
+      "A": "Hiring Portals",
+      "B": "Social and Professional Media",
+      "C": "Print Ads",
+      "D": "Employee Referrals"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528449/bdmsept2024-5_wggxzn.png",
+    "context": "Based on following data, answer the given subquestions:",
+    "question": "The total revenue of the firm is:",
+    "options": {
+      "A": "97290",
+      "B": "98390",
+      "C": "96480",
+      "D": "97560"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528449/bdmsept2024-5_wggxzn.png",
+    "context": "Based on following data, answer the given subquestions:",
+    "question": "What is the ratio of Widget sale to that of Gadget Sales?",
+    "options": {
+      "A": "0.51",
+      "B": "0.42",
+      "C": "0.35",
+      "D": "0.67"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528449/bdmsept2024-5_wggxzn.png",
+    "context": "Based on following data, answer the given subquestions:",
+    "question": "Which product has a linearly increasing trend of sales",
+    "options": {
+      "A": "Accessory V",
+      "B": "Widget G",
+      "C": "Accessory U",
+      "D": "Gadget K"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528448/bdmsept2024-6_otvp3b.png",
+    "context": "Based on the data in the table, Calculate the missing values X1, X2, X3 & X4",
+    "question": "Enter the value X1",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528448/bdmsept2024-6_otvp3b.png",
+    "context": "Based on the data in the table, Calculate the missing values X1, X2, X3 & X4",
+    "question": "Enter the value X2",
+    "options": null,
+    "correctOption": 180,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528448/bdmsept2024-6_otvp3b.png",
+    "context": "Based on the data in the table, Calculate the missing values X1, X2, X3 & X4",
+    "question": "Enter the value X3",
+    "options": null,
+    "correctOption": {
+      "min": 83,
+      "max": 83.5
+    },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757528448/bdmsept2024-6_otvp3b.png",
+    "context": "Based on the data in the table, Calculate the missing values X1, X2, X3 & X4",
+    "question": "Enter the value X4",
+    "options": null,
+    "correctOption": {
+      "min": 65,
+      "max": 65.75
+    },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "question": "What does the law of demand state?",
+    "options": {
+      "A": "As the price of a good increases, the quantity demanded decreases",
+      "B": "As the price of a good decreases, the quantity demanded decreases",
+      "C": "As the price of a good increases, the quantity supplied decreases",
+      "D": "As the price of a good decreases, the quantity supplied increases"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "Which function would you use to count the number of cells that meet a specific condition?",
+    "options": {
+      "A": "COUNT",
+      "B": "COUNTA",
+      "C": "COUNTIF",
+      "D": "COUNTSUM"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In a saturated smartphone market where 70% of current users express interest in upgrading their phones in the next two months, and the no. of new smartphone users remain unchanged, what should companies/manufacturers prioritize?",
+    "options": {
+      "A": "Expand distribution channels to reach untapped geographic regions.",
+      "B": "Focus on females as their target customers.",
+      "C": "Invest in research and development to create innovative features for new customers.",
+      "D": "Develop targeted upgrade incentives and promotions for current users looking to replace their old devices"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "What does the Days of Sales of Inventory indicate?",
+    "options": {
+      "A": "The average number of days required by a company to turn its inventory into sales.",
+      "B": "The number of days when inventory is zero in a year",
+      "C": "Total number of days when inventory sales is zero due to lack of inventory",
+      "D": "The average number of inventory stockout days in a month"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following factors is most critical in determining the market potential for a new product?",
+    "options": {
+      "A": "The size of the target market and percentage of potential customers interested in the product.",
+      "B": "Historical sale data of unrelated products.",
+      "C": "Cost of production and distribution.",
+      "D": "Current market share of existing products."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Which metric is most important to monitor during an A/B test?",
+    "options": {
+      "A": "Total number of users tested in the experiment",
+      "B": "Uptime of the system",
+      "C": "Key performance indicators (KPIs) specific to the experiment",
+      "D": "Model training time"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Arrange the following steps while working with unstructured data in a ranking modelling:\nI. Normalizing\nII. Preprocessing\nIII. Ranking\nIV. Composite score",
+    "options": {
+      "A": "I->II->III->IV",
+      "B": "II->I->IV->III",
+      "C": "I->II->I->IV->III",
+      "D": "I->II->I->III->IV"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "If a FinTech company wants to cut down losses, which of the following should they do?",
+    "options": {
+      "A": "Decrease approval cutoff of credit score",
+      "B": "Increase interest rate",
+      "C": "Increase approval limit for loans",
+      "D": "Increase approval cutoff of credit score",
+      "E": "Give more loans"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530368/bdmjan2025-1_p1sb9b.png",
+    "context": "PayBuddy conducted an A/B test to understand if their new Funding Instrument recommendation strategy works well. Following are the details of the control and treatment groups.\ni. Value of Credit transactions increased with the new recommendation strategy\nii. Value of Debit transactions increased with the new recommendation strategy\niii. Value of both Credit and Debit transactions increased with the new recommendation strategy\niv. Value of Credit transactions decreased with the new recommendation strategy\nv. Value of Debit transactions decreased with the new recommendation strategy",
+    "image": null,
+    "question": "From the given table, which of the following statements are true?",
+    "options": {
+      "A": "Both (i) & (v)",
+      "B": "Only (iii)",
+      "C": "Only (i)",
+      "D": "Both (ii) & (iv)",
+      "E": "Only (v)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530368/bdmjan2025-2_dslp3a.png",
+    "context": "PePhone is a FinTech firm that processes payments. Following are sources of revenue for the company - 3.5% of transaction amount as transaction fee from merchant for all types of transactions (credit and debit), 18% p.a. interest on credit transactions and incurs a loss of credit if not paid back. Calculate the overall profit for the company based on the below table - (Assume payback of credit in a year)\nNote: Declined transactions will not get credit but customers will complete the payment through PePhone using their bank details.",
+    "image": null,
+    "question": "Calculate the overall profit for the company.",
+    "options": {
+      "A": "- 211.0",
+      "B": "-192.72",
+      "C": "-131.94",
+      "D": "162.18"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Which of the following conditions can use the concept of \"weighted average\" to analyse expenditure data?",
+    "options": {
+      "A": "By considering importance of expenditure categories",
+      "B": "By considering the population size of different regions",
+      "C": "By adjusting for inflation over time",
+      "D": "By analyzing the impact of income levels on expenditure"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "In Excel, the SUBTOTAL function is used to perform calculations on a filtered range of data. Which of the following statements about the SUBTOTAL function is correct?",
+    "options": {
+      "A": "SUBTOTAL can only calculate the sum of a range and ignores hidden rows in the filtered data.",
+      "B": "SUBTOTAL can perform various calculations, including sum, average, count, and more, and it ignores rows hidden by filters.",
+      "C": "SUBTOTAL performs calculations only on rows that are manually hidden, not those hidden by filters.",
+      "D": "SUBTOTAL can calculate results based on data in any worksheet, regardless of whether the data is visible or hidden."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the sample data given answer the subquestions.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530369/bdmjan2025-3_ibnz3t.png",
+    "question": "Determine the percentage change in total revenue when income increases from Rs 15000 to Rs 25000.",
+    "options": {
+      "A": "41.2%",
+      "B": "42%",
+      "C": "42.5%",
+      "D": "41.8%"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": "Based on the sample data given answer the subquestions.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530369/bdmjan2025-3_ibnz3t.png",
+    "question": "What is the type of goods based on the given table?",
+    "options": {
+      "A": "Normal Goods",
+      "B": "Inferior Goods",
+      "C": "Luxury Goods",
+      "D": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on following data, answer the given subquestions:",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530368/bdmjan2025-4_b23en8.png",
+    "question": "The total revenue of the firm is:",
+    "options": {
+      "A": "67125",
+      "B": "66895",
+      "C": "65285",
+      "D": "67565"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Data Interpretation & Visualization",
+    "context": "Based on following data, answer the given subquestions:",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530368/bdmjan2025-4_b23en8.png",
+    "question": "In terms of sales trend, which product has a continuously increasing trend?",
+    "options": {
+      "A": "Gadget X",
+      "B": "Widget A",
+      "C": "Widget C",
+      "D": "Gadget Q"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on following data, answer the given subquestions:",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530368/bdmjan2025-4_b23en8.png",
+    "question": "What percentage of total revenue do Widgets contribute?",
+    "options": {
+      "A": "30.1%",
+      "B": "42.4%",
+      "C": "25.6%",
+      "D": "35.5%"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": "Match the following",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530367/bdmjan2025-5_ur85ek.png",
+    "question": "A form created by HR that outlines the budgetary details, skills and capabilities required etc.",
+    "options": {
+      "A": "Appraisal",
+      "B": "Indent",
+      "C": "Employee referral",
+      "D": "None of these"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": "Match the following",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530367/bdmjan2025-5_ur85ek.png",
+    "question": "Organization source talent by asking their existing employees to recommend candidates from their existing networks.",
+    "options": {
+      "A": "Appraisal",
+      "B": "Indent",
+      "C": "Employee referral",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": "Match the following",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530367/bdmjan2025-5_ur85ek.png",
+    "question": "The process of evaluating an employee's current and/or past performance",
+    "options": {
+      "A": "Appraisal",
+      "B": "Indent",
+      "C": "Employee referral",
+      "D": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In the context of economic circular flow, what do firms primarily provide to the factor market?",
+    "options": {
+      "A": "Goods and services",
+      "B": "Wages and rent",
+      "C": "Raw materials",
+      "D": "Capital investment"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "Which Excel function would you use to find a value in the first column of a table and return a value from a specified column?",
+    "options": {
+      "A": "INDEX",
+      "B": "MATCH",
+      "C": "VLOOKUP",
+      "D": "HLOOKUP"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is a non-government source of economic data in India?",
+    "options": {
+      "A": "National Sample Survey (NSS)",
+      "B": "Economic Census",
+      "C": "Centre for Monitoring Indian Economy (CMIE)",
+      "D": "Annual Survey of Industries (ASI)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "What does a bimodal distribution in consumer spending data typically indicate?",
+    "options": {
+      "A": "Uniform spending across all consumers",
+      "B": "Two distinct consumer groups with different spending patterns",
+      "C": "Random spending behavior",
+      "D": "Declining consumer confidence"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In a saturated market where 75% of existing customers show upgrade interest but new customer acquisition is limited, what should companies prioritize?",
+    "options": {
+      "A": "Aggressive new customer acquisition campaigns",
+      "B": "Geographic expansion to untapped markets",
+      "C": "Upgrade incentives and retention programs for existing customers",
+      "D": "Price reduction strategies"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Days Sales Outstanding (DSO) primarily measures:",
+    "options": {
+      "A": "Average time to convert inventory to sales",
+      "B": "Average time to collect accounts receivable",
+      "C": "Average time to pay suppliers",
+      "D": "Average production cycle time"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "Which chart type is most appropriate for showing the relationship between two continuous variables?",
+    "options": {
+      "A": "Bar chart",
+      "B": "Pie chart",
+      "C": "Scatter plot",
+      "D": "Histogram"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Internal Pool Sourcing refers to:",
+    "options": {
+      "A": "Hiring external consultants",
+      "B": "Filling positions from within the organization",
+      "C": "Outsourcing recruitment processes",
+      "D": "Creating talent pools for future hiring"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "To reduce credit losses, a FinTech company should:",
+    "options": {
+      "A": "Decrease credit score approval threshold",
+      "B": "Increase credit score approval threshold",
+      "C": "Eliminate credit checks",
+      "D": "Approve all applications"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A customer purchases on ClipKart using HFCD Credit Card via PayBlade.\n What is the correct payment flow sequence?",
+    "options": {
+      "A": "Customer HFCD ClipKart",
+      "B": "Customer HFCD PayBlade ClipKart",
+      "C": "Customer PayBlade HFCD ClipKart",
+      "D": "Customer ClipKart HFCD PayBlade"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Personalized recommendations on e-commerce platforms primarily aim to:",
+    "options": {
+      "A": "Increase website traffic",
+      "B": "Reduce server load",
+      "C": "Improve conversion rates based on user behavior",
+      "D": "Standardize user experience"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Which of the following best describes a lead indicator?",
+    "options": {
+      "A": "A metric that reflects past performance",
+      "B": "A measure used to predict future trends",
+      "C": "A statistic that measures current output",
+      "D": "A financial result already realized"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "Which Excel function would you use to calculate the average of a filtered range, ignoring hidden rows?",
+    "options": {
+      "A": "AVERAGE",
+      "B": "SUBTOTAL",
+      "C": "AGGREGATE",
+      "D": "FILTER"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What is the primary objective of conducting an A/B test?",
+    "options": {
+      "A": "To test system scalability",
+      "B": "To compare performance of two or more variants",
+      "C": "To validate data quality",
+      "D": "To measure user satisfaction"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "Which of the following is NOT a typical function of pivot tables?",
+    "options": {
+      "A": "Summarizing large datasets",
+      "B": "Creating new records in source data",
+      "C": "Grouping data by categories",
+      "D": "Calculating aggregated values"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "Based on this information, which statement is correct?",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530886/bdmmay2025-1_k411ou.png",
+    "options": {
+      "A": "Treatment improved both metrics",
+      "B": "Treatment improved conversion but reduced transaction value",
+      "C": "Control performed better on all metrics",
+      "D": "No significant difference between groups"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Based on the data, which channel has the best cost per selection ratio?",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530828/bdmmay2025-2_jtwudk.png",
+    "options": {
+      "A": "Campus Hiring",
+      "B": "Job Portal",
+      "C": "Employee Referral",
+      "D": "Social Media"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the following sales data, answer the given subquestions\nProduct Sales Data (Rs. in thousands):\nProduct A: 45,000\nProduct B: 32,000\nProduct C: 58,000\nProduct D: 28,000\nProduct E: 37,000",
+    "question": "What is the market share of Product C as a percentage?",
+    "options": {
+      "A": "27.5%",
+      "B": "29.0%",
+      "C": "30.5%",
+      "D": "32.0%"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Data Interpretation & Visualization",
+    "context": "Based on the following sales data, answer the given subquestions\nProduct Sales Data (Rs. in thousands):\nProduct A: 45,000\nProduct B: 32,000\nProduct C: 58,000\nProduct D: 28,000\nProduct E: 37,000",
+    "question": "Which product has the second-highest market share?",
+    "options": {
+      "A": "Product A",
+      "B": "Product B",
+      "C": "Product D",
+      "D": "Product E"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the given product data, answer the subquestions:",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530828/bdmmay2025-3_ts8oe6.png",
+    "question": "What is the total monthly revenue?",
+    "options": null,
+    "correctOption": 1088000,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the given product data, answer the subquestions:",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530828/bdmmay2025-3_ts8oe6.png",
+    "question": "Which product has the highest Days of Inventory?",
+    "options": {
+      "A": "Alpha",
+      "B": "Beta",
+      "C": "Gamma",
+      "D": "Delta"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the following product data, answer the given subquestions:\nPlanned Production Hours: 480\nLost Time Hours: 48\nDesign Speed: 200 units/hour\nActual Speed: 180 units/hour\nTotal Units Produced: 77,760\nGood Units: 74,772",
+    "question": "Calculate Availability (in %)",
+    "options": null,
+    "correctOption": 90,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the following product data, answer the given subquestions:\nPlanned Production Hours: 480\nLost Time Hours: 48\nDesign Speed: 200 units/hour\nActual Speed: 180 units/hour\nTotal Units Produced: 77,760\nGood Units: 74,772",
+    "question": "Calculate Overall Equipment Effectiveness (OEE) (in %)",
+    "options": null,
+    "correctOption": {
+      "min": 77,
+      "max": 78
+    },
+    "questionType": "numerical"
   }
 ]

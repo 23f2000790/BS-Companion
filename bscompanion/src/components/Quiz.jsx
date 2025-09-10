@@ -137,23 +137,19 @@ const Quiz = () => {
   };
 
   const getTimeForQuestions = (count) => {
-    // Standard time per question (e.g., 90 seconds)
-    // return count * 90;
-    // Or keep your existing tiered logic
-    switch (count) {
-      case 10:
-        return 20 * 60;
-      case 20:
-        return 30 * 60;
-      case 30:
-        return 45 * 60;
-      case 40:
-        return 60 * 60;
-      case 50:
-        return 90 * 60;
-      default:
-        return 20 * 60;
-    }
+    const secondsPerQuestion = 90;
+    let totalTime = count * secondsPerQuestion;
+
+    const minTime = 10 * 60; // 10 minutes
+    const maxTime = 120 * 60; // 2 hours
+
+    if (totalTime < minTime) totalTime = minTime;
+    if (totalTime > maxTime) totalTime = maxTime;
+
+    let totalMinutes = Math.ceil(totalTime / 60);
+    totalMinutes = Math.ceil(totalMinutes / 5) * 5;
+
+    return totalMinutes * 60;
   };
 
   const renderQuestion = (text) => {
