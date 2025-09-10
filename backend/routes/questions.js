@@ -6,7 +6,7 @@ const router = express.Router();
 // ✅ Get questions
 router.get("/", async (req, res) => {
   try {
-    const { subject, exam, topic, limit = 10 } = req.query;
+    const { subject, exam, topic, term, limit = 10 } = req.query;
     const totalLimit = Number(limit);
 
     if (!subject) {
@@ -28,169 +28,55 @@ router.get("/", async (req, res) => {
     if (exam) {
       questions = papers?.[exam] || [];
 
-      // If topic is provided → return only those topic questions from that exam
+      // 🔹 Apply topic + term filters if given
       if (topic) {
-        questions = questions
-          .filter((q) => (q.topic || "") === topic)
-          .sort(() => 0.5 - Math.random())
-          .slice(0, totalLimit);
-      } else {
-        // 🔹 Group questions by topic for equal weightage
-        const topicMap = {};
-        questions.forEach((q) => {
-          const qTopic = q.topic || "Others";
-          if (!topicMap[qTopic]) topicMap[qTopic] = [];
-          topicMap[qTopic].push(q);
-        });
-
-        const topics = Object.keys(topicMap);
-        const topicCount = topics.length;
-
-        if (topicCount === 0) {
-          return res.json([]); // No topics found
-        }
-
-        let selectedQuestions = [];
-
-        // Step 1: Pick at least 1 question from each topic (if available)
-        topics.forEach((t) => {
-          const take = Math.min(1, topicMap[t].length);
-          selectedQuestions.push(
-            ...topicMap[t].sort(() => 0.5 - Math.random()).slice(0, take)
-          );
-        });
-
-        let remaining = totalLimit - selectedQuestions.length;
-
-        if (remaining > 0) {
-          // Step 2: Distribute remaining equally among topics
-          let perTopic = Math.floor(remaining / topicCount);
-          let extra = remaining % topicCount;
-
-          topics.forEach((t) => {
-            if (remaining <= 0) return;
-
-            const alreadyTaken = selectedQuestions.filter(
-              (q) => q.topic === t
-            ).length;
-            const available = topicMap[t].length - alreadyTaken;
-
-            let take = Math.min(perTopic, available);
-
-            // Give "extra" to first few topics if available
-            if (extra > 0 && available > take) {
-              take += 1;
-              extra -= 1;
-            }
-
-            if (take > 0) {
-              selectedQuestions.push(
-                ...topicMap[t]
-                  .filter((q) => !selectedQuestions.includes(q))
-                  .sort(() => 0.5 - Math.random())
-                  .slice(0, take)
-              );
-              remaining -= take;
-            }
-          });
-
-          // Step 3: If still remaining, take from other available topics
-          if (remaining > 0) {
-            topics.forEach((t) => {
-              if (remaining === 0) return;
-
-              const alreadyTaken = selectedQuestions.filter(
-                (q) => q.topic === t
-              ).length;
-              const available = topicMap[t].length - alreadyTaken;
-
-              if (available > 0) {
-                const take = Math.min(available, remaining);
-                selectedQuestions.push(
-                  ...topicMap[t]
-                    .filter((q) => !selectedQuestions.includes(q))
-                    .sort(() => 0.5 - Math.random())
-                    .slice(0, take)
-                );
-                remaining -= take;
-              }
-            });
-          }
-        }
-
-        // Shuffle selected questions for randomness
-        questions = selectedQuestions.sort(() => 0.5 - Math.random());
+        questions = questions.filter((q) => (q.topic || "") === topic);
       }
-    }
-    // ✅ If no exam but topic is provided → fetch across ALL exams (proportional limit distribution)
-    else if (topic) {
-      const topicQuestionsByExam = {};
-      let totalQuestions = 0;
+      if (term) {
+        questions = questions.filter((q) => (q.term || "") === term);
+      }
 
-      // Collect topic questions per exam
-      Object.entries(papers || {}).forEach(([examName, qs]) => {
+      // 🔹 Randomize & limit
+      questions = questions
+        .sort(() => 0.5 - Math.random())
+        .slice(0, totalLimit);
+    }
+    // ✅ If no exam but topic/term is provided → fetch across ALL exams
+    else if (topic || term) {
+      let filteredQuestions = [];
+
+      Object.values(papers || {}).forEach((qs) => {
         if (Array.isArray(qs)) {
-          const filtered = qs.filter((q) => (q.topic || "") === topic);
-          if (filtered.length > 0) {
-            topicQuestionsByExam[examName] = filtered;
-            totalQuestions += filtered.length;
+          let pool = [...qs];
+
+          if (topic) {
+            pool = pool.filter((q) => (q.topic || "") === topic);
+          }
+          if (term) {
+            pool = pool.filter((q) => (q.term || "") === term);
+          }
+
+          if (pool.length > 0) {
+            filteredQuestions.push(...pool);
           }
         }
       });
 
-      // If no questions found for the topic → return empty
-      if (totalQuestions === 0) {
+      // If no questions found → return []
+      if (filteredQuestions.length === 0) {
         return res.json([]);
       }
 
-      let selectedQuestions = [];
-      let remaining = totalLimit;
-
-      // Step 1: Calculate proportional allocation per exam
-      const examNames = Object.keys(topicQuestionsByExam);
-      examNames.forEach((examName, index) => {
-        if (remaining <= 0) return;
-
-        const examQs = topicQuestionsByExam[examName];
-        const proportion = Math.floor(
-          (examQs.length / totalQuestions) * totalLimit
-        );
-
-        const take = Math.min(proportion, examQs.length, remaining);
-
-        selectedQuestions.push(
-          ...examQs.sort(() => 0.5 - Math.random()).slice(0, take)
-        );
-        remaining -= take;
-      });
-
-      // Step 2: If still remaining (rounding issues), fill from leftover exams
-      if (remaining > 0) {
-        examNames.forEach((examName) => {
-          if (remaining === 0) return;
-
-          const examQs = topicQuestionsByExam[examName].filter(
-            (q) => !selectedQuestions.includes(q)
-          );
-
-          if (examQs.length > 0) {
-            const take = Math.min(remaining, examQs.length);
-            selectedQuestions.push(
-              ...examQs.sort(() => 0.5 - Math.random()).slice(0, take)
-            );
-            remaining -= take;
-          }
-        });
-      }
-
-      // Final selected topic questions
-      questions = selectedQuestions.sort(() => 0.5 - Math.random());
+      // 🔹 Shuffle + take limit
+      questions = filteredQuestions
+        .sort(() => 0.5 - Math.random())
+        .slice(0, totalLimit);
     }
-    // ✅ If neither exam nor topic is provided → send 400
+    // ✅ If neither exam nor topic/term is provided → send 400
     else {
       return res
         .status(400)
-        .json({ message: "Please provide either exam or topic" });
+        .json({ message: "Please provide exam, topic or term" });
     }
 
     if (!questions.length) {

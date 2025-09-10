@@ -456,7 +456,7 @@
     "context": "Consider the file numbers.txt:\n1 123\n2 45a\n3 789\n4 b01\n5 2345\n6 111",
     "question": "If you run the command `grep '[[:digit:]]\\\\{3\\\\}' numbers.txt` (using BRE), how many lines will be matched?",
     "options": null,
-    "correctOption": "4",
+    "correctOption": 4,
     "questionType": "numerical"
   },
   {
@@ -490,5 +490,1384 @@
     },
     "correctOption": ["B", "C"],
     "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "ALPHA=\"A\"\nGAMMA=\"G\"\necho \"\\$ALPHASBETASGAMMA\"\nSelect the output from the above script.",
+    "options": {
+      "A": "ALPHABETAGAMMA",
+      "B": "ABG",
+      "C": "ABETAG",
+      "D": "AG"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "context": "$ touch a\n$ echo 5 > a\n$ ** MISSING COMMAND **\n$ cat a b\n5\napples",
+    "question": "Select the missing command.",
+    "options": {
+      "A": "touch b",
+      "B": "echo b",
+      "C": "echo apples > b",
+      "D": "echo apples"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Choose the line that modified the contents inside the file backup.sh",
+    "options": {
+      "A": "cat backup.sh | cut -d \" \" -f 1",
+      "B": "echo -n >> backup.sh",
+      "C": "echo hello world > backup.sh",
+      "D": "cp backup.sh backup.2023.sh"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "context": "A college student uses a pen drive to store files.\nThe pen drive is always mounted on his system at /mount as a separate file system.\nHis pen drive contains lots of files and directories. He wants to create a link to the directory /mount/bio/phase-2/project-312 inside his home directory.",
+    "question": "What link can the student use?",
+    "options": {
+      "A": "soft link",
+      "B": "hard link",
+      "C": "either soft link or hard link",
+      "D": "links will not work for this requirement"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "$a=12\n$b=56\n$c=$(a+b)\n$d=$(a+c)\nWhat will be the value of d at the end of execution?",
+    "options": null,
+    "correctOption": 80,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "How many files will be created at the end of execution by the below script?\ntouch abcd\ntouch a e d\necho $RANDOM >> b",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Job Scheduling (Cron)",
+    "context": "Hint: Below is the description of the sequence in the cron job command. It tells at what date/time periodically the job needs to be executed.\n* * * * * <Command(s) with argument>\n| | | | | Command or Script to Execute\n| | | | Day of the Week(0-6)\n| | | Month of the Year (1-12)\n| | Day of the Month(1-31)\n| Hour (0-23)\nMin (0-59)",
+    "question": "When will the script /home/rohit/premodel.sh get executed.\n5 8 * 5 * /home/rohit/premodel.sh",
+    "options": {
+      "A": "Everyday at 00:05 in August",
+      "B": "Everyday at 05:00 in August",
+      "C": "Everyday at 08:00 in May",
+      "D": "Everyday at 08:05 in May"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Regular Expressions (Regex)",
+    "context": "<html>\n<head>\n<title>My Site</title>\n</head>\n<body>\n<div class=\"container\" id=\"container-secondary\">\n<button id=\"load-preview-button\">Load</button>\n<button id=\"play-video-button\">Play</button>\n</div>\n</body>\n</html>\nHint:\noption in grep prints only the matched regular expression.\ngrep \"button\" index.html\nbutton\nbutton\nbutton\nbutton\nbutton\nbutton",
+    "question": "Select the regex to extract only the value of \"id\" from the below HTML file names as index.html",
+    "options": {
+      "A": "grep 'id=\".*\"' -o index.html | cut -d'\"' -f2",
+      "B": "cat index.html | grep 'id=\".*\"' | cut -d'\"' -f2",
+      "C": "grep 'id=\".*\"' -o index.html",
+      "D": "grep 'id=\".\"' -o index.html | cut -d'\"' -f1"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "Choose the regular expression that match with ONLY the five digit palindrome. Basic Regular Expression (BRE) is used.",
+    "options": {
+      "A": "^.....$",
+      "B": "^.\\{5\\}$",
+      "C": "^\\([0-9]\\)\\([0-9]\\)[0-9]\\2\\1$",
+      "D": "$^|(.1)|(.1).|2|15$"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "context": "read str\npat='^@.*#'\nif [[ \"$str\" =~ \"$pat\" ]]; then\n  echo MATCH\nelse\n  echo NOT MATCH\nfi",
+    "question": "Select the standard input that prints \"MATCH\" as output.",
+    "options": {
+      "A": "!@#$",
+      "B": "arch",
+      "C": "@#",
+      "D": "#@"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "What will be the matched case(s) from the above regular expression.\n(+91 0)?[6-9][[:digit:]]{9}\nAssume that the regular expression is using Extended Regular Expression Engine (ERE). [MSQ]",
+    "options": {
+      "A": "Any ten digit mobile number",
+      "B": "Any ten digit mobile number starting with 6, 7, 8 or 9",
+      "C": "Any ten digit mobile number starting with 6, 7, 8 or 9 with 0 as prefix",
+      "D": "Any ten digit mobile number starting with 6, 7, 8 or 9 with +91 as prefix"
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Basic Linux Commands",
+    "context": "$ ls -l\n-rw-rw-r-- 1 abdul student 6977 Aug 8 19:14 traceback.txt",
+    "question": "Choose the type of user(s) who can write to the file traceback.txt using the console output given below. [MSQ]",
+    "options": {
+      "A": "abdul",
+      "B": "ankit who belong to the group \"student\"",
+      "C": "catherine who do not belong to the group \"student\"",
+      "D": "jina who belong to the group \"abdul\""
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Enter the number A that will print the output \"SUCCESS\"\n[ \"$A\" -gt 10 ] &&\n[ \"$A\" -lt 15 ] &&\n[ \"$((A%3))\" -eq 0 ] &&\necho SUCCESS",
+    "options": null,
+    "correctOption": 12,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "context": "The files inside the directory is given below.\n-rw-rw-r-- 1 meena meena    2 Nov 30 09:53 docker_notes.txt\n-rwxrwxr-x 1 meena meena 2901 Nov 18 13:47 emacs_notes.txt\ndrwxrwxr-x 11 meena meena 4096 Jul 27 17:24 vim\n-rw-rw-r-- 1 meena meena 1709 Nov 18 13:47 vim_notes.txt\ndrw-rw-r-- 1 meena meena 4096 Nov 18 13:47 x\ndrw-rw-r-- 1 meena meena 4096 Nov 18 13:47 y\ndrw-rw-r-- 1 meena meena 4096 Nov 18 13:47 z",
+    "question": "Select the file(s) that will be printed in the output. [MSQ]\n\nfor file in *; do\n  # -f returns exit status\n  [ -f $file ] && echo $file\n  # when the operand is a file\ndone",
+    "options": {
+      "A": "docker_notes.txt",
+      "B": "emacs_notes.txt",
+      "C": "vim_notes.txt",
+      "D": "x",
+      "E": "y",
+      "F": "z"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Select the equivalent command for the above script.\n\nwhile read line; do\n  echo $line\ndone < pattern.txt",
+    "options": {
+      "A": "cat pattern.txt",
+      "B": "cat pattern.txt | cat > pattern.txt",
+      "C": "cat > pattern.txt",
+      "D": "grep pattern.txt"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Given the script below, select its output.\n\n```bash\nmkdir mydir\ntouch mydir/file1.txt; touch mydir/file2.txt\nmkdir mydir/subdir; touch mydir/subdir/file3.txt\nrmdir mydir/subdir\n```",
+    "options": {
+      "A": "remove directory subdir",
+      "B": "remove directory dir and subdir",
+      "C": "remove files from subdir",
+      "D": "exit with exit code (not 0)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757499831/syscmay2023-1_fj1rhn.png",
+    "context": "Given the following script and command information:\n\n**Script:**\n```bash\n#!/bin/bash\nexport MY_VAR=\"Sunset\"\nmy_var=\"Sunrise\"\necho \"Var11 is: $MY_VAR\"\necho \"Var12 is: $my_var\"\n(\n  my_var=\"Sun_rise\"\n  MY_VAR_var=\"Sun_set\"\n  echo \"Var21 is: $MY_VAR\"\n  echo \"Var22 is: $my_var\"\n  (\n    MY_VAR=\"Sun@rise\"\n    my_var=\"Sun@set\"\n    echo \"Var31 is: $MY_VAR\"\n    echo \"Var32 is:${my_var}\"\n  ) & disown\n)\nwait\necho \"Var41 is: $MY_VAR\"\necho \"var42 is: $my_var\"\n```\n",
+    "question": "What will be the value of Var42 at the end of execution?",
+    "options": {
+      "A": "Sunrise",
+      "B": "Sun_rise",
+      "C": "Sun@rise",
+      "D": "Sun@set"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757499830/syscmay2023-2_tuwxen.png",
+    "context": null,
+    "question": "Given the following commands and their potential outputs, identify the correct pairing.",
+    "options": {
+      "A": "1->b, 2->a, 3->c, 4->d",
+      "B": "1->d, 2->b, 3->c, 4->a",
+      "C": "1->d, 2->c, 3->b, 4->a",
+      "D": "none of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "The following lines are a part of a shell script. Assume that the `PBS_JOBID` variable stores '123456.pbs' and `$HOME` stores '/user'. What would be the value of the 'tempdir' variable after these lines are executed?\n\n```bash\ntpdir=$(echo $PBS_JOBID | cut -d '.' -f 1)\ntempdir=$HOME/scratch/job$tpdir\nmkdir -p $tempdir\ncd $tempdir\n```",
+    "options": {
+      "A": "/user/scratch/jobpbs",
+      "B": "job123456",
+      "C": "/user/scratch/job123456",
+      "D": "/scratch/jobpbs"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "Choose the most appropriate regex to match an email address. The regex is provided in Extended Regular Expression Engine (ERE).",
+    "options": {
+      "A": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+      "B": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b",
+      "C": "[A-Za-z0-9._%+-]+@*[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+      "D": "\\b[A-Za-z0-9._%+-]*@[A-Za-z0-9.-]*\\.[A-Za-z]{2,}\\b"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Basic Linux Commands",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757499831/syscmay2023-3_ufugxs.png",
+    "context": null,
+    "question": "Using the above context, choose the command that deletes all occurrences of the letter 'a' from the file `myfile.txt`.",
+    "options": {
+      "A": "cat myfile.txt | tr 'a' ' '",
+      "B": "cat myfile.txt | tr 'a'",
+      "C": "cat myfile.txt | tr -d 'a'",
+      "D": "cat myfile.txt | tr -d '\\a'"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "context": "The following script takes a list of file names as input, finds the executable files, and then counts and lists them.\n\n```bash\n#!/bin/bash\nfiles=(\"$@\")\nexecutable_files=()\n\n***Missing Code***\n\necho \"Number of executable files: ${#executable_files[@]}\"\necho \"Executable files:\"\nfor file in \"${executable_files[@]}\"; do\n  echo \"$file\"\ndone\n```",
+    "question": "Identify the missing code block that correctly implements the script's logic.",
+    "options": {
+      "A": "for file in \"${files[@]}\"; do\n  if [ -x \"$file\" ]; then\n    executable_files+=(\"$file\")\n  fi\ndone",
+      "B": "for file in \"${files[@]}\"; do\n  if [ -x \"$file\" ]; then\n    executable_files=(\"$file\") + 1\n  fi\ndone",
+      "C": "for file in \"${files[@]}\"; do\n  if [ -f \"$file\" ]; then\n    executable_files+=(\"$file\")\n  fi\ndone",
+      "D": "for file in \"${files[@]}\"; do\n  if [ -x \"$file\" ]; then\n    executable_files+=(\"$file\")\n  done\nfi"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Which of the following commands will correctly separate standard output into `test.out` and standard error into `test.err`? Assume that `ech` is not a valid command and will generate an error message.",
+    "options": {
+      "A": "(echo \"test\" && ech) > test.err 2>&1 | tee -a test.out",
+      "B": "(echo \"test\" && ech) 2> test.err | tee >test.out",
+      "C": "(echo \"test\" && ech) > test.err 2>&1 | tee >test.out",
+      "D": "$(echo \"test\" && ech) > test.err 2>&1 | tee >test.out"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Regular Expressions (Regex)",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757499830/syscmay2023-4_g9muhd.png",
+    "context": "Hint: The `-o` option in grep prints only the matched part of the lines.",
+    "question": "Select the command(s) to extract only the value of the 'email' field (e.g., 'nulla.dignissim.maecenas@hotmail.org').",
+    "options": {
+      "A": "grep '\"email\"' test.json | cut -d '\"' -f 4",
+      "B": "grep -o -E '\"email\": \"[^\"]+\"' test.json | cut -d '\"' -f 4",
+      "C": "grep '\"email\":' test.json | cut -d '\"' -f 2",
+      "D": "grep 'email:' test.json | cut -d '\"' -f 4"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Regular Expressions (Regex)",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757499830/syscmay2023-5_ozilbi.png",
+    "context": "The following file contains information on websites visited on a certain server:",
+    "question": "From the options, identify the correct regular expression(s) (ERE) which can capture the website domain names (e.g., 'https://www.bechtelar.com' or 'http://macejkovic.com').",
+    "options": {
+      "A": "https?://[a-zA-Z]+\\.[a-zA-Z]{2,}",
+      "B": "http.*//[^/]+",
+      "C": "https?://[^/]+",
+      "D": "https?://[a-zA-Z]+\\.[a-zA-Z]+\\.[a-zA-Z]{2,}"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Basic Linux Commands",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757499830/syscmay2023-6_ctuuy0.png",
+    "context": null,
+    "question": "Identify which of the statements are TRUE.",
+    "options": {
+      "A": "files bzegr and bzfgr are hard links",
+      "B": "files bzegr and bzfgr are soft links",
+      "C": "files bzl and bzm are hard links",
+      "D": "files bzcat and bzip2 are hard links"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757499830/syscmay2023_7_vqwtrh.png",
+    "context": null,
+    "question": "Given the following script `run.sh`:\n```bash\n#!/bin/bash\ndirectory=\"mydirectory\"\nzip_dest=\"myarchive.zip\"\nread password\nzip -r -P $password $zip_dest $directory\n```",
+    "options": {
+      "A": "The Bash interpreter is used to run the run.sh file.",
+      "B": "A new directory is created at the end of the execution.",
+      "C": "The zip file is password protected.",
+      "D": "The password for the zip is 'password'.",
+      "E": "The password for the zip cannot be obtained from the script because it is read from the standard input.",
+      "F": "A new file, myarchive.zip, is created at the end of the execution.",
+      "G": "If `zip_dest=\"myarchive.zip\"` is replaced by `read zip_dest`, then the output file name is obtained from the second line of standard input."
+    },
+    "correctOption": ["A", "C", "E", "F"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Basic Linux Commands",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757500451/merged_images_horizontal_dm92vn.jpg",
+    "context": "Given the following contents of a `/etc/passwd` file:\n```\nroot:x:0:0:root:/root:/bin/bash\ndaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin\nbin:x:2:2:bin:/bin:/usr/sbin/nologin\nsys:x:3:3:sys:/dev:/usr/sbin/nologin\nsync:x:4:65534:sync:/bin:/bin/sync\n... (other users)\nnobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin\n```",
+    "question": "What will be the first line of the output of the command: `cat /etc/passwd | cut -d: -f3 | sort -rn`?",
+    "options": null,
+    "correctOption": 65534,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "How many background processes are running after the end of execution of the following script?\n\n```bash\n# Start 11 background processes\nfor i in {1..11}; do\n    sleep 10 &\ndone\n\n# Loop 6 times (for i=1,3,5,7,9,11)\nfor i in {1..11..2}; do\n    kill %%  # kill the most recent background process\ndone\n```",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Shell Scripting",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757500775/merged_read_manual_fvlxuz.jpg",
+    "context": null,
+    "question": "What will be the output of the following script?\n\n```bash\nread -n 4 line < <(echo abcdef)\necho $line$line\n```",
+    "options": null,
+    "correctOption": "abcdabcd",
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Basic Linux Commands",
+    "context": "By using the information provided below, select a command/script from the options which prints a line with the process ID (PID) for the command daily-backup.\nThe command is only (exclusively) started by the current user.\n\nA sample output from ps command.\n$ ps x\nPID TTY      STAT   TIME COMMAND\n1168 ?        Ss     0:00 /bin/sh -c cd /home/vidya/quicklinks; python3 -mhttp.server 7777\n2331 ?        S      0:00 /usr/bin/bash /home/vidya/server/deployment_script.sh\n2381 ?        S      0:00 /usr/bin/bash /home/vidya/server/deployment_script.sh\n5293 ?        S      0:00 (sd-pam)\n8293 ?        S      0:00 /usr/bin/bash\n1361 ?        S      0:00 /home/vidya/.local/bin/daily-backup\n1381 ?        S      0:00 /home/vidya/.local/bin/daily-backuper.sh\n\n$ ps\nPID TTY          TIME CMD\n8293 pts/32    0:00:00 /usr/bin/bash\n8973 pts/32    0:00:00 ps\n\n$ ps aux\nUSER         PID %CPU %MEM      VSZ    RSS TTY      STAT START   TIME COMMAND\nroot       96641  0.0  0.0        0      0 ?        I<   16:04   0:00 [kworker/u17:1-i915_flip]\nroot       96656  0.0  0.0        0      0 ?        I    16:04   0:00 [kworker/3:1-events]\nroot       96827  0.0  0.0        0      0 ?        I    16:04   0:00 [kworker/1:1-events]\nvidya      96844  0.3  1.1 1188997100 90548 ?       Sl   16:05   0:00 /opt/google/chrome/chrome\nvidya      96919  0.0  0.1    21608   8216 pts/21   S    16:05   0:00 /usr/bin/zsh\nvidya      96920  0.0  0.1    21640   8224 pts/21   S    16:05   0:00 /usr/bin/zsh\nvidya      96921  0.0  0.0    13716   3328 pts/21   R+   16:05   0:00 ps aux",
+    "question": "Select a command/script from the options which prints a line with the process ID (PID) for the command daily-backup.",
+    "options": {
+      "A": "ps x | grep '\\b/home/vidya/.local/bin/daily-backup\\b'",
+      "B": "ps | grep daily-backup",
+      "C": "ps aux | grep daily-backup",
+      "D": "ps x  grep daily-backup"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Regular Expressions (Regex)",
+    "context": "Command which prints only the number and not text.\n$ cat hidden_number.txt\nLoremipsumdolorsitame\nt,consecteturadipisci\nngelit,seddoeiusmodte\nmporincididuntutlabor\neetdoloremagnaaliqua.\nCondimentumlaciniaqui\nsveleros.Sitametmauri\nscommodoquisimperdiet\nmassatinciduntnunc.Le\nctusurnaduisconvallis\nconvallistellusidinte\nrdumvelitlaoreet.Ferm\nentumetsollicitudinac\norci.Aarcucursusvitae\nconguemaurisrhoncusae\nneanvel.Acfeugiatsedl\nectusvestibulummattis\nullamcorper.Sedadipis\ncingdiamdonecadipisci\nngtristiquerisus.Volu\n\n$ grep --help\nUsage: grep [OPTION]... PATTERNS [FILE]...\nSearch for PATTERNS in each FILE.\nExample: grep -i 'hello world' menu.h main.c\nPATTERNS can contain multiple patterns separated by newlines.\n-o, --only-matching\n    show only non-empty parts of lines that match",
+    "question": "Select a command from the given options which will find and print a number hidden in the text comprising of [a-zA-Z,.].\nNote that there is only one numeric character while rest of the characters are either alphabets or punctuation.",
+    "options": {
+      "A": "grep -v '[a-zA-Z,.]*' hidden_number.txt",
+      "B": "grep '[a-zA-Z,.]' hidden_number.txt",
+      "C": "grep '[0-9]' hidden_number.txt",
+      "D": "grep '[0-9]' -o hidden_number.txt"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Regular Expressions (Regex)",
+    "context": "ISO 8601 date-time formats in UTC are shown below.\n# UTC date-time formats\n2022-05-06T13:00:56+00:00\n2022-05-06T13:00:56Z\n20220506T130056Z",
+    "question": "From the options select the correct extended regular expression that will match with all of the given formats.",
+    "options": {
+      "A": "^[0-9]{4}-*[0-9]{2}-*[0-9]{2}T[0-9]{2}:*[0-9]{2}:*[0-9]{2}(Z|\\+00:00)$",
+      "B": "* $r[0-9]{4}-+[0-9]{2}-+[0-9]{2}T[0-9]{2}:+[0-9]{2}:+[0-9]{2}(Z11+00:00)}$",
+      "C": "$n_{[0-9]{4}-?[0-9]{2}-?[0-9]{2}T[0-9]{2}:?[0-9]{2}(Z}(Z1+00:00);}$",
+      "D": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|\\+00:00)$"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": "Following code block shows the commands ran in terminal.\n$ ps\nPID TTY          TIME CMD\n64754 pts/3    00:00:00 bash\n65657 pts/3    00:00:00 sleep\n65671 pts/3    00:00:00 sleep\n65718 pts/3    00:00:00 python3\n65774 pts/3    00:00:00 ps",
+    "question": "What will be the output of the last command?\n$ ps | grep \"$$\"",
+    "options": {
+      "A": "64754 pts/3 00:00:00 bash",
+      "B": "65718 pts/3 00:00:00 python3",
+      "C": "65774 pts/3 00:00:00 ps",
+      "D": "PID TTY TIME CMD"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "What the following for loop will print at the end of the execution?\nfor file in find -maxdepth 1 -name '*.txt'; do\n  echo $(basename $file)\ndone",
+    "options": {
+      "A": "Prints the file names of all the '.txt' files in the current directory non recursively.",
+      "B": "Prints the file names of all the '.txt' files in the current directory recursively.",
+      "C": "Prints the file names of all the '.txt' files in the current directory and in immediate subdirectories of current working directory non-recursively."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Which of the following are TRUE statements for hardlinks and softlinks?",
+    "options": {
+      "A": "Hardlink of a file has same inode number",
+      "B": "Softlink of a file has same inode number",
+      "C": "Softlink of a file occupies the same space (i.e. same size) as the original file",
+      "D": "Hardinks cannot be moved to a different File system",
+      "E": "Softlink of a file unconditionally requires full path",
+      "F": "Changes done in the original file is reflected in its hardlink"
+    },
+    "correctOption": ["A", "D", "F"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": "For the following while loop, select the standard input(s) from the following options that breaks the loop.\nwhile read line; do\n  [[ $line = $pat ]] && break\ndone\n$pat='[0-3][a-g][123][xyz]'",
+    "question": "Select the standard input(s) from the following options that breaks the loop.",
+    "options": {
+      "A": "8iadaz",
+      "B": "3g2z",
+      "C": "jkjkjkjk2j2yjkjk",
+      "D": ".a.a.a.2.2.1.",
+      "E": "00210132a1z01231",
+      "F": "1a2w01231"
+    },
+    "correctOption": ["B", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Which of the following options contains command(s) which will output calendar for October and November of 2023.",
+    "options": {
+      "A": "echo cal\\ {10,11}\\ 2023\\;",
+      "B": "$(echo cal\\ {10,11}\\ 2023\\;)",
+      "C": "echo cal\\ {10,11}\\ 2023\\; | bash",
+      "D": "$($(echo cal\\ {10,11}\\ 2023\\;))",
+      "E": "eval \"$(echo cal\\ {10,11}\\ 2023\\;)\""
+    },
+    "correctOption": ["C", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Basic Linux Commands",
+    "context": "Note: Boundary spaces are not considered but the proportionality, scale, and number of characters of inner rectangle should be the same.\n\nHint:\n$ echo -e '123\\n12'\n123\n12\n$ echo -e '123\\n12' | rev\n321\n21",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757501678/syscsept2023-1_eiytn3.png",
+    "question": "Select command(s)/script(s) from the options which will extract the inner rectangle made of 'x' from the pattern shown below which is stored in file bounded_rectangle.txt.",
+    "options": {
+      "A": "cat bounded_rectangle.txt | grep x | cut -d'*' -f2",
+      "B": "cat bounded_rectangle.txt | cut -d'' -f2- | rev | cut -d-f2- | grep x",
+      "C": "cat bounded_rectangle.txt | grep x",
+      "D": "cat bounded_rectangle.txt | grep -v x",
+      "E": "cat bounded_rectangle.txt | egrep '[^*]+' -o"
+    },
+    "correctOption": ["A", "B", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": "The following script is executed as: ./myscript.sh 11 22 33\n$ cat .myscript.sh\n#!/bin/bash\necho \"Using \\$*:\nfor arg in \"$*\"; do\n  val1=$arg\n  echo $val1\ndone\necho \"Using \\$@:\"\nfor arg in $@; do\n  val2=$arg\n  echo $val2\ndone",
+    "question": "At the end of the execution of the following script what will be the last value of val1.",
+    "options": null,
+    "correctOption": "11 22 33",
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": "The following commands are executed in the given order.\n$ sleep 1\n$ $(sleep 10)\n$ sleep 100 &\n$ echo \"Done\"",
+    "question": "Enter the duration (in number of seconds) after which the echo command will be executed.",
+    "options": null,
+    "correctOption": 11,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "What is the output of the following command?\n$ echo $((10 * 10 - 5*4))",
+    "options": null,
+    "correctOption": 80,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Basic Linux Commands",
+    "context": "The following is an output of the 'ls -li' command. Based on the information present in the output, answer the question.\nHint: Each directory has two hardlinks, one for '.' and another for '..', and in addition to it, each subdirectory increments the count of hardlinks to the parent directory by one.\n$ cd testdir\n$ ls -li\ntotal 68\n122703 drwxr-xr-x 2 systemcommands systemcommands 4096 Sep 25 11:28 2021Aug\n116829 drwxr-xr-x 2 systemcommands systemcommands 4096 Sep 25 06:49 folder1\n116830 drwxr-xr-x 2 systemcommands systemcommands 4096 Sep 25 06:49 folder2\n116831 drwxr-xr-x 2 systemcommands systemcommands 4096 Sep 25 07:10 folder3\n122704 -rw-r--r-- 1 systemcommands systemcommands 8228 Sep 25 09:37 html.txt\n122705 -rw-r--r-- 1 systemcommands systemcommands  605 Sep 25 09:53 onecolor.txt\n122706 -rw-r--r-- 1 systemcommands systemcommands  440 Sep 25 10:38 onecolor1.txt\n82472 drwxr-xr-x 2 systemcommands systemcommands 12288 Sep 25 08:49 test_directory\n116840 -rwxr-xr-x 1 systemcommands systemcommands  225 Sep 25 08:42 testdata.sh\n116857 -rwxr-xr-x 1 systemcommands systemcommands  351 Sep 25 08:48 testdata2.sh",
+    "question": "How many hardlinks are present for the parent directory (testdir)?",
+    "options": null,
+    "correctOption": 7,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Shell Scripting",
+    "context": "Below is the file hierarchy structure provided to answer the question.\nclassA\n└── attendance\n    ├── feb.csv\n    ├── jan.csv\n    └── mar.csv\nclassB\n└── attendance\n    ├── feb.csv\n    ├── jan.csv\n    └── mar.csv\nclassC\n└── attendance\n    ├── feb.csv\n    ├── jan.csv\n    └── mar.csv\nscript.sh\n\nFollowing script is executed on the directory classA (dir variable).\n#!/bin/bash\ndir=$1\nnum=$2\n[[ $num -eq $(ls $dir | wc -l) ]] && echo true || echo false",
+    "question": "For what value (num variable) will the script output true upon execution of the script.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Basic Linux Commands",
+    "context": "The following is the relevant part of /etc/passwd file on which the command is run (i.e. output of the cat /etc/passwd | tr ':' ',' | head -30 | tail -10 command).\nsyslog,x,102,106,,/home/syslog,/usr/sbin/nologin\nmessagebus,x,103,107,,/nonexistent,/usr/sbin/nologin\n_apt,x,104,65534,,/nonexistent,/usr/sbin/nologin\nlxd,x,105,65534,,/var/lib/lxd/,/bin/false\nuuidd,x,106,110,,/run/uuidd,/usr/sbin/nologin\ndnsmasq,x,107,65534,dnsmasq,,,/var/lib/misc,/usr/sbin/nologin\nlandscape,x,108,112,,/var/lib/landscape,/usr/sbin/nologin\nsshd,x,109,65534,,/run/sshd,/usr/sbin/nologin\npollinate,x,110,1,,/var/cache/pollinate,/bin/false\nsystemcommands,x,1000,1000,,,,/home/systemcommands,/bin/bash",
+    "question": "What will be the output of the following command?\ncat /etc/passwd | tr ':' ',' | head -30 | tail -10 | sort -k4,4 | cut -d, -f3 | head -1",
+    "options": null,
+    "correctOption": 104,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": "mkdir mydir\ntouch mydir/filel.txt; touch mydir/file2.txt\nmkdir mydir/subdir mydir/subdirl; touch mydir/subdir1/file3.txt\nrmdir mydir/subdir",
+    "question": "Select the output from the above script.",
+    "options": {
+      "A": "remove directory subdir",
+      "B": "remove directory dir and subdir",
+      "C": "remove directory subdir",
+      "D": "exit with error code"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": "You encounter a \"Permission denied (publickey)\" error when trying to SSH into a remote VM.",
+    "question": "Which ssh-keygen command would you use to ensure your SSH key has the correct permissions?",
+    "options": {
+      "A": "ssh-keygen -t rsa -b 4096",
+      "B": "chmod 600 ~/.ssh/id_rsa",
+      "C": "ssh-keygen -f ~/.ssh/id_rsa -y",
+      "D": "ssh-keygen -R remote-vm"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757504858/merged_ssh_keygen_manual_ezrlg7.jpg"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "What will be the output of the following command?\necho {A,B{1,2},C}",
+    "options": {
+      "A": "A B1 B2 C",
+      "B": "AB12C",
+      "C": "A {B1 B2} C",
+      "D": "{A B1 B2 C}"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Which of the following actions will delete the 7th line and save and exit in a vi editor or emacs editor?",
+    "options": {
+      "A": "$ vi filename.txt\n:7# all following commands in vi editor\ndd #delete the line\n:wq\n$ emacs filename.txt\nM-g g 7 # go to the 7th line\nC-k # delete the line\nC-x C-s #save the file\nC-x C-c# exit Emacs",
+      "B": "$ vi filename.txt\n7 # all following commands in vi editor\nD #delete the line\n:wq\n$ emacs filename.txt\nC-x 7 # go to the 7th line\nC-k # delete the Line\nC-x C-s # save the file\nC-x C-c# exit Emacs",
+      "C": "$ vi filename.txt\n:7# all following commands in vi editor\nD #delete the line\n:wq!\n$ emacs filename.txt\nM-7 # go to the 7th Line\nC-d # delete the line\nC-x C-s save the file\nC-x C-c# exit Emacs",
+      "D": "$ vi filename.txt\n:7 # all following commands in vi editor\ndd #delete the line\n:w\n$ emacs filename.txt\nM-gg 7 # go to the 7th line\nC-d#delete the line\nC-x C-s #save the file\nC-x C-c# exit Emacs"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": "You try to SSH into a remote VM using the command ssh user@remote-vm and receive the following error:\nPermission denied (publickey).",
+    "question": "Which of the following option(s) are likely the cause?",
+    "options": {
+      "A": "The SSH key is not added to the SSH agent.",
+      "B": "The remote VM's SSH server is down.",
+      "C": "The permissions on the SSH key file are too open.",
+      "D": "The username is incorrect."
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": "You try to SSH into a remote VM using the command ssh user@remote-vm and receive the following error:\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!",
+    "question": "Which of the following option(s) are likely the cause?",
+    "options": {
+      "A": "The remote VM's SSH host key has changed.",
+      "B": "The remote VM's IP address has changed and is now associated with a different host key.",
+      "C": "The local ~/.ssh/known_hosts file is corrupted.",
+      "D": "The remote VM's SSH server is down."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Which command will display the inode number of the file myfile?",
+    "options": {
+      "A": "ls -i myfile",
+      "B": "ls -l myfile",
+      "C": "stat myfile",
+      "D": "file myfile"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Which of the following commands will create a directory projects with a subdirectory 2024, then create a symbolic link named current pointing to 2024, and finally verify the link?",
+    "options": {
+      "A": "mkdir -p projects/2024\nln -s projects/2024 projects/current\nls -l projects",
+      "B": "mkdir projects projects/2024\nln -s projects/2024 projects/current\nls -l projects",
+      "C": "mkdir -p projects/2024\nln -s 2024 projects/current\nls -l projects",
+      "D": "mkdir -p projects/2024\nln -s projects/2024 current\nls -l projects"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757505324/merged_linux_commands_manual_x98h9b.jpg"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Which of the following commands will show its process ID (PID) and run in the background?",
+    "options": {
+      "A": "command & echo $!",
+      "B": "command && echo $!",
+      "C": "command &; echo $!",
+      "D": "command &"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Shell Scripting",
+    "context": "You have a file sample.txt and its SHA1 checksum stored in sample.shal. You want to ensure the checksum matches but only print a message if it fails.",
+    "question": "Which command sequence will achieve this?",
+    "options": {
+      "A": "sha1sum -c sample.shal > /dev/null || echo \"Checksum does not match\"",
+      "B": "sha1sum sample.txt -c sample.shal > /dev/null || echo \"Checksum does not match\"",
+      "C": "sha1sum -c sample.shal > /dev/null && echo \"Checksum does not match\"",
+      "D": "sha1sum sample.txt -c sample.shal > /dev/null && echo \"Checksum does not match\""
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757505028/syscmay2024-1_x42b8h.png"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": "[\n{\n},\n{\n\"name\": \"Chadwick Cummings\",\n\"email\": \"nulla.dignissim.maecenas@hotmail.org\",\n\"address\": \"326-2072 Sagittis Road\",\n\"numberrange\": 9,\n\"alphanumeric\": \"ESM17JCJ7NR\"\n},\n{\n\"name\": \"Isaac Whitaker\",\n\"email\": \"vitae.semper.egestas@icloud.ca\",\n\"address\": \"589-9277 Vivamus St.\",\n\"numberrange\": 3,\n\"alphanumeric\": \"CTI05YDP7BX\"\n},\n{\n\"name\": \"Bethany Potter\",\n\"email\": \"enim.gravida@protonmail.com\",\n\"address\": \"P.O. Box 807, 2790 Ut, Ave\",\n\"numberrange\": 7,\n\"alphanumeric\": \"VOE77ZLE00J\"\n}\n]",
+    "question": "Select the Regular Expression to match the complete string of \"email\" (e.g. \"email\": \"nulla dignissim maecenas@hotmail.org\") from the below JSON file names as test.json.",
+    "options": {
+      "A": "\"email\": \"([^\"]+)\"",
+      "B": "\"email\": \\[\"(.+)\"\\]",
+      "C": "\"email\"[[:space:]]*:[[:space:]]*\"([^\"]*)\"",
+      "D": "\"email\"[[:space:]]+:[[:space:]]+\"([^\"]*)\""
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Which of the following commands will ensure that both stdout and stderr of a command are written to the same file?",
+    "options": {
+      "A": "command > output.txt 2>&1",
+      "B": "command 2>&1 > output.txt",
+      "C": "command &> output.txt",
+      "D": "command $1>82$ > output.txt"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Basic Linux Commands",
+    "context": "You have a large log file, server.log, and you want the total count of the number of occurrences of the words \"ERROR\" and \"WARNING\" in the file.",
+    "question": "Which of the following command sequences will accomplish this?",
+    "options": {
+      "A": "grep -E \"ERROR|WARNING\" server.log | wc -l",
+      "B": "cat server.log | grep \"ERROR\" | grep \"WARNING\" | wc -l",
+      "C": "grep -c \"ERROR\" server.log && grep -c \"WARNING\" server.log",
+      "D": "grep -E \"ERROR|WARNING\" server.log | wc -w"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757505130/syscmay2024-2_pxyiv0.png"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": "An IP (Internet Protocol) address is a unique identifier assigned to each device connected to a network that uses the Internet Protocol for communication. An IPv4 address is typically represented in the format A.B.C.D, where each part (A, B, C, D) is an integer between 0 and 255. There are specific ranges of IP addresses reserved for private networks:\nClass A: 10.0.0.0 to 10.255.255.255\nClass B: 172.16.0.0 to 172.31.255.255\nClass C: 192.168.0.0 to 192.168.255.255\nGiven the following list of IP addresses:\n1. 10.0.0.1\n2. 10.255.255.254\n3. 172.16.0.1\n4. 172.31.255.254\n5. 192.168.0.1\n6. 192.168.255.254\n7. 8.8.8.8\n8. 169.254.1.1\n9. 198.51.100.1\n10. 203.0.113.1",
+    "question": "Which of the following regular expressions (BRE) will match IP addresses from the Class A (10.x.x.x) and Class C (192.168.x.x) private network ranges?",
+    "options": {
+      "A": "\\(10\\.\\|192.168\\.\\)[0-9]\\{1,3\\}\\.[0-9]\\{1,3\\}",
+      "B": "10\\.[0-9]\\{1,3\\}\\.[0-9]\\{1,3\\}\\.[0-9]\\{1,3\\}\\|192\\.168\\.[0-9]\\{1,3\\}\\.[0-9]\\{1,3\\}",
+      "C": "10\\.\\([0-9]\\{1,3\\}\\.\\)\\{2\\}[0-9]\\{1,3\\}\\|192\\.168\\.\\([0-9]\\{1,3\\}\\.\\)\\{2\\}",
+      "D": "10\\.\\([0-9]\\{1,3\\}\\.\\)\\{2\\}[0-9]\\{1,3\\}\\|192\\.168\\.\\([0-9]\\{1,3\\}\\.\\)\\{2\\}"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Shell Scripting",
+    "context": "Given the following contents of a file websites.txt:\n",
+    "question": "what will be the output of the command\ncat websites.txt | cut -d/ -f3 | grep -v 'www\\.' | tail -1?",
+    "options": null,
+    "correctOption": "example.org",
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757505319/syscmay2024-3_j2vtlp.png"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "Hint:\n$ ps -eo pid,%cpu-sort=-%cpu\nPID %CPU\n243099 88.2\n9640 7.0\n9814 3.1\n2824 2.8\n242251 2.4\n9822 1.2\n3140 0.7\n2654 0.7\n9902 0.6\nxargs is used to pass the stdout of one command as arguments to another command.",
+    "question": "Select the script to find and kill the process which is consuming more than 80% of the CPU.",
+    "options": {
+      "A": "ps -eo pid,%cpu --sort=-%cpu | awk '$2 > 80 {print $1}' | xargs kill",
+      "B": "ps -eo pid,%cpu --sort=-%cpu | awk '$2 < 80 {print $1}' | xargs kill",
+      "C": "ps -eo pid,%cpu-sort=-%cpu | awk '$0 > 80 {print $1}' | xargs kill",
+      "D": "ps-eo pid,%cpu-sort=-%cpu | awk '$0 < 80 {print $1}' | xargs kill"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "while read -r line; do\n [ \"$line\"\n EOF ] && break\n echo $line\n done <file1 >file2",
+    "question": "What does the following script do?",
+    "options": {
+      "A": "Copies the contents of file1 to file2.",
+      "B": "Copies the contents of file1 to file2 until the line EOF is encountered and the line EOF is not copied.",
+      "C": "Copies the contents of file1 to file2 until the line EOF is encountered, the line EOF is copied.",
+      "D": "Copies the contents of file1 to file2 until the last occurrence of the line EOF is encountered and the line EOF is not copied."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "#!/bin/bash\nx=0\nfor number in {10..20}; do\n #The ends of the range are inclusive\n if ((number % 2 != 0)); then\n  x=$((x + number))\n fi\ndone\necho $x",
+    "question": "What does the following script do?",
+    "options": {
+      "A": "Prints the count of even numbers between 10 and 20.",
+      "B": "Prints the count of odd numbers between 10 and 20.",
+      "C": "Prints the sum of even numbers between 10 and 20.",
+      "D": "Prints the sum of odd numbers between 10 and 20."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Basic Linux Commands",
+    "context": "The PATH environment variable:\n• Stores a list of directories separated by colons (\":\").\n• The shell searches for executable commands in these directories, one by one, in the order they appear in the variable PATH.\nHere, the script my-script is taken as an example. If the command my-script is run:\n1. Check for my-script in ~/.local/bin:\nIf an executable file named my-script exists in the ~/.local/bin directory, run that specific file.\n2. Check for my-script in /opt/extra/bin (if not found in step 1):\nIf the executable file my-script doesn't exist in ~/.local/bin but exists in /opt/extra/bin, run the one from /opt/extra/bin.\n3. The same flow should be followed if the command is run from a script.",
+    "question": "Select the command that does the following:",
+    "options": {
+      "A": "export PATH=/opt/extra/bin:~/.local/bin:$PATH",
+      "B": "export PATH=~/.local/bin:/opt/extra/bin:$PATH",
+      "C": "PATH=/opt/extra/bin:~/.local/bin:$PATH",
+      "D": "PATH=~/.local/bin:/opt/extra/bin:$PATH"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "#myscript.sh\nfor file in *.txt; do\n echo \"Processing $file\"\ndone\ncp \"$file\" \"backup_$file\"",
+    "question": "What does this script do?",
+    "options": {
+      "A": "Renames all.txt files by adding the prefix \"backup_\" to their names.",
+      "B": "Deletes all .txt files.",
+      "C": "Creates backup copies of all .txt files.",
+      "D": "Moves all .txt files to a backup directory."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "What environment variable stores the path to the directory containing the commands?",
+    "options": {
+      "A": "$HOME",
+      "B": "$PATH",
+      "C": "$USER",
+      "D": "$PWD"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "In a text file, you want to replace the second occurrence of the word \"apple\" with \"banana\". Which sed command would you use?",
+    "options": {
+      "A": "sed 's/apple/banana/2' filename",
+      "B": "sed 's/apple/banana/g2' filename",
+      "C": "sed '2s/apple/banana/' filename",
+      "D": "sed '2s/apple/banana/g' filename"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "You want to find lines in a text file where the third field is a numeric value between 57 and 93 inclusive. Which command(s) would you use?",
+    "options": {
+      "A": "awk '$3 >= 57 && $3 <= 93 {print $0}' filename",
+      "B": "awk '$3~/^[57-93]+$/ {print}' filename",
+      "C": "awk '$3~/^[0-9]{2}$/ {print}' filename",
+      "D": "awk '$3 >= 57 && $3 < 93' filename",
+      "E": "awk '$3~/[[:digit:]]+/ && $3>=57 && $3<=93 {print}' filename"
+    },
+    "correctOption": ["A", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "Select the correct option(s) to validate whether a string variable contains only digits, dot and minus in a bash script.",
+    "options": {
+      "A": "[[ $variable =~ ^[0-9.-]+$ ]]",
+      "B": "[[ $variable =~ ^[0-9.-]*$ ]]",
+      "C": "[[ $variable =~ ^[[:digit:].-]+$ ]]",
+      "D": "[[ $variable =~ ^[[:digit:].-]* ]]"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": "Hint\nUse the sample input and output for your reference.\nsample input\n<!doctype html>\n<html>\n<head>\n<title>Sample HTML Document</title>\n</head>\n<body>\n<h1>Welcome to my website!</h1>\n<p>Here are some links:</p\n>\n<ul>\n<li><a href=\"https://www.example.com\">Example Website</a></li>\n<li><a href=\"http://www.test.com/page1\">Test Page 1</a></li>\n<li><a href=\"https://www.test.com/page2\">Test Page 2</a></li>\n<li><a href=\"ftp://ftp.example.com\">FTP Server</a></li>\n<li><a href=\"mailto:info@example.com\">Contact Us</a></li>\n</ul>\n</body>\n</html>\n\nSample output\n<li><a href=\"https://www.example.com\">Example Website</a></li>\n<li><a href=\"http://www.test.com/page1\">Test Page 1</a></li>\n<li><a href=\"https://www.test.com/page2\">Test Page 2</a></li>\n<li><a href=\"ftp://ftp.example.com\">FTP Server</a></li>\n<li><a href=\"mailto:info@example.com\">Contact Us</a></li>",
+    "question": "You need to extract all lines which contain URLs from an HTML document. Which regular expression (ERE) would you use?",
+    "options": {
+      "A": "<a href=\"([^\"]+)\">",
+      "B": "<a href=\"([^']*)?\">",
+      "C": "<a href=\"([^\"]*)\">",
+      "D": "<a href=\"([^\"]+?)\">"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "1. Use awk to read the data from the text file and store it in an array.\n2. Calculate the mean by summing up all the values in the array and dividing by the total number of values.\n3. Sort the array to find the median value.\n4. Calculate the mode by counting the frequency of each unique value in the array.\n5. Determine the value with the highest frequency as the mode.\n6. Print the mean, median, and mode to the terminal.\n7. Prompt the user to enter the filename containing the dataset.\n8. Check if the specified file exists and is accessible.",
+    "question": "Arrange the following steps in the correct order to create an AWK script that calculates the mean, median, and mode of a given dataset stored in a text file named \"data.txt\":",
+    "options": {
+      "A": "7->8->1->2->3->4->5->6",
+      "B": "7->8->1->4->2->3->5->6",
+      "C": "8->7->1->2->3->4->5->6",
+      "D": "8->7->1->4->2->3->5->6",
+      "E": "7->8->1->3->2->4->5->6"
+    },
+    "correctOption": ["A", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "#!/bin/bash\n# Associative array\ndeclare -A month_to_number\nmonth_to_number=(\n[\"Jan\"]=1 [\"Feb\"]=2\n[\"Mar\"]=3 [\"Apr\"]=4\n[\"May\"]=5 [\"Jun\"]=6\n[\"Jul\"]=7 [\"Aug\"]=8\n[\"Sep\"]=9 [\"Oct\"]=10 [\"Nov\"]=11 [\"Dec\"]=12\n) # ([key]=value)\nread -r line\nfor m in \"${!month_to_number[@]}\"; do\n #get from stdin\n [[ \"$line\" = *$m* ]] || continue\n echo \"$line\" | sed \"s/$m/${month_to_number[$m]}/\"\ndone",
+    "question": "Choose the corner case(s) from stdin that makes this SED command fail to replace all the three-character month names with the corresponding numbers.",
+    "options": {
+      "A": "12/Jan/2017",
+      "B": "22-Aug-1999 Morning",
+      "C": "17/Feb/1888, 7/May/1999",
+      "D": "18/jul/2047",
+      "E": "19 Sep 2023 18:00"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "for i in {6..15}; do\ndone\nsleep 3 &\nsleep 1 && kill $1",
+    "question": "How long will the following script run?\nHint:\n• $! expands to the PID of the most recently executed background command.\n• Provide the answer in integer format.",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "$ cat data.txt\nHello World\n$ cat data.txt | while read -r line; do\ndone\necho \"${line% *}\"",
+    "question": "What will be the output of the last command? [NAT]\nNote: The answer is case-sensitive, so provide it without leading or trailing spaces.",
+    "options": null,
+    "correctOption": "Hello",
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Shell Scripting",
+    "context": "awk '\n{\n\tx[NR]=$1; y[NR]=$2\n\tx_ += $1; y_ += $2\n}\nEND {\n\tx_ = x_/NR; y_ = y_/NR\n\tdenx_2=0; deny_2=0\n\tfor (i in x) {\n\t\tnum += (x[i]-x_)*(y[i]-y_)\n\t\tdenx_2 += (x[i]-x_)^2\n\t\tdeny_2 += (y[i]-y_)^2\n\t}\n\tprint num/(denx_2^0.5 * deny_2^0.5)\n}\n' << EOF\n1 2\n3 4\n5 6\n7 8\nEOF",
+    "question": "What will be the output from the following script?\nNote: Provide the answer in integer format.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Following command is ran in shell. Which of the following option is the correct output of the command.\n`echo foll/{fol2, {fol3, fol4}{a..c}}`",
+    "options": {
+      "A": "foll/fol2 foll/fol3 foll/fol4 foll/a foll/b foll/c",
+      "B": "foll/fol2 foll/fol3a foll/fol3b foll/fol3c foll/fol4a fol1/fol4b foll/fol4c",
+      "C": "foll/fol2 foll/fol3a foll/fol3b foll/fol3c",
+      "D": "foll/fol2{a..c} foll/fol3{a..c} foll/fol4{a..c}",
+      "E": "foll/{fol2, {fol3,fol4}{a..c}}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Given the following command:\n`'$sort -k1,3 -k4rn file | awk '{prev key; key=$1 FS $2 FS $3} key!=prev'`\nWhere file has the following content\n`textl al a2 10`\n`text1 al a2 5`\n`text2 b2 b8 15`\n`text3 b9 b4 25`\n`text4 g1 k5 80`\n`text4 g1 k5 50`\n`text5 y5 p3 100`\n`text5 y5 p3 25`\nWhich among the following options will be the output of the command?\nHint\nThe sort -k1,3-k4rn command:\n• Sorts lines by the first three fields in alphabetical order.\n• Then sorts by the fourth field (numbers) in reverse order.",
+    "options": {
+      "A": "text1 al a2 10\ntext1 a1 a2 5\ntext2 b2 b8 15\ntext3 b9 64 25\ntext4 g1 k5 80\ntext4 g1 k5 50\ntext5 y5 p3 25\ntext5 y5 p3 100",
+      "B": "text1 al a2 10\ntext2 b2 b8 15\ntext3 b9 64 25\ntext4 g1 k5 80\ntext5 y5 p3 100",
+      "C": "textl al a2 5\ntextl al a2 10\ntext2 b2 b8 15\ntext3 b9 64 25\ntext4 g1 k5 80\ntext4 g1 k5 50\ntext5 y5 p3 25\ntext5 y5 p3 100"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "Using POSIX Extended Regular Expressions (ERE), write a pattern that matches lines where:\n1. The first field consists of only uppercase letters.\n2. The second field contains exactly 5 digits.\n3. The third field consists of exactly 2 lowercase letters.\n4. The fourth field is a floating-point number (with exactly one decimal point and at least one digit before and after the decimal point).\nChoose the correct pattern from the following options:",
+    "options": {
+      "A": "$n[A-Z]+\\s+[0-9]{5}\\s+[a-z]{2}\\s+[0-9]+\\.[0-9]+$",
+      "B": "^[A-Z]+\\s+[0-9]{5}\\s+[a-z]{2}\\s+[0-9]{1,}\\.[0-9]{1,}$",
+      "C": "^[A-z]+\\s+[0-9]+\\s+[a-z]+\\s+[0-9]+\\.[0-9]{2}$",
+      "D": "^[A-Z]+\\s+[0-9]{4,5}\\s+[a-z]{2}\\s+[0-9]*\\.[0-9]+$"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Job Scheduling (Cron)",
+    "context": null,
+    "question": "When will the script /home/Anupam/backup.sh get executed?\n`#backup.sh`\n`30 2 * 6 1 /home/rohit/backup.sh`",
+    "options": {
+      "A": "Every Monday at 02:30 in June",
+      "B": "Every Tuesday at 02:30 in June",
+      "C": "Every Monday at 06:30 in June",
+      "D": "Every Tuesday at 06:30 in July"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757507108/syscsept2024-1_zzuihu.png"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Choose the corner case(s) from stdin that would cause this find command to fail in listing all files in the given directory with a .txt extension.\n`#!/bin/bash`\n`find /home/user -name \"*.txt\"`",
+    "options": {
+      "A": "/home/user/file.txt",
+      "B": "/home/user/file.TXT",
+      "C": "/home/user/docs/file_text.txt",
+      "D": "/home/user/docs/file.txt.bak",
+      "E": "/home/user/docs/textfile"
+    },
+    "correctOption": ["B", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Shell Scripting",
+    "context": "You are given the following data in a file:\n`apple 12 banana 100`\n`grape 300 orange 150`\n`apple 12 banana 120`\n`mango 15 peach 200`\n`grape 300 orange 180`\n`mango 15 peach 220`",
+    "question": "which of the following script/method from the option(s) that filters out duplicate lines based on the first three fields, keeping only the first occurrence of each unique combination.",
+    "options": {
+      "A": "while read line; do\n  first_three=$(echo \"$line\" | cut -d' ' -f1-3)\n  if [[ !\" ${seen[@]} \" =~\" ${first_three}\" ]]; then\n    echo \"$line\"\n    seen+=(\"$first_three\")\n  fi\ndone < file",
+      "B": "cat file | \\\nwhile read -r a b c d; do\n  if ! grep -q \"$a $b $c\" <<< \"${seen[@]}\"; then # <<<< is standard input\n    echo \"$a $b $c $d\"\n    seen+=(\"$a $b $c\")\n  fi\ndone",
+      "C": "cut -d' ' -f1-3 file | uniq | while read first_three; do\n  grep \"$first_three\" file | head -n1\ndone",
+      "D": "cat file | sort -u -k1,3 | uniq"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Which of the following sed commands from the options will replace all occurrences of the word \"apple\" with \"orange\" only on even-numbered lines in the fruits.txt file?",
+    "options": {
+      "A": "sed '2~2s/apple/orange/g' fruits.txt",
+      "B": "sed '2n;s/apple/orange/g' fruits.txt",
+      "C": "sed 'n;s/apple/orange/g' fruits.txt",
+      "D": "sed 's/apple/orange/2' fruits.txt"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "A MAC address is typically represented in the format \"XX:XX:XX:XX:XX:XX\", where X can be a hexadecimal digit (0-9, A-F, or a-f).\nIdentify the correct extended or basic regular expression from the following, which will match a MAC address.\nNote: All the regular expressions are either BRE or ERE",
+    "options": {
+      "A": "\\([0-9A-Fa-f]\\{2\\}:\\)\\{5\\}[0-9A-Fa-f]\\{2\\}",
+      "B": "[0-9A-Fa-f]{2}:[0-9A-Fa-f]{2}:[0-9A-Fa-f]{2}:[0-9A-Fa-f]{2}:[0-9A-Fa-f]{2}:[0-9A-Fa-f]{2}",
+      "C": ".*\\(\\:\\){5}",
+      "D": "([[:digit:]]{2}:){5}[[:digit:]]{2}"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Select the command that prints the lines from 4 to 7 of file myfile.\nAssume that the myfile contains at least 7 lines.",
+    "options": {
+      "A": "head -7 myfile | tail -4",
+      "B": "tail -4 myfile | tail -7",
+      "C": "sed -n '4,7p' myfile",
+      "D": "awk 'NR >= 4 && NR <= 7 {print;}' myfile"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Basic Linux Commands",
+    "context": null,
+    "question": "Select the command(s) that find the file/directory names that starts with a and ends with e (case-sensitive).",
+    "options": {
+      "A": "ls | grep 'a.*e'",
+      "B": "grep 'a.*e'",
+      "C": "echo a*e",
+      "D": "echo *a*e*"
+    },
+    "correctOption": ["C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "Given the following code is present in script.sh, which of the following option(s) will result in the script echo \"false\" or exiting with an error code 1?\n`#!/usr/bin/env bash`\n`if [[ $# -ne 1 ]] || [[ ! $1 =~ ^[0-9]+$ ]]; then`\n`  exit 1`\n`fi`\n`(( $1 % 4 == 0 && $1 % 100 != 0 || $1 % 400 == 0 )) && echo true || echo false`",
+    "options": {
+      "A": "./script.sh 2020",
+      "B": "./script.sh \"A2022\"",
+      "C": "./script.sh 2400 2200",
+      "D": "./script.sh -400",
+      "E": "./script.sh 2024",
+      "F": "./script.sh 2021"
+    },
+    "correctOption": ["B", "C", "D", "F"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Regular Expressions (Regex)",
+    "context": null,
+    "question": "Given the following Basic Regular Expression (BRE) pattern, which of the following strings will match the pattern?\n`^\\([a-zA-Z0-9]\\)\\([a-zA-Z0-9]\\)[a-zA-Z0-9]\\2\\1$`",
+    "options": {
+      "A": "12321",
+      "B": "12345",
+      "C": "A1B1A",
+      "D": "9zXz9",
+      "E": "A1BA1",
+      "F": "ARIRA"
+    },
+    "correctOption": ["A", "C", "D", "F"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Shell Scripting",
+    "context": null,
+    "question": "What will be the output of the command `./script.sh \"linux_is-awesome-and_powerful\"` given the following script saved as script.sh?\n`#!/usr/bin/bash`\n`string=$(echo \"$1\" | sed -r 's/\\*//g | tr \"\"\"\" | tr -d \"\" | tr [a-z] [A-Z])`\n`IFS=\"\"`\n`for i in ${string}; do`\n`  echo -n ${i:0:1}`\n`done`\nNOTE: Enter the exact answer without any extra space in the beginning or at the end.",
+    "options": null,
+    "correctOption": "LAA",
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Shell Scripting",
+    "context": "#!/bin/bash\ntoggle(){\n  for i in {1..4}; do\n    if [ $((i % 2)) -eq 0 ]; then\n      echo -n \"1\"\n    else\n      echo -n \"0\"\n    fi\n    sleep 0.3\n  done\n}\nfor i in {1..3}; do #first loop\n  toggle\ndone\nfor i in {1..2}; do #second loop\n  toggle &\ndone\nwait #Command issued to finish process",
+    "question": "How many 1's are printed after the first loop has completed execution?",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "System Commands",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Shell Scripting",
+    "context": "#!/bin/bash\ntoggle(){\n  for i in {1..4}; do\n    if [ $((i % 2)) -eq 0 ]; then\n      echo -n \"1\"\n    else\n      echo -n \"0\"\n    fi\n    sleep 0.3\n  done\n}\nfor i in {1..3}; do #first loop\n  toggle\ndone\nfor i in {1..2}; do #second loop\n  toggle &\ndone\nwait #Command issued to finish process",
+    "question": "How many 0's are printed after the second loop (excluding first loop) has completed execution?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
   }
 ]

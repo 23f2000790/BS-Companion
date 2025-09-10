@@ -564,5 +564,737 @@
     },
     "correctOption": "C",
     "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What is the primary function of the circular flow of income in a market economy?",
+    "options": {
+      "A": "Redistributing wealth equally among all citizens",
+      "B": "Regulating the government's fiscal policy",
+      "C": "Showing the flow of goods, services, and money between households and firms",
+      "D": "Controlling inflation rates in the market"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which model represents a system where both government and private firms operate together in economic activities?",
+    "options": {
+      "A": "Centralized economic model",
+      "B": "Hybrid economic model",
+      "C": "Market-based economic model",
+      "D": "Decentralized economic model"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "What is the function of the \"PivotTable\" feature in Excel?",
+    "options": {
+      "A": "To perform complex calculations on selected data",
+      "B": "To generate summary reports from large datasets",
+      "C": "To create advanced graphs and charts",
+      "D": "To split a worksheet into multiple panes for easier viewing"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "Which of the following accurately describes an advanced feature or limitation of VLOOKUP in Excel?",
+    "options": {
+      "A": "VLOOKUP can handle multiple lookup values simultaneously within a single formula.",
+      "B": "VLOOKUP can perform approximate matches only when sorted in descending order.",
+      "C": "VLOOKUP is restricted to search within a single worksheet and cannot reference data from other workbooks.",
+      "D": "VLOOKUP requires the lookup column to be on the leftmost side of the lookup range for accurate results."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What best describes the Economic Census conducted by the government?",
+    "options": {
+      "A": "It is infrequent, covering every household in the country.",
+      "B": "Conducted every five years to capture data from all households.",
+      "C": "A sampling-based survey done every year to gather household information.",
+      "D": "Conducted once every ten years, capturing data from every single household."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "When would you most likely use a bar graph in Excel?",
+    "options": {
+      "A": "To display the frequency distribution of categorical data",
+      "B": "To represent changes over time",
+      "C": "To illustrate the parts of a whole",
+      "D": "To show relationships between variables"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "The primary objective of stock management in e-commerce chiefly focuses on:",
+    "options": {
+      "A": "Maximizing stockouts and overstock situations",
+      "B": "Curbing customer satisfaction",
+      "C": "Augmenting shipping costs",
+      "D": "Mitigating stockouts and overstock predicaments"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "In the context of HR channel effectiveness calculation, what key metric measures the cost incurred to attract and hire a single candidate through a specific recruitment channel?",
+    "options": {
+      "A": "Time-to-Fill (TTF) ratio",
+      "B": "Candidate Attrition rate",
+      "C": "Cost-per-Hire (CPH)",
+      "D": "Employee Engagement Index (EEI)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following best defines credit risk analysis?",
+    "options": {
+      "A": "Evaluating the potential financial loss due to market fluctuations",
+      "B": "Assessing the possibility of default by borrowers",
+      "C": "Determining the profitability of an investment",
+      "D": "Analyzing currency exchange rates for international transactions"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395344/bdmsept20231_vw3h2h.png",
+    "question": "From the Figure, which quadrant products will be placed in the secure area?",
+    "options": {
+      "A": "I & III",
+      "B": "III & II",
+      "C": "III & IV",
+      "D": "Only II"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395343/bdmsept20232_cqebhw.png",
+    "context": null,
+    "question": "Given the weights for skills, experience, and availability as 40%, 30%, and 30% respectively, and the provided candidate data, what is the ranking order of candidates from the highest to lowest based on their total normalized scores?\n\nAvailability is lower the better and Skills and Years are greater the better",
+    "options": {
+      "A": "Candidate C > Candidate A > Candidate E > Candidate B > Candidate D",
+      "B": "Candidate C > Candidate A > Candidate B > Candidate E > Candidate D",
+      "C": "Candidate C > Candidate B > Candidate D > Candidate E > Candidate A",
+      "D": "Candidate C > Candidate E > Candidate B > Candidate A > Candidate D"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395344/bdmsept20233_etd2ar.png",
+    "context": null,
+    "question": "Based on the provided dataset for credit risk analysis, which is the correct sequence of customers when we consider risk levels being low to high?",
+    "options": {
+      "A": "2,5,3,4,1",
+      "B": "1,4,2,3,5",
+      "C": "3,5,1,2,4",
+      "D": "1,4,3,5,2"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395343/bdmsept20234_lahfzl.png",
+    "context": null,
+    "question": "Identify the labels for the following Reorder Point Graph correctly",
+    "options": {
+      "A": "A - Safety Stock; B - Lead Time, C - Reorder Point, D - Physical Receipt of Order",
+      "B": "A - Lead Time; B - Reorder Point; C - Physical Receipt of Order ; D - Safety Stock",
+      "C": "A - Lead Time; B - Safety Stock, C - Reorder Point, D - Physical Receipt of Order",
+      "D": "A - Physical Receipt of Order; B - Reorder Point; C - Safety Stock ; D - Lead Time"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What can be inferred about the relationship between income and the demand for goods with fixed prices? [Select all that apply]",
+    "options": {
+      "A": "Demand might increase for some goods",
+      "B": "Demand might decrease for some goods",
+      "C": "Demand will increase for all goods",
+      "D": "Demand will decrease for all goods"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395343/bdmsept20235_g0vqah.png",
+    "context": null,
+    "question": "What brings about the change in the following scatter plots?",
+    "options": {
+      "A": "Formatting Legend",
+      "B": "Increasing Data Points",
+      "C": "Reducing the axis range",
+      "D": "Eliminating the Outliers"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395344/bdmsept20236_uqauao.png",
+    "context": null,
+    "question": "Answer Space: _____%",
+    "options": null,
+    "correctOption": { "min": 75.8, "max": 77.0 },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Business & Economic Principles",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395344/bdmsept20237_wloatq.png",
+    "context": "Based on the following data, answer the given subquestions.",
+    "question": "In terms of revenue generated, does this data follow the Pareto Principle?",
+    "options": {
+      "A": "No, because the revenue generated by the first 2 products does not contribute to 80% of the total revenue",
+      "B": "No, because the top 20% percent products don't generate most of the revenue for the company",
+      "C": "Yes,because the revenue generated by the first 2 products - A&B contribute to 80% of the total revenue",
+      "D": "Yes, because one single product in itself provides more than 80% revenue",
+      "E": "No, because just one single product in itself provides more than 80% revenue"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Business & Economic Principles",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395344/bdmsept20237_wloatq.png",
+    "context": "Based on the following data, answer the given subquestions.",
+    "question": "If the company has to define its star products and concentrate on improving sales and prices of a pair of products based on their past performance - which ones should they be?",
+    "options": {
+      "A": "Products F&B",
+      "B": "Products D&J",
+      "C": "Products C&J",
+      "D": "Products E&G"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395345/bdmsept20238_izizl1.png",
+    "context": "Consider an e-commerce platform that recently conducted an A/B test to evaluate the effectiveness of a new website layout (A - Control, B - Variation). The dataset contains the following columns:\n\nUser_ID: Unique identifier for each user.\nGroup: A or B denoting the user's assigned group (Control or Variation).\nTime_Spent: Time spent on the website in minutes.\nConversion: Binary variable (0 or 1) indicating whether the user made a purchase (1 for yes, 0 for no).\nDevice_Type: Categorical variable denoting the device used (Desktop, Mobile, Tablet).\nAge_Group: Categorical variable indicating the user's age range (18-25, 26-35, 36-45, 46+).\n\nBased on the above data, answer the given subquestions.",
+    "question": "The A/B test showed no statistically significant difference in conversion rates between Groups A and B. What could be a possible reason for this outcome?",
+    "options": {
+      "A": "Inadequate sample size for Group A",
+      "B": "Inconsistent distribution of device types across the groups",
+      "C": "High variation in time spent on the website within each group",
+      "D": "Similar conversion rates across different age groups in both groups"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395345/bdmsept20238_izizl1.png",
+    "context": "Consider an e-commerce platform that recently conducted an A/B test to evaluate the effectiveness of a new website layout (A - Control, B - Variation). The dataset contains the following columns:\n\nUser_ID: Unique identifier for each user.\nGroup: A or B denoting the user's assigned group (Control or Variation).\nTime_Spent: Time spent on the website in minutes.\nConversion: Binary variable (0 or 1) indicating whether the user made a purchase (1 for yes, 0 for no).\nDevice_Type: Categorical variable denoting the device used (Desktop, Mobile, Tablet).\nAge_Group: Categorical variable indicating the user's age range (18-25, 26-35, 36-45, 46+).\n\nBased on the above data, answer the given subquestions.",
+    "question": "Which age group(s) displayed a statistically significant difference in conversion rates between Groups A and B?",
+    "options": {
+      "A": "18-25 years old in Group A",
+      "B": "26-35 years old in Group A",
+      "C": "36-45 years old in Group B",
+      "D": "46+ years old in both groups"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395345/bdmsept20238_izizl1.png",
+    "context": "Consider an e-commerce platform that recently conducted an A/B test to evaluate the effectiveness of a new website layout (A - Control, B - Variation). The dataset contains the following columns:\n\nUser_ID: Unique identifier for each user.\nGroup: A or B denoting the user's assigned group (Control or Variation).\nTime_Spent: Time spent on the website in minutes.\nConversion: Binary variable (0 or 1) indicating whether the user made a purchase (1 for yes, 0 for no).\nDevice_Type: Categorical variable denoting the device used (Desktop, Mobile, Tablet).\nAge_Group: Categorical variable indicating the user's age range (18-25, 26-35, 36-45, 46+).\n\nBased on the above data, answer the given subquestions.",
+    "question": "If the average time spent on the website for Group B is higher than Group A, what inference can be made regarding the new website layout?",
+    "options": {
+      "A": "The new layout is more effective for younger users",
+      "B": "The new layout is likely causing user confusion",
+      "C": "The new layout is less engaging for mobile users",
+      "D": "The new layout might be driving more engagement (but not necessarily conversions)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757395345/bdmsept20238_izizl1.png",
+    "context": "Consider an e-commerce platform that recently conducted an A/B test to evaluate the effectiveness of a new website layout (A - Control, B - Variation). The dataset contains the following columns:\n\nUser_ID: Unique identifier for each user.\nGroup: A or B denoting the user's assigned group (Control or Variation).\nTime_Spent: Time spent on the website in minutes.\nConversion: Binary variable (0 or 1) indicating whether the user made a purchase (1 for yes, 0 for no).\nDevice_Type: Categorical variable denoting the device used (Desktop, Mobile, Tablet).\nAge_Group: Categorical variable indicating the user's age range (18-25, 26-35, 36-45, 46+).\n\nBased on the above data, answer the given subquestions.",
+    "question": "What can be inferred from the conversion rates of the 26-35 age group in Groups A and B?",
+    "options": {
+      "A": "Group A has a higher conversion rate due to the new layout",
+      "B": "Group B has a higher conversion rate due to the new layout",
+      "C": "The new layout doesn't significantly impact this age group's conversion",
+      "D": "There's not enough data to draw conclusions for this age group"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What distinguishes an inferior good regarding its relationship with income?",
+    "options": {
+      "A": "Demand increases with rising income",
+      "B": "Demand decreases as income increases",
+      "C": "Its demand curve remains unaffected by income changes",
+      "D": "It has no substitutes in the market"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A manufacturer finds that over the past year, there has been a shift in consumer preference within the two-wheeler market: the demand for scooters has decreased by 10%, whereas the demand for motorcycles, especially higher-capacity models, has increased by 15%. Given this trend, how should the manufacturer adjust its product portfolio?",
+    "options": {
+      "A": "Increase production of scooters to clear out existing inventories.",
+      "B": "Shift manufacturing focus towards higher-capacity motorcycles to meet rising demand.",
+      "C": "Keep the production rates the same, expecting the market to stabilize.",
+      "D": "Focus exclusively on high-capacity motorcycles and cease scooter production."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "If a pivot table analysis reveals that a lender's portfolio has shifted from predominantly commercial loans to a more diversified portfolio including significant amounts of retail and microfinance loans over the years, what might this indicate about the lender's strategic shift?",
+    "options": {
+      "A": "Diversification to mitigate risk",
+      "B": "Shifting market demand",
+      "C": "Regulatory Changes Influencing Lending Practices",
+      "D": "Not enough data is given in the situation to determine"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "Identifying and eliminating outliers in revenue data is crucial because they can:",
+    "options": {
+      "A": "Significantly skew overall data analysis and interpretation.",
+      "B": "Improve the accuracy of the data set.",
+      "C": "Decrease the workload involved in data processing.",
+      "D": "They do not provide any useful insights"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "How does an increase in the ordering cost per order affect the EOQ?",
+    "options": {
+      "A": "It increases the EOQ.",
+      "B": "It decreases the EOQ.",
+      "C": "It does not affect the EOQ.",
+      "D": "It causes the EOQ to fluctuate unpredictably."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is an example of the anchoring effect used as a nudge on e-commerce websites?",
+    "options": {
+      "A": "Presenting a high initial price next to the sale price to make the discount appear more significant",
+      "B": "Offering every product at a flat discount rate",
+      "C": "Displaying the most expensive items exclusively",
+      "D": "Always showing only the lowest price available for every product"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What is the underlying rationale for PayBuddy offering a BNPL service without charging interest or late fees?",
+    "options": {
+      "A": "To accumulate a large unpaid debt that can be written off for tax benefits.",
+      "B": "To engage customers more deeply, increasing transaction volumes and platform loyalty.",
+      "C": "Assuming that late fees and interest can be retroactively applied for long-term profit.",
+      "D": "To attract regulatory scrutiny as a marketing stunt to gain public attention."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "If a company identifies a seasonal pattern in their sales data, how should this influence their inventory management strategy?",
+    "options": {
+      "A": "Increase inventory levels uniformly throughout the year to avoid any potential stockouts.",
+      "B": "Adjust inventory levels based on historical sales data to match the anticipated seasonal demand.",
+      "C": "Reduce inventory levels during peak seasons to minimize holding costs.",
+      "D": "Keep inventory levels constant, ignoring seasonal trends to simplify logistics."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "How does the concept of homogeneous regions benefit the sampling process in surveys?",
+    "options": {
+      "A": "Ensures a diversity of samples by mixing different regions indiscriminately",
+      "B": "Eliminates bias by selecting samples from areas with similar characteristics",
+      "C": "Focuses solely on urban areas for increased data accuracy",
+      "D": "Prioritizes high-income regions to reflect economic prosperity"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In strategic manpower planning, which of the factors is the least relevant for determining the number of employees needed?",
+    "options": {
+      "A": "The historical turnover rate within the industry",
+      "B": "The predicted revenue for the next fiscal year",
+      "C": "The specific business objectives and forthcoming projects",
+      "D": "The current unemployment rate in the market"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "In the context of IT services, what is the primary purpose of maintaining a bench or buffer of employees?",
+    "options": {
+      "A": "To have resources readily available for unforeseen project needs.",
+      "B": "To keep underperforming employees off critical projects.",
+      "C": "To reduce the company's overall payroll expenses.",
+      "D": "To comply with industry-standard HR practices."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757399435/bdmjan20241_huqco1.png",
+    "context": "Consider the following table and scatter plot and answer the questions",
+    "question": "If you color-code the data points on the scatter plot by \"Product Category,\" which of the following statements would likely be true?",
+    "options": {
+      "A": "All categories will cluster together, showing no distinct grouping.",
+      "B": "Electronics might form a cluster with higher revenue compared to other categories.",
+      "C": "Clothing will show the highest sales quantity and revenue.",
+      "D": "Home Appliances will demonstrate the least variability in sales quantity and revenue."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757399435/bdmjan20241_huqco1.png",
+    "context": "Consider the following table and scatter plot and answer the questions",
+    "question": "Considering the given data, which category has the highest average revenue per unit?",
+    "options": {
+      "A": "Home Appliances",
+      "B": "Clothing",
+      "C": "Electronics"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "The teacher wants to assign students grades based on their Maths marks using the IF function. Which Excel formula represents the correct structure for this conditional grading?",
+    "options": {
+      "A": "=IF(C2<20, \"A\", $1F(C2>15,$ \"B\", IF(C2>10, \"C\", \"D\")))",
+      "B": "=IF(C2<20, \"A\", IF(C2<15, \"B\", IF(C2<10, \"C\", \"D\")))",
+      "C": "$=1F(C2>=20,$ \"A\", $1F(C2>=15$ \"B\", IF(C2>=10, \"C\", \"D\")))",
+      "D": "= $=IF(C2<=20,$ \"A\", $IF(C2<=15$, \"B\", IF(C2<=10, \"C\", \"D\")))"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Four candidates are being considered for a Software Engineer position. The hiring committee has rated them based on the number of relevant skills they possess, the number of days they can join in, the number of relevant certificates they hold, and their years of relevant experience. Give all the criteria the same weightage. Evaluate the data below and determine which candidate should be ranked the highest based on the given criteria (more skills, more certificates, more experience are better; fewer days to join is better).\n\nCandidate A:\n\u25cf Number of relevant skills: 12\n\u25cf Days to join: 30\n\u25cf Number of relevant certificates: 5\n\u25cf Years of relevant experience: 3\n\nCandidate B:\n\u25cf Number of relevant skills: 15\n\u25cf Days to join: 45\n\u25cf Number of relevant certificates: 3\n\u25cf Years of relevant experience: 4\n\nCandidate C:\n\u25cf Number of relevant skills: 10\n\u25cf Days to join: 20\n\u25cf Number of relevant certificates: 7\n\u25cf Years of relevant experience: 5\n\nCandidate D:\n\u25cf Number of relevant skills: 14\n\u25cf Days to join: 15\n\u25cf Number of relevant certificates: 4\n\u25cf Years of relevant experience: 6\n\nChoose the correct ranking of the candidates from most suitable to least suitable:",
+    "options": {
+      "A": "Candidate D > Candidate C > Candidate A or Candidate B",
+      "B": "Candidate B > Candidate A > Candidate C, Candidate D",
+      "C": "Candidate D > Candidate A > Candidate C > Candidate B",
+      "D": "Candidate C > Candidate D > Candidate A or Candidate B"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A company has noticed that its average days of inventory are significantly lower than the industry standard. Which of the following statements describes the potential consequences of this situation?",
+    "options": {
+      "A": "Increased carrying costs due to holding excess inventory.",
+      "B": "Higher likelihood of stockouts, leading to possible lost sales.",
+      "C": "Less need for warehouse space, reducing storage cost inefficiencies.",
+      "D": "Lower inventory obsolescence risks and reduced waste."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Considering the sales data and inventory levels for SKU cities (distribution centres) like Hyderabad, Cochin, and Madras, what could be a significant risk if the average sales drastically change over a short period?{Select All that apply}",
+    "options": {
+      "A": "Overestimation of inventory needs leading to excess stock.",
+      "B": "Underestimation of lead times for inventory replenishment.",
+      "C": "Inaccurate calculation of the total opening stock.",
+      "D": "Misalignment between sales forecasts and actual sales data."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following best describes the strategic advantage of internal sourcing?{Select All that apply}",
+    "options": {
+      "A": "It eliminates the need for an external recruitment process entirely.",
+      "B": "It guarantees a 100% success rate in employee performance post-transition.",
+      "C": "Could speed up the process of staffing the job position",
+      "D": "Better familiarity reduces the risk that selected person may turn out to be incompetent"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757399556/bdmjan20242_vncfxu.png",
+    "context": null,
+    "question": "Imagine, you are an efficiency consultant hired by ABC Corp, a company that manufactures automotive parts. Your first assignment is to evaluate the performance of their primary production line. The provided data includes:\n\n\u25cf The planned production time for last quarter was 700 hours.\n\u25cf Unexpectedly, the line experienced 60 hours of lost time.\n\u25cf The expected assembly rate of the line was 200 units per hour.\n\u25cf However, the actual rate achieved was 180 units per hour.\n\u25cf Over the quarter, 14,000 units were assembled.\n\u25cf Out of these, 700 units were found to be defective.\n\nCalculate the OEE for ABC Corp's production line and provide the result.",
+    "options": null,
+    "correctOption": {
+      "min": 77,
+      "max": 79
+    },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757399627/bdmjan20243_tlqgxu.png",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "Evaluate the influence of the new game tutorial on player engagement. How does the average Daily_Playtime_Minutes compare between the two groups?",
+    "options": {
+      "A": "Group B has significantly higher average playtime, indicating the new tutorial is more engaging.",
+      "B": "Group A shows higher average playtime, suggesting the old tutorial is more effective.",
+      "C": "No significant difference in playtime between the groups, indicating the new tutorial has minimal impact.",
+      "D": "The average playtime is higher in Group B, but not significantly, suggesting a slight advantage of the new tutorial."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757399627/bdmjan20243_tlqgxu.png",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "Which Player_Experience_Level benefited most from the new game tutorial in terms of In_Game_Purchase?",
+    "options": {
+      "A": "Beginners are making much more purchases with the new tutorial.",
+      "B": "Intermediate players show a significant increase in purchases.",
+      "C": "Advanced players have a higher purchase rate with the new tutorial.",
+      "D": "There's no noticeable difference in purchase behavior across experience levels."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757399627/bdmjan20243_tlqgxu.png",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "Considering the new tutorial's impact, which statement best reflects the data observed?",
+    "options": {
+      "A": "The new tutorial has universally improved in-game purchases across all player levels.",
+      "B": "Only advanced players show a significant uptick in daily playtime with the new tutorial.",
+      "C": "All players have decreased their playtime, potentially indicating a dislike for the new tutorial.",
+      "D": "Beginners and advanced players show increased engagement, but intermediate players do not."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757399627/bdmjan20243_tlqgxu.png",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "What does the distribution of In_Game_Purchases in Group B suggest about the new tutorial's effectiveness?",
+    "options": {
+      "A": "It's highly effective, as most players increased their purchases.",
+      "B": "Effectiveness is moderate; only some players increased their purchases.",
+      "C": "The new tutorial has no clear impact on purchase behavior.",
+      "D": "It is less effective; fewer players made purchases after the introduction of the new tutorial."
+    },
+    "correctOption": "B",
+    "questionType": "single"
   }
 ]

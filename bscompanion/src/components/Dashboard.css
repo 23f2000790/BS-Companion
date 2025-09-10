@@ -5,6 +5,7 @@
   color: #dad8b6;
 }
 
+/* Overlay background */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -18,11 +19,129 @@
   z-index: 1000;
 }
 
+/* Modal container */
 .modal {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 350px;
-  max-width: 90%;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 800px; /* wider to fit 3 columns */
+  max-width: 95%;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.modal h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #444;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Top row: 3 boxes side by side */
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+/* Each box (topic / exam / term) */
+.modal-box {
+  flex: 1; /* ✅ Equal width always */
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-box label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Dropdown styling */
+.modal-box select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  text-overflow: ellipsis; /* ✅ Truncate long names */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Bottom row (no. of questions + mode + buttons) */
+.modal-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.modal-bottom-left {
+  display: flex;
+  gap: 15px;
+}
+
+.modal-bottom-left label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-bottom-left input,
+.modal-bottom-left select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-buttons button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-buttons .cancel {
+  background: #ccc;
+  color: #333;
+}
+
+.modal-buttons .cancel:hover {
+  background: #b3b3b3;
+}
+
+.modal-buttons .submit {
+  background: #4caf50;
+  color: white;
+}
+
+.modal-buttons .submit:hover {
+  background: #43a047;
 }

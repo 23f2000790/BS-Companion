@@ -8,7 +8,7 @@ import User from "./models/User.js";
 import { verifyToken } from "./middleware/auth.js";
 import questionsRoute from "./routes/questions.js";
 import topicsRoute from "./routes/topics.js";
-
+import termsRouter from "./routes/terms.js";
 dotenv.config();
 const app = express();
 
@@ -17,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/topics", topicsRoute);
 app.use("/api/questions", questionsRoute);
+app.use("/api/terms", termsRouter);
 
 // Environment variables
 const JWT_SECRET = process.env.JWT_SECRET || "yoursecretkey";

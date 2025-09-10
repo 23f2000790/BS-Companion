@@ -1,3 +1,4 @@
+// backend/routes/terms.js
 import express from "express";
 import Subject from "../models/Subjects.js";
 
@@ -5,7 +6,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const { subject, exam, topic, term } = req.query;
+    const { subject, exam, topic } = req.query;
     if (!subject) {
       return res.status(400).json({ message: "Missing subject" });
     }
@@ -15,11 +16,21 @@ router.get("/", async (req, res) => {
 
     let allQuestions = [];
 
-    // Convert Mongoose doc to plain object
     const papers =
       typeof subj.papers?.toObject === "function"
         ? subj.papers.toObject()
         : subj.papers;
+
+    let exams = [];
+    if (papers.quiz1.length > 0) {
+      exams.push("quiz1");
+    }
+    if (papers.quiz2.length > 0) {
+      exams.push("quiz2");
+    }
+    if (papers.ET.length > 0) {
+      exams.push("ET");
+    }
 
     // Step 1: Gather base questions depending on exam
     if (exam && papers?.[exam]) {
@@ -34,22 +45,17 @@ router.get("/", async (req, res) => {
       });
     }
 
-    // Step 2: Apply filters
-    if (term) {
-      allQuestions = allQuestions.filter((q) => q.term === term);
-    }
+    // Step 2: Apply topic filter if provided
     if (topic) {
       allQuestions = allQuestions.filter((q) => q.topic === topic);
     }
 
-    // Step 3: Extract unique topics from filtered questions
-    const topics = [
-      ...new Set(allQuestions.map((q) => q.topic).filter(Boolean)),
-    ];
+    // Step 3: Extract unique terms
+    const terms = [...new Set(allQuestions.map((q) => q.term).filter(Boolean))];
 
-    res.json(topics);
+    res.json({ terms, exams });
   } catch (err) {
-    console.error("❌ Error fetching topics:", err);
+    console.error("❌ Error fetching terms:", err);
     res.status(500).json({ message: "Server error" });
   }
 });

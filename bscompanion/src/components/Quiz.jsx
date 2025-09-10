@@ -12,6 +12,7 @@ const Quiz = () => {
     exam,
     topic: initialTopic,
     numQuestions,
+    term,
     mode,
   } = location.state || {};
 
@@ -51,15 +52,14 @@ const Quiz = () => {
 
   // Fetch questions when exam or selectedTopic changes
   useEffect(() => {
-    if (exam || selectedTopic) {
+    if (exam || selectedTopic || term) {
       fetchQuestions();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [exam, selectedTopic]);
+  }, [exam, selectedTopic, term]);
 
   const fetchQuestions = async () => {
-    if (!exam && !selectedTopic)
-      return alert("Please select an exam or topic first!");
+    if (!exam && !selectedTopic && !term)
+      return alert("Please select at least one filter (Exam, Topic, or Term)!");
 
     setLoading(true);
     try {
@@ -67,6 +67,7 @@ const Quiz = () => {
         params: {
           subject,
           exam,
+          term,
           topic: selectedTopic || "",
           limit: numQuestions,
         },
