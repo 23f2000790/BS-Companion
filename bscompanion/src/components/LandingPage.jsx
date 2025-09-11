@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spline from "@splinetool/react-spline";
+import Swapy from "./swapy";
+import ImageReveal from "./ImageReveal"; // ✅ import here
 
 // Helper: decode JWT and check expiry
 const isTokenValid = (token) => {
@@ -42,7 +44,6 @@ const LandingPage = () => {
           setCheckingAuth(false);
         }
       } else {
-        // No valid token → show landing page
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         setCheckingAuth(false);
@@ -72,6 +73,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing">
+      {/* ✅ Navbar */}
       <div className="navbar" style={{ zIndex: 2 }}>
         <button
           className="button"
@@ -97,19 +99,17 @@ const LandingPage = () => {
         </button>
       </div>
 
+      {/* ✅ Hero Section */}
       <div className="LandingPage">
         <h3 className="quote">Practice. Connect. Grow.</h3>
+
         <div style={{ position: "absolute", left: 120, top: 40 }}>
           <h1 className="bs" style={{ position: "relative", left: 0, top: 0 }}>
             BS
           </h1>
           <h3
             className="companion"
-            style={{
-              position: "relative",
-              left: 260,
-              bottom: 100,
-            }}
+            style={{ position: "relative", left: 260, bottom: 100 }}
           >
             Companion
           </h3>
@@ -129,31 +129,21 @@ const LandingPage = () => {
         </h3>
       </div>
 
+      {/* ✅ Additional Sections */}
       <div
         className="page2"
         style={{
           width: "100%",
           height: "100vh",
         }}
-      >
-        <iframe
-          src="https://my.spline.design/particles-IG4AV43mOynm3aZRSOaygiO3/"
-          frameBorder="0"
-          style={{
-            border: "none",
-            position: "absolute",
-            top: "1600px",
-            left: "-200px",
-            width: "60%",
-            height: "80%",
-            transform: "scale(1.2)",
-            transformOrigin: "top left",
-          }}
-          title="Spline 3D Scene"
-        ></iframe>
-      </div>
+      ></div>
 
-      <div style={{ height: "100vh" }}></div>
+      <div style={{ height: "100vh" }}>
+        <Swapy />
+      </div>
+      <div className="image-reveal-wrapper">
+        <ImageReveal />
+      </div>
       <div style={{ height: "100vh" }}></div>
     </div>
   );

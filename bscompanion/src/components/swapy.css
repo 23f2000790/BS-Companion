@@ -1,0 +1,38 @@
+.swapy-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 5fr 2.5fr;
+  gap: 16px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slot {
+  width: 100%;
+  height: 128px;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 12px;
+
+  /* gradient based on slot's position in grid */
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #1a1a1a 33%,
+    #333333 66%,
+    #000000 100%
+  );
+}

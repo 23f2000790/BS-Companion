@@ -73,7 +73,12 @@ const Dashboard = () => {
   }, [selectedSubject, exam, selectedTopic]);
 
   if (!user) {
-    return <h2>Loading user data...</h2>;
+    return (
+      <div className="loader-container">
+        <div className="spinner"></div>
+        <h3 className="loading-text">Loading user data...</h3>
+      </div>
+    );
   }
 
   const LogoutUser = () => {

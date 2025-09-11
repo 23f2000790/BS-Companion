@@ -4,6 +4,9 @@ import { signInWithGoogle } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
+import PasswordInput from "./PasswordInput";
+
+// Floating elements
 import benchele from "../assets/images/benchele.png";
 import bookele from "../assets/images/bookele.png";
 import clockele from "../assets/images/clockele.png";
@@ -13,6 +16,17 @@ import paperele from "../assets/images/paperele.png";
 import penele from "../assets/images/penele.png";
 
 const AuthPage = () => {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [activeTab, setActiveTab] = useState("login");
+  const [hoveredTab, setHoveredTab] = useState(null);
+
+  // Form state
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const handleMouseMove = (e) => {
     const button = e.currentTarget;
     const rect = button.getBoundingClientRect();
@@ -22,18 +36,6 @@ const AuthPage = () => {
     button.style.setProperty("--y", `${y}px`);
   };
 
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [activeTab, setActiveTab] = useState("login");
-  const [hoveredTab, setHoveredTab] = useState(null);
-
-  // Email/password state
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  // Common success handler
   const handleAuthSuccess = async (token, user) => {
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(user));
@@ -49,12 +51,11 @@ const AuthPage = () => {
         navigate("/dashboard");
       }
     } catch (err) {
-      console.error("Failed to verify onboarding state:", err);
+      console.error(err);
       navigate("/auth");
     }
   };
 
-  // Google sign-in
   const handleGoogleSignIn = async () => {
     setLoading(true);
     setError("");
@@ -78,7 +79,6 @@ const AuthPage = () => {
     }
   };
 
-  // Email/password registration or login
   const handleEmailAuth = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -115,83 +115,92 @@ const AuthPage = () => {
   return (
     <div className="auth">
       {/* Floating elements */}
-      <div
-        className="floating-element slide-left"
-        style={{
-          bottom: "50px",
-          left: "140px",
-          animationDuration: "7s",
-          animationDelay: "0.2s",
-        }}
-      >
-        <img src={benchele} alt="Element 1" style={{ width: "80px" }} />
-      </div>
-      <div
-        className="floating-element slide-right"
-        style={{
-          top: "100px",
-          right: "150px",
-          animationDuration: "5s",
-          animationDelay: "0.4s",
-        }}
-      >
-        <img src={bookele} alt="Element 2" style={{ width: "90px" }} />
-      </div>
-      <div
-        className="floating-element slide-left"
-        style={{
-          top: "50px",
-          left: "100px",
-          animationDuration: "6s",
-          animationDelay: "0.6s",
-        }}
-      >
-        <img src={clockele} alt="Element 3" style={{ width: "70px" }} />
-      </div>
-      <div
-        className="floating-element slide-right"
-        style={{
-          top: "140px",
-          left: "690px",
-          animationDuration: "4s",
-          animationDelay: "0.8s",
-        }}
-      >
-        <img src={diceele} alt="Element 4" style={{ width: "120px" }} />
-      </div>
-      <div
-        className="floating-element slide-right"
-        style={{
-          top: "370px",
-          right: "220px",
-          animationDuration: "6s",
-          animationDelay: "1s",
-        }}
-      >
-        <img src={flowerele} alt="Element 5" style={{ width: "75px" }} />
-      </div>
-      <div
-        className="floating-element slide-right"
-        style={{
-          top: "500px",
-          left: "750px",
-          animationDuration: "7s",
-          animationDelay: "1.2s",
-        }}
-      >
-        <img src={paperele} alt="Element 6" style={{ width: "65px" }} />
-      </div>
-      <div
-        className="floating-element slide-right"
-        style={{
-          bottom: "40px",
-          right: "360px",
-          animationDuration: "5s",
-          animationDelay: "1.4s",
-        }}
-      >
-        <img src={penele} alt="Element 7" style={{ width: "70px" }} />
-      </div>
+      {[
+        {
+          src: benchele,
+          style: {
+            bottom: "50px",
+            left: "140px",
+            width: "80px",
+            animationDuration: "7s",
+            animationDelay: "0.2s",
+          },
+        },
+        {
+          src: bookele,
+          style: {
+            top: "100px",
+            right: "150px",
+            width: "90px",
+            animationDuration: "5s",
+            animationDelay: "0.4s",
+          },
+        },
+        {
+          src: clockele,
+          style: {
+            top: "50px",
+            left: "100px",
+            width: "70px",
+            animationDuration: "6s",
+            animationDelay: "0.6s",
+          },
+        },
+        {
+          src: diceele,
+          style: {
+            top: "140px",
+            left: "690px",
+            width: "120px",
+            animationDuration: "4s",
+            animationDelay: "0.8s",
+          },
+        },
+        {
+          src: flowerele,
+          style: {
+            top: "370px",
+            right: "220px",
+            width: "75px",
+            animationDuration: "6s",
+            animationDelay: "1s",
+          },
+        },
+        {
+          src: paperele,
+          style: {
+            top: "500px",
+            left: "750px",
+            width: "65px",
+            animationDuration: "7s",
+            animationDelay: "1.2s",
+          },
+        },
+        {
+          src: penele,
+          style: {
+            bottom: "20px",
+            right: "360px",
+            width: "70px",
+            animationDuration: "5s",
+            animationDelay: "1.4s",
+          },
+        },
+      ].map((el, idx) => (
+        <div
+          key={idx}
+          className={`floating-element ${
+            idx % 2 === 0 ? "slide-left" : "slide-right"
+          }`}
+          style={el.style}
+        >
+          <img
+            src={el.src}
+            alt={`Element ${idx + 1}`}
+            style={{ width: el.style.width }}
+          />
+        </div>
+      ))}
 
       {/* Back button */}
       <button
@@ -207,20 +216,20 @@ const AuthPage = () => {
           justifyContent: "center",
         }}
       >
-        <IoIosArrowBack style={{ fontSize: "1.5rem" }} />
+        <IoIosArrowBack style={{ fontSize: "1.5rem", color: "#1e1e1e" }} />
       </button>
 
       {/* Auth content */}
       <div
         className="auth-content"
         style={{
-          fontSize: "1.5rem",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           height: "100vh",
           paddingLeft: "650px",
+          width: "100%",
         }}
       >
         <h1 style={{ marginBottom: "20px", color: "#dad7b6" }}>
@@ -229,44 +238,26 @@ const AuthPage = () => {
 
         {/* Tabs */}
         <div style={{ display: "flex", marginBottom: "20px", gap: "10px" }}>
-          <button
-            onClick={() => setActiveTab("login")}
-            onMouseEnter={() => setHoveredTab("login")}
-            onMouseLeave={() => setHoveredTab(null)}
-            style={{
-              padding: "10px 20px",
-              borderRadius: "25px",
-              border: "1px solid #ccc",
-              backgroundColor: activeTab === "login" ? "#fff" : "#f0f0f0",
-              transform:
-                hoveredTab === "login" ? "translateY(-5px)" : "translateY(0)",
-              boxShadow:
-                hoveredTab === "login" ? "0 8px 15px rgba(0,0,0,0.2)" : "none",
-            }}
-          >
-            Login
-          </button>
-          <button
-            onClick={() => setActiveTab("register")}
-            onMouseEnter={() => setHoveredTab("register")}
-            onMouseLeave={() => setHoveredTab(null)}
-            style={{
-              padding: "10px 20px",
-              borderRadius: "25px",
-              border: "1px solid #ccc",
-              backgroundColor: activeTab === "register" ? "#fff" : "#f0f0f0",
-              transform:
-                hoveredTab === "register"
-                  ? "translateY(-5px)"
-                  : "translateY(0)",
-              boxShadow:
-                hoveredTab === "register"
-                  ? "0 8px 15px rgba(0,0,0,0.2)"
-                  : "none",
-            }}
-          >
-            Register
-          </button>
+          {["login", "register"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              onMouseEnter={() => setHoveredTab(tab)}
+              onMouseLeave={() => setHoveredTab(null)}
+              style={{
+                padding: "10px 20px",
+                borderRadius: "25px",
+                border: "1px solid #ccc",
+                backgroundColor: activeTab === tab ? "#fff" : "#f0f0f0",
+                transform:
+                  hoveredTab === tab ? "translateY(-5px)" : "translateY(0)",
+                boxShadow:
+                  hoveredTab === tab ? "0 8px 15px rgba(0,0,0,0.2)" : "none",
+              }}
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
         </div>
 
         {/* Google sign-in */}
@@ -295,7 +286,7 @@ const AuthPage = () => {
           )}
         </button>
 
-        <p style={{ color: "#dad7b6" }}>
+        <p style={{ color: "#dad7b6", marginBottom: "15px" }}>
           Or {activeTab === "login" ? "login" : "register"} with email
         </p>
 
@@ -307,7 +298,6 @@ const AuthPage = () => {
             flexDirection: "column",
             width: "300px",
             gap: "15px",
-            marginTop: "15px",
           }}
         >
           {activeTab === "register" && (
@@ -320,6 +310,9 @@ const AuthPage = () => {
                 padding: "10px",
                 borderRadius: "5px",
                 border: "1px solid #ccc",
+                backgroundColor: "#1e1e1e",
+                color: "#dad7b6",
+                outline: "none",
               }}
             />
           )}
@@ -332,19 +325,18 @@ const AuthPage = () => {
               padding: "10px",
               borderRadius: "5px",
               border: "1px solid #ccc",
+              backgroundColor: "#1e1e1e",
+              color: "#dad7b6",
+              outline: "none",
             }}
           />
-          <input
-            type="password"
-            placeholder="Password"
+          {/* Integrated PasswordInput */}
+          <PasswordInput
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            style={{
-              padding: "10px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-            }}
+            onChange={setPassword}
+            showStrength={activeTab === "register"} // Only show in register mode
           />
+
           <button
             type="submit"
             disabled={loading}
