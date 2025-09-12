@@ -1,0 +1,332 @@
+[
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": "A local milk store orders 300 half-litre bottles of milk and 100 loaves of bread each week. The store sells a bottle of milk for Rs. 20 and a loaf of bread for Rs 23. At the end of the first week, the store has sold 160 bottles of milk, while the loaves were sold out by mid-week which left customers leaving unhappy.",
+    "question": "What economic situation is the store facing? Select all that apply.",
+    "options": {
+      "A": "Surplus of milk",
+      "B": "Shortage of milk",
+      "C": "Equilibrium of milk",
+      "D": "Surplus of bread",
+      "E": "Shortage of bread",
+      "F": "Equilibrium of bread",
+      "G": "Surplus of milk and bread",
+      "H": "Shortage of milk and bread",
+      "I": "Equilibrium of milk and bread"
+    },
+    "correctOption": ["A", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": "A local milk store orders 300 half-litre bottles of milk and 100 loaves of bread each week. The store sells a bottle of milk for Rs. 20 and a loaf of bread for Rs 23. At the end of the first week, the store has sold 160 bottles of milk, while the loaves were sold out by mid-week which left customers leaving unhappy.",
+    "question": "Select all the statements that are TRUE",
+    "options": {
+      "A": "Decrease in selling price of bread will result in equilibrium with respect to bread sales",
+      "B": "Increase in selling price of bread will result in equilibrium with respect to bread sales",
+      "C": "Bread sales is already in equilibrium",
+      "D": "Decrease in selling price of milk will result in equilibrium with respect to milk sales",
+      "E": "Increase in selling price of milk will result in equilibrium with respect to milk sales",
+      "F": "Milk sales is already in equilibrium"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Consider this hypothetical example: A local baker increased the price of their iconic loaf of bread from INR 23 per loaf to INR 25. This resulted in consumers buying only 500 loaves of bread a week (while earlier, the sales was 800 loaves a week). In the same week, an international brand launched their flagship product in the local market, starloaf breakfast bread at a discounted price of INR 20. This promotional offer on starloaf increased its sales by a whopping 25% compared to other markets! To add to all the complexity, in the same week, the price of petrol increased by 3%, and that of diesel by 2.5%, resulting in a net decrease in fuel usage by 0.02% and a 1% increase in truck transport fares.",
+    "question": "Given all this data, calculate the price elasticity of demand of the local baker's bread loaf (round the answer to 2 decimal places and DO NOT use mid-point method). Give the absolute value of the answer.",
+    "options": null,
+    "correctOption": {
+      "min": 4.29,
+      "max": 4.4
+    },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": "Consider this hypothetical example: A local baker increased the price of their iconic loaf of bread from INR 23 per loaf to INR 25. This resulted in consumers buying only 500 loaves of bread a week (while earlier, the sales was 800 loaves a week). In the same week, an international brand launched their flagship product in the local market, starloaf breakfast bread at a discounted price of INR 20. This promotional offer on starloaf increased its sales by a whopping 25% compared to other markets! To add to all the complexity, in the same week, the price of petrol increased by 3%, and that of diesel by 2.5%, resulting in a net decrease in fuel usage by 0.02% and a 1% increase in truck transport fares.",
+    "question": "The local baker's bread is:",
+    "options": {
+      "A": "Perfectly elastic",
+      "B": "Elastic",
+      "C": "Unitary",
+      "D": "Inelastic",
+      "E": "Perfectly inelastic"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": "The elasticity of demand for a commodity is estimated to be -2.5; then, an increase in price from INR 8 to INR 10 would ___ (1) ___ the demand by ___ (2) ___ % (round the answer to the second part by 1 decimal point)",
+    "question": "Select the correct answer for Blank (1)",
+    "options": {
+      "A": "Increase",
+      "B": "Decrease"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "The elasticity of demand for a commodity is estimated to be -2.5; then, an increase in price from INR 8 to INR 10 would ___ (1) ___ the demand by ___ (2) ___ % (round the answer to the second part by 1 decimal point)",
+    "question": "Enter the correct answer for Blank (2)",
+    "options": null,
+    "correctOption": 62.5,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A product X has no substitutes. Then (theoretically), the demand curve for the product X will be:",
+    "options": {
+      "A": "Horizontal",
+      "B": "Inclined at 45 degrees",
+      "C": "Vertical",
+      "D": "Inclined at 45 degrees until the price reaches the competition, and then horizontal",
+      "E": "Inclined at 45 degrees until the price reaches the competition, and then vertical"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "When marginal utility is zero, total utility is:",
+    "options": {
+      "A": "Increasing",
+      "B": "Decreasing",
+      "C": "Maximum",
+      "D": "Minimum"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which among the following variable(s), when changed, results in a movement along the Supply curve? Select multiple options if applicable.",
+    "options": {
+      "A": "Price of the item",
+      "B": "Income",
+      "C": "Prices of related goods",
+      "D": "Expectations",
+      "E": "Number of buyers",
+      "F": "Tastes"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "If the current ratio is 2:1 and the Quick ratio is 1.5:1, then which of the following is/are true? (Select all that are applicable)",
+    "options": {
+      "A": "Current assets are 2 times the liability",
+      "B": "Liability is 2 times the current assets",
+      "C": "Stocks is 0.5 times the liability",
+      "D": "Liability is 0.5 times Stocks",
+      "E": "Current assets are greater than stocks",
+      "F": "Stocks are greater than current assets",
+      "G": "None of these"
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757615232/table_page2_1_omuuoq.png",
+    "question": "Match the following:",
+    "options": {
+      "A": "i-b, ii-d, iii-a",
+      "B": "i-d, ii-c, iii-b",
+      "C": "i-b, ii-a, iii-d",
+      "D": "i-c, ii-a, iii-d",
+      "E": "i-b, ii-a, iii-c",
+      "F": "i-c, ii-d, iii-a"
+    },
+    "correctOption": "E",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Theoretically, a customer will keep buying an item as long as __________ of the item is __________ the per unit price of the item.",
+    "options": {
+      "A": "total utility; lesser than",
+      "B": "variable cost; greater than",
+      "C": "marginal utility; greater than",
+      "D": "variable cost; lesser than",
+      "E": "marginal utility; lesser than"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is the single best differentiator between luxury and normal goods?",
+    "options": {
+      "A": "Supply",
+      "B": "Demand",
+      "C": "Production costs",
+      "D": "Capital expense",
+      "E": "Price elasticity of demand"
+    },
+    "correctOption": "E",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A soap manufacturing unit produces 5000 boxes of soap at a total cost of Rs. 250,000. The variable cost per box of soap is Rs. 20. What is the average cost per box of soap?",
+    "options": {
+      "A": "Rs. 250",
+      "B": "Rs. 50",
+      "C": "Rs. 12500",
+      "D": "Rs. 5"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "When a consumer reaches the point of satiation or overconsumption, the customer's:",
+    "options": {
+      "A": "total utility of the good is zero.",
+      "B": "total utility of the good is at its maximum.",
+      "C": "marginal utility becomes zero",
+      "D": "total utility of the good is greater than twice the price of the good"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "__________ is a measure of a company's liquidity and short-term solvency.",
+    "options": {
+      "A": "current ratio",
+      "B": "quick ratio",
+      "C": "cash ratio",
+      "D": "inventory ratio"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Total utility is maximum when:",
+    "options": {
+      "A": "marginal utility is negative",
+      "B": "marginal utility is zero",
+      "C": "marginal utility is increasing",
+      "D": "marginal utility is decreasing"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Total utility __________ at (a / an) __________ rate when marginal utility is decreasing but positive.",
+    "options": {
+      "A": "decreases, increasing",
+      "B": "decreases, decreasing",
+      "C": "increases, increasing",
+      "D": "increases, decreasing"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A Company has the following information for the fiscal year ending December 31, 2022:\n• Current Assets: $800,000\n• Current Liabilities: $400,000\n• Inventory: $200,000\nCalculate the current ratio for the company.",
+    "options": {
+      "A": "1.50",
+      "B": "2",
+      "C": "3",
+      "D": "2.50"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Quick ratio of a company with current liabilities of Rs. 1 crore is 0.6. If the company liquidates some long-term assets and receives 25 lakhs in cash, then its quick ratio will become",
+    "options": {
+      "A": "0.50",
+      "B": "0.85",
+      "C": "0.35",
+      "D": "0.55"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  }
+]

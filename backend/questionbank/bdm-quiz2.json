@@ -1,0 +1,406 @@
+[
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "When marginal utility of an item for a customer is greater than the per unit price of an item, the customer will ideally/theoretically: (select the most appropriate answer)",
+    "options": {
+      "A": "stop buying the item",
+      "B": "keep buying the item",
+      "C": "buy more of competitor's item",
+      "D": "marginal utility does not impact buying decisions"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Ravi's demand for product X increased by 5% when his income decreased by 2%. Product X is ___ for Ravi.",
+    "options": {
+      "A": "a luxury",
+      "B": "an inferior good",
+      "C": "a normal good",
+      "D": "a substitute good"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "The demand curve has a negative slope because of:",
+    "options": {
+      "A": "the law of diminishing utility",
+      "B": "the law of supply",
+      "C": "the law of demand",
+      "D": "the law of increasing opportunity cost",
+      "E": "the law of decreasing opportunity cost"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "For a customer with fixed income to maximize utility, he should buy each good in amounts such that:",
+    "options": {
+      "A": "marginal utility of each good is maximized",
+      "B": "total utility is same for each good",
+      "C": "marginal utility per rupee spent is maximized for each good",
+      "D": "marginal utility per rupee spent is the same for each good"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Why is the quick ratio a more rigorous test of short-term solvency than the current ratio? (Choose all that are applicable)",
+    "options": {
+      "A": "The quick ratio eliminates prepaid expenses for the numerator",
+      "B": "The quick ratio considers only cash and marketable securities as current assets",
+      "C": "The quick ratio eliminates prepaid expenses for the denominator",
+      "D": "The quick ratio eliminates inventories from the numerator"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is a source of survey data? (select all that is applicable)",
+    "options": {
+      "A": "Market research data",
+      "B": "Stock market data",
+      "C": "Rainfall data",
+      "D": "Consumer pyramid data"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Luxury goods are characterized by: (select all that apply)",
+    "options": {
+      "A": "high income elasticity of demand",
+      "B": "an increase in income leads to an decrease in demand",
+      "C": "an increase in income leads to an increase in demand",
+      "D": "low income elasticity of demand"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "When marginal utility is ___, total utility ___: (select all that apply)",
+    "options": {
+      "A": "negative, increases",
+      "B": "negative, decreases",
+      "C": "positive, increases",
+      "D": "positive, decreases",
+      "E": "zero, is maximum",
+      "F": "zero, is minimum",
+      "G": "maximum, is zero",
+      "H": "minimum, is zero"
+    },
+    "correctOption": ["B", "C", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "If the current ratio is 2:1 and the Quick ratio is 1.5:1, then which of the following is/are true? (Select all that are applicable)",
+    "options": {
+      "A": "Current assets are 2 times the liability",
+      "B": "Liability is 2 times the current assets",
+      "C": "Stocks is 0.5 times the liability",
+      "D": "Liability is 0.5 times Stocks",
+      "E": "Current assets are greater than stocks",
+      "F": "Stocks are greater than current assets",
+      "G": "None of these"
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A firm has annual sales turnover of INR 95,00,000/-. Its total current liabilities sum up to INR 3,00,00,000/-. It has INR 15,00,000/- as accounts receivable. Calculate the firm's debtor days (round the answer to 2 decimal places).",
+    "options": null,
+    "correctOption": {
+      "min": 57,
+      "max": 58
+    },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What best describes the Economic Census conducted by the government?",
+    "options": {
+      "A": "It is infrequent, covering every household in the country.",
+      "B": "Conducted every five years to capture data from all households.",
+      "C": "A sampling-based survey done every year to gather household information.",
+      "D": "Conducted once every ten years, capturing data from every single household."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "When would you most likely use a bar graph in Excel?",
+    "options": {
+      "A": "To display the frequency distribution of categorical data",
+      "B": "To represent changes over time",
+      "C": "To illustrate the parts of a whole",
+      "D": "To show relationships between variables"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What are the roles that the Government plays in the economic circular flow model?",
+    "options": {
+      "A": "Producer and Consumer",
+      "B": "Moderator and Participant",
+      "C": "None of these",
+      "D": "Both producer and consumer & moderator and participant"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What kind of goods' demand decreases as income increases?",
+    "options": {
+      "A": "Superior Good",
+      "B": "Inferior Good",
+      "C": "Luxury Good",
+      "D": "Supply Good"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "For the Data Given below, which function would you use to count the number of salespeople who exceeded both their Q1 and Q2 quotas.",
+    "options": {
+      "A": "COUNT(A2:A5,\"=Yes\", C3:C5,\"=Yes\")",
+      "B": "COUNTIFS(B2:B5, \"=Yes\", C2:C5,\"=Yes\")",
+      "C": "COUNTIF(B2:B5,\"=Yes\", C2:C5,\"=Yes\")",
+      "D": "COUNTA(C2:C5,\"=Yes\", D2:D5,\"=Yes\")"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757699832/bdmquiz2jan2025-1_sk7niz.png"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Spreadsheet Applications",
+    "context": null,
+    "question": "In the formula =VLOOKUP(A1, B1:C10, 2, FALSE), what does the \"2\" represent?",
+    "options": {
+      "A": "The column to search in",
+      "B": "The column to return a value from",
+      "C": "The number of matches to find",
+      "D": "The row to start searching from"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Data Interpretation & Visualization",
+    "context": null,
+    "question": "Which chart is used to display the distribution of a dataset by dividing it into bins?",
+    "options": {
+      "A": "Scatter Plot",
+      "B": "Bubble Chart",
+      "C": "Histogram",
+      "D": "Box Plot"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "What does SOR refer to in e-commerce?",
+    "options": {
+      "A": "Sales of Resource",
+      "B": "Sale or Return",
+      "C": "Sales of Return",
+      "D": "Sales on Regular"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following statements best describes the difference between a niche market and a mass market?",
+    "options": {
+      "A": "A niche market targets a small, specific group of customers with specialized needs, while a mass market targets a large, broad group of customers with general needs.",
+      "B": "A niche market involves offering lower-priced products to a wide audience, whereas a mass market involves offering high-end products to a small, exclusive group.",
+      "C": "A niche market typically requires large-scale advertising campaigns to reach a broad audience, while a mass market relies on word-of-mouth and targeted marketing.",
+      "D": "A niche market focuses on standard products that appeal to everyone, while a mass market customizes products to fit individual customer preferences."
+    },
+    "correctOption": ["A"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "Calculate the Overall Equipment Effectiveness (OEE) of the Assembly Line Equipment for the month of July.\n(Round the OEE to two decimal places)",
+    "options": null,
+    "correctOption": {
+      "min": 0.77,
+      "max": 0.81
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757699822/page4_img3_e5tiqg.jpg"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "You oversee the inventory management of gear assemblies in a manufacturing facility. The particulars of the inventory are as follows:\nStarting Inventory: 100 units\nDaily Usage: 5 units\nLead Time: 10 days\nSafety Stock: 20 units\nBased on the above data, answer the given subquestions.",
+    "question": "Based on this information, At what inventory level should you trigger a re-order for gear assemblies?",
+    "options": {
+      "A": "Initiate a re-order when the inventory level drops to 70 units",
+      "B": "Initiate a re-order when the inventory level drops to 50 units",
+      "C": "Initiate a re-order when the inventory level drops to 30 units",
+      "D": "Initiate a re-order when the inventory level drops to 15 units"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "You oversee the inventory management of gear assemblies in a manufacturing facility. The particulars of the inventory are as follows:\nStarting Inventory: 100 units\nDaily Usage: 5 units\nLead Time: 10 days\nSafety Stock: 20 units\nBased on the above data, answer the given subquestions.",
+    "question": "After how many days should you trigger a re-order",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the data provided, answer the given subquestions.",
+    "question": "Which SKU has the highest Days of Inventory?",
+    "options": {
+      "A": "LAP002",
+      "B": "LAP003",
+      "C": "LAP006",
+      "D": "LAP007"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757699823/page6_img1_olfdyf.jpg"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the data provided, answer the given subquestions.",
+    "question": "If the profit margin for the sale of a laptop is 10%, what is the total profit earned from the sale of LAP005?",
+    "options": {
+      "A": "42505",
+      "B": "40890",
+      "C": "41782",
+      "D": "40473"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757699823/page6_img1_olfdyf.jpg"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": "Based on the data provided, answer the given subquestions.",
+    "question": "What percentage of total revenue do the SKUS LAP004 and LAP005 contribute together?",
+    "options": {
+      "A": "10%",
+      "B": "20%",
+      "C": "15%",
+      "D": "25%"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757699823/page6_img1_olfdyf.jpg"
+  }
+]
