@@ -1,0 +1,1941 @@
+[
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Match the following terms with their descriptions.\nA. State\t\t1. Methods that operate on an object\nB. Behaviour\t\t2. Reuse of implementations\nC. Inheritance\t\t3. Restricting modification of data by the methods of the object only\nD. Encapsulation\t4. Determined by the information in the instance variables",
+    "options": {
+      "A": "A-4, B-1, C-2, D-3",
+      "B": "A-1, B-4, C-3, D-2",
+      "C": "A-4, B-2, C-1, D-3",
+      "D": "A-2, B-1, C-4, D-3"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Institute{\n\tpublic void teach() {\n\t\tSystem.out.println(\"Teaches\");\n\t}\n}\nclass College extends Institute{\n\tpublic void sports() {\n\t\tSystem.out.println(\"College sports\");\n\t}\n\tpublic void research() {\n\t\tSystem.out.println(\"College research\");\n\t}\n}\nclass University extends College{\n\tpublic void research() {\n\t\tSystem.out.println(\"University research\");\n\t}\n}\npublic class Test{\n\tpublic static void main(String[] args) {\n\t\tCollege obj = new University();\n\t\tobj.teach(); //LINE 1\n\t\tobj.sports();\n\t\tobj.research(); //LINE 2\n\t}\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "This code generates the output:\nTeaches\nCollege sports\nCollege research",
+      "B": "This code generates the output:\nTeaches\nCollege sports\nUniversity research",
+      "C": "LINE 1 generates compilation error because method teach() cannot be invoked on obj.",
+      "D": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which research() method is being invoked.\nTeaches\nCollege sports"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Employee{\n\tpublic final void bonus() {\n\t\tSystem.out.println(\"Employee bonus\");\n\t}\n}\nclass TeamManager extends Employee{\n\tpublic void bonus(){\n\t\tSystem.out.println(\"Team manager bonus\");\n\t}\n}\nclass Manager extends TeamManager{\n\tpublic static void main(String[] args) {\n\t\tManager m = new Manager();\n\t\tm.bonus();\n\t}\n}\n```\nChoose the correct option regarding the given code.",
+    "options": {
+      "A": "This code generates a compile time error because the method bonus() is not defined in the class Manager.",
+      "B": "This code generates a compile time error because the method bonus() cannot be overridden.",
+      "C": "This code generates output:\nEmployee bonus",
+      "D": "This code generates output:\nTeam manager bonus"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Professor{\n\tpublic void printInfo(){\n\t\tSystem.out.println(\"Professor info\");\n\t}\n}\nclass HOD extends Professor{\n\tpublic void printInfo(){\n\t\tSystem.out.println(\"HOD info\");\n\t}\n\tpublic void additionalDuties(){\n\t\tSystem.out.println(\"additional duties\");\n\t}\n}\npublic class Test{\n\tpublic static void main(String[] args) {\n\t\tProfessor obj = new HOD();\n\t\tobj.printInfo();\n\t\tobj.additionalDuties();\n\t}\n}\n```\nChoose the correct option regarding the given code.",
+    "options": {
+      "A": "This code generates a compile time error because the method additionalDuties() is not defined in class Professor.",
+      "B": "This code generates a compile time error because a variable of type Professor cannot refer to an object of type HOD.",
+      "C": "This code generates output:\nProfessor info\nadditional duties",
+      "D": "This code generates output:\nHOD info\nadditional duties"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below.\n```java\npublic class SwitchTest {\n\tpublic static void main(String[] args) {\n\t\tint arr[] = {1, 2, 3};\n\t\tint count = 0;\n\t\tfor (int i : arr) {\n\t\t\tswitch (i) {\n\t\t\t\tcase 2:\n\t\t\t\t\tcount += 1;\n\t\t\t\tcase 1:\n\t\t\t\t\tcount += 2;\n\t\t\t\tdefault:\n\t\t\t\t\tcount += 3;\n\t\t\t}\n\t\t}\n\t\tSystem.out.println(count);\n\t}\n}\n```\nWhat will the output be?",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "14",
+      "D": "6"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Sample{\n\tprivate int a;\n\tprivate long b;\n\tprivate double c;\n\tpublic Sample (int x, long y) {\n\t\ta = x;\n\t\tb = y;\n\t}\n\tpublic Sample (long p, double q) {\n\t\tb = p;\n\t\tc = q;\n\t}\n\tpublic void getResult() {\n\t\tString result = a+b+c+\"\"; // LINE 1\n\t\tSystem.out.println(result);\n\t}\n}\npublic class VarTest {\n\tpublic static void main(String[] args) {\n\t\tSample s1 = new Sample(10, 20);\n\t\tSample s2 = new Sample(40, 50.0);\n\t\ts1.getResult();\n\t\ts2.getResult();\n\t}\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "Compilation error at LINE 1",
+      "B": "This program generates the output:\n30.0\n90.0",
+      "C": "This program generates the output:\n30.0\n100.0",
+      "D": "This program generates the output:\n100.0\n100.0"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\ninterface Promotable{\n\tboolean isPromoted();\n\tdefault void promoted() {\n\t\tSystem.out.println(\"Promoted to final year\");\n\t}\n\tdefault void detained() {\n\t\tSystem.out.println(\"Not promoted to final year\");\n\t}\n}\nclass UGStudent implements Promotable{\n\tString name;\n\tint credits;\n\tpublic UGStudent (String n, int c) {\n\t\t//initialized instance variables\n\t\tthis.name = n;\n\t\tthis.credits = c;\n\t}\n\tpublic boolean isPromoted() {\n\t\tif (credits >= 73)\n\t\t\treturn true;\n\t\treturn false;\n\t}\n}\npublic class University {\n\tprivate Promotable obj;\n\tpublic University(Promotable p) {\n\t\tthis.obj = p;\n\t}\n\tpublic void promote() {\n\t\tif (obj.isPromoted())\n\t\t\tobj.promoted();\n\t\telse\n\t\t\tobj.detained();\n\t}\n\tpublic static void main(String[] args) {\n\t\tUGStudent s1 = new UGStudent(\"ABC\", 74);\n\t\tUGStudent s2 = new UGStudent(\"XYZ\", 66);\n\t\tUniversity u1 = new University(s1);\n\t\tu1.promote();\n\t\tUniversity u2 = new University(s2);\n\t\tu2.promote();\n\t}\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "This program generates no output.",
+      "B": "This program generates the output:\nPromoted to final year\nNot promoted to final year",
+      "C": "Program generates compilation error because methods promoted() and detained() should be overridden by the class UGStudent.",
+      "D": "This program generates the output:\nNot promoted to final year\nPromoted to final year"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nabstract class OnlineShop{\n\tabstract void delivery(); //LINE-1\n\tpublic void returns() { //LINE-2\n\t\tSystem.out.println(\"Returns accepted\");\n\t}\n}\nclass Keshoo extends OnlineShop{\n\tpublic void delivery() {\n\t\tSystem.out.println(\"Keesho delivers products\");\n\t}\n}\nclass Kyntra extends OnlineShop{\n\tpublic void delivery() {\n\t\tSystem.out.println(\"Kyntra delivers products\");\n\t}\n}\npublic class AbstractEx {\n\tpublic static void main(String[] args) {\n\t\tOnlineShop[] os = new OnlineShop[2];\n\t\tos[0] = new Keshoo(); //LINE-3\n\t\tos[1] = new Kyntra(); //LINE-4\n\t\tfor (int i=0; i < os.length; i++) {\n\t\t\tos[i].delivery();\n\t\t\tos[i].returns();\n\t\t}\n\t}\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "Compilation error at LINE 1 because an abstract method should be public in an abstract class.",
+      "B": "Compilation error at LINE 2 because you should write only abstract methods in an abstract class.",
+      "C": "Compilation errors at LINE 3 and LINE 4 because it is illegal to add objects of type Keesho and Kyntra to OnlineShop array.",
+      "D": "This program generates the output:\nKeesho delivers products\nReturns accepted\nKyntra delivers products\nReturns accepted"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\ninterface Vehicle{\n\tdefault void getNoOfWheels() {\n\t\tSystem.out.println(\"Has 2 Wheels\");\n\t}\n\tdefault void getFuelCapacity() {\n\t\tSystem.out.println(\"Capacity: 20L Petrol\");\n\t}\n}\nclass ADMSBike implements Vehicle{ // LINE 1\n\tpublic void getFuelCapacity() {\n\t\tSystem.out.println(\"No petrol needed\");\n\t}\n}\nclass MaruthiCar implements Vehicle{ // LINE 2\n\tpublic void getNoOfWheels() {\n\t\tSystem.out.println(\"Has 4 Wheels\");\n\t}\n}\npublic class InterfaceTest {\n\tpublic static void main(String[] args) {\n\t\tVehicle v[] = new Vehicle[2];\n\t\tv[0] = new ADMSBike();\n\t\tv[1] = new MaruthiCar();\n\t\tfor (int i=0; i < v.length; i++) {\n\t\t\tv[i].getNoOfWheels();\n\t\t\tv[i].getFuelCapacity();\n\t\t}\n\t}\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "Compilation error at LINE 1 because method getNoOfWheels() is not overridden in class ADMSBike",
+      "B": "Compilation error at LINE 2 because method getFuelCapacity() is not overridden in class MaruthiCar",
+      "C": "This program generates the output:\nNo petrol needed\nHas 4 Wheels",
+      "D": "This program generates the output:\nHas 2 Wheels\nNo petrol needed\nHas 4 Wheels\nCapacity: 20L Petrol"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\ninterface Workable{\n\tvoid work();\n}\nclass Human{\n\tpublic Workable getHeart() {\n\t\treturn new Heart();\n\t}\n\tpublic Workable getKidney() {\n\t\treturn new Kidney();\n\t}\n\tprivate class Heart implements Workable{\n\t\tpublic void work() {\n\t\t\tSystem.out.println(\"Pumps blood\");\n\t\t}\n\t}\n\tprivate class Kidney implements Workable{\n\t\tpublic void work() {\n\t\t\tSystem.out.println(\"Removes wastes\");\n\t\t}\n\t}\n}\npublic class PrivateTest {\n\tpublic static void main(String[] args) {\n\t\t//CODE BLOCK\n\t}\n}\n```\nChoose the correct option to be filled in place of CODE BLOCK so that the output is:\nPumps blood\nRemoves wastes",
+    "options": {
+      "A": "Human obj = new Human();\nobj.getHeart().work();\nobj.getKidney().work();",
+      "B": "Workable obj = new Human();\nobj.getHeart().work();\nobj.getKidney().work();",
+      "C": "new Heart().work();\nnew Kidney().work();",
+      "D": "Human hn = new Human();\nHeart ht = hn.getHeart();\nht.work();\nKidney kd = hn.getKidney();\nkd.work();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Which of the following statements is/are correct?",
+    "options": {
+      "A": "Return value link points to the start of the previous activation record.",
+      "B": "An activation record gets pushed into the stack when a function is called, and popped out when the function returns.",
+      "C": "The variables present in every activation record in the stack are in scope and are accessible.",
+      "D": "The variables present in the topmost activation record of the stack are in scope and are accessible."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below that checks whether two vehicles are the same. Method equals is overridden to compare two Vehicle objects as follows. If two vehicles have the same registration number, then they are the same. Based on the given information, answer the question that follows.",
+    "question": "```java\nclass Vehicle{\n\tprivate String regno;\n\t//Constructor to initialize instance variables\n\tpublic String toString() {\n\t\treturn regno;\n\t}\n\tpublic boolean equals (Object obj) {\n\t\t// CODE BLOCK\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tVehicle v1 = new Vehicle(\"RC12345\");\n\t\tVehicle v2 = new Vehicle(\"RC99999\");\n\t\tVehicle v3 = new Vehicle(\"RC99999\");\n\t\tif (v1.equals(v3))\n\t\t\tSystem.out.println(v1 + \", \" + v3 + \" are same\");\n\t\tif (v2.equals(v3))\n\t\t\tSystem.out.println(v2 + \", \" + v3 + \" are same\");\n\t}\n}\n```\nChoose the correct option(s) to fill in place of CODE BLOCK so that the output is:\nRC99999, RC99999 are same",
+    "options": {
+      "A": "if (obj instanceof Vehicle) {\n\tif(this.regno == obj.regno)\n\t\treturn true;\n}\nreturn false;",
+      "B": "if (obj instanceof Vehicle) {\n}\nVehicle v = obj;\nif (this.regno.equals(v.regno))\n\treturn true;\nreturn false;",
+      "C": "if (obj instanceof Vehicle) {\n\tVehicle v = obj;\n\tif (this.regno == v.regno)\n\t\treturn true;\n}\nreturn false;",
+      "D": "if (obj instanceof Vehicle) {\n\tVehicle v = (Vehicle) obj;\n\tif(this.regno.equals(v.regno))\n\t\treturn true;\n}\nreturn false;"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Calculator{\n\tpublic int add(int a, int b){\n\t\treturn a+b;\n\t}\n}\nclass SmartCalculator extends Calculator{\n\tpublic int add(int a, int b, int c){\n\t\treturn a + b + c;\n\t}\n\tpublic void divide(){\n\t\tSystem.out.println(\"Prints quotient and remainder\");\n\t}\n}\npublic class User{\n\tpublic static void main(String[] args) {\n\t\tCalculator c = new Calculator();\n\t\tSmartCalculator sc = new SmartCalculator();\n\t\t// LINE 1\n\t}\n}\n```\nChoose the correct option(s) that can be filled in place of LINE 1 such that it does not generate any compile time error.",
+    "options": {
+      "A": "c.add(3,4,5);",
+      "B": "sc.add(3,4);",
+      "C": "c.divide();",
+      "D": "sc.add(3,4,5);"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below. (Note: A constructor for the Date class is assumed to exist).\n```java\nclass Date{\n\tint date, month, year;\n\t//Constructor to initialize instance variables\n\tpublic Date(int d, int m, int y) {\n\t\tdate = d; month = m; year = y;\n\t}\n\tpublic String toString() {\n\t\treturn \"DOB = \" + date + \"-\" + month + \"-\" + year;\n\t}\n}\nclass Student{\n\tprivate String name;\n\tprivate Date dob;\n\tpublic Student (String name) {\n\t\tthis.name = name;\n\t}\n\tpublic Student (Student s) {\n\t\tthis.name = s.name;\n\t}\n\tpublic void setDob (Date dob) {\n\t\tthis.dob = dob;\n\t}\n\tpublic String toString() {\n\t\treturn \"name = \" + name + \", \" + dob;\n\t}\n}\npublic class ConTest {\n\tpublic static void main(String[] args) {\n\t\tStudent obj1 = new Student(\"ABC\");\n\t\tobj1.setDob(new Date(1, 6, 1990));\n\t\tStudent obj2 = new Student(obj1);\n\t\tobj2.setDob(new Date(31, 1, 1992));\n\t\tSystem.out.println(obj1);\n\t\tSystem.out.println(obj2);\n\t}\n}\n```\nWhat will the output be? [cite: 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201]",
+    "options": {
+      "A": "name = ABC, DOB = 1-6-1990\nname = ABC, DOB = 1-6-1990",
+      "B": "name = ABC, DOB = 31-1-1992\nname = ABC, DOB = 31-1-1992",
+      "C": "name = ABC, DOB = null\nname = ABC, DOB = 1-6-1990",
+      "D": "name = ABC, DOB = 1-6-1990\nname = ABC, DOB = 31-1-1992"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Developer{\n\tprivate String name;\n\tprivate String dept;\n\t//CODE BLOCK\n\tpublic void getDetails() {\n\t\tSystem.out.println(name+\" \"+dept);\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tDeveloper obj = new Developer(\"XYZ\", \"Java\");\n\t\tobj.getDetails();\n\t}\n}\n```\nChoose the correct option(s) to fill in place of CODE BLOCK so that the output is:\nXYZ Java",
+    "options": {
+      "A": "public Developer (String name, String dept) {\n\tthis.name = name;\n\tthis.dept = dept;\n}",
+      "B": "public Developer (String name, String dept) {\n\tname = name;\n\tdept = dept;\n}",
+      "C": "public Developer (String name, String dept) {\n\tname = this.name;\n\tdept = this.dept;\n}",
+      "D": "public Developer (String n, String d) {\n\tname = n;\n\tdept = d;\n}"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Which among the following statements is/are true about activation records?",
+    "options": {
+      "A": "All the variables on the stack (in any activation record) are in their scope.",
+      "B": "Only the variables present in the topmost activation record of the stack are in their lifetime",
+      "C": "Every activation record has a control link that points to start of previous record.",
+      "D": "Every activation record has a return value link that points to where to store return value."
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below that checks whether two books are the same. Method equals is overridden to compare two Book objects as follows. If two books have the same author name and book name, then they are the same. Based on the given information, answer the question that follows.\n\nclass Book{\n\tprivate String bName; // Book name\n\tprivate String aName; // Author name\n\t//Constructor to initialize instance variables\n\tpublic String toString() {\n\t\treturn bName;\n\t}\n\tpublic boolean equals(Object obj) {\n\t\t// CODE BLOCK\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tBook b1 = new Book(\"ABC\", \"XYZ\");\n\t\tBook b2 = new Book(\"ABC\", \"XYZ\");\n\t\tif (b1.equals(b2))\n\t\t\tSystem.out.println(b1+\", \"+ b2 +\" are same\");\n\t\telse\n\t\t\tSystem.out.println(b1+\", \"+ b2 +\" are different\");\n\t}\n}",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK so that the output is:\nABC, ABC are same",
+    "options": {
+      "A": "if (obj instanceof Book) {\n\tif(this.bName.equals(obj.bName) && this.aName.equals(obj.aName))\n\t\treturn true;\n}\nreturn false;",
+      "B": "if(this.bName.equals(obj.bName) && this.aName.equals(obj.aName))\n\treturn true;\nreturn false;",
+      "C": "if (obj instanceof Book) {\n\tBook bk = (Book) obj;\n\tif(this.bName.equals(bk.bName) && this.aName.equals(bk.aName))\n\t\treturn true;\n}\nreturn false;",
+      "D": "if (obj instanceof Book) {\n\tBook bk = obj;\n\tif(this.bName.equals(bk.bName) && this.aName.equals(bk.aName))\n\t\treturn true;\n}\nreturn false;"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n\nclass Rectangle{\n\tprivate int sides;\n\tpublic Rectangle(int s){\n\t\tsides = s;\n\t}\n\tpublic final void area(){\n\t\tSystem.out.println(\"area of rectangle\");\n\t}\n}\nclass Pentagon extends Rectangle {\n\tpublic Pentagon(int n) {\n\t\tsuper(n);\n\t}\n\tpublic final void area(){ // LINE 1\n\t\tSystem.out.println(\"area of pentagon\");\n\t}\n}\npublic class Test{\n\tpublic static void main(String[] args){\n\t\tRectangle r = new Pentagon(4); // LINE 2\n\t\tr.sides = 5; // LINE 3\n\t\tr.area();\n\t}\n}",
+    "question": "Choose the correct option(s).",
+    "options": {
+      "A": "LINE 1 generates compilation error because the method area() cannot be overridden.",
+      "B": "LINE 2 generates compilation error because a variable of type Rectangle cannot refer to an object of type Pentagon.",
+      "C": "LINE 3 generates compilation error because instance variable sides cannot be accessed in class Test.",
+      "D": "This code generates the output:\n area of pentagon"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n\ninterface Moveable{\n\tvoid move();\n}\nclass Fan implements Moveable{\n\tpublic void move() {\n\t\tSystem.out.println(\"Move and circulate air inside the room\");\n\t}\n}\nclass Cooler{\n\tpublic Fan getBlower() {\n\t\treturn new Blower();\n\t}\n\tprivate class Blower extends Fan implements Moveable{\n\t\tpublic void move() {\n\t\t\tSystem.out.println(\"Move and throws air at high pressure\");\n\t\t}\n\t}\n}\npublic class PrivateTest {\n\tpublic static void main(String[] args) {\n\t\t//CODE BLOCK\n\t}\n}",
+    "question": "Choose the correct option(s) to be filled in place of CODE BLOCK so that the output is:\nMove and throws air at high pressure",
+    "options": {
+      "A": "Cooler obj1 = new Cooler();\nMoveable obj2 = obj1.getBlower();\nobj2.move();",
+      "B": "Cooler obj1 = new Cooler();\nBlower obj2 = obj1.getBlower();\nobj2.move();",
+      "C": "Moveable obj1 = new Blower();\nobj1.move();",
+      "D": "Cooler obj1 = new Cooler();\nFan obj2 = obj1.getBlower();\nobj2.move();"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758466594/javaquiz1-may2023-1_gfgro2.png",
+    "question": "Match the following terms with their descriptions/properties.",
+    "options": {
+      "A": "A-6, B-5, C-3, D-1, E-2",
+      "B": "A-4, B-5, C-1, D-3, E-2",
+      "C": "A-4, B-2, C-3, D-1, E-5",
+      "D": "A-6, B-2, C-1, D-3, E-5"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n\nclass Vehicle{\n\tpublic void move() {\n\t\tSystem.out.println(\"Moves\");\n\t}\n}\nclass Bike extends Vehicle{\n\tpublic void seating() {\n\t\tSystem.out.println(\"Bike seating\");\n\t}\n}\nclass Car extends Bike{\n\tpublic void seating() {\n\t\tSystem.out.println(\"Car Seating\");\n\t}\n\tpublic void safety() {\n\t\tSystem.out.println(\"Offers safety\");\n\t}\n}\npublic class Test{\n\tpublic static void main(String[] args) {\n\t\tVehicle v = new Bike();\n\t\tBike b = new Car(); // LINE 1\n\t\tv.move();\n\t\t((Bike)v).seating(); // LINE 2\n\t\tb.safety(); // LINE 3\n\t}\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because a variable of type Bike cannot refer to an object of type Car.",
+      "B": "LINE 2 generates compilation error because a variable of type Vehicle cannot be type casted to an object of type Bike.",
+      "C": "LINE 3 generates compilation error because the method safety() is not defined in class Bike.",
+      "D": "This code generates the output:\nMoves\nBike seating\nOffers safety"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n\nclass Player{\n\tpublic void play(){\n\t\tSystem.out.println(\"Player plays\");\n\t}\n\tpublic void play (String n) {\n\t\tSystem.out.println(\"Player is \" + n);\n\t}\n}\nclass Captain extends Player{\n\tpublic void play (String s){\n\t\tSystem.out.println(\"Captain is \" + s);\n\t}\n}\npublic class Test{\n\tpublic static void main(String[] args) {\n\t\tPlayer p = new Captain(); // LINE 1\n\t\tp.play();\n\t\tp.play(\"siva\"); // LINE 2\n\t}\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because a variable of type Player cannot refer to an object of type Captain.",
+      "B": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which play() method is being invoked.\n Player plays",
+      "C": "This code generates the output:\nPlayer plays\nPlayer is siva",
+      "D": "This code generates the output:\nPlayer plays\nCaptain is siva"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\nclass Employee{\n\tprivate String name;\n\tprivate double salary;\n\tpublic Employee (String n, double s) {\n\t\tname = n;\n\t\tsalary = s;\n\t}\n\tpublic String toString() {\n\t\treturn \"name = \"+name+\", salary = \" + salary;\n\t}\n}\nclass Manager extends Employee{\n\tString dateOfPromotion;\n\tpublic Manager (String name, double salary, String dop) {\n\t\t//LINE-1\n\t\tdateOfPromotion = dop;\n\t}\n\tpublic String toString() {\n\t\treturn super.toString()+\", dateOfPromotion = \"+dateOfPromotion;\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tEmployee obj = new Manager (\"Suyan\", 50000.00, \"01/06/2021\");\n\t\tSystem.out.println(obj);\n\t}\n}",
+    "question": "Choose the correct option to be filled in place of LINE-1 so that the output is:\nname = Suyan, salary = 50000.0, dateOfPromotion = 01/06/2021",
+    "options": {
+      "A": "this (name, salary);",
+      "B": "super (name, salary);",
+      "C": "Employee(name, salary);",
+      "D": "super.Employee (name, salary);"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n\npublic class SwitchTest {\n\tpublic static void show() {\n\t\tfor(int i=0;i<3;i++) {\n\t\t\tswitch(i) {\n\t\t\t\tcase 1:\n\t\t\t\t\tSystem.out.print(\"1 \");\n\t\t\t\tcase 2:\n\t\t\t\t\tSystem.out.print(\"2\");\n\t\t\t\tcase 3:\n\t\t\t\t\tSystem.out.print(\"3\");\n\t\t\t\tdefault:\n\t\t\t\t\tSystem.out.print(\"Default case\");\n\t\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\tSystem.out.println();\n\t}\n\tpublic static void main(String[] args) {\n\t\tshow();\n\t}\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "1 2 3\n2 3",
+      "B": "Default case\n1 2 3 Default case\n2 3 Default case",
+      "C": "Default case\n1\n2",
+      "D": "Default case\n1 2 3\n2 3"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n\nabstract class Phone{\n\tabstract void basic_features();\n\tabstract void additional_features();\n}\nabstract class KeypadPhone extends Phone { // LINE 1\n\tpublic void basic_features() {\n\t\tSystem.out.println(\"Calling/Messaging\");\n\t}\n}\nclass SmartPhone extends KeypadPhone { // LINE 2\n\tpublic void additional_features() {\n\t\tSystem.out.println(\"Touch screen/Camera\");\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tKeypadPhone obj1 = new SmartPhone();\n\t\tPhone obj2 = new SmartPhone();\n\t\tobj1.basic_features();\n\t\tobj2.additional_features(); // LINE 3\n\t}\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This code generates the output:\nCalling/Messaging\nTouch screen/Camera",
+      "B": "LINE 1 generates compilation error because method additional_features() is not overridden in KeypadPhone class.",
+      "C": "LINE 2 generates compilation error because method basic_features() is not overridden in SmartPhone class.",
+      "D": "LINE 3 generates compilation error because object obj2 should be cast to its child class SmartPhone."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n\ninterface Appraisable{\n\tpublic default void isAppraisable() {\n\t\tSystem.out.println(\"Yes this employee appraisable\");\n\t}\n}\nclass Employee{\n\tint leaves;\n\tpublic Employee (int num) {\n\t\tleaves = num;\n\t}\n\tpublic void isAppraisable() {\n\t\tif (leaves >= 20)\n\t\t\tSystem.out.println(\"This employee not appraisable\");\n\t}\n}\nclass Manager extends Employee implements Appraisable{\n\tpublic Manager(int num) {\n\t\tsuper (num);\n\t}\n}\npublic class InterfaceTest {\n\tpublic static void main(String[] args) {\n\t\tAppraisable obj1 = new Manager(10);\n\t\tobj1.isAppraisable();\n\t\tAppraisable obj2 = new Manager(20);\n\t\tobj2.isAppraisable();\n\t}\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates no output.",
+      "B": "This code generates the output:\nThis employee not appraisable",
+      "C": "This code generates the output:\nYes this employee appraisable",
+      "D": "This code generates the output:\nYes this employee appraisable\nThis employee not appraisable"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below.\n\nclass Doctor {\n\tprivate String name = \"****\";\n\tprivate static String hospital_group = \"ABC\";\n\tpublic Doctor(){\n\t\tname = \"**\";\n\t}\n\tpublic Doctor (String n) {\n\t\tname = n;\n\t}\n\tpublic String toString() {\n\t\treturn \"name = \"+name+\", hospital group =\" + hospital_group;\n\t}\n}\npublic class VarTest{\n\tpublic static void main(String[] args) {\n\t\tDoctor obj1 = new Doctor();\n\t\tDoctor obj2 = new Doctor(\"XYZ\");\n\t\tSystem.out.println(obj1);\n\t\tSystem.out.println(obj2);\n\t}\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "name = null, hospital group = ABC\nname = XYZ, hospital group = ABC",
+      "B": "name = **, hospital group = null\nname = XYZ, hospital group = ABC",
+      "C": "name = ****, hospital group = ABC\nname = XYZ, hospital group = ABC",
+      "D": "name = **, hospital group = ABC\nname = XYZ, hospital group = ABC"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below.\n\nclass Person{\n\tprivate String name, location;\n\tprivate int age;\n\tpublic void setLocation(String location) {\n\t\tthis.location = location;\n\t}\n\tpublic Person(String name, int age) {\n\t\tthis.name = name;\n\t\tthis.age = age;\n\t}\n\tpublic Person(String name, int age, String location) {\n\t\tthis.name = name;\n\t\tthis.age = age;\n\t\tthis.location = location;\n\t}\n\tpublic Person (Person p) {\n\t\tthis(p.name, p.age, \"Hyderabad\");\n\t}\n\tpublic String toString() {\n\t\treturn name + \",\" + age + \", \" + location;\n\t}\n}\npublic class CopyConTest {\n\tpublic static void main(String[] args) {\n\t\tPerson p1 = new Person(\"ABC\", 23);\n\t\tPerson p2 = new Person(p1);\n\t\tp1.setLocation(\"Mumbai\");\n\t\tSystem.out.println(p1);\n\t\tSystem.out.println(p2);\n\t}\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "null, 0, Mumbai\nABC, 23, Hyderabad",
+      "B": "ABC, 23, Mumbai\nABC, 23, Mumbai",
+      "C": "ABC, 23, Hyderabad\nABC, 23, Hyderabad",
+      "D": "ABC, 23, Mumbai\nABC, 23, Hyderabad"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\nclass Animal{\n\tString name;\n\tint legs;\n\tpublic Animal (String n, int l){\n\t\tname = n;\n\t\tlegs = l;\n\t}\n\t// *** CODE SEGMENT ***\n}\npublic class Test{\n\tpublic static void main(String[] args) {\n\t\tAnimal a1 = new Animal(\"Dogs\", 4);\n\t\tAnimal a2 = new Animal (\"Birds\", 2);\n\t\tSystem.out.println(a1 + \"\\n\" + a2);\n\t}\n}",
+    "question": "Choose the correct option to fill in the CODE SEGMENT so that the output is:\nDogs: 4\nBirds: 2",
+    "options": {
+      "A": "public String toString(){\n\treturn name + \" : \" + legs;\n}",
+      "B": "public String toString(Object ob){\n\treturn ob.name + \" : \" + ob.legs;\n}",
+      "C": "No additional code is required in place of CODE SEGMENT.",
+      "D": "This output will not be printed because Java throws an error when an object is tried to be printed using System.out.println."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\ninterface Bookable{\n\tpublic void booked();\n\tpublic void rejected();\n}\nclass TicketBookingSite{\n\tpublic static int maxTickets = 100;\n\tBookable obj;\n\t// Constructor to initialize Bookable obj\n\tpublic void startBooking (int tickets) {\n\t\tif (tickets < maxTickets) {\n\t\t\tobj.booked();\n\t\t\tmaxTickets = maxTickets - tickets;\n\t\t}\n\t\telse\n\t\t\tobj.rejected();\n\t}\n}\nclass Audience implements Bookable{\n\tString name;\n\tint noTickets;\n\t// Constructor initialize name and noTickets\n\tpublic void getTickets() {\n\t\tTicketBookingSite site = new TicketBookingSite(this);\n\t\tsite.startBooking (noTickets);\n\t}\n\tpublic void booked() {\n\t\tSystem.out.println(\"You got \"+this.noTickets+\" tickets\");\n\t}\n\tpublic void rejected() {\n\t\tSystem.out.println(\"Tickets sold out\");\n\t}\n}\npublic class CallBack {\n\tpublic static void main(String[] args) {\n\t\tAudience a1 = new Audience(\"A\", 34);\n\t\tAudience a2 = new Audience(\"B\", 67);\n\t\tAudience a3 = new Audience(\"C\", 34);\n\t\ta1.getTickets();\n\t\ta2.getTickets();\n\t\ta3.getTickets();\n\t}\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates no output.",
+      "B": "This program generates the output:\nYou got 34 tickets\nTickets sold out\nTickets sold out",
+      "C": "This program generates the output:\nYou got 34 tickets\nYou got 67 tickets\nYou got 34 tickets",
+      "D": "This program generates the output:\nYou got 34 tickets\nTickets sold out\nYou got 34 tickets"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Which of the following is/are CORRECT about heap?\nChoose the correct option(s).",
+    "options": {
+      "A": "Heap is used to store dynamically allocated data.",
+      "B": "Activation records created for functions are allocated in heap.",
+      "C": "Heap storage needs to be explicitly requested by the programmer.",
+      "D": "A heap storage allocation cannot be deallocated in any way."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Match the following terms with their descriptions/properties.",
+    "options": {
+      "A": "1-B, 2-A, 3-C, 4-D, 5-E",
+      "B": "1-A, 2-B, 3-D, 4-E, 5-C",
+      "C": "1-C, 2-D, 3-B, 4-E, 5-A",
+      "D": "1-D, 2-C, 3-E, 4-A, 5-B"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758466582/javaquiz1-sept2023-1_hxima1.png"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the Java program below.\n```java\npublic class FClass{\n    public static void main(String[] args) {\n        int a[] = {10, 20, 30};\n        int x = 0;\n        for(int i : a) {\n            switch(i){\n                case 10:\n                    x = x + 10;\n                    System.out.println(x);\n                    break;\n                case 20:\n                    x = x + 20;\n                    System.out.println(x);\n                    break;\n                case 30:\n                    x = x + 30;\n                    System.out.println(x);\n                    break;\n                default:\n                    System.out.println(x);\n            }\n        }\n    }\n}\n```\nWhat will the output be?",
+    "options": {
+      "A": "10\n40\n70",
+      "B": "10\n30\n60",
+      "C": "10\n30\n60\n60",
+      "D": "10\n30\n10"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below.\n```java\ninterface Compiler{\n    public default void compile(){\n        System.out.println(\"Compiles\");\n    }\n}\ninterface Interpreter{\n    public default void interpret(){\n        System.out.println(\"Interprets\");\n    }\n}\nclass Language implements Compiler, Interpreter{\n    public void compile(){\n        System.out.println(\"Language specific compiler\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Compiler c1 = new Language();\n        c1.compile();\n        c1.interpret();\n    }\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nLanguage specific compiler\nInterprets",
+      "B": "This program generates the output:\nCompiles\nInterprets",
+      "C": "This program generates compiler error because c1 of type Compiler cannot invoke method interpret().",
+      "D": "This program generates compiler error because neither is class Language declared as abstract nor does it override method interpret()."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Student{\n    public void audit() {\n        System.out.println(\"Audit classes\");\n    }\n}\nclass TeamLeader extends Student{\n    public void monitor() {\n        System.out.println(\"Monitors team\");\n    }\n    public void mentor() {\n        System.out.println(\"Mentors team\");\n    }\n}\nclass SchoolLeader extends TeamLeader{\n    public void monitor() {\n        System.out.println(\"Monitors school\");\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        TeamLeader obj = new SchoolLeader();\n        obj.audit(); //LINE 1\n        obj.mentor();\n        obj.monitor(); //LINE 2\n    }\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because method audit() cannot be invoked on obj.",
+      "B": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which monitor() method is being invoked.\nAudit classes\nMentors team",
+      "C": "This code generates the output:\nAudit classes\nMentors team\nMonitors school",
+      "D": "This code generates the output:\nAudit classes\nMentors team\nMonitors team"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below.\n```java\ninterface Displayable{\n    public default void display(){\n        System.out.println(\"Displays digits\");\n    }\n}\nclass Calculator implements Displayable{\n    //LINE 1\n}\nclass SmartCalculator implements Displayable{\n    public void display() {\n        System.out.println(\"Displays alphabets and digits\");\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        Displayable d1 = new Calculator();\n        d1.display();\n        // LINE 2\n        Displayable d2 = new SmartCalculator();\n        d2.display();\n    }\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "Compiler error at LINE 1 because class Calculator is not abstract",
+      "B": "This program generates output:\nDisplays digits\nDisplays alphabets and digits",
+      "C": "This program generates output:\nDisplays digits\nDisplays digits",
+      "D": "LINE 2 generates runtime error because method (display) is not defined for class Calculator"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Student{\n    private String name;\n    private int rollNo;\n    public Student(String n, int r){\n        name = n;\n        rollNo = r;\n    }\n    /***---***/\n    /* CODE SEGMENT */\n    /***---***/\n}\npublic class Test{\n    public static void main(String[] args) {\n        Student s1 = new Student(\"Radha\", 1);\n        Student s2 = new Student(\"Raju\", 2);\n        System.out.println(s1 + \"\\n\" + s2);\n    }\n}\n```\nChoose the correct option to fill in the CODE SEGMENT so that the output is:\nRadha: 1\nRaju: 2",
+    "options": {
+      "A": "public String toString (Object ob){\n    return ob.name + \":\" + ob.rollNo;\n}",
+      "B": "public String toString(){\n    return name + \":\" + rollNo;\n}",
+      "C": "No additional code is required in place of CODE SEGMENT.",
+      "D": "This output will not be printed because Java throws an error when an object is tried to be printed using System.out.println."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the Java code given below. Identify the correct statement to fill in the blank at LINE 1, such that the output is: Discount available\n```java\ninterface Enquiry{\n    public void printAvailability();\n}\nclass Customer{\n    private int bill;\n    public Customer(int billAmount) { this.bill = billAmount; }\n    public Enquiry checkAmount(){\n        if (bill > 5000)\n            return new PassedEnquiry();\n        return new FailedEnquiry();\n    }\n    private class PassedEnquiry implements Enquiry{\n        public void printAvailability(){\n            System.out.println(\"Discount available\");\n        }\n    }\n    private class FailedEnquiry implements Enquiry{\n        public void printAvailability(){\n            System.out.println(\"No discount\");\n        }\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Customer c1 = new Customer(4500);\n        //bill of c1 is 4500\n        Customer c2 = new Customer(7000);\n        //bill of c2 is 7000\n        //LINE 1\n    }\n}\n```",
+    "options": {
+      "A": "c2.checkAmount().printAvailability();",
+      "B": "c2.printAvailability();",
+      "C": "c1.printAvailability();",
+      "D": "c1.checkAmount().printAvailability();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the Java code given below.\n```java\nclass Student{\n    String name;\n    int[] marks;\n    public Student (String n, int[] m){\n        name = n;\n        marks = m;\n    }\n    public Student (Student s){\n        this.name = s.name;\n        this.marks = s.marks;\n    }\n}\npublic class Test {\n    public static void main(String[] args){\n        int[] m = { 50, 70, 60};\n        Student s1 = new Student(\"Siva\", m);\n        Student s2 = new Student(s1);\n        s2.name= \"Krishna\";\n        s2.marks[0] = 80;\n        System.out.println(s1.name + \",\" +s1.marks[0]);\n        System.out.println(s2.name + \",\" +s2.marks[0]);\n    }\n}\n```\nWhat will the output be?",
+    "options": {
+      "A": "Krishna, 80\nKrishna, 80",
+      "B": "Siva, 80\nKrishna, 80",
+      "C": "Siva, 50\nKrishna, 80",
+      "D": "Krishna, 50\nSiva, 80"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java program below.\n```java\nclass A{\n    void display(){\n        System.out.println(\"Display A\");\n    }\n}\nclass B extends A{\n    void display(){\n        super.display();\n        System.out.println(\"Display B\");\n    }\n    void display(String s) {\n        System.out.println(\"Display B.\" + s);\n    }\n}\nclass C extends B{\n    void display(){\n        super.display();\n        System.out.println(\"Display C\");\n    }\n    void display(String s){\n        System.out.println(\"Display C.\" + s);\n    }\n}\nclass Example{\n    public static void main(String[] args) {\n        B obj = new C(); // LINE 1\n        obj.display();\n        obj.display(\"Successful!\"); // LINE 2\n    }\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "The program generates output:\nDisplay A\nDisplay B\nDisplay C\nDisplay C. Successful!",
+      "B": "LINE 1 generates compilation error because a variable of type B cannot refer to an object of type C.",
+      "C": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which display() method is being invoked.\nDisplay B\nDisplay C\nDisplay C.Successful!",
+      "D": "The program generates output:\nDisplay A\nDisplay B\nDisplay B.Successful!"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\ninterface Teachable{\n    public default void teaches(){\n        System.out.println(\"Teaches\");\n    }\n    public void manages();\n}\nabstract class Teacher implements Teachable{\n    public void teaches() {\n        System.out.println(\"Teach subjects\");\n    }\n}\nclass HOD extends Teacher{\n    public void manages () {\n        System.out.println(\"Manages\");\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Teachable obj1 = new HOD(); // LINE 1\n        Teacher obj2 = new HOD();\n        obj2.teaches();\n        obj2.manages(); // LINE 2\n    }\n}\n```\nChoose the correct option.",
+    "options": {
+      "A": "This code generates the output:\nTeach subjects\nManages",
+      "B": "This code generates the output:\nTeaches\nManages",
+      "C": "LINE 1 generates compilation error because a variable of type Teachable cannot refer to an object of type HOD.",
+      "D": "LINE 2 generates compilation error because the method manages () cannot be invoked on obj2"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below.\n```java\nclass Employee{\n    private String name;\n    private double salary;\n    public Employee (String n){\n        name = n;\n    }\n    public Employee (double s) {\n        salary = s;\n    }\n    public Employee (String n, double s) {\n        name = n;\n        salary = s;\n    }\n    public String toString() {\n        return \"name=\"+name+\", salary = \" + salary;\n    }\n}\nclass Manager extends Employee{\n    String dateOfPromotion;\n    // CODE BLOCK\n    public String toString() {\n        return super.toString()+\", dateOfPromotion = \"+dateOfPromotion;\n    }\n}\n```\nChoose the correct option to fill in place of CODE BLOCK to instantiate instance variables of class Manager",
+    "options": {
+      "A": "public Manager (String dop) {\n    dateOfPromotion = dop;\n}",
+      "B": "public Manager (String name, double salary, String dop) {\n    super(name, salary);\n    dateOfPromotion = dop;\n}",
+      "C": "public Manager (String name, double salary, String dop) {\n    name = name;\n    salary = salary;\n    dateOfPromotion = dop;\n}",
+      "D": "public Manager (String name, double salary, String dop) {\n    this.name = name;\n    this.salary = salary;\n    dateOfPromotion = dop;\n}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below.\n```java\nclass Employee{\n    private int id;\n    private static double salary = 100;\n    public Employee (int i) {\n        id = i;\n    }\n    public final double bonus(){\n        return 0.1 * salary;\n    }\n}\nclass Manager extends Employee{\n    public Manager(int x) {\n        super(x);\n    }\n    public final double bonus() { // LINE 1\n        return 0.2 * salary; // LINE 2\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        Employee e1 = new Manager(001); // LINE 3\n        Manager m1 = new Employee(005); // LINE 4\n        e1.bonus();\n        m1.bonus();\n    }\n}\n```\nWhich of the following statements is FALSE?",
+    "options": {
+      "A": "LINE 1 generates compilation error because the method bonus() cannot be overridden.",
+      "B": "LINE 2 generates compilation error because instance variable salary cannot be accessed in class Manager.",
+      "C": "LINE 3 generates compilation error because a variable of type Employee cannot refer to an object of type Manager.",
+      "D": "LINE 4 generates compilation error because a variable of type Manager cannot refer to an object of type Employee."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below.\n```java\ninterface Iterator{\n    public boolean has_next();\n    public Object get_next();\n}\nabstract class Printable{\n    public abstract void print();\n}\nclass CustomerList{\n    private class Customer extends Printable{\n        private String name, billno;\n        public Customer (String n, String b) {\n            this.name = n;\n            this.billno = b;\n        }\n        public void print() {\n            System.out.println(billno +\",\"+ name);\n        }\n    }\n    private class CustIter implements Iterator{\n        private int indx = 0;\n        public CustIter() {}\n        public boolean has_next() {\n            return indx < limit;\n        }\n        public Object get_next() {\n            return list[indx++];\n        }\n    }\n    public Iterator getIterator() {\n        return new CustIter();\n    }\n    private final int limit = 3;\n    private Customer[] list = { new Customer(\"Abhishek\", \"C1001\"),\n        new Customer(\"Hari\", \"C1002\"), new Customer (\"Sneha\", \"C1003\")};\n}\npublic class IterTest{\n    public static void main(String[] args) {\n        CustomerList cList = new CustomerList();\n        Iterator iter = cList.getIterator();\n        while(iter.has_next()) {\n            //LINE 1\n        }\n    }\n}\n```\nIdentify the appropriate statement to fill in the blank at LINE 1, such that the output is:\nC1001, Abhishek\nC1002, Hari\nC1003, Sneha",
+    "options": {
+      "A": "((Printable)iter.get_next()).print()",
+      "B": "((Customer)iter.get_next()).print()",
+      "C": "((CustomerList)iter.get_next()).print()",
+      "D": "iter.get_next().print();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below that checks whether two complex numbers are the same. Method equals is overridden to compare two ComplexNumber objects as follows. If two complex numbers have the same real part and imaginary part, then they are the same. Choose the correct option(s) to fill in place of CODE BLOCK so that the output is: c1, c2 are same\n```java\nclass ComplexNumber{\n    private int real; // real part\n    private int img; // imaginary part\n    //Constructor to initialize instance variables\n    public ComplexNumber(int r, int i) { this.real = r; this.img = i; }\n    public boolean equals (Object obj) {\n        // CODE BLOCK\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        ComplexNumber c1 = new ComplexNumber(3, 4);\n        ComplexNumber c2 = new ComplexNumber(3, 4);\n        if (c1.equals(c2))\n            System.out.println(\"c1, c2 are same\");\n        else\n            System.out.println(\"c1, c2 are different\");\n    }\n}\n```",
+    "options": {
+      "A": "if (obj instanceof ComplexNumber) {\n    if(this.real == obj.real && this.img == obj.img)\n        return true;\n}\nreturn false;",
+      "B": "if(this.real == obj.real && this.img == obj.img)\n    return true;\nreturn false;",
+      "C": "if (obj instanceof ComplexNumber) {\n    ComplexNumber c = obj;\n    if (this.real == c.real && this.img == c.img)\n        return true;\n}\nreturn false;",
+      "D": "if (obj instanceof ComplexNumber) {\n    ComplexNumber c = (ComplexNumber) obj;\n    if (this.real == c.real && this.img == c.img)\n        return true;\n}\nreturn false;"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Which of the following statements is/are true about activation records?",
+    "options": {
+      "A": "All the variables on the stack (in any activation record) are said to be in scope.",
+      "B": "The lifetime of a variable is the duration that it spends in the topmost activation record in the stack.",
+      "C": "Every activation record has a control link that points to start of previous record.",
+      "D": "Every activation record has a return value link that points to where to store return value."
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the statements given below.\nStatement 1: Type 2DShape has method: getArea().\nStatement 2: Type 3DShape has two methods: getArea() and getVolume().",
+    "question": "Choose the correct option(s) regarding subtyping and inheritance with respect to type 2DShape and type 3DShape.",
+    "options": {
+      "A": "3DShape can be a subtype of 2DShape.",
+      "B": "2DShape can be a subtype of 3DShape.",
+      "C": "3DShape can be a subclass of 2DShape.",
+      "D": "2DShape can be a subclass of 3DShape."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n```java\nclass Athlete {\n    public void perform() {\n        System.out.println(\"Athlete performs\");\n    }\n    public void perform (String activity) {\n        System.out.println(\"Athlete performs \" + activity);\n    }\n}\nclass Gymnast extends Athlete {\n    public void perform (String move) {\n        System.out.println(\"Gymnast performs \" + move);\n    }\n}\npublic class TestAthlete {\n    public static void main(String[] args) {\n        Athlete a = new Gymnast(); // LINE 1\n        a.perform();\n        a.perform(\"backflip\"); // LINE 2\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because a variable of type Athlete cannot refer to an object of type Gymnast.",
+      "B": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which perform() method is being invoked.\nAthlete performs",
+      "C": "This code generates the output:\nAthlete performs\nAthlete performs backflip",
+      "D": "This code generates the output:\nAthlete performs\nGymnast performs backflip"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\nclass Vehicle {\n    public final void startEngine() {\n        System.out.println(\"Starting the engine of a vehicle\");\n    }\n}\nclass Car extends Vehicle {\n    public final void startEngine() {\n        System.out.println(\"Starting the engine of a car\");\n    }\n}\npublic class TestVehicles {\n    public static void main(String[] args) {\n        Vehicle vehicle = new Car();\n        vehicle.startEngine();\n    }\n}\n```",
+    "question": "Choose the correct option regarding the given code.",
+    "options": {
+      "A": "This code generates output:\nStarting the engine of a vehicle\nStarting the engine of a car",
+      "B": "This code generates output:\nStarting the engine of a vehicle",
+      "C": "This code generates output:\nStarting the engine of a car",
+      "D": "This code generates a compilation error because the method startEngine cannot be overridden"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Readable {\n    default void read() {\n        System.out.println(\"reads\");\n    }\n}\nclass Book implements Readable { //LINE 1\n}\nclass Newspaper implements Readable {\n    public void read() {\n        System.out.println(\"reads news\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Readable r1 = new Book();\n        r1.read(); // LINE 2\n        Readable r2 = new Newspaper();\n        r2.read();\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because class Book is not abstract",
+      "B": "This code generates the output:\nreads\nreads news",
+      "C": "This code generates the output:\nreads\nreads",
+      "D": "LINE 2 generates runtime error because method read() is not defined in class Book"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Playable {\n    default void play() {\n        System.out.println(\"Plays\");\n    }\n}\ninterface Pauseable {\n    default void pause() {\n        System.out.println(\"Pauses\");\n    }\n}\nclass MediaPlayer implements Playable, Pauseable{ //LINE 1\n    public void play(){\n        System.out.println(\"Plays media player\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Playable p1 = new MediaPlayer();\n        p1.play();\n        p1.pause(); //LINE 2\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because the class MediaPlayer is not declared as abstract.",
+      "B": "LINE 2 generates compilation error because p1 of type Playable cannot invoke method pause().",
+      "C": "This code generates the output:\nPlays media player\nPauses",
+      "D": "This code generates the output:\nPlays\nPauses"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below.\n```java\ninterface PaymentMethod {\n    void processPayment();\n}\nclass Payment {\n    public CreditCard getPaymentMethod1() {\n        return new CreditCard();\n    }\n    public PayPal getPaymentMethod2() {\n        return new PayPal();\n    }\n    private class CreditCard implements PaymentMethod {\n        public void processPayment() {\n            System.out.println(\"Processing credit card payment\");\n        }\n    }\n    private class PayPal extends CreditCard {\n        public void processPayment() {\n            System.out.println(\"PayPal payment started\");\n        }\n    }\n}\npublic class PrivateTest {\n    public static void main(String[] args) {\n        Payment p = new Payment();\n        // CODE BLOCK\n        obj1.processPayment();\n        obj2.processPayment();\n    }\n}\n```",
+    "question": "Choose the correct option to fill in place of CODE BLOCK so that the output is:\nProcessing credit card payment\nPayPal payment started",
+    "options": {
+      "A": "CreditCard obj1 = new CreditCard();\nPayPal obj2 = new PayPal();",
+      "B": "PaymentMethod obj1 = p.getPaymentMethod1();\nPaymentMethod obj2 = p.getPaymentMethod2();",
+      "C": "CreditCard obj1 = p.getPaymentMethod1();\nPayPal obj2 = p.getPaymentMethod2();",
+      "D": "PaymentMethod obj1 = new CreditCard();\nPaymentMethod obj2 = new PayPal();"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\npublic class PatternSwitchExample {\n    public static void displayPattern (int value) {\n        switch (value) {\n            case 1:\n                System.out.print(\"A\");\n                break;\n            case 2:\n                System.out.print(\"B\");\n                break;\n            case 3:\n                System.out.print(\"C\");\n                break;\n            default:\n                System.out.print(\"X\");\n                break;\n        }\n    }\n    public static void main(String[] args) {\n        for (int i=3; i>=1; i--) {\n            for (int j=1; j<=i; j++) {\n                displayPattern(i);\n            }\n            System.out.println();\n        }\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "CCC\nBBB\nAAA",
+      "B": "A\nBB\nCCC",
+      "C": "CCC\nBB\nA",
+      "D": "XXX\nCB\nA"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\nclass Student {\n    private String name;\n    private int age;\n    public Student(String n, int a) {\n        name = n;\n        age = a;\n    }\n    public Student (Student s) {\n        this.name = s.name;\n        this.age = s.age;\n    }\n    public void setName(String n) {\n        name = n;\n    }\n    public void setAge(int a) {\n        age = a;\n    }\n    public int getAge() {\n        return age;\n    }\n    public String getName() {\n        return name;\n    }\n}\npublic class StudentDemo {\n    public static void main(String[] args) {\n        Student s1 = new Student(\"Alice\", 20);\n        Student s2 = s1;\n        s1.setAge(25);\n        s1.setName(\"Emily\");\n        System.out.println(\"s2: name: \" + s2.getName() + \", age: \" + s2.getAge());\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "s2: name: Emily, age: 25",
+      "B": "s2: name: Emily, age: 20",
+      "C": "s2: name: Alice, age: 25",
+      "D": "s2: name: Alice, age: 20"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\nclass Car {\n    private String model;\n    private int year;\n    public Car(String m, int y) {\n        model = m;\n        year = y;\n    }\n    /*** \n     * CODE SEGMENT *\n    ***/\n}\npublic class CarTest {\n    public static void main(String[] args) {\n        Car car1 = new Car(\"Toyota\", 2022);\n        Car car2 = new Car(\"Ford\", 2020);\n        System.out.println(car1 + \"\\n\" + car2);\n    }\n}\n```",
+    "question": "Choose the correct option to fill in the CODE SEGMENT so that the output is:\nToyota: 2022\nFord : 2020",
+    "options": {
+      "A": "public String toString(){\n    return model + \": \" + year;\n}",
+      "B": "public String toString(Object ob){\n    return ob.model + \" : \" + ob.year;\n}",
+      "C": "String toString(){\n    return model + \" : \" + year;\n}",
+      "D": "void String toString(Object ob){\n    System.out.println(ob.model + \": \" + ob.year);\n}"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the following code:\n```java\nclass Animal {\n    public void makeSound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\nclass Dog extends Animal {\n    public void makeSound (String s) {\n        makeSound();\n        System.out.println(\"Dog \" + s);\n    }\n}\npublic class TestAnimals {\n    public static void main(String[] args) {\n        Animal myPet = new Dog();\n        //CODE SEGMENT\n    }\n}\n```",
+    "question": "Choose the correct option to fill in the CODE SEGMENT so that the output is:\nAnimal makes a sound\nDog barks",
+    "options": {
+      "A": "myPet.makeSound();",
+      "B": "myPet.makeSound(\"barks\");",
+      "C": "Animal a = (Animal) myPet;\na.makeSound(\"barks\");",
+      "D": "Dog d = (Dog)myPet;\nd.makeSound(\"barks\");"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below that checks whether two Persons are the same. Method equals is overridden to compare two Person objects as follows. If two Persons have the same name and age, then they are the same. Based on the given information, answer the question that follows.\n```java\nclass Person {\n    private String name;\n    private int age;\n    // Constructor to initialize instance variables\n    public String toString() {\n        return name + \" (\" + age + \" years old)\";\n    }\n    public boolean equals(Object obj) {\n        //CODE BLOCK\n    }\n}\npublic class TestPerson {\n    public static void main(String[] args) {\n        Person person1 = new Person(\"Alice\", 25);\n        Person person2 = new Person(\"Alice\", 25);\n        if (person1.equals(person2)) {\n            System.out.println(person1 + \" and \" + person2 + \" are the same\");\n        }\n        else{\n            System.out.println(person1 + \" and \" + person2 + \" are different\");\n        }\n    }\n}\n```",
+    "question": "Choose the correct option to fill in place of CODE BLOCK so that the output is:\nAlice (25 years old) and Alice (25 years old) are the same",
+    "options": {
+      "A": "if (obj instanceof Person) {\n    if(this.age.equals(obj.age) && this.name.equals(obj.name))\n        return true;\n}\nreturn false;",
+      "B": "if(this.age.equals(obj.age) && this.name.equals(obj.name))\n    return true;\nreturn false;",
+      "C": "if (obj instanceof Person) {\n    Person otherPerson = (Person) obj;\n    if(this.age == otherPerson.age && this.name.equals(otherPerson.name)){\n        return true;\n    }\n}\nreturn false;",
+      "D": "if (obj instanceof Person) {\n    Person otherPerson = obj;\n    if(this.age == otherPerson.age && this.name.equals(otherPerson.name))\n        return true;\n}\nreturn false;"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\n1 interface Switchable {\n2     public void turnon();\n3     public void turnoff();\n4 }\n5 interface SpeedAdjustable {\n6     public void adjustSpeed();\n7     default void displaySpeed() {\n8         System.out.println(\"Speed is adjustable.\");\n9     }\n10}\n11 class Fan implements Switchable, SpeedAdjustable {\n12     public void turnon() {\n13         System.out.println(\"Fan is turned on.\");\n14     }\n15     public void turnoff() {\n16         System.out.println(\"Fan is turned off.\");\n17     }\n18}\n```",
+    "question": "Choose the correct option regarding the above code.",
+    "options": {
+      "A": "LINE 7 generates compilation error because the method displaySpeed is not abstract.",
+      "B": "LINE 11 generates compilation error because class Fan cannot implement two interfaces.",
+      "C": "LINE 11 generates compilation error because class Fan is not declared as abstract.",
+      "D": "LINE 2, LINE 3 & LINE 6 generate compilation errors because the methods turnon, turnoff and adjustSpeed are not abstract."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n```java\nclass Shape {\n    public void draw() {\n        System.out.println(\"Drawing a shape\");\n    }\n}\nclass Rectangle extends Shape {\n    public void draw() {\n        System.out.println(\"Drawing a rectangle\");\n    }\n}\nclass Square extends Rectangle {\n    public void draw() {\n        System.out.println(\"Drawing a square\");\n    }\n    public void color() {\n        System.out.println(\"Square is colorful\");\n    }\n}\npublic class TestShapes {\n    public static void main(String[] args) {\n        Shape s = new Rectangle();\n        Rectangle r = new Square(); // LINE 1\n        s.draw();\n        r.color(); // LINE 2\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because a variable of type Rectangle cannot refer to an object of type Square.",
+      "B": "This code generates the output:\nDrawing a shape\nSquare is colorful",
+      "C": "LINE 2 generates compilation error because the method color() is not defined in class Rectangle.",
+      "D": "This code generates the output:\nDrawing a rectangle\nSquare is colorful"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Discountable {\n    public default void isDiscountable() {\n        System.out.println(\"Item eligible for discount\");\n    }\n}\nclass Product {\n    double price;\n    public Product (double price) {\n        this.price = price;\n    }\n    public void isDiscountable() {\n        if (price <= 500.0) {\n            System.out.println(\"Item not eligible for discount\");\n        }\n        else {\n            System.out.println(\"Discount granted\");\n        }\n    }\n}\nclass SaleItem extends Product implements Discountable {\n    public SaleItem(double price) {\n        super(price);\n    }\n}\npublic class TestClass {\n    public static void main(String[] args) {\n        Discountable i1 = new SaleItem(600.0);\n        i1.isDiscountable();\n        Discountable i2 = new SaleItem(300.0);\n        i2.isDiscountable();\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates no output.",
+      "B": "This code generates the output:\nItem eligible for discount\nItem not eligible for discount",
+      "C": "This code generates the output:\nDiscount granted\nItem not eligible for discount",
+      "D": "This code generates the output:\nItem not eligible for discount\nDiscount granted"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Which of the following statements is/are correct about activation records?",
+    "options": {
+      "A": "Return value link points to the start of the previous activation record.",
+      "B": "An activation record is pushed into the stack when a function is called, and is popped out when the function returns.",
+      "C": "The variables present in every activation record in the stack are in scope and are accessible.",
+      "D": "The variables present in the topmost activation record of the stack are in scope and are accessible."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758467477/javaquiz1-may2024-1_uzvy6j.png",
+    "question": "Match the following terms with their descriptions/properties.",
+    "options": {
+      "A": "1-B, 2-A, 3-C, 4-D, 5-E",
+      "B": "1-A, 2-B, 3-D, 4-E, 5-C",
+      "C": "1-C, 2-D, 3-B, 4-E, 5-A",
+      "D": "1-D, 2-C, 3-E, 4-A, 5-B"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\npublic class Test{\n    public static void main(String[] args) {\n        int a[] = {10, 20};\n        int x = a[0];\n        for(int i: a){\n            switch(i){\n                case 10:\n                    x = x + 10;\n                    System.out.println(x);\n                    break;\n                case 20:\n                    x = x + 20;\n                    System.out.println(x);\n                    break;\n                default:\n                    System.out.println(x);\n            }\n        }\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "20\n30\n30",
+      "B": "20\n40",
+      "C": "20\n40\n60",
+      "D": "10\n20\n40"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Printer{\n    public default void print(){\n        System.out.println(\"Prints\");\n    }\n}\ninterface Scanner{\n    public default void scan() {\n        System.out.println(\"Scans\");\n    }\n}\nclass Device implements Printer, Scanner{\n    public void print() {\n        System.out.println(\"Color printing\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Printer p1 = new Device();\n        p1.print();\n        p1.scan(); //LINE 1\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nColor printing\nScans",
+      "B": "This program generates the output:\nPrints\nScans",
+      "C": "LINE 1 generates compiler error because p1 of type Printer cannot invoke method scan().",
+      "D": "This program generates compiler error because neither is class Device declared as abstract nor does it override method scan()."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\nclass Employee {\n    public void performTasks() {\n        System.out.println(\"Perform tasks\");\n    }\n}\nclass Manager extends Employee {\n    public void plan() {\n        System.out.println(\"Plan tasks\");\n    }\n    public void monitor() {\n        System.out.println(\"Monitor employees\");\n    }\n}\nclass DeliveryHead extends Manager {\n    public void plan() {\n        System.out.println(\"Plan delivery operations\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Manager obj = new DeliveryHead();\n        obj.performTasks(); // LINE 1\n        obj.monitor();\n        obj.plan(); // LINE 2\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because method performTasks() cannot be invoked on obj.",
+      "B": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which plan() method is being invoked.\nPerform tasks\nMonitor employees",
+      "C": "This code generates the output:\nPerform tasks\nMonitor employees\nPlan delivery operations",
+      "D": "This code generates the output:\nPerform tasks\nMonitor employees\nPlan tasks"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\nclass Bird {\n    private String species;\n    private String color;\n    public Bird(String species, String color) {\n        this.species = species;\n        this.color = color;\n    }\n    // CODE SEGMENT\n}\npublic class Test {\n    public static void main(String[] args) {\n        Bird b1 = new Bird(\"Parrot\", \"Green\");\n        Bird b2 = new Bird(\"Sparrow\", \"Brown\");\n        System.out.println(b1 + \"\\n\" + b2);\n    }\n}\n```",
+    "question": "Choose the correct option to fill in the CODE SEGMENT so that the output is:\nParrot: Green\nSparrow: Brown",
+    "options": {
+      "A": "public String toString (Object ob){\n    return ob.species + \": \"+ob.color;\n}",
+      "B": "public String toString() {\n    return species + \": \" + color;\n}",
+      "C": "No additional code is required in place of CODE SEGMENT.",
+      "D": "This output will not be printed because Java throws an error when an object is tried to be printed using System.out.println."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Eligibility {\n    void printEligibility();\n}\nclass Student {\n    private double cgpa;\n    //Constructor to initialize instance variable\n    public Student(double cgpa) { this.cgpa = cgpa; }\n    public Eligibility checkEligibility() {\n        if (cgpa > 6.0)\n            return new Eligible();\n        return new NotEligible();\n    }\n    private class Eligible implements Eligibility {\n        public void printEligibility() {\n            System.out.println(\"Eligible for Diploma\");\n        }\n    }\n    private class NotEligible implements Eligibility {\n        public void printEligibility() {\n            System.out.println(\"Not eligible for Diploma\");\n        }\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Student s1 = new Student(5.5);\n        Student s2 = new Student(7.5);\n        //LINE 1\n    }\n}\n```",
+    "question": "Identify the correct statement to fill in the blank at LINE 1, such that the output is: Eligible for Diploma",
+    "options": {
+      "A": "s2.checkEligibility().printEligibility();",
+      "B": "s2.printEligibility();",
+      "C": "s1.printEligibility();",
+      "D": "s1.checkEligibility().printEligibility();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below that checks whether two phones are the same. Method equals is overridden to compare two Phone objects as follows. If two phones have the same brand and imeiNumber, then they are the same.\n```java\nclass Phone {\n    private String brand;\n    private int imeiNumber;\n    // Constructor to initialize instance variables\n    public Phone(String brand, int imeiNumber) {\n        this.brand = brand;\n        this.imeiNumber = imeiNumber;\n    }\n    public boolean equals(Object obj) {\n        //CODE BLOCK\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Phone p1 = new Phone(\"Samsung\", 123456);\n        Phone p2 = new Phone(\"Samsung\", 123456);\n        if (p1.equals(p2))\n            System.out.println(\"p1 and p2 are same\");\n        else\n            System.out.println(\"p1 and p2 are different\");\n    }\n}\n```",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK so that the output is:\np1 and p2 are same",
+    "options": {
+      "A": "if (obj instanceof Phone) {\n    if (this.brand == obj.brand && this.imeiNumber == obj.imeiNumber)\n        return true;\n}\nreturn false;",
+      "B": "if(this.brand == obj.brand && this.imeiNumber == obj.imeiNumber)\n    return true;\nreturn false;",
+      "C": "if (obj instanceof Phone) {\n    Phone p = obj;\n    if (this.brand == p.brand && this.imeiNumber == p.imeiNumber)\n        return true;\n}\nreturn false;",
+      "D": "if (obj instanceof Phone) {\n    Phone p = (Phone) obj;\n    if (this.brand.equals(p.brand) && this.imeiNumber == p.imeiNumber)\n        return true;\n}\nreturn false;"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\nclass TravelAgency{\n    String name;\n    String[] destinations;\n    public TravelAgency (String n, String[] d){\n        name = n;\n        destinations = d;\n    }\n    public TravelAgency (TravelAgency t){\n        this.name = t.name;\n        this.destinations = t.destinations;\n    }\n}\npublic class Test{\n    public static void main(String[] args){\n        String[] d = {\"Ooty\", \"Bali\", \"Thailand\"};\n        TravelAgency t1 = new TravelAgency(\"RoamWorld\", d);\n        TravelAgency t2 = new TravelAgency(t1);\n        t2.name = \"ValleyTravel\";\n        t2.destinations[0] = \"Goa\";\n        System.out.println(t1.name + \",\" + t1.destinations[0]);\n        System.out.println(t2.name + \",\" + t2.destinations[0]);\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "ValleyTravel,Goa\nValleyTravel,Goa",
+      "B": "RoamWorld,Goa\nValleyTravel,Goa",
+      "C": "RoamWorld,Ooty\nValleyTravel,Goa",
+      "D": "RoamWorld,Ooty\nRoamWorld,Goa"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\nclass Screen {\n    void showContent() {\n        System.out.println(\"Display on screen\");\n    }\n}\nclass TV extends Screen {\n    void showContent() {\n        super.showContent();\n        System.out.println(\"Display on TV\");\n    }\n    void showContent (String s) {\n        System.out.println(\"Display on TV: \" + s);\n    }\n}\nclass Monitor extends TV {\n    void showContent() {\n        super.showContent();\n        System.out.println(\"Display on monitor\");\n    }\n    void showContent (String s) {\n        System.out.println(\"Display on monitor: \" + s);\n    }\n}\nclass Test {\n    public static void main(String[] args) {\n        TV obj = new Monitor(); // LINE 1\n        obj.showContent();\n        obj.showContent(\"News\"); // LINE 2\n    }\n}\n```",
+    "question": "What is the output of the program?",
+    "options": {
+      "A": "The program generates output:\nDisplay on screen\nDisplay on TV\nDisplay on monitor\nDisplay on monitor: News",
+      "B": "LINE 1 generates compilation error because a variable of type TV cannot refer to an object of type Monitor.",
+      "C": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which showContent() method is being invoked.\nDisplay on TV\nDisplay on monitor",
+      "D": "The program generates output:\nDisplay on screen\nDisplay on TV\nDisplay on monitor\nDisplay on TV: News"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Coolable {\n    public void startCooling();\n    public void stopCooling();\n}\ninterface TemperatureAdjustable {\n    public void adjustTemperature();\n    default void displayTemperature() {\n        System.out.println(\"Temperature is adjustable.\");\n    }\n}\nclass AirConditioner implements Coolable, TemperatureAdjustable {\n    public void startCooling() {\n        System.out.println(\"Cooling started.\");\n    }\n    public void stopCooling() {\n        System.out.println(\"Cooling stopped.\");\n    }\n}\n```",
+    "question": "Choose the correct option regarding the above code.",
+    "options": {
+      "A": "LINE 7 generates compilation error because the method displayTemperature is not abstract.",
+      "B": "LINE 11 generates compilation error because class AirConditioner cannot implement two interfaces.",
+      "C": "LINE 11 generates compilation error because class AirConditioner is not declared as abstract and does not implement adjustTemperature().",
+      "D": "LINE 2, LINE 3 & LINE 6 generate compilation errors because the methods startCooling(), stopCooling() and adjustTemperature () are not abstract."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Singable {\n    default void sing() {\n        System.out.println(\"Sings\");\n    }\n    public void perform();\n}\nabstract class Musician implements Singable {\n    public void sing() {\n        System.out.println(\"Sings song\");\n    }\n}\nclass LeadSinger extends Musician {\n    public void perform() {\n        System.out.println(\"Leads group\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Singable obj1 = new LeadSinger(); // LINE 1\n        Musician obj2 = new LeadSinger();\n        obj2.sing();\n        obj2.perform(); // LINE 2\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This code generates the output:\nSings song\nLeads group",
+      "B": "This code generates the output:\nSings\nLeads group",
+      "C": "LINE 1 generates compilation error because a variable of type Singable cannot refer to an object of type LeadSinger.",
+      "D": "LINE 2 generates compilation error because the method perform() cannot be invoked on obj2."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\nclass Player {\n    private String name;\n    private int jerseyNumber;\n    public Player (String nm) {\n        name = nm;\n    }\n    public Player(int number) {\n        jerseyNumber = number;\n    }\n    public Player (String nm, int number) {\n        name = nm;\n        jerseyNumber = number;\n    }\n    public String toString() {\n        return \"Name: \"+name+\", Jersey Number: \" + jerseyNumber;\n    }\n}\nclass Captain extends Player {\n    private String team;\n    // CODE BLOCK\n    public String toString() {\n        return super.toString() + \", Team: \" + team;\n    }\n}\n```",
+    "question": "Choose the correct option to fill in place of CODE BLOCK to instantiate instance variables of class Captain.",
+    "options": {
+      "A": "public Captain(String t) {\n    team = t;\n}",
+      "B": "public Captain(String nm, int number, String t) {\n    super(nm, number);\n    team = t;\n}",
+      "C": "public Captain(String nm, int number, String t) {\n    name = nm;\n    jerseyNumber = number;\n    team = t;\n}",
+      "D": "public Captain(String nm, int number, String t) {\n    team = t;\n    super(nm, number);\n}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Iterator {\n    public boolean has_next();\n    public Object get_next();\n}\nabstract class Printable {\n    public abstract void print();\n}\nclass BankAccount extends Printable {\n    private String accountName;\n    private double balance;\n    public BankAccount (String aN, double b) {\n        //initialize accountname and balance\n        this.accountName = aN;\n        this.balance = b;\n    }\n    public void print() {\n        System.out.println(accountName + \", \"+ balance);\n    }\n}\nclass BankAccountList {\n    private BankAccount[] list;\n    public BankAccountList (BankAccount[] accounts) {\n        this.list = accounts;\n    }\n    private class BankAccountIter implements Iterator {\n        private int indx = 0;\n        public boolean has_next() { return indx < list.length; }\n        public Object get_next() { return list[indx++]; }\n    }\n    public Iterator getIterator() {\n        return new BankAccountIter();\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        BankAccount[] accounts = {\n            new BankAccount(\"Priya\", 500),\n            new BankAccount(\"Ravi\", 1000),\n            new BankAccount(\"Suresh\", 1500)\n        };\n        BankAccountList bList = new BankAccountList(accounts);\n        Iterator iter = bList.getIterator();\n        while(iter.has_next()) {\n            //LINE 1\n        }\n    }\n}\n```",
+    "question": "Identify the appropriate statement to fill in the blank at LINE 1, such that the output is:\nPriya, 500\nRavi, 1000\nSuresh, 1500",
+    "options": {
+      "A": "((Printable)iter.get_next()).print();",
+      "B": "((BankAccount)iter.get_next()).print();",
+      "C": "((BankAccountList)iter.get_next()).print();",
+      "D": "iter.get_next().print();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\nclass Appliance {\n    private int code;\n    private static double basePower = 100;\n    public Appliance (int c) {\n        code = c;\n    }\n    public final double electricityFare() {\n        return basePower*2;\n    }\n}\nclass Cooler extends Appliance {\n    public Cooler (int x) {\n        super(x);\n    }\n    public final double electricityFare() { //LINE 1\n        return basePower*3; //LINE 2\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Appliance d1 = new Cooler(101); // LINE 3\n        Cooler c1 = new Appliance(105); // LINE 4\n        d1.electricityFare();\n        c1.electricityFare();\n    }\n}\n```",
+    "question": "Which of the following statements is FALSE?",
+    "options": {
+      "A": "LINE 1 generates compilation error because the method electricityFare() cannot be overridden.",
+      "B": "LINE 2 generates compilation error because instance variable basePower cannot be accessed in class Cooler.",
+      "C": "LINE 3 generates compilation error because a variable of type Appliance cannot refer to an object of type Cooler.",
+      "D": "LINE 4 generates compilation error because a variable of type Cooler cannot refer to an object of type Appliance."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "public class ActivationRecordExample {\n    public static void main(String[] args) {\n        int result = factorial(5);\n        System.out.println(\"Factorial of 5 is: \"+result);\n    }\n    public static int factorial (int n) {\n        if (n == 1) {\n            return 1;\n        } else {\n            return n * factorial(n - 1);\n        }\n    }\n}",
+    "question": "How many activation records are created on the stack during the execution of the code?",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "6",
+      "D": "7"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Match the following terms with their descriptions/properties.",
+    "options": {
+      "A": "A-VI, B-IV, C-I, D-II",
+      "B": "A-V, B-VII, C-I, D-IV",
+      "C": "A-V, B-IV, C-I, D-II",
+      "D": "A-VI, B-VII, C-III, D-II"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758467911/javaquiz1-sept2024-1_s3jmqn.png"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "public class CounterExample {\n    public static void main(String[] args) {\n        int counter = 5;\n        do {\n            counter--;\n        } while (counter > 0);\n        switch(counter) {\n            case 0: System.out.println(\"counter zero\");\n                    break;\n            case 1: System.out.println(\"counter one\");\n            case 2: System.out.println(\"counter two\");\n            case 3: System.out.println(\"counter three\");\n            case 4: System.out.println(\"counter four\");\n            case 5: System.out.println(\"counter five\");\n                    break;\n            default: System.out.println(\"No counter available\");\n        }\n    }\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "counter one\ncounter two\ncounter three\ncounter four\ncounter five\nNo counter available",
+      "B": "counter one",
+      "C": "counter zero",
+      "D": "No counter available"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "class Animal {\n    public void sound() {\n        System.out.println(\"Makes a sound\");\n    }\n}\nclass Dog extends Animal {\n    public void play() {\n        System.out.println(\"Plays fetch\");\n    }\n    public void guard() {\n        System.out.println(\"Guards the house\");\n    }\n}\nclass Cat extends Dog {\n    public void guard() {\n        System.out.println(\"Guards the garden\");\n    }\n}\npublic class AnimalTest {\n    public static void main(String [] args) {\n        Dog obj = new Cat();\n        obj.sound(); // LINE 1\n        obj.play();\n        obj.guard(); // LINE 2\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because method sound() cannot be invoked on obj.",
+      "B": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which guard() method is being invoked.\nMakes a sound\nGuards the house",
+      "C": "This code generates the output:\nMakes a sound\nPlays fetch\nGuards the garden",
+      "D": "This code generates the output:\nMakes a sound\nPlays fetch\nGuards the house"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "class Pizza {\n    public void orderPizza() {\n        PizzaMaker m = new PizzaMaker(this); // LINE 1\n        m.preparePizza();\n        System.out.println(\"Pizza served\");\n    }\n    public void alarm() {\n        System.out.println(\"Pizza collected\");\n    }\n}\nclass PizzaMaker {\n    Pizza piz;\n    public PizzaMaker (Pizza p) {\n        piz = p;\n    }\n    public void preparePizza() {\n        System.out.println(\"Pizza prepared\");\n        piz.alarm(); // LINE 2\n    }\n}\npublic class Test {\n    public static void main(String [] args) {\n        Pizza p1 = new Pizza();\n        p1.orderPizza();\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates compiler error at LINE 1\nReason: An object of PizzaMaker cannot be created inside method orderPizza because it uses an object of Pizza in its constructor.",
+      "B": "This program generates the output:\nPizza prepared\nfollowed by runtime error\nReason: A method inside class Pizza is invoking method preparePizza inside class PizzaMaker, whereas preparePizza is invoking another method in class Pizza.",
+      "C": "This program generates compiler error at LINE 2\nReason: A method inside class Pizza is invoking method preparePizza inside class PizzaMaker, whereas preparePizza is invoking another method in class Pizza.",
+      "D": "This program generates the output:\nPizza prepared\nPizza collected\nPizza served"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Method equals is overridden to compare two Car objects as follows.\nIf two cars have the same model and vin (Vehicle Identification Number), then they are said to be equal.\n\nclass Car {\n    private String model;\n    private String vin;\n    // Constructor to initialize instance variables\n    public boolean equals (Object obj) {\n        //CODE BLOCK\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Car c1 = new Car (\"Tesla Model S\", \"123456\");\n        Car c2 = new Car (\"Tesla Model S\", \"123456\");\n        if (c1.equals(c2))\n            System.out.println(\"c1 and c2 are same\");\n        else\n            System.out.println(\"c1 and c2 are different\");\n    }\n}",
+    "question": "Choose the correct option to fill in place of CODE BLOCK so that the output is: c1 and c2 are same",
+    "options": {
+      "A": "if (obj instanceof Car) {\n    if (this.model == obj.model && this.vin == obj.vin)\n        return true;\n}\nreturn false;",
+      "B": "if (obj instanceof Car) {\n    Car c = (Car) obj;\n    if (this.model == c.model && this.vin == c.vin)\n        return true;\n}\nreturn false;",
+      "C": "if(this.model == obj.model && this.vin == obj.vin)\n    return true;\nreturn false;",
+      "D": "if (obj instanceof Car) {\n    Car c = obj;\n    if (this.model == c.model && this.vin == c.vin)\n        return true;\n}\nreturn false;"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "class Publisher {\n    private String name;\n    public Publisher (String nm) {\n        name = nm;\n    }\n}\nclass Book extends Publisher {\n    private String[] authors;\n    // CODE BLOCK\n}\npublic class Test {\n    public static void main(String[] args) {\n        String[] a = {\"Author1\", \"Author2\"};\n        Book b1 = new Book (\"TechPublisher\", a);\n    }\n}",
+    "question": "Choose the correct option to fill in place of CODE BLOCK to instantiate instance variables of class Book",
+    "options": {
+      "A": "public Book (String [] auth) {\n    authors = auth;\n}",
+      "B": "public Book (String nm, String [] auth) {\n    this.authors = auth;\n    super (nm);\n}",
+      "C": "public Book (String nm, String[] auth) {\n    this.name = nm;\n    this.authors = auth;\n}",
+      "D": "public Book (String nm, String[] auth) {\n    super(nm);\n    this.authors = auth;\n}"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "class Course{\n    String courseName;\n    String[] topics;\n    public Course (String c, String[] t){\n        courseName = c;\n        topics = t;\n    }\n    public Course (Course c) {\n        this.courseName = c.courseName;\n        this.topics = c.topics;\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        String[] topics = {\"Inheritance\", \"Polymorphism\", \"Encapsulation\"};\n        Course course1 = new Course(\"Java\", topics);\n        Course course2 = new Course(course1);\n        course2.courseName = \"Advanced Java\";\n        course2.topics[1] = \"Abstract Classes\";\n        System.out.println(course1.courseName + \",\" + course1.topics[1]);\n        System.out.println(course2.courseName + \",\" + course2.topics[1]);\n    }\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "Java, Polymorphism\nAdvanced Java, Abstract classes",
+      "B": "Advanced Java, Polymorphism\nJava, Abstract classes",
+      "C": "Java, Abstract classes\nAdvanced Java, Abstract classes",
+      "D": "Java, Polymorphism\nAdvanced Java, Polymorphism"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "class Instrument {\n    public void play() {\n        System.out.println(\"Play instrument\");\n    }\n}\nclass Guitar extends Instrument {\n    public void play() {\n        super.play();\n        System.out.println(\"Play guitar\");\n    }\n    public void play (String song) {\n        System.out.println(\"Play guitar: \" + song);\n    }\n}\nclass ElectricGuitar extends Guitar {\n    public void play() {\n        super.play();\n        System.out.println(\"Play electric guitar\");\n    }\n    public void play (String song) {\n        System.out.println(\"Play electric guitar: \" + song);\n    }\n}\npublic class Test {\n    public static void main(String [] args) {\n        Guitar obj = new ElectricGuitar(); // LINE 1\n        obj.play();\n        obj.play(\"Rock Song\"); // LINE 2\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "The program generates output:\nPlay instrument\nPlay guitar\nPlay electric guitar\nPlay electric guitar: Rock Song",
+      "B": "LINE 1 generates compilation error because a variable of type Guitar cannot refer to an object of type ElectricGuitar.",
+      "C": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which play () method is being invoked.\nPlay guitar\nplay electric guitar\nPlay electric guitar: News",
+      "D": "The program generates output:\nPlay instrument\nPlay electric guitar\nPlay electric guitar: Rock Song"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "class Vehicle {\n    public void startEngine () {\n        System.out.println(\"Vehicle engine starts\");\n    }\n}\nclass Car extends Vehicle {\n    public void startEngine () {\n        System.out.println(\"Car engine starts\");\n    }\n    public void horn() {\n        System.out.println(\"Car horns\");\n    }\n}\npublic class Test {\n    public static void main(String [] args) {\n        Vehicle obj = new Car(); // LINE 1\n        obj.startEngine(); // LINE 2\n        obj.horn(); // LINE 3\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "The program generates output:\nCar engine starts\nCar horns",
+      "B": "LINE 1 generates compilation error because a variable of type Vehicle cannot refer to an object of type Car.",
+      "C": "This code generates the below output followed by runtime Error at LINE 2 because there is ambiguity in which startEngine() method is being invoked.\nCar horns",
+      "D": "LINE 3 generates compilation error because the method horn() is not defined in the Vehicle class."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "class Vehicle {\n    private int id;\n    private static double baseFare = 50;\n    public Vehicle(int id) {\n        this.id = id;\n    }\n    public final double calculateFare() {\n        return baseFare * 1.5;\n    }\n}\nclass Car extends Vehicle {\n    public Car(int id) {\n        super(id);\n    }\n    public final double calculateFare () { // LINE 1\n        return baseFare * 2.5; // LINE 2\n    }\n}\npublic class TransportTest {\n    public static void main(String [] args) {\n        Vehicle v1 = new Car (201); // LINE 3\n        Car c1 = new Vehicle (205); // LINE 4\n        System.out.println(v1.calculateFare());\n        System.out.println(c1.calculateFare());\n    }\n}",
+    "question": "Which of the following statements is FALSE?",
+    "options": {
+      "A": "LINE 1 generates compilation error because the method calculateFare() cannot be overridden.",
+      "B": "LINE 2 generates compilation error because instance variable baseFare cannot be accessed in class Car.",
+      "C": "LINE 3 generates compilation error because a variable of type Vehicle cannot refer to an object of type Car.",
+      "D": "LINE 4 generates compilation error because a variable of type Car cannot refer to an object of type Vehicle."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface Flyable {\n    default void fly() {\n        System.out.println(\"Flying\");\n    }\n    void takeoff();\n}\nabstract class Bird implements Flyable {\n    public void fly() {\n        System.out.println(\"Flying high\");\n    }\n}\nclass Eagle extends Bird {\n    public void takeoff() {\n        System.out.println(\"Taking off\");\n    }\n}\npublic class Test {\n    public static void main(String [] args) {\n        Bird obj = new Eagle(); // LINE 1\n        obj.fly();\n        obj.takeoff(); // LINE 2\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This code generates the output:\nFlying high\nTaking off",
+      "B": "This code generates the output:\nFlying\nTaking off",
+      "C": "LINE 1 generates compilation error because a variable of type Bird cannot refer to an object of type Eagle.",
+      "D": "LINE 2 generates compilation error because the method takeoff () cannot be invoked on obj."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface LoanEligibility {\n    void printLoanStatus();\n}\nclass BankCustomer {\n    private double salary;\n    public BankCustomer (double s) {\n        salary = s;\n    }\n    public LoanEligibility checkLoanEligibility() {\n        if (salary > 50000)\n            return new LoanApproved();\n        return new LoanRejected();\n    }\n    private class LoanApproved implements LoanEligibility {\n        public void printLoanStatus() {\n            System.out.println(\"Loan Approved\");\n        }\n    }\n    private class LoanRejected implements LoanEligibility {\n        public void printLoanStatus() {\n            System.out.println(\"Loan Rejected\");\n        }\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        BankCustomer bc1 = new BankCustomer(45000);\n        BankCustomer bc2 = new BankCustomer(60000);\n        // LINE 1\n    }\n}",
+    "question": "Identify the correct statement to fill in the blank at LINE 1, such that the output is: Loan Rejected",
+    "options": {
+      "A": "bc1.printLoanStatus();",
+      "B": "bc2.printLoanStatus();",
+      "C": "bc2.checkLoanEligibility().printLoanStatus();",
+      "D": "bc1.checkLoanEligibility().printLoanStatus();"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface Readable {\n    void read();\n}\ninterface Writable {\n    public default void write() {\n        System.out.println(\"Writing document\");\n    }\n}\nclass Document implements Readable, Writable {\n    public void read() {\n        System.out.println(\"Reading document\");\n    }\n    public void write() {\n        System.out.println(\"Writing in bold\");\n    }\n}\npublic class Test {\n    public static void main(String [] args) {\n        Readable r1 = new Document();\n        r1.read(); // LINE 1\n        r1.write(); // LINE 2\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nReading document\nWriting in bold",
+      "B": "This program generates the output:\nReading document\nWriting document",
+      "C": "LINE 1 generates compiler error because r1 of type Readable cannot invoke method read().",
+      "D": "LINE 2 generates compiler error because r1 of type Readable cannot invoke method write()."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface Iterator{\n    public boolean has_next();\n    public Object get_next();\n}\nabstract class Shape{\n    public abstract void draw();\n}\nclass ShapeList{\n    private final int limit = 3;\n    private Circle[] list = { new Circle(\"Red\"), new Circle(\"Green\"), new Circle(\"Blue\") };\n    private class Circle extends Shape{\n        private String color;\n        public Circle (String c) {\n            color = c;\n        }\n        public void draw() {\n            System.out.println(\"Drawing circle with color: \"+color);\n        }\n    }\n    private class ShapeIter implements Iterator{\n        private int indx = 0;\n        public boolean has_next() { \n            return indx < limit;\n        }\n        public Object get_next() { \n            if(has_next()) return list[indx++];\n            return null;\n        }\n    }\n    public Iterator getIterator() {\n        return new ShapeIter();\n    }\n}\npublic class IterTest{\n    public static void main(String [] args) {\n        ShapeList sList = new ShapeList();\n        Iterator iter = sList.getIterator();\n        while(iter.has_next()) {\n            //LINE 1\n        }\n    }\n}",
+    "question": "Identify the appropriate statement to fill in the blank at LINE 1, such that the output is:\nDrawing circle with color: Red\nDrawing circle with color: Green\nDrawing circle with color: Blue",
+    "options": {
+      "A": "((Shape)iter.get_next()).draw();",
+      "B": "((Circle)iter.get_next()).draw();",
+      "C": "((ShapeList)iter.get_next()).draw();",
+      "D": "iter.get_next().draw();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below. How many activation records are created while executing this code?\n\n```java\nclass ClassOne{\n    public void methodOne(){\n        //\n    }\n    public void methodTwo(){\n        //\n        methodOne();\n        //\n    }\n    public void methodThree(){\n        //\n        methodTwo();\n        //\n    }\n}\nclass ClassTwo{\n    public static void main(String[] args){\n        // ...\n        ClassOne c = new ClassOne();\n        c.methodThree();\n    }\n}\n```",
+    "options": {
+      "A": "4",
+      "B": "3",
+      "C": "5",
+      "D": "2"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the statements given below.\nStatement 1: Programmer is an object with methods writeCode() and debugCode()\nStatement 2: Senior Programmer is an object with methods writeCode(), debugCode(), and reviewCode()",
+    "question": "Identify the INCORRECT option regarding subtyping with respect to Programmer objects and Senior Programmer objects.",
+    "options": {
+      "A": "Senior Programmer is a valid subtype of Programmer because it has all methods of Programmer and additional functionality.",
+      "B": "Programmer is not a valid subtype of Senior Programmer because it lacks the method reviewCode()",
+      "C": "Subtyping allows SeniorProgrammer to be used wherever a Programmer is expected.",
+      "D": "Subtyping allows Programmer to be used wherever a SeniorProgrammer is expected."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\npublic class NumberEvaluation {\n    public static void main(String[] args) {\n        int number = 10;\n        do {\n            number--;\n        } while (number > 5);\n        switch (number) {\n            case 5:\n                System.out.println(\"Low\");\n                break;\n            case 6:\n                System.out.println(\"Medium\");\n                break;\n            default:\n                if (number > 6) {\n                    System.out.println(\"High\");\n                } else {\n                    System.out.println(\"Unknown\");\n                }\n                break;\n        }\n    }\n}\n```\n\nWhat will the output be?",
+    "options": {
+      "A": "Low",
+      "B": "Medium",
+      "C": "High",
+      "D": "Unknown"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below. Choose the correct option.\n\n```java\n// Assume System.out.println statements are correctly placed inside methods/constructors.\nclass Fruits {\n    public Fruits() {\n        System.out.println(\"Fruit created!\");\n    }\n    public void display() {\n        System.out.println(\"Fruits!\");\n    }\n}\nclass Grapes extends Fruits {\n    public Grapes() {\n        super();\n        System.out.println(\"Grape created!\");\n    }\n    public void display() {\n        System.out.println(\"Grapes!\");\n    }\n}\npublic class Example {\n    public static void main(String[] args) {\n        Fruits a = new Grapes();\n        a.display();\n    }\n}\n```",
+    "options": {
+      "A": "This code generates the output:\nFruit created!\nGrape created!\nFruits!",
+      "B": "This code generates the output:\nFruit created!\nGrape created!\nGrapes!",
+      "C": "This code generates the output:\nGrape created!\nGrapes!",
+      "D": "This code generates the output:\nGrape created!\nFruits!"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below. Choose the correct option.\n\n```java\n// Assume System.out.println statements are correctly placed inside methods.\ninterface Animal {\n    default void sound() {\n        System.out.println(\"Animal making sound\");\n    }\n    void eat();\n}\ninterface Mammal extends Animal {\n    default void sound() {\n        System.out.println(\"Mammal making sound\");\n    }\n}\nclass Dog implements Mammal {\n    public void eat() {\n        System.out.println(\"Dog eating\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Animal obj = new Dog(); // LINE 1\n        obj.sound(); // LINE 2\n        obj.eat();\n    }\n}\n```",
+    "options": {
+      "A": "This code generates the output:\nMammal making sound\nDog eating",
+      "B": "This code generates the output:\nAnimal making sound\nDog eating",
+      "C": "LINE 1 generates compilation error because a variable of type Animal cannot refer to an object of type Dog.",
+      "D": "LINE 2 generates runtime error because there is ambiguity in which sound() method is being invoked."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below that checks whether two players are the same.\nMethod equals is overridden to compare two Player objects as follows.\nIf two players have the same playerID and teamName, then they are said to be equal.\n\n```java\nclass Player {\n    private String playerID;\n    private String teamName;\n    // Constructor to initialize instance variables\n    public boolean equals (Object obj) {\n        //CODE BLOCK\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Player p1 = new Player(\"004\", \"Red\");\n        Player p2 = new Player(\"004\", \"Red\"); // Corrected from 'new Car'\n        if (p1.equals(p2))\n            System.out.println(\"p1 and p2 are same\");\n        else\n            System.out.println(\"p1 and p2 are different\");\n    }\n}\n```",
+    "question": "Choose the correct option to fill in place of CODE BLOCK so that the output is:\np1 and p2 are same",
+    "options": {
+      "A": "```java\nif (obj instanceof Player) {\n    if (this.playerID == obj.playerID && this.teamName == obj.teamName)\n        return true;\n    return false;\n}\n```",
+      "B": "```java\nif (obj instanceof Player) {\n    Player p = (Player) obj;\n    if (this.playerID == p.playerID && this.teamName == p.teamName)\n        return true;\n}\nreturn false;\n```",
+      "C": "```java\nif (this.playerID == obj.playerID && this.teamName == obj.teamName)\n    return true;\nreturn false;\n```",
+      "D": "```java\nif (obj instanceof Player) {\n    Player p = obj;\n    if (this.playerID == p.playerID && this.teamName == p.teamName)\n        return true;\n}\nreturn false;\n```"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below. Choose the correct option.\n\n```java\n// Assume System.out.println statements are correctly placed inside methods.\ninterface Vehicle {\n    default void drive() {\n        System.out.println(\"Vehicle is driving\");\n    }\n}\ninterface Fuel {\n    default void refuel() {\n        System.out.println(\"Vehicle is refueling\");\n    }\n}\nclass Car implements Vehicle, Fuel {\n    public void drive() {\n        System.out.println(\"Car is driving smoothly\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Vehicle v1 = new Car();\n        v1.drive();\n        v1.refuel(); // LINE 1\n    }\n}\n```",
+    "options": {
+      "A": "This program generates the output:\nCar is driving smoothly\nVehicle is refueling",
+      "B": "This program generates the output:\nVehicle is driving\nVehicle is refueling",
+      "C": "This program generates compiler error because neither is class Car declared as abstract nor does it override method refuel().",
+      "D": "LINE 1 generates compiler error because v1 of type Vehicle cannot invoke method refuel()"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the Java code given below. What will the output be?\n\n```java\nclass Book{\n    String name;\n    String[] authors;\n    public Book (String nm, String[] a) {\n        name = nm;\n        authors = a;\n    }\n    public Book (Book b) {\n        this.name = b.name;\n        this.authors = b.authors;\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        String[] authors= {\"Tagore\", \"Narayan\", \"Vikram\"};\n        Book b1 = new Book(\"Gita\", authors );\n        Book b2 = new Book(b1);\n        Book b3 = b1;\n        b2.name = \"Nirmala\";\n        b2.authors[0] = \"Laxmana\";\n        System.out.println(b1.name + \", \" + b1.authors[0]);\n        System.out.println(b2.name + \", \" + b2.authors[0]);\n        System.out.println(b3.name + \", \" + b3.authors[0]);\n    }\n}\n```",
+    "options": {
+      "A": "Gita, Laxmana\nNirmala, Laxmana\nGita, Laxmana",
+      "B": "Gita, Tagore\nNirmala, Laxmana\nGita, Tagore",
+      "C": "Nirmala, Tagore\nNirmala, Laxmana\nGita, Tagore",
+      "D": "Nirmala, Tagore\nNirmala, Laxmana\nNirmala, Tagore"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below. Choose the correct option.\n\n```java\n// Assume all method names (turnon/turnOn) are corrected to 'turnOn' for consistency.\nclass Appliance {\n    public void turnOn() {\n        System.out.println(\"Turn on appliance\");\n    }\n}\nclass Fan extends Appliance {\n    public void turnOn() {\n        System.out.println(\"Turn on fan\");\n    }\n    public void turnOn(int speed) {\n        System.out.println(\"Set fan speed to: \" + speed);\n    }\n}\nclass SmartFan extends Fan {\n    public void turnOn() {\n        super.turnOn();\n        System.out.println(\"Turn on smart fan with default settings\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Fan obj = new SmartFan(); // LINE 1\n        obj.turnOn(); // LINE 2\n        obj.turnOn(3); // LINE 3\n    }\n}\n```",
+    "options": {
+      "A": "The program generates output:\nTurn on fan\nTurn on smart fan with default settings\nSet fan speed to: 3",
+      "B": "LINE 1 generates compilation error because a variable of type SmartFan cannot refer to an object of type Appliance.",
+      "C": "LINE 2 generates run time error because there is ambiguity in which turnon() method is being invoked.",
+      "D": "The program generates output:\nTurn on fan\nSet fan speed to: 3"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below. Which of the following statements is FALSE?\n\n```java\nclass BankAccount {\n    private int accountId;\n    private static double interestRate = 3.5;\n    public BankAccount (int accId) {\n        accountId = accId;\n    }\n    public final double calculateInterest() {\n        return interestRate * 0.01;\n    }\n}\nclass SavingsAccount extends BankAccount {\n    public SavingsAccount (int accountId) {\n        super(accountId);\n    }\n    public final double calculateInterest() { // LINE 1\n        return (interestRate + 0.5) * 0.01; // LINE 2 (within method)\n    }\n}\npublic class BankTest {\n    public static void main(String[] args) {\n        SavingsAccount s1 = new BankAccount(505); // LINE 3\n        BankAccount b1 = new SavingsAccount(501); // LINE 4\n        System.out.println(b1.calculateInterest());\n        System.out.println(s1.calculateInterest());\n    }\n}\n```",
+    "options": {
+      "A": "LINE 1 generates compilation error because the method calculateInterest() cannot be overridden.",
+      "B": "LINE 2 generates compilation error because instance variable interestRate cannot be accessed in class SavingsAccount.",
+      "C": "LINE 3 generates compilation error because a variable of type SavingsAccount cannot refer to an object of type BankAccount.",
+      "D": "LINE 4 generates compilation error because a variable of type BankAccount cannot refer to an object of type SavingsAccount."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below. Identify the correct option to fill in place of CODE BLOCK, such that the output is:\nBird: Flying high\nSparrow taking off\n\n```java\ninterface Flyable {\n    default void fly() {\n        System.out.println(\"Flyable: Flying\");\n    }\n    void takeoff();\n}\n\n//CODE BLOCK\n\nclass Sparrow extends Bird {\n    public void takeoff() {\n        System.out.println(\"Sparrow taking off\");\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        Flyable obj = new Sparrow();\n        obj.fly();\n        obj.takeoff();\n    }\n}\n```",
+    "options": {
+      "A": "```java\nclass Bird implements Flyable{\n    public void fly() {\n        System.out.println(\"Bird: Flying high\");\n    }\n}\n```",
+      "B": "```java\nabstract class Bird implements Flyable{\n    public void fly() {\n        System.out.println(\"Bird: Flying high\");\n    }\n}\n```",
+      "C": "```java\ninterface Bird implements Flyable{\n    public void fly() {\n        System.out.println(\"Bird: Flying high\");\n    }\n}\n```",
+      "D": "```java\ninterface Bird extends Flyable{\n    public void fly() {\n        System.out.println(\"Bird: Flying high\");\n    }\n}\n```"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below. Choose the correct option.\n\n```java\ninterface OrderCallback {\n    void onOrderReady(String dish);\n}\nclass Waitstaff implements OrderCallback {\n    public void orderDish(String dish) {\n        Chef c = new Chef(this); // LINE 1\n        c.prepareDish(dish);\n    }\n    public void onOrderReady(String dish) {\n        System.out.println(\"Waitstaff: \" + dish + \" served!\");\n    }\n}\nclass Chef {\n    private OrderCallback callback;\n    public Chef(OrderCallback cb) {\n        callback = cb;\n    }\n    public void prepareDish(String dish) {\n        System.out.println(\"Chef: Preparing \" + dish + \"...\");\n        System.out.println(\"Chef: \" + dish + \" is ready.\");\n        callback.onOrderReady(dish); // LINE 2\n    }\n}\npublic class Restaurant {\n    public static void main(String[] args) {\n        Waitstaff s1 = new Waitstaff();\n        s1.orderDish(\"pasta\");\n    }\n}\n```",
+    "options": {
+      "A": "This program generates compiler error at LINE 1\nReason: An object of Chef cannot be created inside method Waitstaff because it uses an object of OrderCallback in its constructor.",
+      "B": "This program generates the output:\nChef: Preparing pasta...\nChef: pasta is ready.\nfollowed by runtime error\nReason: A method inside class Waitstaff is invoking method prepareDish inside class Chef, whereas chef is invoking another method in class Waitstaff.",
+      "C": "This program generates compiler error at LINE 2\nReason: A method inside class Waitstaff is invoking method prepareDish inside class Chef, whereas chef is invoking another method in class Waitstaff.",
+      "D": "This program generates the output:\nChef: Preparing pasta...\nChef: pasta is ready.\nWaitstaff: pasta served!"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the code given below. Identify the appropriate statement to fill in the blank at LINE 1, such that the output is:\nPlaying: Song A\nPlaying: Song B\nPlaying: Song C\n\n```java\ninterface PlaylistIterator {\n    public boolean hasNextSong();\n    public Object getNextSong();\n}\nabstract class Song {\n    public abstract void play();\n}\nclass SongPlaylist {\n    private final int count = 3;\n    private Track[] songs = { new Track(\"Song A\"), new Track(\"Song B\"), new Track(\"Song C\") };\n    private class Track extends Song {\n        private String title;\n        public Track(String title) {\n            this.title = title;\n        }\n        public void play() {\n            System.out.println(\"Playing: \" + title);\n        }\n    }\n    private class PlaylistIter implements PlaylistIterator {\n        private int currentIndex = 0;\n        // Constructor\n        public boolean hasNextSong() {\n            return currentIndex < count;\n        }\n        public Object getNextSong() {\n            return songs[currentIndex++];\n        }\n    }\n    public PlaylistIterator getIterator() {\n        return new PlaylistIter();\n    }\n}\npublic class PlaylistTest {\n    public static void main(String[] args) {\n        SongPlaylist playlist = new SongPlaylist();\n        PlaylistIterator iter = playlist.getIterator();\n        while (iter.hasNextSong()) { // Corrected from 'hasnext'\n            //LINE 1\n        }\n    }\n}\n```",
+    "options": {
+      "A": "((Song) iter.getNextSong()).play();",
+      "B": "((Track)iter.getNextSong()).play();",
+      "C": "((SongPlaylist)iter.getNextSong()).play();",
+      "D": "iter.getNextSong().play();"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java program below. Identify the correct option(s) to fill in the blank at LINE 1, such that the output is:\nWashing machine is turned on\nWash cycle starts\n\n```java\nclass Appliance {\n    public void turnon() {\n        System.out.println(\"Appliance is turned on\");\n    }\n}\nclass WashingMachine extends Appliance {\n    public void turnon() {\n        System.out.println(\"Washing machine is turned on\");\n    }\n    public void startWashCycle() {\n        System.out.println(\"Wash cycle starts\");\n    }\n}\npublic class TestAppliance {\n    public static void main(String[] args) {\n        Appliance obj = new WashingMachine();\n        obj.turnon(); // Corrected from turnOn\n        // LINE 1\n    }\n}\n```",
+    "options": {
+      "A": "obj.startWashCycle();",
+      "B": "WashingMachine.startWashCycle();",
+      "C": "if (obj instanceof WashingMachine) {\n    WashingMachine wm = (WashingMachine) obj;\n    wm.startWashCycle();\n}",
+      "D": "((WashingMachine)obj).startWashCycle();"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below. Identify the correct option(s) to fill in the blank at LINE 1, such that the output is: Not eligible for Insurance Claim\n\n```java\ninterface ClaimEligibility {\n    void printEligibility();\n}\nclass Insurance {\n    private int age;\n    public Insurance(int a) {\n        age = a;\n    }\n    public ClaimEligibility checkEligibility() {\n        if (age > 25)\n            return new EligibleForClaim();\n        return new NotEligibleForClaim();\n    }\n    private class EligibleForClaim implements ClaimEligibility {\n        public void printEligibility() {\n            System.out.println(\"Eligible for Insurance Claim\");\n        }\n    }\n    private class NotEligibleForClaim implements ClaimEligibility {\n        public void printEligibility() {\n            System.out.println(\"Not eligible for Insurance Claim\");\n        }\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Insurance ins1 = new Insurance(20);\n        // LINE 1\n    }\n}\n```",
+    "options": {
+      "A": "ClaimEligibility c1 = ins1.checkEligibility();\nc1.printEligibility();",
+      "B": "ins1.checkEligibility().printEligibility();",
+      "C": "ins1.printEligibility();",
+      "D": "ins1.EligibleForClaim.printEligibility();"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the following Java program.\n\n```java\nclass Example {\n    public void methodA (int x) {\n        if (x > 0) {\n            methodB(x - 1);\n        }\n    }\n    public void methodB(int y) {\n        if (y > 0) {\n            methodC(y - 1);\n        }\n    }\n    public void methodC(int z) {\n        if (z > 0) {\n            methodA(z - 1);\n        }\n    }\n}\n\nclass TestCallStack {\n    public static void main(String[] args) {\n        Example e = new Example();\n        e.methodA(3);\n    }\n}\n```",
+    "question": "When the call stack reaches its maximum depth, which method will be at the top of the call stack?",
+    "options": {
+      "A": "methodA()",
+      "B": "methodB()",
+      "C": "methodC()",
+      "D": "main()"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code below.\n\n```java\nclass Account {\n    public void login() {\n        System.out.println(\"Basic login\");\n    }\n}\nclass User extends Account {\n    public void login() {\n        super.login();\n        System.out.println(\"User login\");\n    }\n    public void login(String code) {\n        System.out.println(\"User login with code: \" + code);\n    }\n}\nclass Admin extends User {\n    public void login() {\n        super.login();\n        System.out.println(\"Admin login\");\n    }\n    public void login(String code) {\n        System.out.println(\"Admin login with code: \" + code);\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        User obj = new Admin(); // LINE 1\n        obj.login();\n        obj.login(\"9999\");\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "The output is:\nBasic login\nUser login\nAdmin login\nAdmin login with code: 9999",
+      "B": "LINE 1 generates compilation error because a variable of type User cannot refer to an object of type Admin.",
+      "C": "The output is:\nBasic login\nUser login\nUser login with code: 9999",
+      "D": "The output is:\nBasic login\nAdmin login\nAdmin login with code: 9999"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\nclass Animal {\n    private String name;\n    public Animal(String n) {\n        name = n;\n    }\n    public String toString() {\n        return \"Name: \" + name;\n    }\n}\nclass Dog extends Animal {\n    private String breed;\n    public Dog(String n, String b) {\n        //LINE 1\n        breed = b;\n    }\n    public String toString() {\n        return super.toString() + \", Breed: \" + breed;\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Animal dog = new Dog(\"Rocky\", \"Golden Retriever\");\n        System.out.println(dog);\n    }\n}\n```",
+    "question": "Choose the correct option to be filled in place of LINE 1 so that the output is:\nName: Rocky, Breed: Golden Retriever",
+    "options": {
+      "A": "this(n);",
+      "B": "super(n);",
+      "C": "Animal(n);",
+      "D": "super.Animal(n);"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below:\n\n```java\npublic class SwitchTest {\n    public static void show() {\n        for (int i = 0; i < 3; i++) {\n            switch (i) {\n                case 0:\n                    System.out.print(\"Zero\");\n                    break;\n                case 1:\n                    System.out.print(\"One \");\n                case 2:\n                    System.out.print(\"Two \");\n                    break;\n                default:\n                    System.out.print(\"Default \");\n            }\n        }\n        System.out.println();\n    }\n    public static void main(String[] args) {\n        show();\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "ZeroOne Two Two",
+      "B": "One Two",
+      "C": "Zero One Two Default",
+      "D": "Zero Default Default"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java program below.\n\n```java\nclass Account {\n    void viewBalance() {\n        System.out.println(\"Viewing balance\");\n    }\n}\nclass SavingsAccount extends Account {\n    void calculateInterest() {\n        System.out.println(\"Calculating interest for SavingsAccount\");\n    }\n}\nclass PremiumSavingsAccount extends SavingsAccount {\n    void offerPremiumBenefits() {\n        System.out.println(\"Offering premium benefits\");\n    }\n}\npublic class BankApp {\n    public static void main(String[] args) {\n        SavingsAccount acc = new PremiumSavingsAccount();\n        acc.viewBalance();\n        acc.calculateInterest();\n        // CODE BLOCK\n    }\n}\n```",
+    "question": "Choose the correct option to fill in place of the CODE BLOCK so that the output is:\nViewing balance\nCalculating interest for SavingsAccount\nOffering premium benefits",
+    "options": {
+      "A": "acc.offerPremiumBenefits();",
+      "B": "super.offerPremiumBenefits();",
+      "C": "((PremiumSavingsAccount) acc).offerPremiumBenefits();",
+      "D": "PremiumSavingsAccount.offerPremiumBenefits();"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\ninterface Printable {\n    void print();\n}\nclass Book implements Printable {\n    public void print() {\n        System.out.println(\"Printing Book\");\n    }\n}\nclass Magazine implements Printable {\n    public void print() {\n        System.out.println(\"Printing Magazine\");\n    }\n}\nclass PrintQueue {\n    private Object[] printables = {new Book(), new Magazine()};\n    public void startPrinting() {\n        for (int i = 0; i < printables.length; i++) {\n            // LINE 1\n        }\n    }\n}\npublic class PrintTest {\n    public static void main(String[] args) {\n        PrintQueue pq = new PrintQueue();\n        pq.startPrinting();\n    }\n}\n```",
+    "question": "Identify the appropriate option to fill in place of LINE 1 such that the output is:\nPrinting Book\nPrinting Magazine",
+    "options": {
+      "A": "printables[i].print();",
+      "B": "((Printable) printables[i]).print();",
+      "C": "((Book) printables[i]).print();",
+      "D": "((Magazine) printables[i]).print();"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\ninterface Shape {\n    public default void draw() {\n        System.out.println(\"Drawing a shape\");\n    }\n}\nclass Circle implements Shape { // LINE 1\n}\nclass Square implements Shape {\n    public void draw() {\n        System.out.println(\"Drawing a square\");\n    }\n}\npublic class DrawingTest {\n    public static void main(String[] args) {\n        Shape s1 = new Circle();\n        s1.draw(); // LINE 2\n        Shape s2 = new Square();\n        s2.draw();\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "The program generates compiler error at LINE 1 because class Circle is not abstract.",
+      "B": "This program generates output:\nDrawing a shape\nDrawing a square",
+      "C": "This program generates output:\nDrawing a shape",
+      "D": "The program generates a runtime error at LINE 2 because the method draw is not defined for class Circle."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the code given below.\n\n```java\ninterface Navigator {\n    boolean hasNext();\n    Object next();\n}\nabstract class Displayable {\n    public abstract void show();\n}\nclass BookShelf {\n    private class Book extends Displayable {\n        private String title;\n        public Book(String t) {\n            title = t;\n        }\n        public void show() {\n            System.out.print(title + \", \");\n        }\n    }\n    private Book[] books = {new Book(\"Swami\"), new Book(\"Pyre\"), new Book(\"Palace\")};\n    private class BookIterator implements Navigator {\n        private int index = 0;\n        public boolean hasNext() {\n            return index < books.length;\n        }\n        public Object next() {\n            if (this.hasNext()) {\n                return books[index++];\n            }\n            return null;\n        }\n    }\n    public Navigator getNavigator() {\n        return new BookIterator();\n    }\n}\npublic class LibraryTest {\n    public static void main(String[] args) {\n        BookShelf shelf = new BookShelf();\n        Navigator nav = shelf.getNavigator();\n        while (nav.hasNext()) {\n            // LINE 1\n        }\n    }\n}\n```",
+    "question": "Identify the appropriate statement to fill in the blank at LINE 1, such that the output is: Swami, Pyre, Palace,",
+    "options": {
+      "A": "((Displayable) nav.next()).show();",
+      "B": "((Book) shelf.next()).show();",
+      "C": "((BookShelf)nav.next()).show();",
+      "D": "nav.next().show();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n\n```java\nclass Book {\n    private String title;\n    private int price;\n    public Book(String t, int p) {\n        title = t;\n        price = p;\n    }\n    public Book(Book ot) {\n        title = ot.title;\n        price = ot.price;\n    }\n    public void setPrice(int p) {\n        price = p;\n    }\n    public String toString() {\n        return \"Title: \" + title + \", Price: \" + price;\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Book b1 = new Book(\"Java\", 500);\n        Book b2 = b1;\n        Book b3 = new Book(b1);\n        b2.setPrice(600);\n        System.out.println(\"b1: \" + b1);\n        System.out.println(\"b3: \" + b3);\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "b1: Title: Java, Price: 500\nb3: Title: Java, Price: 500",
+      "B": "b1: Title: Java, Price: 500\nb3: Title: Java, Price: 600",
+      "C": "b1: Title: Java, Price: 600\nb3: Title: Java, Price: 500",
+      "D": "b1: Title: Java, Price: 600\nb3: Title: Java, Price: 600"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the following Java code.\n\n```java\ninterface Printer {\n    default void print() {\n        System.out.println(\"Printing document\");\n    }\n}\ninterface Scanner {\n    default void print() {\n        System.out.println(\"Scanning document\");\n    }\n}\nclass MultiFunctionDevice implements Printer, Scanner { // LINE 1\n}\npublic class OfficeTest {\n    public static void main(String[] args) {\n        MultiFunctionDevice mfd = new MultiFunctionDevice();\n        mfd.print(); // LINE 2\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "The program generates output:\nPrinting document",
+      "B": "The program generates output:\nScanning document",
+      "C": "Compilation error at LINE 1 because MultiFunctionDevice inherits conflicting print() methods and must override print().",
+      "D": "Compilation error at LINE 2 because method print() cannot be resolved to a type."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\nclass Employee {\n    public void show() {\n        System.out.println(\"Employee::show()\");\n    }\n}\nclass Department {\n    public Manager getManager() {\n        return new Manager();\n    }\n    private class Manager extends Employee {\n        public void show() {\n            System.out.println(\"Manager::show()\");\n        }\n    }\n}\npublic class CompanyTest {\n    public static void main(String[] args) {\n        Department dept = new Department();\n        // LINE 1\n        managerObj.show();\n    }\n}\n```",
+    "question": "Choose the correct option for LINE 1 such that the program generates the following output.\nManager::show()",
+    "options": {
+      "A": "Employee managerObj = dept.getManager();",
+      "B": "Manager managerObj = dept.getManager();",
+      "C": "Department.Manager managerObj = dept.getManager();",
+      "D": "Department managerObj = dept.getManager();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Which of the following statements correctly describe interface and specification in software components?",
+    "options": {
+      "A": "An interface includes function signatures, arguments, and return types.",
+      "B": "Specification refers to the intended input-output behavior of the component.",
+      "C": "Interface helps describe how a component is implemented internally.",
+      "D": "A good specification language should balance abstraction and detail."
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Which among the following statements is/are true about activation records?",
+    "options": {
+      "A": "Multiple activation records of the same function can exist on the stack during recursion.",
+      "B": "Activation records created for functions are allocated in heap.",
+      "C": "The return value link in an activation record identifies the memory location for storing the function's return value.",
+      "D": "The lifetime of a variable extends beyond the removal of its activation record from the stack."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\nclass Author {\n    private String name;\n    public Author(String na) {\n        name = na;\n    }\n    public String toString(){\n        return \"authored by \" + name;\n    }\n}\nclass Book {\n    private String title;\n    private Author author;\n    public Book(String t, Author a){\n        title = t;\n        author = a;\n    }\n    /*** CODE SEGMENT HERE ***/\n}\npublic class Library {\n    public static void main(String[] args) {\n        Author auth = new Author(\"R.K. Narayan\");\n        Book book = new Book(\"Malgudi Days\", auth);\n        System.out.println(book);\n    }\n}\n```",
+    "question": "Choose the correct option(s) to fill in the CODE SEGMENT so that the output is:\nMalgudi Days authored by R.K. Narayan",
+    "options": {
+      "A": "public String toString(){\n    return title + \" \" + author.toString();\n}",
+      "B": "public String toString(Author au){\n    return title + \" \" + au.toString();\n}",
+      "C": "public String toString(){\n    return title + \" \" + author;\n}",
+      "D": "public String toString(){\n    return title + \" \" + author.name;\n}"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\nclass Doctor {\n    protected int patientsTreated;\n    protected static double consultationFee = 300;\n    public Doctor(int p) {\n        patientsTreated = p;\n    }\n    public final double calculateIncome() {\n        return patientsTreated * consultationFee;\n    }\n}\nclass SpecialistDoctor extends Doctor {\n    public SpecialistDoctor(int p) {\n        super(p);\n    }\n    public final double calculateIncome() { // LINE 1\n        return (patientsTreated * consultationFee) + 2000; // LINE 2\n    }\n}\npublic class Hospital {\n    public static void main(String[] args) {\n        Doctor d1 = new SpecialistDoctor(10); // LINE 3\n        SpecialistDoctor sd1 = new Doctor(12); // LINE 4\n        d1.calculateIncome();\n        sd1.calculateIncome();\n    }\n}\n```",
+    "question": "Which of the following statements are correct?",
+    "options": {
+      "A": "LINE 1 generates a compilation error because the method calculateIncome() in Doctor is declared final and cannot be overridden.",
+      "B": "LINE 2 generates a compilation error because the variables patientsTreated and consultationFee are not accessible in SpecialistDoctor.",
+      "C": "LINE 3 generates a compilation error because a variable of type Doctor cannot refer to an object of type SpecialistDoctor.",
+      "D": "LINE 4 generates a compilation error because a variable of type SpecialistDoctor cannot refer to an object of type Doctor."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  }
+]

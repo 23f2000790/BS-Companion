@@ -402,5 +402,135 @@
     "correctOption": "B",
     "questionType": "single",
     "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757699823/page6_img1_olfdyf.jpg"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "The total cost is Rs. 5000 and the quantity produced is 100 units.\nWhat is the average variable cost per unit if the fixed cost is Rs. 2,000?\nRound off to nearest whole number",
+    "options": null,
+    "correctOption": 30,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A small company has current assets of Rs. 200,000, inventories of Rs. 50,000, and current liabilities of Rs. 100,000.\nWhat is the quick ratio? Round off to 2 decimal places",
+    "options": null,
+    "correctOption": 1.5,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "A consumer consumes three units of a good. The marginal utility obtained from the first unit is 10, and the marginal utility decreases by 2 with each unit consumed.\nWhat is the total utility? Round off to nearest whole number",
+    "options": null,
+    "correctOption": 24,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A firm has Rs. 10,00,000/- as accounts receivable, while its annual sales turnover is Rs. 150,00,000/- \nCalculate the firm's debtor days (round the answer to 2 decimal places).",
+    "options": null,
+    "correctOption": {
+      "min": 24.3,
+      "max": 24.4
+    },
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Quantitative Analysis & Performance Metrics",
+    "context": null,
+    "question": "A firm with no fixed costs employs 1 person with at a salary of Rs 25,000 per month and buys material worth Rs 3 lakhs a year to produce and sell 100 units of a product during the year.\nAt what price should the product be sold so that the net profit margin as a percentage of sales is 25% ?\nRound off to the nearest integer value",
+    "options": null,
+    "correctOption": 8000,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "Which of the following is NOT a measure of liquidity?",
+    "options": {
+      "A": "Marginal utility",
+      "B": "Current ratio",
+      "C": "Quick ratio",
+      "D": "Cash ratio"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "The current ratio is calculated by dividing:",
+    "options": {
+      "A": "Current liabilities by current assets",
+      "B": "Total assets by total liabilities",
+      "C": "Current assets by current liabilities",
+      "D": "Total liabilities by total assets"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Business & Economic Principles",
+    "context": null,
+    "question": "An e-commerce website was having a dry spell despite running a price promotion.\nTo boost the sales, the website started showing small banners below every product with statements such as \"someone purchased this product 2 hours ago / 4 people are looking at this product\" and uses this to charge a premium, because it now seems as if the demand is very high.\nWhat pricing strategy is the website using?",
+    "options": {
+      "A": "Customer value pricing",
+      "B": "Contribution pricing",
+      "C": "Going rate pricing",
+      "D": "Psychological pricing"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757700113/bdmquiz2may2023-1_thyqdk.png",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "Calculate the market share of the top four firms. Round off to a whole number between 0 and 100",
+    "options": null,
+    "correctOption": 90,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "BDM",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Data Interpretation & Visualization",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757700113/bdmquiz2may2023-1_thyqdk.png",
+    "context": "Based on the above data, answer the given subquestions.",
+    "question": "Calculate the Herfindahl index. Round off to the nearest integer value between 0 and 10000",
+    "options": null,
+    "correctOption": 2500,
+    "questionType": "numerical"
   }
 ]

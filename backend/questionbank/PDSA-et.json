@@ -1,0 +1,2367 @@
+[
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Arrange the above functions in increasing order of asymptotic complexity.\n$f1(n)=log(n!)$\n$f2(n)=(log~n)^{2}$\n$f3(n)=log(log~n)$\n$f4(n)=2^{10}log~n$",
+    "options": {
+      "A": "f3(n),f4(n),f2(n),f1(n)",
+      "B": "f3(n),f2(n),f1(n),f4(n)",
+      "C": "f4(n),f3(n),f2(n),f1(n)",
+      "D": "f2(n),f3(n),f1(n),f4(n)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "What is the time complexity of the given function?\n```python\n1 def fun(n):\n2     (i,s)=(1,1)\n3     while s<=n:\n4         i=i+2\n5         s=s+i\n```",
+    "options": {
+      "A": "O(n)",
+      "B": "O(n~log~n)",
+      "C": "O(\\sqrt{n})",
+      "D": "O(log~n)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph:\nNote: When multiple eligible nodes are present, BFS picks the nodes which is alphabetically prior.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471330/PDSA-ET-Jan2023-1_vh7wes.png",
+    "question": "BFS traversal is started from node a on the given graph. The nodes are listed in the order they are visited. Which of the following is possible output?",
+    "options": {
+      "A": "abdegcf",
+      "B": "abcfged",
+      "C": "abdegfc",
+      "D": "abdcegf"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider the following statements:\n1. Cross edges cannot occur in the DFS of an undirected graph\n2. DFS of a directed graph always produces the same number of tree edges independent of the node selected as the source.\n3. If at least one topological order exists for a directed graph, then the DFS of that graph will not produce any back edges.\nWhich of the given statement(s) is/are true?",
+    "options": {
+      "A": "Statement 1 and Statement 2",
+      "B": "Statement 2 and Statement 3",
+      "C": "Statement 1 and Statement 3",
+      "D": "All three statements are true"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "A binary search tree in which every node has either 0 or 2 children is referred as strictly binary tree. Such a tree with 25 leaves",
+    "options": {
+      "A": "has exactly total 50 nodes",
+      "B": "has exactly total 48 nodes",
+      "C": "has exactly total 49 nodes",
+      "D": "has exactly total 51 nodes"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "image": null,
+    "question": "Given a flow network (G, s, t, c) and a flow f, how will you determine if f is maximum flow?",
+    "options": {
+      "A": "If there is any edge that is not saturated to full capacity, then we can conclude that f is not a maximum flow.",
+      "B": "If the residual graph does not have any augmenting paths then f is a maximum flow.",
+      "C": "If the value of the flow f is not the sum of the capacities of the edges coming out of the source then f is not a maximum flow.",
+      "D": "If the value of the flow f is not the sum of the capacities of the edges coming into the sink t then f is not a maximum flow."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following flow network with source s and sink t, with the numbers on the edges denoting maximum capacity across a particular edge.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471329/PDSA-ET-Jan2023-2_x4pko5.png",
+    "question": "Which of the following edges form a valid min cut in the given network?",
+    "options": {
+      "A": "Edges {ab, cd, dt, db}",
+      "B": "Edges {ab, db, dt}",
+      "C": "Edges {ca, db, dt}",
+      "D": "Edges {ab, cd, bc}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": "Consider a Node class for a linked list:\n```python\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n        self.flag = False\n```\nAssume that the flag for every node in the linked list is set to False before calling the function. In the options, `head` is the first node in the linked list.",
+    "question": "Which of the following functions can be used to detect a loop in a linked list?",
+    "options": {
+      "A": "```python\n1 def detect_loop (head):\n2     temp = head\n3     while (temp == None):\n4         if (temp.flag = True):\n5             return True\n6         temp.flag = True\n7         temp = temp.next\n8     return False\n```",
+      "B": "```python\n1 def detect_loop (head):\n2     temp = head\n3     while (temp != None):\n4         if (temp.flag == True):\n5             return False\n6         temp.flag = True\n7         temp = temp.next\n8     return True\n```",
+      "C": "```python\n1 def detect_loop (head):\n2     temp = head\n3     while (temp != None):\n4         if (temp.flag == True):\n5             return True\n6         temp.flag = True\n7         temp = temp.next\n8     return False\n```",
+      "D": "```python\n1 def detect_loop (head):\n2     temp = head\n3     while (temp != None):\n4         if (temp.flag = True):\n5             return True\n6         temp.flag = True\n7     return False\n```"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables. Linear probing operates by taking the original hash index and adding successive values linearly until a free slot is found.",
+    "question": "A hash table contains 6 buckets indexed from 0 to 5 and uses linear probing to resolve collisions. The key values are integers and the hash function used is key mod 6. The values 47, 63, 38, 16 are inserted into the table. What is the probability that the 0th index will be occupied by the next element to be inserted ?\nNote: Assume that the numbers/keys are selected uniformly at random over the set of positive integers.",
+    "options": {
+      "A": "0.5",
+      "B": "1",
+      "C": "0.83",
+      "D": "0.33",
+      "E": "Can't be decided because the probability depends upon the key's value"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "An undirected graph G has 34 vertices. The sum of degrees of all the vertices in G is a. The number of vertices of odd degree in G is b. Which of the values are possible for a and b ?",
+    "options": {
+      "A": "a=122, b=16",
+      "B": "a=121, b=16",
+      "C": "a=121, b=17",
+      "D": "a=122, b=17"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph:",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471329/PDSA-ET-Jan2023-3_xlizkk.png",
+    "question": "Which of the following is/are the correct sequence of edges added to the minimum spanning tree when prim's algorithm is applied on this graph with a as the source vertex?",
+    "options": {
+      "A": "(a,d), (a,c), (a,s), (d,e), (a,b), (s,f)",
+      "B": "(a,d), (b,e), (a,c), (s,c), (f,e), (d,e)",
+      "C": "(a,d), (b,e), (a,c), (s,c), (f,e), (a,b)",
+      "D": "(a,d), (a,c), (s,c), (d,e), (b,e), (f,e)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Consider a min-heap represented as the following list: [6, 11, 24, 19, 46, 40, 74, 32, 21]\nWhat are the leaf nodes of this min-heap after the following operations are done on it?\n1. Insertion of value 22\n2. deleteMin",
+    "options": {
+      "A": "32, 46, 22, 40, 74",
+      "B": "32, 21, 46, 40, 74",
+      "C": "32, 19, 46, 40, 74",
+      "D": "32, 46, 40, 74"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Consider the characters e, f, s, m, p have probability of occurrence $1/2, 1/4, 1/8, 1/16, 1/32$ respectively in a text.",
+    "question": "If Huffman encoding is used to compress the text, then what will be the average number of bits required per character in the compressed text ?",
+    "options": {
+      "A": "2.5",
+      "B": "3.5",
+      "C": "2.75",
+      "D": "1.75"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following strategy to solve a problem of input size n.\nDivide the problem into 4 sub-problems, each of size n/2. Number of steps required to combine these 4 solutions is n.\nWe apply this strategy recursively till the sub-problems can not be further divided into sub-problems.",
+    "question": "What will be the nearest upper bound for the above algorithm?",
+    "options": {
+      "A": "O(n^{2})",
+      "B": "O(n~log~n)",
+      "C": "O(n^{4})",
+      "D": "O(n)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "L is an unsorted list composed of random positive and negative numbers. We wish to compute the sum of the maximum sum sub list within the list.\nConsider the following incomplete dynamic programming code:\n```python\n1 def fun(L):\n2     ml = [float('-inf') for i in range(0,len(L))]\n3     # Assume ml[0] is initialized to L[0]\n4     for i in range(1,len(L)):\n5         # LINE - 1\n6 \n7     val = ml [0]\n8     for j in ml:\n9         if j>val:\n10            val=j\n11    print(val)\n```",
+    "question": "What should be written in LINE -1?",
+    "options": {
+      "A": "$ml[i]=max(ml[i-1]+L[i],L[i])$",
+      "B": "$ml[i]=max(ml[i-1],L[i])$",
+      "C": "$ml[i]=max(ml[i-1]+L[i-1],L[i])$",
+      "D": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Which of the following combination of input text T and pattern P will exhibit the worst case running time behavior for Boyer-Moore skipping heuristic?",
+    "options": {
+      "A": "T= baabaabaabaabaa and P= abb",
+      "B": "T= aaaaaaaaaaaaaaa and P= abb",
+      "C": "T= aaaaaaaaaaaaaaa and P= baa",
+      "D": "T= aaaaaaaaaaaaaaa and P= bbb"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Which of the following sorting algorithm will have the same time complexity irrespective of the sequence of elements they are sorting?",
+    "options": {
+      "A": "Selection Sort",
+      "B": "Merge Sort",
+      "C": "Quick Sort",
+      "D": "Insertion Sort"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following statement(s) is/are true?",
+    "options": {
+      "A": "The shortest path between two vertices u and v in a graph G always remains unaltered when all the edges of G are incremented by an equal amount.",
+      "B": "A graph where all edge weights are distinct can have more than one shortest path between two vertices",
+      "C": "If a graph has negative weighted cycle then Bellman Ford algorithm will be able to compute the shortest path length between every pair of vertices.",
+      "D": "The shortest path between two vertices u and v in a graph G always remains unaltered when all the edges of G are multiplied by a positive integer."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": "Assume that the height of the empty tree is 0.",
+    "question": "Which of the following is/are true about AVL Tree?",
+    "options": {
+      "A": "In AVL tree, the absolute difference between the number of nodes in the left subtree and the number of nodes in the right subtree of any node can't be more than 1.",
+      "B": "The complexity of searching in an AVL tree is $O(log~n)$.",
+      "C": "The complexity of both insertion and deletion in AVL tree is $O(n)$.",
+      "D": "If the height of an AVL tree is h, the maximum number of nodes will be $2^{h}-1$"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Consider the following statements and choose the correct ones.",
+    "options": {
+      "A": "The worst case running time of Quick select algorithm to find the kth largest number is $O(n)$",
+      "B": "The time taken to find median in an unsorted list using median of medians(MoM) algorithm is $O(n)$",
+      "C": "Quick select algorithm is a divide and conquer approach of solving problems",
+      "D": "The recurrence relation for finding median of medians(MoM) with a subarray size of 5 is $T(n)=T(n/5)+O(1)$"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph.\nNote: When multiple nodes are available with the same minimum distance, Dijkstra's algorithm can select any of them to visit next.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471329/PDSA-ET-Jan2023-4_uk5r9h.png",
+    "question": "In the given graph, if we try to find the shortest path from node a to all other nodes using Dijkstra's algorithm, in what order/(s) do the nodes get included in the visited set?",
+    "options": {
+      "A": "a f e d b c",
+      "B": "a f e b d c",
+      "C": "a f e c d b",
+      "D": "a f b e d c"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "There are 45 saree printing machines in a printing press company. Each machine produces 150 sarees and consumes electricity worth Rs 8000 every month. A machine can be overloaded to print more sarees but it should not be loaded more than 20% of its usual production capacity. Demand of saree for the ith month is represented with variables $d_i$, $1 <= i <= 12$. In order to balance demand and production to optimise profit, the company can switch off a machine for a month, but during that month a maintenance charge of Rs 100 is required for that machine. Similarly in order to switch on a machine which was switched off previously a startup cost of Rs 30 is required for that machine. The press might produce surplus sarees, the cost to store these surplus sarees is Rs 10 per saree.\nAssume we use the following notations for representing the variables required to model this into a LPP problem:\n1. $m_i$: machines running in month i\n2. $s_i$: sarees made in month i\n3. $o_i$: sarees made in overloaded state in month i\n4. $n_i$: machines started in the start of month i\n5. $x_i$: machines switched off in the start of month i\n6. $g_i$: number of surplus sarees at the end of month i\n7. $d_i$: demand of saree for month i",
+    "question": "Identify the correct constraints pertinent to the above problem exclusively from the below options.",
+    "options": {
+      "A": "s_{i}=150m_{i}+o_{i}",
+      "B": "m_{i}=n_{i-1}-x_{i}",
+      "C": "g_{i}=s_{i}-d_{i}+g_{i-1}",
+      "D": "o_{i}<=20m_{i}"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the given list L = [9, 14, 17, 37, 57, 62, 82, 92, 97].",
+    "question": "After applying the Quick-sort partition algorithm once, the list is modified to: [14, 9, 17, 37, 62, 57, 82, 97, 92]. The number of elements that could have been chosen as a pivot in the first round is __?",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "A king's summer house is being rewired. The house has 11 rooms. To avoid wires getting entangled and creating short circuits, the electricians have been asked to observe the following rules.\n- Room 1 must be rewired before rooms 3 and 4.\n- Room 2 must be rewired before room 6.\n- Room 3 must be rewired before room 5.\n- Room 5 must be rewired before rooms 8 and 9.\n- Room 6 must be rewired before room 7.\n- Room 7 must be rewired before room 5.\n- Room 8 must be rewired before room 10.\n- Room 9 must be rewired before room 11.\nIt takes one full day to rewire a room. There are enough electricians to rewire as many rooms as can be rewired in parallel, keeping in mind the constraints above.",
+    "question": "What is the minimum number of days required to complete the job?",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": "Consider the following tree traversal orders for a binary tree T.\nIn-order = 86, 47, 95, 32, 63, 16, 53, 9, 64\nPost-order = 86, 95, 32, 47, 53, 64, 9, 16, 63",
+    "question": "What would be the sum of all the leaf node values of T?",
+    "options": null,
+    "correctOption": 298,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Given a set of events (E1 to E11) with their start and end time. A journalist has to attend as many events as possible. If any event finishes at time T, then the journalist can attend other events starting at time T or afterwards.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758470992/PDSA-ET-Jan2023-5_naoegb.png",
+    "question": "What is the maximum number of events that journalist can attend?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Consider the following two strings:\n$x=$ abbababa\n$y=$ babaabaab",
+    "question": "The length of the longest common subsequence for x and y is _.",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Consider the Rabin-Karp algorithm using modulo arithmetic to match the pattern in base 10.",
+    "question": "Taking modulo $q=11$, how many false positives matches does the Rabin-Karp matcher encounter while searching pattern 26 in the text 3141592653589793 ?",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471985/PDSA-ET-May2023-8_btuizi.png",
+    "context": null,
+    "question": "Which of the following is true?",
+    "options": {
+      "A": "g(n) is O(f(n)) and f(n) is O(g(n))",
+      "B": "f(n) is O(g(n)) but g(n) is not O(f(n))",
+      "C": "g(n) is O(f(n)) but f(n) is not O(g(n))",
+      "D": "g(n) is not O(f(n)) and f(n) is not O(g(n))"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471980/PDSA-ET-May2023-1_upnp3g.png",
+    "question": "Suppose you want to implement Push and Pop operations of Stack in O(1) time using given linked list. Which of the following option is correct to achieve both operation in O(1) time?",
+    "options": {
+      "A": "Both operation Push and Pop must be implemented from head side.",
+      "B": "Both operation Push and pop must be implemented from tail side.",
+      "C": "Both operation Push and Pop can be implemented from any one side.",
+      "D": "Can't achieve O(1) time for both operation from any one side"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "There are 11 courses offered in a program. Few courses require other courses to be completed as a prerequisite. The below table gives the prerequisite of all courses. All prerequisites of a course must be completed before opting for that course in any semester. There is no constraint on how many courses a student can take in a semester.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471980/PDSA-ET-May2023-2_snf8cj.png",
+    "question": "Select the order of courses that can be opted by a student if he/she wishes to complete all 11 courses in minimum number of semester. Parenthesis represents all courses opted in the same semester.",
+    "options": {
+      "A": "(8,10)->(9,1,2)->(11,3)->(4)->(7,5,6)",
+      "B": "(8)->(1,2)->(3)->(10,4)->(9,7,11)->(5,6)",
+      "C": "(8,10)->(1,2,11)->(3)->(4)->(9,7)->(5,6)",
+      "D": "(8)->(10,1,2)->(11)->(3)->(4)->(9,7)->(5,6)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following directed weighted graph on which the Dijkstra algorithm is run with vertex A as the source vertex.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471979/PDSA-ET-May2023-3_gp1k5v.png",
+    "question": "Which of the following is 5th visited marked vertex by Dijkstra's algorithm? Consider that A is 1st visited marked vertex by Dijkstra's algorithm.",
+    "options": {
+      "A": "B",
+      "B": "C",
+      "C": "D",
+      "D": "E",
+      "E": "F"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "The pre-order traversal of a binary search tree with integer values produces the following sequence: 15, 10, 5, 7, 12, 14, 25, 18, 20.",
+    "question": "What is the value of the right child of the root of the tree?",
+    "options": {
+      "A": "10",
+      "B": "14",
+      "C": "18",
+      "D": "20",
+      "E": "25"
+    },
+    "correctOption": "E",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "In a list L, two elements L[i] and L[j] form a inversion if L[i]>L[j] and i < j.",
+    "question": "The number of inversions in the list $L=[1,5,4,2,6,3] is.",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following recurrence relation for an algorithm:-\nT(n)=4T(n/2)+O(n)\nBase Case: T(1)=1",
+    "question": "The complexity of this algorithm is_.",
+    "options": {
+      "A": "O(n)",
+      "B": "O(log^{2}n)",
+      "C": "O(n~log~n)",
+      "D": "O(n^{2})"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Let M_{1},M_{2},M_{3},M_{4} be 4 matrices of dimensions 10 X 100,100 X 20,20 X 5,5 X 80 respectively.",
+    "question": "Which of the following order gives minimum number of scalar multiplications to multiply M_{1},M_{2},M_{3},M_{4} using basic matrix multiplication?",
+    "options": {
+      "A": "M_{1}(M_{2}(M_{3}M_{4}))",
+      "B": "M_{1}((M_{2}M_{3})M_{4})",
+      "C": "(M_{1}(M_{2}M_{3}))M_{4}",
+      "D": "((M_{1}M_{2})M_{3})M_{4}",
+      "E": "(M_{1}M_{2})(M_{3}M_{4})"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "Consider that root is at depth 1 and ignore terminate node $ for depth.",
+    "question": "What can be the maximum depth of the Trie data structure with n strings and m as the maximum string length among all strings?",
+    "options": {
+      "A": "log n",
+      "B": "log m",
+      "C": "n",
+      "D": "m"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Which of the following option represents the fail function (or prefix function) for pattern 'onion' in the Knuth-Morris-Pratt (KMP) algorithm?",
+    "options": {
+      "A": "[0,0,0,1,2]",
+      "B": "[0,0,0,0,1]",
+      "C": "[0,0,0,1,1]",
+      "D": "[0,0,1,1,2]"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Which of the following sorting algorithms will have the same time complexity irrespective of the sequence of elements in the input?",
+    "options": {
+      "A": "Selection Sort",
+      "B": "Merge Sort",
+      "C": "Quick Sort",
+      "D": "Insertion Sort"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "def insertionsort (L):\n\tn=len(L)\n\tif n<1:\n\t\treturn(L)\n\tfor i in range(n):\n\t\tj=i\n\t\twhile (j>0 and L[j]<L[j-1]):\n\t\t\t(L[j], L[j-1])=(L[j-1] , L[j])\n\t\t\tj=j-1\n\treturn(L)",
+    "image": null,
+    "question": "Which of the following statement(s) is/are correct with regard to the given insertion sort?",
+    "options": {
+      "A": "It is stable and it does not sort in-place",
+      "B": "It is unstable and it sorts in-place",
+      "C": "It is stable and it sorts in-place",
+      "D": "After m iterations of the for-loop, the first m elements in the list are in sorted order"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "A hash table of size 10 uses open addressing with hash function $h(k)=k$ mod 10, and linear probing. After inserting 6 values into an empty hash table, the table is as shown below.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471979/PDSA-ET-May2023-4_ss7x8d.png",
+    "question": "Which one of the following option(s) gives a possible order in which the key values could have been inserted in the table?",
+    "options": {
+      "A": "23, 36, 72, 12, 54, 83",
+      "B": "36, 72, 23, 54, 12, 83",
+      "C": "36, 23, 72, 12, 83, 54",
+      "D": "36, 23, 72, 12, 54, 83"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "Consider the max-heap [40, 20, 30, 15, 18, 25, 14, 10, 12, 11, 13] built by repeatedly inserting values into an empty heap.",
+    "question": "Which of the following could not have been the last element inserted into this heap?",
+    "options": {
+      "A": "40",
+      "B": "18",
+      "C": "14",
+      "D": "20",
+      "E": "15"
+    },
+    "correctOption": ["C", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471978/PDSA-ET-May2023-5_ukua4k.png",
+    "question": "Select the most appropriate data structure for the following applications.\n\nApplication\nData Structure\n\n1. To implement ticket reservation waiting list.\na. Array\n\n2. Matrix operations\nb. Graph\n\n3. Evaluating an expression\nc. Stack\n\n4. Google map's algorithm to find a route between locations A and B\nd. Queue",
+    "options": {
+      "A": "1-c, 2-a, 3-d, 4-b",
+      "B": "1-d, 2-b, 3-c, 4-a",
+      "C": "1-d, 2-a, 3-b, 4-c",
+      "D": "1-d, 2-a, 3-c, 4-b"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Let a be an NP-Complete problem, ẞ and y be two other problems. ẞ is polynomial time reducible to a and a is polynomial time reducible to y.",
+    "question": "On the basis of the above information only, what can be inferred?",
+    "options": {
+      "A": "y belongs to NP hard class",
+      "B": "y belongs to NP complete class",
+      "C": "ẞ belongs to NP hard class",
+      "D": "ẞ belongs to NP complete class"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider a undirected connected graph G with 27 edges. What is the minimum number of vertices in graph G?",
+    "options": null,
+    "correctOption": 8,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider a complete undirected graph with vertex set (0, 1, 2, 3, 4). Every entry w[i][j] where i≠j in the matrix w below is the weight of the edge from vertex i to vertex j.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471977/PDSA-ET-May2023-6_yvrvpw.png",
+    "question": "What is the minimum possible weight of a spanning tree in this graph?",
+    "options": null,
+    "correctOption": 8,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "In a binary tree T, if the number of nodes with two child nodes are 16, then the number of leaf nodes are",
+    "options": null,
+    "correctOption": 17,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "Assume that the height of a single node AVL tree is 1.",
+    "question": "If the number of nodes in an AVL tree is 72, what will be the minimum height of the AVL tree?",
+    "options": null,
+    "correctOption": 7,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Let you have a single positive integer x, which is initially equal to 1. You are given a positive integer n where $n>x$. In each step, you can either increment x by 1 or double x. Your goal is to produce a target value n in minimum number of steps. For example, you can produce the integer n=10 in four steps as follows: 1(+1)->2(*2)->4(+1)->5(*2)->10",
+    "question": "What is the minimum number of steps required if $n=1025$?",
+    "options": null,
+    "correctOption": 11,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "For an activity X, X_{s} is the starting time and X_{e} is the ending time. The following are the starting time and ending time of activities A, B, C, D, E, F, G and H given in chronological order.\nA_{s}, B_{s} C_{s} A_{e}, D_{s}, E_{s}, C_{e} B_{e}, F_{s} D_{e} G_{s} E_{e}, H_{s}, F_{e}, G_{e} H_{e}",
+    "question": "What is the minimum number of rooms required to schedule the activities in a set of rooms such that there are no conflicts?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Let s1 = pqrqspq and s2 = qsrpqp be two sequences.",
+    "question": "The longest common subsequence of s1 and s2 is of length",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Consider the Rabin-Karp algorithm using modulo arithmetic to match the pattern in base 10.",
+    "question": "Taking modulo q=11, how many false positives matches does the Rabin-Karp matcher encounter while searching pattern 36 in the text 3147591653589363 ?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the network given above with source s and sink t, with the numbers on the edges denoting maximum capacity across a particular edge.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758471907/PDSA-ET-May2023-7_lw3irf.png",
+    "question": "The value of the maximum flow in the given network is",
+    "options": null,
+    "correctOption": 23,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Let G be a simple graph.",
+    "question": "The size of the minimum vertex cover of G is 12 and the size of the maximum independent set of G is 16. What are the number of vertices in graph G?",
+    "options": null,
+    "correctOption": 28,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following code.\n1 def fun (n):\n2 \n3     total = 0\n4 \n5     for i in range(n):\n6 \n7         for j in range(n):\n8 \n9             for k in range(j, n):\n10                 total = total + 1\n11 \n12     return total",
+    "question": "What is the time complexity of the function fun in terms of n?",
+    "options": {
+      "A": "O(n^2)",
+      "B": "O(n^2 log n)",
+      "C": "O(n log n)",
+      "D": "O(n^3)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "If the input list of n elements is already sorted in ascending order, what is the time complexity of applying the Selection Sort algorithm to sort the list in ascending order?",
+    "options": {
+      "A": "O(n^2)",
+      "B": "O(n log n)",
+      "C": "O(log n)",
+      "D": "O(n)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Insertion sort algorithm:\n1 def insertionsort(L):\n2     n = len(L)\n3     if n < 1:\n4         return(L)\n5     for i in range(n):\n6         j = i\n7         while (j > 0 and L[j] < L[j-1]):\n8             (L[j], L[j-1]) = (L[j-1], L[j]) # swap operation\n9             j = j - 1\n10     return(L)",
+    "question": "To sort the input list L = [6, 3, 4, 1, 2, 5], How many swap operation will be performed by the given algorithm?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "9",
+      "D": "10"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider that Quick sort is applied to a list of n distinct elements that is already sorted in the required sorting order.",
+    "question": "What will be the Worst case time complexity of Quick sort if the pivot is taken to be\nI) First element II) Last element\nChoose the correct option corresponding to the correct pair of complexities for both pivots.",
+    "options": {
+      "A": "I: O(n^2) and II: O(n^2)",
+      "B": "I: O(n^2) and II: O(n)",
+      "C": "I: O(n log n) and II: O(n log n)",
+      "D": "I: O(n log n) and II: O(n^2)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": "Consider the following code.\n1 L = ['A', 'B', 'C', 'D', 'E']\n2 for i in range(5):\n3     S.Push(L[i])\n4 for i in range(4):\n5     v = S.Pop()\n6     Q.Enqueue(v)\n7 for i in range(2):\n8     v = Q.Dequeue()\n9     S.Push(v)\n10 \n11 x = S.Pop()\n12 print(x)\nAssume S is a stack and Q is a queue. Push and Pop operations are usual stack operations, Enqueue and Dequeue are usual queue operations.",
+    "question": "What would be the output of the given code?",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables.\nLinear probing operates by taking the original hash index and adding successive values linearly until a free slot is found.\nA hash table of size 10 (indexed from 0 to 9) initialized with None, uses linear probing to resolve collisions.\nThe key values are integers and the hash function used is key mod 10. Values 23, 36, 72, 12, 54, and 83 are stored in the given order in the hash table.",
+    "question": "What is the sequence of elements (from index 0 to 9) in the hash table?",
+    "options": {
+      "A": "None, None, 72, 23, 12, 54, 36, 83, None, None",
+      "B": "None, None, 12, 83, 72, 54, 36, 23, None, None",
+      "C": "None, None, 72, 12, 23, 54, 36, 83, None, None",
+      "D": "None, None, 72, 23, 54, 12, 36, 83, None, None"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473228/PDSA-ET-Sept2023-1_lr6vap.png",
+    "context": "Consider the below Graph.",
+    "question": "If we run Depth First Search(DFS) on the given graph starting from vertex 1, which of the following is the possible order of visiting the nodes?",
+    "options": {
+      "A": "1, 4, 3, 6, 5, 2",
+      "B": "1, 4, 5, 6, 3, 2",
+      "C": "1, 4, 6, 5, 3, 2",
+      "D": "1, 4, 6, 3, 5, 2"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473227/PDSA-ET-Sept2023-2_zpis0j.png",
+    "context": "Consider the following strategy to solve the single source shortest path problem with positive integer edge weights from a source vertex s:\nReplace each edge in the graph with weight w by w edges of weight 1 connected by new w-1 intermediate nodes.\nRun BFS(s) on the modified graph to find the shortest path to each of the original vertices in the graph.",
+    "question": "Which of the following statements is true?",
+    "options": {
+      "A": "This strategy will not solve the problem correctly.",
+      "B": "This strategy will only work if the graph is acyclic.",
+      "C": "This strategy will solve the problem correctly and is as efficient as Dijkstra's algorithm.",
+      "D": "This strategy will solve the problem correctly, but is not as efficient as Dijkstra's algorithm."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473228/PDSA-ET-Sept2023-3_amhjkf.png",
+    "context": "Consider the following graph",
+    "question": "Which of the following is the correct sequence of edges added to the minimum spanning tree when prim's algorithm is applied on this graph with 1 as the source vertex?",
+    "options": {
+      "A": "(1, 2), (3, 6), (2, 3), (2, 5), (3, 4)",
+      "B": "(1, 2), (2, 3), (3, 6), (2, 5), (3, 4)",
+      "C": "(1, 2), (3, 6), (2, 3), (3, 4), (2, 5)",
+      "D": "(1, 2), (2, 3), (3, 6), (3, 4), (2, 5)"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": "Let's consider a max heap [30, 20, 25, 5, 15, 23, 10, 3, 2].\nNote:- Each operation generates the max heap after inserting or deleting an element, and the next operation is performed on the updated max heap by the previous operation.\n1. delete_max()\n2. delete_max()\n3. insert(40)",
+    "question": "What would be the final max heap after performing the following operations on a given max heap?",
+    "options": {
+      "A": "[40, 20, 5, 15, 23, 10, 3, 2]",
+      "B": "[40, 23, 10, 15, 20, 2, 3, 5]",
+      "C": "[40, 23, 20, 15, 10, 2, 3, 5]",
+      "D": "[40, 23, 10, 20, 15, 2, 3, 5]"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following implementation for Median of Medians(MoM).\n1 def MOM(L): # Median of medians\n2 \n3     if len(L) <= 5:\n4 \n5         L.sort()\n6 \n7         return(L[len(L)//2])\n8 \n9     #Construct list of block medians\n10     M = []\n11     for i in range(0, len(L), 5):\n12 \n13         X = L[i:i+5]\n14 \n15         X.sort()\n16 \n17         M.append(X[len(X)//2])\n18 \n19     return(MOM(M))\nLet L = [8, 19, 5, 14, 1, 3, 6, 1, 10, 7, 16, 6, 15, 22, 7, 21, 5, 16, 32, 2].",
+    "question": "What is the returned value of MoM(L) using the list L?",
+    "options": {
+      "A": "19",
+      "B": "15",
+      "C": "16",
+      "D": "21"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "In a list L, two elements L[i] and L[j] form a significant inversion if L[i] > 2 * L[j] and i < j.",
+    "question": "The total number of significant inversions for L = [1, 11, 6, 3, 5, 2] is ____.",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "6",
+      "D": "7"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithm Design Paradigms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473227/PDSA-ET-Sept2023-4_rq8ynr.png",
+    "context": "A subsequence is a sequence that can be derived from the given sequence by deleting zero or more elements without changing the order of the remaining elements.",
+    "question": "Consider that we start at the bottom right (DP[n-1][m-1]) and fill DP array row by row or column by column and want to get the length of the longest common subsequence for string S1 and S2 at (DP[0][0]).\n\nWhich of the following inductive structures is correct to fill array DP?",
+    "options": {
+      "A": "DP[i,j] = { DP[i+1,j+1], if a_i = b_j\n          { 1 + min(DP[i+1,j], DP[i,j+1]), if a_i != b_j ",
+      "B": "DP[i,j] = { DP[i+1,j+1], if a_i = b_j\n          {1 + max(DP[i+1,j], DP[i,j+1]), if a_i != b_j ",
+      "C": "DP[i,j] = { 1 + DP[i+1,j+1], if a_i = b_j\n          {1 + min(DP[i+1,j], DP[i,j+1]), if a_i != b_j ",
+      "D": "DP[i,j] = { 1 + DP[i+1,j+1], if a_i = b_j\n          {max(DP[i+1,j], DP[i,j+1]), if a_i != b_j "
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithm Design Paradigms",
+    "image": null,
+    "context": "1 def kmp_fail(p):\n2     m = len(p)\n3     fail = [0 for i in range(m)]\n4     j, k = 1, 0\n5     while j < m:\n6         if p[j] == p[k]:\n7             fail[j] = k + 1\n8             j, k = j + 1, k + 1\n9         elif k > 0:\n10            k = fail[k-1]\n11        else:\n12            j = j + 1\n13    return(fail)",
+    "question": "Which of the following options represents the fail function (or prefix function) for pattern p = aabaabaab returned by the given kmp_fail(p) function?",
+    "options": {
+      "A": "[0, 1, 2, 1, 2, 3, 4, 5, 6]",
+      "B": "[0, 1, 0, 1, 2, 3, 4, 5, 6]",
+      "C": "[0, 1, 1, 1, 1, 2, 3, 4, 5]",
+      "D": "[0, 1, 2, 1, 1, 2, 3, 4, 5]"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Which of the following combination of input text T and pattern P will exhibit the worst case running time behavior for Boyer-Moore skipping heuristic?",
+    "options": {
+      "A": "T = baabaabaabaabaa and P = abb",
+      "B": "T = aaaaaaaaaaaaaaa and P = abb",
+      "C": "T = aaaaaaaaaaaaaaa and P = baa",
+      "D": "T = aaaaaaaaaaaaaaa and P = bbb"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "First kind of cake requires 200g of flour and 25g of fat, and second kind of cake requires 100g of flour and 50g of fat.\nFormulate this problem as a linear programming problem to find the maximum number of cakes that can be made from 5 kg of flour and 1 kg of fat, assuming that there is no shortage of the other ingredients used in making the cakes.\nThe above problem is to be formulated as a linear programming problem.\nLet x and y be the number of cake of kind first and second, respectively.\nObjective function to maximize the number of cakes z = x + y",
+    "question": "Which of the following is not a valid constraint for the given problem?",
+    "options": {
+      "A": "2x + y <= 50",
+      "B": "x + 2y <= 50",
+      "C": "x >= 0, y >= 0",
+      "D": "x + 2y <= 40"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "context": "In a school, there are n teachers and 2n subjects. Each subject taught by only one teacher and each teacher is required to teach exactly 2 subjects. However, teachers have their preferences for subjects they would like to teach, and the school wants to maximize overall satisfaction by assigning subjects to teachers based on their preferences. The preferences of teachers are modeled as a directed graph G, where there exists an edge from a teacher node T_i to a subject node S_j in G if teacher T_i prefers teaching subject S_j.",
+    "question": "How can this problem be modelled as a network flow problem?",
+    "options": {
+      "A": "It can be modelled as a network flow problem, where the source node is connected to every teacher node in G with capacity of n, and every subject node in G is connected to the sink node with capacity of 2n.",
+      "B": "It can be modelled as a network flow problem, where the source node is connected to every teacher node in G, and every subject node in G is connected to the sink node. All edges in the network flow graph have equal capacity.",
+      "C": "It can be modelled as a network flow problem, where the source node is connected to every teacher node in G with capacity of 2, and every subject node in G is connected to the sink node with capacity of 1.",
+      "D": "It can be modelled as a network flow problem, where the source node is connected to every teacher node in G with capacity of 1, and every subject node in G is connected to the sink node with capacity of 2."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473227/PDSA-ET-Sept2023-5_ucu5yz.png",
+    "context": "Consider the below Graph.",
+    "question": "Which of the following is/are valid topological orderings of the given graph?",
+    "options": {
+      "A": "E-F-C-D-B-A",
+      "B": "F-E-A-C-D-B",
+      "C": "F-E-A-D-C-B",
+      "D": "E-F-C-D-A-B",
+      "E": "F-C-D-A-E-B"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following is/are true about the Floyd-Warshall algorithm?",
+    "options": {
+      "A": "It can detect negative weight cycles in the graph.",
+      "B": "Time complexity of Floyd-Warshall is O(V^3) where V is the number of vertices in the graph.",
+      "C": "It works if the graph has negative edge weight cycles.",
+      "D": "The formula to compute the shortest path from vertex i to j in Floyd-Warshall algorithm is:- SP^k[i,j] = min(SP^(k-1)[i,j], SP^(k-1)[i,k] + SP^(k-1)[k,j])"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Which of the following is/are true about AVL Tree? Assume that the height of the empty tree is 0.",
+    "options": {
+      "A": "Let S(h) denote the minimum number of nodes in an AVL tree of height h then S(h) = S(h-1) + S(h-2) + 1, where S(0) = 0 and S(1) = 1.",
+      "B": "In AVL tree, the absolute difference between the height of the left subtree and the height of the right subtree of any node can't be more than 1.",
+      "C": "The complexity of searching element in an AVL tree is O(n).",
+      "D": "If the height of an AVL tree is h, the maximum number of nodes will be 2^h + 1.",
+      "E": "The complexity of both insertion and deletion in AVL tree is O(n)."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider a simple undirected connected graph G with 65 edges with the least number of vertices possible.\nWhat will be the number of vertices in graph G?",
+    "options": null,
+    "correctOption": 12,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "In a binary tree T of 25 nodes, if the number of nodes with two children is 6, then the number of nodes with one child is",
+    "options": null,
+    "correctOption": 12,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": "The pre-order traversal of a binary search tree is:\n4, 1, 3, 2, 7, 5, 6, 8",
+    "question": "What would be the sum of elements stored in the leaf nodes of a binary search tree?",
+    "options": null,
+    "correctOption": 16,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithm Design Paradigms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473227/PDSA-ET-Sept2023-6_w5ko4v.png",
+    "context": "You are given the following list of 8 meeting requests with start time, and end time.\nEach meeting requires its own conference room. Your goal is to schedule all meetings in the minimum number of conference rooms.\nAssume that if any meeting ends at time t then another meeting can start at time t or afterwards in the same room.",
+    "question": "The minimum number of conference rooms required to schedule all meetings is.",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "There are N stones, numbered 0, 1, 2, ..., N-1. For each i (0 <= i <= N-1), the height of Stone i is h_i.\nThere is a frog who is initially on Stone 0. He will repeat the following action some number of times to reach Stone N-1.\nIf the frog is currently on stone i, can jump to Stone i+1 or Stone i+2. Here, a cost of |h_i - h_j| is incurred, where j is the stone to land on.",
+    "question": "Find the minimum possible total cost to reach stone 5 from stone 0 for the following sequence of heights for 6 stones.\n10, 15, 30, 20, 28, 36",
+    "options": null,
+    "correctOption": 26,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Here is a function to return the maximum value in a list of integers.\n1 def max_bad (L):\n2 \n3   mymax = 0\n4   for i in range (len(L)):\n5     if L[i] > mymax:\n6       mymax = L[i]\n7   return (mymax)\nThere is a logical error in this function. Select the input list for which max_bad produces incorrect output.",
+    "options": {
+      "A": "[11,22,33,44]",
+      "B": "[-11,0,21,-32]",
+      "C": "[-11,-22,-33,-44]",
+      "D": "[44,33,22,11]"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "f1(n) = O(log n)\nf2(n) = O(1)\nf3(n) = O(n + n log n)\nf4(n) = O(√n)\nf5(n) = O(n^k)\nArrange the above functions in increasing order of asymptotic complexity.",
+    "options": {
+      "A": "f1(n), f2(n), f4(n), f3(n), f5(n)",
+      "B": "f1(n), f2(n), f3(n), f4(n), f5(n)",
+      "C": "f2(n), f1(n), f4(n), f3(n), f5(n)",
+      "D": "f2(n), f1(n), f3(n), f4(n), f5(n)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "How many swaps does selection sort require, in the worst case, on an input of size n?",
+    "options": {
+      "A": "O(log n)",
+      "B": "O(n)",
+      "C": "O(n log n)",
+      "D": "O(n^2)"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "The following sequence of stack operations is performed on a Stack:\n1 Push(10)\n2 Push (20)\n3 Pop\n4 Push (20)\n5 Push (10)\n6 Pop\n7 Push (10)\n8 Pop\n9 Pop\n10 Pop\nThe sequence of values popped from the Stack is:",
+    "options": {
+      "A": "10, 10, 20, 10, 20",
+      "B": "20, 10, 10, 20, 10",
+      "C": "20, 20, 10, 10, 10",
+      "D": "10, 20, 10, 20, 10"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "A hash table of size 9 (index 0 to 8) uses open addressing with hash function h(k) = k mod 9, and linear probing. The following elements are added into the hash table, which was initially empty.\n18, 21, 90, 31, 45 and 55\nThe key value 55 is stored at which index of the hash table?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "You are given a social network with users and their friendships represented as a graph. You want to find the shortest chain of friends between User A and User B. Which of the following algorithm is best suited and efficient for solving this problem?",
+    "options": {
+      "A": "Breadth-first search",
+      "B": "Depth-first search",
+      "C": "Dijkstra's Algorithm",
+      "D": "Bellman-Ford algorithm"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473761/PDSA-ET-Jan2024-1_bu0myo.png",
+    "context": null,
+    "question": "Consider the graph given below\n\nWhich of the following is the correct topological ordering of the given graph?",
+    "options": {
+      "A": "A-B-C-D",
+      "B": "A-C-D-B",
+      "C": "A-C-B-D",
+      "D": "A-B-D-C"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473760/PDSA-ET-Jan2024-2_iknvks.png",
+    "context": null,
+    "question": "Consider the following code.\n\nWhat will be the output produced by fun(0,G)?",
+    "options": {
+      "A": "0,2,3,1,4,",
+      "B": "0,3,2,1,4,",
+      "C": "0,2,3,4,1,",
+      "D": "0,3,2,4,1,"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473759/PDSA-ET-Jan2024-3_j5jj6n.png",
+    "context": null,
+    "question": "In the given graph below, How many spanning trees can be formed?\n",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "7",
+      "D": "8"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Consider the elements 71, 65, 84, 69, 66, 81, and 62 inserted into empty binary search tree in the same sequence. Which element will be inserted in the lowest level?",
+    "options": {
+      "A": "62",
+      "B": "69",
+      "C": "66",
+      "D": "81"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "A Priority-Queue is implemented as a Max-Heap. Initially, the max-heap is [22, 19, 18, 15, 13]. Two new elements 31 and 24 are inserted in the given Max-Heap in that order. Max-Heap after the insertion of the elements is_.",
+    "options": {
+      "A": "[31, 19, 24, 15, 13, 22, 18]",
+      "B": "[31, 19, 24, 15, 13, 18, 22]",
+      "C": "[31, 19, 24, 18, 15, 13, 22]",
+      "D": "[31, 19, 24, 22, 18, 15, 13]"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "What is the maximum height of a AVL tree with 12 nodes? Consider that the height of the tree with single node is 1.",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "3",
+      "D": "7"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Consider an implementation of a singly linked list where each node is created using the given class Node.\n1 class Node:\n2   def __init__(self, data):\n3     self.data = data\n4     self.next = None\nSuppose it has a head pointer that points to the first node and tail pointer that points to the last node of the linked list. Let the linked list have n elements. Which of the following statement(s) is/are true?",
+    "options": {
+      "A": "first and last element can be directly accessed in the linked list in constant time.",
+      "B": "Insertion of the new node at the end of the linked list takes constant time.",
+      "C": "Insertion of the new node at the end of the linked list takes O(n) time.",
+      "D": "Deletion of the last node of the linked list takes O(1) time.",
+      "E": "If linked list is sorted, binary search takes O(log n) time for search."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider an undirected unweighted graph G with following set of vertices (V) and edges (E):\nV = {v1, v2, v3, v4, v5, v6, v7}\nE = {(v1,v2), (v1,v3), (v1,v4), (v2,v4), (v2,v5), (v3,v4), (v5,v7), (v5,v6), (v2,v7)}.\nA Breadth First Search(BFS) on the graph G is performed with v1 as start vertex. Which of the following is/are the tree edge(s)?",
+    "options": {
+      "A": "(v2,v4)",
+      "B": "(v1,v4)",
+      "C": "(v2,v5)",
+      "D": "(v5,v7)"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473759/PDSA-ET-Jan2024-4_iep4g6.png",
+    "context": null,
+    "question": "In the given graph below, what is the minimum cost to reach vertex f from vertex c?\n",
+    "options": null,
+    "correctOption": 7,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Consider a complete binary tree T with 19 nodes. The number of leaf nodes in T is",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Algorithm Design Paradigms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473758/PDSA-ET-Jan2024-5_srowvx.png",
+    "context": null,
+    "question": "An entire message is created using characters from the set S = {A, B, C, D, E}, The probability of occurrence of each character is given in the table below.\nHow many bits will be used to encode the message PQRST using Huffman codes?",
+    "options": null,
+    "correctOption": 14,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "In a list L, two elements L[i] and L[j] form a inversion if L[i] > L[j] and i < j. The total number of inversions for the list L = [3, 4, 8, 9, 7, 5, 1] is_.",
+    "options": null,
+    "correctOption": 11,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Consider the following function MOM.\n1 def MOM(L): # Median of medians\n2   if len(L) <= 5:\n3     L.sort()\n4     return(L[len(L)//2])\n5   #Construct list of block medians\n6   M = []\n7   for i in range(0, len(L), 5):\n8     X = L[i:i+5]\n9     X.sort()\n10    M.append(X[len(X)//2])\n11  return(MOM(M))\n\nWhat median value will be returned by the given MOM function for the following list?\n\nL = [6, 7, 8, 10, 11, 10, 15, 13, 14, 17, 2, 3, 4, 3, 5]",
+    "options": null,
+    "correctOption": 8,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Consider the following two strings:\nS1 = abaabaa\nS2 = bababba\nThe length of the longest common subsequence for string S1 and S2 is_",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Let G be a simple graph with 25 vertices. The size of the maximum independent set of graph G is 15. What is the size of the minimum vertex cover of G?",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": "The Longest Decreasing Subsequence problem is defined as below.\nGiven a list of size n non-negative integers, determine the Longest Decreasing Subsequence(LDS) i.e., the longest possible subsequence in which the elements of the subsequence are sorted in decreasing order.\nConsider the following function LDS which takes list L as input and returns the length of the Longest Decreasing Subsequence.\n1 def LDS(L):\n2   n = len(L)\n3   Lds = [1]*n #initialize with all 1's\n4 \n5   for i in range(1, n):\n6     for j in range(0, i):\n7       if L[i] < L[j]:\n8         Lds[i] = ____ #check here\n9 \n10  return max(Lds)",
+    "question": "In the given code, what expression should be placed at the place of ____ so that it return the correct output?",
+    "options": {
+      "A": "max(Lds[i], Lds[j])",
+      "B": "max(Lds[i], Lds[j]+1)",
+      "C": "max(Lds[i], Lds[j+1]+1)",
+      "D": "max(Lds[i], Lds[j-1]+1)"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": "The Longest Decreasing Subsequence problem is defined as below.\nGiven a list of size n non-negative integers, determine the Longest Decreasing Subsequence(LDS) i.e., the longest possible subsequence in which the elements of the subsequence are sorted in decreasing order.\nConsider the following function LDS which takes list L as input and returns the length of the Longest Decreasing Subsequence.\n1 def LDS(L):\n2   n = len(L)\n3   Lds = [1]*n #initialize with all 1's\n4 \n5   for i in range(1, n):\n6     for j in range(0, i):\n7       if L[i] < L[j]:\n8         Lds[i] = ____ #check here\n9 \n10  return max(Lds)",
+    "question": "What is the time complexity of function LDS()?",
+    "options": {
+      "A": "O(n^2)",
+      "B": "O(n log n)",
+      "C": "O(log n)",
+      "D": "O(n)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473755/PDSA-ET-Jan2024-6_nwikea.png",
+    "context": "Consider the network given below with source s and sink t, with the numbers on the edges denoting maximum capacity across a particular edge.\n",
+    "question": "If we increase the capacity of both edges (i,j) and (i,k) by 1, the maximum flow from s to t will increase by 1.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758473755/PDSA-ET-Jan2024-6_nwikea.png",
+    "context": "Consider the network given below with source s and sink t, with the numbers on the edges denoting maximum capacity across a particular edge.\n",
+    "question": "If we Increase the capacity of both edges (h,i) and (i,j) by 1, the maximum flow from s to t will increase by 1.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Consider the following functions:\nh1(n)=10n^{2}log~n+n^{2}\nh2(n)=log(log~n)\nh3(n)=100n\nh4(n)=2^{n}+n~log~n\nh5(n)=n^{2}+1000\nArrange the above functions in increasing order of asymptotic complexity.",
+    "options": {
+      "A": "h2(n), h3(n), h1(n), h4(n), h5(n)",
+      "B": "h2(n),h3(n),h5(n),h1(n),h4(n)",
+      "C": "h2(n),h4(n),h5(n),h3(n),h1(n)",
+      "D": "h2(n), h3(n), h1(n), h5(n), h4(n)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "A list with 2^{k} elements needs to be processed using either of two given algorithms. Algorithm A takes in log_{2}n time and algorithm B takes 0.02n^{2} time to process a list of n elements.\nWhat is the smallest value of k for which algorithm A would be preferred?",
+    "options": {
+      "A": "10",
+      "B": "11",
+      "C": "12",
+      "D": "13"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "The list of tuples L=[('a',2),('b',2),('c',4),('d',3),('e',2),('f',4),('g',1),('h',1)] need to be sorted. The following Insertionsort function is executed on the list which sorts the list based on the 2nd element of tuples.\n\n```python\n1 def InsertionSort (L):\n2     n=len(L)\n3 \n4     if n<1:\n5         return (L)\n6 \n7     for i in range(n):\n8         j=i\n9 \n10        while(j> 0 and L[j] [1] < L[j-1][1]):\n11            (L[j],L[j-1])=(L[j-1],L[j])\n12 \n13            j=j-1\n14\n15    return(L)\n```\n\nWhich of the following list is returned by the function?",
+    "options": {
+      "A": "[('g', 1), ('h', 1), ('e', 2), ('a', 2), ('b', 2), ('d', 3), ('f', 4), ('c', 4)]",
+      "B": "[('g', 1), ('h', 1), ('a', 2), ('b', 2), ('e', 2), ('d', 3), ('c', 4), ('f', 4)]",
+      "C": "[('g', 1), ('h', 1), ('e', 2), ('b', 2), ('a', 2), ('d', 3), ('c', 4), ('f', 4)]",
+      "D": "[('h', 1), ('g', 1), ('e', 2), ('b', 2), ('a', 2), ('d', 3), ('f', 4), ('c', 4)]"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "What is recurrence and time complexity for the worst case of Quick Sort ? Consider that algorithm select last element as pivot element.",
+    "options": {
+      "A": "Recurrence is T(n)=T(n/2)+O(n) and time complexity is O(n^{2})",
+      "B": "Recurrence is T(n)=T(n-1)+O(n) and time complexity is O(n^{2})",
+      "C": "Recurrence is T(n)=2T(n/2)+O(n) and time complexity is O(n~log~n)",
+      "D": "Recurrence is T(n)=2T(n/2)+O(1) and time complexity is O(n~log~n)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "There is a stack s and a queue q. Suppose the elements A, B, C, D, E, F, G, H and I are enqueued into q in the reverse order i.e., starting from I. The following operations are performed on the stack and the queue.\n1 S.push(Q.dequeue())\n2 s.push(Q.dequeue())\n3 Q.enqueue (S.pop())\n4 Q.enqueue(S.pop())\n5 s.push(Q.dequeue())\n6 S.push(Q.dequeue())\n7 s.push(Q.dequeue())\n8 Q.enqueue (S.pop())\n9 S.push(Q.dequeue())\nWhich of the following element is the rear of queue after execution of the above operations?",
+    "options": {
+      "A": "I",
+      "B": "F",
+      "C": "E",
+      "D": "H",
+      "E": "G"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider the following graph\n\nWhich of the following vertex sequence is the correct BFS traversal on the graph started from node 7?\nAssume that when a node has multiple neighbours, BFS would visit the numerically smaller valued node first.",
+    "options": {
+      "A": "7, 5, 6, 2, 3, 4, 1",
+      "B": "7, 5, 6, 2, 4, 1, 3",
+      "C": "7, 5, 6, 3, 4, 2, 1",
+      "D": "7, 5, 6, 2, 4, 3, 1"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758474998/PDSA-ET-May2024-1_i9kasj.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following statements is true about Dijkstra's algorithm to find the shortest path?\nI. The shortest path returned by Dijkstra's algorithm always passes through the least number of vertices.\nII. To decide which node to visit next, Dijkstra's algorithm selects the node with maximum known distance.",
+    "options": {
+      "A": "Only I is correct",
+      "B": "Only II is Correct",
+      "C": "Both I and II are correct",
+      "D": "Both I and II are incorrect"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following is/are always true about the Bellman-Ford algorithm?\nI. It can not detect negative weight cycles in graph.\nII. It works correctly if the graph has negative edge weights but does not have negative weight cycles.\nIII. It finds the shortest paths from a single source vertex to all other vertices in the graph.",
+    "options": {
+      "A": "Only statement I and II are correct",
+      "B": "Only statement I and III are correct",
+      "C": "Only statement II and III are correct",
+      "D": "All statements are correct",
+      "E": "All statements are incorrect"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Post-order traversal of a given binary search tree T produces the following sequence of keys:\n2, 6, 11, 8, 5, 14, 12, 20, 30, 25, 15\nLeft child of element 14 is_.",
+    "options": {
+      "A": "12",
+      "B": "11",
+      "C": "8",
+      "D": "14 is a leaf node."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Consider the following recursive function to find the minimum element in list L of size n where lower and upper represents the first index and last index of list L respectively.\n```python\n1 def find_min(L, lower, upper):\n2 \n3     if upper-lower == 0:\n4         return L[lower]\n5     return min (L[lower], find_min (L, lower+1, upper))\n```\nWhat is the Recurrence relation of the given function?",
+    "options": {
+      "A": "T(n)=T(n/2)+1, T(1)=1",
+      "B": "T(n)=T(n-1)+1, T(1)=1",
+      "C": "T(n)=T(n-1)+n, T(1)=1",
+      "D": "T(n)=T(n/2)+n, T(1)=1"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Consider n matrices M_{0},M_{1},...M_{n-1} that needs to be multiplied. Let C[i,j] is the cost required to multiply matrices M_{i},M_{i+1},...,M_{j-1},M_{j}.\nLet f(x) is the time to multiply matrices M_{x} and M_{x+1}.\n\nWhich among the following is the correct statement to fill the blank.",
+    "options": {
+      "A": "  min {C[i,i+k]+C[i+k+1,j]+f(i+k)}\n(i<=k<j)",
+      "B": "  min {C[i,k]+C[k+1,j]+f(k)}\n(i<=k<j)",
+      "C": "  min {C[i,j]+C[k+1,j]+f(j)}\n(i<=k<j)",
+      "D": "None of these"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758474445/PDSA-ET-May2024-2_l768m8.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Let Z be an NP-complete problem and X and Y be two other problems not known to be in NP. X is polynomial time reducible to Z and Z is polynomial-time reducible to Y. Which one of the following statements is true?",
+    "options": {
+      "A": "Y is NP-complete",
+      "B": "Y is NP-hard",
+      "C": "X is NP-complete",
+      "D": "X is NP-hard"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Given the following sorted list:\n[16, 53, 59, 81, 94, 99, 121, 150, 162, 170, 187]\nIf we use binary search algorithm to search for element 53 in the given list, then the number of list elements for comparison to 53 (including comparison with 53 in list) in this process is_.\nNote: Assume here that binary search will compute the midpoint by using (First index + Last index)//2",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider a complete undirected graph with vertex set (0, 1, 2, 3, 4). Every entry w[i][j] where i $\\ne j$ in the matrix w below is the weight of the edge from vertex i to vertex j.\nWhat is the weight of the minimum spanning tree for the given graph?",
+    "options": null,
+    "correctOption": 19,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758474445/PDSA-ET-May2024-3_dgf6pk.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "The number of leaf nodes in a rooted tree of 11 nodes, with each node having 0 or 2 children is_.",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Consider the following tasks T1,..., T9.\nThe execution of each task requires one unit of time. We can execute one task at a time. What is the maximum number of tasks that can be completed without lateness(before or by the deadline)?\nConsider the start time 0.",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758474445/PDSA-ET-May2024-4_slp1ao.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Consider the following code to find median.\n```python\n1 def MOM(L):\n2 \n3     if len(L)<=5:\n4         L.sort()\n5         return L[2]\n6     M=[]\n7     for i in range(0,len(L),5):\n8         X=L[i:i+5]\n9         X.sort()\n10        M.append(X[2])\n11 \n12    return MOM(M)\n```\nWhat median value will be returned by the given function for the following list?\nL= [17, 7, 76, 6, 60, 26, 12, 33, 5, 0, 49, 24, 55, 66, 75, 32, 93, 28, 43, 46, 15, 64, 50, 98, 29]",
+    "options": null,
+    "correctOption": 43,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Let T_{B} and T_{D} be the BFS tree and DFS tree respectively generated when BFS and DFS are applied on the node s in undirected and unweighted graph G. Let d(x) be the shortest distance of node x from the node s in G. Which among the following statements is/are correct?",
+    "options": {
+      "A": "For every neighbor v of s in graph G, the edge (s, v) must exist in T_{D}.",
+      "B": "If (u, v) is an edge of G that is not in T_{B} then |d(u)-d(v)| <= 1.",
+      "C": "If there is no path from s to u in T_{D}, then u is in a different component from s.",
+      "D": "The number of vertices in T_{B} and T_{D} is equal."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": "A baker is preparing an elaborate cake M. The recipe includes preparing several other components, each of which has its dependencies.\nThe order in which these components must be prepared is given below:\n1. Component X is used to make components P and Q.\n2. Component Y is added to prepare components R and S.\n3. Component T is prepared by mixing components Q and R.\n4. Component Y is made by blending X.\n5. Component U is made by mixing P and T.\n6. Component V is made by adding sugar to component S.\n7. The cake M is assembled by layering components U and V together.\nThe baker has enough assistants to prepare multiple components simultaneously, allowing the cake M to be completed in the minimum number of steps, considering all dependencies. Each step represents a time unit during which one or more components can be prepared in parallel.",
+    "question": "The component(s) prepared in the 3rd step is/are.",
+    "options": {
+      "A": "Q",
+      "B": "T",
+      "C": "R",
+      "D": "U",
+      "E": "S"
+    },
+    "correctOption": ["C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Consider a binary min-heap implemented using list. Which of the following lists represents a binary min-heap?",
+    "options": {
+      "A": "[6, 8, 15, 20, 12, 17, 21]",
+      "B": "[6, 8, 17, 20, 12, 15, 21]",
+      "C": "[6, 8, 15, 20, 17, 12, 21]",
+      "D": "[6, 8, 17, 12, 15, 20, 21]"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Which of the following are possible valid codes for the character set S={A,B,C,D,E,F}, generated using the Huffman algorithm?",
+    "options": {
+      "A": "A:000000, B:1011, C:110, D:001, E:01, F:111",
+      "B": "A:000, B:001, C:01, D:100, E:101, F:11",
+      "C": "A:100, B:1011, C:1001, D:011, E:101, F:000",
+      "D": "A:0000, B:0001, C:001, D:01, E:10, F:11"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": "A manufacturing company produces two types of products: A and B. Market tests and available resources indicate that the combined production level should not exceed 1000 products per week and the demand for the product B is at most half of that for product A. Further, the production level of product A can exceed three times the production of product B by at most 500 units. The company makes profit of Rs 15 and Rs 20 per product respectively on products A and B. The above problem is to be formulated as a linear programming problem. Let x and y be the number of product A and product B, respectively. Objective function to maximize the number of products z=15x+20y$",
+    "question": "Which of the following are valid constraints for the given problem?",
+    "options": {
+      "A": "x+y<=1000",
+      "B": "x-2y>=0",
+      "C": "3x-y<=500",
+      "D": "2x-y>=0",
+      "E": "x-3y<=500",
+      "F": "x, y<=0"
+    },
+    "correctOption": ["A", "B", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider the network given below with source s and sink t, with the numbers on the edges denoting maximum capacity across a particular edge.\n\nWhich of the following edges form a valid min cut in the given network?",
+    "options": {
+      "A": "Edges {ce, cd}",
+      "B": "Edges {ac, ce, de}",
+      "C": "Edges {fg, fi, hi}",
+      "D": "Edges {fg, fh}",
+      "E": "Edges {ij, ik}"
+    },
+    "correctOption": ["C", "E"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758474446/PDSA-ET-May2024-5_mujgei.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": "The Longest Increasing Subsequence problem is defined as below.\nGiven a list L of size n non-negative integers, determine the Longest Increasing Subsequence(LIS) i.e., the longest possible subsequence in which the elements of the subsequence are sorted in increasing order.\nConsider the following function LIS which takes list L as input and returns the length of the Longest Increasing Subsequence.\n```python\n1 def LIS(L):\n2     n=len(L)\n3 \n4     Lis=[1]*n #initialize with all 1's\n5 \n6     for i in range(1, n):\n7         for j in range(0, i):\n8             if L[i]>L[j]:\n9                 Lis[i] = _ #Check here\n10 \n11    return max (Lis)\n```",
+    "question": "In the given code, what expression should be placed at the place of _ so that it return the correct output?",
+    "options": {
+      "A": "max (Lis[i], Lis[j]+1)",
+      "B": "max(Lis[i], Lis[j])",
+      "C": "max(Lis[i], Lis[j+1]+1)",
+      "D": "max(Lis[i], Lis[j-1]+1)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "The Longest Increasing Subsequence problem is defined as below.\nGiven a list L of size n non-negative integers, determine the Longest Increasing Subsequence(LIS) i.e., the longest possible subsequence in which the elements of the subsequence are sorted in increasing order.\nConsider the following function LIS which takes list L as input and returns the length of the Longest Increasing Subsequence.\n```python\n1 def LIS(L):\n2     n=len(L)\n3 \n4     Lis=[1]*n #initialize with all 1's\n5 \n6     for i in range(1, n):\n7         for j in range(0, i):\n8             if L[i]>L[j]:\n9                 Lis[i] = max (Lis[i], Lis[j]+1)\n10 \n11    return max (Lis)\n```",
+    "question": "What is the time complexity of function LIS()?",
+    "options": {
+      "A": "O(n)",
+      "B": "O(n~log~n)",
+      "C": "O(log~n)",
+      "D": "O(n^{2})"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Consider the following function:\ng1(n)=5n+log~n\ng2(n)=n~log~n+n\ng3(n)=n^{3}+100n~log~n\ng4(n)=10~log~n\ng5(n)=n~log(2^{n})\nArrange the above functions in increasing order of asymptotic complexity.",
+    "options": {
+      "A": "g4(n),g1(n),g2(n),g3(n),g5(n)",
+      "B": "g4(n),g1(n),g2(n),g5(n),g3(n)",
+      "C": "g1(n),g4(n),g2(n),g3(n),g5(n)",
+      "D": "g4(n),g1(n),g3(n),g2(n),g5(n)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "A list consisting of 2^{k} elements needs to be sorted on a system. Algorithms A and B require 100n log2 n and 2n^{2} time respectively. What is the maximum value of k for which algorithm B should be preferred over algorithm A?",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "10",
+      "D": "11"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "What is the recurrence and time complexity for the worst case behaviour of Merge Sort?",
+    "options": {
+      "A": "Recurrence is T(n)=2T(n/2)+O(n) and time complexity is O(n^{2})",
+      "B": "Recurrence is T(n)=T(n/2)+O(n) and time complexity is O(n)",
+      "C": "Recurrence is T(n)=2T(n/2)+O(n) and time complexity is O(n~log~n)",
+      "D": "Recurrence is T(n)=2T(n/2)+O(1) and time complexity is O(n~log~n)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Consider following is the updated list after applying the Quick-sort partition algorithm once.\nL [21, 33, 29, 34, 45, 48, 40, 60, 65]\nThe number of elements that could have been chosen as a pivot in the first round is?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "There is a stack s and a queue Q. Suppose the elements A, B, C, D, E, F, G and H are enqueued into q in the reverse order i.e., starting from H. The following operations are performed on the stack and the queue.\n1 S.push(Q.dequeue())\n2 S.push(Q.dequeue())\n3 S.push(Q.dequeue())\n4 Q.enqueue (S.pop())\n5 Q.enqueue (S.pop())\n6 S.push(Q.dequeue())\n7 S.push(Q.dequeue())\n8 Q.enqueue(S.pop())\n9 Q.enqueue (S.pop())\nWhat is the state of queue Q after the above operation? Consider the first element of the list as front element of queue in options.",
+    "options": {
+      "A": "[C, B, A, F, G, D, E]",
+      "B": "[C, B, A, G, F, D, E]",
+      "C": "[C, B, A, F, G, E, D]",
+      "D": "[C, B, A, G, F, E, D]"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph",
+    "question": "Which of the following vertex sequence is the correct DFS traversal on the graph started from node 6?\nAssume that when a node has multiple neighbours, DFS would visit the numerically smaller valued node first.",
+    "options": {
+      "A": "6,3,2,1,4,5,7",
+      "B": "6,3,2,1,5,4,7",
+      "C": "6,3,2,4,1,5,7",
+      "D": "6,3,5,7,2,4,1"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758476118/PDSA-ET-Sept2024-1_fo2rh0.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "To determine the minimum number of sequential steps required for a chef to prepare a dish J, consider the following dependencies and constraints for the preparation process, where each step represents a time unit during which one or more items can be prepared in parallel:\n1. Item A is used to make items C and D.\n2. Item B is added to cook items E and F.\n3. Item G is prepared by mixing items D and E.\n4. Item B is made by boiling item A.\n5. Item H is made by mixing items C and G.\n6. Item I is made by adding water to item F.\n7. The dish J is prepared by cooking items H and I together.\nGiven that the chef has enough assistants to work on multiple items in parallel, what is the minimum number of steps required to complete the dish J, considering all dependencies?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "3",
+      "D": "6"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider a weighted, directed acyclic graph G=(V,E,w) in which edges that leave the source vertex s may have negative weights and all other edge weights are non-negative.\nWhich of the following statement(s) is/are correct?\nI. Dijkstra's algorithm computes an incorrect shortest-path weight \\delta(s,t) from s to at least one vertex t in this graph G.\nII. Bellman's Ford algorithm correctly computes the shortest-path weight \\delta(s,t) from s to every vertex t in this graph G.",
+    "options": {
+      "A": "Only I is correct",
+      "B": "Only II is Correct",
+      "C": "Both I and II are correct",
+      "D": "Both I and II are incorrect"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following is/are always true about the Floyd-Warshall algorithm?\nI. If the shortest path entry SP [1] [1] in the resultant matrix is negative, then it represents the graph has a negative weight cycle.\nII. It works correctly if the graph has negative edge weights but does not have negative weight cycles.\nIII. It is single source shortest path algorithm.",
+    "options": {
+      "A": "Only statement I and II are correct",
+      "B": "Only statement I and III are correct",
+      "C": "Only statement II and III are correct",
+      "D": "All statements are correct",
+      "E": "All statements are incorrect"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Pre-order traversal of a given binary search tree T produces the following sequence of keys:\n15, 12, 5, 2, 8, 6, 11, 14, 25, 20, 35\nRight child of element 8 is_.",
+    "options": {
+      "A": "12",
+      "B": "11",
+      "C": "14",
+      "D": "8 is a leaf node."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Consider the following recursive function to find the maximum element in list L of size n where lower and upper represents the first index and last index of list L respectively.\n```python\n1 def find_max(L, lower, upper):\n2   if upper-lower == 0:\n3     return L[lower]\n4   \n5   mid = (upper+lower) // 2\n  left_max = find_max (L,lower,mid)\n6   right_max = find_max(L,mid+1, upper)\n7   return max(left_max, right_max)\n```\nWhat is the Recurrence relation of the given function?",
+    "options": {
+      "A": "T(n)=2T(n/2)+1, T(1)=1",
+      "B": "T(n)=2T(n/2)+n, T(1)=1",
+      "C": "T(n)=T(n/2)+n, T(1)=1",
+      "D": "T(n)=T(n/2)+1, T(1)=1"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "In the Longest Common Subsequence problem we are given two string S_{1}=a_{1}a_{2}...a_{m} and S_{2}=b_{1}b_{2},...b_{n}.\nTo get the length of Longest Common Subsequence at LCS[m][n] the recursion formula is given as follows to fill matrix LCS[i][j] where 0<=i<=m and 0<=j<=n\n\nWhich among the following is the correct statement to fill the blank.",
+    "options": {
+      "A": "min(LCS[i-1,j],LCS[i,j-1])",
+      "B": "max(LCS[i-1,j],LCS[i,j-1])",
+      "C": "min(LCS[i-1,j]+1,LCS[i,j-1]+1)",
+      "D": "LCS[i-1,j-1]+1"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758476118/PDSA-ET-Sept2024-2_kkkvvs.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": "Consider the network given below with source s and sink t, with the numbers on the edges denoting maximum capacity across a particular edge.",
+    "question": "The value of the maximum flow in the given network is_.",
+    "options": {
+      "A": "14",
+      "B": "25",
+      "C": "19",
+      "D": "20"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758476118/PDSA-ET-Sept2024-3_idbejz.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Let Z be an NP-complete problem and X and Y be two other problems not known to be in NP.\nX is polynomial time reducible to Z and Z is polynomial-time reducible to Y. Which one of the following statements is true?",
+    "options": {
+      "A": "Y is NP-complete",
+      "B": "Y is NP-hard",
+      "C": "X is NP-complete",
+      "D": "X is NP-hard"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Given the following sorted list:\n[16, 53, 59, 81, 94, 99, 121, 150, 162, 170]\nIf we use the binary search algorithm to search for element 99 in the given list, then the number of list elements for comparison to 99 (including comparison with 99 in list) in this process is_.\nNote: Assume here that binary search will compute the midpoint by using (First index + Last index)//2",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider a complete undirected graph with vertex set {0, 1, 2, 3, 4).\nEvery entry w[i][j] where i \\ne j in the matrix w below is the weight of the edge from vertex i to vertex j.\nWhat is the weight of the minimum spanning tree for the given graph?",
+    "options": null,
+    "correctOption": 13,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758476117/PDSA-ET-Sept2024-4_zaa1iy.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "The number of leaf nodes in a rooted tree of 10 nodes, with each node having 0 or 3 children is_.",
+    "options": null,
+    "correctOption": 7,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Consider the following tasks T1,...,T9\nThe execution of each task requires one unit of time. We can execute one task at a time.\nWhat is the maximum number of tasks that can be completed without lateness(before or by the deadline)?\nConsider the start time 0.",
+    "options": null,
+    "correctOption": 7,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758476116/PDSA-ET-Sept2024-5_shknex.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Consider the following code to find median.\n```python\n1 def MOM(L):\n2   if len(L)<=5:\n3     L.sort()\n4     return L[2]\n5   M=[]\n6   for i in range(0,len(L),5):\n7     X=L[i:i+5]\n8     X.sort()\n9     M.append(X[2])\n10  return MOM(M)\n```\nWhat median value will be returned by the given Mom function for the following list?\nL= [73, 3, 55, 8, 49, 69, 35, 84, 39, 60, 18, 67, 94, 52, 5, 16, 41, 58, 36, 91, 19, 59, 7, 78, 81]",
+    "options": null,
+    "correctOption": 52,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Let T_{B} and T_{D} be the BFS tree and DFS tree respectively generated when BFS and DFS are applied on the node s in undirected and unweighted graph G. Let d(x) be the shortest distance of node from the node s in G. Which among the following statements is/are correct?",
+    "options": {
+      "A": "For every neighbor v of s in graph G, the edge (s, v) must exist in T_{B}.",
+      "B": "If (u, v) is an edge of G that is not in T_{B} then |(d(u)-d(v)|>1.",
+      "C": "If there is path from s to u in T_{D} then u is in a different component from s.",
+      "D": "The number of edges in T_{B} and T_{D} is equal."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Consider a binary max-heap implemented using list. Which of the following lists represents a binary max-heap?",
+    "options": {
+      "A": "[25, 12, 16, 13, 10, 8, 14]",
+      "B": "[25, 14, 13, 16, 10, 8, 12]",
+      "C": "[25, 14, 16, 13, 10, 8, 12]",
+      "D": "[25, 14, 16, 13, 12, 8, 10]"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "Which of the following statement(s) is/are true about Huffman algorithm?",
+    "options": {
+      "A": "In a Huffman tree, if a leaf labelled x is at depth(from root) smaller than the leaf labelled y, then frequency(x)>=frequency(y)",
+      "B": "Huffman coding algorithm uses greedy approach to construct the Huffman tree.",
+      "C": "In a Huffman tree, if a leaf labelled x is at depth(from root) smaller than the leaf labelled y, then frequency(x)<=frequency(y).",
+      "D": "In Huffman codes, The code of one character can be prefix of other character's code."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": null,
+    "question": "A company makes two kinds of leather belts, belt A and belt B. Belt A is a high quality belt and belt B is of lower quality.\nThe respective profits are Rs 4 and Rs 3 per belt.\nThe production of each type A requires twice as much time as a belt of type B;\nif all belts were of type B, the company could make only 1000 belts per day.\nThe supply of leather is sufficient for only 800 belts per day (both A and B combined).\nBelt A requires a fancy buckle and only 400 of these are available per day.\nThere are only 700 buckles a day available for belt B.\nThe above problem is to be formulated as a linear programming problem.\nLet x_{1} and x_{2} be the number of belts of type A and B respectively manufactured each day.\nWhich of the following is/are valid constraints?",
+    "options": {
+      "A": "x_{1}<=400",
+      "B": "2x_{2}<=700",
+      "C": "x_{1}+2x_{2}<=800",
+      "D": "2x_{1}+x_{2}<=1000",
+      "E": "x1, x_{2}<=0"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Your final end term exams are going to be over and you are catching up on Netflix.\nYou have a schedule of interesting live shows during the next day.\nYou hate to start or stop watching a show midway, so your aim is to watch as many complete shows as possible during the day.\nSuppose there are n such shows S_{1},S_{2},...,S_{n} available during the some day.\nThe shows are ordered by starting time, so for each i\\in\\{1,2,...,n-1\\}, S_{i} starts before S_{i+1}.\nHowever, show S_{i} may not end before S_{i+1} starts, so for each i\\in\\{1,2,...,n-1\\},next[i] is the smallest j>i such that S_{j} starts after S_{i} finishes if such a j exists, otherwise -1.\nGiven the sequence S_{1},S_{2},...,S_{n} and the values next[i] for each i\\in\\{1,2,...,n-1\\} aim is to compute the maximum number of complete shows that can be watched.\nBased on the above data, answer the given subquestions.",
+    "question": "Consider the following dynamic programming approach. Let watch[i] denote the maximum number of complete shows that can be watched among S_{i},...,S_{n}. \nWhich among the following statements fills the blank correctly?",
+    "options": {
+      "A": "max\\{1+watch[next[i]],watch[i+1]\\}",
+      "B": "max\\{watch[next[i]], watch[i + 1]\\}",
+      "C": "max\\{watch[next[i]],1+watch[i+1]\\}",
+      "D": "max\\{1+watch[next[i]],1+watch[i+1]\\}"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758476117/PDSA-ET-Sept2024-6_caqs3y.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Your final end term exams are going to be over and you are catching up on Netflix.\nYou have a schedule of interesting live shows during the next day.\nYou hate to start or stop watching a show midway, so your aim is to watch as many complete shows as possible during the day.\nSuppose there are n such shows S_{1},S_{2},...,S_{n} available during the some day.\nThe shows are ordered by starting time, so for each i\\in\\{1,2,...,n-1\\}, S_{i} starts before S_{i+1}.\nHowever, show S_{i} may not end before S_{i+1} starts, so for each i\\in\\{1,2,...,n-1\\},next[i] is the smallest j>i such that S_{j} starts after S_{i} finishes if such a j exists, otherwise -1.\nGiven the sequence S_{1},S_{2},...,S_{n} and the values next[i] for each i\\in\\{1,2,...,n-1\\} aim is to compute the maximum number of complete shows that can be watched.\nBased on the above data, answer the given subquestions.",
+    "question": "What is the time complexity of the given algorithm?",
+    "options": {
+      "A": "O(n^{2})",
+      "B": "O(n~log~n)",
+      "C": "O(n)",
+      "D": "O(n^{3})"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758476117/PDSA-ET-Sept2024-6_caqs3y.png"
+  }
+]

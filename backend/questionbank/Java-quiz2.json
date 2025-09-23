@@ -1,0 +1,1700 @@
+[
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\nabstract class CloudProviders{\n\tpublic abstract void storage();\n}\nclass Azure extends CloudProviders{\n\tpublic void storage() {\n\t\tSystem.out.println(\"Azure storage\");\n\t}\n}\nclass AWS extends CloudProviders{\n\tpublic void storage() {\n\t\tSystem.out.println(\"AWS storage\");\n\t}\n}\nclass StorageList{\n\tprivate Object[] sArr = {new Azure(), new AWS()};\n\tpublic void getStorage(){\n\t\tfor(int i=0; i < sArr.length; i++){\n\t\t\t//LINE 1\n\t\t}\n\t}\n}\npublic class Test{\n\tpublic static void main(String[] args) {\n\t\tStorageList sList = new StorageList();\n\t\tsList.getStorage();\n\t}\n}\n```",
+    "question": "Identify the appropriate option to fill in place of LINE 1 such that the output is\nAzure storage\nAWS storage",
+    "options": {
+      "A": "((CloudProviders) sArr[i]).storage();",
+      "B": "sArr[i].storage();",
+      "C": "((Azure) sArr[i]).storage();",
+      "D": "((AWS)sArr[i]).storage();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\npublic class ArrayOperations{\n\tpublic <T> int countElement (T[] arr, T ele) {\n\t\t// Counts the number of occurrences of ele in arr\n\t}\n\tpublic <T extends Comparable> void sort(T[] arr) {\n\t\t// Sorts arr\n\t}\n}\n```",
+    "question": "How does class ArrayOperations look after type erasure?",
+    "options": {
+      "A": "```java\npublic class ArrayOperations{\n\tpublic int countElement (Object[] arr, Object ele){\n\t\t// Counts the number of occurrences of ele in arr\n\t}\n\tpublic void sort(Object[] arr) {\n\t\t// Sorts arr\n\t}\n}\n```",
+      "B": "```java\npublic class ArrayOperations{\n\tpublic int countElement (Object[] arr, Object ele) {\n\t\t// Counts the number of occurrences of ele in arr\n\t}\n\tpublic void sort (Comparable[] arr) {\n\t\t// Sorts arr\n\t}\n}\n```",
+      "C": "```java\npublic class ArrayOperations{\n\tpublic int countElement (Object[] arr, Object ele) {\n\t\t// Counts the number of occurrences of ele in arr\n\t}\n\tpublic void sort (T[] arr) {\n\t\t// Sorts arr\n\t}\n}\n```",
+      "D": "```java\npublic class ArrayOperations{\n\tpublic int countElement (T[] arr, T ele) {\n\t\t// Counts the number of occurrences of ele in arr\n\t}\n\tpublic void sort(T[] arr){\n\t\t// Sorts arr\n\t}\n}\n```"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below\n```java\nclass Employee {\n\tString name;\n\t// Constructor\n\tpublic String toString(){\n\t\treturn name;\n\t}\n}\nclass Manager extends Employee implements Cloneable {\n\tint nteam;\n\t// Constructor (assuming public Manager(String name, int nteam) { super.name = name; this.nteam = nteam; })\n\tpublic Manager clone() throws CloneNotSupportedException{\n\t\treturn (Manager)super.clone();\n\t}\n\tpublic String toString(){\n\t\treturn (super.toString() + \":\" + nteam);\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) throws CloneNotSupportedException{\n\t\tManager m1 = new Manager(\"Hari\", 4);\n\t\tManager m2 = m1.clone();\n\t\tm2.name = \"Reena\";\n\t\tm2.nteam = 10;\n\t\tSystem.out.println(m1+\"\\n\"+m2);\n\t}\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "Hari: 10\nReena: 10",
+      "B": "Reena: 10\nReena: 10",
+      "C": "Hari: 4\nReena: 10",
+      "D": "Hari: 4\nReena: 4"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that takes as input the points obtained by teams in the matches they have played, and computes the total points obtained by each team.\nYou may make use of the method description given below.\ngetOrDefault(Object key, V defaultValue): Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.\n```java\nimport java.util.*;\nclass Team{\n\tString name, year;\n\tint points;\n\t// Constructor (assuming public Team(String name, String year, int points) {...})\n}\npublic class MapTest {\n\tpublic static void printTeams (ArrayList<Team> tL) {\n\t\tvar map = new LinkedHashMap<String, Integer>();\n\t\tfor (Team t:tL) {\n\t\t\tmap.put(t.name, map.getOrDefault(t.name, 0)+t.points);\n\t\t}\n\t\tfor (Map.Entry<String, Integer> e:map.entrySet()) {\n\t\t\tSystem.out.println(e.getKey()+\" = \"+e.getValue());\n\t\t}\n\t}\n\tpublic static void main(String[] args) {\n\t\tArrayList<Team> tList = new ArrayList<Team>();\n\t\ttList.add(new Team(\"CSK\", \"2008\", 14));\n\t\ttList.add(new Team(\"RCB\", \"2008\", 8));\n\t\ttList.add(new Team(\"RCB\", \"2009\", 14));\n\t\ttList.add(new Team(\"CSK\", \"2009\", 12));\n\t\tprintTeams (tList);\n\t}\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "CSK = 26\nRCB = 22",
+      "B": "RCB = 22\nCSK = 26",
+      "C": "RCB = 14\nCSK = 12",
+      "D": "CSK = 12\nRCB = 14"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the following Java code.\n```java\nimport java.util.stream.*;\npublic class Test{\n\tpublic static void main(String[] args) {\n\t\tInteger[] a = {12, 10, 13, 16};\n\t\tStream.of(a)\n\t\t\t.map((i)->i-8)\n\t\t\t.filter((i) -> i % 2 == 0)\n\t\t\t.forEach((x) -> System.out.println(x));\n\t}\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "12\n10\n16",
+      "B": "4\n8",
+      "C": "12\n16",
+      "D": "4\n2\n8"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the code given below.\n```java\nclass DaysException extends Exception{\n\tpublic DaysException(String str) {\n\t\tsuper(str);\n\t}\n}\nclass HR{\n\tfinal static int no_of_hours = 20;\n\tpublic double getHoursPerDay (int no_of_days) {\n\t\tdouble hpd = 0.0;\n\t\ttry {\n\t\t\thpd = no_of_hours/no_of_days;\n\t\t}\n\t\tcatch(ArithmeticException e) {\n\t\t\te.initCause(new DaysException(\"No of days should not be 0\"));\n\t\t\tthrow e;\n\t\t}\n\t\treturn hpd;\n\t}\n}\npublic class ChainedException {\n\tpublic static void main(String[] args) {\n\t\tHR h = new HR();\n\t\ttry {\n\t\t\tSystem.out.println(h.getHoursPerDay (0));\n\t\t}\n\t\tcatch(ArithmeticException e) {\n\t\t\tSystem.out.println(e.getCause().getMessage());\n\t\t}\n\t}\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nNo of days should not be 0",
+      "B": "This program generates the output:\n/ by zero\nNo of days should not be 0",
+      "C": "This program generates the output:\nNo of days should not be 0\n/ by zero",
+      "D": "This program generates the output:\n/ by zero"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\nYou may make use of the descriptions of the methods given below. These are methods inside type Deque.\npoll(): Retrieves and removes the head of the queue represented by this deque (in other words, the first element of this deque), or returns null if this deque is empty.\npeek(): Retrieves, but does not remove, the head of the queue represented by this deque (in other words, the first element of this deque), or returns null if this deque is empty.\n```java\nimport java.util.*;\npublic class QueueTest {\n\tpublic static void main(String[] args) {\n\t\tvar queue = new ArrayDeque<Integer>();\n\t\tqueue.add(23);\n\t\tqueue.add(12);\n\t\tqueue.add(43);\n\t\twhile(queue.size() > 0) {\n\t\t\tSystem.out.println(queue.peek()+\":\"+queue.poll());\n\t\t}\n\t}\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "23:23\n12:12\n43:43",
+      "B": "43:43\n12:12\n23:23",
+      "C": "23:23\n12:12\n43:43\nnull:null",
+      "D": "23:12\n12:43\n43:null"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\nclass Employee{\n\tString name;\n\tint no_of_leaves;\n\t//Constructor to initialize the instance variables (assuming public Employee(String name, int leaves) {...})\n\t//Method toString() to return name of the employee (assuming it's implemented as { return name; })\n}\npublic class IteratorTest {\n\tpublic static boolean property (int x) {\n\t\tif (x < 15)\n\t\t\treturn true;\n\t\treturn false;\n\t}\n\tpublic static void printAppraisalEmpList (List<Employee> eList){\n\t\tIterator<Employee> it = eList.iterator();\n\t\twhile (it.hasNext()) {\n\t\t\tEmployee e = it.next();\n\t\t\tif (property(e.no_of_leaves))\n\t\t\t\tSystem.out.println(e);\n\t\t\telse\n\t\t\t\tit.remove(); // LINE 1\n\t\t}\n\t}\n\tpublic static void main(String[] args) {\n\t\tvar list = new ArrayList<Employee>();\n\t\tlist.add(new Employee (\"ABC\", 15));\n\t\tlist.add(new Employee (\"XYZ\", 9));\n\t\tlist.add(new Employee (\"PQR\", 1));\n\t\tlist.add(new Employee (\"MNO\", 20));\n\t\tprintAppraisalEmpList(list);\n\t}\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nABC\nMNO",
+      "B": "This program generates the output:\nXYZ\nPQR",
+      "C": "LINE 1 generates the compilation error because method remove() is not defined in the Iterator interface.",
+      "D": "LINE 1 should be replaced with eList.remove(e); to generate the output:\nXYZ\nPQR"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\npublic class SetTest {\n\tpublic static void main(String[] args) {\n\t\tvar set1 = new HashSet<String>();\n\t\tset1.add(\"India\");\n\t\tset1.add(\"Sri Lanka\");\n\t\tset1.add(\"Bangladesh\");\n\t\tset1.add(\"Australia\");\n\t\tvar set2 = new TreeSet<String>(set1);\n\t\tIterator<String> it1 = set1.iterator();\n\t\tIterator<String> it2 = set2.iterator();\n\t\twhile(it1.hasNext())\n\t\t\tSystem.out.println(it1.next());\n\t\twhile(it2.hasNext())\n\t\t\tSystem.out.println(it2.next());\n\t}\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "it1 will visit elements of set1 in sorted order.\nit2 will visit elements of set2 in sorted order.",
+      "B": "it1 will visit elements of set1 in the order in which they were inserted.\nit2 will visit elements of set2 in sorted order.",
+      "C": "it1 will visit elements of set1 in unspecified order.\nit2 will visit elements of set2 in sorted order.",
+      "D": "it1 will visit elements of set1 in the order in which they were inserted.\nit2 will visit elements of set2 in unspecified order."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758468787/javaquiz2-jan2023-1_cjo6bf.png",
+    "question": "Match the following",
+    "options": {
+      "A": "A--> II, B--> I, C-->IV, D--> III",
+      "B": "A--> I, B-->II, C-->IV, D--> III",
+      "C": "A-->II, B--> I, C--> III, D--> IV",
+      "D": "A--> I, B--> II, C--> III, D--> IV"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that prints the sum of elements of a list.\n```java\nimport java.util.*;\nclass Test {\n\t// FUNCTION HEADER for function elementSum\n\t{\n\t\t// Prints the sum of elements of list\n\t}\n\tpublic static void main(String[] args) {\n\t\tList<Integer> l = new ArrayList<>();\n\t\tl.add(12);\n\t\tl.add(23);\n\t\tList<Float> l1 = new ArrayList<>();\n\t\tl1.add(12.2f);\n\t\tl1.add(23.4f);\n\t\telementSum(l);\n\t\telementSum(l1);\n\t}\n}\n```",
+    "question": "From among the options, identify the appropriate function header for function elementSum that takes as input a list of numbers, and prints the sum of the elements of the list. Choose the correct option(s).",
+    "options": {
+      "A": "public static void elementSum (List<Number> lst)",
+      "B": "public static <T extends Number> void elementSum(List<T> lst)",
+      "C": "public static void elementSum(List<? extends Number> lst)",
+      "D": "public static void elementSum(List<Double> lst)"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that prints the highest tax among a set of given Taxable objects.\n```java\nimport java.util.*;\ninterface Taxable {\n\tpublic abstract double findTax();\n}\nclass Employee implements Taxable{\n\tdouble salary;\n\t// Constructor (assuming public Employee(double salary) {...})\n\t// method findTax() that returns tax of Employee which is 10% of salary\n}\nclass Manager extends Employee{\n\t// Constructor (assuming public Manager(double salary) {...})\n}\npublic class Test{\n\t// LINE 1: FUNCTION HEADER\n\t{\n\t\t// invokes method findTax()\n\t\t// to print the value of highest tax\n\t}\n\tpublic static void main(String[] args) {\n\t\tTaxable[] t = {new Employee(400), new Manager(3000)};\n\t\tprintTax(t);\n\t}\n}\n```",
+    "question": "From among the options, identify the appropriate function header for function printTax that takes as input an array of Taxable objects and prints the highest tax. Choose the correct option(s).",
+    "options": {
+      "A": "public static void printTax(<?> t)",
+      "B": "public static <T extends Taxable> void printTax (T[] c)",
+      "C": "public static <T extends Manager> void printTax (T[] c)",
+      "D": "public static void printTax (Taxable[] c)"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below that should print the names of students whose total is between 255 and 360 (both inclusive).\n```java\nimport java.util.*;\nclass Student{\n\tString name;\n\tdouble total;\n\tpublic Student(String name, double total) {\n\t\tthis.name = name;\n\t\tthis.total = total;\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tList<Student> sList = new ArrayList<Student>();\n\t\tsList.add(new Student(\"s1\", 360));\n\t\tsList.add(new Student(\"s2\", 400));\n\t\tsList.add(new Student(\"s3\", 200));\n\t\tsList.add(new Student(\"s4\", 255));\n\t\t//CODE BLOCK\n\t}\n}\n```",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
+    "options": {
+      "A": "```java\nsList.stream()\n\t.map(i -> i.total >= 255 && i.total <= 360)\n\t.forEach(s->System.out.println(s.name));\n```",
+      "B": "```java\nsList.stream()\n\t.filter(i -> i.total >= 255 && i.total <= 360)\n\t.forEach(s->System.out.println(s.name));\n```",
+      "C": "```java\nsList.stream()\n\t.filter(i -> i.total >= 255)\n\t.filter(i -> i.total <= 360)\n\t.forEach(s->System.out.println(s.name));\n```",
+      "D": "```java\nsList.stream()\n\t.filter(i -> i.total >= 255)\n\t.map(i->i.total<=360)\n\t.forEach(s->System.out.println(s.name));\n```"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\nclass Customer{\n\tprivate String name, aadhar, pan;\n\t//Constructor to initialize the instance variables (assuming public Customer(String n, String a, String p) {...})\n\tpublic void getDetails() {\n\t\tString msg = \"PAN/Aadhar required\";\n\t\tSystem.out.println(name);\n\t\tassert aadhar.length() == 12 || pan.length() == 10: msg; //LINE 1\n\t\tif (aadhar.length() == 12)\n\t\t\tSystem.out.println(aadhar);\n\t\tif (pan.length() == 10)\n\t\t\tSystem.out.println(pan);\n\t}\n}\npublic class AssertionTest {\n\tpublic static void main(String[] args) {\n\t\tCustomer c1 = new Customer(\"Shreyas Iyer\", \"\", \"BXBPB1123D\");\n\t\tCustomer c2 = new Customer(\"Venkatesh Iyer\", \"209005091129\",\"\");\n\t\tc1.getDetails(); // LINE 2\n\t\tc2.getDetails(); // LINE 3\n\t}\n}\n```",
+    "question": "Choose the correct option when the program is executed as: java -ea AssertionTest",
+    "options": {
+      "A": "LINE 1 generates a compilation error, because you cannot write multiple conditions in a single assert statement.",
+      "B": "LINE 1 throws AssertionError when LINE 2 is executed.",
+      "C": "LINE 1 throws AssertionError when LINE 3 is executed.",
+      "D": "This program generates the output:\nShreyas Iyer\nBXBPB1123D\nVenkatesh Iyer\n209005091129"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\nclass LocationException extends Exception{\n\tpublic LocationException (String str) {\n\t\tsuper(str);\n\t}\n}\nclass Fresher{\n\tString name, pre_location;\n\t//Constructor to initialize the instance variables (assuming public Fresher(String n, String l) {...})\n}\nclass Kipro{\n\tMap<String, String> map = new HashMap<String, String>();\n\tpublic Kipro() {\n\t\tmap.put(\"Hyderabad\", \"100 fresher jobs\");\n\t\tmap.put(\"Chennai\", \"175 fresher jobs\");\n\t}\n\tvoid recruit (Fresher f) throws LocationException {\n\t\tif (map.get(f.pre_location) == null)\n\t\t\tthrow new LocationException(\"No jobs\");\n\t\telse\n\t\t\tSystem.out.println(map.get(f.pre_location));\n\t}\n}\npublic class ExceptionTest {\n\tpublic static void main(String[] args) {\n\t\tFresher f1 = new Fresher(\"ABC\", \"Hyderabad\");\n\t\tFresher f2 = new Fresher (\"XYZ\", \"Bangalore\");\n\t\tKipro k = new Kipro();\n\t\ttry {\n\t\t\tk.recruit (f1);\n\t\t\tk.recruit (f2);\n\t\t}\n\t\tcatch (LocationException e) {\n\t\t\tSystem.out.println(e.getMessage());\n\t\t}\n\t}\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nNo jobs\n100 fresher jobs",
+      "B": "This program generates the output:\n100 fresher jobs\nNo jobs",
+      "C": "This program generates the output:\nNo jobs\n175 fresher jobs",
+      "D": "The program terminates due to unhandled exception(s)."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Computable{\n    void compute();\n}\nclass Phone implements Computable{\n    public void compute() {\n        System.out.println(\"Phone compute\");\n    }\n}\nclass Laptop implements Computable{\n    public void compute() {\n        System.out.println(\"Laptop compute\");\n    }\n}\nclass DeviceList{\n    private Object[] cArr =  new Object[] {new Phone(), new Laptop()};\n    public void getCompute(){\n        for(int i=0; i < cArr.length; i++){\n            //LINE 1\n        }\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        DeviceList dList = new DeviceList();\n        dList.getCompute();\n    }\n}\n```",
+    "question": "Identify the appropriate option to fill in place of LINE 1 such that the output is\nPhone compute\nLaptop compute",
+    "options": {
+      "A": "cArr[i].compute();",
+      "B": "((Computable) cArr[i]).compute();",
+      "C": "((Phone) cArr[i]).compute();",
+      "D": "((Laptop) cArr[i]).compute();"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\npublic class Example{\n    public <T extends Comparable> void sortArray (T[] obj){\n        // Sorts obj\n    }\n    public <T> void elementDisplay (T[] arr){\n        // Displays the elements of arr\n    }\n    public <T extends Number> T sum(List<T> lst){\n        // Returns the sum of elements of 1st\n    }\n}\n```",
+    "question": "How does class Example look after type erasure?",
+    "options": {
+      "A": "```java\npublic class Example{\n    public void sortArray(Object[] obj){\n        // Sorts obj\n    }\n    public void elementDisplay(Object[] arr) {\n        // Displays the elements of arr\n    }\n    public Object sum(List<Object> 1st){\n        // Returns the sum of elements of 1st\n    }\n}\n```",
+      "B": "```java\npublic class Example{\n    public void sortArray (Comparable[] obj){\n        // Sorts obj\n    }\n    public void elementDisplay(Object[] arr) {\n        // Displays the elements of arr\n    }\n    public Number sum (List<Number> 1st){\n        // Return the sum of elements of 1st\n    }\n}\n```",
+      "C": "```java\npublic class Example{\n    public void sortArray (Comparable[] obj){\n        // Sorts obj\n    }\n    public void elementDisplay(Object[] arr) {\n        // Displays the elements of arr\n    }\n    public T sum (List<Number> 1st) {\n        // Return the sum of elements of 1st\n    }\n}\n```",
+      "D": "```java\npublic class Example{\n    public void sortArray (T[] obj){\n        // Sorts obj\n    }\n    public void elementDisplay(T[] arr){\n        // Displays the elements of arr\n    }\n    public T sum (List<T> lst) {\n        // Return the sum of elements of 1st\n    }\n}\n```"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that prints the salaries of employees and managers.\n```java\nimport java.util.*;\nclass Employee{\n    double salary;\n    public Employee (double s) {\n        salary = s;\n    }\n    public double getSalary(){\n        return salary;\n    }\n}\nclass Manager extends Employee{\n    public Manager (double s) {\n        super(s);\n    }\n}\nclass Test {\n    // FUNCTION HEADER for function printSalary\n    {\n        for(int i=0; i < lst.size(); i++) {\n            System.out.println(lst.get(i).getSalary());\n        }\n    }\n    public static void main(String[] args) {\n        List<Employee> e = new ArrayList<Employee>();\n        e.add(new Employee (12000));\n        e.add(new Employee (2000));\n        List<Manager> m = new ArrayList<Manager>();\n        m.add(new Manager (13000));\n        m.add(new Manager(1200));\n        printSalary (e);\n        printSalary (m);\n    }\n}\n```",
+    "question": "From among the options, identify the appropriate function header for function printSalary that takes as input a list of employees and managers, and prints their salaries. Choose the correct option(s).",
+    "options": {
+      "A": "public static void printSalary (List<Employee> 1st)",
+      "B": "public static <T extends Employee> void printSalary (List<T> lst)",
+      "C": "public static void printSalary (List<? extends Employee> 1st)",
+      "D": "public static void printSalary (List<Manager> 1st)"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the code given below\n```java\ninterface Shape{\n    public abstract int area();\n}\nclass Square implements Shape, Cloneable{\n    int side;\n    public Square(int s) {\n        side = s;\n    }\n    public int area(){\n        return side * side;\n    }\n    public Square clone() throws CloneNotSupportedException{\n        return (Square)super.clone();\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        Square s1 = new Square (5);\n        try{\n            Square s2 = s1.clone();\n            s1.side = 3;\n            System.out.print(s1.area() + s2.area());\n        } catch (CloneNotSupportedException e) {\n            System.out.println(\"Cloning not supported\");\n        }\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "18",
+      "B": "50",
+      "C": "34",
+      "D": "Cloning not supported"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below that prints the highest payment charge among a set of given Payment App objects.\n```java\nimport java.util.*;\ninterface PaymentApp {\n    public abstract double paymentCharges();\n}\nclass XPay implements PaymentApp{\n    double payAmount;\n    // Constructor\n    // method paymentCharges() that returns 5% of payAmount\n}\nclass YPay extends XPay{\n    // Constructor\n    // method paymentCharges() that returns 6% of payAmount\n}\npublic class Test{\n    // LINE 1: FUNCTION HEADER\n    {\n        // invokes method paymentCharges()\n        // to print the value of highest payment charge\n    }\n    public static void main(String[] args) {\n        PaymentApp[] p = {new XPay(1200), new YPay(1200)};\n        printHighCharge(p);\n    }\n}\n```",
+    "question": "From among the options, identify the appropriate function header for function printHighCharge that takes as input an array of PaymentApp objects and prints the highest charge. Choose the correct option(s).",
+    "options": {
+      "A": "public static void printHighCharge(<?> p)",
+      "B": "public static <T extends PaymentApp> void printHighCharge (T[] p)",
+      "C": "public static <T extends XPay> void printHighCharge (T[] p)",
+      "D": "public static void printHighCharge (PaymentApp[] p)"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below that should print the names of teachers whose experience is between 2 and 4 (both inclusive).\n```java\nimport java.util.*;\nclass Teacher{\n    String name;\n    double experience;\n    public Teacher (String name, double exp) {\n        this.name = name;\n        this.experience = exp;\n    }\n}\npublic class Stream {\n    public static void main(String[] args) {\n        List<Teacher> tList = new ArrayList<Teacher>();\n        tList.add(new Teacher (\"T1\", 3.5));\n        tList.add(new Teacher (\"T2\", 4.2));\n        tList.add(new Teacher (\"T3\", 2.6));\n        tList.add(new Teacher (\"T4\", 3.4));\n        tList.add(new Teacher(\"T5\", 1.5));\n        //CODE BLOCK\n    }\n}\n```",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
+    "options": {
+      "A": "tList.stream()\n    .map(i -> i.experience >= 2 && i.experience <= 4)\n    .forEach(t->System.out.println(t.name));",
+      "B": "tList.stream()\n    .filter(i -> i.experience >= 2 && i.experience <= 4)\n    .forEach(t->System.out.println(t.name));",
+      "C": "tList.stream()\n    .filter(i -> i.experience >= 2)\n    .filter(i -> i.experience <= 4)\n    .forEach(t->System.out.println(t.name));",
+      "D": "tList.stream()\n    .filter(i -> i.experience >= 2)\n    .map(i -> i.experience <= 4)\n    .forEach(t->System.out.println(t.name));"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "From among the options, choose the code segment(s) that give(s) the same output as is given by the Java code inside the CODE BLOCK.\n```java\nimport java.util.*;\nimport java.util.stream.*;\npublic class Test {\n    public static void main(String[] args){\n        //CODE BLOCK begins here\n        Stream.iterate(1, n->n+1)\n            .map(n->n*n)\n            .limit(4)\n            .forEach(i -> System.out.println(i));\n        //CODE BLOCK ends here\n    }\n}\n```",
+    "question": "From among the options, choose the code segment(s) that give(s) the same output as is given by the Java code inside the CODE BLOCK.",
+    "options": {
+      "A": "Stream.iterate(1, n->n+1)\n    .map(n->n*n)\n    .filter(n->n<=4)\n    .forEach(i -> System.out.println(i));",
+      "B": "Stream.iterate(1, n->n<=4, n->n+1)\n    .map(n->n*n)\n    .forEach(i -> System.out.println(i));",
+      "C": "Stream.iterate(1, n->n+1)\n    .takeWhile(n->n<=4)\n    .map(n->n*n)\n    .forEach(i -> System.out.println(i));",
+      "D": "Stream.iterate(1, n->n+1)\n    .map(n->n*n)\n    .dropWhile(n->n<=16)\n    .forEach(i -> System.out.println(i));"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n```java\nclass Arithmetic{\n    public static void div(int a, int b) throws Exception {\n        System.out.println(a/b);\n    }\n    public static void getResult() throws Exception {\n        try {\n            div(10, 0);\n            div(12, 6);\n        } catch (Exception e) {\n            System.out.println(\"caught in getResult\");\n            throw e;\n        }\n    }\n}\npublic class ExceptionTest {\n    public static void main(String[] args) throws Throwable {\n        try {\n            Arithmetic.getResult();\n        } catch (Exception e) {\n            System.out.println(\"caught in main\");\n        }\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\ncaught in main\ncaught in getResult",
+      "B": "This program generates the output:\ncaught in getResult\ncaught in main\n2",
+      "C": "This program terminates abnormally due to unhandled exceptions.",
+      "D": "This program generates the output:\ncaught in getResult\ncaught in main"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n```java\nclass SelectionException extends Exception{\n    public SelectionException(String str){\n        super(str);\n    }\n}\nclass Player{\n    private String name;\n    private int runs;\n    private double strikerate;\n    //Constructor to initialize name, runs and strikerate\n    public void selection() throws SelectionException{\n        System.out.println(\"Hello \"+this.name);\n        if(this.runs > 300) {\n            if(this.strikerate > 150) {\n                System.out.println(\"You have selected in to the team\");\n            } else {\n                throw new SelectionException(\"You have less strike rate\");\n            }\n        } else {\n            throw new SelectionException(\"You have scored less runs\");\n        }\n    }\n}\npublic class UserExceptionTest {\n    public static void main(String[] args) {\n        Player p1 = new Player(\"Dhoni\", 340, 98.9);\n        Player p2 = new Player (\"Russel\", 295, 100.8);\n        try {\n            p1.selection();\n            p2.selection();\n        } catch (SelectionException e) {\n            System.out.println(e.getMessage());\n        }\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "Hello Dhoni\nYou have less strike rate",
+      "B": "Hello Russel\nYou have less strike rate\nYou have scored less runs",
+      "C": "Hello Dhoni\nYou have less strike rate\nHello Russel\nYou have less strike rate\nYou have scored less runs",
+      "D": "Hello Dhoni\nYou have less strike rate\nHello Russel\nYou have scored less runs"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the three Java programs given below.\n```java\n// A.java:\npackage pack1;\nimport java.util.List;\npublic class A {\n    private void getMessage() { //METHOD-1\n        System.out.println(\"getMessage with private\");\n    }\n    public void getMessage(int x) { //METHOD-2\n        System.out.println(\"getMessage with public\");\n    }\n    void getMessage(String y) { //METHOD-3\n        System.out.println(\"getMessage with default\");\n    }\n    protected void getMessage (List<String> z) { //METHOD-4\n        System.out.println(\"getMessage with protected\");\n    }\n}\n\n// B.java:\npackage pack1;\npublic class B {\n}\n\n// C.java:\npackage pack2;\nimport pack1.A;\npublic class C extends A{\n}\n```",
+    "question": "Choose the correct option with respect to METHODS 1, 2, 3, and 4 inside class A.",
+    "options": {
+      "A": "Class B can access METHODs 1, 2 and 4",
+      "B": "Class C can access METHODS 2, 3 and 4",
+      "C": "Class B and C both can access all the four methods.",
+      "D": "Class B can access METHODS 2, 3 and 4",
+      "E": "Class C can access METHODS 2, 4"
+    },
+    "correctOption": ["D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\npublic class SetExample {\n    public static void main(String[] args) {\n        LinkedList<String> list = new LinkedList<String>();\n        list.add(\"Python\");\n        list.add(\"Programming\");\n        list.add(\"Java\");\n        list.add(\"Programming\");\n        Set<String> set1=new LinkedHashSet<String>();\n        Set<String> set2=new TreeSet<String>();\n        for (String str:list) {\n            set1.add(str);\n            set2.add(str);\n        }\n        for (String str:set1) {\n            System.out.print(str+\" \");\n        }\n        System.out.println();\n        for (String str:set2) {\n            System.out.print(str+\" \");\n        }\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "Java Programming Python\nPython Programming Java",
+      "B": "Python Programming Java\nJava Programming Python",
+      "C": "Python Programming Programming Java\nJava Programming Programming Python",
+      "D": "Java Programming Programming Python\nPython Programming Programming Java"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\nclass Student{\n    String name;\n    double cgpa;\n    //Constructor to initialize name and cgpa\n    public String toString() {\n        return name;\n    }\n}\npublic class IteratorTest {\n    public static boolean property (double x) {\n        if(x<7.0)\n            return false;\n        return true;\n    }\n    public static List<Student> getFinalList (List<Student> sList) {\n        Iterator<Student> it = sList.iterator();\n        while (it.hasNext()) {\n            Student s = it.next();\n            if(!property(s.cgpa)){\n                //LINE 1\n            }\n        }\n        return sList;\n    }\n    public static void main(String[] args) {\n        var list = new ArrayList<Student>();\n        list.add(new Student(\"Sandeep\", 9.78));\n        list.add(new Student(\"Navadeep\", 5.78));\n        list.add(new Student(\"Randeep\", 7.0));\n        list.add(new Student(\"Gunadeep\", 7.0));\n        System.out.println(getFinalList(list));\n    }\n}\n```",
+    "question": "Choose the correct option to be filled in place of LINE 1 so that the output is:\n[Sandeep, Randeep, Gunadeep]",
+    "options": {
+      "A": "it.remove(s);",
+      "B": "it.remove();",
+      "C": "sList.remove();",
+      "D": "sList.remove(s);"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n```java\nclass UPIUser{\n    private String name, phone;\n    public UPIUser (String n, String p) {\n        this.name = n;\n        this.phone = p;\n    }\n    public String getUpiID() {\n        assert name != null: \"Invalid name\"; //LINE 1\n        assert phone.length() == 10 : \"Should be 10 digits\"; //LINE 2\n        assert phone != null: \"Invalid phone number\"; //LINE 3\n        return phone+\"@ybl\";\n    }\n}\npublic class AssertionTest {\n    public static void main(String[] args) {\n        UPIUser u1= new UPIUser(\"\", \"730007311\");\n        UPIUser u2 = new UPIUser(\"Sudarshan\", null);\n        System.out.println(u1.getUpiID()); // LINE 4\n        System.out.println(u2.getUpiID()); // LINE 5\n    }\n}\n```",
+    "question": "Choose the correct option when the program is executed as:\njava -ea AssertionTest",
+    "options": {
+      "A": "LINE 1 throws AssertionError when LINE 4 is executed.",
+      "B": "LINE 2 throws AssertionError when LINE 4 is executed.",
+      "C": "LINE 2 throws AssertionError when LINE 5 is executed.",
+      "D": "LINE 3 throws AssertionError when LINE 5 is executed."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\npublic class MapTest {\n    public static void printPlayers (Map<String, Integer> m) {\n        var map1 = new LinkedHashMap<String, Integer>();\n        var map2= new TreeMap<String, Integer>();\n        String[] players = {\"Buttler\", \"Roy\", \"Dhoni\"};\n        for (String p: players) {\n            map1.put(p, m.getOrDefault(p, 0));\n            map2.put(p, m.getOrDefault(p, 0));\n        }\n        System.out.println(map1);\n        System.out.println(map2);\n    }\n    public static void main(String[] args) {\n        var map = new HashMap<String, Integer>();\n        map.put(\"Roy\", 78);\n        map.put(\"Surya\", 56);\n        map.put(\"Buttler\", 14);\n        printPlayers (map);\n    }\n}\n```\nYou may make use of the method description given below.\n`getOrDefault(Object key, V defaultValue)`: Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.",
+    "question": "What will the output be?",
+    "options": {
+      "A": "{Buttler=14, Dhoni=0, Roy=78}\n{Buttler=14, Roy=78, Dhoni=0}",
+      "B": "{Buttler=14, Roy=78, Dhoni=0, Surya=56}\n{Buttler=14, Dhoni=0, Roy=78, Surya=56}",
+      "C": "{Buttler=14, Roy=78, Dhoni=0}\n{Buttler=14, Dhoni=0, Roy=78}",
+      "D": "{Buttler=14, Roy=78, Dhoni=0, Surya=0}\n{Buttler=14, Dhoni=0, Roy=78, Surya=0}"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that checks whether the input number is a palindrome or not.\n```java\nimport java.util.*;\npublic class QTest {\n    public static boolean checkPalindrome (Deque<Character> q) {\n        //CODE BLOCK\n        return q.isEmpty();\n    }\n    public static void main(String[] args) {\n        String num1= \"34543\";\n        String num2 = \"12312\";\n        Deque<Character> q1 = new ArrayDeque<Character>();\n        Deque<Character> q2 = new ArrayDeque<Character>();\n        for(int i=0; i<5; i++) {\n            q1.add(num1.charAt(i));\n            q2.add(num2.charAt(i));\n        }\n        System.out.println(checkPalindrome(q1));\n        System.out.println(checkPalindrome(q2));\n    }\n}\n```\nYou may make use of the descriptions of the methods given below. These are methods inside type Deque.\n`pollLast()`: Retrieves and removes the last element of this deque, or returns null if this deque is empty.\n`poll()`: Retrieves and removes the head of the queue represented by this deque (in other words, the first element of this deque), or returns null if this deque is empty.\n`isEmpty()`: Returns true if this deque contains no elements.",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK so that the output is:\ntrue\nfalse",
+    "options": {
+      "A": "if(q.size() > 0) {\n    if(q.poll() != q.pollLast())\n        break;\n}",
+      "B": "while(q.size() < 0) {\n    if(q.poll() != q.pollLast())\n        break;\n}",
+      "C": "while(q.size() > 0) {\n    if(q.poll() != q.pollLast())\n        break;\n}",
+      "D": "if(q.size() > 0) {\n    while(q.poll() != q.pollLast())\n        break;\n}"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\npublic class SetIteratorTest {\n    public static void main(String args[]) {\n        var set1 = new HashSet<String>();\n        set1.add(\"Cherry\");\n        set1.add(\"Banana\");\n        set1.add(\"Apple\");\n        set1.add(\"Date\");\n        var set2 = new TreeSet<String>(set1);\n        Iterator<String> it1 = set1.iterator();\n        Iterator<String> it2 = set2.iterator();\n        while (it1.hasNext()) {\n            System.out.println(it1.next());\n        }\n        while (it2.hasNext()) {\n            System.out.println(it2.next());\n        }\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "it1 will visit elements of set1 in sorted order.\nit2 will visit elements of set2 in sorted order.",
+      "B": "it1 will visit elements of set1 in the order in which they were inserted.\nit2 will visit elements of set2 in sorted order.",
+      "C": "it1 will visit elements of set1 in unspecified order.\nit2 will visit elements of set2 in sorted order.",
+      "D": "it1 will visit elements of set1 in the order in which they were inserted.\nit2 will visit elements of set2 in unspecified order."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n```java\ninterface Language{\n    void display();\n}\nclass French implements Language{\n    public void display() {\n        System.out.println(\"French Language\");\n    }\n}\nclass English implements Language{\n    public void display() {\n        System.out.println(\"English Language\");\n    }\n}\nclass LanguageList{\n    private Object[] LArr = { new French(), new English() };\n    public void getInfo(){\n        for(int i=0; i< LArr.length; i++){\n            //LINE 1\n        }\n    }\n}\npublic class Test{\n    public static void main(String[] args) {\n        LanguageList aList = new LanguageList();\n        aList.getInfo();\n    }\n}\n```",
+    "question": "Identify the appropriate option to fill in place of LINE 1 such that the output is\nFrench Language\nEnglish Language",
+    "options": {
+      "A": "LArr[i].display();",
+      "B": "((English) LArr[i]).display();",
+      "C": "((French) LArr[i]).display();",
+      "D": "((Language) LArr[i]).display();"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the following Java code.\n```java\nimport java.util.stream.*;\npublic class Test {\n    public static void main(String args[]) {\n        String[] colors = {\"red\", \"green\", \"blue\", \"yellow\"};\n        Stream.of(colors).map((color) -> color.length())\n            .filter((length) -> length % 2 == 0)\n            .forEach((x) -> System.out.println(x));\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "3\n5",
+      "B": "blue\nyellow",
+      "C": "4\n6",
+      "D": "red\ngreen"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n```java\nclass Person {\n    String name;\n    // Constructor\n    public String toString(){\n        return name;\n    }\n}\nclass Instructor extends Person implements Cloneable {\n    int salary;\n    // Constructor\n    public Instructor clone() throws CloneNotSupportedException{\n        return (Instructor)super.clone();\n    }\n    public String toString(){\n        return (super.toString() + \":\" + salary);\n    }\n}\npublic class Test {\n    public static void main(String args[]) throws CloneNotSupportedException{\n        Instructor i1 = new Instructor(\"Thangarajan\", 150000);\n        Instructor i2 = i1.clone();\n        i2.name = \"Monika\";\n        i2.salary = 240000;\n        System.out.println(i1 + \"\\n\" + i2);\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "Thangarajan: 240000\nMonika: 240000",
+      "B": "Thangarajan: 240000\nMonika: 150000",
+      "C": "Thangarajan: 150000\nMonika: 150000",
+      "D": "Thangarajan: 150000\nMonika: 240000"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n```java\nclass Validation {\n    public boolean validate(int a, int b) {\n        assert a > 0: \"a should be positive\";    //LINE 1\n        assert b > 0: \"b should be positive\";    //LINE 2\n        return true;\n    }\n}\npublic class AssertTest {\n    public static void main(String[] args) {\n        int a = -10;\n        int b = -5;\n        int result = 0;\n        assert a != 0: a;                       //LINE 3\n        assert b != 0: b;                       //LINE 4\n        Validation obj = new Validation();\n        if (obj.validate(a, b))\n            result = a + b;\n        assert result > 0: result;              //LINE 5\n        System.out.println(result);\n    }\n}\n```",
+    "question": "Identify the line that throws AssertionError when the program is executed as:\n java -ea AssertTest",
+    "options": {
+      "A": "LINE 1",
+      "B": "LINE 2",
+      "C": "LINE 3",
+      "D": "LINE 4",
+      "E": "LINE 5"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n```java\nclass MinScoreException extends Exception{\n    public MinScoreException() {\n        super(\"application rejected: low score\");\n    }\n}\nclass Application{\n    private int score;\n    public Application (int s){\n        score = s;\n    }\n    public void validate() throws MinScoreException{\n        if (score < 75)\n            throw new MinScoreException();\n        System.out.println(\"applied successfully\");\n    }\n}\nclass Test{\n    public static void main(String args[]) {\n        try {\n            Application ap1 = new Application(65);\n            Application ap2 = new Application(90);\n            ap1.validate();\n            ap2.validate();\n        }\n        catch(Exception e) {\n            System.out.println(e.getMessage());\n        }\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates output:\napplication rejected: low score",
+      "B": "This program generates output:\napplication rejected: low score\napplied successfully",
+      "C": "This program generates output:\napplied successfully",
+      "D": "The program crashes due to the uncaught exception: MinScoreException"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\nclass Student {\n    String name, subject;\n    int marks;\n    public Student (String n, String s, int m){\n        name = n;\n        subject = s;\n        marks = m;\n    }\n}\npublic class Test{\n    public static void printStudents (ArrayList<Student> sL) {\n        var map = new LinkedHashMap<String, Integer>();\n        for (Student s: sL) {\n            map.put(s.name, map.getOrDefault(s.name, 0) + s.marks);\n        }\n        for (Map.Entry<String, Integer> e: map.entrySet()) {\n            System.out.println(e.getKey() + \" = \" + e.getValue());\n        }\n    }\n    public static void main(String[] args) {\n        ArrayList<Student> sList = new ArrayList<Student>();\n        sList.add(new Student(\"Carl\", \"Maths\", 80));\n        sList.add(new Student(\"Rayan\", \"Maths\", 89));\n        sList.add(new Student(\"Lokesh\", \"Social\", 100));\n        sList.add(new Student(\"Carl\", \"Science\", 98));\n        printStudents(sList);\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "Carl = 98\nRayan = 89\nLokesh = 100",
+      "B": "Carl = 178\nLokesh = 100\nRayan = 89",
+      "C": "Carl = 178\nRayan = 89\nLokesh = 100",
+      "D": "Carl = 80\nLokesh = 100\nRayan = 89"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the following code.\n```java\nimport java.util.*;\npublic class TreeTest {\n    public static void main(String args[]) {\n        ArrayList<String> list = new ArrayList<String>();\n        list.add(\"Monkey\");\n        list.add(\"Lion\");\n        list.add(\"Goat\");\n        list.add(\"Elephant\");\n        HashSet<String> set1 = new HashSet<String>(list);\n        TreeSet<String> set2 = new TreeSet<String>(set1);\n        set2.addAll(set1);\n        System.out.println(set2);\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\n[Elephant, Goat, Lion, Monkey, Elephant, Goat, Lion, Monkey]",
+      "B": "This program generates the output:\n[Elephant, Goat, Lion, Monkey]",
+      "C": "This program terminates abnormally due to UnsupportedOperationException.",
+      "D": "This program generates the output:\n[Monkey, Lion, Goat, Elephant]"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\npublic class ListOperations {\n    public <E> int countOccurrences (E[] arr, E element) {\n        // Counts the number of occurrences of the element in the array\n    }\n    public <E extends Comparable<E>> void sort (E[] arr) {\n        // Sorts the array\n    }\n}\n```",
+    "question": "How does class ListOperations look after type erasure?",
+    "options": {
+      "A": "public class ListOperations {\n    public int countOccurrences(Object[] arr, Object element) {\n        // Counts the number of occurrences of the element in the array\n    }\n    public void sort(Object[] arr) {\n        // Sorts the array\n    }\n}",
+      "B": "public class ListOperations {\n    public int countOccurrences(Object[] arr, Object element) {\n        // Counts the number of occurrences of the element in the array\n    }\n    public void sort(Comparable[] arr) {\n        // Sorts the array\n    }\n}",
+      "C": "public class ListOperations {\n    public int countOccurrences(Object[] arr, Object element) {\n        // Counts the number of occurrences of the element in the array\n    }\n    public void sort(E[] arr) {\n        // Sorts the array\n    }\n}",
+      "D": "public class ListOperations {\n    public int countOccurrences(E[] arr, E element) {\n        // Counts the number of occurrences of the element in the array\n    }\n    public void sort(E[] arr) {\n        // Sorts the array\n    }\n}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\nclass Candidate{\n    String name;\n    int aptitudeScore;\n    //Constructor to initialize the instance variables\n    public Candidate(String name, int aptitudeScore) { this.name = name; this.aptitudeScore = aptitudeScore; }\n    public String toString(){\n        return name;\n    }\n}\npublic class Test{\n    public static boolean check(int aptitudeScore ){\n        if (aptitudeScore > 75)\n            return true;\n        return false;\n    }\n    public static void printShortlistCdtList(List<Candidate> cList){\n        Iterator<Candidate> it = cList.iterator();\n        while (it.hasNext()) {\n            Candidate c = it.next();\n            if(!check(c.aptitudeScore))\n                it.remove();\n        }\n    }\n    public static void main(String[] args) {\n        var list = new ArrayList<Candidate>();\n        list.add(new Candidate(\"Meena\", 89));\n        list.add(new Candidate(\"Manu\", 40));\n        list.add(new Candidate(\"Payal\", 68));\n        list.add(new Candidate(\"Ayan\", 78));\n        printShortlistCdtList(list);\n        System.out.println(list);\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output: [Ayan, Meena]",
+      "B": "This program generates the output: [Manu, Payal]",
+      "C": "This program generates the output: [Meena, Ayan]",
+      "D": "This program generates the output: [Ayan, Manu, Meena, Payal]"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider two Java files located in two different packages as shown below.\n```java\n//MathUtility.java\npackage mathutil;\npublic class MathUtility{\n    long getFibonacci(int n){ // package-private access\n        // return Fibonacci (n)\n        return 0; // Placeholder\n    }\n    protected long add(long n1, long n2){\n        //return n1 + n2\n        return n1 + n2; // Placeholder\n    }\n}\n\n//Test1.java\npackage test;\nimport mathutil.*;\nclass Calculator extends MathUtility{\n    long FibSum(int num, int i) {\n        long fib = this.getFibonacci(i); // LINE 1\n        long sum = this.add(num, fib);   // LINE 2\n        return sum;\n    }\n}\nclass Test1{\n    public static void main(String args[]) {\n        Calculator c = new Calculator();\n        long val = c.add(3, 4);          // LINE 3\n        System.out.println(\"Fibonacci Sum: \"+ c.FibSum(4,2));\n    }\n}\n```",
+    "question": "Choose the correct option regarding these two .java files.",
+    "options": {
+      "A": "LINE 1 & LINE 3 will lead to compilation error.",
+      "B": "LINE 2 & LINE 3 will lead to compilation error.",
+      "C": "Only LINE 1 will lead to compilation error.",
+      "D": "The code will compile successfully."
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that prints the highest score among a set of given Scorable objects.\n```java\nimport java.util.*;\ninterface Scorable {\n    public abstract int getScore();\n}\nclass Student implements Scorable {\n    private int score;\n    public Student(int score) { this.score = score; }\n    public int getScore() { return this.score; } \n}\npublic class Test {\n    // LINE 1: FUNCTION HEADER\n    {\n        // invokes method getScore()\n        // to print the value of highest score\n    }\n    public static void main(String[] args) {\n        Scorable[] scores = { new Student(85), new Student(92), new Student(78) };\n        printHighestScore(scores);\n    }\n}\n```",
+    "question": "From among the options, identify the appropriate function header(s) for the function printHighestScore that takes as input an array of Scorable objects and prints the highest score.",
+    "options": {
+      "A": "public static void printHighestScore(<?>[] items)",
+      "B": "public static <T extends Scorable> void printHighestScore (T[] items)",
+      "C": "public static <T extends Student> void printHighestScore (T[] items)",
+      "D": "public static void printHighestScore (Scorable[] items)"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n```java\nimport java.util.*;\nclass Test {\n    public static String search (Deque<Integer> q, int num) {\n        while(q.size() > 0) {\n            // LINE 1\n            {\n                return \"Element found\";\n            }\n        }\n        return \"Element not found\";\n    }\n    public static void main(String[] args) {\n        Deque<Integer> queue1 = new ArrayDeque<Integer>();\n        queue1.add(60);\n        queue1.add(36);\n        queue1.add(96);\n        queue1.add(70);\n        System.out.println(search(queue1, 96));\n    }\n}\n```",
+    "question": "Identify the appropriate option(s) to fill in place of LINE 1 such that the output is\nElement found",
+    "options": {
+      "A": "if(q.peek() == num)",
+      "B": "if(q.element() == num)",
+      "C": "if(q.poll() == num)",
+      "D": "if(q.remove() == num)"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that prints the price of cars.\n```java\nimport java.util.*;\nclass Car{\n    private double price;\n    public Car (double p){\n        price = p;\n    }\n    public double getPrice(){\n        return price;\n    }\n}\nclass Hyundai extends Car{\n    public Hyundai (double p){\n        super(p);\n    }\n}\nclass Renault extends Car{\n    public Renault (double p){\n        super(p);\n    }\n}\npublic class Test {\n    // FUNCTION HEADER for function printPrice\n    {\n        for(int i=0; i<lst.size(); i++){\n            System.out.println(lst.get(i).getPrice());\n        }\n    }\n    public static void main(String args[]) {\n        List<Hyundai> h = new ArrayList<Hyundai>();\n        h.add(new Hyundai(1.30));\n        h.add(new Hyundai(1.20));\n        List<Renault> r = new ArrayList<Renault>();\n        r.add(new Renault(2.30));\n        r.add(new Renault(5.60));\n        printPrice(h);\n        printPrice(r);\n    }\n}\n```",
+    "question": "From among the options, identify the appropriate function header(s) for the function printPrice that takes as input a list of cars and prints their prices.",
+    "options": {
+      "A": "public static void printPrice (List<Car> lst)",
+      "B": "public static void printPrice (List<Renault> lst)",
+      "C": "public static void printPrice (List<? extends Car> lst)",
+      "D": "public static void printPrice (List<Object> lst)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the following code that computes the sum of the even numbers from array iArr.\n```java\nimport java.util.*;\n//CODE BLOCK: Define Filter\npublic class LTest{\n    public static <T extends Number> double sum (T[] x, Filter<T> pred) {\n        double s = 0.0;\n        for(var i: x) {\n            if (pred.isValid(i))\n                s += i.doubleValue();\n        }\n        return s;\n    }\n    public static void main(String[] args) {\n        Integer[] iArr = new Integer[] {1, 2, 3, 4, 5};\n        System.out.print(sum(iArr, i -> i % 2 == 0));\n    }\n}\n```",
+    "question": "Identify the correct option(s) to fill in place of CODE BLOCK such that the output is 6.0",
+    "options": {
+      "A": "interface Filter<T>{\n    public boolean isValid(T a);\n}",
+      "B": "abstract class Filter<T extends Number>{\n    public abstract boolean isValid(T a);\n}",
+      "C": "interface Filter<T extends Number>{\n    public boolean isValid(T a);\n}",
+      "D": "interface Filter<T extends Number>{\n    public abstract boolean isValid(T a);\n    public abstract boolean predicate(T a);\n}"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\nThe method boolean containsKey (Object key) in the class Map returns true if and only if the map contains a mapping for a key k such that Objects.equals(key, k).\n\n```java\nimport java.util.*;\n\ninterface Shape {\n    void draw();\n}\n\nclass Circle implements Shape {\n    public void draw() {\n        System.out.println(\"Drawing a Circle\");\n    }\n}\n\nclass Square implements Shape {\n    public void draw() {\n        System.out.println(\"Drawing a Square\");\n    }\n}\n\nclass DrawingBoard<T extends Shape> {\n    private Map<String, T> m = new HashMap<>();// LINE 1\n    public void add(String name, T shape) {\n        m.put(name, shape);\n    }\n    public void draw(String name) {\n        if (m.containsKey(name)) {\n            T s = m.get(name); //LINE 2\n            s.draw();\n        } else {\n            System.out.println(\"Shape not found\");\n        }\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        DrawingBoard<Shape> dB = new DrawingBoard<Shape>();\n        Shape s1 = new Circle();\n        Shape s2 = new Square();\n        dB.add(\"circle\", s1);\n        dB.add(\"square\", s2);\n        dB.draw(\"circle\");\n        dB.draw(\"triangle\");\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because type T is not known",
+      "B": "This program generates output:\n Drawing a Circle",
+      "C": "LINE 2 generates compilation error because a variable of type Shape cannot refer to objects of type Circle and Square",
+      "D": "This program generates output:\n Drawing a Circle\n Shape not found"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider two Java files located in two different packages as shown below.\n\n**A.java:**\n```java\npackage com.pack1;\npublic class A {\n    void methodOne() {\n        System.out.println(\"Display methodOne\");\n    }\n    private void methodTwo() {\n        System.out.println(\"Display methodTwo\");\n    }\n    protected void methodThree() {\n        System.out.println(\"Display methodThree\");\n    }\n    public void methodFour() {\n        System.out.println(\"Display methodFour\");\n    }\n}\n```\n\n**B.java**\n```java\npackage com.pack2;\nimport com.pack1.A;\npublic class B extends A {\n    public static void main(String[] args) {\n        B obj = new B();\n        obj.methodOne();   //LINE 1\n        obj.methodTwo();   //LINE 2\n        obj.methodThree(); //LINE 3\n        obj.methodFour();  //LINE 4\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 2 and LINE 3 generate compilation errors.",
+      "B": "LINE 1, LINE 2, and LINE 3 generate compilation errors.",
+      "C": "LINE 1 and LINE 2 generate compilation errors.",
+      "D": "Only LINE 2 generates a compilation error."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n\n```java\nclass Validation {\n    public boolean validate(int a, int b) {\n        assert a > 0: \"a should be greater than zero\";      //LINE 1\n        assert b >= 1: \"b should not be less than one\";   //LINE 2\n        return true;\n    }\n}\n\npublic class AssertTest {\n    public static void main(String[] args) {\n        int a = 1;\n        int b = -1;\n        int result = 0;\n        Validation obj = new Validation();\n        if (obj.validate(a, b))\n            result = a / b;\n        assert result > 0: \"result should be greater than zero\"; //LINE 3\n        System.out.println(result);\n    }\n}\n```",
+    "question": "Choose the correct option when the program is executed as:\n java -ea AssertTest",
+    "options": {
+      "A": "LINE 1 generates assertion error.",
+      "B": "LINE 2 generates assertion error.",
+      "C": "LINE 3 generates assertion error.",
+      "D": "This program does not generate assertion error."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "The following code maps a set of names of employees to their performance ratings, and groups the names based on their eligibility for bonus.\nBased on the code, answer the question that follows.\n\n```java\nimport java.util.*;\n\npublic class Employee {\n    TreeSet<String> t1 = new TreeSet<String>();\n    TreeSet<String> t2 = new TreeSet<String>();\n    public boolean PerformanceRating(double rating) {\n        if (rating >= 4.0) {\n            return true;\n        }\n        return false;\n    }\n    public void filterEmployees(TreeMap<String, Double> rating) {\n        for (Map.Entry<String, Double> entry : rating.entrySet()) {\n            if (PerformanceRating(entry.getValue())) {\n                t1.add(entry.getKey());\n            } else {\n                t2.add(entry.getKey());\n            }\n        }\n    }\n    public void display() {\n        System.out.println(\"Eligible for Bonus: \" + t1);\n        System.out.println(\"Not Eligible for Bonus: \" + t2);\n    }\n    public static void main(String[] args) {\n        TreeMap<String, Double> rating = new TreeMap<String, Double>();\n        rating.put(\"Ramesh\", 4.5);\n        rating.put(\"Suresh\", 3.8);\n        rating.put(\"Kartik\", 4.2);\n        rating.put(\"Shubham\", 3.5);\n        rating.put(\"Mukesh\", 4.8);\n        Employee e = new Employee();\n        e.filterEmployees(rating);\n        e.display();\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nEligible for Bonus: [Shubham, Suresh]\nNot Eligible for Bonus: [Mukesh, Ramesh, Kartik]",
+      "B": "This program generates the output:\nEligible for Bonus: [Kartik, Mukesh, Ramesh]\nNot Eligible for Bonus: [Shubham, Suresh]",
+      "C": "This program generates the output:\nEligible for Bonus: [Mukesh, Ramesh, Kartik]\nNot Eligible for Bonus: [Shubham]",
+      "D": "The order in which elements of t1 and t2 are printed cannot be predicted."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the following code.\n\n```java\nimport java.util.*;\n\npublic class Test {\n    public static void main(String[] args) {\n        List<Integer> scores1 = new ArrayList<>();\n        scores1.add(34);\n        scores1.add(42);\n        scores1.add(50);\n        List<Integer> scores2 = new ArrayList<>();\n        scores2.add(45);\n        scores2.add(90);\n        scores2.add(34);\n        Map<String, Integer> am = new HashMap<>();\n        Map<String, List<Integer>> hm = new HashMap<>();\n        hm.put(\"Anil\", scores1);\n        hm.put(\"Vikas\", scores2);\n        Set<String> names = hm.keySet();\n        for (String name : names) {\n            List<Integer> temp = hm.get(name);\n            int count = 0;\n            int sum = 0;\n            // ***---CODE BLOCK---***\n            int avg = sum / count;\n            am.put(name, avg);\n        }\n    }\n}\n```",
+    "question": "Choose the correct option to fill in the CODE BLOCK to add the name and the average scores of both the students as map entries in Map<String, Integer> am.",
+    "options": {
+      "A": "for(List i : temp){\n    count = count + 1;\n    sum = sum + i;\n}",
+      "B": "for(List<Integer> i : temp) {\n    count = count + 1;\n    sum = sum + i;\n}",
+      "C": "for(int i: temp) {\n    sum = sum + temp;\n    count = count + 1;\n}",
+      "D": "for (Integer i: temp){\n    count = count + 1;\n    sum = sum + i;\n}"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that checks whether the input word is a palindrome or not.\nPlease note the following methods from type Deque.\npollLast(): Retrieves and removes the last element of this deque, or returns null if this deque is empty.\npollFirst(): Retrieves and removes the first element of the deque, or returns null if the deque is empty.\n\n```java\nimport java.util.*;\n\npublic class PalindromeChecker {\n    public static boolean isPalindrome(String word) {\n        Deque<Character> deque = new ArrayDeque<>();\n        for (int i = 0; i < word.length(); i++) {\n            deque.add(word.charAt(i));\n        }\n        //CODE BLOCK\n        return true;\n    }\n\n    public static void main(String[] args) {\n        String word1 = \"radar\";\n        String word2 = \"hello\";\n        System.out.println(\"Is '\" + word1 + \"' a palindrome? \" + isPalindrome(word1));\n        System.out.println(\"Is '\" + word2 + \"' a palindrome? \" + isPalindrome(word2));\n    }\n}\n```",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK so that the output is:\nIs 'radar' a palindrome? true\nIs 'hello' a palindrome? false",
+    "options": {
+      "A": "while (deque.size() > 0) {\n    if (deque.pollFirst() != deque.pollLast()) {\n        return true;\n    }\n}",
+      "B": "while (deque.size() < 0) {\n    if (deque.pollFirst() != deque.pollLast()) {\n        return false;\n    }\n}",
+      "C": "while (deque.size() > 1) {\n    if (deque.pollFirst() != deque.pollLast()) {\n        return false;\n    }\n}",
+      "D": "while (deque.size() > 0) {\n    char first = deque.pollFirst();\n    char last = deque.pollLast();\n    if (first != last) {\n        return true;\n    }\n}"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "Consider the Java code given below.\n\n```java\nclass Student implements Cloneable {\n    String studentName;\n    public Student(String n) {\n        studentName = n;\n    }\n    public Student clone() throws CloneNotSupportedException {\n        return (Student) super.clone();\n    }\n}\n\nclass Game implements Cloneable {\n    String gameName;\n    Student student1;\n    Student student2;\n    public Game(String gN, Student s1, Student s2) {\n        gameName = gN;\n        student1 = s1;\n        student2 = s2;\n    }\n    public Game clone() throws CloneNotSupportedException {\n        Game g = (Game) super.clone();\n        g.student1 = student1.clone();\n        g.student2 = student2.clone();\n        return g;\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) throws CloneNotSupportedException {\n        Student s1 = new Student(\"Ramesh\");\n        Student s2 = new Student(\"Jogesh\");\n        Game obj1 = new Game(\"ABC\", s1, s2);\n        Game obj2 = obj1.clone();\n        obj2.student1.studentName = \"Shubham\";\n        obj2.gameName = \"XYZ\";\n        System.out.println(obj1.gameName + \": \" + obj1.student1.studentName);\n        System.out.println(obj2.gameName + \":\" + obj2.student1.studentName);\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "ABC: Shubham\nXYZ: Shubham",
+      "B": "ABC: Shubham\nXYZ: Shubham",
+      "C": "ABC: Ramesh\nXYZ: Shubham",
+      "D": "ABC: Shubham\nXYZ: Shubham"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n\n```java\nimport java.util.*;\nimport java.util.stream.*;\n\npublic class MyClass {\n    public static void main(String args[]) {\n        List<String> wordlist = new ArrayList<>();\n        wordlist.add(\"reluctant\");\n        wordlist.add(\"test\");\n        wordlist.add(\"unpleasant\");\n        wordlist.add(\"delicious\");\n        wordlist.add(\"away\");\n        Stream<String> startLongWords = wordlist.stream()\n            .filter(w -> w.length() > 5)\n            .map(s -> s.substring(0, 2));\n        startLongWords.forEach(System.out::println);\n    }\n}\n```",
+    "question": "What will the output be?",
+    "options": {
+      "A": "re\nte\nun\nde\naw",
+      "B": "te\naw",
+      "C": "re\nun\nde",
+      "D": "reluctant\nunpleasant\ndelicious"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\ninterface Chargeable {\n    void charge();\n}\n\nclass SmartPhone implements Chargeable {\n    public void charge() {\n        System.out.println(\"Charging SmartPhone\");\n    }\n}\n\nclass SmartWatch implements Chargeable {\n    public void charge() {\n        System.out.println(\"Charging SmartWatch\");\n    }\n}\n\nclass DeviceList {\n    private Object[] cArr = { new SmartPhone(), new SmartWatch() };\n    public void chargeDevices() {\n        for (int i = 0; i < cArr.length; i++) {\n            // LINE 1\n        }\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        DeviceList dList = new DeviceList();\n        dList.chargeDevices();\n    }\n}\n```",
+    "question": "Identify the appropriate option to fill in place of LINE 1 such that the output is:\nCharging SmartPhone\nCharging SmartWatch",
+    "options": {
+      "A": "cArr[i].charge();",
+      "B": "((Chargeable) cArr[i]).charge();",
+      "C": "((SmartPhone) cArr[i]).charge();",
+      "D": "((SmartWatch)cArr[i]).charge();"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n\n```java\npublic class ArrayUtils {\n    public <T extends Comparable> T max(T[] arr) {\n        // code for finding maximum here\n    }\n    public <T extends Number> T avg(T[] arr) {\n        // code for finding average of elements here\n    }\n    public <T> int count(T[] arr) {\n        // code for counting the number of elements in array\n    }\n}\n```",
+    "question": "How does class ArrayUtils look after type erasure?",
+    "options": {
+      "A": "```java\npublic class ArrayUtils {\n    public Object max(Object[] arr) {\n        // code for finding maximum here\n    }\n    public Object avg(Object[] arr) {\n        // code for finding average of elements here\n    }\n    public int count(Object[] arr) {\n        // code for counting the number of elements in array\n    }\n}\n```",
+      "B": "```java\npublic class ArrayUtils {\n    public Object max(Object[] arr) {\n        // code for finding maximum here\n    }\n    public Number avg(Number[] arr) {\n        // code for finding average of elements here\n    }\n    public int count(Object[] arr) {\n        // code for counting the number of elements in array\n    }\n}\n```",
+      "C": "```java\npublic class ArrayUtils {\n    public Comparable max(Comparable[] arr) {\n        // code for finding maximum here\n    }\n    public Number avg(Number[] arr) {\n        // code for finding average of elements here\n    }\n    public int count(Object[] arr) {\n        // code for counting the number of elements in array\n    }\n}\n```",
+      "D": "```java\npublic class ArrayUtils {\n    public Comparable max(Comparable[] arr) {\n        // code for finding maximum here\n    }\n    public Integer avg(Integer[] arr) {\n        // code for finding average of elements here\n    }\n    public int count(Object[] arr) {\n        // code for counting the number of elements in array\n    }\n}\n```"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below.\n\n```java\nclass MinimumMarksException extends Exception {\n    public MinimumMarksException(String message) {\n        super(message);\n    }\n}\n\nclass Student {\n    private double marks;\n    private final double MINIMUM_MARKS = 40.0;\n    // Assuming constructor: public Student(double marks) { this.marks = marks; }\n    public void checkResult() throws MinimumMarksException {\n        if (marks < MINIMUM_MARKS) {\n            throw new MinimumMarksException(\"Minimum marks not scored\");\n        } else {\n            System.out.println(\"Scored sufficient marks\");\n        }\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        // Assuming Student s1 = new Student(55.0);\n        Student s1 = new Student(55.0);\n        Student s2 = new Student(30.0);\n        try {\n            s1.checkResult();\n            s2.checkResult();\n        } catch (MinimumMarksException e) {\n            System.out.println(\"Error: \" + e.getMessage());\n        }\n    }\n}\n```",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nScored sufficient marks\nError: Minimum marks not scored",
+      "B": "This program generates the output:\nScored sufficient marks\nMinimumMarksException",
+      "C": "This program generates the output:\nScored sufficient marks\nMinimum marks not scored",
+      "D": "This program generates the output:\nError: MinimumMarksException"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below.\n\n```java\nimport java.util.*;\n\nclass Contestant {\n    String name;\n    int points;\n    //constructor to initialize name and points\n    public Contestant(String name, int points) { this.name = name; this.points = points; }\n    public String toString() {\n        return name;\n    }\n}\n\npublic class IteratorTest {\n    public static boolean ranked(int x) {\n        if (x < 5)\n            return false;\n        return true;\n    }\n    public static void getFinalList(List<Contestant> cList) {\n        Iterator<Contestant> it = cList.iterator();\n        while (it.hasNext()) {\n            Contestant c = it.next();\n            if (!ranked(c.points)) {\n                //LINE 1\n            }\n        }\n    }\n    public static void main(String[] args) {\n        var list = new ArrayList<Contestant>();\n        list.add(new Contestant(\"Sanju\", 7));\n        list.add(new Contestant(\"Kiran\", 4));\n        list.add(new Contestant(\"Ram\", 5));\n        list.add(new Contestant(\"John\", 5));\n        getFinalList(list);\n        System.out.println(list);\n    }\n}\n```",
+    "question": "Choose the correct option to be filled in place of LINE 1 so that the output is:\n[Sanju, Ram, John]",
+    "options": {
+      "A": "it.remove(c);",
+      "B": "it.remove();",
+      "C": "cList.remove();",
+      "D": "cList.remove(c);"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider the Java code given below.\n\n```java\npublic interface Animal {\n    public abstract void makeSound();\n}\n\npublic class Zoo {\n    private String category;\n    public void setCategory(String s) {\n        this.category = s;\n    }\n    public String getCategory() {\n        return category;\n    }\n    public Animal createAnimal() {\n        if (getCategory().equals(\"Mammal\")) { // Using .equals for correctness\n            return new Mammal();\n        }\n        return new Bird();\n    }\n    private class Mammal implements Animal {\n        public void makeSound() {\n            System.out.println(\"Mammal making a sound\");\n        }\n    }\n    private class Bird implements Animal {\n        public void makeSound() {\n            System.out.println(\"Bird chirping\");\n        }\n    }\n}\n\npublic class Example {\n    public static void main(String[] args) {\n        Zoo z = new Zoo();\n        z.setCategory(\"Mammal\");\n        // Line 1\n    }\n}\n```",
+    "question": "Identify the appropriate option to fill in place of LINE 1 such that the output is:\nMammal making a sound",
+    "options": {
+      "A": "z.makeSound();",
+      "B": "z.createAnimal().makeSound();",
+      "C": "((Animal) z.createAnimal()).makeSound();",
+      "D": "Animal a = z.createAnimal();\na.makeSound();"
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "Consider the Java code given below that prints the highest goals among a set of given GoalScorer objects.\n\n```java\nimport java.util.*;\n\ninterface GoalScorer {\n    public abstract int getGoals();\n}\n\nclass Player implements GoalScorer {\n    private int goals; // Changed to int based on getGoals() return type\n    // Constructor\n    public Player(int goals) { this.goals = goals; }\n    // method getGoals() that returns goals\n    public int getGoals() { return this.goals; }\n}\n\npublic class Test {\n    // LINE 1: FUNCTION HEADER\n    {\n        // invokes method getGoals()\n        // to print the value of highest goals\n    }\n    public static void main(String[] args) {\n        GoalScorer[] players = { new Player(123), new Player(98), new Player(79) };\n        printHighestGoals(players);\n    }\n}\n```",
+    "question": "From among the options, identify the appropriate function header for the function printHighestGoals that takes as input an array of GoalScorer objects and prints the highest goal.",
+    "options": {
+      "A": "public static void printHighestGoals(<?>[] players)",
+      "B": "public static <T extends GoalScorer> void printHighestGoals(T[] players)",
+      "C": "public static <T extends Player> void printHighestGoals(T[] players)",
+      "D": "public static void printHighestGoals(GoalScorer[] players)"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Consider the Java code given below that should print the names of students whose gpa is between 3.0 and 3.8 (both inclusive).\n\n```java\nimport java.util.*;\n\nclass Student {\n    String name;\n    double gpa;\n    public Student(String n, double g) {\n        name = n;\n        gpa = g;\n    }\n}\n\npublic class StreamExample {\n    public static void main(String[] args) {\n        List<Student> students = new ArrayList<>();\n        students.add(new Student(\"Alice\", 3.5));\n        students.add(new Student(\"Bob\", 3.2));\n        students.add(new Student(\"Charlie\", 3.8));\n        students.add(new Student(\"David\", 3.0));\n        students.add(new Student(\"Eva\", 4.0));\n        //CODE BLOCK\n    }\n}\n```",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
+    "options": {
+      "A": "students.stream()\n    .map(s -> s.gpa >= 3.0 && s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));",
+      "B": "students.stream()\n    .filter(s -> s.gpa >= 3.0 && s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));",
+      "C": "students.stream()\n    .filter(s -> s.gpa >= 3.0)\n    .filter(s -> s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));",
+      "D": "students.stream()\n    .filter(s -> s.gpa >= 3.0)\n    .map(s -> s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\n\ninterface Vehicle {\n    void start();\n}\n\nclass Car implements Vehicle {\n    public void start() {\n        System.out.println(\"Starting a Car\");\n    }\n}\n\nclass Motorcycle implements Vehicle {\n    public void start() {\n        System.out.println(\"Starting a Motorcycle\");\n    }\n}\n\nclass Garage<T extends Vehicle> {\n    private Map<String, T> vehicles;\n\n    public Garage() {\n        vehicles = new LinkedHashMap<String, T>(); //LINE A\n    }\n\n    public void add(String name, T vehicle) {\n        vehicles.put(name, vehicle);\n    }\n\n    public void startVehicle(String name) {\n        if (vehicles.containsKey(name)) {\n            T v = vehicles.get(name); //LINE B\n            v.start();\n        } else {\n            System.out.println(\"Vehicle not found\");\n        }\n    }\n}\n\npublic class TestGarage {\n    public static void main(String[] args) {\n        Garage<Vehicle> g = new Garage<Vehicle>();\n        Vehicle v1 = new Car();\n        Vehicle v2 = new Motorcycle();\n        g.add(\"car\", v1);\n        g.add(\"motorcycle\", v2);\n        g.startVehicle(\"car\");\n        g.startVehicle(\"bicycle\");\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE A generates compilation error because type T is not known",
+      "B": "This program generates output:\nStarting a Car\nVehicle not found",
+      "C": "LINE B generates compilation error because a variable of type Vehicle cannot refer to objects of type Car and Motorcycle",
+      "D": "This program generates output:\nStarting a Car"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "Consider two Java files located in two different packages as shown below.\n\nVehicle.java:\npackage com.transport;\npublic class Vehicle {\n    void startEngine() {\n        System.out.println(\"Engine started\");\n    }\n    private void stopEngine() {\n        System.out.println(\"Engine stopped\");\n    }\n    protected void accelerate() {\n        System.out.println(\"Accelerating\");\n    }\n    public void brake() {\n        System.out.println(\"Braking\");\n    }\n}\n\nCar.java\npackage com.automobile;\nimport com.transport.Vehicle;\npublic class Car extends Vehicle {\n    public static void main(String[] args) {\n        Car car = new Car();\n        car.startEngine(); // LINE A\n        car.stopEngine();  // LINE B\n        car.accelerate();  // LINE C\n        car.brake();       // LINE D\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE A and LINE C generate compilation errors.",
+      "B": "LINE B and LINE C generate compilation errors.",
+      "C": "LINE A and LINE B generate compilation errors.",
+      "D": "Only LINE B generates a compilation error."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "class NewUser {\n    private String name, password;\n\n    public NewUser(String s, String p) {\n        this.name = s;\n        this.password = p;\n    }\n\n    public String getUserName() {\n        assert name != null : \"Invalid name\"; //LINE 1\n        assert password.length() == 10 : \"Should be 10 characters\"; //LINE 2\n        return name + \"@acct.com\";\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        NewUser u1 = new NewUser(\"\", \"password\");\n        NewUser u2 = new NewUser(\"Sudarshan\", \"1234567890\");\n        String username1 = u1.getUserName(); //LINE 3\n        assert username1 != null : \"Should not be null\"; // LINE 4\n        String username2 = u2.getUserName(); //LINE 5\n        assert username2 != null : \"Should not be null\"; // LINE 6\n        System.out.println(username1);\n        System.out.println(username2);\n    }\n}",
+    "question": "Choose the correct option when the program is executed as:\njava -ea Test",
+    "options": {
+      "A": "LINE 1 throws AssertionError.",
+      "B": "LINE 2 throws AssertionError.",
+      "C": "LINE 4 throws AssertionError.",
+      "D": "LINE 6 throws AssertionError."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\n\npublic class Test {\n    public static void main(String[] args) {\n        Map<String, Integer> match1 = new TreeMap<String, Integer>();\n        match1.put(\"Sachin\", 100);\n        match1.put(\"Virat\", 75);\n        match1.put(\"Dhoni\", 50);\n        match1.put(\"Rohit\", 120);\n\n        Map<String, Integer> match2 = new TreeMap<String, Integer>();\n        match2.put(\"Sachin\", 80);\n        match2.put(\"Virat\", 90);\n        match2.put(\"Dhoni\", 60);\n        match2.put(\"Rohit\", 110);\n\n        Map<String, Integer> totalRuns = new TreeMap<String, Integer>();\n        for (Map.Entry<String, Integer> m1 : match1.entrySet())\n            totalRuns.put(m1.getKey(), m1.getValue());\n\n        for (Map.Entry<String, Integer> m2 : match2.entrySet())\n            totalRuns.merge(m2.getKey(), m2.getValue(), Integer::sum); //LINE 1\n\n        System.out.println(totalRuns);\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "LINE 1 generates compilation error because of invalid key.",
+      "B": "This program generates the output:\n{Dhoni=110, Rohit=230, Sachin=180, Virat=165}",
+      "C": "This program generates the output:\n{Sachin=180, Virat=165, Dhoni=110, Rohit=230}",
+      "D": "This program generates the output:\n{Virat=165, Sachin=180, Rohit=230, Dhoni=110}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\n\npublic class SequenceChecker {\n    public static boolean isMirroredSequence(List<Integer> sequence) {\n        Stack<Integer> s1 = new Stack<>();\n        Deque<Integer> q1 = new ArrayDeque<>();\n        for (int num : sequence) {\n            s1.push(num);\n            q1.add(num);\n        }\n        // CODE BLOCK\n        return true;\n    }\n\n    public static void main(String[] args) {\n        List<Integer> sequence1 = Arrays.asList(1, 2, 3, 2, 1);\n        List<Integer> sequence2 = Arrays.asList(1, 2, 3, 4, 5);\n        System.out.println(\"Is sequence1 mirrored? \" + isMirroredSequence(sequence1));\n        System.out.println(\"Is sequence2 mirrored? \" + isMirroredSequence(sequence2));\n    }\n}",
+    "question": "Choose the correct option(s) to fill in place of CODE BLOCK so that the output is:\nIs sequence1 mirrored? true\nIs sequence2 mirrored? false",
+    "options": {
+      "A": "while (!s1.isEmpty()) {\n    if (s1.pop().equals(q1.peek())) {\n        return false;\n    }\n}",
+      "B": "while (!s1.isEmpty()) {\n    if (s1.pop().equals(q1.poll())) {\n        return false;\n    }\n}",
+      "C": "while (!s1.isEmpty()) {\n    if (!s1.pop().equals(q1.poll())) {\n        return false;\n    }\n}",
+      "D": "while (!s1.isEmpty()) {\n    if (!s1.pop().equals(q1.peek())) {\n        return false;\n    }\n}"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "import java.util.*;\n\nclass Book implements Cloneable {\n    String title;\n    String author;\n\n    public Book(String t, String a) {\n        this.title = t;\n        this.author = a;\n    }\n\n    public Book clone() throws CloneNotSupportedException {\n        return (Book) super.clone();\n    }\n\n    public String toString() {\n        return title + \":\" + author;\n    }\n}\n\nclass Library implements Cloneable {\n    String libraryName;\n    List<Book> books;\n\n    public Library(String l, List<Book> b) {\n        this.libraryName = l;\n        this.books = b;\n    }\n\n    public Library clone() throws CloneNotSupportedException {\n        Library clonedLibrary = (Library) super.clone();\n        clonedLibrary.books = new ArrayList<>();\n        for (Book book : this.books) {\n            clonedLibrary.books.add(book.clone());\n        }\n        return clonedLibrary;\n    }\n}\n\npublic class TestCloning {\n    public static void main(String[] args) throws CloneNotSupportedException {\n        List<Book> books = new ArrayList<>();\n        books.add(new Book(\"1984\", \"George Orwell\"));\n        books.add(new Book(\"Outline\", \"Rachel Cusk\"));\n        Library library1 = new Library(\"Central Library\", books);\n        Library library2 = library1.clone();\n        library2.books.get(0).title = \"Hanging\";\n        System.out.println(library1.books);\n        System.out.println(library2.books);\n    }\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "[Hanging: George Orwell, Outline: Rachel Cusk]\n[Hanging: George Orwell, Outline: Rachel Cusk]",
+      "B": "[1984: George Orwell, Outline: Rachel Cusk]\n[1984: George Orwell, Outline: Rachel Cusk]",
+      "C": "[1984: George Orwell, Outline: Rachel Cusk]\n[Hanging: George Orwell, Hanging: Rachel Cusk]",
+      "D": "[1984: George Orwell, Outline: Rachel Cusk]\n[Hanging: George Orwell, Outline: Rachel Cusk]"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "import java.util.*;\nimport java.util.stream.*;\n\nclass Transaction {\n    String id;\n    double amount;\n\n    public Transaction(String i, double a) {\n        this.id = i;\n        this.amount = a;\n    }\n\n    public String toString() {\n        return id + \": $\" + amount;\n    }\n}\n\npublic class TransactionProcessor {\n    public static void main(String[] args) {\n        List<Transaction> transactions = new ArrayList<Transaction>();\n        transactions.add(new Transaction(\"TXN1\", 999.99));\n        transactions.add(new Transaction(\"TXN2\", 5000.00));\n        transactions.add(new Transaction(\"TXN3\", 1234.56));\n        transactions.add(new Transaction(\"TXN4\", 2500.00));\n        transactions.add(new Transaction(\"TXN5\", 330.40));\n        transactions.stream()\n            .filter(t -> t.amount > 1000)\n            .forEach(t -> System.out.print(t.id + \" \"));\n    }\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "TXN1 TXN2 TXN3 TXN4 TXN5",
+      "B": "TXN2 TXN3 TXN4",
+      "C": "TXN3 TXN4 TXN2",
+      "D": "TXN1 TXN3 TXN4 TXN2"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface Operable {\n    void operate();\n}\n\nclass Robot implements Operable {\n    public void operate() {\n        System.out.println(\"Operating Robot\");\n    }\n}\n\nclass Drone implements Operable {\n    public void operate() {\n        System.out.println(\"Operating Drone\");\n    }\n}\n\nclass MachineShop {\n    private Object[] oArr = new Object[]{new Robot(), new Drone(), \"String Object\"};\n\n    public void operateMachines() {\n        for (int i = 0; i < oArr.length; i++) {\n            // LINE X\n        }\n    }\n}\n\npublic class TestMachines {\n    public static void main(String[] args) {\n        MachineShop mShop = new MachineShop();\n        mShop.operateMachines();\n    }\n}",
+    "question": "Identify the appropriate option to fill in place of LINE X such that the output is:\nOperating Robot\nOperating Drone",
+    "options": {
+      "A": "oArr[i].operate();",
+      "B": "if (oArr[i] instanceof Operable)\n    ((Operable)oArr[i]).operate();",
+      "C": "((Robot)oArr[i]).operate();",
+      "D": "((Drone)oArr[i]).operate();"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "public class ArrayOperations {\n    public <T> void reverse(T[] array) {\n        // Reverses the order of elements in the array\n    }\n\n    public <T extends Number> double sum(T[] array) {\n        // Calculates the sum of elements in the array\n    }\n}",
+    "question": "After type erasure, which of the following correctly represents the ArrayOperations class?",
+    "options": {
+      "A": "public class ArrayOperations {\n    public void reverse(Object[] array) {\n        // Reverses the order of elements in the array\n    }\n    public double sum(Number[] array) {\n        // Calculates the sum of elements in the array\n    }\n}",
+      "B": "public class ArrayOperations {\n    public void reverse(Object[] array) {\n        // Reverses the order of elements in the array\n    }\n    public double sum(Object[] array) {\n        // Calculates the sum of elements in the array\n    }\n}",
+      "C": "public class ArrayOperations {\n    public void reverse(T[] array) {\n        // Reverses the order of elements in the array\n    }\n    public double sum(T[] array) {\n        // Calculates the sum of elements in the array\n    }\n}",
+      "D": "public class ArrayOperations {\n    public void reverse(Object[] array) {\n        // Reverses the order of elements in the array\n    }\n    public double sum(Double[] array) {\n        // Calculates the sum of elements in the array\n    }\n}"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "class InvalidTemperatureException extends RuntimeException {\n    public InvalidTemperatureException(String message) {\n        super(message);\n    }\n}\n\nclass Thermostat {\n    private double temperature;\n    private final double MIN = 0.0;\n    private final double MAX = 35.0;\n\n    public Thermostat(double t) {\n        if (t < MIN || t > MAX) {\n            throw new InvalidTemperatureException(\"Temperature out of operating range\");\n        }\n        this.temperature = t;\n    }\n}\n\npublic class ClimateControl {\n    public static void main(String[] args) {\n        try {\n            Thermostat t1 = new Thermostat(22.0);\n            Thermostat t2 = new Thermostat(36.0);\n        } catch (InvalidTemperatureException e) {\n            System.out.println(\"Error: \" + e.getMessage());\n        }\n    }\n}",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "This program runs without any exception.",
+      "B": "This program generates the output:\nError: Temperature out of operating range",
+      "C": "This program compiles successfully but generates no output.",
+      "D": "This program generates the output:\nError: InvalidTemperatureException"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\n\nclass Player {\n    String nickname;\n    int score;\n    boolean isPremium;\n    //Constructor to initialize instance variables\n    public Player(String nickname, int score, boolean isPremium) {\n        this.nickname = nickname;\n        this.score = score;\n        this.isPremium = isPremium;\n    }\n    public String toString() {\n        return nickname;\n    }\n}\n\npublic class GameLobby {\n    public static boolean isEligible(int score, boolean isPremium) {\n        if (isPremium) {\n            return true;\n        }\n        return (score >= 10);\n    }\n\n    public static void filterPlayers(List<Player> players) {\n        ListIterator<Player> iterator = players.listIterator();\n        while (iterator.hasNext()) {\n            Player p = iterator.next();\n            if (!isEligible(p.score, p.isPremium))\n                // LINE 1\n        }\n    }\n\n    public static void main(String[] args) {\n        var players = new LinkedList<Player>();\n        players.add(new Player(\"Sharon\", 15, false));\n        players.add(new Player(\"Rohit\", 8, false));\n        players.add(new Player(\"Arjun\", 20, true));\n        players.add(new Player(\"Ambani\", 9, true));\n        filterPlayers(players);\n        System.out.println(players);\n    }\n}",
+    "question": "Choose the correct option to be filled in place of LINE 1 so that the output is:\n[Sharon, Arjun, Ambani]",
+    "options": {
+      "A": "iterator.remove(p);",
+      "B": "iterator.remove();",
+      "C": "players.remove();",
+      "D": "players.remove(p);"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "import java.util.stream.*;\n\npublic class Example {\n    public static void main(String[] args) {\n        //CODE BLOCK starts here\n        long count = Stream.iterate(1, n -> n + 2)\n            .map(n -> n * n)\n            .limit(4)\n            .count();\n        //CODE BLOCK ends here\n        System.out.println(count);\n    }\n}",
+    "question": "From among the options, choose the code segment that gives the same output as is given by the Java code inside the CODE BLOCK.",
+    "options": {
+      "A": "long count = Stream.iterate(1, n -> n + 2)\n    .map(n -> n * n)\n    .filter(n -> n < 81)\n    .count();",
+      "B": "long count = Stream.iterate(1, n -> n + 2)\n    .map(n -> n * n)\n    .takeWhile(n -> n < 81)\n    .count();",
+      "C": "long count = Stream.iterate(1, n -> n + 2)\n    .map(n -> n * n)\n    .skipWhile(n -> n < 81)\n    .count();",
+      "D": "long count = Stream.iterate(1, n -> n + 2)\n    .map(n -> n * n)\n    .dropWhile(n -> n < 81)\n    .count();"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\n\npublic class MapTest {\n    public static void printPlayers(Map<String, Integer> m) {\n        var map1 = new LinkedHashMap<String, Integer>();\n        var map2 = new TreeMap<String, Integer>();\n        String[] players = {\"Virat\", \"Rohit\", \"Rahul\"};\n        for (String p : players) {\n            if (m.containsKey(p)) {\n                map1.put(p, m.get(p));\n                map2.put(p, m.get(p));\n            } else {\n                map1.put(p, 0);\n                map2.put(p, 0);\n            }\n        }\n        System.out.println(map1);\n        System.out.println(map2);\n    }\n\n    public static void main(String[] args) {\n        var map = new HashMap<String, Integer>();\n        map.put(\"Rohit\", 45);\n        map.put(\"Rahul\", 60);\n        map.put(\"Virat\", 100);\n        map.put(\"Pant\", 32);\n        printPlayers(map);\n    }\n}",
+    "question": "What will the output be?",
+    "options": {
+      "A": "{Virat=100, Rahul=60, Rohit=45}\n{Rahul=60, Rohit=45, Virat=100}",
+      "B": "{Virat=100, Rohit=45, Pant=32}\n{Rohit=45, Virat=100, Pant=32}",
+      "C": "{Virat=100, Rohit=45, Rahul=60, Pant=32}\n{Rohit=45, Virat=100, Rahul=60, Pant=32}",
+      "D": "{Virat=100, Rohit=45, Rahul=60}\n{Rahul=60, Rohit=45, Virat=100}"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface Element {\n    void display();\n}\n\nclass PeriodicTableElement {\n    private String group;\n\n    public void setGroup(String g) {\n        this.group = g;\n    }\n\n    public String getGroup() {\n        return group;\n    }\n\n    public Element createElement() {\n        switch (getGroup()) {\n            case \"Metal\":\n                return new Metal();\n            case \"Nonmetal\":\n                return new Nonmetal();\n            case \"Metalloid\":\n                return new Metalloid();\n            default:\n                return null;\n        }\n    }\n\n    private class Metal implements Element {\n        public void display() {\n            System.out.println(\"Metal properties\");\n        }\n    }\n\n    private class Nonmetal implements Element {\n        public void display() {\n            System.out.println(\"Nonmetal properties\");\n        }\n    }\n\n    private class Metalloid implements Element {\n        public void display() {\n            System.out.println(\"Metalloid behavior\");\n        }\n    }\n}\n\npublic class ChemistryLab {\n    public static void main(String[] args) {\n        PeriodicTableElement pt = new PeriodicTableElement();\n        pt.setGroup(\"Metalloid\");\n        // Line X\n    }\n}",
+    "question": "Identify the appropriate option to fill in place of LINE X such that the output is:\nMetalloid behavior",
+    "options": {
+      "A": "Element e = pt.createElement();\ne.display();",
+      "B": "pt.display();",
+      "C": "pt.createElement().display();",
+      "D": "Element e = pt;\ne.display();"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\n\ninterface Performer {\n    int performAct();\n}\n\nclass Magician implements Performer {\n    private int tricksPerformed;\n\n    public Magician(int tricks) {\n        this.tricksPerformed = tricks;\n    }\n\n    public int performAct() {\n        return tricksPerformed;\n    }\n}\n\nclass Juggler implements Performer {\n    private int ballsJuggled;\n\n    public Juggler(int balls) {\n        this.ballsJuggled = balls;\n    }\n\n    public int performAct() {\n        return ballsJuggled;\n    }\n}\n\npublic class TalentShow {\n    // LINE X: FUNCTION HEADER\n    {\n        // invokes method performAct()\n        // to print the value of the most impressive act\n    }\n\n    public static void main(String[] args) {\n        Performer[] performers = {new Magician(5), new Juggler(3), new Magician(8)};\n        printMostImpressiveAct(performers);\n    }\n}",
+    "question": "From among the options, identify the appropriate function header for the function printMostImpressiveAct that takes as input an array of Performer objects and prints the act with the highest score.",
+    "options": {
+      "A": "public static void printMostImpressiveAct (<?>[] performers)",
+      "B": "public static <T extends Performer> void printMostImpressiveAct (T[] performers)",
+      "C": "public static <T extends Magician> void printMostImpressiveAct (T[] performers)",
+      "D": "public static void printMostImpressiveAct (Performer[] performers)"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\nclass Laptop {\n  private double price;\n  public Laptop (double p) {\n    price = p;\n  }\n  public double getPrice() {\n    return price;\n  }\n}\nclass Dell extends Laptop {\n  public Dell(double p) {\n    super(p);\n  }\n}\nclass HP extends Laptop {\n  public HP(double p) {\n    super(p);\n  }\n}\npublic class Test {\n  // FUNCTION HEADER for function printPrice\n  {\n    for (int i=0; i<lst.size(); i++) {\n      System.out.println(lst.get(i).getPrice());\n    }\n  }\n  public static void main(String[] args) {\n    List<Dell> d = new ArrayList<Dell>();\n    d.add(new Dell (1000.00));\n    d.add(new Dell (1200.00));\n    List<HP> h = new ArrayList<HP>();\n    h.add(new HP (900.00));\n    h.add(new HP (1100.00));\n    printPrice (d);\n    printPrice(h);\n  }\n}",
+    "question": "From among the options, identify the appropriate function header for the function printPrice that takes as input a list of laptops and prints their prices.",
+    "options": {
+      "A": "public static void printPrice (List<Laptop> lst)",
+      "B": "public static void printPrice (List<HP> lst)",
+      "C": "public static void printPrice (List<? extends Laptop> lst)",
+      "D": "public static void printPrice (List<Object> lst)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface Purchasable {\n  public default void purchase() {\n    System.out.println(\"Product purchased\");\n  }\n}\ninterface Reviewable {\n  public default void review() {\n    System.out.println(\"Product reviewed\");\n  }\n}\nclass Headphone implements Purchasable, Reviewable {\n  public void purchase() {\n    System.out.println(\"Headphone purchased successfully\");\n  }\n}\npublic class Test {\n  public static void main(String[] args) {\n    Purchasable p1 = new Headphone();\n    p1.purchase();\n    p1.review();\n  }\n}",
+    "question": "Consider the Java code given below. Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nHeadphone purchased successfully\nProduct reviewed",
+      "B": "This program generates the output:\nProduct purchased\nProduct reviewed",
+      "C": "This program generates compiler error because p1 of type Purchasable cannot invoke method review().",
+      "D": "This program generates compiler error because neither is class Headphone declared as abstract nor does it override method Reviewable()."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\npublic class Olympics {\n  TreeSet<String> t1 = new TreeSet<String>();\n  TreeSet<String> t2 = new TreeSet<String>();\n  public boolean hasMedal (int medals) {\n    if (medals > 0){\n      return true;\n    }\n    return false;\n  }\n  public void filterAthletes (TreeMap<String, Integer> medals) {\n    for (Map.Entry<String, Integer> entry : medals.entrySet()) {\n      if (hasMedal (entry.getValue())) {\n        t1.add(entry.getKey());\n      } else {\n        t2.add(entry.getKey());\n      }\n    }\n  }\n  public void display() {\n    System.out.println(\"Medalists: \" + t1);\n    System.out.println(\"Non-Medalists: \" + t2);\n  }\n  public static void main(String[] args) {\n    TreeMap<String, Integer> medals = new TreeMap<String, Integer>();\n    medals.put(\"Bolt\", 2);\n    medals.put(\"Sindhu\", 0);\n    medals.put(\"Manu\", 1);\n    medals.put(\"Rahul\", 0);\n    medals.put(\"Gulan\", 3);\n    Olympics o = new Olympics();\n    o.filterAthletes (medals);\n    o.display();\n  }\n}",
+    "question": "The following code maps a set of athletes names to the number of medals they have won and categorizes the athletes based on whether they are medalists or not. Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nMedalists: [Rahul, Sindhu]\nNon-Medalists: [Gulan, Bolt, Manu]",
+      "B": "This program generates the output:\nMedalists: [Bolt, Gulan, Manu]\nNon-Medalists: [Rahul, Sindhu]",
+      "C": "This program generates the output:\nMedalists: [Manu, Gulan, Bolt]\nNon-Medalists: [Sindhu, Rahul]",
+      "D": "The order in which elements of t1 and t2 are printed cannot be predicted."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\nclass Stock {\n  String symbol;\n  String company;\n  int sharesTraded;\n  public Stock(String sym, String comp, int shares) {\n    symbol = sym;\n    company = comp;\n    sharesTraded = shares;\n  }\n}\npublic class Test {\n  public static void printStocks (ArrayList<Stock> stockList) {\n    var map = new LinkedHashMap<String, Integer>();\n    for (Stock s: stockList) {\n      map.put(s.symbol, map.getOrDefault(s.symbol, 0) + s.sharesTraded);\n    }\n    for (Map.Entry<String, Integer> e : map.entrySet()) {\n      System.out.println(e.getKey() + \" = \" + e.getValue());\n    }\n  }\n  public static void main(String[] args) {\n    ArrayList<Stock> stockList = new ArrayList<Stock>();\n    stockList.add(new Stock(\"AAPL\", \"Apple\", 1500));\n    stockList.add(new Stock(\"MSFT\", \"Microsoft\", 2000));\n    stockList.add(new Stock(\"GOOGL\", \"Alphabet\", 1200));\n    stockList.add(new Stock(\"AAPL\", \"Apple\", 800));\n    printStocks (stockList);\n  }\n}",
+    "question": "Consider the Java code given below. What will the output be?",
+    "options": {
+      "A": "AAPL = 800\nMSFT = 2000\nGOOGL = 1200",
+      "B": "AAPL = 2300\nMSFT = 2000\nGOOGL = 1200",
+      "C": "AAPL = 2300\nGOOGL = 1200\nMSFT = 2000",
+      "D": "MSFT = 2000\nGOOGL = 1200\nAAPL = 2300"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\ninterface Buyer {\n  public abstract double getPurchaseAmount();\n}\nclass GoldCustomer implements Buyer {\n  private double purchaseAmount;\n  // Constructor\n  // method getPurchaseAmount() that returns purchase amount\n}\nclass SilverCustomer implements Buyer {\n  private double purchaseAmount;\n  // Constructor\n  // method getPurchaseAmount() that returns purchase amount\n}\npublic class Test {\n  // LINE 1: FUNCTION HEADER for printHighestPurchase()\n  {\n    // invokes method getPurchase()\n    // to print the value of highest purchase amount\n  }\n  public static void main(String[] args) {\n    Buyer[] cust = {\n      new GoldCustomer(90000),\n      new SilverCustomer(60000),\n      new GoldCustomer(45000)\n    };\n    printHighestAmount (cust);\n  }\n}",
+    "question": "Consider the Java code given below that prints the highest purchased amount among a set of given Buyer objects. From among the options, identify the appropriate function header for the function printHighestPurchase that takes as input an array of Buyer objects and prints the highest purchase amount. Choose the correct option(s) for LINE 1.",
+    "options": {
+      "A": "public static void printHighestPurchase(<?> cust)",
+      "B": "public static <T extends Buyer> void printHighestPurchase (T[] cust)",
+      "C": "public static <T extends GoldCustomer> void printHighestPurchase (T[] cust)",
+      "D": "public static void printHighestPurchase (Buyer[] cust)"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "class AccessDeniedException extends Exception {\n  public AccessDeniedException(String message) {\n    super (message);\n  }\n}\nclass User {\n  private String username;\n  private int accessStatus;\n  public User (String u, int a) {\n    this.username = u;\n    this.accessStatus = a;\n  }\n  public void checkPermission() throws AccessDeniedException {\n    if (accessStatus == 0) {\n      throw new AccessDeniedException(\"Access denied\");\n    }\n    else {\n      System.out.println(\"Access enabled\");\n    }\n  }\n}\npublic class Test {\n  public static void main(String[] args) {\n    User obj1 = new User(\"Jimmy\", 1);\n    User obj2 = new User(\"Amritha\", 0);\n    try {\n      obj1.checkPermission();\n      obj2.checkPermission();\n    } catch (AccessDeniedException e) {\n      System.out.println(\"Error: \" + e.getMessage());\n    }\n  }\n}",
+    "question": "Consider the Java code given below. Choose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nAccess enabled\nError: Access denied",
+      "B": "This program generates the output:\nAccess enabled\nAccessDeniedException",
+      "C": "This program generates the output:\nAccess enabled\nAccess denied",
+      "D": "This program generates the output:\nError: Access denied"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "A.java:\npackage com.pack1;\npublic class A {\n  void methodOne() {\n    System.out.println(\"Display methodOne\");\n  }\n  private void methodTwo() {\n    System.out.println(\"Display methodTwo\");\n  }\n  protected void methodThree() {\n    System.out.println(\"Display methodThree\");\n  }\n  public void methodFour() {\n    System.out.println(\"Display methodFour\");\n  }\n}\n\nB.java\npackage com.pack1;\npublic class B extends A {\n  public static void main(String[] args) {\n    B obj = new B();\n    obj.methodOne();    //LINE 1\n    obj.methodTwo();    //LINE 2\n    obj.methodThree();  //LINE 3\n    obj.methodFour();   //LINE 4\n  }\n}",
+    "question": "Consider two Java files located in the same package as shown below. Choose the correct option.",
+    "options": {
+      "A": "LINE 2 and LINE 3 generate compilation errors.",
+      "B": "LINE 1, LINE 2, and LINE 3 generate compilation errors.",
+      "C": "LINE 1 and LINE 2 generate compilation errors.",
+      "D": "Only LINE 2 generates a compilation error."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "public class AssertTest {\n  public static double computeTax (double salary, double investments) {\n    double taxableIncome = 0;\n    double taxRate = 0.2;\n    double tax = 0;\n    assert salary > 0; // assert-1\n    assert investments > 0; // assert-2\n    taxableIncome = salary - investments;\n    assert taxableIncome >= 0; // assert-3\n    tax = taxableIncome * taxRate;\n    return tax;\n  }\n  public static void main(String[] args) {\n    double salary = 120000;\n    double investments = 0;\n    assert salary > 0; // assert-4\n    double tax = computeTax (salary, investments);\n  }\n}",
+    "question": "Identify the first assert statement that throws the AssertionError when the class is executed as:\njava -ea AssertTest",
+    "options": {
+      "A": "assert-1",
+      "B": "assert-2",
+      "C": "assert-3",
+      "D": "assert-4"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": "interface Portable {\n  void showportable();\n}\nclass Laptop implements Portable {\n  public void showportable() {\n    System.out.println(\"Laptop is portable\");\n  }\n}\nclass Tablet implements Portable {\n  public void showportable() {\n    System.out.println(\"Tablet is portable\");\n  }\n}\nclass DeviceList {\n  private Object[] pArr = {new Laptop(), new Tablet()};\n  public void testPortability() {\n    for (int i=0; i < pArr.length; i++) {\n      // LINE 1\n    }\n  }\n}\npublic class Test {\n  public static void main(String[] args) {\n    DeviceList dList = new DeviceList();\n    dList.testPortability();\n  }\n}",
+    "question": "Identify the appropriate option to fill in place of LINE 1 such that the output is:\nLaptop is portable\nTablet is portable",
+    "options": {
+      "A": "pArr[i].showportable();",
+      "B": "((Portable) pArr[i]).showportable();",
+      "C": "((Laptop) pArr[i]).showportable();",
+      "D": "((Tablet) pArr[i]).showportable();"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\nclass Book {\n  String title;\n  int availableCopies;\n  //contructor to initialize title and availableCopies\n  public String toString() {\n    return title;\n  }\n}\npublic class Test {\n  public static boolean isAvailable (int x) {\n    if (x<3)\n      return false;\n    return true;\n  }\n  public static void getFinalList (List<Book> bookList) {\n    Iterator<Book> it = bookList.iterator();\n    while (it.hasNext()) {\n      Book b = it.next();\n      if (!isAvailable (b.availableCopies))\n        //LINE 1\n    }\n  }\n  public static void main(String[] args) {\n    ArrayList<Book> books = new ArrayList<Book>();\n    books.add(new Book(\"Alchemist\", 3));\n    books.add(new Book(\"Wings\", 0));\n    books.add(new Book(\"Fire\", 5));\n    books.add(new Book(\"Truth\", 1));\n    getFinalList (books);\n    System.out.println(books);\n  }\n}",
+    "question": "Choose the correct option to be filled in place of LINE 1 so that the output is:\n[Alchemist, Fire]",
+    "options": {
+      "A": "it.remove(b)",
+      "B": "it.remove()",
+      "C": "bookList.remove()",
+      "D": "bookList.remove(b)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "import java.util.*;\nimport java.util.stream.*;\npublic class MyClass {\n  public static void main(String args[]) {\n    List<Integer> numbers = new ArrayList<>();\n    numbers.add(2);\n    numbers.add(8);\n    numbers.add(5);\n    numbers.add(12);\n    numbers.add(15);\n    Stream<Integer> filteredNumbers = numbers.stream()\n                                    .filter(n -> n % 2==0)\n                                    .map(n->n*2);\n    filteredNumbers.forEach(System.out::println);\n  }\n}",
+    "question": "Consider the Java code given below. What will the output be?",
+    "options": {
+      "A": "4\n16",
+      "B": "4\n16\n5\n24\n15",
+      "C": "2\n8\n12",
+      "D": "4\n16\n24"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\npublic class Test {\n  public static void main(String[] args) {\n    List<Double> expenses1 = new ArrayList<>();\n    expenses1.add(120.50);\n    expenses1.add(300.75);\n    expenses1.add(45.20);\n    List<Double> expenses2 = new ArrayList<>();\n    expenses2.add(200.00);\n    expenses2.add(50.25);\n    expenses2.add(75.30);\n    Map<String, Double> avgExpenses = new HashMap<>();\n    Map<String, List<Double>> expenseMap = new HashMap<>();\n    expenseMap.put(\"Amit\", expenses1);\n    expenseMap.put(\"Priya\", expenses2);\n    Set<String> names = expenseMap.keySet();\n    for (String name: names) {\n      List<Double> temp = expenseMap.get(name);\n      int count = 0;\n      double sum = 0;\n      // CODE BLOCK\n      double avg = sum / count;\n      avgExpenses.put(name, avg);\n    }\n    System.out.println(avgExpenses);\n  }\n}",
+    "question": "Choose the correct option to fill in the CODE BLOCK to add the name and average expense for each person as map entries in Map<String, Double> avgExpenses.",
+    "options": {
+      "A": "for(List i: temp){\n  count = count + 1;\n  sum = sum + i;\n}",
+      "B": "for(int i : temp) {\n  sum = sum + i;\n  count = count + 1;\n}",
+      "C": "for(List<Double> i: temp) {\n  count = count + 1;\n  sum = sum + i;\n}",
+      "D": "for (Double i: temp) {\n  sum = sum + i;\n  count = count + 1;\n}"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "The Java Collections and Generics Framework",
+    "context": "import java.util.*;\npublic class SetIteratorTest {\n  public static void main(String[] args) {\n    var set1 = new HashSet<String>();\n    set1.add(\"Bottle\");\n    set1.add(\"Bag\");\n    set1.add(\"Paper\");\n    set1.add(\"Cover\");\n    var set2 = new TreeSet<String>(set1);\n    Iterator<String> it1 = set1.iterator();\n    Iterator<String> it2 = set2.iterator();\n    while (it1.hasNext()) {\n      System.out.print(it1.next()+ \" \");\n    }\n    System.out.println();\n    while (it2.hasNext()) {\n      System.out.print(it2.next()+ \" \");\n    }\n  }\n}",
+    "question": "Consider the Java code given below. Choose the correct option.",
+    "options": {
+      "A": "it1 will visit elements of set1 in sorted order.\nit2 will visit elements of set2 in sorted order.",
+      "B": "it1 will visit elements of set1 in the order in which they were inserted.\nit2 will visit elements of set2 in sorted order.",
+      "C": "it1 will visit elements of set1 in unspecified order.\nit2 will visit elements of set2 in sorted order.",
+      "D": "it1 will visit elements of set1 in the order in which they were inserted.\nit2 will visit elements of set2 in unspecified order."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Java Objects and the Execution Model",
+    "context": "class Task implements Cloneable {\n  String taskName;\n  public Task(String n) {\n    taskName = n;\n  }\n  public Task clone() throws CloneNotSupportedException {\n    return (Task) super.clone();\n  }\n}\nclass Project implements Cloneable {\n  String projectName;\n  Task task1;\n  Task task2;\n  public Project (String pN, Task t1, Task t2) {\n    projectName = pN;\n    task1 = t1;\n    task2 = t2;\n  }\n  public Project clone() throws CloneNotSupportedException {\n    Project p = (Project) super.clone();\n    p.task1 = p.task1.clone();\n    p.task2 = p.task2.clone();\n    return p;\n  }\n}\npublic class Test {\n  public static void main(String[] args) throws CloneNotSupportedException {\n    Task t1 = new Task(\"Design\");\n    Task t2 = new Task(\"Development\");\n    Project proj1 = new Project(\"ProjectX\", t1, t2);\n    Project proj2 = proj1.clone();\n    proj2.task1.taskName = \"Research\";\n    proj2.projectName = \"ProjectY\";\n    System.out.println(proj1.projectName + \" : \"+proj1.task1.taskName);\n    System.out.println(proj2.projectName + \" : \"+proj2.task1.taskName);\n  }\n}",
+    "question": "Consider the following Java code. What will the output be?",
+    "options": {
+      "A": "ProjectX: Research\nProjectX: Research",
+      "B": "ProjectY: Research\nProjectY: Research",
+      "C": "ProjectX: Design\nProjectY: Research",
+      "D": "ProjectX: Research\nProjectY: Research"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "import java.util.*;\nclass Vehicle {\n  String name;\n  double mileage;\n  public Vehicle(String n, double m) {\n    name = n;\n    mileage = m;\n  }\n}\npublic class Test {\n  public static void main(String[] args) {\n    List<Vehicle> vehicles = new ArrayList<>();\n    vehicles.add(new Vehicle (\"Toyota\", 18.5));\n    vehicles.add(new Vehicle(\"Honda\", 20.2));\n    vehicles.add(new Vehicle(\"Ford\", 14.8));\n    vehicles.add(new Vehicle(\"Chevrolet\", 25.0));\n    vehicles.add(new Vehicle(\"BMW\", 30.0));\n    //CODE BLOCK\n  }\n}",
+    "question": "Consider the Java code given below that should print the names of vehicles whose mileage is between 15.0 and 25.0 (both inclusive). Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
+    "options": {
+      "A": "vehicles.stream()\n  .map(v -> v.mileage >= 15.0 && v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));",
+      "B": "vehicles.stream()\n  .filter(v -> v.mileage >= 15.0 && v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));",
+      "C": "vehicles.stream()\n  .filter(v -> v.mileage >= 15.0)\n  .filter(v -> v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));",
+      "D": "vehicles.stream()\n  .filter(v -> v.mileage >= 15.0)\n  .map(v -> v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "The Java Collections and Generics Framework",
+    "context": null,
+    "question": "Consider the Java code given below that prints the maximum element of a set. From among the options, identify the appropriate function header for function findMax that takes as input a set of numbers and prints the maximum element of the set.\n\n```java\nimport java.util.*;\n\nclass Test {\n    // FUNCTION HEADER for function findMax\n    {\n        // Prints the maximum element of the set\n    }\n\n    public static void main(String[] args) {\n        Set<Integer> s = new HashSet<>();\n        s.add(12);\n        s.add(23);\n        Set<Double> s1 = new HashSet<>();\n        s1.add(12.2);\n        s1.add(23.4);\n        findMax(s);\n        findMax(s1);\n    }\n}\n```\n\nChoose the correct option(s)",
+    "options": {
+      "A": "public static void findMax (Set<T> s)",
+      "B": "public static <T extends Number> void findMax (Set<T> s)",
+      "C": "public static void findMax (Set<? extends Number> s)",
+      "D": "public static void findMax (Set<Double> s)"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\ninterface Deliverable {\n    public static void status() {\n        System.out.println(\"Delivery status\");\n    }\n    public default void deliver() {\n        System.out.println(\"Order delivered\");\n    }\n}\n\ninterface Trackable {\n    public static void status() {\n        System.out.println(\"Tracking status\");\n    }\n    public default void track() {\n        System.out.println(\"Tracking order\");\n    }\n}\n\nclass FoodOrder implements Deliverable, Trackable {\n    public void deliver() {\n        System.out.println(\"Delivered successfully\");\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        Deliverable of = new FoodOrder();\n        of.deliver();\n        // of.track(); // This line is present in the intended code but commented out for analysis\n        Deliverable.status();\n        Trackable.status();\n    }\n}\n```\n\nChoose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nDelivered successfully\nTracking order\nDelivery status\nTracking status",
+      "B": "This program generates the output:\nDelivered successfully\nTracking order\nTracking status\nTracking status",
+      "C": "This program generates compiler error because of of type Deliverable cannot invoke method track().",
+      "D": "LINE-1 and LINE-2 generates a compilation error as any methods cannot be accessed using the interface name."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "The Java Collections and Generics Framework",
+    "context": null,
+    "question": "The following code maps a set of patients to the number of visits they have made to a hospital and categorizes the patients based on whether they are regular visitors (more than 3 visits) or occasional visitors.\n\n```java\nimport java.util.*;\n\npublic class Hospital {\n    TreeSet<String> rPatients = new TreeSet<String>();\n    TreeSet<String> oPatients = new TreeSet<String>();\n\n    public boolean check(int visits) {\n        return visits > 3;\n    }\n\n    public void categorizePatients (HashMap<String, Integer> pMap) {\n        for (Map.Entry<String, Integer> entry : pMap.entrySet()) {\n            if (check(entry.getValue())) {\n                rPatients.add(entry.getKey());\n            } else {\n                oPatients.add(entry.getKey());\n            }\n        }\n    }\n\n    public void displayPatients() {\n        System.out.println(\"R Patients: \" + rPatients);\n        System.out.println(\"O Patients: \" + oPatients);\n    }\n\n    public static void main(String[] args) {\n        HashMap<String, Integer> pMap = new HashMap<String, Integer>();\n        pMap.put(\"James\", 5);\n        pMap.put(\"Ram\", 2);\n        pMap.put(\"Aisha\", 4);\n        pMap.put(\"Tanya\", 1);\n        pMap.put(\"Iva\", 3);\n\n        Hospital hospital = new Hospital();\n        hospital.categorizePatients(pMap);\n        hospital.displayPatients();\n    }\n}\n```\n\nChoose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nR Patients: [Ram, Tanya, Iva]\nO Patients: [Aisha, James]",
+      "B": "This program generates the output:\nR Patients: [Iva, James]\nO Patients: [Aisha, Ram, Tanya]",
+      "C": "This program generates the output:\nR Patients: [Aisha, James]\nO Patients: [Iva, Ram, Tanya]",
+      "D": "The order in which elements of rPatients and oPatients are printed cannot be predicted."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Java Objects and the Execution Model",
+    "context": null,
+    "question": "Consider the code given below.\n\n```java\ninterface Vehicle {\n    public abstract int getMileage();\n}\n\nclass Car implements Vehicle, Cloneable {\n    int mileage;\n    public Car(int m) {\n        mileage = m;\n    }\n    public int getMileage() {\n        return mileage;\n    }\n    public Car clone() throws CloneNotSupportedException {\n        return (Car) super.clone();\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        Car car1 = new Car(25);\n        try {\n            Car car2 = car1.clone();\n            car1.mileage = 30;\n            System.out.print(car1.getMileage() + car2.getMileage());\n        } catch (CloneNotSupportedException e) {\n            System.out.println(\"Cloning not supported\");\n        }\n    }\n}\n```\n\nWhat will the output be?",
+    "options": {
+      "A": "55",
+      "B": "50",
+      "C": "60",
+      "D": "Cloning not supported"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "The Java Collections and Generics Framework",
+    "context": null,
+    "question": "Consider the following Java code.\n\n```java\nimport java.util.*;\n\nclass Artist {\n    String name;\n    int experience;\n\n    public Artist (String n, int e) {\n        name = n;\n        experience = e;\n    }\n\n    public String toString() {\n        return name;\n    }\n}\n\npublic class Test {\n    public static void modifyArtistList (List<Artist> artistList) {\n        ListIterator<Artist> it = artistList.listIterator();\n        while (it.hasNext()) {\n            Artist a = it.next();\n            if (a.experience < 5) {\n                //LINE 1\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        var artists = new ArrayList<Artist>();\n        artists.add(new Artist(\"Tagore\", 12));\n        artists.add(new Artist(\"Sudha\", 3));\n        artists.add(new Artist(\"Amitabh\", 7));\n        artists.add(new Artist(\"Sharukh\", 5));\n        modifyArtistList(artists);\n        System.out.println(artists);\n    }\n}\n```\n\nChoose the correct option to be filled in place of LINE 1 so that the output is:\n`[Tagore, Amitabh, Sharukh]`",
+    "options": {
+      "A": "it.remove(a)",
+      "B": "aList.remove()",
+      "C": "it.remove()",
+      "D": "aList.remove(a)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": null,
+    "question": "Consider the following Java code.\n\n```java\nclass SalaryProcessor {\n    public static void calSalary (int bs, int bonus) throws Exception {\n        if (bonus < 0) {\n            throw new Exception(\"Invalid bonus\");\n        }\n        System.out.println(\"Total Salary: \"+ (bs + bonus));\n    }\n\n    public static void processSalaries() throws Exception {\n        try {\n            calSalary(50000, 10000);\n            calSalary(60000, -5000);\n        } catch (Exception e) {\n            System.out.println(\"Caught in processSalaries\");\n            throw e;\n        }\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) throws Throwable {\n        try {\n            SalaryProcessor.processSalaries();\n        } catch (Exception e) {\n            System.out.println(\"Caught in main\");\n        }\n    }\n}\n```\n\nChoose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nCaught in processSalaries\nCaught in main",
+      "B": "This program terminates abnormally due to unhandled exceptions.",
+      "C": "This program generates the output:\nTotal Salary: 60000\nCaught in processSalaries\nCaught in main",
+      "D": "This program generates the output:\nTotal Salary: 60000\nCaught in main\nCaught in processSalaries"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\nclass RegException extends Exception {\n    public RegException(String message) {\n        super(message);\n    }\n}\n\nclass User {\n    private String email;\n    public User(String e) {\n        email = e;\n    }\n    public void register() throws RegException {\n        if (!email.contains(\"@\")) {\n            throw new RegException(\"Registration failed: Invalid email format\");\n        }\n        System.out.println(\"Registration successful\");\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        User u1 = new User(\"anu.kuriyan@ex.com\");\n        User u2 = new User(\"narendran.pk\");\n        try {\n            u1.register();\n            u2.register();\n        } catch (RegException e) {\n            System.out.println(\"Error: \" + e.getMessage());\n        }\n    }\n}\n```\n\nChoose the correct option.",
+    "options": {
+      "A": "This program generates the output:\nRegistration successful\nError: Registration failed: Invalid email format",
+      "B": "This program generates the output:\nRegistration successful\nRegException",
+      "C": "This program generates the output:\nRegistration successful\nRegistration failed: Invalid email format",
+      "D": "This program generates the output:\nError: Registration failed: Invalid email format"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider two Java files located in different packages as shown below.\n\n**A.java**\n```java\npackage pack1;\n\npublic class A {\n    void AMethod() {\n        System.out.println(\"Method A\");\n    }\n    private void BMethod() {\n        System.out.println(\"Method B\");\n    }\n    protected void CMethod() {\n        System.out.println(\"Method C\");\n    }\n    public void DMethod() {\n        System.out.println(\"Method D\");\n    }\n}\n```\n\n**B.java**\n```java\npackage pack2;\nimport pack1.A;\n\npublic class B extends A {\n    public void testMethods() {\n        super.AMethod(); // LINE 1\n        super.BMethod(); // LINE 2\n        super.CMethod(); // LINE 3\n        super.DMethod(); // LINE 4\n    }\n}\n```\n\nChoose the correct option.",
+    "options": {
+      "A": "Only LINE 2 generates compilation error.",
+      "B": "LINE 2 and LINE 3 generate compilation errors.",
+      "C": "LINE 1, LINE 2 and LINE 3 generate compilation errors.",
+      "D": "LINE 1 and LINE 2 generate compilation errors."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\npublic class AssertTest{\n    public static double caltempDiff (double currentTemp, double idealTemp) {\n        double tempdiff = 0;\n        assert currentTemp >= -100 && currentTemp <= 150; // assert-1\n        assert idealTemp >= -100 && idealTemp <= 150; // assert-2\n        tempdiff = currentTemp - idealTemp;\n        assert tempdiff >= 0; // assert-3\n        return tempdiff;\n    }\n    public static void main(String[] args) {\n        double currentTemp = 35.0;\n        double idealTemp = 37.0;\n        assert currentTemp >= -100 && currentTemp <= 150; // assert-4\n        double tempDifference = caltempDiff(currentTemp, idealTemp);\n    }\n}\n```\n\nIdentify the first assert statement that throws the AssertionError when the class is executed as:\n`java -ea AssertTest`",
+    "options": {
+      "A": "assert-1",
+      "B": "assert-2",
+      "C": "assert-3",
+      "D": "assert-4"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Object-Oriented Programming (OOP) Principles",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\ninterface Washable {\n    void showWashable();\n}\nclass FrontLoadWasher implements Washable{\n    public void showWashable() {\n        System.out.print(\"FLW is washable \");\n    }\n}\nclass TopLoadWasher implements Washable {\n    public void showWashable() {\n        System.out.print(\"TLW is washable\");\n    }\n}\nclass ApplianceList {\n    private Object[] appliances = {new FrontLoadWasher(), new TopLoadWasher()};\n    public void testAppliances() {\n        for (int i=0; i < appliances.length; i++) {\n            //LINE-1\n        }\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        ApplianceList aL = new ApplianceList();\n        aL.testAppliances();\n    }\n}\n```\n\nIdentify the appropriate option to fill in place of LINE 1 such that the output is:\n`FLW is washable TLW is washable`",
+    "options": {
+      "A": "((Washable) appliances[i]).showWashable();",
+      "B": "(appliances[i]).showWashable();",
+      "C": "((FrontLoadWasher) appliances[i]).showWashable();",
+      "D": "((TopLoadWasher) appliances[i]).showWashable();"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": "Method Stream.iterate(e, f) returns an infinite sequential ordered Stream produced by iterative application of a function f to an initial element e, producing a Stream consisting of e, f(e), f(f(e)), ...\nBased on the above information, consider the code given below, and answer the question that follows.",
+    "question": "```java\nimport java.util.stream.*;\n\npublic class Test {\n    public static void main(String[] args) {\n        Stream.iterate(50, p -> p - 5)\n            .map(p -> p * 2)\n            .filter(p -> p % 4 == 0)\n            .limit(4)\n            .forEach(p -> System.out.print(p + \" \"));\n    }\n}\n```\n\nWhat will the output be?",
+    "options": {
+      "A": "40 20 0 -20",
+      "B": "100 90 80 70",
+      "C": "100 80 60 40",
+      "D": "100 120 140 160"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "The Java Collections and Generics Framework",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\nimport java.util.*;\n\npublic class SetExample {\n    public static void main(String[] args) {\n        LinkedList<String> list = new LinkedList<String>();\n        list.add(\"Apple\");\n        list.add(\"Samsung\");\n        list.add(\"Nokia\");\n        list.add(\"Samsung\");\n        Set<String> set1 = new LinkedHashSet<String>();\n        Set<String> set2 = new TreeSet<String>();\n        for (String str : list) {\n            set1.add(str);\n            set2.add(str);\n        }\n        for (String str : set1) {\n            System.out.print(str + \" \");\n        }\n        System.out.println();\n        for (String str : set2) {\n            System.out.print(str + \" \");\n        }\n    }\n}\n```\n\nWhat will the output be?",
+    "options": {
+      "A": "Apple Samsung Nokia\nApple Nokia Samsung",
+      "B": "Apple Nokia Samsung Samsung\nNokia Samsung Apple",
+      "C": "Apple Samsung Nokia\nNokia Samsung Apple",
+      "D": "Samsung Nokia Apple\nApple Nokia Samsung"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "The Java Collections and Generics Framework",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\nclass RollNumber<T extends Number> {\n    private T part1;\n    private T part2;\n\n    public RollNumber(T p1, T p2) {\n        part1 = p1;\n        part2 = p2;\n    }\n\n    public T getPart1() { return part1; }\n    public T getPart2() { return part2; }\n\n    public RollNumber<Integer> genRollno (ARG) { //LINE 1\n        RollNumber<Integer> newroll = new RollNumber<>(0, 0);\n        newroll.part1 = this.part1.intValue() + r.getPart1().intValue();\n        newroll.part2 = this.part2.intValue() + r.getPart2().intValue();\n        return newroll;\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        RollNumber<Integer> r1 = new RollNumber<>(101, 200);\n        RollNumber<Integer> r2 = new RollNumber<>(102, 300);\n        RollNumber<Integer> newroll = r1.genRollno(r2);\n        System.out.println(newroll.getPart1() + \",\" + newroll.getPart2());\n    }\n}\n```\n\nChoose all the options which can be used in place of ARG in LINE 1 so that the code outputs the sum of two roll numbers.",
+    "options": {
+      "A": "RollNumber<T> r",
+      "B": "RollNumber<Number> r",
+      "C": "RollNumber<?> r",
+      "D": "RollNumber<Object> r"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Exception Handling, I/O, and Modern APIs",
+    "context": null,
+    "question": "The Java code given below should print the names of water filters whose flow rate falls within the range of 5.0 to 15.0 (inclusive).\n\n```java\nimport java.util.*;\nimport java.util.stream.*;\n\nclass WaterFilter {\n    String name;\n    double flowRate;\n    public WaterFilter (String n, double f) {\n        this.name = n;\n        this.flowRate = f;\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        List<WaterFilter> filters = new ArrayList<>();\n        filters.add(new WaterFilter(\"FilterA\", 4.5));\n        filters.add(new WaterFilter(\"FilterB\", 10.0));\n        filters.add(new WaterFilter(\"FilterC\", 12.0));\n        filters.add(new WaterFilter(\"FilterD\", 15.0));\n        filters.add(new WaterFilter(\"FilterE\", 16.0));\n        // CODE BLOCK\n    }\n}\n```\n\nChoose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
+    "options": {
+      "A": "filters.stream()\n .map(f -> f.flowRate >= 5.0 && f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));",
+      "B": "filters.stream()\n .filter(f -> f.flowRate >= 5.0 && f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));",
+      "C": "filters.stream()\n .filter(f -> f.flowRate >= 5.0)\n .filter(f -> f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));",
+      "D": "filters.stream()\n .filter(f -> f.flowRate >= 5.0)\n .map(f -> f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "Java",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "The Java Collections and Generics Framework",
+    "context": null,
+    "question": "Consider the Java code given below.\n\n```java\npublic class MarksExample {\n    public <T extends Number> void calculateSum(T[] marks){\n        // Calculates the sum of marks\n    }\n    public <T> void displayMarks (T[] marks){\n        // Displays the marks\n    }\n    public <T extends Number> double calculateAverage (List<T> marks){\n        // Calculates the average of marks\n    }\n}\n```\n\nHow does class MarksExample look after type erasure?",
+    "options": {
+      "A": "```java\npublic class MarksExample {\n    public void calculateSum(Object[] marks) { ... }\n    public void displayMarks(Object[] marks){ ... }\n    public Object calculateAverage(List<Object> marks) { ... }\n}\n```",
+      "B": "```java\npublic class MarksExample {\n    public void calculateSum(Number[] marks) { ... }\n    public void displayMarks(Object[] marks) { ... }\n    public double calculateAverage(List<Number> marks) { ... }\n}\n```",
+      "C": "```java\npublic class MarksExample {\n    public void calculateSum(Number[] marks) { ... }\n    public void displayMarks(Object[] marks) { ... }\n    public <T> T calculateAverage(List<Number> marks){ ... }\n}\n```",
+      "D": "```java\npublic class MarksExample {\n    public <T> void calculateSum(T[] marks){ ... }\n    public <T> void displayMarks(T[] marks){ ... }\n    public <T> void calculateAverage(List<T> marks){ ... }\n}\n```"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  }
+]

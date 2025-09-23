@@ -276,14 +276,14 @@ const Quiz = () => {
           </h3>
           {questions.map((q, i) => (
             <div key={i} className="result-item">
-              <p className="question-text">
-                <strong>Q{i + 1}:</strong> {renderQuestion(q.question)}
-              </p>
               {q.context && (
                 <blockquote className="context-block">
                   {renderQuestion(q.context)}
                 </blockquote>
               )}
+              <p className="question-text">
+                <strong>Q{i + 1}:</strong> {renderQuestion(q.question)}
+              </p>
               <p className="correct-answer">
                 ✅ Correct:{" "}
                 {

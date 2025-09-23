@@ -27,7 +27,7 @@ const levels = {
     "MLT",
     "MLP",
     "Business Analytics",
-    "JAVA",
+    "Java",
   ],
 };
 
