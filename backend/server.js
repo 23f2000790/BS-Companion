@@ -9,6 +9,8 @@ import { verifyToken } from "./middleware/auth.js";
 import questionsRoute from "./routes/questions.js";
 import topicsRoute from "./routes/topics.js";
 import termsRouter from "./routes/terms.js";
+import resultsRouter from "./routes/results.js";
+
 dotenv.config();
 const app = express();
 
@@ -18,6 +20,7 @@ app.use(express.json());
 app.use("/api/topics", topicsRoute);
 app.use("/api/questions", questionsRoute);
 app.use("/api/terms", termsRouter);
+app.use("/api/results", resultsRouter); // Use the new results route
 
 // Environment variables
 const JWT_SECRET = process.env.JWT_SECRET || "yoursecretkey";
