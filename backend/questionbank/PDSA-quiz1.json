@@ -1,0 +1,1983 @@
+[
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "f1(n) = 3n² + 2n\nf2(n) = 3n + (log n)²\nf3(n) = log(log n)\nf4(n) = 10 log n\nf5(n) = 3n log n",
+    "question": "Arrange the above functions in increasing order of asymptotic complexity.",
+    "options": {
+      "A": "f3(n), f4(n), f2(n), f1(n), f5(n)",
+      "B": "f3(n), f2(n), f1(n), f5(n), f4(n)",
+      "C": "f4(n), f3(n), f2(n), f1(n), f5(n)",
+      "D": "f3(n), f4(n), f2(n), f5(n), f1(n)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Given the following sorted list:\n[16, 53, 59, 81, 94, 99, 121, 150, 162, 170]\nNote: Assume here binary search will compute the midpoint by using (firstindex + lastindex)//2",
+    "question": "If we use binary search algorithm to search the element 99 in the list, then which of the following option corresponds to the correct sequence of comparison done in this process?",
+    "options": {
+      "A": "94, 99",
+      "B": "16, 99",
+      "C": "94, 150, 121, 99",
+      "D": "94, 150, 99",
+      "E": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "A list of n strings, each of length n is sorted in lexicographical order using the Merge Sort algorithm.",
+    "question": "What is its time complexity? (Assume that comparing strings lexicographically takes O(n))",
+    "options": {
+      "A": "O(n log n)",
+      "B": "O(n² log n)",
+      "C": "O(n²)",
+      "D": "O(log n)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "4 sorted lists each of length n/2 are merged into a single sorted list of 2n elements using two way merging.",
+    "question": "What will be the minimum number of element comparisons needed for this process?",
+    "options": {
+      "A": "n-1",
+      "B": "2n-1",
+      "C": "4n-3",
+      "D": "4n-1"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": null,
+    "question": "Select the most appropriate data structure for the following applications.",
+    "options": {
+      "A": "1-d, 2-a, 3-c, 4-b",
+      "B": "1-d, 2-b, 3-c, 4-a",
+      "C": "1-d, 2-a, 3-b, 4-c",
+      "D": "1-c, 2-a, 3-d, 4-b"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892521/jan2023-1_ptrfnr.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider that Quick sort is applied on a list of size n which is already sorted.",
+    "question": "What will be the asymptotic running time of Quick sort if the pivot is taken to be\nI) Middle element II) Last element\nChoose the correct option corresponding to the correct pair of complexities for both pivots.",
+    "options": {
+      "A": "I: O(n²) and II: O(n log n)",
+      "B": "I: O(n²) and II: O(n)",
+      "C": "I: O(n log n) and II: O(n log n)",
+      "D": "I: O(n log n) and II: O(n²)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": "Assume s is a stack and q is a queue. Push and Pop operations are usual stack operations, Enqueue and Dequeue are usual queue operations and isEmpty() is a method which returns true if either the stack or the queue are empty.\nNow consider the function fun given below:\n```python\ndef fun(Q):\n  while(not Q.isEmpty()):\n    temp = Q.Dequeue()\n    S.Push(temp)\n  while(not S.isEmpty()):\n    temp = S.Pop()\n    Q.Enqueue(temp)\n```\nSuppose the initial content of the queue q is [26, 78, 45, 10, 19, 56] and the stack s is empty initially.",
+    "question": "If fun is invoked on q then what will be the content of q after fun finishes its execution?",
+    "options": {
+      "A": "[26, 78, 45, 10, 19, 56]",
+      "B": "[56, 19, 10, 26, 78, 45]",
+      "C": "[56, 19, 10, 45, 78, 26]",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following function:\n```python\ndef fun(n):\n  total = 0\n  for i in range(n//2, n):\n    j = 2\n    while (j ≤ n):\n      total = total + n/2\n      j = j * 2\n  return total\n```\nConsider that input n = 2ᵏ where k is a positive integer.",
+    "question": "Which of the following option correctly mentions the return value (total) of function fun in terms of n ?",
+    "options": {
+      "A": "n²",
+      "B": "(log n)² / 4",
+      "C": "(n log n) / 2",
+      "D": "(n² log n) / 4"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph. Note: When a node has multiple neighbours, BFS would visit the numerically smaller valued node first.",
+    "question": "Which of the following vertex sequence/(s) are possible BFS traversals on the graph started from node 5?",
+    "options": {
+      "A": "5, 2, 4, 6, 7, 1, 3",
+      "B": "5, 2, 3, 1, 4, 7, 6",
+      "C": "5, 2, 1, 4, 7, 6, 3",
+      "D": "5, 2, 1, 3, 4, 6, 7"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892533/jan2023-2_wrdkie.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph. DFS algorithm is applied starting from vertex 5 on the given graph. Note: When a node has multiple neighbours, DFS would visit the numerically smaller valued node first.",
+    "question": "What will be the maximum possible height till which the stack will grow while making the DFS traversal?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "7"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892532/jan2023-3_kvnuff.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following input list:\n[38, 28, 43, 22, 112, 33, 39]\nAnd the following Insertion sort implementation:\n```python\ndef insertionsort(L):\n  n = len(L)\n  if n < 1:\n    return(L)\n  for i in range(n):\n    j = i\n    while (j > 0 and L[j] < L[j-1]):\n      (L[j], L[j-1]) = (L[j-1], L[j])\n      j = j - 1\n  return(L)\n```",
+    "question": "What will be the number of swaps that the following Insertion sort will make to sort this given list?",
+    "options": null,
+    "correctOption": 9,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables. Linear probing takes the original hash index and increments the value by 1 until a free slot is found. A hash table contains 8 buckets indexed from 0 to 7 and uses linear probing to resolve collisions. The key values are integers and the hash function used is key mod 8.",
+    "question": "If key values 91, 27, 16, 64, 41 are inserted in to the table in the given order, in what location would the key value 160 be inserted after them?",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph.",
+    "question": "The number of different topological orderings possible for this DAG starting from vertex 1 is",
+    "options": null,
+    "correctOption": 12,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892533/jan2023-4_bzsy6w.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Core Data Structures",
+    "context": "Consider an implementation of a singly linked list where each node is created using the given class Node.\n```python\nclass Node:\n  def __init__(self, data):\n    self.data = data\n    self.next = None\n```\nSuppose it has a head pointer that points to the first node of the linked list and a tail pointer that points to the last element of the linked list.",
+    "question": "Which of the following operation can be implemented in constant (O(1)) time with given representation of the linked list?",
+    "options": {
+      "A": "Insertion of the new node at the front of the linked list.",
+      "B": "Insertion of the new node at the end of the linked list.",
+      "C": "Deletion of the first node of the linked list.",
+      "D": "Deletion of the last node of the linked list.",
+      "E": "Deletion of the second node (from starting) of the linked list"
+    },
+    "correctOption": ["A", "B", "C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": "Note: Degree sequence is a series of positive integer a1, a2, ..., an where each ai is the degree of the ith vertex of the graph.",
+    "question": "Which of the following is/are possible degree sequence/(s) of vertices of a connected undirected graph with six vertices?",
+    "options": {
+      "A": "1, 1, 1, 1, 1, 1",
+      "B": "2, 2, 2, 2, 2, 2",
+      "C": "1, 1, 2, 2, 3, 5",
+      "D": "1, 2, 2, 2, 3, 3"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following statement(s) is/are true about Depth First Search (DFS) on an undirected and connected graph?",
+    "options": {
+      "A": "DFS can be used to detect cycles in the graph.",
+      "B": "DFS can be used to identify connected components in an undirected graph.",
+      "C": "Using an adjacency list instead of an adjacency matrix can improve the worst case complexity to O(V+E), where V is number of vertices and E is number of edges.",
+      "D": "In an unweighted graph, DFS can be used to identify the shortest path from a starting vertex s to every other vertex in the graph",
+      "E": "DFS always produces the same number of tree edges irrespective of the order in which the vertices are considered for DFS."
+    },
+    "correctOption": ["A", "B", "C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following functions:\n• f(n) = 102n⁴ + 26n³\n• g(n) = 103n³ + 20n²\n• h(n) = 110n³ log n + 36n²",
+    "image": null,
+    "question": "Which of the following is/are true?",
+    "options": {
+      "A": "f(n) = O(g(n))",
+      "B": "g(n) = O(h(n))",
+      "C": "f(n) = O(h(n))",
+      "D": "h(n) = O(g(n))",
+      "E": "h(n) = O(f(n))"
+    },
+    "correctOption": ["B", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Unimodal List: A list L[0...n-1] of distinct elements is unimodal if it consists of an increasing sequence followed by a decreasing sequence.\nMore precisely, there is an index m ∈ 1,2,...,n-2 such that:\nL[i] < L[i+1] for all 0 ≤ i < m and\nL[i] > L[i+1] for all m ≤ i < n-1.\nSuppose the middle element of a unimodal list is x, and the elements to the left and right of x are p and q, respectively.",
+    "image": null,
+    "question": "Which of the following facts must be used to find the maximum element in O(log n) time?",
+    "options": {
+      "A": "If p < x > q, then x is the maximum in the list.",
+      "B": "If p < x ≤ q, then the maximum element is in the left half of the list.",
+      "C": "If p < x < q, then the maximum element is in the right half of the list.",
+      "D": "If p > x > q, then the maximum element is in the left half of the list.",
+      "E": "If p > x > q, then the maximum element is in the right half of the list."
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "1 class Node:\n2     def __init__(self, data):\n3         self.data = data\n4         self.next = None\nConsider an implementation of a singly linked list, where each node is created using the given class Node.\nSuppose it has only a head pointer that points to the first node of the linked list.",
+    "image": null,
+    "question": "Which of the following statement(s) is/are true? Assume we are using the most efficient algorithms.",
+    "options": {
+      "A": "Finding an item in a sorted linked list of n items takes O(n) time.",
+      "B": "Finding an item in a sorted linked list of n items takes O(log n) time",
+      "C": "Adding a new item to the end of the linked list of n items takes O(n) time.",
+      "D": "Removing an item from the end of the linked list of n items takes O(1) time.",
+      "E": "Removing duplicate items from the sorted linked list of n items takes O(n) time."
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables.\nLinear probing takes the original hash index and increments the value by 1 until a free slot is found.\nConsider the given hash table with hash function h(key) = key mod 5 which uses linear probing for solving collisions.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892533/may2023-1_rpyog3.png",
+    "question": "Which among the following options corresponds to possible orders of insertion of values in the hash table?",
+    "options": {
+      "A": "51, 18, 45, 60, 34",
+      "B": "34, 45, 18, 60, 51",
+      "C": "18, 45, 34, 60, 51",
+      "D": "34, 45, 18, 51, 60",
+      "E": "18, 34, 51, 45, 60"
+    },
+    "correctOption": ["A", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph:\nIf we run breadth first search(BFS) on the given graph starting at any vertex, which of the following is/are possible order of visiting the nodes?\nNote: When a node has multiple neighbours, BFS would visit alphabetically.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892534/may2023-2_p9svpn.png",
+    "question": "Which of the following is/are possible order of visiting the nodes?",
+    "options": {
+      "A": "A B E C D F",
+      "B": "B A C D E F",
+      "C": "C B D A E F",
+      "D": "D B C E A F",
+      "E": "E A D B F C"
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following DAG",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892534/may2023-3_seompp.png",
+    "question": "Which of the following is/are not a valid topological orderings for the given DAG?",
+    "options": {
+      "A": "1 2 3 4 5 6",
+      "B": "1 3 4 2 5 6",
+      "C": "1 3 2 4 5 6",
+      "D": "1 3 2 5 4 6",
+      "E": "1 2 4 3 5 6"
+    },
+    "correctOption": ["B", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "1 def fun(n):\n2     count = 0\n3     for i in range(n):\n4         j = 1\n5         while j < n:\n6             count += 1\n7             j *= 2\n8     return count",
+    "image": null,
+    "question": "What is the time complexity of the function fun given above?",
+    "options": {
+      "A": "O(1)",
+      "B": "O(n)",
+      "C": "O(n log n)",
+      "D": "O(n²)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "We have an input list of three-dimensional points [(7, 8, 1), (3, 7, 5), (6, 8, 1), (6, 7, 5), (0, 5, 2), (9, 9, 0)].\nWe sort these in ascending order by the third coordinate.",
+    "image": null,
+    "question": "Which of the following corresponds to a stable sort of this input?",
+    "options": {
+      "A": "[(9, 9, 0), (6, 8, 1), (7, 8, 1), (0, 5, 2), (6, 7, 5), (3, 7, 5)]",
+      "B": "[(9, 9, 0), (7, 8, 1), (6, 8, 1), (0, 5, 2), (3, 7, 5), (6, 7, 5)]",
+      "C": "[(9, 9, 0), (6, 8, 1), (7, 8, 1), (0, 5, 2), (3, 7, 5), (6, 7, 5)]",
+      "D": "[(9, 9, 0), (7, 8, 1), (6, 8, 1), (0, 5, 2), (6, 7, 5), (3, 7, 5)]"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Implementation for insertion sort\n1 def insertion_sort(L):\n2     n = len(L)\n3     if n < 1:\n4         return(L)\n5     for i in range(n):\n6         j = i\n7         while(j > 0 and L[j] < L[j-1]):\n8             (L[j], L[j-1]) = (L[j-1], L[j])\n9             j = j - 1\n10    return(L)\nSuppose L is a list of distinct integer elements. Let x, y and z be the largest, second largest, and third largest elements in the list L. Suppose x appears before z in the list.",
+    "image": null,
+    "question": "Which of the following is true, with respect to the implementation above?",
+    "options": {
+      "A": "x and z are always compared in a run of insertion sort, regardless of the position of y.",
+      "B": "x and z are compared in a run of insertion sort if and only if y appears before z in the list L.",
+      "C": "x and z are compared in a run of insertion sort if and only if y appears after z in the list L.",
+      "D": "x and z are compared in a run of insertion sort if and only if y appears after z but before x in the list L."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "3-way-Merge Sort: Suppose that instead of dividing the input list L in half at each step of Merge Sort, you divide L into three equal parts, sort each parts, and finally combine all of them using an efficient three-way merge (merge three sorted lists instead of two).",
+    "image": null,
+    "question": "What is the overall asymptotic running time of the 3-way-Merge Sort algorithm?",
+    "options": {
+      "A": "O(n²)",
+      "B": "O(n² log n)",
+      "C": "O(n(log n)²)",
+      "D": "O(n log n)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "image": null,
+    "question": "Which of the following statements is not true about Quicksort?",
+    "options": {
+      "A": "For every fixed strategy to choose a pivot for Quicksort, we can construct a worst-case input that requires time O(n²).",
+      "B": "If we could find the median in time O(n), Quicksort would have worst-case complexity O(n log n)",
+      "C": "If we randomly choose a pivot element each time, Quicksort will always terminate in time O(n log n)."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Core Data Structures",
+    "context": "Assume s is a stack and q is a queue.\nPush and Pop operations are usual stack operations, Enqueue and Dequeue are usual queue operations, and isEmpty() is a method that returns true if either the stack or the queue is empty.\nAssume that stack s and Queue q are empty initially.\n1 for i in range(5):\n2     s.Push(i)\n3     q.Enqueue(i)\n4\n5 while not q.isEmpty():\n6     s.Push(q.Dequeue())\n7 \n8 while not s.isEmpty():\n9     q.Enqueue(s.Pop())\n10\n11 while not q.isEmpty():\n12     print(q.Dequeue(), end = \"\")",
+    "image": null,
+    "question": "What is the output of the given code snippet?",
+    "options": {
+      "A": "0 1 2 3 4 4 3 2 1 0",
+      "B": "4 3 2 1 0 0 1 2 3 4",
+      "C": "4 3 2 1 0 4 3 2 1 0",
+      "D": "0 1 2 3 4 0 1 2 3 4"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider a graph G. Let T be a BFS tree of G with root r.\nLet d(r,v) denote the length of the shortest path between the nodes r and v. If vertex x is visited before vertex y in the breadth first search traversal, which of the following statements is true?",
+    "image": null,
+    "question": "which of the following statements is true?",
+    "options": {
+      "A": "d(r,x) > d(r,y)",
+      "B": "d(r,x) = d(r,y)",
+      "C": "d(r,x) < d(r,y)",
+      "D": "d(r,x) ≤ d(r,y)",
+      "E": "d(r,x) ≥ d(r,y)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following statements:\n1. While creating a DFS tree for a directed graph, among non-tree edges, only back edges correspond to cycles.\n2. The depth of any DFS tree rooted at a vertex is at least as much as the depth of any BFS tree rooted at the same vertex.",
+    "image": null,
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "Only statement 1 is true",
+      "B": "Only statement 2 is true",
+      "C": "Both statements 1 and 2 are true",
+      "D": "Both statements 1 and 2 are false"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the given list L = [9, 14, 17, 37, 57, 62, 82, 92, 97].\nAfter applying the Quick-sort partition algorithm once, the list is modified to: [14, 9, 17, 37, 62, 57, 82, 97, 92].",
+    "image": null,
+    "question": "The number of elements that could have been chosen as a pivot in the first round is _?",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "image": null,
+    "question": "A connected, simple, undirected graph G has 1225 edges. The minimum number of vertices in G is _?",
+    "options": null,
+    "correctOption": 50,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following functions:\nf(n) = n log log n\ng(n) = n(log n)²",
+    "question": "Which of the following is true?",
+    "options": {
+      "A": "f(n) is O(g(n)) and g(n) is O(f(n))",
+      "B": "f(n) is O(g(n)), but g(n) is not O(f(n))",
+      "C": "f(n) is not O(g(n)) and g(n) is not O(f(n))",
+      "D": "g(n) is O(f(n)), but f(n) is not O(g(n))"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following two implementations to calculate the factorial of n:\n\nA. factorial (n) using iteration below:\n```python\n1 def factorial (n):\n2   \n3   f = 1\n4   \n5   for i in range(2, n + 1):\n6     \n7     f = f * i\n8   \n9   return f\n```\n\nB. factorial (n) using recursion below:\n```python\n1 def factorial (n):\n2   if n == 1 or n == 0:\n3     return 1\n4   else:\n5     return (n * factorial (n - 1))\n```",
+    "question": "Which of the following option represent the correct complexity for both implementation?",
+    "options": {
+      "A": "A - O(n), B - O(n²)",
+      "B": "A - O(n), B - O(log n)",
+      "C": "A - O(n²), B - O(n²)",
+      "D": "A - O(n), B - O(n)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Given the following sorted list:\n[16, 53, 59, 81, 94, 99, 121, 150, 162, 170]\nNote: Assume here that binary search will compute the midpoint by using (First index + Last index)//2",
+    "question": "If we use binary search algorithm to search for element 105 in the given list, then the number of comparisons of searching element 105 with list elements done in this process is_.",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Selection sort algorithm:\n```python\n1 def selectionsort (L):\n2   n = len(L)\n3   if n < 1:\n4     return(L)\n5   for i in range(n):\n6     minpos = i\n7     for j in range(i + 1, n):\n8       if L[j] < L[minpos]:\n9         minpos = j\n10\n11  (L[i], L[minpos]) = (L[minpos], L[i])\n12  return(L)\n```",
+    "question": "Which of the following statement(s) is/are true about the given Selection sort algorithm?",
+    "options": {
+      "A": "It is considered an unstable sorting algorithm.",
+      "B": "It is considered a stable sorting algorithm.",
+      "C": "It has the same time complexity irrespective of the sequence of elements in the input.",
+      "D": "It is efficient for larger data sets.",
+      "E": "It is sorted in place."
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Insertion sort algorithm:\n```python\n1 def insertionsort(L):\n2   n = len(L)\n3   if n < 1:\n4     return(L)\n5   for i in range(n):\n6     j = i\n7     while(j > 0 and L[j] < L[j - 1]):\n8       (L[j], L[j - 1]) = (L[j - 1], L[j])\n9       j = j - 1\n10  return(L)\n```",
+    "question": "Given an input list L of size n. What are the minimum and maximum number of swapping operations (Line-8) possible between elements to sort the input list L?",
+    "options": {
+      "A": "Minimum: 0, Maximum: n(n+1)/2",
+      "B": "Minimum: n-1, Maximum: n(n+1)/2",
+      "C": "Minimum: 0, Maximum: n(n-1)/2",
+      "D": "Minimum: n-1, Maximum: n(n-1)/2",
+      "E": "Minimum: 0, Maximum: n²"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892825/sept2023-1_wvlzwi.png",
+    "context": "Consider the following linked list structure, where each node is an object of class Node and it has a head pointer that points to the first node of the linked list and a tail pointer that points to the last node of the linked list.\n```python\nclass Node:\n  def __init__(self, data):\n    self.data = data\n    self.next = None\n```\n",
+    "question": "Which of the following operations on a given linked list requires traversal of the entire list?",
+    "options": {
+      "A": "Insert a new node at the beginning",
+      "B": "Delete a node from the end",
+      "C": "Insert a new node at the end",
+      "D": "Delete a node from the beginning"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": "A doctor sees patients in his consulting room every evening. A certain number of appointments are given for each evening. Patients can also take a chance and come without an appointment. Appointments are not for a fixed time. The receptionist allows patients in to see the doctor in the order in which they arrive, with the provision that any patient with an appointment goes in before any patient without an appointment.",
+    "question": "What would be a good data structure for the receptionist to keep track of the waiting patients?",
+    "options": {
+      "A": "Single stack",
+      "B": "Two stacks",
+      "C": "Single queue",
+      "D": "Two queues"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892826/sept2023-2_ixxgao.png",
+    "context": "Consider the following graph:\n\nNote: Assume that when a node has multiple neighbours, BFS visits them alphabetically.",
+    "question": "If we run Breadth First Search(BFS) on the given graph starting from vertex A, which of the following is the order of visiting the nodes?",
+    "options": {
+      "A": "A B C G E F D H",
+      "B": "A B C G E D F H",
+      "C": "A B C E F G D H",
+      "D": "A B C G D E F H"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following implementation for merge two sorted list and return one sorted merged list:\n```python\n1 def merge (A,B): # Merge two sorted list A and B\n2   (m,n) = (len(A), len(B))\n3   (C,i,j) = ([],0,0)\n4   #Case 1: when both lists A and B have elements for comparing\n5   while i < m and j < n:\n6     if A[i] ≤ B[j]: #Compare the elements\n7       C.append(A[i])\n8       i += 1\n9     else:\n10      C.append(B[j])\n11      j += 1\n12\n13  #Case 2: If list B is over, shift all elements of A to C\n14  while i < m:\n15    C.append(A[i])\n16    i += 1\n17\n18  #Case 3: If list A is over, shift all elements of B to C\n19  while j < n:\n20    C.append(B[j])\n21    j += 1\n22\n23  #Return sorted merged list\n24  return C\n```\nIf 4 sorted lists L1, L2, L3 and L4 each of length n/2 are merged into a single sorted list of elements using two-way merging by given merge function.",
+    "question": "What will be the minimum and maximum number of element comparisons needed for this process?",
+    "options": {
+      "A": "Minimum: 2n, Maximum: 4n - 3",
+      "B": "Minimum: 2n, Maximum: 4n - 1",
+      "C": "Minimum: 2n - 1, Maximum: 4n - 3",
+      "D": "Minimum: 2n - 1, Maximum: 4n + 1"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892826/sept2023-3_v50tyb.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": "Let s be a stack and q be a queue supporting the following operations:\nStack operation:\n• Push(d): Insert element d in stack\n• Pop(): Remove the element from the stack and return the removed element\nQueue Operation:\n• Enqueue(d): Insert element d in queue\n• Dequeue(): Remove the element from the queue and return the removed element\n\nConsider the following function:\n```python\n1 def fun(S, Q):\n2   if (not S.isempty()):\n3     Q.Enqueue(S.Pop())\n4     fun(S, Q)\n5     S.Push(Q.Dequeue())\n```",
+    "question": "What operation is performed by the above function fun(s,Q)? Suppose initially stack s has n elements and queue q is empty.",
+    "options": {
+      "A": "Leaves the stack S unchanged",
+      "B": "Reverses the order of the elements in the stack S",
+      "C": "Swap the top and bottom element of the stack S, keeping the other elements in the same order",
+      "D": "Empties the stack S"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892827/sept2023-4_rtvm92.png",
+    "context": "Suppose we obtain the following DFS tree rooted at node A for an undirected graph with vertices {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P}.\n",
+    "question": "Which of the following cannot be an edge/edges in the original graph?",
+    "options": {
+      "A": "(A, K)",
+      "B": "(H, J)",
+      "C": "(M, N)",
+      "D": "(B, O)",
+      "E": "(P, E)",
+      "F": "(C, M)"
+    },
+    "correctOption": ["B", "C", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables. Linear probing takes the original hash index and increments the value by 1 until a free slot is found.",
+    "question": "A hash table contains 13 buckets(indexed from 0 to 12) and uses linear probing to resolve collisions. The key values are integers and the hash function used is key mod 13. If key values 14, 55, 144, 83, 122, 131 are inserted into the table, in what index would the key value 131 be inserted?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Suppose, in a depth-first traversal of an undirected graph G with 12 vertices, 9 edges are marked as tree edges. The number of connected components in G is ___.",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider a directed graph G with 65 edges. What is the minimum number of vertices in G?",
+    "options": null,
+    "correctOption": 9,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Graph Algorithms",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758892827/sept2023-5_boxpuh.png",
+    "context": "Consider the following Directed Acyclic Graph(DAG):\n",
+    "question": "The number of possible topological order(s) for the given graph is ___.",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical"
+  },
+
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following functions:\n• f(n)=102n⁴+26n³\n• g(n)=103n³+20n²\n• h(n)=110n³log~n+36n²",
+    "question": "Which of the following is/are false?",
+    "options": {
+      "A": "f(n) = O(g(n))",
+      "B": "g(n) = O(h(n))",
+      "C": "f(n) = O(h(n))",
+      "D": "h(n) = O(f(n))"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the below Merge Sort implementation\n\n```python\n1 def merge (A,B): # Merge two sorted list A and B\n2 \t(m,n)=(len(A),len(B))\n3 \t(c,i,j)=([],0,0)\n4 \t#Case 1: when both lists A and B have elements for comparing\n5 \twhile i < m and j < n:\n6 \t\tif A[i] ≤ B[j]:\n7 \t\t\tC.append(A[i])\n8 \t\t\ti += 1\n9 \t\telse:\n10 \t\t\tC.append(B[j])\n11 \t\t\tj += 1\n12 \t#Case 2: If list B is over, shift all elements of A to C\n13 \twhile i < m:\n14 \t\tc.append(A[i])\n15 \t\ti += 1\n16 \t#Case 3: If list A is over, shift all elements of B to C\n17 \twhile j < n:\n18 \t\tc.append(B[j])\n19 \t\tj += 1\n20 \t# Return sorted merged list\n21 \treturn C\n22\n23 def mergesort (L):\n24 \tn = len(L)\n25 \tif n ≤ 1:\n26 \t\treturn(L)\n27 \tLeft_Half = mergesort (L[:n//2])\n28 \tRight_Half = mergesort(L[n//2:])\n29 \tSorted_Merged_List = merge(Left_Half, Right_Half)\n30 \treturn (Sorted_Merged_List)\n```",
+    "question": "Which of the following is/are true about given Merge Sort algorithm?",
+    "image": null,
+    "options": {
+      "A": "Worst case time complexity is O(n~log~n)",
+      "B": "Best case time complexity is O(n)",
+      "C": "Worst case time complexity is O(n²)",
+      "D": "Recurrence relation of merge sort is T(n)=2T(n/2)+O(n)",
+      "E": "It is a stable sort algorithm"
+    },
+    "correctOption": ["A", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Unimodal List: A list L[0... n-1] of distinct elements is unimodal if it consists of a decreasing sequence followed by an increasing sequence.\nMore precisely, there is an index m in {1, 2,..., n-2} such that:\nL[i]>L[i+1] for all 0 ≤ i < m, and\nL[i]<L[i+1] for all m ≤ i < n-1.\nSuppose the middle element of an unimodal list is x, and the elements to the left and right of x are p and q, respectively.",
+    "question": "Which of the following facts must be used to find the minimum element in O(log~n) time?",
+    "options": {
+      "A": "If p > x < q, then x is the minimum in the list.",
+      "B": "If p < x < q, then the minimum element is in the left half of the list.",
+      "C": "If p < x < q, then the minimum element is in the right half of the list.",
+      "D": "If p > x > q, then the minimum element is in the left half of the list.",
+      "E": "If p > x > q, then the minimum element is in the right half of the list."
+    },
+    "correctOption": ["A", "B", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": "Consider an implementation of a singly linked list where each node is created using the given class Node.\n```python\nclass Node:\n\tdef __init__(self, data):\n\t\tself.data = data\n\t\tself.next = None\n```\nSuppose we have a variable head that points to the first node of the linked list.",
+    "question": "Which of the below operation cannot be performed in constant time with the above representation of the linked list?",
+    "image": null,
+    "options": {
+      "A": "Insertion of the new node at the front of the linked list.",
+      "B": "Insertion of the new node at the end of the linked list.",
+      "C": "Deletion of the first node of the linked list.",
+      "D": "Deletion of the last node of the linked list.",
+      "E": "Deletion of the second node (from starting) of the linked list."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": "Note: Degree sequence is a series of positive integer a₁,a₂,...,aₙ where each aᵢ is the degree of the ith vertex of the graph.",
+    "question": "Which of the following is/are possible degree sequence/(s) of vertices of a connected undirected graph with four vertices?",
+    "options": {
+      "A": "3,2,1,1",
+      "B": "3,3,1,1",
+      "C": "3,3,2,2",
+      "D": "3,3,3,3"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following code.\n```python\n1 def fun(n):\n2 \ttotal = 0\n3 \tfor i in range(n):\n4 \t\tfor j in range(n):\n5 \t\t\tk=1\n6 \t\t\twhile (k<n):\n7 \t\t\t\ttotal=total+1\n8 \t\t\t\tk=k*2\n9 \treturn total\n```",
+    "question": "What is the time complexity of the function fun in terms of n ?",
+    "image": null,
+    "options": {
+      "A": "O(n²)",
+      "B": "O(n~log~n)",
+      "C": "O(n²log~n)",
+      "D": "O(n)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "We have an input list of two-dimensional points [(8, 1), (7, 5), (6, 1), (2, 5), (5, 2), (9, 0)].\nWe sort these in ascending order by the second coordinate.",
+    "question": "Which of the following corresponds to a stable sort of this input?",
+    "options": {
+      "A": "[(9,0), (6, 1), (8, 1), (5, 2), (7, 5), (2, 5)]",
+      "B": "[(9,0), (8, 1), (6, 1), (5, 2), (7, 5), (2, 5)]",
+      "C": "[(9,0), (8, 1), (6, 1), (5, 2), (2, 5), (7,5)]",
+      "D": "[(9,0), (6, 1), (8, 1), (5, 2), (2, 5), (7, 5)]"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph\n\nAssume that when a node has multiple neighbours, BFS would visit the numerically smaller valued node first.",
+    "question": "Which of the following vertex sequence is possible BFS traversals on the graph started from node 5?",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758893497/jan2024-1_mdkwi1.png",
+    "options": {
+      "A": "5,4,3,6,1,2",
+      "B": "5, 3, 4, 6, 1, 2",
+      "C": "5,3,4,6,2,1",
+      "D": "5,6,4,3,2,1"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the below Quick sort algorithm to sort elements in ascending order using first element as pivot.\n```python\n1 def partition (L,lower, upper):\n2 \t# Select first element as a pivot\n3 \tpivot = L[lower]\n4 \ti = lower\n5 \tfor j in range(lower+1, upper+1):\n6 \t\tif L[j] ≤ pivot:\n7 \t\t\ti += 1\n8 \t\t\tL[i],L[j]=L[j],L[i]\n9 \tL[lower], L[i] = L[i], L[lower]\n10 \t# Return the position of pivot\n11 \treturn i\n12 def quicksort (L, lower, upper):\n13 \tif(lower < upper):\n14 \t\tpivot_pos = partition (L, lower, upper);\n15 \t\t#call the quick sort on leftside part of pivot\n16 \t\tquicksort(L,lower, pivot_pos-1)\n17 \t\t# call the quick sort on rightside part of pivot\n18 \t\tquicksort(L,pivot_pos+1, upper)\n19 \treturn L\n```",
+    "question": "Which of the below input sequence will require the maximum number of comparisons?",
+    "image": null,
+    "options": {
+      "A": "[22, 25, 56, 67, 89]",
+      "B": "[52, 25, 76, 67, 89]",
+      "C": "[22, 25, 76, 67, 50]",
+      "D": "[52, 25, 89, 67, 76]"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": "Assume s is a stack and q is a queue.\nPush and Pop operations are usual stack operations, Enqueue and Dequeue are usual queue operations, and isEmpty() is a method that returns true if either the stack or the queue is empty.\nAssume that stack s and Queue q are empty initially.\n```python\n1 for i in range(5,0,-1):\n2 \tS.Push(i)\n3 \tQ.Enqueue(i)\n4\n5 while not Q.isEmpty():\n6 \tS.Push (Q.Dequeue())\n7\n8 while not s.isEmpty():\n9 \tQ.Enqueue (S.Pop())\n10\n11 while not Q.isEmpty():\n12 \tprint (Q.Dequeue(), end = \"\")\n```",
+    "question": "What is the output of the given code snippet?",
+    "image": null,
+    "options": {
+      "A": "1 2 3 4 5 5 4 3 2 1",
+      "B": "5 4 3 2 1 1 2 3 4 5",
+      "C": "5 4 3 2 1 5 4 3 2 1",
+      "D": "1 2 3 4 5 1 2 3 4 5"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": "Let G be a graph with n vertices and m edges.",
+    "question": "What is the tightest upper bound complexity of Depth First search (DFS) on graph G, when G is represented as an adjacency matrix?",
+    "options": {
+      "A": "O(n)",
+      "B": "O(n+m)",
+      "C": "O(n²)",
+      "D": "O(m²)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Implementation for Insertion sort\n```python\n1 def insertionsort (L):\n2 \tn=len(L)\n3 \tif n<1:\n4 \t\treturn(L)\n5 \tfor i in range(n):\n6 \t\tj=i\n7 \t\twhile (j>0 and L[j]<L[j-1]):\n8 \t\t\t(L[j],L[j-1])=(L[j-1],L[j])\n9 \t\t\tj=j-1\n10 \treturn(L)\n```\nSuppose a list L=[1,3,2,6,5,8,7,9] is used as input parameter to above insertion sort.",
+    "question": "How many times will the while condition evaluate to true?",
+    "image": null,
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables. Linear probing takes the original hash index and increments the value by 1 until a free slot is found. A hash table contains 8 buckets indexed from 0 to 7 and uses linear probing to resolve collisions. The key values are integers and the hash function used is key mod 8. If key values 25, 87, 48, 64, 11 are inserted in to the table in the given order.",
+    "question": "At what index would the key value 120 be inserted after them?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "An undirected graph G has 5 vertices. The maximum number of edges in G is",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "The number of different topological orderings of the vertices of the given graph is",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758893497/jan2024-2_bpsl3n.png",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "Suppose f, g, and h are three functions. Which of the following statement(s) is/are true?\n1. If f=O(g) and g=O(h) then f=O(h)\n2. If f=O(h) and g=O(h) then f+g=O(h)",
+    "options": {
+      "A": "Only statement 1 is true.",
+      "B": "Only statement 2 is true",
+      "C": "Both Statements 1 and 2 are true",
+      "D": "Both Statements 1 and 2 are false"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following two implementations to finding the nth Fibonacci number.\nCode-A\n```python\n1 def fib(n):\n2   if n ≤ 1:\n3     return n\n4   else:\n5     return fib(n-1)+fib(n-2)\n```\nCode-B\n```python\n1 def fib(n):\n2   L=[0,1]\n3   for i in range(2, n):\n4     L.append( L[-2]+L[-1])\n5   return L[-1]\n```",
+    "question": "Let f(n) and g(n) denote the asymptotic complexity of Code-A and Code-B respectively. Which of the following statements is true?",
+    "options": {
+      "A": "f(n)=O(g(n))",
+      "B": "g(n)=O(f(n))",
+      "C": "Both f(n)=O(g(n)) and g(n)=O(f(n)) are true.",
+      "D": "None of these"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "You are given a non-empty list with n elements and the values are supposed to be 1 to n, in ascending order in the list. However, it is possible that one element is missing from the list between the first and last element (excluding the first and last element). For instance, a five elements list may contain [1,3,4,5] instead of [1,2,3,4,5], here element 2 is missing from the list. What is the time complexity of the best possible algorithm to find the missing element?",
+    "options": {
+      "A": "O(1)",
+      "B": "O(√(n))",
+      "C": "O(n)",
+      "D": "O(log n)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Selection sort algorithm:\n```python\n1 def selectionsort (L):\n2   n=len(L)\n3   if n<1:\n4     return(L)\n5   for i in range(n):\n6     minpos = i\n7     for j in range(i+1,n):\n8       if L[j] < L[minpos]:\n9         minpos = j\n10    (L[i], L[minpos]) = (L[minpos], L[i])\n11  return(L)\n```\n(Note: There is a typo in the original document at line 9, which should be `minpos = j`)",
+    "question": "What will be the time complexity of selection sort if the input list of n elements is already sorted in ascending order?",
+    "options": {
+      "A": "O(n)",
+      "B": "O(log n)",
+      "C": "O(n log n)",
+      "D": "O(n²)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": "Select the most appropriate data structure for the following operations:",
+    "question": "Which option represents the correct matching?",
+    "options": {
+      "A": "1-ii, 2-iii, 3 - iv, 4 - i",
+      "B": "1 - iii, 2 - iv, 3 - ii, 4-i",
+      "C": "1-i, 2-ii, 3 - iv, 4 - iii",
+      "D": "1-iii, 2-ii, 3 - iv, 4 - i"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758893816/may2024-1_tc0si9.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": "Consider a connected, directed graph G on which DFS is executed. Let for an edge (u, v) in G, the following are the pre and post numbers used in the DFS algorithm on the graph.\npre[u]=3 post[u]=6\npre[v]=1 post[v]=10",
+    "question": "Which of the following options is correct for edge (u, v)?",
+    "options": {
+      "A": "Edge (u, v) is a tree edge.",
+      "B": "Edge (u, v) is a back edge.",
+      "C": "Edge (u, v) is a cross edge.",
+      "D": "Edge (u, v) is a forward edge."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Algorithm Design Paradigms",
+    "context": "The Tower of Hanoi problem discussed in the lecture is a classic puzzle with three rods and n disks of different sizes that can slide onto any rod. The puzzle starts with the disks neatly stacked in ascending order of size on one rod, with the smallest disk at the top. The objective is to move the entire stack to another rod, obeying the following rules:\n1. Only one disk can be moved at a time.\n2. Each move consists of taking the top disk from one stack and placing it on another stack.\n3. No disk may be placed on top of a smaller disk.\nFollowing is the recurrence of the recursive solution to find the minimum number of moves M(n) for the given problem with n disk.\n- M(1)=1\n- M(n)=2M(n-1)+1",
+    "question": "The number of moves if n=6 is.",
+    "options": null,
+    "correctOption": 63,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "An undirected connected graph G has 46 edges. The minimum number of vertices in G is",
+    "options": null,
+    "correctOption": 11,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Which of the following statements is/are true about the Quicksort algorithm to sort elements in ascending order? Assume that the last element in the list is selected as a pivot for partitioning each time.",
+    "options": {
+      "A": "The best case is when the pivot element always divides the list into two equal halves.",
+      "B": "The best case is when the input list is already arranged in ascending order.",
+      "C": "The best case is when the input list is arranged in descending order.",
+      "D": "The worst case is when the input list is arranged in either ascending or descending order."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following is/are true about Breadth First Search(BFS) in an unweighted directed graph G?",
+    "options": {
+      "A": "BFS can be used to compute the number of connected components in G.",
+      "B": "BFS can not check if there are any cycles in G.",
+      "C": "Paths computed by BFS are the shortest paths in G in terms of the number of edges.",
+      "D": "If the graph is represented as an adjacency matrix, then BFS can be performed in O(m+n) time, where m is the number of edges in G and n is the number of nodes in G.",
+      "E": "Let T be a BFS Tree, let x and y be nodes in T' belonging to layers L_i and L_j, and let (x, y) be an edge of G. Then i and j differ by at most 1."
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": "Suppose each node of the linked list is an object of class Node, head is the first node of the linked list and the list has the following elements initially:\n23, 21, 4, 67, 12, 6, 17, 24, 20, 33\nConsider the following function:\n```python\n# Node class definition\nclass Node:\n  def __init__(self, data):\n    self.data = data\n    self.next = None\n\n# Function in question\ndef operation (head):\n  ptr1 = head\n  ptr2 = head\n  while (ptr2.next!= None):\n    # NOTE: Based on analysis to match the provided answer, the following line is assumed to be the correct logic\n    # for the ambiguously formatted code in the source document.\n    ptr1 = ptr1.next \n    if ptr2.next.next != None:\n      ptr2 = ptr2.next.next\n    else:\n      ptr2 = ptr2.next\n  print(ptr1.data)\n```",
+    "question": "What will be the output of the given function if it is called on the head node of the given linked list?",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": "A hash table of size 10 uses open addressing with hash function h(k)=k mod 10, and linear probing. After inserting six values into an empty hash table, the table is as shown below.",
+    "question": "Which of the following option(s) give a possible order in which the key values could have been inserted in the table?",
+    "options": {
+      "A": "70, 32, 20, 48, 41, 58",
+      "B": "32, 48, 70, 20, 58, 41",
+      "C": "48, 32, 70, 41, 20, 58",
+      "D": "70, 32, 58, 20, 41, 48"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758893815/may2024-_dtcbec.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph:",
+    "question": "If we run Depth First Search(DFS) on the given graph starting from vertex 1, which of the following is/are valid order(s) of visiting the nodes? Note: Assume that when a node has multiple neighbours, DFS can visit any vertex first.",
+    "options": {
+      "A": "1, 2, 4, 6, 5, 3",
+      "B": "1, 2, 5, 3, 4, 6",
+      "C": "1, 3, 4, 6, 2, 5",
+      "D": "1, 2, 3, 4, 5, 6",
+      "E": "1, 3, 6, 4, 5, 2"
+    },
+    "correctOption": ["A", "E"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758893816/may2024-2_sg2tqd.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following is/are not a topological ordering of the given graph G?",
+    "options": {
+      "A": "[1,2,3,4,5,7,6,8]",
+      "B": "[1,3,2,4,7,8,6,5]",
+      "C": "[1,3,2,7,6,5,4,8]",
+      "D": "[1,2,3,4,5,6,7,8]"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758893847/may2024-3_ujaqvy.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Core Data Structures",
+    "context": "Let s be a stack and q be a queue supporting the following operations:\nStack operation:\n- Push(d): Insert element d in stack\n- Pop(): Remove the element from the stack and return the removed element\nQueue Operation:\n- Enqueue(d): Insert element d in queue from rear\n- Dequeue(): Remove the front element from the queue and return the removed element\nSuppose the initial state of the queue q is [26, 78, 45, 10, 19, 56] where 26 is at the front and 56 is at the rear and the stack s is empty initially.\nThe following sequence of operations is performed:\n1 S.Push (Q.Dequeue())\n2 S.Push (Q.Dequeue())\n3 S. Push (Q.Dequeue())\n4 Q. Enqueue (S.Pop())\n5 S.Push (Q.Dequeue())\n6 Q.Enqueue(S.Pop())",
+    "question": "After performing the given sequence of operations, what will be the front and rear elements in queue q?",
+    "options": {
+      "A": "front: 10, rear: 78",
+      "B": "front: 45, rear: 78",
+      "C": "front: 19, rear: 10",
+      "D": "front: 19, rear: 78"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "We have an input list of two-dimensional points [(8, 'A'), (2, 'B'), (1, 'C'), (8, 'D'), (2, 'E'), (9, 'F')]. We sort these in ascending order by the 0-th value of the tuple. Which of the following corresponds to a stable sort of this input?",
+    "options": {
+      "A": "[(1, 'C'), (2, 'B'), (2, 'E'), (8, 'D'), (8, 'A'), (9, 'F')]",
+      "B": "[(1, 'C'), (2, 'E'), (2, 'B'), (8, 'D'), (8, 'A'), (9, 'F')]",
+      "C": "[(1, 'C'), (2, 'E'), (2, 'B'), (8, 'A'), (8, 'D'), (9, 'F')]",
+      "D": "[(1, 'C'), (2, 'B'), (2, 'E'), (8, 'A'), (8, 'D'), (9, 'F')]"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Core Data Structures",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758896786/sept2024-1_iemx3p.png",
+    "question": "Select the most appropriate data structure for the following applications.",
+    "options": {
+      "A": "1-d, 2-b, 3-c, 4-a",
+      "B": "1-d, 2-a, 3-c, 4-b",
+      "C": "1-d, 2-a, 3-b, 4-c",
+      "D": "1-a, 2-d, 3-c, 4-b"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "\nLet n denote the number of nodes in the stack.\nLet push() be implemented by inserting a new node at the head, and pop() be implemented by deletion of a node from the head.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758896866/sept2024-6_bcza2j.png",
+    "question": "Which one of the following is the time complexity of the most time-efficient implementation of push() and pop(), respectively, for this data structure?",
+    "options": {
+      "A": "O(1), O(1)",
+      "B": "O(1), O(n)",
+      "C": "O(n), O(1)",
+      "D": "O(n), O(n)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Consider the quick sort algorithm that selects pivot element at the middle of the list. What is worst case recurrence relation and time complexity of Quick Sort?",
+    "options": {
+      "A": "Recurrence is T(n) = T(n/2) + O(n) and time complexity is O(n²)",
+      "B": "Recurrence is T(n) = T(n-1) + O(n) and time complexity is O(n²)",
+      "C": "Recurrence is T(n) = 2T(n/2) + O(n) and time complexity is O(n log n)",
+      "D": "Recurrence is T(n) = 2T(n/2) + O(1) and time complexity is O(n log n)"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": "NOTE: When a node has multiple neighbours, BFS would visit the numerically smaller valued node first.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758896787/sept2024-3_vk9ole.png",
+    "question": "Which of the following vertex sequence is the BFS traversal on the above graph that started from node 5?",
+    "options": {
+      "A": "5, 1, 4, 7, 0, 3, 6, 2",
+      "B": "5, 1, 4, 0, 7, 3, 6, 2",
+      "C": "5, 1, 4, 7, 0, 3, 2, 6",
+      "D": "5, 1, 4, 7, 0, 2, 3, 6"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": "You are trying to complete a Diploma in Programming with list of courses below.\ncourses=[\"Maths-I\", \"Maths-II\", \"CT\", \"Python\", \"PDSA\", \"DBMS\", \"MAD-I\", \"MAD-II\", \"MAD-I Project\", \"MAD-II Project\"]\nThese courses can be finished in parallel but some courses depend on others, as described below.\n• Must finish Maths-I before Maths-II\n• Must finish Maths-II and CT before Python\n• Must finish CT and Python before PDSA and DBMS\n• Must finish DBMS before MAD-I and MAD-I project\n• Must finish MAD-I before MAD-II\n• Must finish MAD-I project before MAD-II project",
+    "question": "Each course takes a month to complete. What is the minimum number of months required to complete the diploma?",
+    "options": {
+      "A": "7",
+      "B": "6",
+      "C": "5",
+      "D": "4"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Core Data Structures",
+    "context": "Suppose each node of the linked list is an object of class Node, head is the first node of the linked list and the list has the following elements:\n10, 5, 7, 20, 18, 15, 22, 25, 30\n\n```python\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\ndef operation(head):\n    p = head\n    q = head\n    r = head\n    while (p.next != None):\n        r = q\n        q = p\n        p = p.next\n    r.next = p\n```",
+    "question": "What will be the updated list after calling function operation(head)?",
+    "options": {
+      "A": "10, 5, 7, 20, 18, 22, 25, 30",
+      "B": "10, 5, 7, 20, 18, 15, 25, 30",
+      "C": "10, 5, 7, 20, 18, 15, 22, 30",
+      "D": "10, 5, 7, 20, 18, 15, 22, 25"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following functions:\n• f(n) = 10n⁴ + 6n³\n• g(n) = 10n³ + 2n²\n• h(n) = 12n³ log n + 6n²",
+    "question": "Which of the following is/are True?",
+    "options": {
+      "A": "f(n) = O(g(n))",
+      "B": "g(n) = O(h(n))",
+      "C": "f(n) = O(h(n))",
+      "D": "h(n) = O(f(n))"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Which of the following is/are true about the Merge Sort?",
+    "options": {
+      "A": "The depth of the recursion tree (number of levels) in Merge Sort is O(log n)",
+      "B": "The depth of the recursion tree (number of levels) in Merge Sort is O(n)",
+      "C": "Worst case time complexity of merge operation is O(log n)",
+      "D": "Worst case time complexity of merge operation is O(n)",
+      "E": "Merge sort is not a inplace sorting"
+    },
+    "correctOption": ["A", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following statement(s) is/are True about Breadth First Search(BFS) on an undirected connected graph?",
+    "options": {
+      "A": "BFS computes reachability in graphs.",
+      "B": "Complexity of BFS algorithm is O(n²) using adjacency list.",
+      "C": "BFS will traverse a graph level by level.",
+      "D": "BFS can be used to detect cycles in a Graph.",
+      "E": "Complexity of BFS algorithm is O(m+n) using adjacency matrix."
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": "Note: Degree sequence is a series of positive integer a₁, a₂, ..., aₙ where aᵢ is the degree of the i^{th} vertex in the graph.",
+    "question": "Which of the following is/are possible degree sequence(s) of vertices of a connected undirected graph with four vertices?",
+    "options": {
+      "A": "1, 1, 2, 3",
+      "B": "2, 2, 3, 3",
+      "C": "1, 1, 3, 3",
+      "D": "3, 3, 3, 3"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": "A Depth First Search (DFS) is started at node A. The nodes are listed in the order they are first visited.\nNote: When a node has multiple neighbours, DFS would visit anyone of the neighbours.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758896788/sept2024-4_ujvk55.png",
+    "question": "Which of the following is/are possible output(s)?",
+    "options": {
+      "A": "A, B, D, H, E, C, F, G",
+      "B": "A, C, F, H, E, B, D, G",
+      "C": "A, C, F, H, D, E, B, G",
+      "D": "A, B, D, H, E, F, C, G"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": "Consider a DAG with V = {A, B, C, D, E, F}, shown below.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758896789/sept2024-5_eczssr.png",
+    "question": "Which of the following is/are valid topological orderings?",
+    "options": {
+      "A": "F, C, A, E, D, B",
+      "B": "F, A, C, E, D, B",
+      "C": "F, C, A, D, B, E",
+      "D": "F, A, C, D, B, E"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Given the following sorted list:\n[1, 3, 5, 8, 19, 23, 78, 159, 1621, 1701]\nNote: Assume here that binary search will compute the midpoint by using (First index + Last index)//2",
+    "question": "If we use binary search algorithm to search for element 159 in the given list, then the number of comparisons of searching element 159 with list elements done in this process is _.",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables.\nLinear probing takes the original hash index and increments the value by 1 until a free slot is found.\nA hash table contains 10 buckets (0 to 9) and uses linear probing to resolve collisions.\nThe key values are integers and the hash function used is key mod 10.",
+    "question": "If key values 6, 16, 80, 91, 145 are inserted in to the table, in what location would the key value 190 be inserted?",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "An undirected connected graph G has 15 vertices. The maximum number of edges in G is _.",
+    "options": null,
+    "correctOption": 105,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Consider the following recursive Python function.\n\n1 def fun(D, s1, s2):\n2     if s1 < s2:\n3         D[s1], D[s2] = D[s2], D[s1]\n4         fun(D, s1 + 1, s2 - 1)",
+    "question": "Suppose the function fun() is applied to the list D = [1, 2, 3, 4, 5, 6] with the call fun(D, 1, 3). What will the list D look like after the function is executed?",
+    "options": {
+      "A": "[1, 4, 3, 2, 5, 6]",
+      "B": "[6, 5, 4, 3, 2, 1]",
+      "C": "[1, 3, 2, 4, 5, 6]",
+      "D": "[1, 2, 3, 4, 5, 6]"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "f₁(n) = 3n² + 2n\nf₂(n) = 3n + (log n)²\nf₃(n) = log log n\nf₄(n) = 10 log n\nf₅(n) = 3n log n",
+    "question": "Arrange the above functions in increasing order of asymptotic complexity.",
+    "options": {
+      "A": "f₃(n), f₄(n), f₂(n), f₁(n), f₅(n)",
+      "B": "f₃(n), f₂(n), f₁(n), f₅(n), f₄(n)",
+      "C": "f₄(n), f₃(n), f₂(n), f₁(n), f₅(n)",
+      "D": "f₃(n), f₄(n), f₂(n), f₅(n), f₁(n)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "1 def fun(a, n):\n2     result = 1\n3     while n > 0:\n4         if n % 2 == 1:\n5             result *= a\n6         a *= a\n7         n //= 2\n8     return result",
+    "question": "What does the following code compute and what is its time complexity?",
+    "options": {
+      "A": "Computes a! with time complexity O(log n).",
+      "B": "Computes aⁿ with time complexity O(n).",
+      "C": "Computes aⁿ with time complexity O(log n).",
+      "D": "Computes a¹ + a² + ... + aⁿ with time complexity O(n)."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Implementation of Selection sort.\n\n1 def selectionSort(L):\n2     n = len(L)\n3     if n < 1:\n4         return(L)\n5     for i in range(n):\n6         minpos = i\n7         for j in range(i + 1, n):\n8             if L[j] < L[minpos]: #Comparison\n9                 minpos = j\n10        (L[i], L[minpos]) = (L[minpos], L[i])\n11    return(L)",
+    "question": "Which of the following statements is true about the number of comparisons made during the sorting process?",
+    "options": {
+      "A": "The number of comparisons is the minimum when the input list is in ascending order.",
+      "B": "The number of comparisons is the maximum when the input list is in descending order.",
+      "C": "The number of comparisons is the same irrespective of the order of the elements in the input list.",
+      "D": "The number of comparisons depends on the number of swaps made during the process."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following Implementation of Insertion sort.\n\n1 def insertionsort(L):\n2     n = len(L)\n3     for i in range(1, n):\n4         key = L[i]\n5         j = i - 1\n6         while j >= 0 and L[j] > key: #Comparison\n7             L[j + 1] = L[j] #Shift\n8             j -= 1\n9         L[j + 1] = key\n10    return L",
+    "question": "Which of the following is true about the number of shifts made during the sorting process?",
+    "options": {
+      "A": "The number of shifts is always equal to the number of comparisons.",
+      "B": "The number of shifts is minimum when the input list is in ascending order.",
+      "C": "The number of shifts is minimum when the input list is in descending order.",
+      "D": "The number of shifts is independent of the order of the elements in the input list."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "What is the time complexity for the worst case behaviour of Merge Sort?",
+    "options": {
+      "A": "O(n)",
+      "B": "O(n² log n)",
+      "C": "O(n log n)",
+      "D": "O(n²)"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider that Quick sort is applied to a list of n distinct elements that is already sorted in the required sorting order.",
+    "question": "What will be the Worst case time complexity of Quick sort if the pivot is taken to be\nI) Median element (Consider that finding median takes O(n) time)\nII) Last element\nChoose the correct option corresponding to the correct pair of complexities for both pivots.",
+    "options": {
+      "A": "I: O(n²) and II: O(n²)",
+      "B": "I: O(n²) and II: O(n)",
+      "C": "I: O(n log n) and II: O(n log n)",
+      "D": "I: O(n log n) and II: O(n²)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Core Data Structures",
+    "context": "Consider the following statements:\n1. A stack can be used to check whether a word is a palindrome\n2. A stack can be used to check if parentheses in an expression are balanced.\n3. A stack used to manage print jobs in a printer spooler.\n\nNote: A palindrome is a word that reads the same forwards and backwards. e.g: radar",
+    "question": "Choose the correct option regarding the given statements.",
+    "options": {
+      "A": "Statement 1 and Statement 3 are true",
+      "B": "Statement 2 and Statement 3 are true",
+      "C": "Statement 1 and Statement 2 are true",
+      "D": "All statements are true"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Graph Algorithms",
+    "context": "Note: When a node has multiple neighbours, assume that DFS visits the numerically smaller valued node first.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758899323/jan2025-1_fweld9.png",
+    "question": "Which of the following vertex sequence is correct DFS traversals on the graph starting from the node 2?",
+    "options": {
+      "A": "2, 1, 4, 3, 7, 6, 5",
+      "B": "2, 1, 4, 5, 6, 3, 7",
+      "C": "2, 1, 4, 5, 6, 7, 3",
+      "D": "2, 1, 6, 7, 5, 4, 3"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Core Data Structures",
+    "context": "Consider the following code. Assume S is a stack and Q is a queue. Push and Pop operations are usual stack operations, Enqueue and Dequeue are usual queue operations.\n\n1 L = ['A', 'B', 'C', 'D', 'E', 'F']\n2 for i in range(6):\n3     if i % 2 == 0:\n4         Q.Enqueue(L[i])\n5     else:\n6         S.Push(L[i])\n7 \n8 for i in range(3):\n9     v = Q.Dequeue()\n10    S.Push(v)\n11\n12 for i in range(2):\n13    v = S.Pop()\n14    Q.Enqueue(v)\n15\n16 x = Q.Dequeue()\n17 y = S.Pop()\n18 print(x, y)",
+    "question": "What would be the output of the given code?",
+    "options": {
+      "A": "E A",
+      "B": "C B",
+      "C": "C A",
+      "D": "E B"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Core Data Structures",
+    "context": "Consider an implementation of a singly linked list where each node is created using the given class Node.\n\n1 class Node:\n2     def __init__(self, data):\n3         self.data = data\n4         self.next = None\n\nSuppose it has a head pointer that points to the first node of the linked list and a tail pointer that points to the last element of the linked list.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758899323/jan2025-2_zxsk9i.png",
+    "question": "Which of the following operations can be implemented in O(1) time with the given representation of the linked list?",
+    "options": {
+      "A": "Insertion of the new node at the front of the linked list.",
+      "B": "Insertion of the new node at the end of the linked list.",
+      "C": "Deletion of the first node of the linked list.",
+      "D": "Deletion of the last node of the linked list.",
+      "E": "Search for any element in the linked list"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Graph Algorithms",
+    "context": "Note: Degree sequence is a series of positive integers a₁, a₂, ..., aₙ where each aᵢ is the degree of the ith vertex of the graph.",
+    "question": "Which of the following is/are possible degree sequence(s) of vertices of a connected undirected graph with six vertices?",
+    "options": {
+      "A": "1, 1, 1, 1, 1, 1",
+      "B": "2, 2, 2, 2, 2, 2",
+      "C": "1, 1, 2, 2, 3, 5",
+      "D": "1, 2, 2, 2, 3, 3"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Graph Algorithms",
+    "context": "Suppose we obtain the following BFS tree rooted at node H for an undirected graph with vertices {A, B, C, D, E, F, G, H, I}.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758899381/jan2025-3_whm73n.png",
+    "question": "Which of the following cannot be an edge/edges in the original graph?",
+    "options": {
+      "A": "(G, C)",
+      "B": "(D, B)",
+      "C": "(H, C)",
+      "D": "(E, A)",
+      "E": "(F, A)"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Core Data Structures",
+    "context": "Linear probing is an open addressing scheme in computer programming for resolving hash collisions in hash tables. Linear probing takes the original hash index and increments the value by 1 until a free slot is found. A hash table contains 11 buckets (index 0 to 10) and uses linear probing to resolve collisions. The key values are integers and the hash function used is key mod 11.",
+    "question": "If key values 43, 12, 67, 102, 38 and 89 are inserted into the hash table in the given order, in what index location would the key value 89 be inserted?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Consider an undirected graph G with 55 edges with the least number of vertices possible. What will be the number of vertices in graph G?",
+    "options": null,
+    "correctOption": 11,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following graph.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758899382/jan2025-4_tg0s7s.png",
+    "question": "The number of distinct topological orderings possible that start with vertex 1 for the given DAG is?",
+    "options": null,
+    "correctOption": 12,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": "Consider the following operations and their time complexity.\n• Operation 1 complexity: O(n log n)\n• Operation 2 complexity: O(n)\n• Operation 3 complexity: O(log n)",
+    "question": "The overall complexity of executing all three operations sequentially is:",
+    "options": {
+      "A": "O(n)",
+      "B": "O(log n)",
+      "C": "O(n log n)",
+      "D": "O(n²)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Algorithmic Complexity and Analysis",
+    "context": null,
+    "question": "What is the time complexity of the code given below?\n```python\ndef fun(n):\n\toperations = 0\n\ti = 1\n\twhile i <= n:\n\t\tfor j in range(i):\n\t\t\toperations += 1\n\t\ti *= 2\n\treturn operations\n```",
+    "options": {
+      "A": "O(n log n)",
+      "B": "O(n²)",
+      "C": "O(n)",
+      "D": "O(log n)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "When using the binary search algorithm on a sorted list, consider the maximum number of comparisons it might take in the worst-case scenario to find an item or confirm it's absent.",
+    "question": "If the total number of items in this sorted list is doubled, how does this maximum number of comparisons change?",
+    "options": {
+      "A": "It doubles",
+      "B": "It remains the same",
+      "C": "It becomes half",
+      "D": "It increases by 1"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following function for Insertion sort.\n```python\ndef insertionsort(L):\n\tn = len(L)\n\tif n < 1:\n\t\treturn(L)\n\tfor i in range(n):\n\t\tj = i\n\t\twhile (j > 0 and L[j] < L[j-1]):\n\t\t\t(L[j], L[j-1]) = (L[j-1], L[j])\n\t\t\tj = j-1\n\treturn(L)\n```",
+    "question": "Under which scenario does the insertion sort exhibit its worst-case time complexity of O(n²) and why does this specific input trigger that behavior?",
+    "options": {
+      "A": "When the input array is already sorted; the algorithm still performs redundant checks.",
+      "B": "When the input array is sorted in reverse (descending) order; each element needs to be compared against and shifted past all previously sorted elements.",
+      "C": "When the input array contains many duplicate elements; handling duplicates requires extra comparisons.",
+      "D": "When the input array elements are randomly distributed; the lack of order maximizes the average number of shifts required."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Merge Sort's stability (preserving the relative order of equal elements) is an important property for certain applications.",
+    "question": "How is stability typically ensured during the critical merge step of the algorithm?",
+    "options": {
+      "A": "Stability is automatically guaranteed by the divide-and-conquer approach itself.",
+      "B": "The algorithm uses a secondary key comparison if the primary keys are equal.",
+      "C": "During the merge step, when comparing an element from the left subarray (L[i]) and the right subarray (R[j]), if L[i] == R[j], the element from the right subarray (R[j]) must be chosen first to be placed into the merged array.",
+      "D": "During the merge step, when comparing an element from the left subarray (L[i]) and the right subarray (R[j]), if L[i] == R[j], the element from the left subarray (L[i]) must be chosen first to be placed into the merged array."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": null,
+    "question": "Which of the following scenarios would guarantee that Quick Sort exhibits its worst-case complexity of O(n²)?",
+    "options": {
+      "A": "Choosing a median value as the pivot for each recursive call.",
+      "B": "Choosing either the smallest or the largest element as the pivot at each recursive call.",
+      "C": "Choosing either the first or the last position element as the pivot at each recursive call.",
+      "D": "Partitioning the array into two roughly equal halves at each recursive call."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "null"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Core Data Structures",
+    "context": "You are given a linked list where each node of the linked list contains data and a reference to the next node. The linked list has a head pointer that points to the first node of the linked list.",
+    "question": "Given a pointer p_current_node that points to an arbitrary node in the middle of a large linked list, which of the following actions is impossible to perform directly using only p_current_node without traversing from the list's head?",
+    "options": {
+      "A": "Modify the data stored within p_current_node.",
+      "B": "Delete the node immediately following p_current_node (assuming p_current_node is not the tail).",
+      "C": "Insert a new node just after the p_current_node.",
+      "D": "Modify the data of the node that immediately precedes p_current_node in the list."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758899553/may2025-1_vxeiea.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Graph Algorithms",
+    "context": "When BFS is performed on an unweighted, undirected graph starting from a source node s, it defines a BFS tree where edges connect nodes to their 'discoverers.'",
+    "question": "Consider an edge (u,v) from the original graph. If this edge (u, v) is not part of the BFS tree (i.e., it's a non-tree edge), what is the relationship between the levels (shortest distances from s) of u and v? Let level(x) be the distance of node x from s.",
+    "options": {
+      "A": "level(u) and level(v) must either be the same or differ by exactly 1 (i.e., |level(u) - level(v)| <= 1).",
+      "B": "One of u or v must be s, and the other is at level 1.",
+      "C": "level(u) and level(v) must differ by more than 1 (e.g., level(v) >= level(u) + 2).",
+      "D": "level(u) and level(v) must be the same, and u and v must have been discovered from different parent nodes in the BFS tree."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Core Data Structures",
+    "context": "Consider a hash table of size M=10 (indices 0 through 9). The hash function used is h(k) = k mod 10. Collisions are resolved using linear probing with a probe step of 1 (i.e., if h(k) is occupied, try (h(k)+1) mod M, then (h(k)+2) mod M, and so on). The following keys are inserted into the initially empty hash table in this exact order: 12, 42, 35, 28, 63, 55",
+    "question": "After all these keys have been inserted, at what index in the hash table will the key 23 be stored?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "6",
+      "D": "7"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Sorting and Selection Algorithms",
+    "context": "Consider the following function for Selection sort.\n```python\ndef selectionsort(L):\n\tn = len(L)\n\tif n < 1:\n\t\treturn(L)\n\tfor i in range(n-1):\n\t\tminpos = i\n\t\tfor j in range(i+1, n):\n\t\t\tif L[j] < L[minpos]:\n\t\t\t\tminpos = j\n\t\t(L[i], L[minpos]) = (L[minpos], L[i])\n\treturn(L)\n```",
+    "question": "Consider the state of a list L of size n after k completed iterations of the outer loop of the selection sort. Which of the following statements is always true about the list L at this point?",
+    "options": {
+      "A": "The first k elements (L[0...k-1]) are sorted relative to each other, but may not be the k smallest elements overall.",
+      "B": "The element L[k] is the (k+1)th smallest element of the original list.",
+      "C": "The first k elements (L[0...k-1]) contain the k smallest elements of the original list, and these elements are in their final sorted positions.",
+      "D": "The last n-k elements (L[k...n-1]) contain the n-k largest elements, but they are not necessarily sorted."
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "Which of the following statement(s) is/are always true for any undirected simple graph G with n vertices (n ≥ 1)?",
+    "options": {
+      "A": "If G is connected and has n-1 edges, then G contains no cycles (is a tree).",
+      "B": "If G has n vertices and n-1 edges, then G must be connected.",
+      "C": "If every vertex in G has a degree of at least 2, then G must contain a cycle.",
+      "D": "If G has no cycles (is a forest), then G must have exactly n-1 edges.",
+      "E": "If G is a tree, then there is exactly one unique simple path between any two distinct vertices in G."
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Graph Algorithms",
+    "context": "Consider the following undirected graph represented by its adjacency list:\n• 0: [1,2]\n• 1: [0,4,5]\n• 2: [0,4]\n• 3: [4,5]\n• 4: [1, 2, 3, 5]\n• 5: [1,3,4]\nA Breadth-First Search (BFS) is performed on this graph starting from source node 0. If multiple unvisited adjacent vertices are available from the current vertex being processed, the BFS algorithm always explores the vertex with the smaller label/ID first.",
+    "question": "Which of the following edges from the original graph will NOT be part of the BFS traversal tree?",
+    "options": {
+      "A": "(1,4)",
+      "B": "(2,4)",
+      "C": "(3,4)",
+      "D": "(3,5)",
+      "E": "(4,5)",
+      "F": "(1,5)"
+    },
+    "correctOption": ["B", "D", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Algorithm Design Paradigms",
+    "context": "Consider the code given below.\n```python\ndef fun(n):\n\tif n <= 1:\n\t\treturn 0\n\treturn fun(n-1) + fun(n-2)\n\nfun(4)\n```",
+    "question": "How many recursive calls are made (excluding the initial call to fun(4))?",
+    "options": null,
+    "correctOption": 8,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Graph Algorithms",
+    "context": "Consider a complete directed graph K5 (a graph with 5 nodes where every distinct pair of nodes is connected by a unique edge).\nNote: A back edge connects a node to an ancestor in the DFS tree (an already visited node that is still on the recursion stack).",
+    "question": "If you perform a Depth-First Search (DFS) starting from an arbitrary node, say Node 1, what is the maximum number of edges that will be classified as 'back edges' during this single DFS traversal, assuming the traversal explores all reachable nodes from Node 1?",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Graph Algorithms",
+    "context": null,
+    "question": "The number of topological orderings of the vertices of the given graph is",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1758899554/may2025-2_r8yo5l.png"
+  },
+  {
+    "subject": "PDSA",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Core Data Structures",
+    "context": "Start with an empty stack s and an empty queue q.\nPerform the following sequence of operations in the given order:\n1. Q.Enqueue(10)\n2. Q.Enqueue(20)\n3. S.Push(5)\n4. Q.Enqueue(30)\n5. x = Q.Dequeue(), then s.Push(x)\n6. S.Push(15)\n7. y = S.Pop(), then Q.Enqueue(y)\n8. Q.Enqueue(40)\n9. z = Q.Dequeue(), then s.Push(z)\n10. s.Pop() (the returned value is discarded)\n11. w = Q.Dequeue(), then s.Push(w)",
+    "question": "After all these operations are completed, what is the value of the element at the top of stack s?",
+    "options": null,
+    "correctOption": 30,
+    "questionType": "numerical",
+    "image": null
+  }
+]

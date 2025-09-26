@@ -200,10 +200,10 @@
     "context": "Consider the Java code given below that should print the names of students whose total is between 255 and 360 (both inclusive).\n```java\nimport java.util.*;\nclass Student{\n\tString name;\n\tdouble total;\n\tpublic Student(String name, double total) {\n\t\tthis.name = name;\n\t\tthis.total = total;\n\t}\n}\npublic class Test {\n\tpublic static void main(String[] args) {\n\t\tList<Student> sList = new ArrayList<Student>();\n\t\tsList.add(new Student(\"s1\", 360));\n\t\tsList.add(new Student(\"s2\", 400));\n\t\tsList.add(new Student(\"s3\", 200));\n\t\tsList.add(new Student(\"s4\", 255));\n\t\t//CODE BLOCK\n\t}\n}\n```",
     "question": "Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
     "options": {
-      "A": "```java\nsList.stream()\n\t.map(i -> i.total >= 255 && i.total <= 360)\n\t.forEach(s->System.out.println(s.name));\n```",
-      "B": "```java\nsList.stream()\n\t.filter(i -> i.total >= 255 && i.total <= 360)\n\t.forEach(s->System.out.println(s.name));\n```",
-      "C": "```java\nsList.stream()\n\t.filter(i -> i.total >= 255)\n\t.filter(i -> i.total <= 360)\n\t.forEach(s->System.out.println(s.name));\n```",
-      "D": "```java\nsList.stream()\n\t.filter(i -> i.total >= 255)\n\t.map(i->i.total<=360)\n\t.forEach(s->System.out.println(s.name));\n```"
+      "A": "```java\nsList.stream()\n\t.map(i -> i.total ≥ 255 && i.total ≤ 360)\n\t.forEach(s->System.out.println(s.name));\n```",
+      "B": "```java\nsList.stream()\n\t.filter(i -> i.total ≥ 255 && i.total ≤ 360)\n\t.forEach(s->System.out.println(s.name));\n```",
+      "C": "```java\nsList.stream()\n\t.filter(i -> i.total ≥ 255)\n\t.filter(i -> i.total ≤ 360)\n\t.forEach(s->System.out.println(s.name));\n```",
+      "D": "```java\nsList.stream()\n\t.filter(i -> i.total ≥ 255)\n\t.map(i->i.total≤360)\n\t.forEach(s->System.out.println(s.name));\n```"
     },
     "correctOption": ["B", "C"],
     "questionType": "multiple"
@@ -328,10 +328,10 @@
     "context": "Consider the Java code given below that should print the names of teachers whose experience is between 2 and 4 (both inclusive).\n```java\nimport java.util.*;\nclass Teacher{\n    String name;\n    double experience;\n    public Teacher (String name, double exp) {\n        this.name = name;\n        this.experience = exp;\n    }\n}\npublic class Stream {\n    public static void main(String[] args) {\n        List<Teacher> tList = new ArrayList<Teacher>();\n        tList.add(new Teacher (\"T1\", 3.5));\n        tList.add(new Teacher (\"T2\", 4.2));\n        tList.add(new Teacher (\"T3\", 2.6));\n        tList.add(new Teacher (\"T4\", 3.4));\n        tList.add(new Teacher(\"T5\", 1.5));\n        //CODE BLOCK\n    }\n}\n```",
     "question": "Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
     "options": {
-      "A": "tList.stream()\n    .map(i -> i.experience >= 2 && i.experience <= 4)\n    .forEach(t->System.out.println(t.name));",
-      "B": "tList.stream()\n    .filter(i -> i.experience >= 2 && i.experience <= 4)\n    .forEach(t->System.out.println(t.name));",
-      "C": "tList.stream()\n    .filter(i -> i.experience >= 2)\n    .filter(i -> i.experience <= 4)\n    .forEach(t->System.out.println(t.name));",
-      "D": "tList.stream()\n    .filter(i -> i.experience >= 2)\n    .map(i -> i.experience <= 4)\n    .forEach(t->System.out.println(t.name));"
+      "A": "tList.stream()\n    .map(i -> i.experience ≥ 2 && i.experience ≤ 4)\n    .forEach(t->System.out.println(t.name));",
+      "B": "tList.stream()\n    .filter(i -> i.experience ≥ 2 && i.experience ≤ 4)\n    .forEach(t->System.out.println(t.name));",
+      "C": "tList.stream()\n    .filter(i -> i.experience ≥ 2)\n    .filter(i -> i.experience ≤ 4)\n    .forEach(t->System.out.println(t.name));",
+      "D": "tList.stream()\n    .filter(i -> i.experience ≥ 2)\n    .map(i -> i.experience ≤ 4)\n    .forEach(t->System.out.println(t.name));"
     },
     "correctOption": ["B", "C"],
     "questionType": "multiple"
@@ -344,10 +344,10 @@
     "context": "From among the options, choose the code segment(s) that give(s) the same output as is given by the Java code inside the CODE BLOCK.\n```java\nimport java.util.*;\nimport java.util.stream.*;\npublic class Test {\n    public static void main(String[] args){\n        //CODE BLOCK begins here\n        Stream.iterate(1, n->n+1)\n            .map(n->n*n)\n            .limit(4)\n            .forEach(i -> System.out.println(i));\n        //CODE BLOCK ends here\n    }\n}\n```",
     "question": "From among the options, choose the code segment(s) that give(s) the same output as is given by the Java code inside the CODE BLOCK.",
     "options": {
-      "A": "Stream.iterate(1, n->n+1)\n    .map(n->n*n)\n    .filter(n->n<=4)\n    .forEach(i -> System.out.println(i));",
-      "B": "Stream.iterate(1, n->n<=4, n->n+1)\n    .map(n->n*n)\n    .forEach(i -> System.out.println(i));",
-      "C": "Stream.iterate(1, n->n+1)\n    .takeWhile(n->n<=4)\n    .map(n->n*n)\n    .forEach(i -> System.out.println(i));",
-      "D": "Stream.iterate(1, n->n+1)\n    .map(n->n*n)\n    .dropWhile(n->n<=16)\n    .forEach(i -> System.out.println(i));"
+      "A": "Stream.iterate(1, n->n+1)\n    .map(n->n*n)\n    .filter(n->n≤4)\n    .forEach(i -> System.out.println(i));",
+      "B": "Stream.iterate(1, n->n≤4, n->n+1)\n    .map(n->n*n)\n    .forEach(i -> System.out.println(i));",
+      "C": "Stream.iterate(1, n->n+1)\n    .takeWhile(n->n≤4)\n    .map(n->n*n)\n    .forEach(i -> System.out.println(i));",
+      "D": "Stream.iterate(1, n->n+1)\n    .map(n->n*n)\n    .dropWhile(n->n≤16)\n    .forEach(i -> System.out.println(i));"
     },
     "correctOption": ["B", "C"],
     "questionType": "multiple"
@@ -759,7 +759,7 @@
     "exam": "quiz2",
     "term": "Jan 2024",
     "topic": "Exception Handling, I/O, and Modern APIs",
-    "context": "Consider the Java code given below.\n\n```java\nclass Validation {\n    public boolean validate(int a, int b) {\n        assert a > 0: \"a should be greater than zero\";      //LINE 1\n        assert b >= 1: \"b should not be less than one\";   //LINE 2\n        return true;\n    }\n}\n\npublic class AssertTest {\n    public static void main(String[] args) {\n        int a = 1;\n        int b = -1;\n        int result = 0;\n        Validation obj = new Validation();\n        if (obj.validate(a, b))\n            result = a / b;\n        assert result > 0: \"result should be greater than zero\"; //LINE 3\n        System.out.println(result);\n    }\n}\n```",
+    "context": "Consider the Java code given below.\n\n```java\nclass Validation {\n    public boolean validate(int a, int b) {\n        assert a > 0: \"a should be greater than zero\";      //LINE 1\n        assert b ≥ 1: \"b should not be less than one\";   //LINE 2\n        return true;\n    }\n}\n\npublic class AssertTest {\n    public static void main(String[] args) {\n        int a = 1;\n        int b = -1;\n        int result = 0;\n        Validation obj = new Validation();\n        if (obj.validate(a, b))\n            result = a / b;\n        assert result > 0: \"result should be greater than zero\"; //LINE 3\n        System.out.println(result);\n    }\n}\n```",
     "question": "Choose the correct option when the program is executed as:\n java -ea AssertTest",
     "options": {
       "A": "LINE 1 generates assertion error.",
@@ -775,7 +775,7 @@
     "exam": "quiz2",
     "term": "Jan 2024",
     "topic": "The Java Collections and Generics Framework",
-    "context": "The following code maps a set of names of employees to their performance ratings, and groups the names based on their eligibility for bonus.\nBased on the code, answer the question that follows.\n\n```java\nimport java.util.*;\n\npublic class Employee {\n    TreeSet<String> t1 = new TreeSet<String>();\n    TreeSet<String> t2 = new TreeSet<String>();\n    public boolean PerformanceRating(double rating) {\n        if (rating >= 4.0) {\n            return true;\n        }\n        return false;\n    }\n    public void filterEmployees(TreeMap<String, Double> rating) {\n        for (Map.Entry<String, Double> entry : rating.entrySet()) {\n            if (PerformanceRating(entry.getValue())) {\n                t1.add(entry.getKey());\n            } else {\n                t2.add(entry.getKey());\n            }\n        }\n    }\n    public void display() {\n        System.out.println(\"Eligible for Bonus: \" + t1);\n        System.out.println(\"Not Eligible for Bonus: \" + t2);\n    }\n    public static void main(String[] args) {\n        TreeMap<String, Double> rating = new TreeMap<String, Double>();\n        rating.put(\"Ramesh\", 4.5);\n        rating.put(\"Suresh\", 3.8);\n        rating.put(\"Kartik\", 4.2);\n        rating.put(\"Shubham\", 3.5);\n        rating.put(\"Mukesh\", 4.8);\n        Employee e = new Employee();\n        e.filterEmployees(rating);\n        e.display();\n    }\n}\n```",
+    "context": "The following code maps a set of names of employees to their performance ratings, and groups the names based on their eligibility for bonus.\nBased on the code, answer the question that follows.\n\n```java\nimport java.util.*;\n\npublic class Employee {\n    TreeSet<String> t1 = new TreeSet<String>();\n    TreeSet<String> t2 = new TreeSet<String>();\n    public boolean PerformanceRating(double rating) {\n        if (rating ≥ 4.0) {\n            return true;\n        }\n        return false;\n    }\n    public void filterEmployees(TreeMap<String, Double> rating) {\n        for (Map.Entry<String, Double> entry : rating.entrySet()) {\n            if (PerformanceRating(entry.getValue())) {\n                t1.add(entry.getKey());\n            } else {\n                t2.add(entry.getKey());\n            }\n        }\n    }\n    public void display() {\n        System.out.println(\"Eligible for Bonus: \" + t1);\n        System.out.println(\"Not Eligible for Bonus: \" + t2);\n    }\n    public static void main(String[] args) {\n        TreeMap<String, Double> rating = new TreeMap<String, Double>();\n        rating.put(\"Ramesh\", 4.5);\n        rating.put(\"Suresh\", 3.8);\n        rating.put(\"Kartik\", 4.2);\n        rating.put(\"Shubham\", 3.5);\n        rating.put(\"Mukesh\", 4.8);\n        Employee e = new Employee();\n        e.filterEmployees(rating);\n        e.display();\n    }\n}\n```",
     "question": "Choose the correct option.",
     "options": {
       "A": "This program generates the output:\nEligible for Bonus: [Shubham, Suresh]\nNot Eligible for Bonus: [Mukesh, Ramesh, Kartik]",
@@ -954,10 +954,10 @@
     "context": "Consider the Java code given below that should print the names of students whose gpa is between 3.0 and 3.8 (both inclusive).\n\n```java\nimport java.util.*;\n\nclass Student {\n    String name;\n    double gpa;\n    public Student(String n, double g) {\n        name = n;\n        gpa = g;\n    }\n}\n\npublic class StreamExample {\n    public static void main(String[] args) {\n        List<Student> students = new ArrayList<>();\n        students.add(new Student(\"Alice\", 3.5));\n        students.add(new Student(\"Bob\", 3.2));\n        students.add(new Student(\"Charlie\", 3.8));\n        students.add(new Student(\"David\", 3.0));\n        students.add(new Student(\"Eva\", 4.0));\n        //CODE BLOCK\n    }\n}\n```",
     "question": "Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
     "options": {
-      "A": "students.stream()\n    .map(s -> s.gpa >= 3.0 && s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));",
-      "B": "students.stream()\n    .filter(s -> s.gpa >= 3.0 && s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));",
-      "C": "students.stream()\n    .filter(s -> s.gpa >= 3.0)\n    .filter(s -> s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));",
-      "D": "students.stream()\n    .filter(s -> s.gpa >= 3.0)\n    .map(s -> s.gpa <= 3.8)\n    .forEach(s -> System.out.println(s.name));"
+      "A": "students.stream()\n    .map(s -> s.gpa ≥ 3.0 && s.gpa ≤ 3.8)\n    .forEach(s -> System.out.println(s.name));",
+      "B": "students.stream()\n    .filter(s -> s.gpa ≥ 3.0 && s.gpa ≤ 3.8)\n    .forEach(s -> System.out.println(s.name));",
+      "C": "students.stream()\n    .filter(s -> s.gpa ≥ 3.0)\n    .filter(s -> s.gpa ≤ 3.8)\n    .forEach(s -> System.out.println(s.name));",
+      "D": "students.stream()\n    .filter(s -> s.gpa ≥ 3.0)\n    .map(s -> s.gpa ≤ 3.8)\n    .forEach(s -> System.out.println(s.name));"
     },
     "correctOption": ["B", "C"],
     "questionType": "multiple"
@@ -1127,7 +1127,7 @@
     "exam": "quiz2",
     "term": "May 2024",
     "topic": "The Java Collections and Generics Framework",
-    "context": "import java.util.*;\n\nclass Player {\n    String nickname;\n    int score;\n    boolean isPremium;\n    //Constructor to initialize instance variables\n    public Player(String nickname, int score, boolean isPremium) {\n        this.nickname = nickname;\n        this.score = score;\n        this.isPremium = isPremium;\n    }\n    public String toString() {\n        return nickname;\n    }\n}\n\npublic class GameLobby {\n    public static boolean isEligible(int score, boolean isPremium) {\n        if (isPremium) {\n            return true;\n        }\n        return (score >= 10);\n    }\n\n    public static void filterPlayers(List<Player> players) {\n        ListIterator<Player> iterator = players.listIterator();\n        while (iterator.hasNext()) {\n            Player p = iterator.next();\n            if (!isEligible(p.score, p.isPremium))\n                // LINE 1\n        }\n    }\n\n    public static void main(String[] args) {\n        var players = new LinkedList<Player>();\n        players.add(new Player(\"Sharon\", 15, false));\n        players.add(new Player(\"Rohit\", 8, false));\n        players.add(new Player(\"Arjun\", 20, true));\n        players.add(new Player(\"Ambani\", 9, true));\n        filterPlayers(players);\n        System.out.println(players);\n    }\n}",
+    "context": "import java.util.*;\n\nclass Player {\n    String nickname;\n    int score;\n    boolean isPremium;\n    //Constructor to initialize instance variables\n    public Player(String nickname, int score, boolean isPremium) {\n        this.nickname = nickname;\n        this.score = score;\n        this.isPremium = isPremium;\n    }\n    public String toString() {\n        return nickname;\n    }\n}\n\npublic class GameLobby {\n    public static boolean isEligible(int score, boolean isPremium) {\n        if (isPremium) {\n            return true;\n        }\n        return (score ≥ 10);\n    }\n\n    public static void filterPlayers(List<Player> players) {\n        ListIterator<Player> iterator = players.listIterator();\n        while (iterator.hasNext()) {\n            Player p = iterator.next();\n            if (!isEligible(p.score, p.isPremium))\n                // LINE 1\n        }\n    }\n\n    public static void main(String[] args) {\n        var players = new LinkedList<Player>();\n        players.add(new Player(\"Sharon\", 15, false));\n        players.add(new Player(\"Rohit\", 8, false));\n        players.add(new Player(\"Arjun\", 20, true));\n        players.add(new Player(\"Ambani\", 9, true));\n        filterPlayers(players);\n        System.out.println(players);\n    }\n}",
     "question": "Choose the correct option to be filled in place of LINE 1 so that the output is:\n[Sharon, Arjun, Ambani]",
     "options": {
       "A": "iterator.remove(p);",
@@ -1326,7 +1326,7 @@
     "exam": "quiz2",
     "term": "Sept 2024",
     "topic": "Exception Handling, I/O, and Modern APIs",
-    "context": "public class AssertTest {\n  public static double computeTax (double salary, double investments) {\n    double taxableIncome = 0;\n    double taxRate = 0.2;\n    double tax = 0;\n    assert salary > 0; // assert-1\n    assert investments > 0; // assert-2\n    taxableIncome = salary - investments;\n    assert taxableIncome >= 0; // assert-3\n    tax = taxableIncome * taxRate;\n    return tax;\n  }\n  public static void main(String[] args) {\n    double salary = 120000;\n    double investments = 0;\n    assert salary > 0; // assert-4\n    double tax = computeTax (salary, investments);\n  }\n}",
+    "context": "public class AssertTest {\n  public static double computeTax (double salary, double investments) {\n    double taxableIncome = 0;\n    double taxRate = 0.2;\n    double tax = 0;\n    assert salary > 0; // assert-1\n    assert investments > 0; // assert-2\n    taxableIncome = salary - investments;\n    assert taxableIncome ≥ 0; // assert-3\n    tax = taxableIncome * taxRate;\n    return tax;\n  }\n  public static void main(String[] args) {\n    double salary = 120000;\n    double investments = 0;\n    assert salary > 0; // assert-4\n    double tax = computeTax (salary, investments);\n  }\n}",
     "question": "Identify the first assert statement that throws the AssertionError when the class is executed as:\njava -ea AssertTest",
     "options": {
       "A": "assert-1",
@@ -1448,10 +1448,10 @@
     "context": "import java.util.*;\nclass Vehicle {\n  String name;\n  double mileage;\n  public Vehicle(String n, double m) {\n    name = n;\n    mileage = m;\n  }\n}\npublic class Test {\n  public static void main(String[] args) {\n    List<Vehicle> vehicles = new ArrayList<>();\n    vehicles.add(new Vehicle (\"Toyota\", 18.5));\n    vehicles.add(new Vehicle(\"Honda\", 20.2));\n    vehicles.add(new Vehicle(\"Ford\", 14.8));\n    vehicles.add(new Vehicle(\"Chevrolet\", 25.0));\n    vehicles.add(new Vehicle(\"BMW\", 30.0));\n    //CODE BLOCK\n  }\n}",
     "question": "Consider the Java code given below that should print the names of vehicles whose mileage is between 15.0 and 25.0 (both inclusive). Choose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
     "options": {
-      "A": "vehicles.stream()\n  .map(v -> v.mileage >= 15.0 && v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));",
-      "B": "vehicles.stream()\n  .filter(v -> v.mileage >= 15.0 && v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));",
-      "C": "vehicles.stream()\n  .filter(v -> v.mileage >= 15.0)\n  .filter(v -> v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));",
-      "D": "vehicles.stream()\n  .filter(v -> v.mileage >= 15.0)\n  .map(v -> v.mileage <= 25.0)\n  .forEach(v -> System.out.println(v.name));"
+      "A": "vehicles.stream()\n  .map(v -> v.mileage ≥ 15.0 && v.mileage ≤ 25.0)\n  .forEach(v -> System.out.println(v.name));",
+      "B": "vehicles.stream()\n  .filter(v -> v.mileage ≥ 15.0 && v.mileage ≤ 25.0)\n  .forEach(v -> System.out.println(v.name));",
+      "C": "vehicles.stream()\n  .filter(v -> v.mileage ≥ 15.0)\n  .filter(v -> v.mileage ≤ 25.0)\n  .forEach(v -> System.out.println(v.name));",
+      "D": "vehicles.stream()\n  .filter(v -> v.mileage ≥ 15.0)\n  .map(v -> v.mileage ≤ 25.0)\n  .forEach(v -> System.out.println(v.name));"
     },
     "correctOption": ["B", "C"],
     "questionType": "multiple",
@@ -1591,7 +1591,7 @@
     "term": "Jan 2025",
     "topic": "Exception Handling, I/O, and Modern APIs",
     "context": null,
-    "question": "Consider the Java code given below.\n\n```java\npublic class AssertTest{\n    public static double caltempDiff (double currentTemp, double idealTemp) {\n        double tempdiff = 0;\n        assert currentTemp >= -100 && currentTemp <= 150; // assert-1\n        assert idealTemp >= -100 && idealTemp <= 150; // assert-2\n        tempdiff = currentTemp - idealTemp;\n        assert tempdiff >= 0; // assert-3\n        return tempdiff;\n    }\n    public static void main(String[] args) {\n        double currentTemp = 35.0;\n        double idealTemp = 37.0;\n        assert currentTemp >= -100 && currentTemp <= 150; // assert-4\n        double tempDifference = caltempDiff(currentTemp, idealTemp);\n    }\n}\n```\n\nIdentify the first assert statement that throws the AssertionError when the class is executed as:\n`java -ea AssertTest`",
+    "question": "Consider the Java code given below.\n\n```java\npublic class AssertTest{\n    public static double caltempDiff (double currentTemp, double idealTemp) {\n        double tempdiff = 0;\n        assert currentTemp ≥ -100 && currentTemp ≤ 150; // assert-1\n        assert idealTemp ≥ -100 && idealTemp ≤ 150; // assert-2\n        tempdiff = currentTemp - idealTemp;\n        assert tempdiff ≥ 0; // assert-3\n        return tempdiff;\n    }\n    public static void main(String[] args) {\n        double currentTemp = 35.0;\n        double idealTemp = 37.0;\n        assert currentTemp ≥ -100 && currentTemp ≤ 150; // assert-4\n        double tempDifference = caltempDiff(currentTemp, idealTemp);\n    }\n}\n```\n\nIdentify the first assert statement that throws the AssertionError when the class is executed as:\n`java -ea AssertTest`",
     "options": {
       "A": "assert-1",
       "B": "assert-2",
@@ -1673,10 +1673,10 @@
     "context": null,
     "question": "The Java code given below should print the names of water filters whose flow rate falls within the range of 5.0 to 15.0 (inclusive).\n\n```java\nimport java.util.*;\nimport java.util.stream.*;\n\nclass WaterFilter {\n    String name;\n    double flowRate;\n    public WaterFilter (String n, double f) {\n        this.name = n;\n        this.flowRate = f;\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        List<WaterFilter> filters = new ArrayList<>();\n        filters.add(new WaterFilter(\"FilterA\", 4.5));\n        filters.add(new WaterFilter(\"FilterB\", 10.0));\n        filters.add(new WaterFilter(\"FilterC\", 12.0));\n        filters.add(new WaterFilter(\"FilterD\", 15.0));\n        filters.add(new WaterFilter(\"FilterE\", 16.0));\n        // CODE BLOCK\n    }\n}\n```\n\nChoose the correct option(s) to fill in place of CODE BLOCK to obtain the right answer.",
     "options": {
-      "A": "filters.stream()\n .map(f -> f.flowRate >= 5.0 && f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));",
-      "B": "filters.stream()\n .filter(f -> f.flowRate >= 5.0 && f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));",
-      "C": "filters.stream()\n .filter(f -> f.flowRate >= 5.0)\n .filter(f -> f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));",
-      "D": "filters.stream()\n .filter(f -> f.flowRate >= 5.0)\n .map(f -> f.flowRate <= 15.0)\n .forEach(f -> System.out.println(f.name));"
+      "A": "filters.stream()\n .map(f -> f.flowRate ≥ 5.0 && f.flowRate ≤ 15.0)\n .forEach(f -> System.out.println(f.name));",
+      "B": "filters.stream()\n .filter(f -> f.flowRate ≥ 5.0 && f.flowRate ≤ 15.0)\n .forEach(f -> System.out.println(f.name));",
+      "C": "filters.stream()\n .filter(f -> f.flowRate ≥ 5.0)\n .filter(f -> f.flowRate ≤ 15.0)\n .forEach(f -> System.out.println(f.name));",
+      "D": "filters.stream()\n .filter(f -> f.flowRate ≥ 5.0)\n .map(f -> f.flowRate ≤ 15.0)\n .forEach(f -> System.out.println(f.name));"
     },
     "correctOption": ["B", "C"],
     "questionType": "multiple"

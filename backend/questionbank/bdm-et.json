@@ -1148,8 +1148,8 @@
     "options": {
       "A": "=IF(C2<20, \"A\", $1F(C2>15,$ \"B\", IF(C2>10, \"C\", \"D\")))",
       "B": "=IF(C2<20, \"A\", IF(C2<15, \"B\", IF(C2<10, \"C\", \"D\")))",
-      "C": "$=1F(C2>=20,$ \"A\", $1F(C2>=15$ \"B\", IF(C2>=10, \"C\", \"D\")))",
-      "D": "= $=IF(C2<=20,$ \"A\", $IF(C2<=15$, \"B\", IF(C2<=10, \"C\", \"D\")))"
+      "C": "$=1F(C2≥20,$ \"A\", $1F(C2≥15$ \"B\", IF(C2≥10, \"C\", \"D\")))",
+      "D": "= $=IF(C2≤20,$ \"A\", $IF(C2≤15$, \"B\", IF(C2≤10, \"C\", \"D\")))"
     },
     "correctOption": "C",
     "questionType": "single"
@@ -2211,7 +2211,6 @@
     "topic": "Data Interpretation & Visualization",
     "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530368/bdmjan2025-1_p1sb9b.png",
     "context": "PayBuddy conducted an A/B test to understand if their new Funding Instrument recommendation strategy works well. Following are the details of the control and treatment groups.\ni. Value of Credit transactions increased with the new recommendation strategy\nii. Value of Debit transactions increased with the new recommendation strategy\niii. Value of both Credit and Debit transactions increased with the new recommendation strategy\niv. Value of Credit transactions decreased with the new recommendation strategy\nv. Value of Debit transactions decreased with the new recommendation strategy",
-    "image": null,
     "question": "From the given table, which of the following statements are true?",
     "options": {
       "A": "Both (i) & (v)",
@@ -2230,7 +2229,6 @@
     "topic": "Quantitative Analysis & Performance Metrics",
     "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1757530368/bdmjan2025-2_dslp3a.png",
     "context": "PePhone is a FinTech firm that processes payments. Following are sources of revenue for the company - 3.5% of transaction amount as transaction fee from merchant for all types of transactions (credit and debit), 18% p.a. interest on credit transactions and incurs a loss of credit if not paid back. Calculate the overall profit for the company based on the below table - (Assume payback of credit in a year)\nNote: Declined transactions will not get credit but customers will complete the payment through PePhone using their bank details.",
-    "image": null,
     "question": "Calculate the overall profit for the company.",
     "options": {
       "A": "- 211.0",
