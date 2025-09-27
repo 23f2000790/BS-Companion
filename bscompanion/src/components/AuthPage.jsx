@@ -248,6 +248,7 @@ const AuthPage = () => {
                 padding: "10px 20px",
                 borderRadius: "25px",
                 border: "1px solid #ccc",
+                color: "#1e1e1e",
                 backgroundColor: activeTab === tab ? "#fff" : "#f0f0f0",
                 transform:
                   hoveredTab === tab ? "translateY(-5px)" : "translateY(0)",
@@ -273,6 +274,7 @@ const AuthPage = () => {
             borderRadius: "50px",
             border: "none",
             backgroundColor: "#fff",
+            color: "#1e1e1e",
             cursor: loading ? "not-allowed" : "pointer",
             marginBottom: "20px",
           }}

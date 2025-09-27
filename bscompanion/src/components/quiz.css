@@ -596,3 +596,50 @@
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 3px;
 }
+
+/* --- Practice Mode Enhancements --- */
+
+/* Style for the "Check" button */
+.quiz-page-wrapper .btn-check {
+  background-color: #ffc107; /* A distinct yellow color */
+  color: #121212;
+  font-weight: 700;
+}
+
+.quiz-page-wrapper .btn-check:hover {
+  background-color: #e0a800;
+}
+
+/* Styles for visual feedback on options in practice mode */
+.quiz-page-wrapper .option-label.correct-practice,
+.quiz-page-wrapper .numerical-input.correct-practice {
+  border: 2px solid var(--success-color);
+  background-color: rgba(var(--success-color-rgb), 0.1);
+}
+
+.quiz-page-wrapper .option-label.incorrect-practice,
+.quiz-page-wrapper .numerical-input.incorrect-practice {
+  border: 2px solid var(--danger-color);
+  background-color: rgba(var(--danger-color-rgb), 0.1);
+}
+
+/* Container for the explanation text */
+.quiz-page-wrapper .explanation-block {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+  color: #faf9f6;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Feedback for numerical answers */
+.quiz-page-wrapper .correct-answer-feedback {
+  margin-top: 10px;
+  padding: 8px;
+  background: rgba(var(--success-color-rgb), 0.1);
+  color: #a3e9b4;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}

@@ -3,7 +3,7 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./quiz.css";
 
-// --- SVG Icon Components for modern UI ---
+// --- SVG Icon Components (no changes here) ---
 const IconCheckCircle = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -121,16 +121,14 @@ const IconWrench = () => (
   </svg>
 );
 
-// --- Chart Components ---
+// --- Chart Components (no changes here) ---
 const BreakdownChart = ({ data }) => {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
-
   useEffect(() => {
     if (chartInstance.current) chartInstance.current.destroy();
     if (!chartRef.current || !window.Chart) return;
     const myChartRef = chartRef.current.getContext("2d");
-
     chartInstance.current = new window.Chart(myChartRef, {
       type: "doughnut",
       data: {
@@ -160,7 +158,6 @@ const BreakdownChart = ({ data }) => {
       if (chartInstance.current) chartInstance.current.destroy();
     };
   }, [data]);
-
   return (
     <div className="chart-container">
       <canvas ref={chartRef} />
@@ -171,19 +168,16 @@ const BreakdownChart = ({ data }) => {
 const TopicChart = ({ data }) => {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
-
   useEffect(() => {
     if (chartInstance.current) chartInstance.current.destroy();
     if (!chartRef.current || !window.Chart) return;
     const myChartRef = chartRef.current.getContext("2d");
-
     const labels = Object.keys(data);
     const accuracyData = labels.map((label) => {
       const topic = data[label];
       const attempted = topic.correct + topic.incorrect;
       return attempted > 0 ? (topic.correct / attempted) * 100 : 0;
     });
-
     chartInstance.current = new window.Chart(myChartRef, {
       type: "bar",
       data: {
@@ -219,7 +213,6 @@ const TopicChart = ({ data }) => {
       if (chartInstance.current) chartInstance.current.destroy();
     };
   }, [data]);
-
   return (
     <div className="chart-container large">
       <canvas ref={chartRef} />
@@ -227,7 +220,7 @@ const TopicChart = ({ data }) => {
   );
 };
 
-// --- Results Dashboard Component ---
+// --- Results Dashboard Component (no changes here) ---
 const QuizResults = ({ results, originalQuestions }) => {
   const stats = useMemo(() => {
     if (!results) return null;
@@ -253,8 +246,6 @@ const QuizResults = ({ results, originalQuestions }) => {
       },
       { correct: 0, incorrect: 0, not_attempted: 0, partially_correct: 0 }
     );
-
-    // --- ## UPDATED LOGIC: Strong Topics >= 50% ## ---
     const strongTopics = Object.entries(topicPerformance)
       .filter(
         ([_, stats]) =>
@@ -262,8 +253,6 @@ const QuizResults = ({ results, originalQuestions }) => {
           stats.correct / (stats.correct + stats.incorrect) >= 0.5
       )
       .map(([topic]) => topic);
-
-    // --- ## UPDATED LOGIC: Weak Topics < 50% ## ---
     const weakTopics = Object.entries(topicPerformance)
       .filter(
         ([_, stats]) =>
@@ -271,7 +260,6 @@ const QuizResults = ({ results, originalQuestions }) => {
           stats.correct / (stats.correct + stats.incorrect) < 0.5
       )
       .map(([topic]) => topic);
-
     return {
       accuracy,
       topicPerformance,
@@ -280,9 +268,7 @@ const QuizResults = ({ results, originalQuestions }) => {
       weakTopics,
     };
   }, [results]);
-
   const formatTime = (secs) => `${Math.floor(secs / 60)}m ${secs % 60}s`;
-
   const formatCorrectAnswer = (option) => {
     if (Array.isArray(option)) return option.join(", ");
     if (
@@ -295,9 +281,7 @@ const QuizResults = ({ results, originalQuestions }) => {
     }
     return String(option);
   };
-
   if (!results || !stats) return <div className="loading-spinner"></div>;
-
   return (
     <div className="results-dashboard">
       <div className="results-header">
@@ -306,7 +290,6 @@ const QuizResults = ({ results, originalQuestions }) => {
           Here's a detailed breakdown of your performance.
         </p>
       </div>
-
       <div className="stats-grid">
         <div className="stat-card score-card">
           <div className="stat-card__icon">
@@ -343,7 +326,6 @@ const QuizResults = ({ results, originalQuestions }) => {
           </div>
         </div>
       </div>
-
       <div className="charts-grid">
         <div className="chart-card">
           <h3>Question Breakdown</h3>
@@ -354,7 +336,6 @@ const QuizResults = ({ results, originalQuestions }) => {
           <TopicChart data={stats.topicPerformance} />
         </div>
       </div>
-
       <div className="strengths-weaknesses">
         <div className="topic-list-card">
           <div className="topic-list-header">
@@ -395,7 +376,6 @@ const QuizResults = ({ results, originalQuestions }) => {
           </div>
         </div>
       </div>
-
       <div className="detailed-review">
         <h2 className="review-title">Detailed Question Review</h2>
         {originalQuestions.map((q, i) => {
@@ -448,7 +428,7 @@ const Quiz = () => {
     topic: initialTopic,
     numQuestions,
     term,
-    mode,
+    mode, // "exam" or "practice"
     userId,
   } = location.state || {};
 
@@ -462,6 +442,10 @@ const Quiz = () => {
   const [startTime, setStartTime] = useState(null);
   const [quizResultPayload, setQuizResultPayload] = useState(null);
 
+  // --- NEW: State for practice mode ---
+  const [checkedAnswers, setCheckedAnswers] = useState({}); // Stores status for checked questions
+  const [showFeedback, setShowFeedback] = useState(false); // Controls feedback visibility for the current question
+
   const navContainerRef = useRef(null);
 
   useEffect(() => {
@@ -474,7 +458,10 @@ const Quiz = () => {
       block: "nearest",
       inline: "center",
     });
-  }, [current, finished]);
+
+    // --- NEW: Show feedback if the question has been checked before ---
+    setShowFeedback(!!checkedAnswers[current]);
+  }, [current, finished, checkedAnswers]);
 
   useEffect(() => {
     if (exam || initialTopic || term) fetchQuestions();
@@ -502,6 +489,9 @@ const Quiz = () => {
       setCurrent(0);
       setFinished(false);
       setQuizResultPayload(null);
+      // --- NEW: Reset practice mode state on new quiz ---
+      setCheckedAnswers({});
+      setShowFeedback(false);
       setStartTime(new Date());
       if (mode === "exam") {
         setTimeLeft(Math.min(Math.max(res.data.length * 90, 600), 7200));
@@ -534,6 +524,9 @@ const Quiz = () => {
   };
 
   const handleAnswer = (index, value, multiple = false) => {
+    // --- NEW: Prevent changing answer after checking in practice mode ---
+    if (mode === "practice" && showFeedback) return;
+
     setAnswers((prev) => {
       const newAnswers = { ...prev };
       if (multiple) {
@@ -605,6 +598,29 @@ const Quiz = () => {
   const isAnswered = (i) => {
     if (!questions[i]) return false;
     return getQuestionStatus(questions[i], answers[i]) !== "not_attempted";
+  };
+
+  // --- NEW: Function to handle checking the answer in practice mode ---
+  const handleCheckAnswer = () => {
+    if (isAnswered(current)) {
+      const status = getQuestionStatus(questions[current], answers[current]);
+      setCheckedAnswers((prev) => ({ ...prev, [current]: { status } }));
+      setShowFeedback(true);
+    }
+  };
+
+  // --- NEW: Helper for displaying the correct answer text ---
+  const formatCorrectAnswerText = (option) => {
+    if (Array.isArray(option)) return option.join(", ");
+    if (
+      typeof option === "object" &&
+      option !== null &&
+      option.min !== undefined &&
+      option.max !== undefined
+    ) {
+      return `Between ${option.min} and ${option.max}`;
+    }
+    return String(option);
   };
 
   const finishQuiz = async () => {
@@ -699,42 +715,94 @@ const Quiz = () => {
             <div className="quiz-right">
               <div className="options-container">
                 {q.questionType === "numerical" ? (
-                  <input
-                    type="text"
-                    className="numerical-input"
-                    placeholder="Enter your answer"
-                    value={answers[current] || ""}
-                    onChange={(e) => handleAnswer(current, e.target.value)}
-                  />
+                  <>
+                    <input
+                      type="text"
+                      className={`numerical-input ${
+                        mode === "practice" && showFeedback
+                          ? checkedAnswers[current]?.status === "correct"
+                            ? "correct-practice"
+                            : "incorrect-practice"
+                          : ""
+                      }`}
+                      placeholder="Enter your answer"
+                      value={answers[current] || ""}
+                      onChange={(e) => handleAnswer(current, e.target.value)}
+                      disabled={mode === "practice" && showFeedback}
+                    />
+                    {/* --- NEW: Show correct answer feedback for numerical --- */}
+                    {mode === "practice" &&
+                      showFeedback &&
+                      checkedAnswers[current]?.status !== "correct" && (
+                        <div className="correct-answer-feedback">
+                          Correct Answer:{" "}
+                          {formatCorrectAnswerText(q.correctOption)}
+                        </div>
+                      )}
+                  </>
                 ) : (
-                  Object.entries(q.options || {}).map(([key, val]) => (
-                    <label key={key} className="option-label">
-                      <input
-                        type={
-                          q.questionType === "multiple" ? "checkbox" : "radio"
-                        }
-                        name={`q-${current}`}
-                        value={key}
-                        checked={
-                          q.questionType === "multiple"
-                            ? (answers[current] || []).includes(key)
-                            : answers[current] === key
-                        }
-                        onChange={() =>
-                          handleAnswer(
-                            current,
-                            key,
+                  Object.entries(q.options || {}).map(([key, val]) => {
+                    // --- NEW: Add dynamic classes for practice mode feedback ---
+                    let practiceClass = "";
+                    if (mode === "practice" && showFeedback) {
+                      const correctAnswer = q.correctOption;
+                      const userAnswer = answers[current];
+                      const isMultiple = q.questionType === "multiple";
+
+                      if (
+                        (isMultiple && correctAnswer.includes(key)) ||
+                        (!isMultiple && key === correctAnswer)
+                      ) {
+                        practiceClass = "correct-practice";
+                      } else if (
+                        (isMultiple && userAnswer?.includes(key)) ||
+                        (!isMultiple && key === userAnswer)
+                      ) {
+                        practiceClass = "incorrect-practice";
+                      }
+                    }
+
+                    return (
+                      <label
+                        key={key}
+                        className={`option-label ${practiceClass}`}
+                      >
+                        <input
+                          type={
+                            q.questionType === "multiple" ? "checkbox" : "radio"
+                          }
+                          name={`q-${current}`}
+                          value={key}
+                          checked={
                             q.questionType === "multiple"
-                          )
-                        }
-                      />
-                      <span className="option-text">
-                        {renderQuestionText(val)}
-                      </span>
-                    </label>
-                  ))
+                              ? (answers[current] || []).includes(key)
+                              : answers[current] === key
+                          }
+                          onChange={() =>
+                            handleAnswer(
+                              current,
+                              key,
+                              q.questionType === "multiple"
+                            )
+                          }
+                        />
+                        <span className="option-text">
+                          {renderQuestionText(val)}
+                        </span>
+                      </label>
+                    );
+                  })
                 )}
               </div>
+
+              {/* --- NEW: Show explanation in practice mode after checking --- */}
+              {mode === "practice" && showFeedback && q.explanation && (
+                <div className="explanation-block">
+                  <strong>Explanation:</strong>{" "}
+                  {renderQuestionText(q.explanation)}
+                </div>
+              )}
+
               <div className="question-nav">
                 <div className="question-nav-header">Questions</div>
                 <div className="question-nav-list" ref={navContainerRef}>
@@ -759,6 +827,18 @@ const Quiz = () => {
                 >
                   Previous
                 </button>
+
+                {/* --- NEW: Conditionally render Check button for practice mode --- */}
+                {mode === "practice" && (
+                  <button
+                    className="btn btn-check"
+                    onClick={handleCheckAnswer}
+                    disabled={showFeedback || !isAnswered(current)}
+                  >
+                    Check
+                  </button>
+                )}
+
                 {current < questions.length - 1 ? (
                   <button
                     className="btn btn-primary"
@@ -767,7 +847,7 @@ const Quiz = () => {
                     Next
                   </button>
                 ) : (
-                  <button className="btn btn-finish" onClick={finishQuiz}>
+                  <button className="btn btn-primary" onClick={finishQuiz}>
                     Finish
                   </button>
                 )}

@@ -1,14 +1,105 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
+import "./Dock.css"; // Import Dock CSS
 import axios from "axios";
 import MagicBento from "./MagicBento";
+import Dock from "./Dock"; // Import Dock component
+
+// Simple SVG Icons for the Dock
+const HomeIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+  </svg>
+);
+const ConnectionsIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+    <circle cx="9" cy="7" r="4"></circle>
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+  </svg>
+);
+const StatsIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M3 3v18h18"></path>
+    <path d="M18 17V9"></path>
+    <path d="M13 17V5"></path>
+    <path d="M8 17v-3"></path>
+  </svg>
+);
+const SettingsIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="3"></circle>
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+  </svg>
+);
+const LogoutIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+    <polyline points="16 17 21 12 16 7"></polyline>
+    <line x1="21" x2="9" y1="12" y2="12"></line>
+  </svg>
+);
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
+  // Modal and Quiz State
   const [showModal, setShowModal] = useState(false);
+  const [isFilterLoading, setIsFilterLoading] = useState(false);
   const [selectedSubject, setSelectedSubject] = useState("");
   const [exam, setExam] = useState("");
   const [topics, setTopics] = useState([]);
@@ -19,7 +110,7 @@ const Dashboard = () => {
   const [term, setTerm] = useState("");
   const [availExam, setAvailExam] = useState([]);
 
-  // ✅ Fetch logged in user
+  // Fetch logged in user
   useEffect(() => {
     const GetUser = async () => {
       const token = localStorage.getItem("token");
@@ -32,22 +123,20 @@ const Dashboard = () => {
         const res = await axios.get("http://localhost:5000/getuser", {
           headers: { Authorization: `Bearer ${token}` },
         });
-
-        const { name, email, city, bloodGroup, currentLevel, subjects, _id } =
-          res.data.user;
-
-        setUser({ name, email, city, bloodGroup, currentLevel, subjects, _id });
+        setUser(res.data.user);
       } catch (err) {
         console.log("Error fetching user:", err);
+        localStorage.removeItem("token");
+        navigate("/");
       }
     };
-
     GetUser();
   }, [navigate]);
 
-  // ✅ Fetch topics when subject/exam/term changes
+  // Fetch topics when subject/exam/term changes
   useEffect(() => {
     if (selectedSubject) {
+      setIsFilterLoading(true);
       const params = { subject: selectedSubject };
       if (exam) params.exam = exam;
       if (term) params.term = term;
@@ -55,32 +144,26 @@ const Dashboard = () => {
       axios
         .get("http://localhost:5000/api/topics", { params })
         .then((res) => setTopics(res.data || []))
-        .catch((err) => console.error("Error fetching topics:", err));
+        .catch((err) => console.error("Error fetching topics:", err))
+        .finally(() => setIsFilterLoading(false));
     }
   }, [selectedSubject, exam, term]);
 
-  // ✅ Fetch terms when subject/exam/topic changes
+  // Fetch terms when subject/exam/topic changes
   useEffect(() => {
     if (selectedSubject) {
+      setIsFilterLoading(true);
       const params = { subject: selectedSubject };
       if (exam) params.exam = exam;
       if (selectedTopic) params.topic = selectedTopic;
 
       axios
         .get("http://localhost:5000/api/terms", { params })
-        .then((res) => setTerms(res.data || []))
-        .catch((err) => console.error("Error fetching terms:", err));
+        .then((res) => setTerms(res.data.terms || []))
+        .catch((err) => console.error("Error fetching terms:", err))
+        .finally(() => setIsFilterLoading(false));
     }
   }, [selectedSubject, exam, selectedTopic]);
-
-  if (!user) {
-    return (
-      <div className="loader-container">
-        <div className="spinner"></div>
-        <h3 className="loading-text">Loading user data...</h3>
-      </div>
-    );
-  }
 
   const LogoutUser = () => {
     localStorage.removeItem("token");
@@ -89,6 +172,7 @@ const Dashboard = () => {
   };
 
   const openQuizModal = async (subject) => {
+    // ... (rest of the function is unchanged)
     setSelectedSubject(subject);
     setShowModal(true);
     setSelectedTopic("");
@@ -97,29 +181,29 @@ const Dashboard = () => {
     setTopics([]);
     setTerms([]);
     setAvailExam([]);
+    setIsFilterLoading(true);
 
     try {
-      const res1 = await axios.get("http://localhost:5000/api/topics", {
-        params: { subject },
-      });
-      setTopics(Array.isArray(res1.data) ? res1.data : []);
-
-      const res2 = await axios.get("http://localhost:5000/api/terms", {
-        params: { subject },
-      });
-      setTerms(res2.data.terms || []);
-      setAvailExam(res2.data.exams || []);
+      const [topicsRes, termsExamsRes] = await Promise.all([
+        axios.get("http://localhost:5000/api/topics", { params: { subject } }),
+        axios.get("http://localhost:5000/api/terms", { params: { subject } }),
+      ]);
+      setTopics(Array.isArray(topicsRes.data) ? topicsRes.data : []);
+      setTerms(termsExamsRes.data.terms || []);
+      setAvailExam(termsExamsRes.data.exams || []);
     } catch (err) {
-      console.error("❌ Error fetching filters:", err);
+      console.error("❌ Error fetching initial filters:", err);
+    } finally {
+      setIsFilterLoading(false);
     }
   };
 
   const startQuiz = () => {
+    // ... (rest of the function is unchanged)
     if (!exam && !selectedTopic && !term) {
-      alert("Please select at least one filter (Exam, Topic, or Term)");
+      alert("Please select at least one filter (Exam, Topic, or Term).");
       return;
     }
-
     setShowModal(false);
     navigate(`/quiz/${selectedSubject}`, {
       state: {
@@ -133,105 +217,117 @@ const Dashboard = () => {
     });
   };
 
-  const handleMouseMove = (e) => {
-    const button = e.currentTarget;
-    const rect = button.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    button.style.setProperty("--x", `${x}px`);
-    button.style.setProperty("--y", `${y}px`);
-  };
+  const DOCK_ITEMS = [
+    {
+      label: "Home",
+      icon: <HomeIcon />,
+      onClick: () => console.log("Home clicked"),
+    },
+    {
+      label: "Connections",
+      icon: <ConnectionsIcon />,
+      onClick: () => console.log("Connections clicked"),
+    },
+    {
+      label: "Statistics",
+      icon: <StatsIcon />,
+      onClick: () => console.log("Statistics clicked"),
+    },
+    {
+      label: "Settings",
+      icon: <SettingsIcon />,
+      onClick: () => console.log("Settings clicked"),
+    },
+    { label: "Logout", icon: <LogoutIcon />, onClick: LogoutUser },
+  ];
+
+  if (!user) {
+    return (
+      <div className="loader-container">
+        <div className="spinner"></div>
+        <h3 className="loading-text">Loading user data...</h3>
+      </div>
+    );
+  }
 
   return (
     <div className="dashboard">
-      <MagicBento />
-      <h1>Welcome, {user.name} 👋</h1>
-      <p>
-        <b>Email:</b> {user.email}
-      </p>
-      <p>
-        <b>City:</b> {user.city}
-      </p>
-      <p>
-        <b>Blood Group:</b> {user.bloodGroup}
-      </p>
-      <p>
-        <b>Current Level:</b> {user.currentLevel}
-      </p>
-      <p>
-        <b>Subjects:</b> {user.subjects?.join(", ")}
-      </p>
+      <div className="dashboard-header">
+        <h1>Welcome, {user.name} 👋</h1>
+        {/* The logout button was here */}
+      </div>
 
-      {user.subjects.map((subject, index) => (
-        <div key={index} className="subject-card">
-          <button onClick={() => openQuizModal(subject)}>{subject}</button>
-        </div>
-      ))}
+      <MagicBento user={user} openQuizModal={openQuizModal} />
 
-      {/* Logout */}
-      <button
-        onClick={LogoutUser}
-        className="button"
-        style={{ top: 10, right: 10, scale: 0.8 }}
-        onMouseMove={handleMouseMove}
-      >
-        Logout
-      </button>
-
-      {/* Modal */}
+      {/* --- MODAL --- */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal">
             <h2>Start Quiz - {selectedSubject}</h2>
 
-            {/* 🔹 Top row (Topic / Exam / Term) */}
             <div className="modal-top">
-              {/* Topic */}
               <div className="modal-box">
                 <label>Topic</label>
                 <select
                   value={selectedTopic}
                   onChange={(e) => setSelectedTopic(e.target.value)}
+                  disabled={isFilterLoading}
                 >
                   <option value="">-- All Topics --</option>
-                  {topics.map((t, i) => (
-                    <option key={i} value={t}>
-                      {t}
-                    </option>
-                  ))}
+                  {isFilterLoading ? (
+                    <option disabled>Loading...</option>
+                  ) : (
+                    topics.map((t, i) => (
+                      <option key={i} value={t}>
+                        {t}
+                      </option>
+                    ))
+                  )}
                 </select>
               </div>
 
-              {/* Exam */}
               <div className="modal-box">
                 <label>Exam</label>
-                <select value={exam} onChange={(e) => setExam(e.target.value)}>
+                <select
+                  value={exam}
+                  onChange={(e) => setExam(e.target.value)}
+                  disabled={isFilterLoading}
+                >
                   <option value="">-- All Exams --</option>
-                  {availExam &&
+                  {isFilterLoading ? (
+                    <option disabled>Loading...</option>
+                  ) : (
                     availExam.map((t, i) => (
                       <option key={i} value={t}>
                         {t}
                       </option>
-                    ))}
+                    ))
+                  )}
                 </select>
               </div>
 
-              {/* Term */}
               <div className="modal-box">
                 <label>Term</label>
-                <select value={term} onChange={(e) => setTerm(e.target.value)}>
+                <select
+                  value={term}
+                  onChange={(e) => setTerm(e.target.value)}
+                  disabled={isFilterLoading}
+                >
                   <option value="">-- All Terms --</option>
-                  {Array.isArray(terms) &&
+                  {isFilterLoading ? (
+                    <option disabled>Loading...</option>
+                  ) : (
+                    Array.isArray(terms) &&
                     terms.map((t, i) => (
                       <option key={i} value={t}>
                         {t}
                       </option>
-                    ))}
+                    ))
+                  )}
                 </select>
               </div>
             </div>
 
-            {/* 🔹 Bottom row (No. of Questions + Mode + Buttons) */}
             <div className="modal-bottom">
               <div className="modal-bottom-left">
                 <label>
@@ -241,10 +337,9 @@ const Dashboard = () => {
                     min="1"
                     max="100"
                     value={numQuestions}
-                    onChange={(e) => setNumQuestions(e.target.value)}
+                    onChange={(e) => setNumQuestions(Number(e.target.value))}
                   />
                 </label>
-
                 <label>
                   Mode
                   <select
@@ -269,6 +364,7 @@ const Dashboard = () => {
           </div>
         </div>
       )}
+      <Dock items={DOCK_ITEMS} />
     </div>
   );
 };
