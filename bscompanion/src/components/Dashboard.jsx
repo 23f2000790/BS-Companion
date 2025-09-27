@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import axios from "axios";
+import MagicBento from "./MagicBento";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -143,6 +144,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
+      <MagicBento />
       <h1>Welcome, {user.name} 👋</h1>
       <p>
         <b>Email:</b> {user.email}
