@@ -228,6 +228,7 @@
 .sub-grid-item {
   background: var(--border-color);
   border-radius: 8px;
+  position: relative;
   border: 1px solid transparent;
   color: var(--white);
   font-size: 0.85rem;
@@ -268,4 +269,12 @@
   background: #0c021b;
   cursor: default;
   opacity: 0.4;
+}
+
+.sub-grid-item .corner-icon {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
 }

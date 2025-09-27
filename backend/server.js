@@ -14,19 +14,18 @@ import resultsRouter from "./routes/results.js";
 dotenv.config();
 const app = express();
 
-// Middleware
+// ---------- Middleware ----------
 app.use(cors());
 app.use(express.json());
 app.use("/api/topics", topicsRoute);
 app.use("/api/questions", questionsRoute);
 app.use("/api/terms", termsRouter);
-app.use("/api/results", resultsRouter); // Use the new results route
+app.use("/api/results", resultsRouter);
 
-// Environment variables
 const JWT_SECRET = process.env.JWT_SECRET || "yoursecretkey";
 const MONGO_URI = process.env.MONGO_URI;
 
-// -------------------- Register --------------------
+// ---------- Register ----------
 app.post("/auth/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -50,7 +49,7 @@ app.post("/auth/register", async (req, res) => {
   }
 });
 
-// -------------------- Login --------------------
+// ---------- Login ----------
 app.post("/auth/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -72,7 +71,7 @@ app.post("/auth/login", async (req, res) => {
   }
 });
 
-// -------------------- Google Auth --------------------
+// ---------- Google Auth ----------
 app.post("/auth/google", async (req, res) => {
   try {
     const { name, email, photoURL } = req.body;
@@ -80,14 +79,12 @@ app.post("/auth/google", async (req, res) => {
     let user = await User.findOne({ email });
     let isNew = false;
 
-    // Create user if not exists
     if (!user) {
       user = new User({ name, email, photoURL });
       await user.save();
       isNew = true;
     }
 
-    // Create JWT
     const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, {
       expiresIn: "7d",
     });
@@ -99,7 +96,7 @@ app.post("/auth/google", async (req, res) => {
   }
 });
 
-// -------------------- Fetch User --------------------
+// ---------- Fetch User ----------
 app.get("/getuser", async (req, res) => {
   try {
     const authHeader = req.headers["authorization"];
@@ -116,7 +113,7 @@ app.get("/getuser", async (req, res) => {
   }
 });
 
-// -------------------- User Onboarding --------------------
+// ---------- User Onboarding ----------
 app.post("/useronboarding", verifyToken, async (req, res) => {
   try {
     const userId = req.user.id;
@@ -131,7 +128,6 @@ app.post("/useronboarding", verifyToken, async (req, res) => {
       subjects,
     } = req.body;
 
-    // Update user details
     const updatedUser = await User.findByIdAndUpdate(
       userId,
       {
@@ -162,7 +158,45 @@ app.post("/useronboarding", verifyToken, async (req, res) => {
   }
 });
 
-// -------------------- MongoDB connection --------------------
+//  Add / Remove subjects for logged-in user
+
+app.put("/user/update-subjects", verifyToken, async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { add = [], remove } = req.body;
+    const update = {};
+
+    // add subjects (array)
+    if (Array.isArray(add) && add.length > 0) {
+      update.$addToSet = { subjects: { $each: add } }; // avoids duplicates
+    }
+
+    // remove single subject
+    if (remove) {
+      update.$pull = { subjects: remove };
+    }
+
+    if (!update.$addToSet && !update.$pull) {
+      return res
+        .status(400)
+        .json({ message: "Provide 'add' array and/or 'remove' string." });
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(userId, update, {
+      new: true,
+    });
+
+    if (!updatedUser)
+      return res.status(404).json({ message: "User not found" });
+
+    res.json({ message: "Subjects updated", user: updatedUser });
+  } catch (err) {
+    console.error("Error updating subjects:", err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// ---------- MongoDB connection ----------
 mongoose
   .connect(MONGO_URI)
   .then(() => {

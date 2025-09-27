@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useCallback, useState } from "react";
+import { FaTrash } from "react-icons/fa";
 import { gsap } from "gsap";
 import {
   FaUser,
@@ -369,6 +370,8 @@ const MagicBento = ({
   openQuizModal,
   textAutoHide = true,
   enableStars = true,
+  openAddSubjectsModal,
+  onRemoveClick,
   enableSpotlight = true,
   enableBorderGlow = true,
   disableAnimations = false,
@@ -466,19 +469,47 @@ const MagicBento = ({
                       }`}
                       onClick={() => {
                         if (!item) return;
-                        if (item.isAction) {
-                          alert(
-                            "The ability to add new subjects is a premium feature coming soon!"
-                          );
-                        } else {
-                          openQuizModal(item.name);
-                        }
+                        item.isAction
+                          ? openAddSubjectsModal()
+                          : openQuizModal(item.name);
                       }}
                       disabled={!item}
-                      aria-label={item ? item.name : "Empty slot"}
                     >
-                      {item?.isAction && <FaPlus />}
-                      {item?.name}
+                      {/* Trash icon for normal subjects */}
+                      {item && !item.isAction && (
+                        <button
+                          style={{
+                            backgroundColor: "#ff4d4f", // red button background
+                            border: "none",
+                            color: "white", // white icon
+                            padding: "4px 6px", // button shape
+                            borderRadius: "4px", // rounded button
+                            cursor: "pointer",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            transition: "background 0.2s ease-in-out",
+                          }}
+                          className="corner-icon"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onRemoveClick(item.name);
+                          }}
+                          onMouseOver={(e) =>
+                            (e.currentTarget.style.backgroundColor = "#d9363e")
+                          }
+                          onMouseOut={(e) =>
+                            (e.currentTarget.style.backgroundColor = "#ff4d4f")
+                          }
+                        >
+                          <FaTrash />
+                        </button>
+                      )}
+
+                      {/* Subject name */}
+                      {item && (
+                        <span className="subject-name">{item.name}</span>
+                      )}
                     </button>
                   ))}
                 </div>

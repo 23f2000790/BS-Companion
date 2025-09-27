@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
-import "./Dock.css"; // Import Dock CSS
+import "./Dock.css";
 import axios from "axios";
 import MagicBento from "./MagicBento";
-import Dock from "./Dock"; // Import Dock component
+import Dock from "./Dock";
 
-// Simple SVG Icons for the Dock
+// --------- Static Icons ---------
 const HomeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -93,11 +93,82 @@ const LogoutIcon = () => (
   </svg>
 );
 
+// --------- Subject Lists ---------
+const foundational = [
+  "Math 1",
+  "English 1",
+  "Computational Thinking",
+  "Statistics 1",
+  "Math 2",
+  "English 2",
+  "Programming in Python",
+  "Statistics 2",
+];
+const diploma = [
+  "PDSA",
+  "DBMS",
+  "BDM",
+  "TDS",
+  "System Commands",
+  "MAD 1",
+  "MAD 2",
+  "MLF",
+  "MLT",
+  "MLP",
+  "Business Analytics",
+  "Java",
+];
+
+// =============================================================
+//                          COMPONENT
+// =============================================================
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
-  // Modal and Quiz State
+  // --- Add / Remove subjects ---
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [availableSubjects, setAvailableSubjects] = useState([]);
+  const [selectedNewSubjects, setSelectedNewSubjects] = useState([]);
+  const [showRemoveModal, setShowRemoveModal] = useState(false);
+  const [subjectToRemove, setSubjectToRemove] = useState("");
+
+  const openAddSubjectsModal = () => {
+    const levelList =
+      user.currentLevel === "Foundational" ? foundational : diploma;
+    const remaining = levelList.filter((s) => !user.subjects.includes(s));
+    setAvailableSubjects(remaining);
+    setSelectedNewSubjects([]);
+    setShowAddModal(true);
+  };
+
+  const confirmAddSubjects = async () => {
+    if (!selectedNewSubjects.length) return;
+    const res = await axios.put(
+      "http://localhost:5000/user/update-subjects",
+      { add: selectedNewSubjects },
+      { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
+    );
+    setUser(res.data.user); // update UI instantly
+    setShowAddModal(false);
+  };
+
+  const onRemoveClick = (sub) => {
+    setSubjectToRemove(sub);
+    setShowRemoveModal(true);
+  };
+
+  const confirmRemove = async () => {
+    const res = await axios.put(
+      "http://localhost:5000/user/update-subjects",
+      { remove: subjectToRemove },
+      { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
+    );
+    setUser(res.data.user);
+    setShowRemoveModal(false);
+  };
+
+  // --- Quiz Modal State ---
   const [showModal, setShowModal] = useState(false);
   const [isFilterLoading, setIsFilterLoading] = useState(false);
   const [selectedSubject, setSelectedSubject] = useState("");
@@ -110,7 +181,7 @@ const Dashboard = () => {
   const [term, setTerm] = useState("");
   const [availExam, setAvailExam] = useState([]);
 
-  // Fetch logged in user
+  // --- Fetch user on mount ---
   useEffect(() => {
     const GetUser = async () => {
       const token = localStorage.getItem("token");
@@ -118,14 +189,13 @@ const Dashboard = () => {
         navigate("/");
         return;
       }
-
       try {
         const res = await axios.get("http://localhost:5000/getuser", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data.user);
       } catch (err) {
-        console.log("Error fetching user:", err);
+        console.error("Error fetching user:", err);
         localStorage.removeItem("token");
         navigate("/");
       }
@@ -133,7 +203,7 @@ const Dashboard = () => {
     GetUser();
   }, [navigate]);
 
-  // Fetch topics when subject/exam/term changes
+  // --- Load topics & terms when filters change ---
   useEffect(() => {
     if (selectedSubject) {
       setIsFilterLoading(true);
@@ -149,7 +219,6 @@ const Dashboard = () => {
     }
   }, [selectedSubject, exam, term]);
 
-  // Fetch terms when subject/exam/topic changes
   useEffect(() => {
     if (selectedSubject) {
       setIsFilterLoading(true);
@@ -167,12 +236,10 @@ const Dashboard = () => {
 
   const LogoutUser = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("user");
     navigate("/");
   };
 
   const openQuizModal = async (subject) => {
-    // ... (rest of the function is unchanged)
     setSelectedSubject(subject);
     setShowModal(true);
     setSelectedTopic("");
@@ -192,14 +259,13 @@ const Dashboard = () => {
       setTerms(termsExamsRes.data.terms || []);
       setAvailExam(termsExamsRes.data.exams || []);
     } catch (err) {
-      console.error("❌ Error fetching initial filters:", err);
+      console.error("Error fetching initial filters:", err);
     } finally {
       setIsFilterLoading(false);
     }
   };
 
   const startQuiz = () => {
-    // ... (rest of the function is unchanged)
     if (!exam && !selectedTopic && !term) {
       alert("Please select at least one filter (Exam, Topic, or Term).");
       return;
@@ -218,26 +284,10 @@ const Dashboard = () => {
   };
 
   const DOCK_ITEMS = [
-    {
-      label: "Home",
-      icon: <HomeIcon />,
-      onClick: () => console.log("Home clicked"),
-    },
-    {
-      label: "Connections",
-      icon: <ConnectionsIcon />,
-      onClick: () => console.log("Connections clicked"),
-    },
-    {
-      label: "Statistics",
-      icon: <StatsIcon />,
-      onClick: () => console.log("Statistics clicked"),
-    },
-    {
-      label: "Settings",
-      icon: <SettingsIcon />,
-      onClick: () => console.log("Settings clicked"),
-    },
+    { label: "Home", icon: <HomeIcon />, onClick: () => {} },
+    { label: "Connections", icon: <ConnectionsIcon />, onClick: () => {} },
+    { label: "Statistics", icon: <StatsIcon />, onClick: () => {} },
+    { label: "Settings", icon: <SettingsIcon />, onClick: () => {} },
     { label: "Logout", icon: <LogoutIcon />, onClick: LogoutUser },
   ];
 
@@ -254,12 +304,16 @@ const Dashboard = () => {
     <div className="dashboard">
       <div className="dashboard-header">
         <h1>Welcome, {user.name} 👋</h1>
-        {/* The logout button was here */}
       </div>
 
-      <MagicBento user={user} openQuizModal={openQuizModal} />
+      <MagicBento
+        user={user}
+        openQuizModal={openQuizModal}
+        openAddSubjectsModal={openAddSubjectsModal} // ✅ add
+        onRemoveClick={onRemoveClick} // ✅ add
+      />
 
-      {/* --- MODAL --- */}
+      {/* ===== Quiz Modal ===== */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal">
@@ -317,7 +371,6 @@ const Dashboard = () => {
                   {isFilterLoading ? (
                     <option disabled>Loading...</option>
                   ) : (
-                    Array.isArray(terms) &&
                     terms.map((t, i) => (
                       <option key={i} value={t}>
                         {t}
@@ -364,6 +417,70 @@ const Dashboard = () => {
           </div>
         </div>
       )}
+
+      {/* ===== Add Subjects Modal ===== */}
+      {showAddModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>Select New Subjects</h2>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "10px",
+              }}
+            >
+              {availableSubjects.map((sub) => (
+                <label key={sub} style={{ width: "45%" }}>
+                  <input
+                    type="checkbox"
+                    value={sub}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      setSelectedNewSubjects((prev) =>
+                        prev.includes(v)
+                          ? prev.filter((x) => x !== v)
+                          : [...prev, v]
+                      );
+                    }}
+                  />{" "}
+                  {sub}
+                </label>
+              ))}
+            </div>
+            <div className="modal-buttons">
+              <button className="cancel" onClick={() => setShowAddModal(false)}>
+                Cancel
+              </button>
+              <button className="submit" onClick={confirmAddSubjects}>
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ===== Remove Subject Modal ===== */}
+      {showRemoveModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>Remove {subjectToRemove}?</h2>
+            <div className="modal-buttons">
+              <button
+                className="cancel"
+                onClick={() => setShowRemoveModal(false)}
+              >
+                Cancel
+              </button>
+              <button className="submit" onClick={confirmRemove}>
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <Dock items={DOCK_ITEMS} />
     </div>
   );
