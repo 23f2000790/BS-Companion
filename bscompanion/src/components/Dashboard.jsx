@@ -309,8 +309,8 @@ const Dashboard = () => {
       <MagicBento
         user={user}
         openQuizModal={openQuizModal}
-        openAddSubjectsModal={openAddSubjectsModal} // ✅ add
-        onRemoveClick={onRemoveClick} // ✅ add
+        openAddSubjectsModal={openAddSubjectsModal}
+        onRemoveClick={onRemoveClick}
       />
 
       {/* ===== Quiz Modal ===== */}

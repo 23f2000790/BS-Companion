@@ -1,0 +1,2616 @@
+[
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following statements is correct for the \"alt\" attribute of an <img> tag in HTML?",
+    "options": {
+      "A": "The \"alt\" attribute stores the address of an alternative image which gets loaded if the image URL specified in \"src\" attribute fails to load.",
+      "B": "The \"alt\" attribute stores an alternative text which gets displayed if the image URL specified in \"src\" attribute fails to load.",
+      "C": "It is mandatory to specify the value of \"alt\" attribute while using an <img> tag.",
+      "D": "All of these."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Which of the following would change the default templates folder to \"views\" in a Flask app?",
+    "options": {
+      "A": "app = Flask(__name__, template=\"views\")",
+      "B": "app = Flask(__name__, templates=\"views\")",
+      "C": "app = Flask(__name__, template_folder=\"views\")",
+      "D": "app = Flask(__name__, templates_folder=\"views\")"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider the following two statements and select the correct option.\nStatement 1: Server-level logging can only indicate which URLs were accessed\nStatement 2: Server-level logging can indicate if large number of requests were made in a short duration of time such as in DDoS attacks",
+    "options": {
+      "A": "Statement 1 is true, while statement 2 is false",
+      "B": "Statement 2 is true, while statement 1 is false",
+      "C": "Both statements 1 and 2 are correct",
+      "D": "Both statements 1 and 2 are incorrect"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Consider the following statements about HTML4 and HTML5 and select the correct option.\nStatement 1: The HTML gets separated out from SGML from its fourth version, HTML4.\nStatement 2: HTML5 has additional support for latest features like multimedia support, canvases etc. and it has its own parsing rules.",
+    "options": {
+      "A": "Both statements 1 and 2 are correct.",
+      "B": "Both statements 1 and 2 are incorrect.",
+      "C": "Statement 1 is correct but statement 2 is incorrect.",
+      "D": "Statement 2 is correct but statement 1 is incorrect."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider the following statements and select the correct option.\nStatement 1: Replication is used to improve performance and decrease server load.\nStatement 2: Redundancy ensures data is not lost if a copy gets destroyed.",
+    "options": {
+      "A": "Statement 1 is true & statement 2 is false",
+      "B": "Statement 2 is true & statement 1 is false",
+      "C": "Both statements 1 and 2 are true",
+      "D": "Both statements 1 and 2 are false"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Read the following statements regarding web accessibility principles and choose the correct option.\nStatement 1: Understandable information and users interface helps developers to avoid and correct mistakes in their content.\nStatement 2: Perceivable information ensures that the content does not cause any seizures and physical reaction to its users.",
+    "options": {
+      "A": "Both statement 1 and statement 2 are correct.",
+      "B": "Both statement 1 and statement 2 are incorrect",
+      "C": "Statement 1 is correct but statement 2 is incorrect",
+      "D": "Statement 1 is incorrect but statement 2 is correct"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Match the first column with the second.",
+    "options": {
+      "A": "1-C, 2-D, 3-A, 4-B",
+      "B": "1-C, 2-A, 3-D, 4-B",
+      "C": "1-B, 2-A, 3-D, 4-C",
+      "D": "1-A, 2-D, 3-B, 4-C"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759077238/Jan2023-1_wdymzr.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "What can be inferred from the ERD below?",
+    "options": {
+      "A": "A customer can exist without having any orders",
+      "B": "An order can exist without belonging to any customer",
+      "C": "A customer needs to have at least one order",
+      "D": "An order must belong to one and only one customer"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759077238/Jan2023-2_kxs1u5.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following code snippet.\n```python\n@app.route('/user/<username>')\ndef profile(username):\n    #CODE BLOCK HERE\n```\nAssume the database has a \"User\" table which has a TEXT column \"username\".\nIf we want the server to return a 404 status code when a user goes to the route '/user/<username>' with a username that does not exist in the database, which of the following lines would give us the desired output?",
+    "options": {
+      "A": "user = User.query.filter_by(username=username).first()\nif user is None:\n    abort(404)\nreturn render_template('profile.html', user=user)",
+      "B": "user = User.query.filter_by(username=username).first()\nif user is None:\n    return render_template(\"404.html\")\nreturn render_template('profile.html', user=user)",
+      "C": "user = User.query.filter_by(username=username).first_or_404()\nreturn render_template('profile.html', user=user)",
+      "D": "user = User.query.filter_by(username=username).first()\nif user is None:\n    return render_template(\"404.html\"), 404\nreturn render_template('profile.html', user=user)"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following flask application running on the base URL and is accessed through a browser. Select the correct option(s).\n```python\nfrom flask import Flask, abort, request\n\napp = Flask(__name__)\n\nusers = {\n    1: {\"Name\": \"Ritu\", \"role\": \"Admin\", \"access\": True},\n    2: {\"Name\": \"Ramesh\", \"role\": \"User\", \"access\": True},\n    3: {\"Name\": \"Tejas\", \"role\": \"Admin\", \"access\": True},\n    4: {\"Name\": \"Manisha\", \"role\": \"User\", \"access\": False}\n}\n\n@app.route('/login')\ndef auth():\n    cred = request.args\n    if users[int(cred[\"id\"])].get(\"access\"):\n        id = int(cred[\"id\"])\n        user = users[id]\n        return \"Welcome, \" + user.get(\"Name\") + \", you have \" + user.get(\"role\") + \" access\"\n    else:\n        abort(403)\n\n@app.errorhandler(403)\ndef no_access(error):\n    return \"Looks like you are not an authorized user!\"\n\napp.run(debug=True)\n```",
+    "options": {
+      "A": "For the URL: http://127.0.0.1:5000/?id=2, The browser will render, Welcome, Ramesh, you have User access.",
+      "B": "For the URL: http://127.0.0.1:5000/login?id=1, The browser will render, Welcome, Ritu, you have Admin access.",
+      "C": "For the URL: http://127.0.0.1:5000/login?id=4, The browser will render, Welcome, Manisha, you have User access.",
+      "D": "For the URL: http://127.0.0.1:5000/login?id=4, The browser will render, Looks like you are not an authorized user!."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following users list.\n`users = [{ \"id\":1, \"name\": \"user_1\", \"role\": \"manager\"}, {\"id\":2, \"name\": \"user_2\", \"role\": \"manager\"}, { \"id\": 3, \"name\": \"user_3\", \"role\": \"manager\"}]`\nAn ordered HTML list is to be created for users where every list item should have a clickable \"name\" attribute redirecting to the endpoint \"/show_users/<id>\" where \"id\" is the \"id\" attribute of the same user dictionary. The correct way of doing it with jinja and HTML is",
+    "options": {
+      "A": "<ol>\n{% for user in users %}\n    <li><a href=\"/show_users/{{user.id}}\">{{user.name}}</a></li>\n{% endfor %}\n</ol>",
+      "B": "<ol>\n{% for user in users %}\n    <li><a href=\"/show_users/{{user['id']}}\">{{user['name']}}</a></li>\n{% endfor %}\n</ol>",
+      "C": "<ol>\n    <li><a href=\"/show_users/{{users[0].id}}\">{{users[0].name}}</a></li>\n    <li><a href=\"/show_users/{{users[1].id}}\">{{users[1].name}}</a></li>\n    <li><a href=\"/show_users/{{users[2].id}}\">{{users[2].name}}</a></li>\n</ol>",
+      "D": "<ol>\n{% for user in users %}\n    <li><a href=\"/show_users/{{user.name[-1]}}\">{{user.name}}</a></li>\n{% endfor %}\n</ol>"
+    },
+    "correctOption": ["A", "B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Consider the following code snippet.\n```python\ndef foo(x, y):\n    if x < 0:\n        y += 1\n    if y > 0:\n        x -= 1\n    return x + y\n```\nTest:\n`foo(-1, 1)`\n`foo(1, -1)`\n\nWhich of the following is correct regarding the coverage of the test?",
+    "options": {
+      "A": "100% statement coverage",
+      "B": "100% function coverage",
+      "C": "100% branch coverage",
+      "D": "100% condition coverage"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "If Nₓ is a number N represented in the base 'x' and the equation 400ₐ = 100_b = 256_c holds for a specific set of a, b and c. The correct values of a, b and c that satisfy the above equation are:",
+    "options": {
+      "A": "a = 8; b = 10; c = 16;",
+      "B": "a = 10; b = 2; c = 16;",
+      "C": "a = 8; b = 16; c = 10;",
+      "D": "a = 2; b = 16; c = 8;"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Consider the following HTML file and select the correct option.\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<body>\n    <table id=\"rows\">\n        <tr>\n            <th>Name</th>\n            <th>City</th>\n        </tr>\n    </table>\n    <button onclick=\"perform()\">action</button>\n    <script>\n        function perform() {}\n        let row = document.createElement(\"tr\");\n        let td1 = document.createElement(\"td\");\n        td1.innerText = \"name_1\";\n        let td2 = document.createElement(\"td\");\n        td2.innerText = \"city_1\";\n        row.appendChild(td1);\n        row.appendChild(td2);\n        let rows = document.getElementById(\"rows\");\n        rows.appendChild(row);\n    </script>\n</body>\n</html>\n```",
+    "options": {
+      "A": "The action button when clicked adds a new column to the table with value \"name_1\".",
+      "B": "The action button when clicked adds a new column to the table with value \"city_1\".",
+      "C": "The action button when clicked adds a new row to the table with values \"name_1\" in the first column and \"city_1\" in the second column.",
+      "D": "The action button when clicked adds a new row to the table with values \"city_1\" in the first column and \"name_1\" in the second column."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider a discourse forum where a user unlocks the ability to post images once he makes more than 25 posts.\nWhat kind of access control is this?",
+    "options": {
+      "A": "Role-based access control",
+      "B": "Attribute-based access control",
+      "C": "Both role-based and attribute-based access control",
+      "D": "None of these"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Table `products` in SQLite database created using model class `Product` and the python file `main.py` given below.\n\nmain.py:\n```python\nfrom jinja2 import Template\ntemplates = \"\"\"\n{% if result %}\n<ol>\n{% for product in products %}\n    <li>{{product.pro_name}}</li>\n    <li>{{product.section}}</li>\n{% endfor %}\n</ol>\n{% endif %}\n\"\"\"\nproducts = Product.query.filter_by(pro_name = 'Pencil').all()\nTemplates = Template(templates)\nresult = Templates.render(products = products)\nprint(result)\n```\nWhat will be the output on the terminal?",
+    "options": {
+      "A": "Pencil stationary\nPencil art",
+      "B": "<ol>\n    <li>Pencil stationary</li>\n    <li>Pencil art</li>\n</ol>",
+      "C": "<ol>\n    <li>Pencil</li>\n    <li>stationary</li>\n    <li>Pencil</li>\n    <li>art</li>\n</ol>",
+      "D": "Pencil\nstationary\nPencil\nart"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759077238/Jan2023-3_mu1wmj.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Consider the following statements regarding Continuous Integration and Continuous Deployment and select the correct option.\nStatement 1: As part of continuous integration, frequent, isolated changes are tested and reported on as soon as they are added to a larger code base.\nStatement 2: When a change is made to an application, it is automatically deployed into production using a continuous deployment strategy.",
+    "options": {
+      "A": "Statement 1 and statement 2 both are correct.",
+      "B": "Statement 1 and statement 2 both are incorrect.",
+      "C": "Statement 1 is correct and statement 2 is incorrect.",
+      "D": "Statement 1 is incorrect and statement 2 is correct."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Which of the following is correct matching?",
+    "options": {
+      "A": "A-1, B-2, C-4, D-3",
+      "B": "A-4, B-3, C-2, D-1",
+      "C": "A-4, B-1, C-2, D-3",
+      "D": "A-3, B-2, C-1, D-4"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759077239/Jan2023-4_ybbjoo.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following HTML codes is correctly represented by the DOM structure below?",
+    "options": {
+      "A": "<html>\n<head><title>My website</title></head>\n<body>\n    <div>\n        <h1> Header </h1>\n        <p><a href=\"#\"> Click Here </a></p>\n    </div>\n</body>\n</html>",
+      "B": "<html>\n<head><title>My website</title></head>\n<body>\n    <div>\n        <h1> Header </h1>\n    </div>\n    <div>\n        <p> <a href=\"#\"> Click Here </a> </p>\n    </div>\n</body>\n</html>",
+      "C": "<html>\n<head><title>My website</title></head>\n<body>\n    <div>\n        <h1> Header </h1>\n    </div>\n    <div>\n        <p>Paragraph</p>\n        <a href=\"#\"> Click Here </a>\n    </div>\n</body>\n</html>",
+      "D": "<html>\n<head><title>My website</title></head>\n<body>\n    <h1> Header </h1>\n    <p><a href=\"#\"> Click Here </a></p>\n</body>\n</html>"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759077238/Jan2023-5_mbhito.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Which of the following code snippets correctly increases the salary of all the teachers by 1000 Rupees when typed in the Python console?",
+    "options": {
+      "A": ">>> emp = Employee.query.filter_by(Designation='Teacher').all()\n>>> for staff in emp:\n...     staff.Salary += 1000\n>>> db.session.commit()",
+      "B": ">>> emp = Employee.query.filter_by(Gender='Female').all()\n>>> staff.Salary += 1000\n>>> db.session.commit()",
+      "C": ">>> emp = Employee.query.filter_by(Gender='Female').all()\n>>> for staff in emp:\n...     staff.Salary += 1000\n>>> db.session.commit()",
+      "D": ">>> emp = Employee.query.filter(Employee.Gender.like('T%')).all()\n>>> for staff in emp:\n...     staff.Salary += 1000\n>>> db.session.commit()"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759077238/Jan2023-6_wzfsm1.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider the following Python code snippet.\n```python\nfrom math import factorial\n\ndef prettify(func):\n    def wrapper(num):\n        try:\n            return func(num)\n        except:\n            return \"Please check your number!\"\n    return wrapper\n\n@prettify\ndef fact(num):\n    return factorial(num)\n\nout = fact(-4)\nprint(out)\n```\nWhat will the output be if the above Python code is run on the terminal?",
+    "options": {
+      "A": "-24",
+      "B": "24",
+      "C": "Please check your number!",
+      "D": "None"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Read the following statements and choose the correct option.\nStatement 1: The command `git merge <branch_name>` merges all the changes from `<branch_name>` into the currently active branch.\nStatement 2: The command `git merge <branch_name>` merges all the changes from `<branch_name>` into the master branch.",
+    "options": {
+      "A": "Both statement 1 and statement 2 are correct",
+      "B": "Both statement 1 and statement 2 are incorrect",
+      "C": "Statement 1 is correct but statement 2 is incorrect",
+      "D": "Statement 1 is incorrect but statement 2 is correct"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Consider a function remainder, and a set of test cases given below.\n\n**Filename: test_file.py**\n```python\ndef remainder(numerator, denominator):\n    rem = numerator % denominator\n    return rem\n\ndef test_func():\n    assert remainder(5, 7) == 5\n\ndef test_functionl():\n    assert remainder(20, 4) == 3\n\ndef test_func():\n    assert remainder(31, 8) == 6\n\ndef test_function3():\n    assert remainder(2, 3) == 2\n```\nWhat will be the output on the terminal for the command `pytest test_file.py -k func`?",
+    "options": {
+      "A": "========= 1 failed, 1 passed, 2 deselected in 0.41s =========",
+      "B": "========= 2 passed, 2 deselected in 0.41s =========",
+      "C": "========= 2 failed, 2 passed in 0.41s =========",
+      "D": "========= 2 failed, 2 deselected in 0.41s ========="
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Consider the following models Library and Book corresponding to tables library and book in SQLite database.\n```python\nclass Library(db.Model):\n    id = db.Column(db.Integer(), primary_key=True)\n    name = db.Column(db.String(), unique=True)\n\nclass Book(db.Model):\n    id = db.Column(db.Integer(), primary_key=True)\n    name = db.Column(db.String(), unique=True)\n    library = db.Column(db.Integer(), db.ForeignKey(\"library.id\"), unique=True)\n```\nBased on the model schemas, what relationship do the classes Library and Book share?",
+    "options": {
+      "A": "Many-to-Many",
+      "B": "One-to-Many",
+      "C": "One-to-One",
+      "D": "The tables are not at all related"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Consider the <span> element and the styling given to it in <style> tag using element selector in the HTML file below.\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Span</title>\n    <style>\n        span {\n            color: red;\n            border: 1px solid blue;\n        }\n    </style>\n</head>\n<body>\n    <span id=\"this_span\">Hello Students! MAD-I welcomes you!</span>\n</body>\n</html>\n```\nWhat will be the final style applied to the <span> tag if an additional style is added via the ID selector given below?\n```css\n#this_span {\n    width: 1200px;\n    border: 2px solid pink;\n}\n```",
+    "options": {
+      "A": "color: red;\nwidth: 1200px;\nborder: 2px solid pink;",
+      "B": "color: red;\nwidth: 1200px;\nborder: 1px solid blue;",
+      "C": "color: red;\nborder: 2px solid pink;",
+      "D": "width: 1200px;\nborder: 2px solid pink;"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Software packages A and B of complexity O(n²log n) and O(n³), respectively, spend exactly Tₐ(n) = Cₐn²log₁₀(n) and Tₑ(n) = Cₑn³ milliseconds to process n data items. During a test, the average time of processing n = 10⁵ data items with the package A and B is 600 milliseconds and 300 milliseconds, respectively. Which of the two software packages defined above will work better to process 10⁶ data items?",
+    "options": {
+      "A": "Software package A",
+      "B": "Software package B",
+      "C": "Both Software packages A and B will take same time to process 10⁶ items",
+      "D": "Both Software packages A and B will take infinitely long time to process 10⁶ items"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Which option is correct?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "  https://res.cloudinary.com/dnzudjm0y/image/upload/v1759079409/Minimalist_Black_and_White_Blank_Paper_Document_2_l7v6ce.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A client machine C is 12000 kms away from the server machine S. A router R is situated somewhere in between the client C and the server S and is connected to client C with cable and makes aerial connection with the server S. [Assume: The speed of light on cable is 1.5 x 10⁸ m/s and in air is 3 x 10⁸ m/s. The client, server and the router lie on a straight line].",
+    "question": "At what distance (kms) should the router be placed from the client so that round-trip latency of the network remains as low as 110 milliseconds?",
+    "options": {
+      "A": "6000 kilometers",
+      "B": "4500 kilometers",
+      "C": "7500 kilometers",
+      "D": "8000 kilometers"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A client machine C is 12000 kms away from the server machine S. A router R is situated somewhere in between the client C and the server S and is connected to client C with cable and makes aerial connection with the server S. [Assume: The speed of light on cable is 1.5 x 10⁸ m/s and in air is 3 x 10⁸ m/s. The client, server and the router lie on a straight line].",
+    "question": "What will be the round-trip latency (milliseconds) of the network if the router is placed at exactly midway from the client and the server?",
+    "options": {
+      "A": "6",
+      "B": "60",
+      "C": "110",
+      "D": "120"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Consider the Amazon Alexa device. Which of the following would constitute the view of the application behind such a device?",
+    "options": {
+      "A": "The AI voice",
+      "B": "The LED light around the device",
+      "C": "The body of the device",
+      "D": "None of these"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following resource API created with help of flask_restful.\n```python\nfrom flask import Flask, request\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nclass TestApi(Resource):\n    def post(self, state, city):\n        return {\"state\": state, \"capital\": city}\n    def get(self):\n        info = request.args\n        return info\n\napi.add_resource(TestApi, '/india', '/india/<state>/<city>')\n\napp.run(debug = True)\n```\nIf the above application is running locally on http://127.0.0.1:5000, answer the given subquestions.",
+    "question": "Which of the following URL will return a 200 OK for GET HTTP method?",
+    "options": {
+      "A": "http://127.0.0.1:5000/maharastra/mumbai",
+      "B": "http://127.0.0.1:5000/india?state=tamilnadu&capital=chennai",
+      "C": "http://127.0.0.1:5000/india/madhyapradesh/bhopal",
+      "D": "http://127.0.0.1:5000?state=rajasthan&capital=jaipur"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following resource API created with help of flask_restful.\n```python\nfrom flask import Flask, request\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nclass TestApi(Resource):\n    def post(self, state, city):\n        return {\"state\": state, \"capital\": city}\n    def get(self):\n        info = request.args\n        return info\n\napi.add_resource(TestApi, '/india', '/india/<state>/<city>')\n\napp.run(debug = True)\n```\nIf the above application is running locally on http://127.0.0.1:5000, answer the given subquestions.",
+    "question": "Which of the following URL will return a 200 OK for POST HTTP method?",
+    "options": {
+      "A": "http://127.0.0.1:5000/india?state=odisha&capital=bhubaneshwar",
+      "B": "http://127.0.0.1:5000?state=telangana&capital=hyderabad",
+      "C": "http://127.0.0.1:5000/karnataka/bangalore",
+      "D": "http://127.0.0.1:5000/india/westbengal/kolkata"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "Consider the following snippet of HTML and its output rendered on the browser:",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080093/may2023-1_ruxpzi.png",
+    "question": "Which HTTP request would be sent to the server if the user enters \"Mahesh\" into the text box and clicks submit?",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A 6000 rpm magnetic disk is being used to store data. The disk can only spin in one direction and is operating at 6000 revolutions per minute.",
+    "question": "If the operating system sends a request to the disk controller to fetch data from the disk, but by the time the request reached the disk controller, the information had already moved 35 degrees passed the reader, what will be the latency (in milliseconds) before it can start retrieving data?",
+    "options": {
+      "A": "0.97",
+      "B": "9.03",
+      "C": "90.3",
+      "D": "97"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask resource created using flask_restful.\n```python\nfrom flask import Flask, request\nfrom flask_restful import Api, Resource, reqparse\n\napp = Flask(__name__)\napi = Api(app)\n\nparser = reqparse.RequestParser()\nparser.add_argument(\"val\")\n\nclass RestApi(Resource):\n    def post(self, val):\n        arg1 = parser.parse_args()\n        arg2 = request.args\n        return {\n            \"value_1\": arg1[\"val\"],\n            \"value_2\": arg2[\"val\"],\n            \"value_3\": val\n        }\n\napi.add_resource(RestApi, \"/api/games/<val>\")\n\napp.run(debug=True)\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, what will be the output on the terminal for the command:\n`curl http://127.0.0.1:5000/api/games/cricket?val=soccer -d '{\\\"val\\\":\\\"tennis\\\"}' -X POST -H 'Content-Type: application/json'`",
+    "options": {
+      "A": "{\n    \"value_1\": \"soccer\",\n    \"value_2\": \"tennis\",\n    \"value_3\": \"cricket\"\n}",
+      "B": "{\n    \"value_1\": \"cricket\",\n    \"value_2\": \"soccer\",\n    \"value_3\": \"tennis\"\n}",
+      "C": "{\n    \"value_1\": \"tennis\",\n    \"value_2\": \"soccer\",\n    \"value_3\": \"cricket\"\n}",
+      "D": "{\n    \"value_1\": \"tennis\",\n    \"value_2\": \"cricket\",\n    \"value_3\": \"soccer\"\n}"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the following function to be tested and test functions given in the Python code snippet below.\n\n**test_file.py**\n```python\nimport pytest\n\ndef square(x):\n    sum = 0\n    for counter in range(x):\n        sum += x\n    return sum\n\n@pytest.mark.marker1\ndef testcase_1():\n    assert square(11) == 121\n\n@pytest.mark.marker2\ndef testcase_2():\n    assert square(8) == 8\n\n@pytest.mark.marker3\ndef testcase_3():\n    assert square(5) == 36\n```\nOn running this file on the terminal using pytest, the summary of the output is:\n`========== 1 passed, 2 deselected, 3 warnings in 0.02s ==========`",
+    "question": "What command will result into the outcome given above?",
+    "options": {
+      "A": "pytest test_file.py -k marker1",
+      "B": "pytest test_file.py -m marker1",
+      "C": "pytest test_file.py -m marker2",
+      "D": "pytest test_file.py -m marker3"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "The hexadecimal equivalent of the IPv4 address 192.168.72.101 would be:",
+    "options": {
+      "A": "C048 A865",
+      "B": "C0A8 4865",
+      "C": "C0A8 6548",
+      "D": "C065 A848"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080113/Minimalist_Black_and_White_Blank_Paper_Document_4_xppf6f.png",
+    "question": "Which of the following correctly represents its rendered output?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Databases & ORM",
+    "context": "Consider the following models `Student` and `Project` corresponding to tables `student` and `project` in an SQLite database.\n\n```python\nclass Student(db.Model):\n    id = db.Column(db.Integer(), primary_key=True)\n    name = db.Column(db.String(), unique=True)\n\nclass Project(db.Model):\n    id = db.Column(db.Integer(), primary_key=True)\n    title = db.Column(db.String(), unique=True)\n    course = db.Column(db.Integer(), db.ForeignKey(\"course.id\"))\n```",
+    "question": "Based on the model schemas, what relationship do the classes Student and Project share?",
+    "options": {
+      "A": "Many-to-Many",
+      "B": "One-to-Many",
+      "C": "One-to-One",
+      "D": "The tables are not at all related"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\n```python\nfrom flask import Flask\nfrom flask_restful import Api, Resource\n\napp = Flask(__name__)\napi = Api(app)\n\nclass MyApi(Resource):\n    def get(self, get):\n        return {\"greet\": \"Hello from GET Api!\"}\n\n    def put(self):\n        return {\"greet\": \"Hello from PUT Api!\"}\n\napi.add_resource(MyApi, '/api/<get>', '/api/put')\n\napp.run()\n```",
+    "question": "If this application is running locally on http://127.0.0.1:5000, which of the following curl commands will throw an error?\n1. `curl http://127.0.0.1:5000/api/get -X GET`\n2. `curl http://127.0.0.1:5000/api/put -X PUT`\n3. `curl http://127.0.0.1:5000/api/post -X GET`\n4. `curl http://127.0.0.1:5000/api/get -X PUT`",
+    "options": {
+      "A": "Only 2 and 4",
+      "B": "Only 4",
+      "C": "Only 3 and 4",
+      "D": "Only 3"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the code below and match the conditions in Column A with respect to the coverage types in Column B.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080094/may2023-2_wutjpy.png",
+    "question": "Which of the following is the correct matching?",
+    "options": {
+      "A": "1-d, 2-a, 3-b, 4-c",
+      "B": "1-c, 2-d, 3-b, 4-a",
+      "C": "1-c, 2-d, 3-a, 4-b",
+      "D": "1-b, 2-d, 3-c, 4-a"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080093/may2023-3_sp5oub.png",
+    "question": "Which of the following is the correct matching?",
+    "options": {
+      "A": "A→1, B→2, C→3, D→4",
+      "B": "A→4, B→3, C→2, D→1",
+      "C": "A→3, B→2, C→1, D→4",
+      "D": "A→4, B→1, C→2, D→3"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Databases & ORM",
+    "context": "Consider the following table \"emp\" created in an SQLite database corresponding to a model class \"Employee\" using flask_sqlalchemy.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080097/may2023-4_y4w3h6.png",
+    "question": "Which of the following code snippets will change the designation of male teachers to 'Professor' and will set their salaries to 6000 correctly when typed in the Python console?",
+    "options": {
+      "A": "```python\n>>> emp = Employee.query.filter_by(Designation='Teacher').all()\n>>> for staff in emp:\n...     staff.Designation = \"Professor\"\n...     staff.Salary = 6000\n>>> db.session.commit()\n```",
+      "B": "```python\n>>> emp = Employee.query.filter_by(Designation=\"Teacher\", Gender=\"Male\").all()\n>>> for staff in emp:\n...     staff.Designation = \"Professor\"\n...     staff.Salary += 6000\n>>> db.session.commit()\n```",
+      "C": "```python\n>>> emp = Employee.query.filter_by(Designation='Teacher').all()\n>>> for staff in emp:\n...     staff.Designation = \"Professor\"\n...     staff.Salary += 6000\n>>> db.session.commit()\n```",
+      "D": "```python\n>>> emp = Employee.query.filter_by(Designation=\"Teacher\", Gender=\"Male\").all()\n>>> for staff in emp:\n...     staff.Designation = \"Professor\"\n...     staff.Salary = 6000\n>>> db.session.commit()\n```"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080108/Minimalist_Black_and_White_Blank_Paper_Document_3_e9lpxm.png",
+    "context": null,
+    "question": "What will be the rendered output for the base URL if the Flask app is running locally on http://localhost:5000?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "An error."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Databases & ORM",
+    "context": "Consider the following SQL create statement.\n```sql\nCREATE TABLE car (\n    car_id INTEGER NOT NULL,\n    model INTEGER NOT NULL,\n    name VARCHAR(50),\n    mfd_date DATETIME NOT NULL,\n    description VARCHAR,\n    PRIMARY KEY (car_id),\n    UNIQUE (model),\n    UNIQUE (name)\n)\n```",
+    "question": "Which of the following flask_sqlalchemy models will create exactly the same table as created by the above SQL command?",
+    "options": {
+      "A": "```python\nclass Car(db.Model):\n    car_id = db.Column(db.Integer(), unique=True, nullable=False)\n    model = db.Column(db.Integer(), autoincrement=True)\n    name = db.Column(db.String(50), unique=True, nullable=True)\n    mfd_date = db.Column(db.DateTime(), nullable=False)\n    description = db.Column(db.String())\n```",
+      "B": "```python\nclass Car(db.Model):\n    car_id = db.Column(db.Integer(), primary_key=True)\n    model = db.Column(db.Integer(), unique=True, nullable=True)\n    name = db.Column(db.String(50), unique=False)\n    mfd_date = db.Column(db.DateTime(), nullable=False)\n    description = db.Column(db.String())\n```",
+      "C": "```python\nclass Car(db.Model):\n    car_id = db.Column(db.Integer(), primary_key=True)\n    model = db.Column(db.Integer(), unique=True, nullable=False)\n    name = db.Column(db.String(), unique=True, nullable=True)\n    mfd_date = db.Column(db.DateTime())\n    description = db.Column(db.String(50))\n```",
+      "D": "```python\nclass Car(db.Model):\n    car_id = db.Column(db.Integer(), primary_key=True)\n    model = db.Column(db.Integer(), unique=True, nullable=False)\n    name = db.Column(db.String(50), unique=True, nullable=True)\n    mfd_date = db.Column(db.DateTime(), nullable=False)\n    description = db.Column(db.String())\n```"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following statements:\nStatement 1: It is not necessary to implement server-side validation if client-side validation has been implemented.\nStatement 2: Client-side validation can be implemented with HTML5.",
+    "question": "Select the correct option.",
+    "options": {
+      "A": "Statement 1 is true while statement 2 is false",
+      "B": "Statement 2 is true while statement 1 is false",
+      "C": "Both statements are true",
+      "D": "Both statements are false"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following statements:\nStatement 1: In PaaS, developers are provided with an up-to-date development environment with the languages and frameworks of their choice.\nStatement 2: Microsoft Azure provides IaaS as well as PaaS services.",
+    "question": "Select the correct answer.",
+    "options": {
+      "A": "Statement 1 is true, but statement 2 is false",
+      "B": "Statement 2 is true, but statement 1 is false",
+      "C": "Both statements are false",
+      "D": "Both statements are true"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following statements:\nStatement 1: If we submit the form using the GET method, then the form data is appended inside the body of the HTTP request.\nStatement 2: Never use the GET method in a form to send sensitive data, while it is good for non-secure data, like query strings in Google.",
+    "question": "Choose the correct option.",
+    "options": {
+      "A": "Both statements 1 and 2 are true, and statement 2 is a correct explanation of statement 1",
+      "B": "Both statements 1 and 2 are true, but statement 2 is not a correct explanation of statement 1",
+      "C": "Statement 1 is true and statement 2 is false",
+      "D": "Statement 2 is true and statement 1 is false"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Which of the following git commands will remove a file from the staged area but keep the file in the working directory?",
+    "options": {
+      "A": "git rm <filename>",
+      "B": "git del <filename>",
+      "C": "git del --cached <filename>",
+      "D": "git rm --cached <filename>"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\n```python\nfrom string import Template\n\nstatement = \"The four major operations on the database are $c, $r, $u and $d.\"\ntemp = Template(statement)\n\nprint(=== OUTPUT ===)\n```",
+    "question": "Which of the following statements, when substituted in place of `=== OUTPUT ===`, will not throw a KeyError?",
+    "options": {
+      "A": "temp.safe_substitute({\"c\":\"CREATE\", \"r\": \"READ\", \"u\":\"UPDATE\", \"d\": \"DELETE\"})",
+      "B": "temp.safe_substitute({\"c\":\"CREATE\", \"r\":\"READ\", \"u\":\"UPDATE\"})",
+      "C": "temp.safe_substitute({\"c\":\"CREATE\", \"r\": \"READ\", \"u\": \"UPDATE\", \"d\":\"DELETE\", \"e\":\"TRUNCATE\"})",
+      "D": "temp.substitute({\"c\":\"CREATE\", \"r\": \"READ\", \"u\":\"UPDATE\", \"d\": \"DELETE\", \"e\":\"TRUNCATE\"})"
+    },
+    "correctOption": ["A", "B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following `TodoSimple` resource class created using flask_restful.\n\n```python\nfrom flask import Flask, request\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nclass TodoSimple(Resource):\n    def get(self, todo_id):\n        return {\"todo_id\": todo_id}\n    def put(self):\n        todo_id = request.args.get(\"todo_id\")\n        return {\"todo_id\": todo_id}\n\n# Mapping statement here\n\napp.run()\n```",
+    "question": "Which of the following statements given below will correctly map the resource URLs with the `TodoSimple` resource class?",
+    "options": {
+      "A": "api.add_resource(TodoSimple, \"/api\")",
+      "B": "api.add_resource(TodoSimple, \"/api/<int:todo_id>\", \"/api\")",
+      "C": "api.add_resource(TodoSimple, \"/api/<int:todo_id>\")",
+      "D": "api.add_resource(TodoSimple, \"/<int:todo_id>\", \"/api\")"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the statements are true?",
+    "options": {
+      "A": "HTML5 is based on SGML",
+      "B": "XHTML is based on XML which in turn is based on SGML",
+      "C": "HTML5 is not backwards compatible with older versions of HTML",
+      "D": "XML is both human and machine-readable"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Choose the correct code snippet to implement logging by importing the Python logging module.",
+    "options": {
+      "A": "```python\nimport logging\nlogging.basicConfig(filename='debug.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')\n```",
+      "B": "```python\nimport logging\nlogging.basicConfig(filename='debug.log', level=logging.NOTSET, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s: %(message)s')\n```",
+      "C": "```python\nimport logging\nlogging(filename='debug.log', level=logging.DEBUG)\n```",
+      "D": "```python\nimport logging\nlogging.basicConfig(filename='debug.log')\n```"
+    },
+    "correctOption": ["A", "B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider a typical Amazon Alexa device.",
+    "question": "Which of the following would constitute the 'view' of the application behind such a device?",
+    "options": {
+      "A": "The AI voice",
+      "B": "The body of the device",
+      "C": "The LED light around the device",
+      "D": "None of these"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which of the following is true of \"cold storage\" like Amazon Glacier?",
+    "options": {
+      "A": "They have low cost and high durability.",
+      "B": "They have high cost and low durability.",
+      "C": "Latency of retrieval is very low.",
+      "D": "Latency of retrieval is very high."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following graph that represents the variation in bandwidth of a network for an entire day (24 hours). Three users were connected to the network at three different times of the day.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080094/may2023-5_o5mt9z.png",
+    "question": "Which user has consumed the highest amount of data?",
+    "options": {
+      "A": "User 1",
+      "B": "User 2",
+      "C": "User 3",
+      "D": "All three users consumed the same amount of data"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following restful implementation using flask.\n```python\nfrom flask import Flask, request\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nstudent_info = {\n    \"name\": \"Rahul\", \n    \"Roll No\": \"12d2000678\", \n    \"Email\": \"onlinedegree.iitm.ac.in\"\n}\n\nclass Student(Resource):\n    def put(self):\n        data = request.json\n        student_info.update(data)\n        return student_info\n\n    def delete(self):\n        student_info.popitem()\n        return \"success\", 200\n\napi.add_resource(Student, '/')\n\napp.run()\n```\nIf the above application is running on \"http://127.0.0.1:5000\", what will be the final output on the terminal on executing these two curl commands in the order mentioned?\n\n1: `curl -X DELETE 'http://127.0.0.1:5000'`\n2: `curl -X PUT -H \"Content-Type: application/json\" -d '{\"Roll No\":\"12f2000555\", \"Email\": \"ds.study.iitm.ac.in\"}' 'http://127.0.0.1:5000/'`",
+    "question": "What will be the final output on the terminal?",
+    "options": {
+      "A": "{\"name\": \"Rahul\", \"Roll No\": \"12f2000555\", \"Email\": \"ds.study.iitm.ac.in\"}",
+      "B": "{\"name\": \"Rahul\", \"Roll No\": \"12f2000555\"}",
+      "C": "{\"Roll No\": \"12f2000555\", \"Email\": \"ds.study.iitm.ac.in\"}",
+      "D": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following python code snippet. What will be the rendered output?\n\n```python\nfrom jinja2 import Template\n\npersons = [\n    {\"Gender\": \"Male\", \"Age\": 40, \"Name\": \"John\"},\n    {\"Gender\": \"Female\", \"Age\": 16, \"Name\": \"Samantha\"},\n    {\"Gender\": \"Male\", \"Age\": 20, \"Name\": \"Kim\"}\n]\n\nt = \"\"\"\n<ul>\n    {% for group in persons|groupby('Gender') %}\n    <li>\n        {{ group.grouper }}\n        <ul>\n            {% for person in group.list %}\n            <li>{{ person.Name }} is {{ person.Age }} years old</li>\n            {% endfor %}\n        </ul>\n    </li>\n    {% endfor %}\n</ul>\n\"\"\"\n\ntemp = Template(t)\nprint(temp.render(persons=persons))\n```",
+    "question": "What will be the rendered output?",
+    "options": {
+      "A": "<ul><li>Male<ul><li>John is 40 years old</li></ul></li><li>Female<ul><li>Samantha is 16 years old</li></ul></li><li>Male<ul><li>Kim is 20 years old</li></ul></li></ul>",
+      "B": "<ul><li>Male<ul><li>John is 40 years old</li><li>Kim is 20 years old</li></ul></li><li>Female<ul><li>Samantha is 16 years old</li></ul></li></ul>",
+      "C": "<ul><li>Female<ul><li>Samantha is 16 years old</li></ul></li><li>Male<ul><li>John is 40 years old</li><li>Kim is 20 years old</li></ul></li></ul>",
+      "D": "The code will produce an error because groupby order is not guaranteed."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider a function `func`, and a set of test cases given below.\n\n**Filename: test_file.py**\n```python\nimport pytest\n\ndef func(x, y):\n    out = x + y**2\n    return out\n\nclass Test_class():\n    def test_case1(self):\n        assert func(1, 2) == 5\n    def case_test2(self):\n        assert func(2, 3) == 10\n    def test_case3(self):\n        assert func(6, 2) == 8\n\nclass Test_class1():\n    def test_case1(self):\n        assert func(5, 2) == 9\n    def case_test2(self):\n        assert func(4, 3) == 14\n```",
+    "question": "What will be the output on the terminal for the command below?\n`pytest test_file.py -k Test_class0`",
+    "options": {
+      "A": "== 1 failed, 2 passed in 0.17s ==",
+      "B": "== 2 failed, 1 passed in 0.17s ==",
+      "C": "== 1 failed, 1 passed, 1 deselected in 0.17s ==",
+      "D": "== 2 failed, 1 deselected in 0.17s =="
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "What will be the output of the following Python code snippet?\n```python\ndef decor(func):\n    def wrapper(x):\n        y = func(x)\n        return x * y\n    return wrapper\n\n@decor\ndef output(x, optional=\"hello world!\"):\n    return x\n\nprint(output(5))\n```",
+    "options": {
+      "A": "('hello world!', 'hello world!', 'hello world!', 'hello world!', 'hello world!')",
+      "B": "(5, 5, 5, 5, 5)",
+      "C": "(5, 'hello world!', 5, 'hello world!', 5, 'hello world!', 5, 'hello world!', 5, 'hello world!')",
+      "D": "25"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/user/<username>')\ndef show_user(username):\n    return f'Hello {username}!'\n\n@app.route(\"/hello/user\")\ndef hello():\n    return \"Hello, user!\"\n\n@app.route(\"/user/\")\ndef index():\n    return \"Hello user\"\n\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759080095/may2023-6_e9pkgm.png",
+    "question": "Which is the correct mapping?",
+    "options": {
+      "A": "a-2, b-1, c-4, d-5",
+      "B": "a-4, b-1, c-2, d-3",
+      "C": "a-4, b-1, c-2, d-5",
+      "D": "a-2, b-3, c-1, d-5"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following sorting algorithm which sorts any given unsorted array of numbers in ascending order.\n\nStep 1: Create an empty array.\nStep 2: Find the element in the unsorted array with the minimum value.\nStep 3: Append this element to the array created in step 1.\nStep 4: Delete this element from the unsorted array.\nStep 5: Repeat steps 2 to 4 until the unsorted array is empty.",
+    "question": "What would be its time complexity? (Assume appending and deleting an element from an array does not affect time complexity significantly)",
+    "options": {
+      "A": "O(N²)",
+      "B": "O(N)",
+      "C": "O(logN)",
+      "D": "O(NlogN)"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n```python\nfrom flask import Flask, render_template, request\n\napp = Flask(__name__)\n\n@app.route('/')\ndef out():\n    val = request.args\n    if val.get('num') == \"\":\n        return \"<h1>Enter a valid number</h1>\"\n    elif val.get('num').isalpha() == True:\n        return \"<h1>Invalid number</h1>\"\n    else:\n        output = str(val.get('num')) + str(val.get('num'))\n        return f'<h1>{output}</h1>'\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n```",
+    "question": "If this flask app is running locally on http://localhost:5000, what is the output for the following URL?\nURL: `http://localhost:5000/?num=343`",
+    "options": null,
+    "correctOption": 343343,
+    "questionType": "numerical"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Follow the code given below:\n```python\nfrom flask import Flask, request\nfrom flask_restful import Resource, Api, fields, marshal, marshal_with\n\napp = Flask(__name__)\napi = Api(app)\n\nclass User:\n    def __init__(self, id, username, email):\n        self.id = id\n        self.username = username\n        self.email = email\n\noutput = {\"id\": fields.Integer, \"username\": fields.String, \"email\": fields.String}\n\n#== Resource Class Here ==\n\napi.add_resource(Userapi, '/')\n\nif __name__ == '__main__':\n    app.run()\n```",
+    "question": "What code should be written in place of `#== Resource Class Here ==`, so that we get the following JSON as output on running the command `curl -X GET 'http://127.0.0.1:5000'` in the terminal?\n\n**Expected Output:**\n```json\n{\n    \"id\": 1,\n    \"username\": \"iitm\",\n    \"email\": \"bs@ds.study.iitm.ac.in\"\n}\n```",
+    "options": {
+      "A": "```python\nclass Userapi(Resource):\n    @marshal_with(output)\n    def get(self):\n        user = User(1, \"iitm\", \"bs@ds.study.iitm.ac.in\")\n        return user\n```",
+      "B": "```python\nclass Userapi(Resource):\n    def get(self):\n        user = User(1, \"iitm\", \"bs@ds.study.iitm.ac.in\")\n        return user\n```",
+      "C": "```python\n@marshal_with(output)\nclass Userapi(Resource):\n    def get(self):\n        user = User(1, \"iitm\", \"bs@ds.study.iitm.ac.in\")\n        return user\n```",
+      "D": "```python\nclass Userapi(Resource):\n    def get(self):\n        user = User(1, \"iitm\", \"bs@ds.study.iitm.ac.in\")\n        return marshal(user, output)\n```"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider the given URL below.\nhttps://seek.study.iitm.ac.in/courses/ns_23t3_cs2003?type=lesson&tab=course\nSelect the appropriate option that correctly identifies different components of a given URL.",
+    "options": {
+      "A": "Protocol: https\nDomain: seek\nSub-Domain: study.iitm.ac.in\nPath: /courses/ns_23t3_cs2003\nParameters: ?type=lesson&tab=courses",
+      "B": "Protocol: https\nDomain: seek\nSub-Domain: study.iitm.ac.in/courses\nPath: /ns_23t3\nParameters: cs2003?type=lesson&tab=courses",
+      "C": "Protocol: https\nDomain: study.iitm.ac.in/courses\nSub-Domain: seek\nPath: /ns_23t3\nParameters: cs2003?type=lesson&tab=courses",
+      "D": "Protocol: https\nDomain: study.iitm.ac.in\nSub-Domain: seek\nPath: /courses/ns_23t3_cs2003\nParameters: ?type=lesson&tab=courses"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "How will the browser render the following HTML document?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759081215/Minimalist_Black_and_White_Blank_Paper_Document_5_xvp7iw.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Consider the statements given below and choose the correct option.\nStatement 1: 100% statement coverage automatically implies 100% branch coverage.\nStatement 2: 100% statement coverage automatically implies 100% condition coverage.",
+    "options": {
+      "A": "Both statement 1 and 2 are correct.",
+      "B": "Both statement 1 and 2 are incorrect.",
+      "C": "Statement 1 is correct but, statement 2 is incorrect.",
+      "D": "Statement 2 is correct but, statement 1 is incorrect."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider a simple web server using command prompt.\nFilename - Hello.sh\n```bash\n#!/bin/bash\nwhile true; do\n  echo -e \"Current date and time is \\n\\t $(date)\"\n  | nc -l localhost 4100;\ndone\n```\nIf this program creates a server in a terminal, the correct way to make a request to this server is",
+    "options": {
+      "A": "Type curl http://localhost:5000 in the same terminal where the server is running.",
+      "B": "Type curl http://localhost:4100 in the same terminal where the server is running.",
+      "C": "Open a new terminal and type curl http://localhost:5000",
+      "D": "Open a new terminal and type curl http://localhost:4100"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\nPython file: app.py\n```python\nfrom flask import Flask, render_template, request\napp = Flask(__name__)\nemp = {'admin': 'manoj', 'user':'sumit'}\n\n@app.route('/profile/<user>')\ndef profile(user):\n    access = request.args.get('access')\n    if emp[access] != user:\n        return render_template(\"profile.html\", user = user, access = access, error = True)\n    return render_template(\"profile.html\", user = user, access = access, error = False)\n\napp.run()\n```\nTemplate file: profile.html\n```html\n<body>\n<div>\n{% if error %}\n<h3>Hi {{user}}, {{access}} access denied</h3>\n{% else %}\n<h3>Hi {{user}}, you are logged in as {{access}}.</h3>\n{% endif %}\n</div>\n</body>\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, then what will be rendered by the browser for URL, http://127.0.0.1:5000/profile/sumit?access=admin?",
+    "options": {
+      "A": "Hi sumit, you are logged in as admin.",
+      "B": "Hi sumit, you are logged in as user.",
+      "C": "Hi sumit, admin access denied.",
+      "D": "Hi sumit, user access denied."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the following function to be tested and test functions given in the Python code snippet below.\n```python\n# test_file.py\nimport pytest\ndef square(x):\n    sum = 0\n    for counter in range(x):\n        sum += x # Note: original document has a typo 'X', corrected to 'x' for logical consistency\n    return sum\n\n@pytest.mark.marker1\ndef testcase_1():\n    assert square(13) == 144\n\n@pytest.mark.marker2\ndef testcase_2():\n    assert square(6) == 6\n\n@pytest.mark.marker3\ndef testcase_3():\n    assert square(3) == 9\n```\nOn running this file on the terminal using pytest, the summary of the output is;\n============ 1 passed, 2 deselected, 3 warnings in 0.02s ============",
+    "question": "What command will result into the outcome given above?",
+    "options": {
+      "A": "pytest test_file.py -k marker1",
+      "B": "pytest test_file.py -m marker1",
+      "C": "pytest test_file.py -m marker3",
+      "D": "pytest test_file.py -m marker2"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "The hexadecimal equivalent of the IPv4 address 171.216.21.100 would be",
+    "options": {
+      "A": "ABD8 6415",
+      "B": "D8AB 6415",
+      "C": "ABD8 1564",
+      "D": "D8AB 1564"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Databases & ORM",
+    "context": "Consider the following models Creator and Song corresponding to tables creator and song in SQLite database.\n```python\nclass Creator(db.Model):\n    id = db.Column(db.Integer(), primary_key = True)\n    c_name = db.Column(db.String(), unique = True)\n\nclass Song(db.Model):\n    id = db.Column(db.Integer(), primary_key = True)\n    s_title = db.Column(db.String(), unique = True)\n    singer = db.Column(db.Integer(), db.ForeignKey(\"creator.id\"))\n```",
+    "question": "Based on the model schemas, what relationship do the table creator and song share?",
+    "options": {
+      "A": "Many-to-Many",
+      "B": "One-to-Many",
+      "C": "One-to-One",
+      "D": "The tables are not at all related"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which curl option is used to set the request method in an HTTP request?",
+    "options": {
+      "A": "-H",
+      "B": "-X",
+      "C": "-d",
+      "D": "-r"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Read the statements given below carefully and select the correct option.\nStatement 1: If an element is styled externally using both the class and the ID, then for the same attribute, it will acquire styling from the ID.\nStatement 2: If an element is styled internally using ID and class selector as well as using inline styling for the same style attribute, then it will always acquire inline styling.",
+    "options": {
+      "A": "Both statements 1 and 2 are correct",
+      "B": "Both statements 1 and 2 are incorrect",
+      "C": "Statement 1 is correct but statement 2 is incorrect",
+      "D": "Statement 2 is correct but statement 1 is incorrect"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider two python files, one.py and two.py with following code snippets.\nFile1: one.py\n```python\nimport sys\nimport two\nprint(f'{sys.argv[1]} {sys.argv[3]}')\n```\nFile2: two.py\n```python\nimport sys\nprint(f'{sys.argv[2]} {sys.argv[0]}')\n```",
+    "question": "What is the output of the following command \"python one.py two.py two.py one.py\"?",
+    "options": {
+      "A": "one.py two.py\none.py two.py",
+      "B": "one.py two.py\ntwo.py one.py",
+      "C": "two.py one.py\ntwo.py one.py",
+      "D": "two.py one.py\none.py two.py"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following is not a web component?",
+    "options": {
+      "A": "Custom Elements",
+      "B": "Shadow DOM",
+      "C": "HTML Templates",
+      "D": "Web Assembly"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Consider the following statements and select the correct option.\nStatement 1: The command, git del <filename> deletes the file from the staging area as well as from the working tree.\nStatement 2: The command, git rm-cached <filename> deletes the file from the staging area but keeps it in the working tree.",
+    "options": {
+      "A": "Statement 1 is correct, but statement 2 is incorrect.",
+      "B": "Statement 1 is incorrect, but statement 2 is correct.",
+      "C": "Both statements 1 and 2 are correct.",
+      "D": "Both statements 1 and 2 are incorrect."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "What is Emscripten in the context of WebAssembly?",
+    "options": {
+      "A": "A WebAssembly specification",
+      "B": "A JavaScript framework",
+      "C": "A toolchain for compiling C/C++ code to WebAssembly",
+      "D": "An HTML and CSS editor"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "The ORM(Object-Relational Mapping) sqlalchemy is used for?",
+    "options": {
+      "A": "Running SQL queries directly on the database",
+      "B": "Defining the structure of HTML templates",
+      "C": "Mapping Python objects to database tables and records",
+      "D": "Creating Web Routes in a Flask app"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Python code snippet.",
+    "options": {
+      "A": "a-3, b-2, c-1, d-4",
+      "B": "a-2, b-1, c-4, d-3",
+      "C": "a-3, b-1, c-2, d-4",
+      "D": "a-2, b-3, c-4, d-1"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759081193/sept2023-1_dfdxwt.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759081193/sept2023-2_o0ity5.png",
+    "context": null,
+    "question": "Given a Python code snippet, code.py is run on the terminal with an appropriate temp.html document.",
+    "options": {
+      "A": "{% for product in Products | groupby('producer') %}\n<p> {{product.grouper}} </p>\n<table border=\"1\">\n<tr>\n<th>Product ID</th>\n<th> Name </th>\n</tr>\n<tr>\n<td> {{ product.product_id}}</td>\n<td>{{product.prod_name}}</td>\n</tr>\n</table>\n{% endfor %}",
+      "B": "{% for product in Products | groupby('producer') %}\n<p> {{product.grouper}} </p>\n<table border=\"1\">\n<tr>\n<th>Product ID</th>\n<th> Name </th>\n</tr>\n{% for item in product.list %}\n<tr>\n<td> {{ item.product_id}}</td>\n<td>{{item.prod_name}}</td>\n</tr>\n{% endfor %}\n</table>\n{% endfor %}",
+      "C": "{% for product in Products | groupby('prod_name') %}\n<p> {{product.grouper}} </p>\n<table border=\"1\">\n<tr>\n<th>Product ID</th>\n<th> Name </th>\n</tr>\n{% for item in product.list %}\n<tr>\n<td> {{ item.product_id}}</td>\n<td>{{item.prod_name}}</td>\n</tr>\n{% endfor %}\n</table>\n{% endfor %}",
+      "D": "{% for product in Products groupby('prod_name') %}\n<p> {{product.grouper}} </p>\n<table border=\"1\">\n<tr>\n<th>Product ID</th>\n<th>Name</th>\n</tr>\n<tr>\n<td>{{item.product_id}}</td>\n<td>{{item.prod_name}}</td>\n</tr>\n</table>\n{% endfor %}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the following function to be tested and test functions given in the Python code snippet below.\n```python\n# test_file.py\npowers = []\nfor i in range(1,5):\n    def powers_of_x(x):\n        return x**i\n    powers.append(powers_of_x)\npowers_of_3 = [x(3) for x in powers]\n\ndef testcase_1():\n    assert 9 in powers_of_3\n\ndef testcase_2():\n    assert 27 in powers_of_3\n\ndef testcase_3():\n    assert 64 in powers_of_3\n```",
+    "question": "For the command `pytest test_file.py` what will be the output on the terminal?",
+    "options": {
+      "A": "============ 1 failed, 2 passed in 0.02s ============",
+      "B": "=========== 3 passed in 0.02s ===========",
+      "C": "================ 3 failed in 0.02s ================",
+      "D": "============ 2 failed, 1 passed in 0.02s ============"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "Consider the following HTML document rendered using a browser.\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>Document</title>\n<style>\ninput:valid {\n    background: green;\n}\ninput:invalid {\n    background: red;\n}\n</style>\n</head>\n<body>\n<form>\n<label for=\"uname\">Enter a valid e-mail:</label>\n<input type=\"text\" name=\"uname\" minlength=\"5\" maxlength=\"8\" value=\"a\">\n</form>\n</body>\n</html>\n```",
+    "question": "If a user starts typing \"madcourse\" letter by letter, how will the background colour of the <input> tag change?",
+    "options": {
+      "A": "Red for first four letters typed, turns green from the fifth to the eighth letter, and turns red back again after the ninth letter.",
+      "B": "Red for first five letters, and remain green after that.",
+      "C": "Green for first five letters, turns red till 8th letter and turns green back again after next letter.",
+      "D": "Green for first five letters, and remain red after that."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "A flask application shown below is running locally on http://127.0.0.1:5000\n```python\nfrom flask import Flask, request, session, abort\napp = Flask(__name__)\napp.config['SECRET_KEY'] = \"yekterces\"\n\n@app.route('/login')\ndef log_in():\n    user = request.args['user']\n    role = request.args['role'] if 'role' in request.args else 'general'\n    session['user'], session['role'] = user, role\n    return \"Logged in successfully!\"\n\n@app.route('/home')\ndef land():\n    if 'user' in session:\n        if session['role'] == 'admin':\n            return f\"Welcome {session['user']}\"\n        return abort(401)\n    return abort(404)\n\n@app.route('/logout')\ndef log_out():\n    session.pop('user', None)\n    session.pop('role', None)\n    return \"Logged out sucessfully!\"\n\napp.run(debug=True)\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, What will be the correct sequence of response status codes if the client visits the URLs one by one in the sequence given below?\n1. http://127.0.0.1:5000/home\n2. http://127.0.0.1:5000/login/admin\n3. http://127.0.0.1:5000/login?user=admin\n4. http://127.0.0.1:5000/home\n5. http://127.0.0.1:5000/logout",
+    "options": {
+      "A": "401\n401\n200\n404\n200",
+      "B": "404\n404\n200\n401\n200",
+      "C": "404\n200\n200\n200\n200",
+      "D": "404\n200\n404\n200\n200"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following two code snippets.\nSnippet 1\n```python\n@app.route(\"/base\")\n@app.route(\"/home\")\ndef homepage():\n    return \"Welcome to MAD I!\"\n```\nSnippet 2\n```python\n@app.route(\"/mad1\")\ndef homepage():\n    return \"Welcome to MAD I!\"\n\n@app.route(\"/mad2\")\ndef homepage():\n    return \"Welcome to MAD II!\"\n```",
+    "question": "Which of the following is/are correct options if the above snippets are run as view functions of a flask application?",
+    "options": {
+      "A": "Snippet 1 is valid, but Snippet 2 is invalid.",
+      "B": "Snippet 2 is valid, but Snippet 1 is invalid.",
+      "C": "Snippet 1 will run successfully, while Snippet 2 will raise an AssertionError.",
+      "D": "Snippet 2 will run successfully, while Snippet 1 will raise an AssertionError."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n```python\n# app.py\nfrom flask import Flask, render_template, url_for, request, redirect\napp = Flask(__name__)\nlist_of_courses = ['Java', 'Python', 'DBMS', 'PDSA']\n\n@app.route(\"/if\")\ndef if_loop():\n    name = request.args.get(\"name\")\n    if name == \"MADI\":\n        return redirect(\"/home\")\n    elif name in list_of_courses:\n        return url_for(\"for_loop\")\n    return \"You are not authorized to view this page\"\n\n@app.route(\"/home\")\ndef home_page():\n    return \"Welcome to MADI!\"\n\n@app.route(\"/for\")\ndef for_loop():\n    return render_template(\"for_course.html\", courses=list_of_courses)\n\napp.run(debug=True)\n```",
+    "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+    "options": {
+      "A": "For URL, http://127.0.0.1:5000/if?name=MADI browser will display, /home as output.",
+      "B": "For URL, http://127.0.0.1:5000/if?name=Java browser will render, for_course.html",
+      "C": "For URL http://127.0.0.1:5000/if browser will display, You are not authorized to view this page as output.",
+      "D": "For URL http://127.0.0.1:5000/if?name=Python browser will display, /for as output."
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Which of the following statement is/are correct?",
+    "options": {
+      "A": "One order must have exactly one customer associated with it.",
+      "B": "One customer must have many orders associated with it.",
+      "C": "One customer may have zero or many orders associated with it.",
+      "D": "It's not mandatory for a customer to have an order."
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759081193/sept2023-3_uz1ojr.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Which of the following SQL commands will change the state of the database server?",
+    "options": {
+      "A": "CREATE TABLE Student (ID int NOT NULL, Name varchar(255) NOT NULL, Age int, Marks int, Courses varchar(255), PRIMARY KEY (ID));",
+      "B": "SELECT * from Student;",
+      "C": "UPDATE Student SET Name = 'Kavya', Age=20 WHERE ID=109;",
+      "D": "SELECT Name, Courses from Student where Marks>60;"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759081193/sept2023-4_j1yyph.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\n```python\nfrom string import Template\nstatement = Template(\"the $var1 boxing $var2 jump $var3\")\nout = statement.substitute(var_dict)\nprint(out)\n```",
+    "question": "Which of the following options correctly represent(s) the dictionary var_dict, such that the code does not throw any error when run in the terminal?",
+    "options": {
+      "A": "var_dict = {'var1': 'five', 'var2': 'wizards'}",
+      "B": "var_dict = {'var1': 'five', 'var2': 'wizards', 'var3': 'quickly'}",
+      "C": "var_dict = {'var1': 'five', 'var2': 'wizards', 'var3': 'quickly', 'var4': 'away'}",
+      "D": "None of these"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "An HTML code is given below then which of the following CSS code will render the output as shown below.",
+    "question": "Select the CSS code (for style.css) that will render the output as shown.",
+    "options": {
+      "A": "body{background-color: skyblue !important;}\n#id{color: blue;}\n.one{color: yellow;}\n.two{color: red;}\n.three{color: green;}",
+      "B": "body{background-color: skyblue;}\n#id{color: red;}\n.one{color: yellow;}\n.two{color: blue;}\n.three{color: green;}",
+      "C": "body{background-color: skyblue !important;}\n#id{color: red;}\n.one{color: blue;}\n.two{color: yellow;}\n.three{color: green;}",
+      "D": "body{background-color: skyblue;}\n#id{color: blue;}\n.one{color: yellow;}\n.two{color: red;}"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759081193/sept2023-5_j0cywd.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the following python code snippet and choose the correct option.\n```python\ndef modify(func):\n    def wrapper(x):\n        new_list = func(x, [])\n        return new_list\n    return wrapper\n\n@modify\ndef expandList(x, a_list=[]):\n    a_list.append(x)\n    return a_list\n\nprint(expandList(5))\nprint(expandList(6))\n```",
+    "question": "Choose the correct statements about the execution of the provided code.",
+    "options": {
+      "A": "If @modify is commented and the updated code is run on the terminal, the output will be;\n[5]\n[6]",
+      "B": "If @modify is commented and the updated code is run on the terminal, the output will be;\n[5]\n[5, 6]",
+      "C": "If the code is run on the terminal directly, the output on the terminal will be;\n[5]\n[6]",
+      "D": "If the code is run on the terminal directly, the output on the terminal will be;\n[5]\n[5, 6]"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n```python\nfrom flask import Flask, abort\napp = Flask(__name__)\nmodules = ['python', 'react', 'node']\n\n@app.route('/home/modules/')\ndef all_modules():\n    return f\"<h3>List of modules: {modules}</h3>\"\n\n@app.route('/get/<string:module_1>')\ndef get_module(module_1):\n    if module_1 in modules:\n        return f\"<h3>One module found: {module_1}.</h3>\"\n    else:\n        abort(400)\n\n@app.errorhandler(400)\ndef module_error_400(error):\n    return \"<h3>Cannot find module</h3>\"\n\n@app.errorhandler(404)\ndef module_error_404(error):\n    return \"<h3>Incorrect Path</h3>\"\n\napp.run(debug=True)\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, select the correct statement(s).",
+    "options": {
+      "A": "For the URL, http://127.0.0.1:5000/home/modules, the browser will render;\nList of modules: ['python', 'react', 'node']",
+      "B": "For the URL, http://127.0.0.1:5000/home/modules, the browser will render;\nIncorrect Path",
+      "C": "For the URL, http://127.0.0.1:5000/get/react, the browser will render;\nOne module found: react.",
+      "D": "For the URL, http://127.0.0.1:5000/get/vuejs, the browser will render;\nCannot find module"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Given below is a part of the HTTP response upon running the command:\n`curl --head https://www.httpbin.org/`\n\nHTTP response\n```\nHTTP/2 200\ndate: Fri, 02 Dec 2022 16:38:16 GMT\ncontent-type: text/html; charset=utf-8\ncontent-length: 9593\nserver: gunicorn/19.9.0\naccess-control-allow-origin: *\naccess-control-allow-credentials: true\n```\nBased on the above data, answer the given subquestions.",
+    "question": "Which part of the response indicates the MIME type of the response body?",
+    "options": {
+      "A": "charset=utf-8",
+      "B": "server: gunicorn/19.9.0",
+      "C": "content-type: text/html;",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Given below is a part of the HTTP response upon running the command: `curl --head https://www.httpbin.org/`\nHTTP response\n```\nHTTP/2 200\ndate: Fri, 02 Dec 2022 16:38:16 GMT\ncontent-type: text/html; charset=utf-8\ncontent-length: 9593\nserver: gunicorn/19.9.0\naccess-control-allow-origin: *\naccess-control-allow-credentials: true\n```\nBased on the above data, answer the given subquestions.",
+    "question": "Which part of the response indicates that the request created a successful response?",
+    "options": {
+      "A": "server: gunicorn/19.9.0",
+      "B": "content-type: text/html;",
+      "C": "HTTP/2 200",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A machine client M makes multiple requests to three different servers A, B and C in the order A then B followed by C. However, it can make a request to server B only after receiving the response from server A and same with server C i.e. the client can make a request to server C only after receiving response from server B. If the servers A, B and C are located at 900 kms, 1200 kms and 1500 kms respectively, answer the given subquestions.\n[Consider speed of light in air to be 3 × 10⁸ m/s]",
+    "question": "What is the maximum number of requests that can be made to A per second?",
+    "options": {
+      "A": "166",
+      "B": "42",
+      "C": "56",
+      "D": "111"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A machine client M makes multiple requests to three different servers A, B and C in the order A then B followed by C. However, it can make a request to server B only after receiving the response from server A and same with server C i.e. the client can make a request to server C only after receiving response from server B. If the servers A, B and C are located at 900 kms, 1200 kms and 1500 kms respectively, answer the given subquestions.\n[Consider speed of light in air to be 3 × 10⁸ m/s]",
+    "question": "What is the round trip time (RTT) in milliseconds for server C?",
+    "options": {
+      "A": "24",
+      "B": "12",
+      "C": "10",
+      "D": "5"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\n\n```python\nfrom string import Template as makeTemplate\nfrom jinja2 import Template\nimport sys\n# Assuming 'var = sys.argv[1]' was intended due to syntax error in the source.\nvar = sys.argv[1] \ndata = {\"var1\": \"Data scientist\", \"var2\": \"programming\", \"var3\": \"statistical\", \"var4\": \"insights\"}\ntemp = \"{{var1}} creates $var2 code with $var3 knowledge to create {{var4}}.\"\nif var == \"1\":\n  temp = makeTemplate(temp)\n  output = temp.substitute(data)\n  print(output)\nelse:\n  temp = Template(temp)\n  output = temp.render(data)\n  print(output)\n```",
+    "question": "What will be printed on the terminal for the command `python app.py 12`?",
+    "options": {
+      "A": "{{var1}} creates programming code with statistical knowledge to create {{var4}}.",
+      "B": "{{var1}} creates $var2 code with $var3 knowledge to create {{var4}}.",
+      "C": "Data scientist creates programming code with statistical knowledge to create insights.",
+      "D": "Data scientist creates $var2 code with $var3 knowledge to create insights."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application running locally on http://127.0.0.1:5000.\n\n```python\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route('/home/<string:url>')\ndef get_url_str(url):\n  return \"string \"+url\n\n@app.route('/home/<path:url>')\ndef get_url_pth(url):\n  return \"path \"+url\n\napp.run(debug = True)\n```",
+    "question": "Which of the following URLs will throw a 404 Not Found error?",
+    "options": {
+      "A": "http://127.0.0.1:5000/home/modules",
+      "B": "http://127.0.0.1:5000/modules/chapters/one",
+      "C": "http://127.0.0.1:5000/home/library/modules/chapters/one",
+      "D": "None"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following view function.\n\n```python\nfrom flask import Flask, request\napp = Flask(__name__)\n\n@app.route('/student', methods = ['GET', 'POST'])\ndef show_details():\n  cred = request.args\n  details = {\n    'Stream': cred['dept'],\n    'Roll': cred['roll'],\n    'Course': cred['course']\n  }\n  return details\n\napp.run()\n```",
+    "question": "If this flask app is running locally on http://127.0.0.1:5000, which of the following URLs will be handled by the controller correctly?",
+    "options": {
+      "A": "http://127.0.0.1:5000/student?dept=data_science&roll=cs1001&course=cs2003",
+      "B": "http://127.0.0.1:5000/student?dept=data_science&course=cs2003",
+      "C": "http://127.0.0.1:5000/data_science/cs1001/cs2003",
+      "D": "http://127.0.0.1:5000/student/data_science/cs1001/cs2003"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following is not a frontend framework?",
+    "options": {
+      "A": "Vue JS",
+      "B": "React JS",
+      "C": "Node JS",
+      "D": "Angular JS"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Consider the following statements and select the correct option:\nStatement 1: In a database, an index can only be created on one column of a table.\nStatement 2: Indexes cannot be created on columns which have duplicate values.",
+    "options": {
+      "A": "Statement 1 is true & statement 2 is false",
+      "B": "Statement 2 is true & statement 1 is false",
+      "C": "Both statements 1 and 2 are true",
+      "D": "Both statements 1 and 2 are false"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759082408/Jan2024-1_utd9tg.png",
+    "question": "Match the type of service approaches from column A to their correct examples in column B.",
+    "options": {
+      "A": "a-2, b-3, c-1",
+      "B": "a-2, b-1, c-3",
+      "C": "a-1, b-2, c-3",
+      "D": "a-1, b-3, c-2"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Databases & ORM",
+    "context": "In the code snippet given below, what should come in place of code 1 and code 2 such that one book can have multiple sections and the converse does not hold true?\n\n```python\nfrom sqlalchemy import ForeignKey\nfrom sqlalchemy import Integer, Column\nfrom sqlalchemy.orm import DeclarativeBase\nfrom sqlalchemy.orm import relationship\n\nclass Base(DeclarativeBase):\n  pass\n\nclass Section(Base):\n  __tablename__ = \"section_table\"\n  id = Column(Integer, primary_key=True)\n  # write your code 1 here\n\nclass Book(Base):\n  __tablename__ = \"book_table\"\n  id = Column(Integer, primary_key=True)\n  # write your code 2 here\n```",
+    "question": "What should come in place of code 1 and code 2?",
+    "options": {
+      "A": "code 1: `book_id=Column(Integer, ForeignKey(\"book_table.id\"))`\ncode 2: `books = relationship(\"Section\")`",
+      "B": "code 1: `books = relationship(\"Section\")`\ncode 2: `section_id=Column(Integer, ForeignKey(\"book_table.id\"))`",
+      "C": "code 1: `book_id=Column(Integer, ForeignKey(\"book_table.id\"))`\ncode 2: `sections = relationship(\"Book\")`",
+      "D": "code 1: `books = relationship(\"Book\")`\ncode 2: `section_id=Column(Integer, ForeignKey(\"section_table.id\"))`"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask app and Jinja2 template.\n\napp.py\n```python\nfrom flask import Flask, render_template\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n  return render_template(\"index.html\", data=['Harry', 'Karl', 'John', 'Jason', 'Ros'])\n\napp.run()\n```\n\nindex.html\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>Macro</title>\n</head>\n<body>\n  {% macro unordered_list(items) %}\n    <ul>\n      {% for item in items %}\n        {% if item|length >= 5 %}\n          <li>{{item}}</li>\n        {% endif %}\n      {% endfor %}\n    </ul>\n  {% endmacro %}\n  {{ unordered_list(data) }}\n</body>\n</html>\n```",
+    "question": "If the flask app is running locally on http://127.0.0.1:5000, what will be the output on the browser for the base URL?",
+    "options": {
+      "A": "• Harry\n• Karl\n• John\n• Jason\n• Ros",
+      "B": "•Harry\n• Jason",
+      "C": "•Karl\n• John\n• Ros",
+      "D": "•Karl\n• John"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759082409/Jan2024-2_cgmycp.png",
+    "question": "Which of the following is the correct matching?",
+    "options": {
+      "A": "A→1, B→2, C→3, D→4",
+      "B": "A→4, B→3, C→2, D→1",
+      "C": "A→4, B→1, C→2, D→3",
+      "D": "A→3, B→2, C→1, D→4"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n\n```python\nfrom flask import Flask, render_template, request\napp = Flask(__name__)\n\n@app.route('/')\ndef square():\n  val = request.args\n  if not val.get('num'):\n      return \"<h1>Enter a valid number</h1>\"\n  if val['num'].isalpha():\n    return \"<h1>Invalid number</h1>\"\n  else:\n    # Assuming a typo in the source, this code performs string multiplication.\n    out = int(val['num']) * val['num']\n    return f'<h1>{out}</h1>'\n\nif __name__ == \"__main__\":\n  app.run(debug=True)\n```",
+    "question": "If this flask app is running locally on http://localhost:5000, what is the output for the URL `http://localhost:5000/?num=4`?",
+    "options": {
+      "A": "4",
+      "B": "44",
+      "C": "ValueError",
+      "D": "4444"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the following Python code snippet.\n\nlog.py\n```python\nimport logging\nimport sys\nlogging.basicConfig(level=logging.WARNING, format='%(asctime)s %(levelname)s %(message)s')\n\ndef check_val(value):\n  if value < 0:\n    raise ValueError(\"Invalid value: Please enter a positive value.\")\n  else:\n    logging.info(\"Value added: %s\", value)\n\ntry:\n  input_value = int(sys.argv[1])\n  check_val(input_value)\nexcept ValueError as ve:\n  logging.exception(\"Exception occurred: %s\", str(ve))\n```",
+    "question": "What will be the output on the terminal for the command: `python log.py -12`?",
+    "options": {
+      "A": "A timestamped INFO level log message: 'Value added: -12'",
+      "B": "A timestamped WARNING level log message: 'Value added: -12'",
+      "C": "A timestamped ERROR level log message and a traceback for the ValueError.",
+      "D": "None"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "The lens of an HDD can read data on the rotating disk with the speed of 42,000 bits per second. The disk is designed such that 600 bits pass under the lens for every revolution of the disk, what should be the maximum speed of disk in RPM so that the lens does not miss any data?",
+    "options": {
+      "A": "70 RPM",
+      "B": "100 RPM",
+      "C": "4200 RPM",
+      "D": "6000 RPM"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following python code snippet.\n\n```python\nfrom string import Template\nstatement = \"The $animal jumped over the $obstacle.\"\ntemp = Template(statement)\n# === OUTPUT === is replaced by one of the options\n```",
+    "question": "Which of the following statements, when substituted in place of `# === OUTPUT ===`, will throw a KeyError?",
+    "options": {
+      "A": "temp.substitute({\"animal\": \"cat\"})",
+      "B": "temp.safe_substitute({\"animal\": \"dog\", \"obstacle\": \"fence\"})",
+      "C": "temp.safe_substitute({\"animal\": \"rabbit\"})",
+      "D": "temp.safe_substitute({\"obstacle\": \"wall\", \"place\": \"park town\"})"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "What will be the output of the following Python code?\n\n```python\nfrom jinja2 import Template\nmy_statement = Template(\"The special series is: {% for n in range(1,15) %}{{n//3}}{% endfor %}\")\nout = my_statement.render()\nprint(out)\n```",
+    "options": {
+      "A": "The special series is: 000111222333444",
+      "B": "The special series is: 12012012012012",
+      "C": "The special series is: 00111222333444",
+      "D": "The special series is: 0.33 0.67 1.0 1.33 1.67 2.0 2.33 2.67 3.0 3.33 3.67 4.0 4.33 4.67"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "Consider that there are two HTML files.\ni) index.html - Home page of the application\nii) login.html - Login page of the application",
+    "question": "Which of the following code will navigate the user between index.html and login.html, and vice versa?",
+    "options": {
+      "A": "\n<a src=\"index.html\">Signin</a>\n\n<a src=\"login.html\">Home</a>",
+      "B": "\n<a href=\"index.html\">Signin</a>\n\n<a href=\"login.html\">Home</a>",
+      "C": "\n<a src=\"login.html\">Signin</a>\n\n<a src=\"index.html\">Home</a>",
+      "D": "\n<a href=\"login.html\">Signin</a>\n\n<a href=\"index.html\">Home</a>"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "In an OpenAPI documentation, which field contains all the endpoints (routes) of the API?",
+    "options": {
+      "A": "paths",
+      "B": "schema",
+      "C": "info",
+      "D": "responses"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Databases & ORM",
+    "context": "Consider the below two data models Author and Book using SQLite database.\n\n```python\nclass Author(db.Model):\n  id = db.Column(db.Integer, primary_key=True)\n  name = db.Column(db.String)\n  dob = db.Column(db.String)\n\nclass Book(db.Model):\n  id = db.Column(db.Integer(), primary_key=True)\n  title = db.Column(db.String())\n  publisher = db.Column(db.String())\n  written_by = db.Column(db.Integer(), db.ForeignKey(\"author.id\"), unique=True)\n```",
+    "question": "What kind of relationship exists between Author and Book classes?",
+    "options": {
+      "A": "One Book to one Author relationship",
+      "B": "One Author to many Books relationship",
+      "C": "Many Authors to one Book relationship",
+      "D": "Many Books to many Author relationship"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider a function func, and a set of test cases given below.\n\nFilename: test_file.py\n```python\nimport pytest\ndef func(x, y):\n  out = x**2 + y**2\n  return out\n\nclass Test_class():\n  def test_case1(self):\n    assert func(1, 2) == 5\n  def case_test2(self):\n    assert func(2, 3) == 13\n  def case_test3(self):\n    assert func(6, 2) == 38 # This will fail, 6*6+2*2 = 40\n\nclass Test_class_2(): # Class name corrected for uniqueness\n  def test_case1(self):\n    assert func(5, 2) == 29\n  def case_test2(self):\n    assert func(1, 1) == 2\n```",
+    "question": "What will be the output on the terminal for the command below?\n\n`pytest test_file.py -k Test_class`",
+    "options": {
+      "A": "== 1 failed, 4 passed in 0.17s ===",
+      "B": "== 2 passed, 3 deselected in 0.17s ===",
+      "C": "== 2 passed in 0.07s ===",
+      "D": "== 3 failed, 2 passed in 0.17s ==="
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759082429/Minimalist_Black_and_White_Blank_Paper_Document_6_wvpowp.png",
+    "context": null,
+    "question": "Consider the following python code snippet app.py, the html files, base.html and home.html residing in \"templates\" folder.",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the below Flask Restful API code snippet:\n\napp.py\n```python\nfrom flask import Flask, request\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\ndata_info = [\n  {\"name\": \"IITM\", \"mail\": \"abc@study.iitm.ac.in\"}\n]\n\nclass Data(Resource):\n  def get(self):\n    return data_info\n  def post(self):\n    name = request.json[\"name\"]\n    mail = request.json[\"mail\"]\n    data = {}\n    data[\"name\"] = name\n    data[\"mail\"] = mail\n    data_info.append(data)\n    return \"Saved data\", 200\n\napi.add_resource(Data, \"/\")\n\nif __name__ == \"__main__\":\n  app.run()\n```\nAssume that above app.py is running on http://127.0.0.1:5000/",
+    "question": "What will be the outputs of the below sequence of cURL commands?\n\ni) `curl -X POST -H \"Content-Type: application/json\" -d '{\"name\":\"Javed\",\"mail\":\"javed@study.iitm.ac.in\"}' \"http://127.0.0.1:5000/\"`\n\nii) `curl -X GET \"http://127.0.0.1:5000\"`",
+    "options": {
+      "A": "i) \"Saved data\"\nii) `[{\"name\": \"IITM\", \"mail\": \"abc@study.iitm.ac.in\"}, {\"name\": \"Javed\", \"mail\": \"javed@study.iitm.ac.in\"}]`",
+      "B": "i) `[{\"name\": \"IITM\", \"mail\": \"abc@study.iitm.ac.in\"}, {\"name\": \"Javed\", \"mail\": \"javed@study.iitm.ac.in\"}]`\nii) \"Saved data\"",
+      "C": "i) `[{\"name\": \"Javed\", \"mail\": \"javed@study.iitm.ac.in\"}]`\nii) `[{\"name\": \"IITM\", \"mail\": \"abc@study.iitm.ac.in\"}]`",
+      "D": "i) `[{\"name\": \"IITM\", \"mail\": \"abc@study.iitm.ac.in\"}]`\nii) `[{\"name\": \"Javed\", \"mail\": \"javed@study.iitm.ac.in\"}]`"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following graph that represents the variation in bandwidth of a network for an entire day (24 hours). Three users were connected to the network at three different times of the day.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759082409/Jan2024-3_evf1be.png",
+    "question": "What is the total data consumed in GigaBytes by all the users in 24 hrs?",
+    "options": {
+      "A": "633.6 GB",
+      "B": "54 GB",
+      "C": "120 GB",
+      "D": "432 GB"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759082435/Minimalist_Black_and_White_Blank_Paper_Document_7_zlyjit.png",
+    "context": null,
+    "question": "An HTML code and CSS code is given below. Which of the following correctly represents its rendered output?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the below two python files code snippets app.py and test_app_route.py.\n\napp.py\n```python\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route(\"/greet/<string:name>\")\ndef home(name):\n  return \"Hello, \" + name\n\nif __name__ == \"__main__\":\n  app.run()\n```\n\ntest_app_route.py:\n```python\nimport pytest, requests\n\n@pytest.fixture\ndef get_response():\n  resp = requests.get(\"[http://127.0.0.1:5000/greet/IITM](http://127.0.0.1:5000/greet/IITM)\")\n  return resp\n\ndef test_response(get_response):\n  assert get_response.text == \"Hello, IITM\"\n```\n\nAssume that app.py and test_app_route.py are running on two different terminals. And also all required modules are installed.",
+    "question": "Which of the below statement(s) are True?\n\ni) Executing the command `pytest test_app_route.py` on the terminal returns `1 passed`.\nii) Executing the command `pytest test_app_route.py` on the terminal returns `1 failed`.\niii) Executing the command `pytest test_app_route.py` on the terminal returns `1 selected, 1 passed`.\niv) Executing the command `pytest test_app_route.py` on the terminal returns `1 deselected`.",
+    "options": {
+      "A": "Only statement i is correct",
+      "B": "Only statement ii is correct",
+      "C": "Statements i and iii are correct",
+      "D": "Statements ii and iv are correct"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which of the following is true about the term \"stateful\" in the client-server model?",
+    "options": {
+      "A": "The server responds to the client based on the previous state.",
+      "B": "The server uses FTP protocol to respond to the client's request.",
+      "C": "Network performance may reduce because of the large amount of data sent out repetitively.",
+      "D": "Server is not required to maintain any state of client or session during transactions between client and server."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Databases & ORM",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759082409/Jan2024-4_qxahkb.png",
+    "question": "What can be inferred from the Entity-Relationship Diagram?",
+    "options": {
+      "A": "An employee can exist without having any salary slips",
+      "B": "A salary slip can exist without belonging to any employee",
+      "C": "An employee needs to have at least one salary slip",
+      "D": "A salary slip must belong to one and only one employee"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "What is the name of the branch that we start with when we create a new git repository?",
+    "options": {
+      "A": "main",
+      "B": "master",
+      "C": "develop",
+      "D": "feature"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the statements are true?",
+    "options": {
+      "A": "HTML5 is based on SGML",
+      "B": "XHTML is based on XML which in turn is based on SGML",
+      "C": "HTML5 is not backwards compatible with older versions of HTML",
+      "D": "XML is both human and machine readable"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider a client 'C' and a server 'S', separated by distance 'D' are connected by a fictitious medium in which the speed of light is 'v' m/sec. If 'N' is the number of consecutive requests that can be made in a second by the client 'C' (i.e A new request can be made only after receiving the response from the previous request.).",
+    "question": "Which of the following changes would halve the number 'N'?",
+    "options": {
+      "A": "A change of medium where the speed of light is v/2 m/sec.",
+      "B": "A change of medium where the speed of light is 2v m/sec.",
+      "C": "Reduce the distance between C and S from D to D/2.",
+      "D": "Increase the distance between C and S from D to 2D."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask app. Given that test_request_context() allows text to be printed on the terminal, which of the following statements is/are correct?\n\n```python\nfrom flask import Flask, url_for\napp = Flask(__name__)\n\n@app.route('/library')\ndef home():\n  return 'Select your course!'\n\n@app.route('/student/<username>/<roll>')\ndef dashboard(username, roll):\n  return f'{username}\\'s dashboard'\n\nwith app.test_request_context():\n  #== print statement ==#\n```",
+    "question": "Which of the following statements is/are correct?",
+    "options": {
+      "A": "If `#== print statement ==#` is replaced by: `print(url_for('home', user=\"mad1_cs2003\"))`, the output on the terminal will be; `/library/mad1_cs2003`.",
+      "B": "If `#== print statement ==#` is replaced by: `print(url_for('home', user=\"mad1_cs2003\"))`, the output on the terminal will be; `/library?user=mad1_cs2003`.",
+      "C": "If `#== print statement ==#` is replaced by: `print(url_for('dashboard', username=\"mad1\", roll=\"cs2003\", term=\"jan 2024\"))`, the output on the terminal will be; `/student/mad1/cs2003/jan2024`.",
+      "D": "If `#== print statement ==#` is replaced by: `print(url_for('dashboard', username=\"mad1\", roll=\"cs2003\", term=\"jan 2024\"))`, the output on the terminal will be; `/student/mad1/cs2003?term=jan%202024`."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the following function to be tested and test functions given in the Python code snippet below.\n\ntest_file.py\n```python\nimport pytest\n\ndef square(x):\n  sum = 0\n  for counter in range(x):\n    sum += x\n  return sum\n\n@pytest.mark.marker1\ndef testcase_1():\n  assert square(10) == 100\n\n@pytest.mark.marker2\ndef testcase_2():\n  assert square(4) == 4 # Fails, square(4) is 16\n\n@pytest.mark.marker3\ndef testcase_3():\n  assert square(5) == 25\n\n@pytest.mark.marker4\ndef testcase_4():\n  assert square(6) == 6 # Fails, square(6) is 36\n```\nOn running this file on the terminal using pytest, the summary of the output is;\n`========= 1 passed, 3 deselected, 4 warnings in 0.04s =========`",
+    "question": "What command will result into the outcome given above?",
+    "options": {
+      "A": "pytest test_file.py -m marker4",
+      "B": "pytest test_file.py -m marker1",
+      "C": "pytest test_file.py -m marker2",
+      "D": "pytest test_file.py -m marker3"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\n\nfile.py\n```python\nimport sys\ncourses = {\n  1: \"App Dev I\",\n  2: \"App Dev II\",\n  3: \"App Dev III\",\n  4: \"DevOps\"\n}\nif courses[int(sys.argv[1])] == \"App Dev III\":\n  i = 1\n  while i <= int(sys.argv[1]):\n    print(\"course found\", courses[i])\n    i += 1\nelse:\n  print(\"No course found!\")\n```",
+    "question": "What will be output on the terminal for the command `python file.py 4`?",
+    "options": {
+      "A": "course found App Dev I\ncourse found App Dev II\ncourse found App Dev III\ncourse found DevOps",
+      "B": "course found App Dev I\ncourse found App Dev II\ncourse found App Dev III",
+      "C": "No course found!",
+      "D": "IndexError: list index out of range"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\n\nfile.py\n```python\nimport sys\ncourses = {\n  1: \"App Dev I\",\n  2: \"App Dev II\",\n  3: \"App Dev III\",\n  4: \"DevOps\"\n}\nif courses[int(sys.argv[1])] == \"App Dev III\":\n  i = 1\n  while i <= int(sys.argv[1]):\n    print(\"course found\", courses[i])\n    i += 1\nelse:\n  print(\"No course found!\")\n```",
+    "question": "What will be output on the terminal for the command `python file.py 1`?",
+    "options": {
+      "A": "No course found!",
+      "B": "course found App Dev I",
+      "C": "course found App Dev I\ncourse found App Dev II\ncourse found App Dev III\ncourse found DevOps",
+      "D": "IndexError: list index out of range"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Python code snippet.",
+    "options": {
+      "A": "a-4, b-1, c-6",
+      "B": "a-5, b-3, c-6",
+      "C": "a-5, b-1, c-2",
+      "D": "a-5, b-3, c-2"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759084208/sept2024-1_ml4pk7.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Consider the following HTML document.",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759084193/Minimalist_Black_and_White_Blank_Paper_Document_8_cxxwam.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following flask application.",
+    "options": {
+      "A": "1-c, 2-a, 3-b",
+      "B": "1-c, 2-a, 3-d",
+      "C": "1-c, 2-e, 3-d",
+      "D": "1-c, 2-a, 3-e"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759084208/sept2024-2_iodrue.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Which of the following flask view functions will return a 200 OK for the URL: http://127.0.0.1:5000/details/1001/Michael ?",
+    "options": {
+      "A": "```python\n@app.route('/details/<int:id>/<string:name>')\ndef show(id, name):\n    details = {'student_id': id, 'student_name': name}\n    return details\n```",
+      "B": "```python\n@app.route('/details/<string:id>/<string:name>')\ndef show(id, name):\n    details = {'student_id': id, 'student_name': name}\n    return details\n```",
+      "C": "```python\n@app.route('/details/<id>/<name>')\ndef show(id, name):\n    details = {'student_id': id, 'student_name': name}\n    return details\n```",
+      "D": "All of these"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider a function func, and a set of test cases given below.\n\n**Filename: test_file.py**\n```python\nimport pytest\ndef func(x,y):\n    out = x**2 + y**2\n    return out\n\nclass Test_class():\n    def test_case1(self):\n        assert func(1,2) == 5\n    def case_test2(self):\n        assert func(2,3) == 13\n    def case_test3(self):\n        assert func(6,2) == 38\n\nclass Test_class():\n    def test_case1(self):\n        assert func(5,2) == 29\n    def case_test2(self):\n        assert func(1,1) == 2\n```",
+    "question": "What will be the output on the terminal for the command below?\n`pytest test_file.py -k Test_class`",
+    "options": {
+      "A": "== 1 failed, 4 passed in 0.17s ===",
+      "B": "== 2 passed, 3 deselected in 0.17s ===",
+      "C": "== 2 passed in 0.07s ===",
+      "D": "== 3 failed, 2 passed in 0.17s ==="
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "The lens of an HDD can read data on the rotating disk with the speed of 42,000 bits per second. The disk is designed such that 600 bits pass under the lens for every revolution of the disk, what should be the maximum speed of disk in RPM so that the lens does not miss any data?",
+    "options": {
+      "A": "70 RPM",
+      "B": "100 RPM",
+      "C": "4200 RPM",
+      "D": "6000 RPM"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the below two python files code snippets app.py and test_app_route.py.\n\n**app.py**\n```python\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route(\"/greet/<string:name>\")\ndef home(name):\n    return \"Hello, \" + name\n\nif __name__ == \"__main__\":\n    app.run()\n```\n\n**test_app_route.py**\n```python\nimport pytest, requests\n\n@pytest.fixture\ndef get_response():\n    resp = requests.get(\"[http://127.0.0.1:5000/greet/IITM](http://127.0.0.1:5000/greet/IITM)\")\n    return resp\n\ndef test_response(get_response):\n    assert get_response.text == \"Hello, IITM\"\n```\nAssume that app.py and test_app_route.py are running on two different terminals. And also all required modules are installed.",
+    "question": "Which of the below statement(s) are True?\ni) Executing the command pytest test_app_route.py on the terminal returns\n=========== 1 passed ===========\nii) Executing the command pytest test_app_route.py on the terminal returns\n============ 1 failed ============\niii) Executing the command pytest test_app_route.py on the terminal returns\n============ 1 selected, 1 passed ============\niv) Executing the command pytest test_app_route.py on the terminal returns\n============ 1 deselected ============",
+    "options": {
+      "A": "Only statement i is correct",
+      "B": "Only statement ii is correct",
+      "C": "Statements i and iii are correct",
+      "D": "Statements ii and iv are correct"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask resource created using flask_restful.\n```python\nfrom flask import Flask, request\nfrom flask_restful import Api, Resource, reqparse\n\napp = Flask(__name__)\napi = Api(app)\n\nparser = reqparse.RequestParser()\nparser.add_argument(\"val\")\n\nclass RestApi(Resource):\n    def post(self, val):\n        arg1 = parser.parse_args()\n        arg2 = request.args\n        return {\n            \"Course_1\": arg1[\"val\"],\n            \"Course_2\": arg2[\"val\"],\n            \"Course_3\": val\n        }\n\napi.add_resource(RestApi, \"/api/courses/<val>\")\napp.run(debug = True)\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, What will be the output on the terminal for the command:\n`curl http://127.0.0.1:5000/api/courses/DBMS?val=JAVA -d \"{\\\"val\\\":\\\"PDSA\\\"}\" -X POST -H \"Content-Type: application/json\"`",
+    "options": {
+      "A": "{\n    \"Course_1\": \"JAVA\",\n    \"Course_2\": \"PDSA\",\n    \"Course_3\": \"DBMS\"\n}",
+      "B": "{\n    \"Course_1\": \"DBMS\",\n    \"Course_2\": \"JAVA\",\n    \"Course_3\": \"PDSA\"\n}",
+      "C": "{\n    \"Course_1\": \"PDSA\",\n    \"Course_2\": \"JAVA\",\n    \"Course_3\": \"DBMS\"\n}",
+      "D": "{\n    \"Course_1\": \"PDSA\",\n    \"Course_2\": \"DBMS\",\n    \"Course_3\": \"JAVA\"\n}"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A flask application shown below is running locally on http://127.0.0.1:5000.\n```python\nfrom flask import Flask, request, session, abort\napp = Flask(__name__)\napp.config['SECRET_KEY'] = \"yekterces\"\n\n@app.route('/login')\ndef log_in():\n    user = request.args['user']\n    role = request.args['role'] if 'role' in request.args else 'general'\n    session['user'], session['role'] = user, role\n    return \"Logged in successfully!\"\n\n@app.route('/home')\ndef land():\n    if 'user' in session:\n        if session['role'] == 'admin':\n            return f\"Welcome {session['user']}\"\n        return abort(401)\n    return abort(404)\n\n@app.route('/logout')\ndef log_out():\n    session.pop('user', None)\n    session.pop('role', None)\n    return \"Logged out sucessfully!\"\n\napp.run(debug=True)\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, What will be the correct sequence of response status codes if the client visits the URLs one by one in the sequence given below?\n1. http://127.0.0.1:5000/home\n2. http://127.0.0.1:5000/login/admin\n3. http://127.0.0.1:5000/login?user=admin\n4. http://127.0.0.1:5000/home\n5. http://127.0.0.1:5000/logout",
+    "options": {
+      "A": "401\n200\n404\n200\n200",
+      "B": "404\n404\n200\n401\n200",
+      "C": "404\n200\n200\n200\n200",
+      "D": "404\n401\n200\n404\n200"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n\n**Python file: app.py**\n```python\nfrom flask import Flask, render_template, request\napp = Flask(__name__)\nemp = {'admin':'manoj', 'user': 'sumit'}\n\n@app.route('/profile/<user>')\ndef profile(user):\n    access = request.args.get('access')\n    if emp[access] != user:\n        return render_template(\"profile.html\", user=user, access=access, error=True)\n    return render_template(\"profile.html\", user=user, access=access, error=False)\n\napp.run()\n```\n\n**Template file: profile.html**\n```html\n<body>\n<div>\n    {% if error %}\n        <h3>Hi {{user}}, {{access}} access denied</h3>\n    {% else %}\n        <h3>Hi {{user}}, you are logged in as {{access}}.</h3>\n    {% endif %}\n</div>\n</body>\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, then what will be rendered by the browser for URL, http://127.0.0.1:5000/profile/sumit?access=admin?",
+    "options": {
+      "A": "Hi sumit, you are logged in as admin.",
+      "B": "Hi sumit, you are logged in as user.",
+      "C": "Hi sumit, admin access denied.",
+      "D": "Hi sumit, user access denied."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Databases & ORM",
+    "context": "Consider the following models Library and Book corresponding to tables library and book in SQLite database.\n```python\nclass Library(db.Model):\n    id = db.Column(db.Integer(), primary_key = True)\n    name = db.Column(db.String(), unique = True)\n\nclass Book(db.Model):\n    id= db.Column(db.Integer(), primary_key = True)\n    name = db.Column(db.String(), unique = True)\n    library = db.Column(db.Integer(), db.ForeignKey(\"library.id\"))\n```",
+    "question": "Based on the model schemas, what relationship do the classes Library and Book share?",
+    "options": {
+      "A": "Many-to-Many",
+      "B": "One-to-Many",
+      "C": "One-to-One",
+      "D": "The tables are not at all related"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Read the statements given below carefully and select the correct option.\n**Statement 1:** If an element having an ID and a class is styled externally using both its ID and the class, then for the same attribute, it will acquire styling from the latest selector in order.\n**Statement 2:** If an element that belongs to two different classes is styled externally using both the classes, then for the same attribute, it will acquire styling from the latest class in order.",
+    "options": {
+      "A": "Both statements 1 and 2 are correct",
+      "B": "Both statements 1 and 2 are incorrect",
+      "C": "Statement 1 is correct but statement 2 is incorrect",
+      "D": "Statement 2 is correct but statement 1 is incorrect"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following Python code snippet.\n\n**log.py**\n```python\nimport logging\nimport sys\n\nlogging.basicConfig(level=logging.WARNING, \n                    format='%(asctime)s - %(levelname)s - %(message)s')\n\ndef check_val(value):\n    try:\n        if value < 0:\n            raise ValueError(\"Invalid value: Please enter a positive value.\")\n        else:\n            logging.info(\"Value added: %s\", value)\n    except ValueError as ve:\n        logging.exception(\"Exception occurred: %s\", str(ve))\n\ninput_value = int(sys.argv[1])\ncheck_val(input_value)\n```",
+    "question": "What will be the output on the terminal for the command: `python log.py -12`?",
+    "options": {
+      "A": "2023-08-14 21:01:05,684 INFO Value added: 12",
+      "B": "2023-08-14 21:01:05,684 WARNING Value added: -12",
+      "C": "Error: Exception occurred: Invalid value: Please enter a positive value.",
+      "D": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the following graph that represents the variation in bandwidth of a network for an entire day (24 hours).\nThree users were connected to the network at three different times of the day.",
+    "question": "What is the total data consumed in GigaBytes by all the users in 24 hrs?",
+    "options": {
+      "A": "633.6 GB",
+      "B": "54 GB",
+      "C": "120 GB",
+      "D": "432 GB"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759084208/sept2024-3_x8ndfn.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Databases & ORM",
+    "context": "Consider the below flask application.\n```python\nfrom flask_sqlalchemy import SQLAlchemy\nfrom flask import Flask\n\napp = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testdb.sqlite3'\ndb = SQLAlchemy(app)\napp.app_context().push()\n\nclass Material(db.Model):\n    m_id = db.Column('m_id', db.Integer, primary_key=True)\n    name = db.Column('name', db.String(100), unique=True)\n\ndb.create_all()\nmaterial1 = Material(name = 'Steel')\ndb.session.add(material1)\nmaterial2 = Material(name = 'Iron')\nmaterial3 = Material(name = 'Aluminium')\ndb.session.add(material2)\ndb.session.commit()\ndb.session.add(material3)\nall_material = Material.query.all()\nprint([(x.m_id, x.name) for x in all_material])\n```",
+    "question": "If you run the flask application using a terminal. What will be the output in the terminal?",
+    "options": {
+      "A": "[(1, 'Steel'), (2, 'Iron')] will be displayed in the terminal and two records will be added in the \"testdb\" database.",
+      "B": "[(1, 'Steel'), (2, 'Iron'), (3, 'Aluminium')] will be displayed in the terminal and three records will be added in the \"testdb\" database.",
+      "C": "[(1, 'Steel'), (2, 'Iron'), (3, 'Aluminium')] will be displayed in the terminal and two records will be added in the \"testdb\" database.",
+      "D": "[(1, 'Steel', 2, 'Iron', 3, 'Aluminium')] will be displayed in the terminal and two records will be added in the \"testdb\" database."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "[Assume: The speed of light on cable is 1.5 x 10⁸ m/s and in air is 3 x 10⁸ m/s. The client, server and the router lie on a straight line]",
+    "question": "A client machine C is 18000 kms away from the server machine S. A router R is situated somewhere in between the client C and the server S and is connected to client C with cable and makes aerial connection with the server S. What will be the round-trip latency (milliseconds) of the network if the router is placed at exactly midway from the client and the server?",
+    "options": {
+      "A": "45",
+      "B": "90",
+      "C": "180",
+      "D": "270"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask app and Jinja2 template.\n\n**app.py**\n```python\nfrom flask import Flask, render_template\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    return render_template(\"index.html\", data=['Harry', 'Karl', 'John', 'Jason', 'Ros'])\n\napp.run()\n```\n\n**index.html**\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Macro</title>\n</head>\n<body>\n    {% macro unordered_list(items) %}\n    <ul>\n    {% for item in items %}\n        {% if item|length >= 5 %}\n            <li>{{item}}</li>\n        {% endif %}\n    {% endfor %}\n    </ul>\n    {% endmacro %}\n    {{ unordered_list(data) }}\n</body>\n</html>\n```",
+    "question": "If the flask app is running locally on http://127.0.0.1:5000. What will be the output on the browser for the base URL?",
+    "options": {
+      "A": "• Harry\n• Karl\n• John\n• Jason\n• Ros",
+      "B": "• Karl\n• John",
+      "C": "• Harry\n• Jason",
+      "D": "• Karl\n• John\n• Ros"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Which of the following the correct matching?",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-4, B-3, C-2, D-1",
+      "C": "A-4, B-1, C-2, D-3",
+      "D": "A-3, B-2, C-1, D-4"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759084210/sept2024-4_l2fn5s.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1759084192/Minimalist_Black_and_White_Blank_Paper_Document_9_pt1d2u.png",
+    "context": null,
+    "question": "which is the correct option?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "You have a DRAM module with bus width of 64 bits, clock speed of 2 GHz, and operating in DDR (double-data-rate or two values per clock cycle) mode. What is the maximum bandwidth (in Gigabytes per second) of data transfer achievable with this module?",
+    "options": {
+      "A": "16",
+      "B": "8",
+      "C": "32",
+      "D": "128"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "The hexadecimal equivalent of the IPv4 address 172.16.254.10 would be",
+    "options": {
+      "A": "AC0A FE01",
+      "B": "CA10 EFOA",
+      "C": "AC01 0AEF",
+      "D": "AC10 FE0A"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which of the following is true about the term \"stateless\" in the client-server model?",
+    "options": {
+      "A": "The server keeps the state of the client to respond to the required request.",
+      "B": "Server use variant HTTP methods to respond to the client's request.",
+      "C": "Server ready to respond to the client's request without knowing anything about the client.",
+      "D": "Server use the URL to convey context to the client."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet \"code.py\".\n\n**Filename: code.py**\n```python\nimport sys\nfrom jinja2 import Template\n\nvars = sys.argv\ncourse_technologies = {'python': 'backend', 'javascript': 'frontend'}\ntemplate = Template(\"This course focuses on {{ technology }} development.\")\n\nif len(vars) > 2 and vars[2] in course_technologies:\n    course = vars[1]\n    technology = course_technologies[course]\n    print(template.render(technology=technology))\nelse:\n    print(\"Please specify a valid course name!\")\n```",
+    "question": "Which of the following will be the correct command line input to the terminal to get the output: `This course focuses on backend development.`?",
+    "options": {
+      "A": "python code.py course python",
+      "B": "python code.py python javascript",
+      "C": "python code.py python python",
+      "D": "python code.py python backend"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n\n**app.py**\n```python\nfrom flask import Flask, abort, request\napp = Flask(__name__)\ndata = {\"CS2001\":\"DBMS\", \"CS2003\":\"MAD-I\", \"CS2006\":\"MAD-II\"}\n\n@app.route('/login')\ndef login():\n    username = request.args.get('uname')\n    if username not in data:\n        abort(400, \"Bad Request: Invalid Username\")\n    return f'<h1>Welcome to {data[username]} course!</h1>'\n\napp.run(debug=True)\n```",
+    "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+    "options": {
+      "A": "For URL http://127.0.0.1:5000?uname=CS2001 the browser will render Welcome to DBMS course!",
+      "B": "For URL http://127.0.0.1:5000/login the browser will render Welcome to MAD-I course!",
+      "C": "For URL http://127.0.0.1:5000/login?uname the browser will render Bad Request: Invalid Username",
+      "D": "For URL http://127.0.0.1:5000/login?uname=CS2006 the browser will render Welcome to MAD-II course!"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n```python\nfrom flask import Flask, request\napp = Flask(__name__)\n\n@app.route('/home')\ndef home():\n    var_a = request.args.get('method')\n    if var_a == \"GET\":\n        return \"Hello from GET method\"\n    elif var_a == \"POST\":\n        return \"Hello from POST method\"\n    else:\n        return \"Invalid Method\"\n\napp.run(debug=True)\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000 then which of the following statements are correct?",
+    "options": {
+      "A": "The command `curl -X GET http://127.0.0.1:5000/home?method=GET` will give output as `Hello from GET method` on terminal",
+      "B": "The command `curl -X POST http://127.0.0.1:5000/home?method=POST` will give output as `Method Not Allowed` on terminal",
+      "C": "The command `curl -X POST http://127.0.0.1:5000/home?method=POST` will give output as `Hello from POST method` on terminal",
+      "D": "The command `curl -X POST http://127.0.0.1:5000/home?method` will give output as `Invalid Method` on terminal"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Databases & ORM",
+    "context": "Consider the following flask_sqlalchemy data models \"User\" and \"Role\".\n```python\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(), unique=True, nullable=False)\n    password = db.Column(db.String(), nullable=False)\n    email = db.Column(db.String())\n    roles = db.relationship(\"Role\", backref=\"bearer\")\n\nclass Role(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    r_name = db.Column(db.String(), unique=True, nullable=False)\n    user = db.Column(db.Integer, db.ForeignKey(\"user.id\"))\n```\n\n**python shell:**\n```python\n>>>> from app import *\n>>> db.create_all()\n>>>> user1 = User(username=\"Rakesh\", password=\"1234\", email=\"user1@gmail.com\")\n>>> user2 = User(username=\"Suresh\", password=\"123\", email=\"user2@gmail.com\")\n>>> db.session.add_all([user1, user2])\n>>> db.session.commit()\n>>> r1=Role(r_name=\"instructor\", user=1)\n>>> r2=Role(r_name=\"admin\", user=1)\n>>> r3=Role(r_name=\"ops\", user=2)\n>>> r4=Role(r_name=\"student\", user=2)\n>>> db.session.add_all([r1,r2,r3,r4])\n>>> db.session.commit()\n>>>> users = User.query.all()\n>>> roles = Role.query.all()\n```",
+    "question": "If the above commands are run in the python shell then which of the following options is/are correct with respect to these models?",
+    "options": {
+      "A": "Command: >>> users\nOutput: [\"Ramesh\", \"Suresh\"]",
+      "B": "Command: >>> u1 = users[1]\n>>> u1.roles\nOutput: [<Role 3>, <Role 4>]",
+      "C": "Command: >>> roles[2].user\nOutput: [\"Suresh\"]",
+      "D": "Command: >>> roles[3].user\nOutput: 2",
+      "E": "Command: >>> roles[0].bearer\nOutput: <User 1>"
+    },
+    "correctOption": ["B", "D", "E"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Suppose a request `https://xyz.com?name=amey&age=34` generates the below response on the browser's console,\n```\nName: amey\n```\nThe definition of the flask endpoint which handles the above request is given below,\n```python\n@app.route(code1)\ndef getData():\n    data = code2\n    print(\"Name:\", data)\n```",
+    "question": "Which of the following options should be used to fill the placeholders \"code1\" and \"code2\", to achieve the desired result as shown above?",
+    "options": {
+      "A": "Code1: \"/\"\nCode2: request.form['name']",
+      "B": "Code1: \"/\", methods = ['GET']\nCode2: request.form['name']",
+      "C": "Code1: \"/\", methods = ['GET', 'POST']\nCode2: request.args['name']",
+      "D": "Code1: \"/\"\nCode2: request.args.get('name')"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider the following function to be tested and test functions given in the Python code snippet below.\n\n**test_file.py**\n```python\nimport pytest\ndef square(x):\n    sum = 0\n    for counter in range(x):\n        sum += x\n    return sum\n\n@pytest.mark.marker1\ndef testcase_1():\n    assert square(10) == 100\n\n@pytest.mark.marker2\ndef testcase_2():\n    assert square(4) == 4\n\n@pytest.mark.marker3\ndef testcase_3():\n    assert square(5) == 25\n\n@pytest.mark.marker4\ndef testcase_4():\n    assert square(6) == 6\n```",
+    "question": "On running this file on the terminal using pytest, the summary of the output is;\n`========= 1 passed, 3 deselected, 4 warnings in 0.04s =========`\nWhat command will result into the outcome given above?",
+    "options": {
+      "A": "pytest test_file.py -m marker4",
+      "B": "pytest test_file.py -m marker1",
+      "C": "pytest test_file.py -m marker2",
+      "D": "pytest test_file.py -m marker3"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n```python\nfrom flask import Flask, abort\napp = Flask(__name__)\nmodules = ['python', 'react', 'node']\n\n@app.route('/home/modules/')\ndef all_modules():\n    return f\"<h3>List of modules: {modules}</h3>\"\n\n@app.route('/get/<string:module_1>')\ndef get_module(module_1):\n    if module_1 in modules:\n        return f\"<h3>One module found: {module_1}.</h3>\"\n    else:\n        abort(400)\n\n@app.errorhandler(400)\ndef module_error(error):\n    return \"<h3>Cannot find module</h3>\"\n\n@app.errorhandler(404)\ndef module_error(error):\n    return \"<h3>Incorrect Path</h3>\"\n\napp.run(debug=True)\n```",
+    "question": "If the application is running locally on http://127.0.0.1:5000, select the correct statement(s).",
+    "options": {
+      "A": "For the URL, http://127.0.0.1:5000/home/modules, the browser will render;\nList of modules: ['python', 'react', 'node']",
+      "B": "For the URL, http://127.0.0.1:5000/home/modules, the browser will render;\nIncorrect Path",
+      "C": "For the URL, http://127.0.0.1:5000/get/vuejs, the browser will render;\nCannot find module",
+      "D": "For the URL, http://127.0.0.1:5000/get/react/, the browser will render;\nOne module found: react."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Databases & ORM",
+    "context": "Consider the following code snippet.\n```python\n@app.route('/student/<student_id>')\ndef profile(student_id):\n    # CODE BLOCK HERE\n```\nAssume the database has a \"student\" table which has a TEXT column \"student_id\".",
+    "question": "If we want the server to return a 404 status code when a user goes to the route '/student/<student_id>' with a student_id that does not exist in the database, which of the following lines would give us the desired output?",
+    "options": {
+      "A": "student = Student.query.filter_by(student_id=student_id).first()\nif student is None:\n    abort(404)\nreturn render_template('profile.html', student=student)",
+      "B": "student = Student.query.filter_by(student_id=student_id).first()\nif student is None:\n    return render_template(\"404.html\")\nreturn render_template('profile.html', student=student)",
+      "C": "student = Student.query.filter_by(student_id=student_id).first_or_404()\nreturn render_template('profile.html', student=student)",
+      "D": "student = Student.query.filter_by(student_id=student_id).first()\nif student is None:\n    return render_template(\"404.html\"), 404\nreturn render_template('profile.html', student=student)"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application running locally on http://127.0.0.1:5000\n\n**app.py**\n```python\nfrom flask import Flask, request\nimport sys\napp = Flask(__name__)\ndata = [\"Java\", \"Application Development\", \"DBMS\"]\n\n@app.route('/course')\ndef home():\n    course = request.args.get('course')\n    if course in sys.argv[1]:\n        if sys.argv[1] in data:\n            return f\"Welcome to {sys.argv[1]}!\"\n        else:\n            return f\"Welcome to {course}!\"\n    return \"Invalid Data\"\n\napp.run(debug=True)\n```\nBased on the above data, answer the given subquestions.",
+    "question": "What should be the code to run the application, and what should be the URL respectively such that the browser gives output as: `Welcome to Application Development!` ?",
+    "options": {
+      "A": "Code: `python app.py Application Development DBMS`\nURL: http://127.0.0.1:5000/course?course=Application Development",
+      "B": "Code: `python app.py \"Application Development\" Java`\nURL: http://127.0.0.1:5000/course?course=Application",
+      "C": "Code: `python app.py Application Development DBMS`\nURL: http://127.0.0.1:5000/course?course=Application",
+      "D": "Code: `python app.py \"Application Development\" DBMS`\nURL: http://127.0.0.1:5000/course?course=Application Development"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application running locally on http://127.0.0.1:5000\n\n**app.py**\n```python\nfrom flask import Flask, request\nimport sys\napp = Flask(__name__)\ndata = [\"Java\", \"Application Development\", \"DBMS\"]\n\n@app.route('/course')\ndef home():\n    course = request.args.get('course')\n    if course in sys.argv[1]:\n        if sys.argv[1] in data:\n            return f\"Welcome to {sys.argv[1]}!\"\n        else:\n            return f\"Welcome to {course}!\"\n    return \"Invalid Data\"\n\napp.run(debug=True)\n```\nBased on the above data, answer the given subquestions.",
+    "question": "What will be the output given by browser if the application is run with command `python app.py Application Development DBMS` on terminal with URL: http://127.0.0.1:5000/course?course=Application Development ?",
+    "options": {
+      "A": "Welcome to Application Development!",
+      "B": "Welcome to DBMS!",
+      "C": "Invalid Data",
+      "D": "Not Found"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  }
+]
