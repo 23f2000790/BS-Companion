@@ -1,0 +1,1582 @@
+[
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider a simple web server using command prompt.\nFilename - Hello.sh\n```bash\n#!/bin/bash\nwhile true; do\n  echo -e \"Today's date and time is \\n\\t $(date)\" | nc -l localhost 3500;\ndone\n```\nIf this program is executed in one terminal, and it is waiting for a request, then identify the client part that generates the request to this server.",
+    "options": {
+      "A": "Open another terminal and type - curl http://localhost:8080",
+      "B": "Open another terminal and type curl http://localhost:3500",
+      "C": "Type curl http://localhost:3500 in the server running terminal",
+      "D": "Type curl http://localhost:8080 in the server running terminal"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Match the component in column A with its correct feature given in column B.",
+    "options": {
+      "A": "1-a, 2-b, 3-c, 4-d",
+      "B": "1-b, 2-d, 3-a, 4-c",
+      "C": "1-d, 2-c, 3-b, 4-a",
+      "D": "1-c, 2-a, 3-b, 4-d"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200679/jan2023-1_fmkul7.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following is an incorrect way of creating an ordered list in HTML?",
+    "options": {
+      "A": "<ol type = \"1\">\n  <li>programming</li>\n  <li>Data Science</li>\n  <li>Artificial Intelligence</li>\n</ol>",
+      "B": "<ol type = \"a\">\n  <li>programming</li>\n  <li>Data Science</li>\n  <li>Artificial Intelligence</li>\n</ol>",
+      "C": "<ul type = \"i\">\n  <li>programming</li>\n  <li>Data Science</li>\n  <li>Artificial Intelligence</li>\n</ul>",
+      "D": "<ol>\n  <li>programming</li>\n  <li>Data Science</li>\n  <li>Artificial Intelligence</li>\n</ol>"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.",
+    "question": "```python\nfrom jinja2 import Template\nnewlist = ['client', 'server', 'markup', 'api', 'url', 'net']\nthis_template = \"{% for object in data %} \\\n{% if object|length>4 %}{{ object }}{% endif %}{% endfor %}\"\nout = Template(this_template)\nprint(out.render(data = newlist))\n```\nWhat will be the output on the terminal?",
+    "options": {
+      "A": "api url net",
+      "B": "apiurlnet",
+      "C": "client server markup",
+      "D": "clientservermarkup"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": "Consider two python files, home.py and hello.py with following code snippets.",
+    "question": "File1: home.py\n```python\nimport sys\nimport hello\nprint('Hello' + ' ' + sys.argv[1])\n```\nFile2: hello.py\n```python\nimport sys\nprint('Hello' + ' ' + sys.argv[0])\n```\nWhat is the output of the following command \"python home.py hello.py Mithun Sourav\"?",
+    "options": {
+      "A": "Hello home.py\nHello home.py",
+      "B": "Hello hello.py\nHello hello.py",
+      "C": "Hello home.py\nHello hello.py",
+      "D": "Hello Mithun\nHello Sourav"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Which of the following option represents a one-to-many relationship in the Entity-Relationship Diagram?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200679/jan2023-2_v0dr73.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "A text document of size 2000 bytes. Each character in the document are 8 bits ASCII encoding. What is the number of characters in the text document?\n[Note: 8 bits = 1 byte]",
+    "options": {
+      "A": "250",
+      "B": "1000",
+      "C": "2000",
+      "D": "8000"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Ram wants to do the following operations on his bank website through the browser.",
+    "question": "Find the HTTP methods conventionally used for the following operations?\n1. To create a new fixed deposit account\n2. To read his transaction history\n3. To update the account after the transaction of money.\n4. To remove his unused account.",
+    "options": {
+      "A": "1-GET, 2- POST, 3 - PUT, 4 - DELETE",
+      "B": "1-POST, 2- GET, 3-PUT, 4 - PATCH",
+      "C": "1- POST, 2- GET, 3-PUT, 4 - DELETE",
+      "D": "1-PUT, 2- GET, 3 - POST, 4 - DELETE"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "How to represent the number 111₁₀ in the binary format?",
+    "options": {
+      "A": "1110000",
+      "B": "1101111",
+      "C": "1100000",
+      "D": "1111000"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "context": null,
+    "question": "Find the output of the python program for the given command line arguments\nProgram:\n```python\nimport sys\na, b, c = sys.argv[1], sys.argv[2], sys.argv[3]\nprint(b,c)\n```\nExecution with command line arguments:\n`$ python3 cl.py 10 11 12`",
+    "options": {
+      "A": "cl.py 10",
+      "B": "10 11",
+      "C": "11 12",
+      "D": "cl.py 11"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Match the component in column A with its correct feature given in column B.",
+    "options": {
+      "A": "1-a, 2-b, 3-c, 4-d",
+      "B": "1-b, 2-d, 3-a, 4-c",
+      "C": "1-d, 2-c, 3-b, 4-a",
+      "D": "1-c, 2-a, 3-b, 4-d"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200680/jan2023-3_pzdy0y.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Choose the SQL queries that correctly map the view application component of the MVC model based on the given table Student.",
+    "options": {
+      "A": "1,2,3,4",
+      "B": "1,2,3",
+      "C": "1,3",
+      "D": "2,3"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200686/jan2023-4_extpfh.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "Read the statements given below carefully and select the correct option.",
+    "question": "Statement 1: If an element that belongs to two different classes is styled externally using both the classes, then for the same attribute, it will acquire styling from the latest class in order.\nStatement 2: If an element having an ID and a class is styled externally using both its ID and the class, then for the same attribute, it will acquire styling from the latest selector in order.",
+    "options": {
+      "A": "Both statements 1 and 2 are correct",
+      "B": "Both statements 1 and 2 are incorrect",
+      "C": "Statement 1 is correct but statement 2 is incorrect",
+      "D": "Statement 2 is correct but statement 1 is incorrect"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Mark the correct option",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200667/jan2023-mad1_buhnjd.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Which of the following SQL query will return the name of the students who took the \"Bengali\" subject?",
+    "options": {
+      "A": "SELECT student.Name FROM student, subject WHERE student.SubjectID = subject.SubjectID AND subject.SubjectName = 'Bengali'",
+      "B": "SELECT student.Name FROM student INNER JOIN subject ON student.SubjectID = subject.SubjectID WHERE subject.SubjectName = 'Bengali'",
+      "C": "SELECT student.Name FROM student, subject WHERE student.SubjectID = subject.SubjectID OR subject.SubjectName = 'Bengali'",
+      "D": "SELECT student.Name FROM student NATURAL JOIN subject WHERE subject.SubjectName = 'Bengali'"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200714/jan2023-5_i7voi5.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which of the following are the correct regarding the web server?",
+    "options": {
+      "A": "A web server is a computer system capable of delivering web content over the internet.",
+      "B": "A web server sends the response as an HTML document which is rendered on the user's screen.",
+      "C": "A web server listens for incoming network connections on a fixed port.",
+      "D": "A web server is a software that allows to send the request over the internet."
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which of the following statements is/are true?",
+    "options": {
+      "A": "HTTP headers (for example \"Content-Type\") are case-sensitive",
+      "B": "The body/payload in an HTTP request is mandatory",
+      "C": "The \"Content-Length\" header indicates the size of the request body in bytes",
+      "D": "All of these"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Software Development Lifecycle & Testing",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200730/may2023-1_sb4y4n.png",
+    "context": null,
+    "question": "Matrix B is another matrix whose elements represent the LSBs of binary equivalent of corresponding elements of matrix A. The determinant of matrix B would be",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "When a user enters an invalid email or phone number, an error message is displayed which clearly tells him/her about what went wrong. Which usability heuristic principle best describes the above behavior?",
+    "options": {
+      "A": "Aesthetic and minimalist design",
+      "B": "User control and freedom",
+      "C": "User diagnosis and recovery from errors",
+      "D": "Flexibility and ease of use"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200730/may2023-2_jpvoxr.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider the given URL below.\nhttps://www.host.com/tutorials/what-is-a-domain-name",
+    "question": "Select the appropriate option that correctly identifies different components of a given URL.",
+    "options": {
+      "A": "Protocol: https\nDomain: www\nSub-Domain: host.com\nPath: /tutorials/what-is-a-domain-name",
+      "B": "Protocol: https\nDomain: www\nSub-Domain: host.com/tutorials\nPath: /what-is-a-domain-name",
+      "C": "Protocol: https\nDomain: host.com\nSub-Domain: www\nPath: /tutorials/what-is-a-domain-name",
+      "D": "Protocol: https\nDomain: host.com/tutorials\nSub-Domain: www\nPath: /what-is-a-domain-name"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Let L = {'a', 'b', 'c', 'd', 'A', 'B', 'C', 'D', '0', '1', ''} be a complete character set (i.e., only these characters can be used to represent text in the document). If a document that uses fixed encoding for all characters is created using the character set L and has a disk size of 2 Kilobytes, the number of characters in the documents would be\n[Take 1 Byte = 8 bits, 1 KB = 1000 Bytes, 1 MB = 1000 Kilobytes and so on.]",
+    "options": {
+      "A": "2000",
+      "B": "4000",
+      "C": "8000",
+      "D": "16000"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "A mobile client starts from and is cruising away continuously at 60 kmph from the network tower whose network range is 40 km and bandwidth is 120 Mbps. How much data (in Gigabytes) will be consumed by the client who is continuously using the entire bandwidth before completely moving out of the network?\n[Take 1 Byte = 8 bits, 1 KB = 1000 Bytes, 1 MB = 1000 Kilobytes and so on.]\n[Consider the speed of light in air to be 3 x 10⁸ m/sec.]",
+    "options": {
+      "A": "24",
+      "B": "28.8",
+      "C": "36",
+      "D": "288"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "What will be the output of the following Python code snippet on the terminal.\n```python\nfrom string import Template\ntemp = \"A student needs to complete $c1 level to get to the {{c2}} level.\"\ntemp = Template(temp)\nout = temp.substitute({'c1': 'foundation', 'c2': 'diploma'})\nprint(out)\n```",
+    "options": {
+      "A": "A student needs to complete $c1 level to get to the diploma level.",
+      "B": "A student needs to complete foundation level to get to the {{c2}} level.",
+      "C": "A student needs to complete foundation level to get to the diploma level.",
+      "D": "KeyError: 'c2'"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "Consider a <span> element and the styling given to it in <style> tag using element selector in the HTML file below.\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Span</title>\n    <style>\n        span{\n            color: blue;\n            background-color: lime;\n        }\n    </style>\n</head>\n<body>\n    <span id=\"my_span\">MAD-I is a Diploma level course.</span>\n</body>\n</html>\n```",
+    "question": "What will be the final style applied to <span> tag if an additional style is added via the ID selector given below?\n```css\n#my_span{\n    width: 1200px;\n    background-color: lightpink;\n}\n```",
+    "options": {
+      "A": "color: blue;\nbackground-color: lightpink;",
+      "B": "color: blue;\nwidth: 1200px;\nbackground-color: lime;",
+      "C": "color: blue;\nwidth: 1200px;\nbackground-color: lightpink;",
+      "D": "width: 1200px;\nbackground-color: lightpink;"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "What is the correct sequence of working of Client-Server Architecture.\na. The client asks for the IP address for the particular server from the Domain Name system.\nb. To that IP address, the client sends the request to the particular server with that port number that is specified to the particular application and then server responds\nc. The DNS server responds with the IP address.\nd. The response message is received by the client and based on that port number, the response packet is consumed by the application to which it belongs.",
+    "options": {
+      "A": "c -> a -> b -> d",
+      "B": "a -> b -> c -> d",
+      "C": "a -> c -> b -> d",
+      "D": "None"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Select the correct Option",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200666/may2-23-mad1-1_kfn47l.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Python code snippet.\n\nMap the commands in column A with the correct rendered output in the browser in column B.",
+    "options": {
+      "A": "a-4, b-1, c-2, d-5",
+      "B": "a-3, b-2, c-1, d-4",
+      "C": "a-4, b-1, c-2, d-3",
+      "D": "a-5, b-1, c-3, d-2"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200731/may2023-3_lqra4g.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Consider the following Python code snippet:",
+    "options": {
+      "A": "a-1, b-3, c-4, d-2",
+      "B": "a-2, b-3, c-1, d-4",
+      "C": "a-3, b-1, c-2, d-4",
+      "D": "a-4, b-2, c-1, d-3"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200731/may2023-4_mvero7.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Select the correct Option",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200667/may2023-mad1-2_x0ppaq.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\n```python\nfrom jinja2 import Template\ntemp = \"\"\"\n{% for vid, members in interfaces|groupby(attribute='lan') %}\nInterfaces in lan {{ vid }}: {{ members|map(attribute='name')|join(', ') }}\n{% endfor %}\n\"\"\"\ninterfaces = [\n    {\"name\": \"Ethernet1\", \"lan\": 50},\n    {\"name\": \"Ethernet2\", \"lan\": 40},\n    {\"name\": \"Ethernet3\", \"lan\": 50},\n    {\"name\": \"Ethernet4\", \"lan\": 60}\n]\noutput = Template(temp)\nprint(output.render(interfaces=interfaces))\n```",
+    "question": "What will be the output of the above python code on the terminal.",
+    "options": {
+      "A": "Interfaces in lan 50: Ethernet1\nInterfaces in lan 40: Ethernet2\nInterfaces in lan 50: Ethernet3\nInterfaces in lan 60: Ethernet4",
+      "B": "Interfaces in lan 50: Ethernet1, Ethernet3\nInterfaces in lan 40: Ethernet2\nInterfaces in lan 60: Ethernet4",
+      "C": "Interfaces in lan 40: Ethernet2\nInterfaces in lan 50: Ethernet1, Ethernet4\nInterfaces in lan 60: Ethernet3",
+      "D": "Interfaces in lan 40: Ethernet2\nInterfaces in lan 50: Ethernet1, Ethernet3\nInterfaces in lan 60: Ethernet4"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "A Flask application and its absolute path is given below.\nC:\\home\\mad_1>\n```python\n# app.py\nfrom flask import Flask, url_for\nimport sys\ndef create_path():\n    if len(sys.argv) < 2:\n        return '/static'\n    else:\n        return f'/{sys.argv[1]}'\n\napp = Flask(__name__, static_url_path = create_path())\n\n@app.route('/home')\ndef display():\n    return f\"<h3>static url path: {app.static_url_path}</h3>\\\n<h3>static folder: {app.static_folder}</h3>\"\n\napp.run(debug = True)\n```\nBased on the above data, answer the given subquestions.",
+    "question": "If the application is run locally on http://127.0.0.1:5000 using the command `python app.py`, what will be rendered by the browser for URL http://127.0.0.1:5000/home?",
+    "options": {
+      "A": "static url path: C:\\home\\mad_1\\static\nstatic folder: /static",
+      "B": "static url path: /static\nstatic folder: C:\\home\\mad_1\\static",
+      "C": "static url path: /stable\nstatic folder: C:\\home\\mad_1\\stable",
+      "D": "static url path: /static\nstatic folder: C:\\home\\mad_1\\stable"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "A Flask application and its absolute path is given below.\nC:\\home\\mad_1>\n```python\n# app.py\nfrom flask import Flask, url_for\nimport sys\ndef create_path():\n    if len(sys.argv) < 2:\n        return '/static'\n    else:\n        return f'/{sys.argv[1]}'\n\napp = Flask(__name__, static_url_path = create_path())\n\n@app.route('/home')\ndef display():\n    return f\"<h3>static url path: {app.static_url_path}</h3>\\\n<h3>static folder: {app.static_folder}</h3>\"\n\napp.run(debug = True)\n```\nBased on the above data, answer the given subquestions.",
+    "question": "If the application is run locally on http://127.0.0.1:5000 using the command `python app.py stable`, what will be rendered by the browser for URL http://127.0.0.1:5000/home?",
+    "options": {
+      "A": "static url path: /static\nstatic folder: C:\\home\\mad_1\\static",
+      "B": "static url path: /stable\nstatic folder: C:\\home\\mad_1\\stable",
+      "C": "static url path: C:\\home\\mad_1\\stable\nstatic folder: /stable",
+      "D": "static url path: /stable\nstatic folder: C:\\home\\mad_1\\static"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "What does the term 'responsive' mean in the context of web design?",
+    "options": {
+      "A": "The ability of a webpage to give visual feedback on any kind of user input.",
+      "B": "The ability of a webpage to change its color scheme to 'night mode'.",
+      "C": "The ability of a webpage to alter its layout and appearance to suit different screen widths, resolutions, etc.",
+      "D": "All of these."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200731/sept2023-1_yfdgo8.png",
+    "question": "Match the following HTTP methods in Column A with their conventional usage in Column B.",
+    "options": {
+      "A": "1-c, 2-d, 3-b, 4-a",
+      "B": "1-c, 2-b, 3-d, 4-a",
+      "C": "1-c, 2-d, 3-a, 4-b",
+      "D": "1-a, 2-d, 3-b, 4-c"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following is correct rendered output?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200666/Minimalist_Black_and_White_Blank_Paper_Document_10_ppjfmk.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "Consider the following DOM structure and select the HTML document that correctly represents the DOM structure.",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200731/sept2023-2_oskg6k.png",
+    "question": "Select the HTML document that correctly represents the DOM structure.",
+    "options": {
+      "A": "<!DOCTYPE html>\n<head>\n  <title>My title</title>\n<body>\n  <h1>A heading</h1>\n  <a href=\"link\">Link text</a>",
+      "B": "<!DOCTYPE html>\n<html>\n  <title>My title</title>\n<head>\n</head>\n<body>\n  <h1>A heading</h1>\n  <a>Link text</a>\n</body>\n</html>",
+      "C": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My title</title>\n<body>\n  <h1>A heading</h1>\n  <a>Link text</a>\n</html>",
+      "D": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My title</title>\n</head>\n<body>\n  <h1>A heading</h1>\n  <a href=\"link\">Link text</a>\n</body>\n</html>"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following python code snippet.\nfrom jinja2 import Template as T1\nfrom string import Template as T2\ninfo = {\n  'city1': 'Mumbai', 'city2': 'Delhi',\n  'city3': 'city2', 'city4': 'city1',\n  'country1': 'India', 'country2': 'country1'\n}\nt1 = T1(\"${{city3}} and ${{city4}} are the national and financial capitals of ${{country2}} respectively.\")\nout1 = t1.render(info)\nprint(out1)\nout2 = T2(out1)\nprint(out2.substitute(info))",
+    "question": "What is the generated output on python console?",
+    "options": {
+      "A": "city2 and city1 are the national and financial capitals of country1 respectively.\nDelhi and Mumbai are the national and financial capitals of India respectively.",
+      "B": "$city2 and $city1 are the national and financial capitals of $country1 respectively.\nDelhi and Mumbai are the national and financial capitals of India respectively.",
+      "C": "{{city2}} and {{city1}} are the national and financial capitals of {{country1}} respectively.\nDelhi and Mumbai are the national and financial capitals of India respectively.",
+      "D": "$city3 and $city4 are the national and financial capitals of $country2 respectively.\nDelhi and Mumbai are the national and financial capitals of India respectively."
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Which of the following flask view functions will return a 404 error for the URL: http://127.0.0.1:5000/home/student1/2001?",
+    "options": {
+      "A": "@app.route('/home/<student_id>/<course_id>')\ndef home (student_id, course_id):\n  details = { 'student_id': student_id, 'course_id': course_id}",
+      "B": "@app.route('/home/<string:student_id>/<int:course_id>')\ndef home (student_id, course_id):\n  details = { 'student_id': student_id, 'course_id': course_id}",
+      "C": "@app.route('/home/<string:student_id>/<string:course_id>')\ndef home (student_id, course_id):\n  details = { 'student_id': student_id, 'course_id': course_id}",
+      "D": "@app.route('/home/student/<student_id>/<course_id>')\ndef home (student_id, course_id):\n  details = { 'student_id': student_id, 'course_id': course_id}"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider a character set L, which consists of only those characters which are used in the statement, 'pack my box with five dozen liquor jugs'.",
+    "question": "If this statement is to be saved in a document with minimum encoding, what will be the size of the document given that no other information or context is to be saved?",
+    "options": {
+      "A": "160 bits",
+      "B": "320 bits",
+      "C": "195 bits",
+      "D": "390 bits"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A certain video that was available on the web only for an hour occupied 2 gigabytes of memory of the server. If the number of viewers of the video over time for that hour is given by the curve shown below and assuming that each viewer required an individual connection to the server to view the video, what would be the minimum RAM requirement of the server that could process requests from all the viewers simultaneously at any point of time?",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200731/sept2023-3_rwvacw.png",
+    "question": "What would be the minimum RAM requirement of the server that could process requests from all the viewers simultaneously at any point of time?",
+    "options": {
+      "A": "1.7 GB",
+      "B": "3.4 GB",
+      "C": "1.7 TB",
+      "D": "3.4 TB"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\nfrom string import Template\nstatement = \"$g http method is used to retrieve information while $p for sending information\"\nout = Template(statement)\nprint(=== OUTPUT ===)",
+    "question": "Which of the following statements, when substituted in place of === OUTPUT ===, will throw a KeyError?",
+    "options": {
+      "A": "out.substitute({'g':'GET'})",
+      "B": "out.substitute({'g':'GET', 'p': 'POST', 'd': 'delete'})",
+      "C": "out.safe_substitute({'g': 'GET'})",
+      "D": "out.safe_substitute({'g':'GET', 'p':'POST', 'd': 'delete'})"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet 'code.py'.\n# Filename: code.py\nimport sys\nfrom jinja2 import Template\nvars = sys.argv\nmyTech = {'mad 1': 'backend', 'mad 2': 'frontend'}\ntemp = Template(\"This course focuses on {{var}} development.\")\nif vars[1] == 'mad 1':\n  print(temp.render(myTech ['mad 1']))\nelif vars [1] == 'mad 2':\n  print(temp.render(myTech['mad 2']))\nelse:\n  print(\"Mention the course name specifically.\")",
+    "question": "What will be the output on the terminal for input: python code.py mad 1?",
+    "options": {
+      "A": "This course focuses on frontend development.",
+      "B": "This course focuses on backend development.",
+      "C": "Mention the course name specifically.",
+      "D": "IndexError: list index out of range"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200732/sept2023-4_fb0fmi.png",
+    "question": "Match the URLs with their rendered output.",
+    "options": {
+      "A": "1-b, 2-d, 3-a, 4-c",
+      "B": "1-b, 2-d, 3-c, 4-a",
+      "C": "1-c, 2-d, 3-a, 4-b",
+      "D": "1-a, 2-d, 3-b, 4-c"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "A mobile server and a client initially 750 km apart are moving towards each other in a straight line with the speeds of 165 kmph and 85 kmph respectively. The network bandwidth is set constant to 2 Mbps.",
+    "question": "Determine how much data (in Gigabytes) is used by the client before the client and the server collide. [speed of light in vacuum: 3x10⁸ m/sec, 1 MB = 1000 KB and so on.]",
+    "options": {
+      "A": "21.6",
+      "B": "6",
+      "C": "2.7",
+      "D": "7.5"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Databases & ORM",
+    "context": null,
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200731/sept2023-5_jmijig.png",
+    "question": "Which of the following entities and their relationship has been correctly represented by the ER diagram shown in the image ?",
+    "options": {
+      "A": "Person - Passport",
+      "B": "Person - Mobile number",
+      "C": "Person - Birth certificate",
+      "D": "Person - Fingerprint"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which of the following statements regarding dynamic webpages is/are true?",
+    "options": {
+      "A": "The page is already present at the server even before a user requests it.",
+      "B": "The page generally maintains the same content every time the user requests it.",
+      "C": "The page is generated on demand by a program or a request from a browser.",
+      "D": "On every request, every new page created may be different from the last."
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following is/are correct rendered output for given ===code1===?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760200666/Minimalist_Black_and_White_Blank_Paper_Document_11_mgugee.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\n# app.py\nfrom flask import Flask, render_template, url_for\napp = Flask (__name__)\n@app.route(\"/if\")\ndef ifelse():\n  user = \"MAD I\"\n  return render_template(\"if_example.html\", name=user)\n@app.route(\"/for\")\ndef for_loop():\n  list_of_courses = ['Java', 'Python', 'DBMS', 'PDSA']\n  return render_template(\"for_example.html\", courses=list_of_courses)\n@app.route(\"/choice/<pick>\")\ndef choice(pick):\n  if pick == 'if':\n    return url_for('ifelse')\n  if pick == 'for':\n    return (url_for('for_loop'))\nif __name__ == \"__main__\":\n  app.run(debug=False)",
+    "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+    "options": {
+      "A": "For URL, http://127.0.0.1:5000/choice/for browser will render for_example.html",
+      "B": "For URL, http://127.0.0.1:5000/choice/if browser will render if_example.html",
+      "C": "For URL http://127.0.0.1:5000/choice/for browser will display /for as output.",
+      "D": "For URL http://127.0.0.1:5000/choice/if browser will display /if as output."
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Create a simple HTML document with the following requirements:\n1. Include a heading with the text \"My Web Page\" using an <h1> tag.\n2. Add a paragraph with the text \"Welcome to the world of HTML!\" using a <p> tag.\n3. Create an unordered list with three list items. The list items should contain the text \"Item 1\", \"Item 2\" and \"Item 3\" respectively, using <li> tags.\n4. Include a link to \"https://www.example.com\" with the anchor text \"Visit Example.com\" using an <a> tag.\nWhich of the following HTML code is correct to fulfill these requirements?",
+    "options": {
+      "A": "<body>\n  <h1>My Web Page</h1>\n  <p>Welcome to the world of HTML!</p>\n  <ol>\n    <li>Item 1</li>\n    <li>Item 2</li>\n    <li>Item 3</li>\n  </ol>\n  <a href=\"https://www.example.com\">Visit Example.com</a>\n</body>",
+      "B": "<body>\n  <h1>My Web Page</h1>\n  <p>Welcome to the world of HTML!</p>\n  <ol>\n    <li>Item 1</li>\n    <li>Item 2</li>\n    <li>Item 3</li>\n  </ol>\n  <a href=\"Visit Example.com\">https://www.example.com</a>\n</body>",
+      "C": "<body>\n  <h1>My Web Page</h1>\n  <p>Welcome to the world of HTML!</p>\n  <ul>\n    <li>Item 1</li>\n    <li>Item 2</li>\n    <li>Item 3</li>\n  </ul>\n  <a href=\"Visit Example.com\">https://www.example.com</a>\n</body>",
+      "D": "<body>\n  <h1>My Web Page</h1>\n  <p>Welcome to the world of HTML!</p>\n  <ul>\n    <li>Item 1</li>\n    <li>Item 2</li>\n    <li>Item 3</li>\n  </ul>\n  <a href=\"https://www.example.com\">Visit Example.com</a>\n</body>"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Consider the following example.\n```html\n<img src=\"example.jpg\" alt=\" Gajendra Circle, IITM Campus\">\n```\nWhich of the following accessibility principle is followed in this example?",
+    "options": {
+      "A": "Perceivable",
+      "B": "Operable",
+      "C": "Understandable",
+      "D": "Robust"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "The directory listing of a folder and the content of each of its files are given below.\nDirectory Listing:\nmy_dir-|\n|-- base.html\n|-- home.html\n|-- index.html\n\nFilename: base.html\n<body>\n  <h1>Hello from Base</h1>\n</body>\n\nFilename: home.html\n<body>\n  <h1>Hello from Home</h1>\n</body>\n\nFilename: index.html\n<body>\n  <h1>Hello from Index</h1>\n</body>",
+    "question": "If a simple Python HTTP server is created for this directory, what will be rendered on the browser for base URL?",
+    "options": {
+      "A": "Hello from Base",
+      "B": "Hello from Home",
+      "C": "Hello from Index",
+      "D": "Directory listing for /"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Select correct Option",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202854/Minimalist_Black_and_White_Blank_Paper_Document_12_detysv.png",
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "The following Python code snippet generates the output on the terminal.\n```python\nfrom string import Template\ns = Template('\\$who lives in \\$where')\nout1 = s.substitute (who='Karl', where='Chennai')\nprint(out1)\nb = dict(who='Tim')\nout2 = Template ('\\$who likes \\$what').safe_substitute(b)\nprint(out2)\nout3 = Template('\\$who likes \\$what').substitute(b)\nprint(out3)\n```\nWhich of the following is the correct output?",
+    "options": {
+      "A": "Karl lives in Chennai\nTim likes $what\nTim likes $what",
+      "B": "Karl lives in Chennai\nTim likes\nTim likes $what",
+      "C": "Karl lives in Chennai\nKeyError: 'what'\nTim likes $what",
+      "D": "Karl lives in Chennai\nTim likes $what\nKeyError: 'what'"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following python code snippet. What will be the rendered output?\n```python\nfrom jinja2 import Template\ndata=[\n  {\"Course\":\"MAD-I\", \"ID\":101, \"Name\":\"John\"},\n  {\"Course\":\"MAD-II\", \"ID\":161, \"Name\": \"Karl\"},\n  {\"Course\":\"MAD-I\", \"ID\":120, \"Name\":\"Kim\"}\n]\nt=\"\"\"\n<ul>\n  {% for group in data|groupby('Course') %}\n  <li>\n    {{ group.grouper }}\n    <ul>\n      {% for person in group.list %}\n      {% if person.Name|length == 4 %}\n      <li> {{ person.Name }} has ID {{ person.ID }} </li>\n      {% endif %}\n      {% endfor %}\n    </ul>\n  </li>\n  {% endfor %}\n</ul>\n\"\"\"\ntemp=Template(t)\nprint(temp.render(data=data))\n```",
+    "options": {
+      "A": "<ul><li>MAD-I<ul><li> John has ID 101 </li><li> Kim has ID 120 </li></ul></li><li>MAD-II<ul><li> Karl has ID 161 </li></ul></li></ul>",
+      "B": "<ul><li>MAD-I<ul><li> John has ID 101 </li><li> Karl has ID 161 </li></ul></li><li>MAD-II<ul><li> Kim has ID 120 </li></ul></li></ul>",
+      "C": "<ul><li>MAD-I<ul><li> John has ID 101 </li></ul></li><li>MAD-II<ul><li> Karl has ID 161 </li></ul></li></ul>",
+      "D": "<ul><li>MAD-I<ul><li> Karl has ID 101 </li></ul></li><li>MAD-II<ul><li> John has ID 161 </li></ul></li></ul>"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "A certain network connection with a bandwidth of 12 Mbps allows making 4000 requests to a server per second. If each request is modified to have an additional data of 6 Kb, what should be the additional bandwidth required to maintain the rate of 4000 requests per second?",
+    "options": {
+      "A": "12 Mbps",
+      "B": "24 Mbps",
+      "C": "36 Mbps",
+      "D": "48 Mbps"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "A client sitting in a train is connected to a server through a network tower that has a range of 4.5 kilometers and a constant bandwidth of 5 Mbps. The train is at a negligible distance from the tower and is moving away from it at a speed of 180 kmph. How much data (in Megabytes) will be used by the client before the train completely moves out of the coverage area, assuming that the client is consuming the entire bandwidth?",
+    "options": {
+      "A": "45 MB",
+      "B": "450 MB",
+      "C": "5.6 MB",
+      "D": "56.25 MB"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following is/are correct rendered output for given ===code1===?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202854/Minimalist_Black_and_White_Blank_Paper_Document_13_ans7cy.png",
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following python code snippet.\n```python\nfrom jinja2 import Template as T1\nfrom string import Template as T2\ninfo = {'detl': 'Civil', 'Name': 'John', 'Civil': 'Mechanical', 'John': 'Sujoy'}\nt1 = T1(\" \\${{Name}} and {{Name}} are {{detl}} and \\${{detl}} engineer respectively.\")\nout1 = t1.render(info)\nout2 = T2(out1)\nprint(out2.substitute(info))\n```\nWhat is the generated output on the python console?",
+    "options": {
+      "A": "$John and John are Civil and $Civil engineer respectively.",
+      "B": "John and Sujoy are Civil and Mechanical engineer respectively.",
+      "C": "John and {{John}} are Civil and {{Civil}} engineer respectively.",
+      "D": "Sujoy and John are Civil and Mechanical engineer respectively."
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider the following equation;\n`1xy25₈ = 1ED5₁₆ = x89y₁₀`\nWhere x and y are unknowns. For what values of x and y does the above equation hold true?",
+    "options": {
+      "A": "x = 3 and y = 8",
+      "B": "x = 6 and y = 4",
+      "C": "x = 7 and y = 3",
+      "D": "x = 1 and y = 2"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Python code snippet.\nFilename: app.py\n```python\nfrom flask import Flask, request\nimport sys\napp = Flask(__name__)\n@app.route('/home', methods = [sys.argv[1]])\ndef my_func():\n    if request.method == 'GET':\n        return \"<h1>Hello from App Development</h1>\"\n    elif request.method == 'POST':\n        return \"<h1>Hello from POST</h1>\"\n    else:\n        return \"<h1>Please enter a valid HTTP method</h1>\"\napp.run(debug = True)\n```\nIf the above flask app is run using the command `python app.py POST` in one terminal, what will be the output on another terminal for command;\n`curl http://127.0.0.1:5000/home`?",
+    "options": {
+      "A": "<h1>Hello from App Development</h1>",
+      "B": "<h1>Hello from POST</h1>",
+      "C": "<h1>Please enter a valid HTTP method</h1>",
+      "D": "<h1>Method not Allowed</h1>"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Python code snippet \"code.py\".\nFilename: code.py\n```python\nimport sys\nfrom jinja2 import Template\nvars = sys.argv\ncourse_technologies = {'python': 'backend', 'javascript': 'frontend'}\ntemplate = Template(\"This course focuses on {{ technology }} development.\")\nif len(vars) > 2 and vars[2] in course_technologies:\n    course = vars[1]\n    technology = course_technologies[course]\n    print(template.render(technology=technology))\nelse:\n    print(\"Please specify a valid course name!\")\n```\nWhich of the following will be the correct command line input to the terminal to get the output: `This course focuses on backend development.`?",
+    "options": {
+      "A": "python code.py course python",
+      "B": "python code.py python javascript",
+      "C": "python code.py python python",
+      "D": "python code.py python backend"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Consider the following statements and choose the correct options.\nStatement I: An author can write multiple books, but each book is written by only one author.\nStatement II: A publisher can publish multiple books, but each book is published by only one publisher.\nStatement III: A book belongs to one genre, but a genre can have multiple books.",
+    "options": {
+      "A": "Statement I represents a many-to-many relationship between Author and Book.",
+      "B": "Statement I represents a one-to-many relationship between Author and Book.",
+      "C": "Statement II represents a one-to-many relationship between Publisher and Book.",
+      "D": "Statement III represents a many-to-one relationship between Book and Genre."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask application.\napp.py\n```python\nfrom flask import Flask, render_template, request\napp = Flask(__name__)\n@app.route('/greet')\ndef greet():\n    user_name = request.args.get('name', 'Guest')\n    greeting_message = f\"Hello, {user_name}!\"\n    ===========code here=========\nif __name__ == \"__main__\":\n    app.run(debug=True)\n```",
+    "question": "Which of the following should replace \"code here\" to construct the HTML response with the greeting_message correctly?",
+    "options": {
+      "A": "return \"<h1>{{ greeting_message }}</h1>\"",
+      "B": "return f\"<h1>{greeting_message}</h1>\"",
+      "C": "return \"<h1>{greeting_message}</h1>\"",
+      "D": "return \"Hello, {user_name}!\""
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Flask & Jinja Templating",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202874/jan2024-1_zls0a1.png",
+    "context": null,
+    "question": "Match the URLs in column A with their correct rendered output in Column B with the correct app.py code for the flask application given in the previous question.",
+    "options": {
+      "A": "1-b, 2-d, 3-a, 4-c",
+      "B": "1-b, 2-a, 3-c, 4-d",
+      "C": "1-d, 2-b, 3-a, 4-c",
+      "D": "1-d, 2-a, 3-c, 4-b"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Which of the following is not a correct perceivable accessibility principle?",
+    "options": {
+      "A": "Provide text alternatives for non-text content.",
+      "B": "Provide captions and other alternatives for multimedia.",
+      "C": "Make it easier for users to see and hear content.",
+      "D": "Give users enough time to read and use content."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Which of the below HTTP status codes represents the client error?",
+    "options": {
+      "A": "500-599",
+      "B": "400-499",
+      "C": "300-399",
+      "D": "200-299",
+      "E": "100-199"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "What will be the output of the following Python code?\n```python\nfrom jinja2 import Template\ndata = {\"id\": 101, \"prod_name\": \"Groceries\", \"sales_amt\": 5600, \"sales_bonus\": 5}\ndef foo (amount, p):\n    return amount * p / 100\na = foo(data[\"sales_amt\"], data[\"sales_bonus\"])\nt = Template(\n    \"Congratulations, you got bonus {{ bonus }} by selling product {{data['prod_name']}}\"\n)\noutput = t.render(data=data, bonus=a)\nprint(output)\n```",
+    "options": {
+      "A": "Congratulations, you got bonus 70.0 by selling product Groceries",
+      "B": "Congratulations, you got bonus 140.0 by selling product Groceries",
+      "C": "Congratulations, you got bonus 280.0 by selling product Groceries",
+      "D": "Congratulations, you got bonus 560.0 by selling product Groceries"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Databases & ORM",
+    "context": "Consider the below table.",
+    "question": "Which of the below match is correct?",
+    "options": {
+      "A": "i-d, ii-b, iii-a, iv-e, v-c",
+      "B": "i-d, ii-c, iii-e, iv-a, v-b",
+      "C": "i-c, ii-d, iv-e, iii-a, v-b",
+      "D": "i-c, ii-d, iv-e, iii-b, v-a"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202874/may2024-1_doz1z1.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "A certain movie with advertisements is being streamed by the client on the internet with a bandwidth of 5 Mbps. If the total data consumed only in the advertisements is 340 MB and the advertisements comprises 17% of the total duration of the streamed movie, what can be the size of the entire movie (in Megabytes) including the advertisements?",
+    "options": {
+      "A": "20",
+      "B": "640",
+      "C": "2000",
+      "D": "1660"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider a document of 1000 characters written using only the characters of the character set L1 = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}. If the character set L1 is to be upgraded by adding all the characters of character set L2 = {'0', '1', '2', '3', '4', '5', '6'} in it, By how many bits will the size of the original document increase?",
+    "options": {
+      "A": "0 bits",
+      "B": "1000 bits",
+      "C": "4000 bits",
+      "D": "5000 bits"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "The following Python code snippet generates the output on the terminal.",
+    "question": "Which of the following is the correct output?\n```python\nfrom string import Template\ns = Template('$name studies at $university')\nb = {'name': 'Bob'}\nout1 = Template('$name studies $subject').safe_substitute(b)\nprint(out1)\nout2 = s.substitute(name='Alice', university='Oxford')\nprint(out2)\nout3 = Template('$name studies $subject').substitute(b)\nprint(out3)\n```",
+    "options": {
+      "A": "Bob studies at $subject\nAlice studies at Oxford\nKeyError: 'subject'",
+      "B": "Bob studies $subject\nAlice studies at Oxford\nKeyError: 'subject'",
+      "C": "Bob studies $subject\nAlice studies at Oxford\nBob studies $subject",
+      "D": "Bob studies\nAlice studies at Oxford\nKeyError: 'subject'"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "What will be the rendered output if an additional style is added via the ID selector?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202852/Minimalist_Black_and_White_Blank_Paper_Document_14_fhfy4a.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code snippet.\nFilename: app.py\n```python\nfrom flask import Flask, request\nimport sys\napp = Flask(__name__)\n@app.route('/home', methods = sys.argv)\ndef my_func():\n    if request.method == 'GET':\n        return f\"Hello from {sys.argv[1]} method\"\n    elif request.method == 'POST':\n        return f\"Hello from {sys.argv[2]} method\"\n    else:\n        return \"Please enter a valid HTTP method\"\napp.run(debug = True)\n```",
+    "question": "If the above flask app is run using the command `python app.py POST GET` in one terminal, what will be the output on another terminal for command;\n`curl -X POST http://127.0.0.1:5000/home`?",
+    "options": {
+      "A": "Hello from POST method",
+      "B": "Hello from GET method",
+      "C": "Please enter a valid HTTP method",
+      "D": "Method not Allowed"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": "Consider the following Python code snippet.\nFilename: module.py\n```python\nfrom pyhtml import *\nimport sys\nvar = sys.argv[1:]\ndef list_func(stack):\n    for tech in stack:\n        yield span(tech)\ndoc = html(\n    head(title('My Document')),\n    body(\n        h3('Frontend technologies'),\n        list_func(var[::-1])\n    )\n)\nprint(doc.render())\n```",
+    "question": "How will the browser render the output of the above code if it is run on the terminal using the command `python module.py HTML CSS JS VUE`?",
+    "options": {
+      "A": "Frontend Technologies\nHTML CSS JS VUE",
+      "B": "Frontend Technologies\nVUE JS CSS HTML",
+      "C": "Frontend Technologies\nHTML\nCSS\nJS\nVUE",
+      "D": "Frontend Technologies\nVUE\nJS\nCSS\nHTML"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "How will the browser render above HTML file?",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202852/Minimalist_Black_and_White_Blank_Paper_Document_15_txdw07.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": "Consider a client A that makes a request to server B that fetches the information from Datacenter C which in turn fetches other required information from the Datacenter D. The distance between the client A, server B and datacenters C and D within the network and the speed of information in the medium connecting these nodes is mentioned in the table below.",
+    "question": "Calculate the round trip latency (in milliseconds) of the network?",
+    "options": {
+      "A": "187",
+      "B": "132.5",
+      "C": "265",
+      "D": "150"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760203582/may2024-3_dzcl9x.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following flask app and the bodies of two index.html files shown in the figure below.\napp.py\n```python\nfrom flask import Flask, render_template\nimport sys\napp = # app object initialization here\n@app.route('/home')\ndef home():\n    return render_template('index.html')\napp.run()\n```\napp_templates/index.html\n```html\n<h3>Home page</h3>\n<p>MAD I focuses on backend development</p>\n<h5>IITM ONLINE DEGREE</h5>\n```\nroot_templates/index.html\n```html\n<h3>Home page</h3>\n<p>Vue JS is a frontend technology</p>\n<h5>IITM BS DEGREE</h5>\n```\nIf the app is run locally using the command `python app.py root_templates app_templates` and the output on browser for URL http://127.0.0.1/home is:\nHome page\nVue JS is a frontend technology\nIITM BS DEGREE",
+    "question": "How should the app be initialized to get the desired output on the browser?",
+    "options": {
+      "A": "app = Flask(__name__)",
+      "B": "app = Flask(__name__, templates = sys.argv[1])",
+      "C": "app = Flask(__name__, templates = sys.argv[2])",
+      "D": "app = Flask(__name__, template_folder = sys.argv[1])",
+      "E": "app = Flask(__name__, template_folder = sys.argv[2])"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "What can be inferred from the Entity-Relationship Diagram below:",
+    "options": {
+      "A": "A student can exist without enrolling to any course",
+      "B": "A student can have more than one courses",
+      "C": "A student needs to have at least one course",
+      "D": "A course must belong to one and only one student"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202874/may2024-2-2_nwlcuj.png"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Flask code.\nFile name: sum_args.py\n```python\nimport sys\nfrom flask import Flask\napp = Flask(__name__)\ndef do_something():\n    if len(sys.argv) >= 2:\n        l = []\n        for i in range(1, len(sys.argv)):\n            l.append(int(sys.argv[i]))\n        return l\n    else:\n        return None\n@app.route(\"/\")\ndef do_sum():\n    result = do_something()\n    if result:\n        s = 0\n        for e in result:\n            s += int(e)\n        return f\"<h2>Sum is: {s}</h2>\"\n    else:\n        return f\"<h2>Sum is: {result}</h2>\"\napp.run(debug=True)\n```",
+    "question": "Select the command(s) to execute the above code without any error.",
+    "options": {
+      "A": "python sum_args.py 289",
+      "B": "python sum_args.py 2",
+      "C": "python sum_args.py",
+      "D": "python sum_args.py IITM"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following Python code and HTML document.\n```python\nfrom flask import Flask, render_template\napp = Flask(__name__)\n@app.route(\"/font/size/<int:size>\")\ndef font_size(size):\n    internal_css = {}\n    if size <= 12:\n        internal_css = {\"font-weight\": \"bold\", \"font-size\": \"12px\"}\n    else:\n        internal_css = {\"font-weight\": \"normal\", \"font-size\": str(size) + \"px\"}\n    return render_template(\"index.html\", internal_css=internal_css)\napp.run(debug=True)\n```\nHTML document: templates/index.html\n```html\n<!DOCTYPE html>\n<html>\n<div style=\"font-size:{{internal_css['font-size']}}; font-weight:{{internal_css['font-weight']}};\">\n    IITM BS Degree Program\n</div>\n</html>\n```",
+    "question": "Assume that the flask server is running on \"http://localhost:5000/\". Which of the following is/are true?",
+    "options": {
+      "A": "http://127.0.0.1:5000/font/size/20 will render \"IITM BS Degree Program\" with font-size = 20 and font-weight=normal",
+      "B": "http://127.0.0.1:5000/font/size/24 will render \"IITM BS Degree Program\" with font-size = 24 and font-weight=bold",
+      "C": "http://127.0.0.1:5000/font/size/8 will render \"IITM BS Degree Program\" with font-size = 12 and font-weight=bold",
+      "D": "http://127.0.0.1:5000/font/size/16 will render \"IITM BS Degree Program\" with font-size = 16 and font-weight=normal"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Suppose a Gamer wants to buy a Bluetooth earphone which can give him a good gaming experience, for that the delay between the action that happens in his phone and the sound heard by him for that action should be as low as possible so that he can play well.\nFollowing this scenario, which of the following option(s) is/are correct?",
+    "options": {
+      "A": "He should buy the earphones which have high latency as much possible.",
+      "B": "It all depends on Internet Speed, so we can't determine anything.",
+      "C": "He should buy the earphones which have low latency as much possible.",
+      "D": "He should buy the earphones which have as low Bluetooth version as possible."
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider the below URL:\nhttps://www.google.com/search?q=physics+books\nSelect the correct answer that identifies the different components of the given URL.",
+    "image": null,
+    "options": {
+      "A": "Host: http\nProtocol: google.com/search\nQuery string: q=physics+books",
+      "B": "Protocol: http\nHost: google.com/search\nQuery string: q=physics+books",
+      "C": "Protocol: http\nQuery string: google.com/search\nProtocol: q=physics+books",
+      "D": "Protocol: https\nHost: www.google.com\nPath: /search\nQuery string: q=physics+books"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Frontend Technologies (HTML, CSS, DOM)",
+    "context": null,
+    "question": "Select the correct option",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1760202852/Minimalist_Black_and_White_Blank_Paper_Document_16_z1m637.png",
+    "options": {
+      "A": "Option 1",
+      "B": "Option 2",
+      "C": "Option 3",
+      "D": "Option 4"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following code block and select the correct option regarding the output when we run the python file app.py.\n```python\n# app.py\nfrom jinja2 import Template\ntemplate='''\nWelcome to {{Degree}} DEGREE\nFirst level to clear is {{level}}\n'''\nrendered = Template(template)\noutput=rendered.render (Degree=\"IITM BS\", level=\"Foundation\")\nprint(output)\n```",
+    "options": {
+      "A": "Welcome to IITM BS DEGREE\nFirst level to clear is {{ Level }}",
+      "B": "Welcome to {Degree} DEGREE\nFirst level to clear is",
+      "C": "Welcome to IITM BS DEGREE\nFirst level to clear is Foundation",
+      "D": "Welcome to DEGREE\nFirst level to clear is {{ Level }}"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "The following Python code snippet generates the output on the terminal.\n```python\nfrom string import Template\ngreet_template = Template('Hello, $name! Welcome to $place.')\ngreeting1 = greet_template.substitute(name='Alice', place='Wonderland')\nprint(greeting1)\ndata = dict(name='Bob')\ngreeting2 = greet_template.safe_substitute(data)\nprint(greeting2)\ngreeting3 = greet_template.substitute(data)\nprint(greeting3)\n```\nWhich of the following is the correct output?",
+    "options": {
+      "A": "Hello, Alice! Welcome to Wonderland.\nHello, Bob! Welcome to $place.\nHello, Bob! Welcome to $place.",
+      "B": "Hello, Alice! Welcome to Wonderland.\nHello, Bob! Welcome to",
+      "C": "Hello, Alice! Welcome to Wonderland.\nKeyError: 'what'\nHello, Bob! Welcome to $place.",
+      "D": "Hello, Alice! Welcome to Wonderland.\nHello, Bob! Welcome to $place.\nKeyError: 'place'"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "The directory listing of a folder and the content of each of its files are given below.\nDirectory Listing:\nmy_dir/\n-- base.html\n-- home.html\n-- index.html\n\nFilename: base.html\n<body>\n<h1>Welcome to MAD-I course</h1>\n</body>\n\nFilename: home.html\n<body>\n<h1>Welcome to PDSA course</h1>\n</body>\n\nFilename: index.html\n<body>\n<h1>Welcome to DBMS course</h1>\n</body>\n\nIf a simple Python HTTP server is created for this directory, what will be rendered on the browser for base URL?",
+    "options": {
+      "A": "Welcome to PDSA course",
+      "B": "Welcome to DBMS course",
+      "C": "Welcome to MAD-I course",
+      "D": "Directory listing for /"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Python code and select correct output.\n```python\nfrom jinja2 import Template\nclass Loan:\n  def __init__(self, accno, loan_amount, interest_rate):\n    self.accno = accno\n    self.loan_amount = loan_amount\n    self.interest_rate = interest_rate\n  def get_loan_details(self):\n    return (self.accno, self.loan_amount, self.interest_rate)\n\nloan1 = Loan(101, 45900, 5)\nloan2 = Loan(102, 170000, 6)\ntm1 = Template(\"Account1: {{l1.get_loan_details()}}\")\ntm2 = Template(\"Account2: {{l2.get_loan_details()}}\")\nprint(tm1.render(l1 = loan1))\nprint(tm2.render(l2 = loan2))\n```",
+    "options": {
+      "A": "Account1: (102, 170000, 6)\nAccount2: (101, 45900, 5)",
+      "B": "Account2: (102, 170000, 6)",
+      "C": "Account1: (101, 45900, 5)",
+      "D": "Account1: (101, 45900, 5)\nAccount2: (102, 170000, 6)"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Which of the following flask view functions will return a 404 error for the URL: http://127.0.0.1:5000/communication/landline/0712?",
+    "options": {
+      "A": "@app.route('/communication/<type>/<areacode>')\ndef home (type, areacode):\n  details = {'type': type, 'area-code': areacode}\n  return details",
+      "B": "@app.route('/communication/<string:type>/<int:areacode>')\ndef home (type, areacode):\n  details = {'type': type, 'area-code': areacode}\n  return details",
+      "C": "@app.route('/communication/<string:type>/0712')\ndef home (type):\n  details = {'type': type, 'area-code': '0712'}\n  return details",
+      "D": "@app.route('/communication/online/<string:type>/<areacode>')\ndef home (type, areacode):\n  details = {'type': type, 'area-code': areacode}\n  return details"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "A certain network connection with a bandwidth of 10 Mbps allows making 1000 requests to a server per second. If each request is modified to have an additional data of 8 Kb, what should be the additional bandwidth required to maintain the rate of 2000 requests per second?",
+    "options": {
+      "A": "18 Mbps",
+      "B": "16 Mbps",
+      "C": "26 Mbps",
+      "D": "36 Mbps"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the following Python code snippet.\nFilename: app.py\n```python\nfrom flask import Flask, request\nimport sys\napp = Flask(__name__)\n@app.route('/home', methods = sys.argv[1:])\ndef my_func():\n  if request.method == 'GET':\n    return \"<h1>Hello from POST</h1>\"\n  elif request.method == 'POST':\n    return \"<h1>Hello from GET</h1>\"\n  else:\n    return \"<h1>Please enter a valid HTTP method<h1>\"\nif __name__ == '__main__':\n  app.run(debug = True)\n```\nIf the above flask app is run using the command `python app.py GET POST` in one terminal, what will be the output on another terminal for command; `curl http://127.0.0.1:5000/home`?",
+    "options": {
+      "A": "<h1>Hello from GET</h1>",
+      "B": "<h1>Hello from POST</h1>",
+      "C": "<h1>Please enter a valid HTTP method</h1>",
+      "D": "<h1>Method not Allowed</h1>"
+    },
+    "correctOption": "B",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "A client C and the server S located, 12000 km apart are connected with the help of a cable. A request was sent by the client C to server S, but while sending back the response to the client, the cable breaks and the response is now sent back via air. This change in medium caused an additional delay of 20 msec. As compared to the Round Trip Time of the healthy network, the Round Trip Time (RTT) of the faulty system would\n[The speed of light in air is $3 \\times 10^{8} m/s$ and that on a cable is $2 \\times 10^{8} m/s]$",
+    "options": {
+      "A": "Increase",
+      "B": "Decrease",
+      "C": "Remain Same",
+      "D": "Insufficient Information"
+    },
+    "correctOption": "C",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Web Concepts, Security & Performance",
+    "context": null,
+    "question": "Consider the below server response\n`HTTP/2.0 500 Internal Server Error`\nWhich of the following is/are True?",
+    "options": {
+      "A": "HTTP/2.0 is the protocol and version respectively",
+      "B": "500 is the port number",
+      "C": "\"Internal Server Error\" is the status message",
+      "D": "500 is the status code",
+      "E": "HTTP/2.0 is the server failure"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": null,
+    "question": "Consider the flask code below.\n```python\nfrom flask import Flask\napp = Flask(__name__)\n@app.route(\"/employee/<id>\")\ndef get_employee(id):\n  return \"Employee id : \" + str(id)\nif __name__ == \"__main__\":\n  app.run(debug=True)\n```\nAssume that the above flask application is running on http://127.0.0.1:5000. Which of the following URLs will render \"Not Found\" error?",
+    "options": {
+      "A": "http://127.0.0.1:5000/employee/102",
+      "B": "http://127.0.0.1:5000/employee/id=102",
+      "C": "http://127.0.0.1:5000/id=102",
+      "D": "http://127.0.0.1:5000/102"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Databases & ORM",
+    "context": null,
+    "question": "Consider the following code snippet.\n```python\n@app.route('/name/<type>')\ndef prod_detail(type):\n  #CODE BLOCK HERE\n```\nAssume the database has a \"product\" table represented by class \"Product\" which has a TEXT column \"type\". If we want the server to return a 404 status code when a user goes to the route '/name/<type>' with a \"type\" that does not exist in the database, which of the following lines would give us the desired output?",
+    "options": {
+      "A": "type = Product.query.filter_by(type=type).first()\nif type is None:\n  return render_template(\"404.html\")\nreturn render_template('details.html', type=type)",
+      "B": "type = Product.query.filter_by(type=type).first()\nif type is None:\n  abort(404)\nreturn render_template('details.html', type=type)",
+      "C": "type = Product.query.filter_by(type=type).first_or_404()\nreturn render_template('details.html', type=type)",
+      "D": "type = Product.query.filter_by(type=type).first()\nif type is None:\n  return render_template(\"404.html\"), 404\nreturn render_template('details.html', type=type)"
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following code and answer the given subquestions.\n\nform.html\n```html\n<!DOCTYPE html>\n<body>\n<form method=Method>\nEnter Your Name <input type=\"text\" name=\"name\">\n<button>Submit</button>\n</form>\n</body>\n</html>\n```\n\napp.py\n```python\nfrom flask import Flask\nfrom flask import render_template, request\napp=Flask(__name__)\n@app.route(\"/\", methods=['GET', 'POST'])\ndef home():\n  if request.method==\"POST\":\n    return render_template(\"home.html\")\n  else:\n    return render_template(\"form.html\")\napp.run(debug=True)\n```\n(Note: The logic in app.py was corrected from the source to handle POST first for clarity, as POST submission would otherwise be handled by the GET condition's else block.)",
+    "question": "Suppose the value of Method in form.html is GET (form method is set to GET) and in the input box we write \"Application\", after submitting the form how the URL will look? Remember server is running on the server, http://127.0.0.1:5000.",
+    "options": {
+      "A": "http://127.0.0.1:5000/?name=Application",
+      "B": "http://127.0.0.1:5000/name=Application",
+      "C": "http://127.0.0.1:5000/?name",
+      "D": "http://127.0.0.1:5000/"
+    },
+    "correctOption": "A",
+    "questionType": "single"
+  },
+  {
+    "subject": "MAD 1",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Flask & Jinja Templating",
+    "context": "Consider the following code and answer the given subquestions.\n\nform.html\n```html\n<!DOCTYPE html>\n<body>\n<form method=Method>\nEnter Your Name <input type=\"text\" name=\"name\">\n<button>Submit</button>\n</form>\n</body>\n</html>\n```\n\napp.py\n```python\nfrom flask import Flask\nfrom flask import render_template, request\napp=Flask(__name__)\n@app.route(\"/\", methods=['GET', 'POST'])\ndef home():\n  if request.method==\"POST\":\n    return render_template(\"home.html\")\n  else:\n    return render_template(\"form.html\")\napp.run(debug=True)\n```\n(Note: The logic in app.py was corrected from the source to handle POST first for clarity, as POST submission would otherwise be handled by the GET condition's else block.)",
+    "question": "Suppose the value of Method in form.html is POST (form method is set to POST) and in the input box we write \"Application\", after submitting the form how the URL will look? Remember server is running on the server, http://127.0.0.1:5000.",
+    "options": {
+      "A": "http://127.0.0.1:5000/?name:Application",
+      "B": "http://127.0.0.1:5000/?Application",
+      "C": "http://127.0.0.1:5000/?name",
+      "D": "http://127.0.0.1:5000/"
+    },
+    "correctOption": "D",
+    "questionType": "single"
+  }
+]
