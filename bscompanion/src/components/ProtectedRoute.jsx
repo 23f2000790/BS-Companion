@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const ProtectedRoute = ({ children, requireOnboardingComplete }) => {
+const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
   const [checking, setChecking] = useState(true);
 
@@ -15,18 +15,11 @@ const ProtectedRoute = ({ children, requireOnboardingComplete }) => {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/getuser", {
+        // Verify token validity by fetching user
+        await axios.get("http://localhost:5000/getuser", {
           headers: { Authorization: `Bearer ${token}` },
         });
-
-        if (res.data.needsOnboarding && requireOnboardingComplete) {
-          navigate("/onboarding");
-          return;
-        }
-        if (!res.data.needsOnboarding && !requireOnboardingComplete) {
-          navigate("/dashboard");
-          return;
-        }
+        // If successful, stay on the page (children will render)
       } catch (err) {
         localStorage.removeItem("token");
         navigate("/auth");
@@ -36,7 +29,7 @@ const ProtectedRoute = ({ children, requireOnboardingComplete }) => {
     };
 
     checkAuth();
-  }, [navigate, requireOnboardingComplete]);
+  }, [navigate]);
 
   if (checking) {
     return (

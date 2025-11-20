@@ -1,15 +1,15 @@
 import React, { useRef, useEffect, useCallback, useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { gsap } from "gsap";
-import {
-  FaUser,
-  FaInfoCircle,
-  FaBook,
-  FaEnvelope,
-  FaShieldAlt,
-  FaPlus,
-} from "react-icons/fa";
 import "./MagicBento.css";
+
+// Import 3D Assets for Premium Look
+import bookImg from "../assets/images/book.png";
+import planeImg from "../assets/images/plane.png";
+import clockImg from "../assets/images/clockele.png";
+import diceImg from "../assets/images/diceele.png";
+import flowerImg from "../assets/images/flowerele.png";
+import paperImg from "../assets/images/paperele.png";
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -56,7 +56,7 @@ const ParticleCard = ({
   style,
   particleCount = DEFAULT_PARTICLE_COUNT,
   glowColor = DEFAULT_GLOW_COLOR,
-  enableTilt = true,
+  enableTilt = false, // Default to false as requested
   clickEffect = false,
   enableMagnetism = false,
 }) => {
@@ -377,7 +377,7 @@ const MagicBento = ({
   disableAnimations = false,
   spotlightRadius = DEFAULT_SPOTLIGHT_RADIUS,
   particleCount = DEFAULT_PARTICLE_COUNT,
-  enableTilt = true,
+  enableTilt = false, // Disabled by default
   glowColor = DEFAULT_GLOW_COLOR,
   clickEffect = true,
   enableMagnetism = false,
@@ -400,27 +400,27 @@ const MagicBento = ({
       label: "User Profile",
       title: user?.name || "N/A",
       description: `Located in ${user?.city || "N/A"}`,
-      icon: <FaUser />,
+      image: diceImg, // Using dice image for profile/random feel
     },
     {
       label: "Academic Overview",
       title: `Blood Group: ${user?.bloodGroup || "N/A"}`,
       description: `Current Level: ${user?.currentLevel || "N/A"}`,
-      icon: <FaInfoCircle />,
+      image: clockImg, // Using clock for time/academic progress
     },
-    { type: "subjects", icon: <FaBook /> },
-    { type: "subjects", icon: <FaBook /> },
+    { type: "subjects", image: bookImg },
+    { type: "subjects", image: bookImg },
     {
       label: "Contact Information",
       title: user?.email || "N/A",
       description: "Contact via registered email",
-      icon: <FaEnvelope />,
+      image: planeImg, // Paper plane for contact
     },
     {
       label: "Account Security",
       title: "Enhanced Protection",
       description: "Your account is secure",
-      icon: <FaShieldAlt />,
+      image: paperImg, // Paper/document for security/records
     },
   ];
 
@@ -458,7 +458,12 @@ const MagicBento = ({
             cardContent = (
               <>
                 <h2 className="subjects-heading" aria-label="Subjects Section">
-                  {card.icon} <span>Subjects</span>
+                  <img
+                    src={card.image}
+                    alt="Subjects"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
+                  <span>Subjects</span>
                 </h2>
                 <div className="sub-grid-container expanded">
                   {subjectSlice.map((item, i) => (
@@ -479,11 +484,11 @@ const MagicBento = ({
                       {item && !item.isAction && (
                         <button
                           style={{
-                            backgroundColor: "#ff4d4f", // red button background
+                            backgroundColor: "#ff4d4f",
                             border: "none",
-                            color: "white", // white icon
-                            padding: "4px 6px", // button shape
-                            borderRadius: "4px", // rounded button
+                            color: "white",
+                            padding: "4px 6px",
+                            borderRadius: "4px",
                             cursor: "pointer",
                             display: "flex",
                             alignItems: "center",
@@ -520,13 +525,33 @@ const MagicBento = ({
               <>
                 <div className="card__header">
                   <div className="card__label" aria-label={card.label}>
-                    {card.icon} <span>{card.label}</span>
+                    <img
+                      src={card.image}
+                      alt={card.label}
+                      style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                    />
+                    <span>{card.label}</span>
                   </div>
                 </div>
                 <div className="card__content">
                   <h2 className="card__title">{card.title}</h2>
                   <p className="card__description">{card.description}</p>
                 </div>
+                {/* Decorative large image in background or corner */}
+                <img
+                  src={card.image}
+                  alt=""
+                  style={{
+                    position: "absolute",
+                    bottom: "-20px",
+                    right: "-20px",
+                    width: "120px",
+                    height: "120px",
+                    opacity: 0.1,
+                    transform: "rotate(-15deg)",
+                    pointerEvents: "none",
+                  }}
+                />
               </>
             );
           }

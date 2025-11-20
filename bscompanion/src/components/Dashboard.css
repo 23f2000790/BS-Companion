@@ -1,3 +1,19 @@
+:root {
+  /* --- Professional Color Palette --- */
+  --bg-dark: #0a0a0a;
+  --bg-panel: #141414;
+  --bg-panel-hover: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+  --accent-primary: #6366f1; /* Indigo */
+  --accent-glow: rgba(99, 102, 241, 0.5);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(20, 20, 20, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --font-family: "Inter", sans-serif; /* Ensure Inter is loaded or fallback */
+}
+
 /* === MAIN DASHBOARD LAYOUT === */
 .dashboard {
   display: flex;
@@ -6,25 +22,38 @@
   justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
-  padding: 2rem;
-  padding-bottom: 8rem; /* Add padding to the bottom to avoid overlap with the dock */
+  padding: 3rem 2rem;
+  padding-bottom: 8rem;
   overflow-y: auto;
   box-sizing: border-box;
-  color: #dad8b6; /* Default light text color for dashboard */
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+}
+
+.dashboard.locked {
+  overflow: hidden !important;
+  height: 100vh;
 }
 
 .dashboard-header {
   width: 100%;
-  max-width: 54em;
+  max-width: 1200px; /* Increased max-width for better grid alignment */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .dashboard-header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #fff, #ccc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* === LOADER STYLES === */
@@ -34,182 +63,329 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  gap: 1rem;
+  gap: 1.5rem;
+  background-color: var(--bg-dark);
 }
 
 .spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid var(--purple-primary, #8400ff);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid var(--accent-primary);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1.5s linear infinite;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .loading-text {
-  font-size: 1.2rem;
-  color: #fff;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-/* === CORRECTED MODAL STYLES === */
+.modal-box {
+  margin-bottom: 1.5rem;
+}
 
-/* Overlay background */
+.modal-box label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal-box select,
+.modal-bottom-left input,
+.modal-bottom-left select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: var(--font-family);
+  outline: none;
+  transition: all 0.2s ease;
+  appearance: none; /* Remove default arrow for custom styling if desired, but for now keep simple */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+/* Remove arrow for text inputs */
+.modal-bottom-left input {
+  background-image: none;
+}
+
+.modal-box select:hover,
+.modal-bottom-left input:hover,
+.modal-bottom-left select:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-box select:focus,
+.modal-bottom-left input:focus,
+.modal-bottom-left select:focus {
+  border-color: var(--accent-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* Fix for dropdown options text visibility */
+.modal-box select option,
+.modal-bottom-left select option {
+  background-color: #141414; /* Dark background */
+  color: #ffffff; /* White text */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-actions button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cancel-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+}
+
+.cancel-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.confirm-btn {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.confirm-btn:hover {
+  background: #5558dd;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.confirm-btn:active {
+  transform: translateY(0);
+}
+
+/* Checkbox Grid for Add Subjects */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 4px;
+  /* Custom Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) rgba(255, 255, 255, 0.05);
+}
+
+.checkbox-grid:focus {
+  outline: none;
+}
+
+.checkbox-grid::-webkit-scrollbar {
+  width: 6px;
+}
+.checkbox-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+.checkbox-grid::-webkit-scrollbar-thumb {
+  background-color: var(--accent-primary);
+  border-radius: 3px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align content */
+  gap: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  user-select: none;
+}
+
+.checkbox-label:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Active/Checked State for Label - using :has selector for modern browsers */
+.checkbox-label:has(input:checked) {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: var(--accent-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+/* Fallback for older browsers if needed, but :has is widely supported now in modern chrome/edge */
+
+.checkbox-label input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  margin: 0;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}
+
+/* === MODAL STYLES === */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-content h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to bottom right, #fff, #ccc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
+  transition: all 0.2s;
 }
 
-/* Modal container */
-.modal {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 20px;
-  width: 800px;
-  max-width: 95%;
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Specific Modal Overrides */
+.add-subject-modal {
+  max-width: 1000px; /* Increased width */
+  width: 90vw;      /* Responsive width */
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #333; /* Sets default dark text color for modal content */
 }
 
-/* Title */
-.modal h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #444;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-/* Top row: 3 boxes side by side */
-.modal-top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
-  gap: 20px;
-}
-
-/* Each box (topic / exam / term) */
-.modal-box {
+/* Ensure the grid takes available space but scrolls if needed */
+.add-subject-modal .checkbox-grid {
   flex: 1;
-  background: #f8f8f8;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1.5rem;
+  min-height: 0; /* Important for flex child scrolling */
 }
 
-.modal-box label {
-  font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #333;
+.quiz-modal {
+  max-width: 450px;
 }
 
-/* Dropdown styling */
-.modal-box select {
-  width: 100%;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 14px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-  color: #333;
-}
-
-.modal-box select:disabled {
-  background-color: #e9ecef;
-  cursor: not-allowed;
-}
-
-/* Bottom row (no. of questions + mode + buttons) */
-.modal-bottom {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-}
-
-.modal-bottom-left {
-  display: flex;
-  gap: 15px;
-}
-
-.modal-bottom-left label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.modal-bottom-left input,
-.modal-bottom-left select {
-  padding: 6px 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  color: white;
-}
-
-/* Buttons */
-.modal-buttons {
-  display: flex;
-  gap: 12px;
-}
-
-.modal-buttons button {
-  padding: 8px 18px;
-  border-radius: 8px;
-  border: none;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.modal-buttons .cancel {
-  background: #ccc;
-  color: #333;
-}
-
-.modal-buttons .cancel:hover {
-  background: #b3b3b3;
-}
-
-.modal-buttons .submit {
-  background: #4caf50;
-  color: white;
-}
-
-.modal-buttons .submit:hover {
-  background: #43a047;
+.remove-subject-modal {
+  max-width: 400px;
 }

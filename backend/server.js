@@ -10,6 +10,7 @@ import questionsRoute from "./routes/questions.js";
 import topicsRoute from "./routes/topics.js";
 import termsRouter from "./routes/terms.js";
 import resultsRouter from "./routes/results.js";
+import aiRouter from "./routes/ai.js";
 
 dotenv.config();
 const app = express();
@@ -21,6 +22,7 @@ app.use("/api/topics", topicsRoute);
 app.use("/api/questions", questionsRoute);
 app.use("/api/terms", termsRouter);
 app.use("/api/results", resultsRouter);
+app.use("/api/ai", aiRouter);
 
 const JWT_SECRET = process.env.JWT_SECRET || "yoursecretkey";
 const MONGO_URI = process.env.MONGO_URI;

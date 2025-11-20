@@ -32,11 +32,8 @@ const LandingPage = () => {
             headers: { Authorization: `Bearer ${token}` },
           });
 
-          if (res.data.needsOnboarding) {
-            navigate("/onboarding");
-          } else {
-            navigate("/dashboard");
-          }
+          // If user exists, go to dashboard
+          navigate("/dashboard");
         } catch (err) {
           console.error("Error fetching user:", err);
           localStorage.removeItem("token");

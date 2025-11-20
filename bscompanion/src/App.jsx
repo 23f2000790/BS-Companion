@@ -8,7 +8,8 @@ import Quiz from "./components/Quiz";
 const LandingPage = lazy(() => import("./components/LandingPage"));
 const AuthPage = lazy(() => import("./components/AuthPage"));
 const Dashboard = lazy(() => import("./components/Dashboard"));
-const Onboarding = lazy(() => import("./components/Onboarding"));
+const QuizHistory = lazy(() => import("./components/QuizHistory"));
+
 
 const App = () => {
   useEffect(() => {
@@ -38,24 +39,32 @@ const App = () => {
               <Route
                 path="/dashboard"
                 element={
-                  <ProtectedRoute requireOnboardingComplete={true}>
+                  <ProtectedRoute>
                     <Dashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/onboarding"
-                element={
-                  <ProtectedRoute requireOnboardingComplete={false}>
-                    <Onboarding />
                   </ProtectedRoute>
                 }
               />
               <Route
                 path="/quiz/:subject"
                 element={
-                  <ProtectedRoute requireOnboardingComplete={true}>
+                  <ProtectedRoute>
                     <Quiz />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/quiz/:subject/result/:resultId"
+                element={
+                  <ProtectedRoute>
+                    <Quiz />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/quiz-history"
+                element={
+                  <ProtectedRoute>
+                    <QuizHistory />
                   </ProtectedRoute>
                 }
               />

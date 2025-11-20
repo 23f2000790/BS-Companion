@@ -1,123 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Dashboard.css";
-import "./Dock.css";
 import axios from "axios";
 import MagicBento from "./MagicBento";
 import Dock from "./Dock";
-
-// --------- Static Icons ---------
-const HomeIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-  </svg>
-);
-const ConnectionsIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-    <circle cx="9" cy="7" r="4"></circle>
-    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-  </svg>
-);
-const StatsIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M3 3v18h18"></path>
-    <path d="M18 17V9"></path>
-    <path d="M13 17V5"></path>
-    <path d="M8 17v-3"></path>
-  </svg>
-);
-const SettingsIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="3"></circle>
-    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-  </svg>
-);
-const LogoutIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-    <polyline points="16 17 21 12 16 7"></polyline>
-    <line x1="21" x2="9" y1="12" y2="12"></line>
-  </svg>
-);
-
-// --------- Subject Lists ---------
-const foundational = [
-  "Math 1",
-  "English 1",
-  "Computational Thinking",
-  "Statistics 1",
-  "Math 2",
-  "English 2",
-  "Programming in Python",
-  "Statistics 2",
-];
-const diploma = [
-  "PDSA",
-  "DBMS",
-  "BDM",
-  "TDS",
-  "System Commands",
-  "MAD 1",
-  "MAD 2",
-  "MLF",
-  "MLT",
-  "MLP",
-  "Business Analytics",
-  "Java",
-];
+import {
+  HomeIcon,
+  ConnectionsIcon,
+  StatsIcon,
+  SettingsIcon,
+  LogoutIcon,
+  IconXCircle,
+} from "./icons";
+import { FOUNDATIONAL_SUBJECTS, DIPLOMA_SUBJECTS } from "../constants";
+import "./Dashboard.css";
+import "./Dock.css";
 
 // =============================================================
 //                          COMPONENT
@@ -125,6 +21,7 @@ const diploma = [
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const checkboxGridRef = React.useRef(null);
 
   // --- Add / Remove subjects ---
   const [showAddModal, setShowAddModal] = useState(false);
@@ -132,41 +29,6 @@ const Dashboard = () => {
   const [selectedNewSubjects, setSelectedNewSubjects] = useState([]);
   const [showRemoveModal, setShowRemoveModal] = useState(false);
   const [subjectToRemove, setSubjectToRemove] = useState("");
-
-  const openAddSubjectsModal = () => {
-    const levelList =
-      user.currentLevel === "Foundational" ? foundational : diploma;
-    const remaining = levelList.filter((s) => !user.subjects.includes(s));
-    setAvailableSubjects(remaining);
-    setSelectedNewSubjects([]);
-    setShowAddModal(true);
-  };
-
-  const confirmAddSubjects = async () => {
-    if (!selectedNewSubjects.length) return;
-    const res = await axios.put(
-      "http://localhost:5000/user/update-subjects",
-      { add: selectedNewSubjects },
-      { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-    );
-    setUser(res.data.user); // update UI instantly
-    setShowAddModal(false);
-  };
-
-  const onRemoveClick = (sub) => {
-    setSubjectToRemove(sub);
-    setShowRemoveModal(true);
-  };
-
-  const confirmRemove = async () => {
-    const res = await axios.put(
-      "http://localhost:5000/user/update-subjects",
-      { remove: subjectToRemove },
-      { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-    );
-    setUser(res.data.user);
-    setShowRemoveModal(false);
-  };
 
   // --- Quiz Modal State ---
   const [showModal, setShowModal] = useState(false);
@@ -234,6 +96,82 @@ const Dashboard = () => {
     }
   }, [selectedSubject, exam, selectedTopic]);
 
+  // --- Dashboard Scroll Lock ---
+  useEffect(() => {
+    const dashboard = document.querySelector(".dashboard");
+    if (!dashboard) return;
+
+    if (showAddModal || showRemoveModal || showModal) {
+      dashboard.classList.add("locked");
+    } else {
+      dashboard.classList.remove("locked");
+    }
+
+    // Cleanup on unmount
+    return () => {
+      if (dashboard) dashboard.classList.remove("locked");
+    };
+  }, [showAddModal, showRemoveModal, showModal]);
+
+  const openAddSubjectsModal = () => {
+    const levelList =
+      user.currentLevel === "Foundational"
+        ? FOUNDATIONAL_SUBJECTS
+        : DIPLOMA_SUBJECTS;
+    const remaining = levelList.filter((s) => !user.subjects.includes(s));
+    setAvailableSubjects(remaining);
+    setSelectedNewSubjects([]);
+    setShowAddModal(true);
+  };
+
+  const confirmAddSubjects = async () => {
+    if (!selectedNewSubjects.length) return;
+    try {
+      const res = await axios.put(
+        "http://localhost:5000/user/update-subjects",
+        { add: selectedNewSubjects },
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
+      setUser(res.data.user); // update UI instantly
+      setShowAddModal(false);
+    } catch (error) {
+      console.error("Error adding subjects:", error);
+    }
+  };
+
+  // --- Focus Management for Add Subject Modal ---
+  useEffect(() => {
+    if (showAddModal && checkboxGridRef.current) {
+      // Small timeout to ensure render is complete and transition has started
+      setTimeout(() => {
+        checkboxGridRef.current.focus();
+      }, 50);
+    }
+  }, [showAddModal]);
+
+  const onRemoveClick = (sub) => {
+    setSubjectToRemove(sub);
+    setShowRemoveModal(true);
+  };
+
+  const confirmRemove = async () => {
+    try {
+      const res = await axios.put(
+        "http://localhost:5000/user/update-subjects",
+        { remove: subjectToRemove },
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
+      setUser(res.data.user);
+      setShowRemoveModal(false);
+    } catch (error) {
+      console.error("Error removing subject:", error);
+    }
+  };
+
   const LogoutUser = () => {
     localStorage.removeItem("token");
     navigate("/");
@@ -285,8 +223,7 @@ const Dashboard = () => {
 
   const DOCK_ITEMS = [
     { label: "Home", icon: <HomeIcon />, onClick: () => {} },
-    { label: "Connections", icon: <ConnectionsIcon />, onClick: () => {} },
-    { label: "Statistics", icon: <StatsIcon />, onClick: () => {} },
+    { label: "History", icon: <StatsIcon />, onClick: () => navigate("/quiz-history") },
     { label: "Settings", icon: <SettingsIcon />, onClick: () => {} },
     { label: "Logout", icon: <LogoutIcon />, onClick: LogoutUser },
   ];
@@ -313,168 +250,221 @@ const Dashboard = () => {
         onRemoveClick={onRemoveClick}
       />
 
-      {/* ===== Quiz Modal ===== */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Start Quiz - {selectedSubject}</h2>
-
-            <div className="modal-top">
-              <div className="modal-box">
-                <label>Topic</label>
-                <select
-                  value={selectedTopic}
-                  onChange={(e) => setSelectedTopic(e.target.value)}
-                  disabled={isFilterLoading}
-                >
-                  <option value="">-- All Topics --</option>
-                  {isFilterLoading ? (
-                    <option disabled>Loading...</option>
-                  ) : (
-                    topics.map((t, i) => (
-                      <option key={i} value={t}>
-                        {t}
-                      </option>
-                    ))
-                  )}
-                </select>
-              </div>
-
-              <div className="modal-box">
-                <label>Exam</label>
-                <select
-                  value={exam}
-                  onChange={(e) => setExam(e.target.value)}
-                  disabled={isFilterLoading}
-                >
-                  <option value="">-- All Exams --</option>
-                  {isFilterLoading ? (
-                    <option disabled>Loading...</option>
-                  ) : (
-                    availExam.map((t, i) => (
-                      <option key={i} value={t}>
-                        {t}
-                      </option>
-                    ))
-                  )}
-                </select>
-              </div>
-
-              <div className="modal-box">
-                <label>Term</label>
-                <select
-                  value={term}
-                  onChange={(e) => setTerm(e.target.value)}
-                  disabled={isFilterLoading}
-                >
-                  <option value="">-- All Terms --</option>
-                  {isFilterLoading ? (
-                    <option disabled>Loading...</option>
-                  ) : (
-                    terms.map((t, i) => (
-                      <option key={i} value={t}>
-                        {t}
-                      </option>
-                    ))
-                  )}
-                </select>
-              </div>
-            </div>
-
-            <div className="modal-bottom">
-              <div className="modal-bottom-left">
-                <label>
-                  Number of Questions
-                  <input
-                    type="number"
-                    min="1"
-                    max="100"
-                    value={numQuestions}
-                    onChange={(e) => setNumQuestions(Number(e.target.value))}
-                  />
-                </label>
-                <label>
-                  Mode
-                  <select
-                    value={mode}
-                    onChange={(e) => setMode(e.target.value)}
-                  >
-                    <option value="exam">Exam Mode</option>
-                    <option value="practice">Practice Mode</option>
-                  </select>
-                </label>
-              </div>
-
-              <div className="modal-buttons">
-                <button className="cancel" onClick={() => setShowModal(false)}>
-                  Cancel
-                </button>
-                <button className="submit" onClick={startQuiz}>
-                  Start Quiz
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ===== Add Subjects Modal ===== */}
+      {/* --- Add Subject Modal --- */}
       {showAddModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Select New Subjects</h2>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "10px",
-              }}
+        <div className="modal-overlay" onClick={() => setShowAddModal(false)}>
+          <div
+            className="modal-content add-subject-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="modal-close-btn"
+              onClick={() => setShowAddModal(false)}
             >
-              {availableSubjects.map((sub) => (
-                <label key={sub} style={{ width: "45%" }}>
+              <IconXCircle />
+            </button>
+            <h2>Add Subject</h2>
+            <div
+              className="checkbox-grid"
+              ref={checkboxGridRef}
+              tabIndex={-1}
+            >
+              {FOUNDATIONAL_SUBJECTS.map((sub) => (
+                <label key={sub} className="checkbox-label">
                   <input
                     type="checkbox"
-                    value={sub}
-                    onChange={(e) => {
-                      const v = e.target.value;
+                    checked={selectedNewSubjects.includes(sub)}
+                    onChange={() => {
                       setSelectedNewSubjects((prev) =>
-                        prev.includes(v)
-                          ? prev.filter((x) => x !== v)
-                          : [...prev, v]
+                        prev.includes(sub)
+                          ? prev.filter((x) => x !== sub)
+                          : [...prev, sub]
                       );
                     }}
-                  />{" "}
+                  />
+                  {sub}
+                </label>
+              ))}
+              {DIPLOMA_SUBJECTS.map((sub) => (
+                <label key={sub} className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={selectedNewSubjects.includes(sub)}
+                    onChange={() => {
+                      setSelectedNewSubjects((prev) =>
+                        prev.includes(sub)
+                          ? prev.filter((x) => x !== sub)
+                          : [...prev, sub]
+                      );
+                    }}
+                  />
                   {sub}
                 </label>
               ))}
             </div>
-            <div className="modal-buttons">
-              <button className="cancel" onClick={() => setShowAddModal(false)}>
+            <div className="modal-actions">
+              <button
+                className="cancel-btn"
+                onClick={() => setShowAddModal(false)}
+              >
                 Cancel
               </button>
-              <button className="submit" onClick={confirmAddSubjects}>
-                Add
+              <button className="confirm-btn" onClick={confirmAddSubjects}>
+                Add Selected
               </button>
             </div>
           </div>
         </div>
       )}
 
-      {/* ===== Remove Subject Modal ===== */}
+      {/* --- Remove Subject Modal --- */}
       {showRemoveModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Remove {subjectToRemove}?</h2>
-            <div className="modal-buttons">
+        <div
+          className="modal-overlay"
+          onClick={() => setShowRemoveModal(false)}
+        >
+          <div
+            className="modal-content remove-subject-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="modal-close-btn"
+              onClick={() => setShowRemoveModal(false)}
+            >
+              <IconXCircle />
+            </button>
+            <h2>Remove Subject</h2>
+            <p style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+              Are you sure you want to remove <strong>{subjectToRemove}</strong>?
+            </p>
+            <div className="modal-actions">
               <button
-                className="cancel"
+                className="cancel-btn"
                 onClick={() => setShowRemoveModal(false)}
               >
                 Cancel
               </button>
-              <button className="submit" onClick={confirmRemove}>
-                Confirm
+              <button className="confirm-btn" onClick={confirmRemove}>
+                Confirm Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* --- Quiz Setup Modal --- */}
+      {showModal && (
+        <div className="modal-overlay" onClick={() => setShowModal(false)}>
+          <div
+            className="modal-content quiz-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="modal-close-btn"
+              onClick={() => setShowModal(false)}
+            >
+              <IconXCircle />
+            </button>
+            <h2>Start Quiz: {selectedSubject}</h2>
+            
+            <div className="modal-box">
+              <label>Topic</label>
+              <select
+                value={selectedTopic}
+                onChange={(e) => setSelectedTopic(e.target.value)}
+                disabled={isFilterLoading}
+              >
+                <option value="">-- All Topics --</option>
+                {isFilterLoading ? (
+                  <option disabled>Loading...</option>
+                ) : (
+                  topics.map((t, i) => (
+                    <option key={i} value={t}>
+                      {t}
+                    </option>
+                  ))
+                )}
+              </select>
+            </div>
+
+            <div className="modal-box">
+              <label>Exam</label>
+              <select
+                value={exam}
+                onChange={(e) => setExam(e.target.value)}
+                disabled={isFilterLoading}
+              >
+                <option value="">-- All Exams --</option>
+                {isFilterLoading ? (
+                  <option disabled>Loading...</option>
+                ) : (
+                  availExam.map((t, i) => (
+                    <option key={i} value={t}>
+                      {t}
+                    </option>
+                  ))
+                )}
+              </select>
+            </div>
+
+            <div className="modal-box">
+              <label>Term</label>
+              <select
+                value={term}
+                onChange={(e) => setTerm(e.target.value)}
+                disabled={isFilterLoading}
+              >
+                <option value="">-- All Terms --</option>
+                {isFilterLoading ? (
+                  <option disabled>Loading...</option>
+                ) : (
+                  terms.map((t, i) => (
+                    <option key={i} value={t}>
+                      {t}
+                    </option>
+                  ))
+                )}
+              </select>
+            </div>
+
+            <div className="modal-bottom">
+              <div className="modal-bottom-left" style={{ width: "100%" }}>
+                <div style={{ display: "flex", gap: "1rem", width: "100%" }}>
+                  <div style={{ flex: 1 }}>
+                    <label style={{ display: "block", marginBottom: "0.5rem", color: "#a0a0a0", fontSize: "0.875rem" }}>Questions</label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="100"
+                      value={numQuestions}
+                      onChange={(e) => setNumQuestions(Number(e.target.value))}
+                      style={{ width: "100%" }}
+                    />
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <label style={{ display: "block", marginBottom: "0.5rem", color: "#a0a0a0", fontSize: "0.875rem" }}>Mode</label>
+                    <select
+                      value={mode}
+                      onChange={(e) => setMode(e.target.value)}
+                      style={{ width: "100%" }}
+                    >
+                      <option value="exam">Exam Mode</option>
+                      <option value="practice">Practice Mode</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="modal-actions">
+              <button
+                className="cancel-btn"
+                onClick={() => setShowModal(false)}
+              >
+                Cancel
+              </button>
+              <button className="confirm-btn" onClick={startQuiz}>
+                Start Quiz
               </button>
             </div>
           </div>

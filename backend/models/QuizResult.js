@@ -82,6 +82,11 @@ const QuizResultSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    // AI-generated analysis (optional, only if user requests it)
+    aiAnalysis: {
+      type: String,
+      default: null,
+    },
   },
   {
     timestamps: true, // Adds createdAt and updatedAt timestamps automatically

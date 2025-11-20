@@ -4,7 +4,6 @@ import { signInWithGoogle } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
-import PasswordInput from "./PasswordInput";
 
 // Floating elements
 import benchele from "../assets/images/benchele.png";
@@ -19,13 +18,6 @@ const AuthPage = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [activeTab, setActiveTab] = useState("login");
-  const [hoveredTab, setHoveredTab] = useState(null);
-
-  // Form state
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   const handleMouseMove = (e) => {
     const button = e.currentTarget;
@@ -39,21 +31,7 @@ const AuthPage = () => {
   const handleAuthSuccess = async (token, user) => {
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(user));
-
-    try {
-      const checkRes = await axios.get("http://localhost:5000/getuser", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      if (checkRes.data.needsOnboarding) {
-        navigate("/onboarding");
-      } else {
-        navigate("/dashboard");
-      }
-    } catch (err) {
-      console.error(err);
-      navigate("/auth");
-    }
+    navigate("/dashboard");
   };
 
   const handleGoogleSignIn = async () => {
@@ -74,39 +52,6 @@ const AuthPage = () => {
     } catch (err) {
       console.error(err.response?.data || err.message);
       setError("Google sign-in failed. Try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleEmailAuth = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
-
-    if (activeTab === "register" && !name) {
-      setError("Name is required for registration.");
-      setLoading(false);
-      return;
-    }
-    if (!email || !password) {
-      setError("Email and password are required.");
-      setLoading(false);
-      return;
-    }
-
-    try {
-      const url =
-        activeTab === "register"
-          ? "http://localhost:5000/auth/register"
-          : "http://localhost:5000/auth/login";
-
-      const res = await axios.post(url, { name, email, password });
-      const { token, user } = res.data;
-      await handleAuthSuccess(token, user);
-    } catch (err) {
-      console.error(err.response?.data || err.message);
-      setError(err.response?.data?.message || "Authentication failed.");
     } finally {
       setLoading(false);
     }
@@ -233,33 +178,8 @@ const AuthPage = () => {
         }}
       >
         <h1 style={{ marginBottom: "20px", color: "#dad7b6" }}>
-          {activeTab === "login" ? "Login" : "Register"}
+          Sign In
         </h1>
-
-        {/* Tabs */}
-        <div style={{ display: "flex", marginBottom: "20px", gap: "10px" }}>
-          {["login", "register"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              onMouseEnter={() => setHoveredTab(tab)}
-              onMouseLeave={() => setHoveredTab(null)}
-              style={{
-                padding: "10px 20px",
-                borderRadius: "25px",
-                border: "1px solid #ccc",
-                color: "#1e1e1e",
-                backgroundColor: activeTab === tab ? "#fff" : "#f0f0f0",
-                transform:
-                  hoveredTab === tab ? "translateY(-5px)" : "translateY(0)",
-                boxShadow:
-                  hoveredTab === tab ? "0 8px 15px rgba(0,0,0,0.2)" : "none",
-              }}
-            >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </button>
-          ))}
-        </div>
 
         {/* Google sign-in */}
         <button
@@ -269,7 +189,7 @@ const AuthPage = () => {
             display: "flex",
             alignItems: "center",
             gap: "10px",
-            padding: "10px 20px",
+            padding: "12px 24px",
             fontSize: "16px",
             borderRadius: "50px",
             border: "none",
@@ -277,7 +197,11 @@ const AuthPage = () => {
             color: "#1e1e1e",
             cursor: loading ? "not-allowed" : "pointer",
             marginBottom: "20px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+            transition: "transform 0.2s ease",
           }}
+          onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
+          onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
         >
           {loading ? (
             "Signing in..."
@@ -287,80 +211,6 @@ const AuthPage = () => {
             </>
           )}
         </button>
-
-        <p style={{ color: "#dad7b6", marginBottom: "15px" }}>
-          Or {activeTab === "login" ? "login" : "register"} with email
-        </p>
-
-        {/* Email/password form */}
-        <form
-          onSubmit={handleEmailAuth}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "300px",
-            gap: "15px",
-          }}
-        >
-          {activeTab === "register" && (
-            <input
-              type="text"
-              placeholder="Full Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              style={{
-                padding: "10px",
-                borderRadius: "5px",
-                border: "1px solid #ccc",
-                backgroundColor: "#1e1e1e",
-                color: "#dad7b6",
-                outline: "none",
-              }}
-            />
-          )}
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            style={{
-              padding: "10px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-              backgroundColor: "#1e1e1e",
-              color: "#dad7b6",
-              outline: "none",
-            }}
-          />
-          {/* Integrated PasswordInput */}
-          <PasswordInput
-            value={password}
-            onChange={setPassword}
-            showStrength={activeTab === "register"} // Only show in register mode
-          />
-
-          <button
-            type="submit"
-            disabled={loading}
-            style={{
-              padding: "10px",
-              fontSize: "16px",
-              borderRadius: "5px",
-              border: "none",
-              backgroundColor: "#4CAF50",
-              color: "#fff",
-              cursor: loading ? "not-allowed" : "pointer",
-            }}
-          >
-            {loading
-              ? activeTab === "register"
-                ? "Registering..."
-                : "Logging in..."
-              : activeTab === "register"
-              ? "Register"
-              : "Login"}
-          </button>
-        </form>
 
         {error && <p style={{ color: "red", marginTop: "15px" }}>{error}</p>}
       </div>
