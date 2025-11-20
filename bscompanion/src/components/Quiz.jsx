@@ -224,12 +224,145 @@ const TopicChart = ({ data }) => {
   );
 };
 
+// --- AI Visualization Components ---
+
+const AnalysisHero = ({ summary }) => {
+  if (!summary) return null;
+  return (
+    <div className="analysis-hero">
+      <div className="hero-badge">{summary.archetype}</div>
+      <h2 className="hero-title">{summary.title}</h2>
+      <div className="hero-insight">
+        <span className="insight-icon">💡</span>
+        <p>"{summary.behavioral_insight}"</p>
+      </div>
+    </div>
+  );
+};
+
+const SkillRadar = ({ data }) => {
+  if (!data || data.length === 0) return null;
+  return (
+    <div className="skill-radar-container">
+      <h3>Skill Proficiency</h3>
+      <div className="radar-wrapper">
+        <ResponsiveContainer width="100%" height="100%">
+          <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+            <PolarGrid stroke="#444" />
+            <PolarAngleAxis dataKey="subject" tick={{ fill: '#ccc', fontSize: 12 }} />
+            <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
+            <Radar
+              name="Skill"
+              dataKey="score"
+              stroke="#8884d8"
+              fill="#8884d8"
+              fillOpacity={0.6}
+            />
+          </RadarChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
+  );
+};
+
+const ResourceLibrary = ({ resources }) => {
+  if (!resources || resources.length === 0) return null;
+  return (
+    <div className="resource-library">
+      <h3>Recommended Resources</h3>
+      <div className="resource-grid">
+        {resources.map((res, idx) => (
+          <a 
+            key={idx} 
+            href={`https://www.youtube.com/results?search_query=${encodeURIComponent(res.search_query)}`} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="resource-card"
+          >
+            <div className="resource-icon">📺</div>
+            <div className="resource-content">
+              <h4>{res.video_title_idea}</h4>
+              <p className="resource-topic">{res.topic}</p>
+              <p className="resource-reason">{res.reason}</p>
+            </div>
+            <div className="external-link-icon">↗</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const RedemptionArc = ({ question }) => {
+  const [selected, setSelected] = useState(null);
+  const [isCorrect, setIsCorrect] = useState(null);
+
+  if (!question) return null;
+
+  const checkAnswer = (option, correct) => {
+    if (!option || !correct) return false;
+    const normOption = option.trim();
+    const normCorrect = correct.trim();
+    
+    // 1. Exact match
+    if (normOption === normCorrect) return true;
+    
+    // 2. Letter match (e.g. correct="B", option="B. ...")
+    if (/^[A-D]$/i.test(normCorrect)) {
+      return normOption.toUpperCase().startsWith(`${normCorrect.toUpperCase()}.`);
+    }
+
+    // 3. Content match (ignore prefix "A. ")
+    const optionContent = normOption.replace(/^[A-D]\.\s*/, "");
+    if (optionContent === normCorrect) return true;
+
+    // 4. Substring match (if correct answer is a significant part of the option)
+    // This handles cases where AI puts just the code snippet as correct answer
+    if (normCorrect.length > 5 && normOption.includes(normCorrect)) return true;
+
+    return false;
+  };
+
+  const handleCheck = (option) => {
+    setSelected(option);
+    setIsCorrect(checkAnswer(option, question.correct_answer));
+  };
+
+  return (
+    <div className="redemption-arc">
+      <div className="redemption-header">
+        <h3>Redemption Arc</h3>
+        <p>Prove you've learned! Answer this follow-up question.</p>
+      </div>
+      <div className="redemption-card">
+        <p className="redemption-question">{question.question}</p>
+        <div className="redemption-options">
+          {question.options.map((opt, idx) => (
+            <button
+              key={idx}
+              className={`redemption-opt ${selected === opt ? (isCorrect ? 'correct' : 'incorrect') : ''} ${selected && checkAnswer(opt, question.correct_answer) ? 'correct' : ''}`}
+              onClick={() => !selected && handleCheck(opt)}
+              disabled={!!selected}
+            >
+              {opt}
+            </button>
+          ))}
+        </div>
+        {selected && (
+          <div className={`redemption-feedback ${isCorrect ? 'success' : 'error'}`}>
+            <strong>{isCorrect ? 'Correct!' : 'Not quite.'}</strong> {question.explanation}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 // --- Results Dashboard Component ---
 const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) => {
   const [aiAnalysis, setAiAnalysis] = useState(savedAiAnalysis || null);
   const [loadingAI, setLoadingAI] = useState(false);
   const [aiError, setAiError] = useState(null);
-  const aiContentRef = useRef(null);
 
   const stats = useMemo(() => {
     if (!results) return null;
@@ -277,6 +410,7 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
       weakTopics,
     };
   }, [results]);
+
   const formatTime = (secs) => `${Math.floor(secs / 60)}m ${secs % 60}s`;
   const formatCorrectAnswer = (option) => {
     if (Array.isArray(option)) return option.join(", ");
@@ -296,11 +430,8 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
     setAiError(null);
     try {
       const token = localStorage.getItem("token");
+      const formatTimeStr = (secs) => `${Math.floor(secs / 60)}m ${secs % 60}s`;
       
-      // Format time taken
-      const formatTime = (secs) => `${Math.floor(secs / 60)}m ${secs % 60}s`;
-      
-      // Build detailed questions array with questionText and correctAnswer
       const detailedQuestions = results.questions.map((q, idx) => ({
         topic: q.topic,
         questionText: originalQuestions[idx]?.question || "N/A",
@@ -312,12 +443,12 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
       const response = await axios.post(
         "http://localhost:5000/api/ai/analyze",
         {
-          resultId: resultId, // Pass the saved result ID
+          resultId: resultId,
           score: results.score,
           totalQuestions: results.totalQuestions,
           topicPerformance: stats.topicPerformance,
           questions: detailedQuestions,
-          timeTaken: formatTime(results.timeTaken)
+          timeTaken: formatTimeStr(results.timeTaken)
         },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -334,139 +465,52 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
     }
   };
 
-  const handleCopyToClipboard = () => {
-    if (aiAnalysis) {
-      const text = JSON.stringify(aiAnalysis, null, 2);
-      navigator.clipboard.writeText(text);
-      alert("Analysis copied to clipboard!");
-    }
-  };
-
-  const handleDownload = () => {
-    if (aiAnalysis) {
-      const text = JSON.stringify(aiAnalysis, null, 2);
-      const blob = new Blob([text], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `quiz-analysis-${Date.now()}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-    }
-  };
-
   if (!results || !stats) return <div className="loading-spinner"></div>;
+
   return (
     <div className="results-dashboard">
-      {/* AI Analysis Section */}
       <div className="ai-analysis-section">
-        <button
-          className="btn btn-ai-analyze"
-          onClick={handleAnalyzeWithAI}
-          disabled={loadingAI}
-        >
-          {loadingAI ? "Analyzing..." : "🤖 Analyze Performance with AI"}
-        </button>
-
-        {aiError && <div className="ai-error">{aiError}</div>}
+        {!aiAnalysis && (
+           <div className="ai-cta-container">
+              <button
+                className="btn btn-ai-analyze"
+                onClick={handleAnalyzeWithAI}
+                disabled={loadingAI}
+              >
+                {loadingAI ? "Analyzing..." : "🤖 Analyze Performance with AI"}
+              </button>
+              {aiError && <div className="ai-error">{aiError}</div>}
+           </div>
+        )}
 
         {aiAnalysis && (
-          <div className="ai-chatbox">
-            <div className="ai-chatbox-header">
-              <h3>🤖 Premium AI Coach Analysis</h3>
-              <div className="ai-actions">
-                <button className="btn-icon" onClick={handleCopyToClipboard} title="Copy to Clipboard">
-                  📋
-                </button>
-                <button className="btn-icon" onClick={handleDownload} title="Download">
-                  💾
-                </button>
-              </div>
-            </div>
-            <div 
-              className="ai-chatbox-content"
-              ref={aiContentRef}
-              onWheel={(e) => {
-                if (aiContentRef.current) {
-                  const { scrollTop, scrollHeight, clientHeight } = aiContentRef.current;
-                  const isScrollable = scrollHeight > clientHeight;
-                  
-                  if (isScrollable) {
-                    // Prevent page scroll
-                    e.stopPropagation();
-                    
-                    // Prevent scrolling beyond bounds
-                    if (
-                      (scrollTop === 0 && e.deltaY < 0) ||
-                      (scrollTop + clientHeight >= scrollHeight && e.deltaY > 0)
-                    ) {
-                      e.preventDefault();
-                    }
-                  }
-                }
-              }}
-            >
-              {/* Summary Section */}
-              <div className="ai-summary">
-                <h2 className="ai-title">{aiAnalysis.summary?.title}</h2>
-                <p className="ai-description">{aiAnalysis.summary?.short_description}</p>
-                <div className="ai-behavioral-insight">
-                  <span className="insight-label">⚡ Key Insight:</span>
-                  <span className="insight-text">{aiAnalysis.summary?.behavioral_insight}</span>
+          <div className="ai-dashboard fade-in">
+             <AnalysisHero summary={aiAnalysis.summary} />
+             
+             <div className="ai-grid-layout">
+                <div className="ai-grid-left">
+                    <SkillRadar data={aiAnalysis.skill_radar_data} />
                 </div>
-              </div>
-
-              {/* Weak Areas Section */}
-              {aiAnalysis.weak_areas && aiAnalysis.weak_areas.length > 0 && (
-                <div className="ai-section">
-                  <h3 className="section-title">🎯 Areas to Strengthen</h3>
-                  {aiAnalysis.weak_areas.map((area, idx) => (
-                    <div key={idx} className="weak-area-card">
-                      <div className="weak-area-header">
-                        <span className="topic-badge">{area.topic}</span>
-                        <span className="subconcept">{area.sub_concept}</span>
-                      </div>
-                      <p className="correction">{area.correction}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Study Plan Section */}
-              {aiAnalysis.study_plan && aiAnalysis.study_plan.length > 0 && (
-                <div className="ai-section">
-                  <h3 className="section-title">\ud83d\udcc5 Personalized Study Plan</h3>
-                  <div className="study-timeline">
-                    {aiAnalysis.study_plan.map((day, idx) => (
-                      <div key={idx} className="study-day-card">
-                        <div className="day-header">{day.day}</div>
-                        <div className="day-content">
-                          <div className="tasks-section">
-                            <h4>Tasks:</h4>
-                            <ul>
-                              {day.tasks.map((task, tidx) => (
-                                <li key={tidx}>{task}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div className="search-terms-section">
-                            <h4>Google Search Terms:</h4>
-                            <div className="search-tags">
-                              {day.search_terms.map((term, sidx) => (
-                                <span key={sidx} className="search-tag">
-                                  \ud83d\udd0d {term}
-                                </span>
-                              ))}
+                <div className="ai-grid-right">
+                    {aiAnalysis.weak_areas && aiAnalysis.weak_areas.length > 0 && (
+                        <div className="weak-areas-panel">
+                        <h3>🎯 Focus Areas</h3>
+                        {aiAnalysis.weak_areas.map((area, idx) => (
+                            <div key={idx} className="weak-area-item">
+                            <div className="weak-area-header">
+                                <span className="topic-tag">{area.topic}</span>
                             </div>
-                          </div>
+                            <p className="correction-text">{area.correction}</p>
+                            </div>
+                        ))}
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                    )}
                 </div>
-              )}
+             </div>
 
-            </div>
+             <ResourceLibrary resources={aiAnalysis.youtube_resources} />
+             
+             <RedemptionArc question={aiAnalysis.follow_up_question} />
           </div>
         )}
       </div>
@@ -634,16 +678,8 @@ const Quiz = () => {
   const leftPanelRef = useRef(null);
   const rightPanelRef = useRef(null);
 
-  // Manual wheel handler to ensure scrolling works even if CSS fails
-  const handleWheel = (e, ref) => {
-    if (ref.current) {
-      // If the element is scrollable
-      if (ref.current.scrollHeight > ref.current.clientHeight) {
-        // Stop propagation to prevent parent scrolling (though parent is hidden)
-        e.stopPropagation();
-      }
-    }
-  };
+  // Manual wheel handler removed to restore native scrolling behavior
+  // The CSS fix on .quiz-page-wrapper.results-mode handles the scrolling now
   const [startTime, setStartTime] = useState(null);
   const [quizResultPayload, setQuizResultPayload] = useState(null);
   const [quizResultId, setQuizResultId] = useState(null); // Store the DB ID of saved result
@@ -653,6 +689,71 @@ const Quiz = () => {
   // --- NEW: State for practice mode ---
   const [checkedAnswers, setCheckedAnswers] = useState({}); // Stores status for checked questions
   const [showFeedback, setShowFeedback] = useState(false); // Controls feedback visibility for the current question
+
+  // --- Persistence Logic ---
+  useEffect(() => {
+    // Load state from localStorage on mount
+    const savedState = localStorage.getItem("quizState");
+    if (savedState) {
+      try {
+        const parsed = JSON.parse(savedState);
+        // Only restore if it's the same subject/exam to avoid conflicts
+        if (parsed.subject === subject) {
+            setQuestions(parsed.questions);
+            setAnswers(parsed.answers);
+            setCurrent(parsed.current);
+            setFinished(parsed.finished);
+            setTimeLeft(parsed.timeLeft);
+            setTimerRunning(parsed.timerRunning);
+            setVisitedQuestions(new Set(parsed.visitedQuestions));
+            setStartTime(parsed.startTime);
+            setQuizResultPayload(parsed.quizResultPayload);
+            setQuizResultId(parsed.quizResultId);
+            setSavedAiAnalysis(parsed.savedAiAnalysis);
+            setFromHistory(parsed.fromHistory);
+            setCheckedAnswers(parsed.checkedAnswers || {});
+            // If finished, ensure we are in results mode
+            if (parsed.finished) {
+                setTimerRunning(false);
+            }
+        }
+      } catch (e) {
+        console.error("Failed to load quiz state", e);
+      }
+    }
+  }, [subject]);
+
+  useEffect(() => {
+    // Save state to localStorage whenever key state changes
+    if (questions.length > 0) {
+        const stateToSave = {
+            subject,
+            questions,
+            answers,
+            current,
+            finished,
+            timeLeft,
+            timerRunning,
+            visitedQuestions: Array.from(visitedQuestions),
+            startTime,
+            quizResultPayload,
+            quizResultId,
+            savedAiAnalysis,
+            fromHistory,
+            checkedAnswers
+        };
+        localStorage.setItem("quizState", JSON.stringify(stateToSave));
+    }
+  }, [questions, answers, current, finished, timeLeft, timerRunning, visitedQuestions, startTime, quizResultPayload, quizResultId, savedAiAnalysis, fromHistory, checkedAnswers, subject]);
+
+  // Clear storage when leaving or starting new (handled in cleanup or start)
+  useEffect(() => {
+      return () => {
+          // Optional: Clear on unmount if you want strict session only, 
+          // but for reload support we keep it. 
+          // We should clear it when navigating back to dashboard explicitly.
+      };
+  }, []);
 
   // --- NEW: Submission Modal State ---
   const [showSubmitModal, setShowSubmitModal] = useState(false);
@@ -1020,7 +1121,6 @@ const Quiz = () => {
             <div 
               className="quiz-left" 
               ref={leftPanelRef}
-              onWheel={(e) => handleWheel(e, leftPanelRef)}
             >
               <div className="question-block">
                 <div className="question-text">
@@ -1042,7 +1142,6 @@ const Quiz = () => {
             <div 
               className="quiz-right"
               ref={rightPanelRef}
-              onWheel={(e) => handleWheel(e, rightPanelRef)}
             >
               <div className="options-container">
                 {q.questionType === "numerical" ? (
@@ -1218,7 +1317,10 @@ const Quiz = () => {
               </button>
             )}
             <button
-              onClick={() => navigate(fromHistory && finished ? "/quiz-history" : "/dashboard")}
+              onClick={() => {
+                  localStorage.removeItem("quizState");
+                  navigate(fromHistory && finished ? "/quiz-history" : "/dashboard");
+              }}
               className="btn btn-leave-quiz-header"
               title={fromHistory && finished ? "Back to History" : "Exit to Dashboard"}
             >

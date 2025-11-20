@@ -12,15 +12,6 @@ const QuizHistory = lazy(() => import("./components/QuizHistory"));
 
 
 const App = () => {
-  useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll({
-      smooth: true,
-    });
-    return () => {
-      locomotiveScroll.destroy();
-    };
-  }, []);
-
   return (
     <Router>
       <Suspense
@@ -31,46 +22,42 @@ const App = () => {
           </div>
         }
       >
-        <div data-scroll-container>
-          <div data-scroll data-scroll-section>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/auth" element={<AuthPage />} />
-              <Route
-                path="/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/quiz/:subject"
-                element={
-                  <ProtectedRoute>
-                    <Quiz />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/quiz/:subject/result/:resultId"
-                element={
-                  <ProtectedRoute>
-                    <Quiz />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/quiz-history"
-                element={
-                  <ProtectedRoute>
-                    <QuizHistory />
-                  </ProtectedRoute>
-                }
-              />
-            </Routes>
-          </div>
-        </div>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/quiz/:subject"
+            element={
+              <ProtectedRoute>
+                <Quiz />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/quiz/:subject/result/:resultId"
+            element={
+              <ProtectedRoute>
+                <Quiz />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/quiz-history"
+            element={
+              <ProtectedRoute>
+                <QuizHistory />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
       </Suspense>
     </Router>
   );
