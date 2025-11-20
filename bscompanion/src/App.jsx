@@ -9,6 +9,7 @@ const LandingPage = lazy(() => import("./components/LandingPage"));
 const AuthPage = lazy(() => import("./components/AuthPage"));
 const Dashboard = lazy(() => import("./components/Dashboard"));
 const QuizHistory = lazy(() => import("./components/QuizHistory"));
+const UserProfile = lazy(() => import("./components/UserProfile"));
 
 
 const App = () => {
@@ -30,6 +31,14 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <UserProfile />
               </ProtectedRoute>
             }
           />

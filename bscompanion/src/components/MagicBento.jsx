@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import { gsap } from "gsap";
 import "./MagicBento.css";
@@ -59,6 +60,7 @@ const ParticleCard = ({
   enableTilt = false, // Default to false as requested
   clickEffect = false,
   enableMagnetism = false,
+  onClick,
 }) => {
   const cardRef = useRef(null);
   const particlesRef = useRef([]);
@@ -246,7 +248,13 @@ const ParticleCard = ({
     <div
       ref={cardRef}
       className={`${className} particle-container`}
-      style={{ ...style, position: "relative", overflow: "hidden" }}
+      style={{ 
+        ...style, 
+        position: "relative", 
+        overflow: "hidden",
+        cursor: onClick ? "pointer" : "default"
+      }}
+      onClick={onClick}
     >
       {children}
     </div>
@@ -382,6 +390,7 @@ const MagicBento = ({
   clickEffect = true,
   enableMagnetism = false,
 }) => {
+  const navigate = useNavigate();
   const gridRef = useRef(null);
   const isMobile = useMobileDetection();
   const shouldDisableAnimations = disableAnimations || isMobile;
@@ -400,7 +409,8 @@ const MagicBento = ({
       label: "User Profile",
       title: user?.name || "N/A",
       description: `Located in ${user?.city || "N/A"}`,
-      image: diceImg, // Using dice image for profile/random feel
+      image: diceImg,
+      onClick: () => navigate('/profile')
     },
     {
       label: "Academic Overview",
@@ -447,6 +457,7 @@ const MagicBento = ({
           const cardProps = {
             className: baseClassName,
             style: { "--glow-color": glowColor },
+            onClick: card.onClick,
           };
           let cardContent;
 
