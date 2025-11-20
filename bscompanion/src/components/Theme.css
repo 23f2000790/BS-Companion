@@ -1,0 +1,104 @@
+/* Theme.css */
+
+/* =========================================
+   1. DEFAULT THEME (DARK)
+   ========================================= */
+:root {
+  /* --- Backgrounds --- */
+  --bg-page: #0a0a0a;
+  --bg-panel: #141414;
+  --bg-panel-hover: #1a1a1a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --bg-input: rgba(255, 255, 255, 0.05);
+  
+  /* --- Text --- */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+  --text-inverse: #000000;
+  
+  /* --- Borders & Lines --- */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  
+  /* --- Accents --- */
+  --accent-primary: #6366f1; /* Indigo */
+  --accent-glow: rgba(99, 102, 241, 0.5);
+  --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  /* --- Glass Effects --- */
+  --glass-bg: rgba(20, 20, 20, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.05);
+  
+  /* --- Status --- */
+  --status-success: #4ade80;
+  --status-warning: #fbbf24;
+  --status-error: #f87171;
+  --status-info: #60a5fa;
+  
+  /* --- Shadows --- */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+
+  /* --- Gradients --- */
+  --page-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+/* =========================================
+   2. LIGHT THEME OVERRIDES
+   ========================================= */
+[data-theme="light"] {
+  /* --- Backgrounds --- */
+  --bg-page: #f3f4f6;
+  --bg-panel: #ffffff;
+  --bg-panel-hover: #f9fafb;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f3f4f6;
+  --bg-input: #f3f4f6;
+  
+  /* --- Text --- */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --text-inverse: #ffffff;
+  
+  /* --- Borders & Lines --- */
+  --border-color: #e5e7eb;
+  --border-hover: #d1d5db;
+  
+  /* --- Accents --- */
+  --accent-primary: #4f46e5; /* Slightly darker indigo for light mode */
+  --accent-glow: rgba(79, 70, 229, 0.3);
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  
+  /* --- Glass Effects --- */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-highlight: rgba(0, 0, 0, 0.02);
+  
+  /* --- Status --- */
+  --status-success: #16a34a;
+  --status-warning: #d97706;
+  --status-error: #dc2626;
+  --status-info: #2563eb;
+  
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 15px rgba(79, 70, 229, 0.1);
+
+  /* --- Gradients --- */
+  --page-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+/* Apply base styles */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

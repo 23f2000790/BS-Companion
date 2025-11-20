@@ -21,6 +21,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*--------------------------------------------------------------------------------------------------- */
@@ -28,7 +31,7 @@ body {
 /*--------------------------------------------------------------------------------------------------- */
 .landing {
   background-image: url("./assets/images/book.png");
-  background-color: #1e1e1e;
+  background-color: var(--bg-page);
   background-size: 1000px;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -74,7 +77,7 @@ body {
 }
 
 .companion {
-  color: #faf9f6;
+  color: var(--text-primary); /* Changed from fixed color to variable */
   font-size: 100px;
   position: absolute;
   left: 380px;
@@ -121,7 +124,7 @@ body {
 }
 
 .sentence {
-  color: #faf9f6;
+  color: var(--text-primary); /* Changed from fixed color to variable */
   position: absolute;
   font-size: 28px;
   top: 240px;
@@ -135,7 +138,7 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-color: #1e1e1e;
+  background-color: var(--bg-page);
   overflow: hidden;
 }
 
@@ -238,8 +241,10 @@ body {
   padding: 10px;
   font-size: 14px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   width: 100%;
+  background: var(--bg-input);
+  color: var(--text-primary);
 }
 
 /* Submit Button */
@@ -248,14 +253,14 @@ body {
   font-size: 16px;
   border-radius: 5px;
   border: none;
-  background-color: #4caf50;
+  background-color: var(--status-success);
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 .submit-btn:hover {
-  background-color: #3e9140;
+  opacity: 0.9;
 }
 
 /* Blood Group Container */
@@ -273,7 +278,7 @@ body {
 
 /* Info Icon */
 .tooltip-icon {
-  background-color: #4caf50;
+  background-color: var(--status-success);
   color: #fff;
   border-radius: 50%;
   width: 25px;
@@ -308,7 +313,7 @@ body {
   opacity: 0;
   transition: all 0.3s ease-in-out;
   font-size: 13px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 /* Tooltip Arrow */
@@ -337,16 +342,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #000;
-  color: #fff;
+  background: var(--bg-page);
+  color: var(--text-primary);
 }
 
 /* Spinner animation */
 .spinner {
   width: 60px;
   height: 60px;
-  border: 6px solid #444;
-  border-top: 6px solid #00eaff;
+  border: 6px solid var(--border-color);
+  border-top: 6px solid var(--accent-primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin-bottom: 15px;
@@ -365,7 +370,7 @@ body {
 .loading-text {
   font-size: 18px;
   font-weight: 500;
-  color: #00eaff;
+  color: var(--accent-primary);
   animation: fadeIn 0.8s ease-in-out infinite alternate;
 }
 
@@ -382,18 +387,11 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-color: #1e1e1e;
+  background-color: var(--bg-page);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden; /* ✅ Prevent scrollbar flicker during animation */
-
-  /* background-image: url("./assets/images/plane.png");
-  background-repeat: no-repeat;
-  background-position: contain;
-  background-size: 40rem;
-  background-position-x: 650px;
-  background-position-y: -80px; */
 }
 
 .onboarding-form {
@@ -450,7 +448,7 @@ body {
   height: 600px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-lg);
   opacity: 0;
   z-index: 10;
 }
@@ -562,7 +560,7 @@ body {
 
 .image-reveal-wrapper {
   width: 100%;
-  background: #1e1e1e;
+  background: var(--bg-page);
   padding: 40px 20px;
   position: relative;
   overflow: hidden; /* Important for the blend mode to work correctly at edges */
@@ -574,7 +572,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 24px 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid var(--border-color);
   cursor: pointer;
   position: relative;
   transition: background 0.3s ease;
@@ -582,12 +580,12 @@ body {
 }
 
 .item-row:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-card-hover);
 }
 
 /* Text styles */
 .item-row h2 {
-  color: #aaa;
+  color: var(--text-secondary);
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
@@ -615,7 +613,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #aaa;
+  color: var(--text-secondary);
   transition: all 0.3s ease;
   position: relative; /* Essential for z-index to work */
   z-index: 20; /* Keep this high */
@@ -660,7 +658,7 @@ body {
   pointer-events: none;
   z-index: 19; /* This must be lower than the active text/button (z-index 21) */
   transition: transform 0.3s ease, opacity 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--shadow-lg);
   background: #111; /* Fallback for transparency */
 }
 

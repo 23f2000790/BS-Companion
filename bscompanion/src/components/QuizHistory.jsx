@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Dock from "./Dock";
+import {
+  HomeIcon,
+  StatsIcon,
+  SettingsIcon,
+  LogoutIcon,
+} from "./icons";
 import "./QuizHistory.css";
 
 const QuizHistory = () => {
@@ -82,6 +89,18 @@ const QuizHistory = () => {
     if (percentage >= 40) return "score-average";
     return "score-poor";
   };
+
+  const LogoutUser = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
+
+  const DOCK_ITEMS = [
+    { label: 'Home', icon: <HomeIcon />, onClick: () => navigate('/dashboard') },
+    { label: 'History', icon: <StatsIcon />, onClick: () => {} },
+    { label: 'Settings', icon: <SettingsIcon />, onClick: () => navigate('/settings') },
+    { label: 'Logout', icon: <LogoutIcon />, onClick: LogoutUser },
+  ];
 
   const uniqueSubjects = [...new Set(history.map((h) => h.subject))];
 
@@ -188,6 +207,7 @@ const QuizHistory = () => {
           ))}
         </div>
       )}
+      <Dock items={DOCK_ITEMS} />
     </div>
   );
 };

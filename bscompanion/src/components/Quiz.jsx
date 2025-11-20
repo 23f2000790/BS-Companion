@@ -5,9 +5,10 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
-import "./quiz.css";
+import { useTheme } from "../context/ThemeContext";
+import "./quiz-results.css";
 
-// --- SVG Icon Components (no changes here) ---
+import "./quiz.css";
 const IconCheckCircle = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -653,6 +654,7 @@ const Quiz = () => {
   const { subject, resultId } = useParams(); // Get resultId from URL if present
   const location = useLocation();
   const navigate = useNavigate();
+  const { quizPrefs, playSoundEffect } = useTheme();
 
   const {
     exam,
@@ -1019,6 +1021,12 @@ const Quiz = () => {
       const status = getQuestionStatus(questions[current], answers[current]);
       setCheckedAnswers((prev) => ({ ...prev, [current]: { status } }));
       setShowFeedback(true);
+      
+      if (status === 'correct') {
+        playSoundEffect('correct');
+      } else {
+        playSoundEffect('incorrect');
+      }
     }
   };
 
@@ -1302,7 +1310,7 @@ const Quiz = () => {
         <div className="quiz-header">
           <h1>Quiz for {subject}</h1>
           <div className="header-right">
-            {mode === "exam" && timerRunning && timeLeft != null && (
+            {mode === "exam" && timerRunning && timeLeft != null && quizPrefs.timerVisible && (
               <div className="timer">
                 <IconClock /> {formatTimeForTimer(timeLeft)}
               </div>

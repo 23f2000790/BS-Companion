@@ -97,7 +97,7 @@ const UserProfile = () => {
   const DOCK_ITEMS = [
     { label: 'Home', icon: <HomeIcon />, onClick: () => navigate('/dashboard') },
     { label: 'History', icon: <StatsIcon />, onClick: () => navigate('/quiz-history') },
-    { label: 'Settings', icon: <SettingsIcon />, onClick: () => {} },
+    { label: 'Settings', icon: <SettingsIcon />, onClick: () => navigate('/settings') },
     { label: 'Logout', icon: <LogoutIcon />, onClick: LogoutUser },
   ];
 
