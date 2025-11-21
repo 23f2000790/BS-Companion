@@ -14,6 +14,7 @@ const Dashboard = lazy(() => import("./components/Dashboard"));
 const QuizHistory = lazy(() => import("./components/QuizHistory"));
 const UserProfile = lazy(() => import("./components/UserProfile"));
 const Settings = lazy(() => import("./components/Settings"));
+const LeaderboardPage = lazy(() => import("./pages/LeaderboardPage"));
 
 
 const App = () => {
@@ -76,6 +77,14 @@ const App = () => {
               element={
                 <ProtectedRoute>
                   <QuizHistory />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/leaderboard"
+              element={
+                <ProtectedRoute>
+                  <LeaderboardPage />
                 </ProtectedRoute>
               }
             />

@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import { gsap } from "gsap";
+import { useTheme } from "../context/ThemeContext";
 import "./MagicBento.css";
 
 // Import 3D Assets for Premium Look
@@ -11,6 +12,8 @@ import clockImg from "../assets/images/clockele.png";
 import diceImg from "../assets/images/diceele.png";
 import flowerImg from "../assets/images/flowerele.png";
 import paperImg from "../assets/images/paperele.png";
+import { getSubjectIconUrl } from "./SubjectIcons";
+import AcademicOverview from "./AcademicOverview";
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -391,6 +394,7 @@ const MagicBento = ({
   enableMagnetism = false,
 }) => {
   const navigate = useNavigate();
+  const { playSoundEffect } = useTheme();
   const gridRef = useRef(null);
   const isMobile = useMobileDetection();
   const shouldDisableAnimations = disableAnimations || isMobile;
@@ -433,6 +437,8 @@ const MagicBento = ({
       image: paperImg, // Paper/document for security/records
     },
   ];
+
+
 
   return (
     <>
@@ -477,57 +483,80 @@ const MagicBento = ({
                   <span>Subjects</span>
                 </h2>
                 <div className="sub-grid-container expanded">
-                  {subjectSlice.map((item, i) => (
-                    <button
-                      key={i}
-                      className={`sub-grid-item ${
-                        item?.isAction ? "action" : ""
-                      }`}
-                      onClick={() => {
-                        if (!item) return;
-                        item.isAction
-                          ? openAddSubjectsModal()
-                          : openQuizModal(item.name);
-                      }}
-                      disabled={!item}
-                    >
-                      {/* Trash icon for normal subjects */}
-                      {item && !item.isAction && (
-                        <button
-                          style={{
-                            backgroundColor: "#ff4d4f",
-                            border: "none",
-                            color: "white",
-                            padding: "4px 6px",
-                            borderRadius: "4px",
-                            cursor: "pointer",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            transition: "background 0.2s ease-in-out",
-                          }}
-                          className="corner-icon"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onRemoveClick(item.name);
-                          }}
-                          onMouseOver={(e) =>
-                            (e.currentTarget.style.backgroundColor = "#d9363e")
+                  {subjectSlice.map((item, i) => {
+                    const iconUrl = item && !item.isAction ? getSubjectIconUrl(item.name) : null;
+                    return (
+                      <button
+                        key={i}
+                        className={`sub-grid-item ${
+                          item?.isAction ? "action" : ""
+                        }`}
+                        onClick={() => {
+                          if (!item) return;
+                          if (item.isAction) {
+                            playSoundEffect('modal-open');
+                            openAddSubjectsModal();
+                          } else {
+                            playSoundEffect('button');
+                            openQuizModal(item.name);
                           }
-                          onMouseOut={(e) =>
-                            (e.currentTarget.style.backgroundColor = "#ff4d4f")
-                          }
-                        >
-                          <FaTrash />
-                        </button>
-                      )}
+                        }}
+                        disabled={!item}
+                      >
+                        {/* Trash icon for normal subjects */}
+                        {item && !item.isAction && (
+                          <button
+                            className="corner-icon"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              playSoundEffect('subject-remove');
+                              onRemoveClick(item.name);
+                            }}
+                            title="Remove Subject"
+                          >
+                            <FaTrash size={14} />
+                          </button>
+                        )}
 
-                      {/* Subject name */}
-                      {item && (
-                        <span className="subject-name">{item.name}</span>
-                      )}
-                    </button>
-                  ))}
+                        {/* Subject content: Icon on left, Name on right */}
+                        {item && !item.isAction && iconUrl && (
+                          <>
+                            <div className="subject-icon-wrapper">
+                              <img 
+                                src={iconUrl} 
+                                alt={item.name}
+                                className="subject-icon"
+                              />
+                            </div>
+                            <span className="subject-name">{item.name}</span>
+                          </>
+                        )}
+                        
+                        {/* For action button or items without icons */}
+                        {item && (item.isAction || !iconUrl) && (
+                          <span className="subject-name">{item.name}</span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            );
+          } else if (card.label === "Academic Overview") {
+            cardContent = (
+              <>
+                <div className="card__header">
+                  <div className="card__label" aria-label={card.label}>
+                    <img
+                      src={card.image}
+                      alt={card.label}
+                      style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                    />
+                    <span>{card.label.toUpperCase()}</span>
+                  </div>
+                </div>
+                <div style={{ width: '100%', height: 'calc(100% - 40px)', padding: '0 10px 10px 10px' }}>
+                  <AcademicOverview />
                 </div>
               </>
             );

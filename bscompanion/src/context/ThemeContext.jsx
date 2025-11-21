@@ -22,35 +22,93 @@ export const ThemeProvider = ({ children }) => {
     return localStorage.getItem('app-accent') || '#667eea'; // Default (Original gradient color)
   });
 
-  // --- Audio State ---
-  const [musicEnabled, setMusicEnabled] = useState(() => {
-    return localStorage.getItem('app-music') === 'true';
-  });
-  
-  const [audio] = useState(new Audio('https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112762.mp3')); // Royalty free lofi
+  // --- Music Tracks ---
+  const musicTracks = useMemo(() => [
+    { 
+      id: 'lofi', 
+      name: 'Algorithms', 
+      url: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Algorithms.mp3'
+    },
+    { 
+      id: 'piano', 
+      name: 'Elipsis', 
+      url: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Elipsis.mp3'
+    },
+    { 
+      id: 'ambient', 
+      name: 'Shipping Lanes', 
+      url: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3'
+    },
+    { 
+      id: 'chill', 
+      name: 'Organisms', 
+      url: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Organisms.mp3'
+    }
+  ], []);
 
-  // --- Quiz Preferences State ---
+  // --- Quiz Preferences State (DEFAULTS TO OFF) ---
   const [quizPrefs, setQuizPrefs] = useState(() => {
     const saved = localStorage.getItem('app-quiz-prefs');
     return saved ? JSON.parse(saved) : {
-      soundEffects: true,
+      soundEffects: false, // DEFAULT OFF
       timerVisible: true,
+      selectedMusicTrack: 'lofi', // Default track
     };
   });
 
-  // Sound Effects
-  const correctSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3'), []);
-  const incorrectSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3'), []);
+  // --- Audio State (DEFAULTS TO OFF) ---
+  const [musicEnabled, setMusicEnabled] = useState(() => {
+    const saved = localStorage.getItem('app-music');
+    return saved === 'true'; // Only true if explicitly set
+  });
+  
+  // Create audio instance and set initial source
+  const [audio] = useState(() => {
+    const newAudio = new Audio();
+    newAudio.preload = 'auto';
+    return newAudio;
+  });
 
-  const playSoundEffect = (type) => {
+  // Initialize audio source on mount
+  useEffect(() => {
+    const selectedTrack = musicTracks.find(t => t.id === (quizPrefs.selectedMusicTrack || 'lofi'));
+    if (selectedTrack && !audio.src) {
+      console.log('Initializing audio with track:', selectedTrack.name);
+      audio.src = selectedTrack.url;
+      audio.load();
+    }
+  }, [audio, musicTracks, quizPrefs.selectedMusicTrack]);
+
+  // Sound Effects
+  const correctSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3'), []); // Success notification
+  const incorrectSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2955/2955-preview.mp3'), []); // Error buzz
+  const buttonClickSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3'), []);
+  const quizCompleteSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/1434/1434-preview.mp3'), []); // Fanfare
+  const modalOpenSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3'), []);
+  const modalCloseSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2870/2870-preview.mp3'), []);
+  const subjectAddSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3'), []); // Notification pop
+  const subjectRemoveSound = useMemo(() => new Audio('https://assets.mixkit.co/active_storage/sfx/2017/2017-preview.mp3'), []);
+
+  const playSoundEffect = (type, volumeOverride = null) => {
     if (!quizPrefs.soundEffects) return;
     
-    if (type === 'correct') {
-      correctSound.currentTime = 0;
-      correctSound.play().catch(e => console.log("Sound play failed", e));
-    } else if (type === 'incorrect') {
-      incorrectSound.currentTime = 0;
-      incorrectSound.play().catch(e => console.log("Sound play failed", e));
+    const sounds = {
+      'correct': { sound: correctSound, volume: 0.7 },
+      'incorrect': { sound: incorrectSound, volume: 0.7 },
+      'button': { sound: buttonClickSound, volume: 0.3 },
+      'quiz-complete': { sound: quizCompleteSound, volume: 0.8 },
+      'modal-open': { sound: modalOpenSound, volume: 0.4 },
+      'modal-close': { sound: modalCloseSound, volume: 0.4 },
+      'subject-add': { sound: subjectAddSound, volume: 0.6 },
+      'subject-remove': { sound: subjectRemoveSound, volume: 0.4 },
+    };
+    
+    const soundConfig = sounds[type];
+    if (soundConfig) {
+      const { sound, volume } = soundConfig;
+      sound.currentTime = 0;
+      sound.volume = volumeOverride !== null ? volumeOverride : volume;
+      sound.play().catch(e => console.log(`Sound play failed (${type}):`, e));
     }
   };
 
@@ -88,32 +146,98 @@ export const ThemeProvider = ({ children }) => {
     
   }, [accentColor]);
 
-  // Handle Music
+  // Handle Music with Persistence
   useEffect(() => {
     localStorage.setItem('app-music', musicEnabled);
     audio.loop = true;
     audio.volume = 0.3; // Low volume for background
 
+    console.log('Music enabled:', musicEnabled);
+    console.log('Current audio src:', audio.src);
+
+    // Restore playback position from localStorage
+    const savedPosition = localStorage.getItem('app-music-position');
+    if (savedPosition && musicEnabled) {
+      audio.currentTime = parseFloat(savedPosition);
+      console.log('Restored playback position:', savedPosition);
+    }
+
     if (musicEnabled) {
-      // User interaction is required to play audio usually, 
-      // but we'll try to play if enabled. 
-      // If it fails due to autoplay policy, it will just catch error.
+      console.log('Attempting to play music...');
+      
+      // Try to play immediately
       const playPromise = audio.play();
       if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log("Audio autoplay prevented:", error);
-          // We might need to set musicEnabled to false if autoplay fails
-          // or show a UI to enable it. For now, we just log.
-        });
+        playPromise
+          .then(() => {
+            console.log('Music playing successfully!');
+          })
+          .catch(error => {
+            console.warn("Audio autoplay prevented:", error.message);
+            console.log("Click anywhere on the page to start music");
+            
+            // Add one-time click handler to start music on user interaction
+            const handleUserInteraction = () => {
+              console.log('User interacted - attempting to play music...');
+              audio.play()
+                .then(() => console.log('Music started after user interaction!'))
+                .catch(e => console.error('Failed to play after interaction:', e));
+              
+              // Remove listeners after first successful interaction
+              document.removeEventListener('click', handleUserInteraction);
+              document.removeEventListener('keydown', handleUserInteraction);
+            };
+            
+            document.addEventListener('click', handleUserInteraction, { once: true });
+            document.addEventListener('keydown', handleUserInteraction, { once: true });
+          });
       }
     } else {
       audio.pause();
+      console.log('Music paused');
     }
 
+    // Save playback position every 2 seconds
+    const positionInterval = setInterval(() => {
+      if (musicEnabled && !audio.paused) {
+        localStorage.setItem('app-music-position', audio.currentTime.toString());
+      }
+    }, 2000);
+
     return () => {
-      audio.pause();
+      clearInterval(positionInterval);
+      // Save final position before cleanup
+      if (musicEnabled) {
+        localStorage.setItem('app-music-position', audio.currentTime.toString());
+      }
     };
   }, [musicEnabled, audio]);
+
+  // Handle Music Track Changes
+  useEffect(() => {
+    const selectedTrack = musicTracks.find(t => t.id === quizPrefs.selectedMusicTrack);
+    if (selectedTrack) {
+      const currentSrc = audio.src;
+      const newSrc = selectedTrack.url;
+      
+      // Only change if the track is different
+      if (currentSrc && !currentSrc.includes(newSrc)) {
+        const wasPlaying = !audio.paused;
+        
+        console.log('Switching track to:', selectedTrack.name);
+        audio.pause();
+        audio.src = newSrc;
+        audio.load();
+        
+        // Restart playback if music was playing
+        if (wasPlaying && musicEnabled) {
+          audio.play()
+            .then(() => console.log('New track playing:', selectedTrack.name))
+            .catch(e => console.error('Failed to play new track:', e));
+        }
+      }
+    }
+  }, [quizPrefs.selectedMusicTrack, audio, musicTracks, musicEnabled]);
 
   // Save Quiz Prefs
   useEffect(() => {
@@ -133,6 +257,7 @@ export const ThemeProvider = ({ children }) => {
       setAccentColor,
       musicEnabled,
       setMusicEnabled,
+      musicTracks, // NEW: Music tracks array
       quizPrefs,
       setQuizPrefs,
       playSoundEffect

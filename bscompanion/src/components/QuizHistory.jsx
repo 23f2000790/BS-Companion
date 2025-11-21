@@ -7,6 +7,7 @@ import {
   StatsIcon,
   SettingsIcon,
   LogoutIcon,
+  TrophyIcon,
 } from "./icons";
 import "./QuizHistory.css";
 
@@ -97,6 +98,7 @@ const QuizHistory = () => {
 
   const DOCK_ITEMS = [
     { label: 'Home', icon: <HomeIcon />, onClick: () => navigate('/dashboard') },
+    { label: 'Leaderboard', icon: <TrophyIcon />, onClick: () => navigate('/leaderboard') },
     { label: 'History', icon: <StatsIcon />, onClick: () => {} },
     { label: 'Settings', icon: <SettingsIcon />, onClick: () => navigate('/settings') },
     { label: 'Logout', icon: <LogoutIcon />, onClick: LogoutUser },

@@ -13,6 +13,8 @@ import resultsRouter from "./routes/results.js";
 import aiRouter from "./routes/ai.js";
 import userRouter from "./routes/user.js";
 import feedbackRouter from "./routes/feedback.js";
+import leaderboardRoutes from "./routes/leaderboard.js";
+import statsRoutes from "./routes/stats.js";
 
 dotenv.config();
 const app = express();
@@ -27,6 +29,8 @@ app.use("/api/results", resultsRouter);
 app.use("/api/ai", aiRouter);
 app.use("/api/user", userRouter);
 app.use("/api/feedback", feedbackRouter);
+app.use("/api/leaderboard", leaderboardRoutes);
+app.use("/api/stats", statsRoutes);
 
 const JWT_SECRET = process.env.JWT_SECRET || "yoursecretkey";
 const MONGO_URI = process.env.MONGO_URI;

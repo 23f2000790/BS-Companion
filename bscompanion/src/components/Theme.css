@@ -53,30 +53,30 @@
    ========================================= */
 [data-theme="light"] {
   /* --- Backgrounds --- */
-  --bg-page: #f3f4f6;
-  --bg-panel: #ffffff;
-  --bg-panel-hover: #f9fafb;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f3f4f6;
-  --bg-input: #f3f4f6;
+  --bg-page: #f5f5f0;          /* Soft warm gray instead of cold blue-gray */
+  --bg-panel: #faf9f6;         /* Warm off-white instead of pure white */
+  --bg-panel-hover: #f0ede8;   /* Slightly darker warm tone */
+  --bg-card: #fdfcfa;          /* Very subtle warm white */
+  --bg-card-hover: #f5f3ee;    /* Warm light hover */
+  --bg-input: #f5f3ee;         /* Warm input background */
   
   /* --- Text --- */
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
+  --text-primary: #2d2d2d;     /* Softer black, less harsh */
+  --text-secondary: #5a5a5a;   /* Warmer mid-gray */
+  --text-muted: #9a9a9a;       /* Softer muted text */
   --text-inverse: #ffffff;
   
   /* --- Borders & Lines --- */
-  --border-color: #e5e7eb;
-  --border-hover: #d1d5db;
+  --border-color: #e8e6e0;     /* Warm border */
+  --border-hover: #d4d1ca;     /* Slightly darker warm border */
   
   /* --- Accents --- */
-  --accent-primary: #4f46e5; /* Slightly darker indigo for light mode */
+  --accent-primary: #4f46e5;   /* Slightly darker indigo for light mode */
   --accent-glow: rgba(79, 70, 229, 0.3);
   --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   
   /* --- Glass Effects --- */
-  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-bg: rgba(250, 249, 246, 0.85);
   --glass-border: rgba(0, 0, 0, 0.05);
   --glass-highlight: rgba(0, 0, 0, 0.02);
   
@@ -88,12 +88,12 @@
   
   /* --- Shadows --- */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 15px rgba(79, 70, 229, 0.1);
 
   /* --- Gradients --- */
-  --page-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  --page-gradient: linear-gradient(135deg, #f5f5f0 0%, #ebe9e3 100%);
 }
 
 /* Apply base styles */

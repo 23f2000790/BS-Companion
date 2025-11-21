@@ -7,6 +7,7 @@ import {
   StatsIcon,
   SettingsIcon,
   LogoutIcon,
+  TrophyIcon,
 } from './icons';
 import './UserProfile.css';
 
@@ -96,6 +97,7 @@ const UserProfile = () => {
 
   const DOCK_ITEMS = [
     { label: 'Home', icon: <HomeIcon />, onClick: () => navigate('/dashboard') },
+    { label: 'Leaderboard', icon: <TrophyIcon />, onClick: () => navigate('/leaderboard') },
     { label: 'History', icon: <StatsIcon />, onClick: () => navigate('/quiz-history') },
     { label: 'Settings', icon: <SettingsIcon />, onClick: () => navigate('/settings') },
     { label: 'Logout', icon: <LogoutIcon />, onClick: LogoutUser },

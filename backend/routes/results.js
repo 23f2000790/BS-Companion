@@ -1,5 +1,6 @@
 import express from "express";
 import QuizResult from "../models/QuizResult.js";
+import Subject from "../models/Subjects.js";
 import { verifyToken } from "../middleware/auth.js";
 
 const router = express.Router();
@@ -77,9 +78,47 @@ router.get("/:id", verifyToken, async (req, res) => {
       return res.status(403).json({ message: "Unauthorized access" });
     }
 
+    // Fetch the subject to get full question details
+    const subjectDoc = await Subject.findOne({ subjectName: result.subject });
+    
+    let enrichedQuestions = result.questions;
+
+    if (subjectDoc) {
+      // Create a map of all questions in the subject for O(1) lookup
+      // Flatten all papers (quiz1, quiz2, ET) into one array
+      const allQuestions = [];
+      const papers = subjectDoc.papers ? (typeof subjectDoc.papers.toObject === 'function' ? subjectDoc.papers.toObject() : subjectDoc.papers) : {};
+      
+      Object.values(papers).forEach(paperQuestions => {
+        if (Array.isArray(paperQuestions)) {
+          allQuestions.push(...paperQuestions);
+        }
+      });
+
+      const questionMap = new Map(allQuestions.map(q => [q._id.toString(), q]));
+
+      // Enrich the result questions with original details
+      enrichedQuestions = result.questions.map(q => {
+        const originalQ = questionMap.get(q.questionId ? q.questionId.toString() : "");
+        if (originalQ) {
+          return {
+            ...q.toObject(),
+            question: originalQ.question,
+            options: originalQ.options,
+            correctOption: originalQ.correctOption,
+            context: originalQ.context,
+            image: originalQ.image,
+            explanation: originalQ.explanation
+          };
+        }
+        return q.toObject();
+      });
+    }
+
     // Return result with parsed AI analysis if present
     const response = {
       ...result.toObject(),
+      questions: enrichedQuestions,
       aiAnalysis: result.aiAnalysis ? JSON.parse(result.aiAnalysis) : null
     };
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import MagicBento from "./MagicBento";
 import Dock from "./Dock";
+import { useTheme } from "../context/ThemeContext";
 import {
   HomeIcon,
   ConnectionsIcon,
@@ -10,6 +11,7 @@ import {
   SettingsIcon,
   LogoutIcon,
   IconXCircle,
+  TrophyIcon,
 } from "./icons";
 import { FOUNDATIONAL_SUBJECTS, DIPLOMA_SUBJECTS } from "../constants";
 import "./Dashboard.css";
@@ -20,6 +22,7 @@ import "./Dock.css";
 // =============================================================
 const Dashboard = () => {
   const navigate = useNavigate();
+  const { playSoundEffect } = useTheme();
   const [user, setUser] = useState(null);
   const checkboxGridRef = React.useRef(null);
 
@@ -119,6 +122,11 @@ const Dashboard = () => {
         ? FOUNDATIONAL_SUBJECTS
         : DIPLOMA_SUBJECTS;
     const remaining = levelList.filter((s) => !user.subjects.includes(s));
+    console.log("Open Add Subject Modal:", { 
+      userSubjects: user.subjects, 
+      levelList, 
+      remaining 
+    });
     setAvailableSubjects(remaining);
     setSelectedNewSubjects([]);
     setShowAddModal(true);
@@ -135,6 +143,7 @@ const Dashboard = () => {
         }
       );
       setUser(res.data.user); // update UI instantly
+      playSoundEffect('subject-add'); // Play sound effect
       setShowAddModal(false);
     } catch (error) {
       console.error("Error adding subjects:", error);
@@ -223,6 +232,7 @@ const Dashboard = () => {
 
   const DOCK_ITEMS = [
     { label: "Home", icon: <HomeIcon />, onClick: () => {} },
+    { label: "Leaderboard", icon: <TrophyIcon />, onClick: () => navigate("/leaderboard") },
     { label: "History", icon: <StatsIcon />, onClick: () => navigate("/quiz-history") },
     { label: "Settings", icon: <SettingsIcon />, onClick: () => navigate("/settings") },
     { label: "Logout", icon: <LogoutIcon />, onClick: LogoutUser },
@@ -243,12 +253,26 @@ const Dashboard = () => {
         <h1>Welcome, {user.name} 👋</h1>
       </div>
 
-      <MagicBento
-        user={user}
-        openQuizModal={openQuizModal}
-        openAddSubjectsModal={openAddSubjectsModal}
-        onRemoveClick={onRemoveClick}
-      />
+      <div className="dashboard-grid" style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+        gap: '20px', 
+        padding: '20px',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
+
+
+        {/* Subject Grid */}
+        <div className="bento-item" style={{ gridColumn: 'span 2' }}>
+          <MagicBento 
+            user={user}
+            openQuizModal={openQuizModal}
+            openAddSubjectsModal={openAddSubjectsModal}
+            onRemoveClick={onRemoveClick}
+          />
+        </div>
+      </div>
 
       {/* --- Add Subject Modal --- */}
       {showAddModal && (
@@ -269,38 +293,28 @@ const Dashboard = () => {
               ref={checkboxGridRef}
               tabIndex={-1}
             >
-              {FOUNDATIONAL_SUBJECTS.map((sub) => (
-                <label key={sub} className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={selectedNewSubjects.includes(sub)}
-                    onChange={() => {
-                      setSelectedNewSubjects((prev) =>
-                        prev.includes(sub)
-                          ? prev.filter((x) => x !== sub)
-                          : [...prev, sub]
-                      );
-                    }}
-                  />
-                  {sub}
-                </label>
-              ))}
-              {DIPLOMA_SUBJECTS.map((sub) => (
-                <label key={sub} className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={selectedNewSubjects.includes(sub)}
-                    onChange={() => {
-                      setSelectedNewSubjects((prev) =>
-                        prev.includes(sub)
-                          ? prev.filter((x) => x !== sub)
-                          : [...prev, sub]
-                      );
-                    }}
-                  />
-                  {sub}
-                </label>
-              ))}
+              {availableSubjects.length > 0 ? (
+                availableSubjects.map((sub) => (
+                  <label key={sub} className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={selectedNewSubjects.includes(sub)}
+                      onChange={() => {
+                        setSelectedNewSubjects((prev) =>
+                          prev.includes(sub)
+                            ? prev.filter((x) => x !== sub)
+                            : [...prev, sub]
+                        );
+                      }}
+                    />
+                    {sub}
+                  </label>
+                ))
+              ) : (
+                <p style={{ gridColumn: "1 / -1", textAlign: "center", color: "#888" }}>
+                  All subjects added!
+                </p>
+              )}
             </div>
             <div className="modal-actions">
               <button

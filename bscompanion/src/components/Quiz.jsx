@@ -302,24 +302,36 @@ const RedemptionArc = ({ question }) => {
 
   const checkAnswer = (option, correct) => {
     if (!option || !correct) return false;
-    const normOption = option.trim();
-    const normCorrect = correct.trim();
     
-    // 1. Exact match
+    // Normalize strings: lowercase, trim, remove punctuation at the end
+    const normOption = option.toLowerCase().trim().replace(/[.,;!]+$/, "");
+    const normCorrect = correct.toLowerCase().trim().replace(/[.,;!]+$/, "");
+    
+    // 1. Exact match (after normalization)
     if (normOption === normCorrect) return true;
     
-    // 2. Letter match (e.g. correct="B", option="B. ...")
-    if (/^[A-D]$/i.test(normCorrect)) {
-      return normOption.toUpperCase().startsWith(`${normCorrect.toUpperCase()}.`);
-    }
-
-    // 3. Content match (ignore prefix "A. ")
-    const optionContent = normOption.replace(/^[A-D]\.\s*/, "");
+    // 2. Handle "A. ", "B. " prefixes in the OPTION
+    // Example: Option = "A. 42", Correct = "42"
+    const optionContent = normOption.replace(/^[a-d]\.\s*/, "");
     if (optionContent === normCorrect) return true;
 
-    // 4. Substring match (if correct answer is a significant part of the option)
-    // This handles cases where AI puts just the code snippet as correct answer
-    if (normCorrect.length > 5 && normOption.includes(normCorrect)) return true;
+    // 3. Handle "A. ", "B. " prefixes in the CORRECT answer (less common but possible from AI)
+    // Example: Option = "42", Correct = "A. 42"
+    const correctContent = normCorrect.replace(/^[a-d]\.\s*/, "");
+    if (normOption === correctContent) return true;
+    
+    // 4. Cross-check content vs content (ignoring prefixes on both)
+    if (optionContent === correctContent) return true;
+
+    // 5. Letter match (if correct answer is just "A", "B", etc.)
+    if (/^[a-d]$/.test(normCorrect)) {
+       return normOption.startsWith(`${normCorrect}.`) || normOption === normCorrect;
+    }
+
+    // 6. Substring match (last resort for slight variations)
+    // Ensure the match is significant (e.g. > 5 chars) to avoid false positives
+    if (correctContent.length > 5 && optionContent.includes(correctContent)) return true;
+    if (optionContent.length > 5 && correctContent.includes(optionContent)) return true;
 
     return false;
   };
@@ -616,6 +628,11 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
           return (
             <div key={i} className={`result-item status-${result.status}`}>
               <div className="question-text">
+                {q.context && (
+                  <div className="question-context">
+                    {q.context}
+                  </div>
+                )}
                 <strong>Q{i + 1}:</strong> {q.question}
               </div>
               <div className="answers-comparison">
@@ -805,6 +822,11 @@ const Quiz = () => {
         // Note: We don't have original questions from saved result
         // They need to be passed via location.state or fetched separately
         // For now, we'll show results without detailed question review
+        
+        // UPDATE: Backend now returns enriched questions with text/options
+        if (savedResult.questions && savedResult.questions.length > 0) {
+            setQuestions(savedResult.questions);
+        }
       } catch (error) {
         console.error("Error fetching saved result:", error);
         alert("Failed to load quiz result");
@@ -1021,12 +1043,6 @@ const Quiz = () => {
       const status = getQuestionStatus(questions[current], answers[current]);
       setCheckedAnswers((prev) => ({ ...prev, [current]: { status } }));
       setShowFeedback(true);
-      
-      if (status === 'correct') {
-        playSoundEffect('correct');
-      } else {
-        playSoundEffect('incorrect');
-      }
     }
   };
 

@@ -8,6 +8,7 @@ import {
   StatsIcon,
   SettingsIcon,
   LogoutIcon,
+  TrophyIcon,
 } from './icons';
 import './Settings.css';
 
@@ -20,6 +21,7 @@ const Settings = () => {
     setAccentColor,
     musicEnabled,
     setMusicEnabled,
+    musicTracks, // NEW: Music tracks array
     quizPrefs,
     setQuizPrefs
   } = useTheme();
@@ -442,6 +444,7 @@ const Settings = () => {
 
   const DOCK_ITEMS = [
     { label: 'Home', icon: <HomeIcon />, onClick: () => navigate('/dashboard') },
+    { label: 'Leaderboard', icon: <TrophyIcon />, onClick: () => navigate('/leaderboard') },
     { label: 'History', icon: <StatsIcon />, onClick: () => navigate('/quiz-history') },
     { label: 'Settings', icon: <SettingsIcon />, onClick: () => {} }, // Already here
     { label: 'Logout', icon: <LogoutIcon />, onClick: LogoutUser },
@@ -545,6 +548,37 @@ const Settings = () => {
                   <span className="slider round"></span>
                 </label>
               </div>
+              
+              {/* NEW: Music Track Selection Dropdown */}
+              <div className="setting-item">
+                <div className="setting-info">
+                  <span className="setting-label">Music Track</span>
+                  <span className="setting-desc">Choose your background music</span>
+                </div>
+                <select 
+                  className="music-track-select"
+                  value={quizPrefs.selectedMusicTrack}
+                  onChange={(e) => setQuizPrefs(prev => ({ ...prev, selectedMusicTrack: e.target.value }))}
+                  disabled={!musicEnabled}
+                  style={{
+                    padding: '8px 12px',
+                    borderRadius: '8px',
+                    border: '1px solid var(--border-subtle)',
+                    background: 'var(--bg-secondary)',
+                    color: 'var(--text-primary)',
+                    cursor: musicEnabled ? 'pointer' : 'not-allowed',
+                    opacity: musicEnabled ? 1 : 0.5,
+                    fontSize: '14px',
+                    minWidth: '150px'
+                  }}
+                >
+                  {musicTracks.map(track => (
+                    <option key={track.id} value={track.id}>
+                      {track.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
               <div className="setting-item">
                 <div className="setting-info">
                   <span className="setting-label">Timer Visibility</span>
@@ -572,13 +606,7 @@ const Settings = () => {
                 </div>
                 <span className="arrow-icon">→</span>
               </div>
-              <div className="setting-item clickable danger">
-                <div className="setting-info">
-                  <span className="setting-label">Clear Quiz History</span>
-                  <span className="setting-desc">Permanently delete all progress</span>
-                </div>
-                <span className="arrow-icon">🗑️</span>
-              </div>
+
               <div className="setting-item clickable" onClick={handleExportData}>
                 <div className="setting-info">
                   <span className="setting-label">Export Data</span>
