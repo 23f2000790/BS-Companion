@@ -1,9 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Navbar from "./Navbar";
 import { FaBrain, FaTrophy, FaFileAlt, FaRocket } from "react-icons/fa";
+
+// New Components
+import ScrambleText from "./landing/ScrambleText";
+import MagneticButton from "./landing/MagneticButton";
+import CustomCursor from "./landing/CustomCursor";
+import MiniQuizCard from "./landing/MiniQuizCard";
+import ActivityTicker from "./landing/ActivityTicker";
+import JourneyLine from "./landing/JourneyLine";
+import TiltCard from "./landing/TiltCard";
+import ProblemSection from "./landing/ProblemSection";
+import InsightsSection from "./landing/InsightsSection";
+import CommunitySection from "./landing/CommunitySection";
 
 // Helper: decode JWT and check expiry
 const isTokenValid = (token) => {
@@ -21,12 +33,6 @@ const isTokenValid = (token) => {
 const LandingPage = () => {
   const navigate = useNavigate();
   const [checkingAuth, setCheckingAuth] = useState(true);
-  const { scrollY } = useScroll();
-  
-  // Parallax effects
-  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 500], [0, -150]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
     const checkAuthAndOnboarding = async () => {
@@ -63,8 +69,33 @@ const LandingPage = () => {
     );
   }
 
+  return <LandingContent navigate={navigate} />;
+};
+
+const LandingContent = ({ navigate }) => {
+  const containerRef = useRef(null);
+  
+  const { scrollY } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+  
+  // Velocity Skew
+  const scrollVelocity = useSpring(scrollY, { damping: 50, stiffness: 400 });
+  const skewY = useTransform(scrollVelocity, [0, 1000], [0, 5]); // Subtle skew based on speed
+
   return (
-    <div className="landing-container" style={{ overflowX: "hidden", background: "#0a0a0a", color: "#fff" }}>
+    <div 
+      ref={containerRef}
+      className="landing-container" 
+      style={{ 
+        overflowX: "hidden", 
+        background: "#0a0a0a", 
+        color: "#fff", 
+        cursor: "none" // Hide default cursor for CustomCursor
+      }}
+    >
+      <CustomCursor />
       <Navbar />
 
       {/* Hero Section */}
@@ -81,15 +112,20 @@ const LandingPage = () => {
           zIndex: 0
         }} />
         
-        <div style={{ zIndex: 1, textAlign: "center", width: "100%" }}>
-          <motion.h3 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ color: "#dad7b6", fontSize: "1.5rem", marginBottom: "1rem", letterSpacing: "0.2em", textTransform: "uppercase" }}
-          >
-            Practice. Connect. Grow.
-          </motion.h3>
+        <div style={{ zIndex: 1, textAlign: "center", width: "100%", position: "relative" }}>
+          <ScrambleText 
+            text="Practice. Connect. Grow." 
+            className="hero-subtitle"
+            style={{ 
+              color: "#dad7b6", 
+              fontSize: "1.5rem", 
+              marginBottom: "1rem", 
+              letterSpacing: "0.2em", 
+              textTransform: "uppercase",
+              display: "inline-block"
+            }}
+            delay={0.5}
+          />
           
           <div style={{ position: "relative", height: "300px", display: "flex", justifyContent: "center", alignItems: "center" }}>
              <motion.h1 
@@ -100,7 +136,8 @@ const LandingPage = () => {
                 lineHeight: 1,
                 margin: 0,
                 position: "relative",
-                zIndex: 1
+                zIndex: 1,
+                skewY // Apply skew effect
               }}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -138,9 +175,7 @@ const LandingPage = () => {
             One-Stop Platform for your BS Data Science Academics and Connections.
           </motion.p>
 
-          <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: "#dad7b6", color: "#000" }}
-            whileTap={{ scale: 0.95 }}
+          <MagneticButton 
             onClick={() => navigate("/auth")}
             style={{
               padding: "15px 40px",
@@ -149,19 +184,27 @@ const LandingPage = () => {
               color: "#dad7b6",
               border: "2px solid #dad7b6",
               borderRadius: "50px",
-              cursor: "pointer",
+              cursor: "none", // Let CustomCursor handle it
               marginTop: "20px",
               fontWeight: "bold",
-              transition: "all 0.3s ease"
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px"
             }}
           >
-            Get Started <FaRocket style={{ marginLeft: "10px" }} />
-          </motion.button>
+            Get Started <FaRocket />
+          </MagneticButton>
         </div>
+
+        {/* Floating Mini Quiz Card */}
+        <MiniQuizCard />
       </section>
 
-      {/* Features Section */}
-      <section style={{ minHeight: "100vh", padding: "100px 20px", background: "#111" }}>
+      {/* 2. The Problem (Scroll Reveal) */}
+      <ProblemSection />
+
+      {/* 3. Features Section */}
+      <section style={{ minHeight: "100vh", padding: "100px 20px", background: "#111", position: "relative", zIndex: 1 }}>
         <motion.h2 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -194,35 +237,45 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* 4. Insights Section (Data Viz) */}
+      <InsightsSection />
+
+      {/* 5. Community Section */}
+      <CommunitySection />
+
       {/* Footer */}
-      <footer style={{ padding: "40px", textAlign: "center", borderTop: "1px solid #333", color: "#666" }}>
+      <footer style={{ padding: "40px 40px 80px 40px", textAlign: "center", borderTop: "1px solid #333", color: "#666", background: "#0a0a0a" }}>
         <p>&copy; {new Date().getFullYear()} BS Companion. All rights reserved.</p>
       </footer>
+
+      {/* Activity Ticker */}
+      <ActivityTicker />
     </div>
   );
 };
 
 const FeatureCard = ({ icon, title, description, delay }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={{ y: -10 }}
-      style={{
-        background: "#1a1a1a",
-        padding: "40px",
-        borderRadius: "20px",
-        textAlign: "center",
-        border: "1px solid #333",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
-      }}
-    >
-      <div style={{ marginBottom: "20px" }}>{icon}</div>
-      <h3 style={{ fontSize: "1.8rem", marginBottom: "15px", color: "#fff" }}>{title}</h3>
-      <p style={{ color: "#aaa", lineHeight: 1.6 }}>{description}</p>
-    </motion.div>
+    <TiltCard delay={delay}>
+      <div
+        style={{
+          background: "#1a1a1a",
+          padding: "40px",
+          borderRadius: "20px",
+          textAlign: "center",
+          border: "1px solid #333",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
+        <div style={{ marginBottom: "20px" }}>{icon}</div>
+        <h3 style={{ fontSize: "1.8rem", marginBottom: "15px", color: "#fff" }}>{title}</h3>
+        <p style={{ color: "#aaa", lineHeight: 1.6 }}>{description}</p>
+      </div>
+    </TiltCard>
   );
 };
 
