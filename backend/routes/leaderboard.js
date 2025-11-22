@@ -20,27 +20,24 @@ router.get('/', async (req, res) => {
       // Step 1: Filter relevant results
       { $match: matchStage },
 
-      // Step 2: Group by User AND Unique Quiz (Subject + Term + Exam)
-      // This finds the MAX score a user achieved for a specific quiz
+      // Step 2: Group by User AND Subject to get Average Score per Subject
       {
         $group: {
           _id: {
             userId: "$userId",
-            subject: "$subject",
-            term: "$term",
-            exam: "$exam"
+            subject: "$subject"
           },
-          maxScoreForQuiz: { $max: "$score" }
+          averageSubjectScore: { $avg: "$score" },
+          quizzesInSubject: { $sum: 1 }
         }
       },
 
-      // Step 3: Group by User to calculate Total Score
-      // Sum up the max scores from the previous step
+      // Step 3: Group by User to calculate Total Score (Sum of Subject Averages)
       {
         $group: {
           _id: "$_id.userId",
-          totalScore: { $sum: "$maxScoreForQuiz" },
-          quizzesTaken: { $sum: 1 } // Count unique quizzes taken
+          totalScore: { $sum: "$averageSubjectScore" },
+          quizzesTaken: { $sum: "$quizzesInSubject" }
         }
       },
 
@@ -54,7 +51,7 @@ router.get('/', async (req, res) => {
         }
       },
 
-      // Step 5: Unwind user info (since lookup returns an array)
+      // Step 5: Unwind user info
       { $unwind: "$userInfo" },
 
       // Step 6: Project final fields
@@ -63,9 +60,8 @@ router.get('/', async (req, res) => {
           _id: 0,
           userId: "$_id",
           username: "$userInfo.name",
-          // Use a default avatar if none exists (or handle on frontend)
           avatar: "$userInfo.avatar", 
-          totalScore: 1,
+          totalScore: { $round: ["$totalScore", 0] }, // Round to nearest integer
           quizzesTaken: 1
         }
       },

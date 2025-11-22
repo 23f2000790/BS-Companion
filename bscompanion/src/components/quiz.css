@@ -799,6 +799,310 @@ html, body {
   margin: 0;
 }
 
+/* --- Music Controls in Header --- */
+.quiz-music-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-music-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.btn-music-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.btn-music-toggle.active {
+  color: var(--accent-color);
+}
+
+.quiz-music-select {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  padding: 2px 4px;
+  cursor: pointer;
+  max-width: 120px;
+  outline: none;
+}
+
+.quiz-music-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .quiz-music-controls {
+    margin-right: 0.5rem;
+    padding: 2px 6px;
+  }
+  
+  .quiz-music-select {
+    max-width: 80px;
+    font-size: 0.75rem;
+  }
+}
+
+/* --- New Horizontal Question Navigation --- */
+.quiz-nav-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread out */
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  width: 100%; /* Full width */
+  background: rgba(0, 0, 0, 0.2); /* Subtle background */
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.nav-numbers-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px;
+  scrollbar-width: none; /* Firefox */
+  flex: 1; /* Take available space */
+  justify-content: space-between; /* Distribute evenly */
+}
+
+.nav-numbers-scroll .question-nav-item {
+  flex: 1; /* Grow to fill space */
+  min-width: 36px; /* Minimum touch target */
+  height: 36px; /* Slightly taller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px; /* Softer corners */
+  margin: 0; /* Remove margins if any */
+}
+
+.nav-numbers-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.nav-arrow {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0; /* Don't shrink */
+}
+
+.nav-arrow:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+  border-color: var(--primary-color);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* --- Updated Quiz Right Pane Layout --- */
+.quiz-page-wrapper .quiz-right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 0; 
+  overflow: hidden; 
+}
+
+.quiz-right-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 20px; /* Reduced padding since buttons are gone */
+  padding-right: 8px;
+}
+
+/* Custom scrollbar for content */
+.quiz-right-content::-webkit-scrollbar {
+  width: 6px;
+}
+.quiz-right-content::-webkit-scrollbar-thumb {
+  background-color: var(--border-hover);
+  border-radius: 3px;
+}
+
+.quiz-page-wrapper .navigation-buttons.fixed-bottom {
+  /* Only for Check button now */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent; 
+  padding: 1rem 0; 
+  border-top: none;
+  margin-top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center; /* Center the check button */
+  pointer-events: none; /* Let clicks pass through if empty */
+}
+
+.quiz-page-wrapper .navigation-buttons.fixed-bottom > * {
+  pointer-events: auto; /* Re-enable clicks on button */
+}
+
+/* --- Header Navigation Buttons --- */
+.header-nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-header-nav {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+.btn-header-nav:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-header-nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Maximize Height Adjustments --- */
+.quiz-page-wrapper {
+  padding: 10px; /* Reduced padding */
+}
+
+.quiz-page-wrapper .quiz-container {
+  height: 100%; /* Fill wrapper */
+  max-height: none; /* Remove any max-height limits */
+  padding: 1.5rem; /* Slightly reduced internal padding */
+}
+
+.quiz-page-wrapper .quiz-header {
+  margin-bottom: 1rem; /* Reduced margin */
+  padding-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px; /* Equal gap between right items */
+}
+
+/* Premium Timer Design */
+.timer.premium-timer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: 'Roboto Mono', monospace; /* Monospace for stable numbers */
+  font-weight: 600;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timer.premium-timer svg {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Clean Submit/Exit Buttons */
+.btn-submit-quiz-header,
+.btn-leave-quiz-header {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0; /* No icon gap needed */
+  transition: all 0.2s ease;
+}
+
+.btn-submit-quiz-header {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.btn-submit-quiz-header:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-leave-quiz-header {
+  background: transparent;
+  border: 1px solid var(--danger-color);
+  color: var(--danger-color);
+}
+
+.btn-leave-quiz-header:hover {
+  background: rgba(239, 68, 68, 0.1);
+  transform: translateY(-1px);
+}
+
 .tasks-section li {
   padding: 0.5rem 0 0.5rem 1.5rem;
   position: relative;

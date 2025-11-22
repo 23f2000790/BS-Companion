@@ -125,6 +125,23 @@ const IconWrench = () => (
     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
   </svg>
 );
+const IconMusic = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M9 18V5l12-2v13" />
+    <circle cx="6" cy="18" r="3" />
+    <circle cx="18" cy="16" r="3" />
+  </svg>
+);
 
 // --- Chart Components (no changes here) ---
 const BreakdownChart = ({ data }) => {
@@ -671,7 +688,7 @@ const Quiz = () => {
   const { subject, resultId } = useParams(); // Get resultId from URL if present
   const location = useLocation();
   const navigate = useNavigate();
-  const { quizPrefs, playSoundEffect } = useTheme();
+  const { quizPrefs, setQuizPrefs, playSoundEffect, musicEnabled, setMusicEnabled, musicTracks } = useTheme();
 
   const {
     exam,
@@ -885,7 +902,7 @@ const Quiz = () => {
       setShowFeedback(false);
       setStartTime(new Date());
       if (mode === "exam") {
-        setTimeLeft(Math.min(Math.max(res.data.length * 90, 600), 7200));
+        setTimeLeft(res.data.length * 180);
         setTimerRunning(true);
       }
     } catch (err) {
@@ -1129,14 +1146,66 @@ const Quiz = () => {
 
     if (questions.length > 0 && current < questions.length) {
       const q = questions[current];
+      
+      // --- NEW: Pagination Logic for Question Numbers ---
+      const QUESTIONS_PER_PAGE = 10;
+      const totalPages = Math.ceil(questions.length / QUESTIONS_PER_PAGE);
+      const currentPage = Math.floor(current / QUESTIONS_PER_PAGE);
+      
+      const startQ = currentPage * QUESTIONS_PER_PAGE;
+      const endQ = Math.min(startQ + QUESTIONS_PER_PAGE, questions.length);
+      const currentQuestions = questions.slice(startQ, endQ);
+
       return (
         <>
+          {/* --- NEW: Horizontal Question Navigation --- */}
+          <div className="quiz-nav-horizontal">
+             <button 
+                className="nav-arrow"
+                disabled={currentPage === 0}
+                onClick={() => handleSetCurrent((currentPage - 1) * QUESTIONS_PER_PAGE)}
+             >
+               ←
+             </button>
+             <div className="nav-numbers-scroll">
+                {questions.map((_, i) => {
+                    // Only show if in current page range
+                    if (i < startQ || i >= endQ) return null;
+                    
+                    const isVisited = visitedQuestions.has(i);
+                    const isAns = isAnswered(i);
+                    let navClass = "unvisited";
+                    
+                    if (isVisited && i !== current) {
+                      navClass = isAns ? "visited-answered" : "visited-unanswered";
+                    }
+
+                    return (
+                      <button
+                        key={i}
+                        className={`question-nav-item ${i === current ? "current" : ""} ${navClass}`}
+                        onClick={() => handleSetCurrent(i)}
+                      >
+                        {i + 1}
+                      </button>
+                    );
+                })}
+             </div>
+             <button 
+                className="nav-arrow"
+                disabled={currentPage === totalPages - 1}
+                onClick={() => handleSetCurrent((currentPage + 1) * QUESTIONS_PER_PAGE)}
+             >
+               →
+             </button>
+          </div>
+
           <div className="progress-bar">
             <div
               className="progress-fill"
               style={{
                 width: `${Math.round(
-                  ((current + 1) / questions.length) * 100
+                  (Object.keys(answers).length / questions.length) * 100
                 )}%`,
               }}
             />
@@ -1167,131 +1236,99 @@ const Quiz = () => {
               className="quiz-right"
               ref={rightPanelRef}
             >
-              <div className="options-container">
-                {q.questionType === "numerical" ? (
-                  <>
-                    <input
-                      type="text"
-                      className={`numerical-input ${
-                        mode === "practice" && showFeedback
-                          ? checkedAnswers[current]?.status === "correct"
-                            ? "correct-practice"
-                            : "incorrect-practice"
-                          : ""
-                      }`}
-                      placeholder="Enter your answer"
-                      value={answers[current] || ""}
-                      onChange={(e) => handleAnswer(current, e.target.value)}
-                      disabled={mode === "practice" && showFeedback}
-                    />
-                    {/* --- NEW: Show correct answer feedback for numerical --- */}
-                    {mode === "practice" &&
-                      showFeedback &&
-                      checkedAnswers[current]?.status !== "correct" && (
-                        <div className="correct-answer-feedback">
-                          Correct Answer:{" "}
-                          {formatCorrectAnswerText(q.correctOption)}
-                        </div>
-                      )}
-                  </>
-                ) : (
-                  Object.entries(q.options || {}).map(([key, val]) => {
-                    // --- NEW: Add dynamic classes for practice mode feedback ---
-                    let practiceClass = "";
-                    if (mode === "practice" && showFeedback) {
-                      const correctAnswer = q.correctOption;
-                      const userAnswer = answers[current];
-                      const isMultiple = q.questionType === "multiple";
-
-                      if (
-                        (isMultiple && correctAnswer.includes(key)) ||
-                        (!isMultiple && key === correctAnswer)
-                      ) {
-                        practiceClass = "correct-practice";
-                      } else if (
-                        (isMultiple && userAnswer?.includes(key)) ||
-                        (!isMultiple && key === userAnswer)
-                      ) {
-                        practiceClass = "incorrect-practice";
-                      }
-                    }
-
-                    return (
-                      <label
-                        key={key}
-                        className={`option-label ${practiceClass}`}
-                      >
+              <div className="quiz-right-content">
+                  <div className="options-container">
+                    {q.questionType === "numerical" ? (
+                      <>
                         <input
-                          type={
-                            q.questionType === "multiple" ? "checkbox" : "radio"
-                          }
-                          name={`q-${current}`}
-                          value={key}
-                          checked={
-                            q.questionType === "multiple"
-                              ? (answers[current] || []).includes(key)
-                              : answers[current] === key
-                          }
-                          onChange={() =>
-                            handleAnswer(
-                              current,
-                              key,
-                              q.questionType === "multiple"
-                            )
-                          }
+                          type="text"
+                          className={`numerical-input ${
+                            mode === "practice" && showFeedback
+                              ? checkedAnswers[current]?.status === "correct"
+                                ? "correct-practice"
+                                : "incorrect-practice"
+                              : ""
+                          }`}
+                          placeholder="Enter your answer"
+                          value={answers[current] || ""}
+                          onChange={(e) => handleAnswer(current, e.target.value)}
+                          disabled={mode === "practice" && showFeedback}
                         />
-                        <span className="option-text">
-                          {renderQuestionText(val)}
-                        </span>
-                      </label>
-                    );
-                  })
-                )}
+                        {/* --- NEW: Show correct answer feedback for numerical --- */}
+                        {mode === "practice" &&
+                          showFeedback &&
+                          checkedAnswers[current]?.status !== "correct" && (
+                            <div className="correct-answer-feedback">
+                              Correct Answer:{" "}
+                              {formatCorrectAnswerText(q.correctOption)}
+                            </div>
+                          )}
+                      </>
+                    ) : (
+                      Object.entries(q.options || {}).map(([key, val]) => {
+                        // --- NEW: Add dynamic classes for practice mode feedback ---
+                        let practiceClass = "";
+                        if (mode === "practice" && showFeedback) {
+                          const correctAnswer = q.correctOption;
+                          const userAnswer = answers[current];
+                          const isMultiple = q.questionType === "multiple";
+
+                          if (
+                            (isMultiple && correctAnswer.includes(key)) ||
+                            (!isMultiple && key === correctAnswer)
+                          ) {
+                            practiceClass = "correct-practice";
+                          } else if (
+                            (isMultiple && userAnswer?.includes(key)) ||
+                            (!isMultiple && key === userAnswer)
+                          ) {
+                            practiceClass = "incorrect-practice";
+                          }
+                        }
+
+                        return (
+                          <label
+                            key={key}
+                            className={`option-label ${practiceClass}`}
+                          >
+                            <input
+                              type={
+                                q.questionType === "multiple" ? "checkbox" : "radio"
+                              }
+                              name={`q-${current}`}
+                              value={key}
+                              checked={
+                                q.questionType === "multiple"
+                                  ? (answers[current] || []).includes(key)
+                                  : answers[current] === key
+                              }
+                              onChange={() =>
+                                handleAnswer(
+                                  current,
+                                  key,
+                                  q.questionType === "multiple"
+                                )
+                              }
+                            />
+                            <span className="option-text">
+                              {renderQuestionText(val)}
+                            </span>
+                          </label>
+                        );
+                      })
+                    )}
+                  </div>
+
+                  {/* --- NEW: Show explanation in practice mode after checking --- */}
+                  {mode === "practice" && showFeedback && q.explanation && (
+                    <div className="explanation-block">
+                      <strong>Explanation:</strong>{" "}
+                      {renderQuestionText(q.explanation)}
+                    </div>
+                  )}
               </div>
 
-              {/* --- NEW: Show explanation in practice mode after checking --- */}
-              {mode === "practice" && showFeedback && q.explanation && (
-                <div className="explanation-block">
-                  <strong>Explanation:</strong>{" "}
-                  {renderQuestionText(q.explanation)}
-                </div>
-              )}
-
-              <div className="question-nav">
-                <div className="question-nav-header">Questions</div>
-                <div className="question-nav-list" ref={navContainerRef}>
-                  {questions.map((_, i) => {
-                    const isVisited = visitedQuestions.has(i);
-                    const isAns = isAnswered(i);
-                    let navClass = "unvisited";
-                    
-                    if (isVisited && i !== current) {
-                      navClass = isAns ? "visited-answered" : "visited-unanswered";
-                    }
-
-                    return (
-                      <button
-                        key={i}
-                        className={`question-nav-item ${
-                          i === current ? "current" : ""
-                        } ${navClass}`}
-                        onClick={() => handleSetCurrent(i)}
-                      >
-                        {i + 1}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="navigation-buttons">
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => handleSetCurrent(current - 1)}
-                  disabled={current === 0}
-                >
-                  Previous
-                </button>
-
+              <div className="navigation-buttons fixed-bottom">
                 {/* --- NEW: Conditionally render Check button for practice mode --- */}
                 {mode === "practice" && (
                   <button
@@ -1300,15 +1337,6 @@ const Quiz = () => {
                     disabled={showFeedback || !isAnswered(current)}
                   >
                     Check
-                  </button>
-                )}
-
-                {current < questions.length - 1 && (
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => handleSetCurrent(current + 1)}
-                  >
-                    Next
                   </button>
                 )}
               </div>
@@ -1324,20 +1352,72 @@ const Quiz = () => {
     <div className={`quiz-page-wrapper ${finished ? 'results-mode' : ''}`}>
       <div className="quiz-container">
         <div className="quiz-header">
-          <h1>Quiz for {subject}</h1>
-          <div className="header-right">
-            {mode === "exam" && timerRunning && timeLeft != null && quizPrefs.timerVisible && (
-              <div className="timer">
-                <IconClock /> {formatTimeForTimer(timeLeft)}
+          <div className="header-left">
+            <h1>Quiz for {subject}</h1>
+          </div>
+
+          <div className="header-center">
+            {/* --- NEW: Header Navigation Buttons (Centered) --- */}
+            {!finished && (
+              <div className="header-nav-buttons">
+                <button
+                  className="btn-header-nav"
+                  onClick={() => handleSetCurrent(current - 1)}
+                  disabled={current === 0}
+                  title="Previous Question"
+                >
+                  Previous
+                </button>
+                <button
+                  className="btn-header-nav"
+                  onClick={() => handleSetCurrent(current + 1)}
+                  disabled={current === questions.length - 1}
+                  title="Next Question"
+                >
+                  Next
+                </button>
               </div>
             )}
+          </div>
+
+          <div className="header-right">
+            {mode === "exam" && timerRunning && timeLeft != null && quizPrefs.timerVisible && (
+              <div className="timer premium-timer">
+                <IconClock /> <span>{formatTimeForTimer(timeLeft)}</span>
+              </div>
+            )}
+
+            {/* --- NEW: Music Controls --- */}
+            <div className="quiz-music-controls">
+              <button 
+                className={`btn-music-toggle ${musicEnabled ? 'active' : ''}`}
+                onClick={() => setMusicEnabled(!musicEnabled)}
+                title={musicEnabled ? "Mute Music" : "Play Music"}
+              >
+                <IconMusic />
+              </button>
+              {musicEnabled && (
+                <select
+                  className="quiz-music-select"
+                  value={quizPrefs.selectedMusicTrack}
+                  onChange={(e) => setQuizPrefs(prev => ({ ...prev, selectedMusicTrack: e.target.value }))}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {musicTracks.map(track => (
+                    <option key={track.id} value={track.id}>
+                      {track.name}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </div>
             {!finished && (
               <button
                 onClick={() => setShowSubmitModal(true)}
                 className="btn btn-submit-quiz-header"
                 title="Submit Quiz"
               >
-                <IconCheckCircle /> Submit
+                Submit
               </button>
             )}
             <button
@@ -1348,7 +1428,7 @@ const Quiz = () => {
               className="btn btn-leave-quiz-header"
               title={fromHistory && finished ? "Back to History" : "Exit to Dashboard"}
             >
-              <IconXCircle /> {fromHistory && finished ? "← History" : "Exit"}
+              {fromHistory && finished ? "History" : "Exit"}
             </button>
           </div>
         </div>
