@@ -9,6 +9,8 @@ import { useTheme } from "../context/ThemeContext";
 import "./quiz-results.css";
 
 import "./quiz.css";
+import QuestionDetailModal from "./QuestionDetailModal";
+
 const IconCheckCircle = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -393,6 +395,8 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
   const [aiAnalysis, setAiAnalysis] = useState(savedAiAnalysis || null);
   const [loadingAI, setLoadingAI] = useState(false);
   const [aiError, setAiError] = useState(null);
+  const [selectedQuestion, setSelectedQuestion] = useState(null);
+
 
   const stats = useMemo(() => {
     if (!results) return null;
@@ -643,8 +647,22 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
           const result = results.questions[i];
           if (!result) return null;
           return (
-            <div key={i} className={`result-item status-${result.status}`}>
+            <div 
+              key={i} 
+              className={`result-item status-${result.status} clickable-result-item`}
+              onClick={() => setSelectedQuestion({
+                ...originalQuestions[i],
+                userAnswer: result.userAnswer,
+                status: result.status,
+                term: results.term,
+                exam: results.exam
+              })}
+            >
               <div className="question-text">
+                <div className="question-header-badges" style={{ marginBottom: '0.5rem', display: 'flex', gap: '0.5rem' }}>
+                    {results.term && <span className="badge badge-muted" style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', color: '#aaa' }}>{results.term}</span>}
+                    {results.exam && <span className="badge badge-muted" style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', color: '#aaa' }}>{results.exam}</span>}
+                </div>
                 {q.context && (
                   <div className="question-context">
                     {q.context}
@@ -679,6 +697,17 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
           );
         })}
       </div>
+      
+      {selectedQuestion && (
+        <QuestionDetailModal
+          question={selectedQuestion}
+          userAnswer={selectedQuestion.userAnswer}
+          status={selectedQuestion.status}
+          term={results.term}
+          exam={results.exam}
+          onClose={() => setSelectedQuestion(null)}
+        />
+      )}
     </div>
   );
 };
