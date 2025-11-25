@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from '../api/axios';
 import MagicBento from "./MagicBento";
 import Dock from "./Dock";
 import { useTheme } from "../context/ThemeContext";
@@ -55,7 +55,7 @@ const Dashboard = () => {
         return;
       }
       try {
-        const res = await axios.get("http://localhost:5000/getuser", {
+        const res = await api.get("/getuser", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data.user);
@@ -76,8 +76,8 @@ const Dashboard = () => {
       if (exam) params.exam = exam;
       if (term) params.term = term;
 
-      axios
-        .get("http://localhost:5000/api/topics", { params })
+      api
+        .get("/api/topics", { params })
         .then((res) => setTopics(res.data || []))
         .catch((err) => console.error("Error fetching topics:", err))
         .finally(() => setIsFilterLoading(false));
@@ -91,8 +91,8 @@ const Dashboard = () => {
       if (exam) params.exam = exam;
       if (selectedTopic) params.topic = selectedTopic;
 
-      axios
-        .get("http://localhost:5000/api/terms", { params })
+      api
+        .get("/api/terms", { params })
         .then((res) => setTerms(res.data.terms || []))
         .catch((err) => console.error("Error fetching terms:", err))
         .finally(() => setIsFilterLoading(false));
@@ -135,8 +135,8 @@ const Dashboard = () => {
   const confirmAddSubjects = async () => {
     if (!selectedNewSubjects.length) return;
     try {
-      const res = await axios.put(
-        "http://localhost:5000/user/update-subjects",
+      const res = await api.put(
+        "/user/update-subjects",
         { add: selectedNewSubjects },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -167,8 +167,8 @@ const Dashboard = () => {
 
   const confirmRemove = async () => {
     try {
-      const res = await axios.put(
-        "http://localhost:5000/user/update-subjects",
+      const res = await api.put(
+        "/user/update-subjects",
         { remove: subjectToRemove },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -199,8 +199,8 @@ const Dashboard = () => {
 
     try {
       const [topicsRes, termsExamsRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/topics", { params: { subject } }),
-        axios.get("http://localhost:5000/api/terms", { params: { subject } }),
+        api.get("/api/topics", { params: { subject } }),
+        api.get("/api/terms", { params: { subject } }),
       ]);
       setTopics(Array.isArray(topicsRes.data) ? topicsRes.data : []);
       setTerms(termsExamsRes.data.terms || []);

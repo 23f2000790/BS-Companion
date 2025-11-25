@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from '../api/axios';
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Navbar from "./Navbar";
 import { FaBrain, FaTrophy, FaFileAlt, FaRocket } from "react-icons/fa";
@@ -39,7 +39,7 @@ const LandingPage = () => {
 
       if (token && isTokenValid(token)) {
         try {
-          const res = await axios.get("http://localhost:5000/getuser", {
+          const res = await api.get("/getuser", {
             headers: { Authorization: `Bearer ${token}` },
           });
           navigate("/dashboard");

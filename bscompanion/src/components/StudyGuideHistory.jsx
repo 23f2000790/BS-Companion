@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import api from '../api/axios' ;
 import { useNavigate } from "react-router-dom";
 import Dock from "./Dock";
 import {
@@ -30,8 +30,8 @@ const StudyGuideHistory = () => {
         return;
       }
 
-      const response = await axios.get(
-        "http://localhost:5000/api/study-guides/user",
+      const response = await api.get(
+        "/api/study-guides/user",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -46,7 +46,7 @@ const StudyGuideHistory = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/study-guides/${id}`, {
+      await api.delete(`/api/study-guides/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

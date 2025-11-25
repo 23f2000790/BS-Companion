@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api/axios';
 import Dock from './Dock';
 import {
   HomeIcon,
@@ -31,7 +31,7 @@ const UserProfile = () => {
         return;
       }
       try {
-        const res = await axios.get('http://localhost:5000/getuser', {
+        const res = await api.get('/getuser', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data.user);
@@ -65,8 +65,8 @@ const UserProfile = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put(
-        'http://localhost:5000/api/user/update-profile',
+      const res = await api.put(
+        '/api/user/update-profile',
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

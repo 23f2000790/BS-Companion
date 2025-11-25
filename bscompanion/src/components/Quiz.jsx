@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from '../api/axios' ;
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
@@ -474,8 +474,8 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
         status: q.status
       }));
       
-      const response = await axios.post(
-        "http://localhost:5000/api/ai/analyze",
+      const response = await api.post(
+        "/api/ai/analyze",
         {
           resultId: resultId,
           score: results.score,
@@ -833,8 +833,8 @@ const Quiz = () => {
       setLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(
-          `http://localhost:5000/api/results/${resultId}`,
+        const response = await api.get(
+          `/api/results/${resultId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         
@@ -908,7 +908,7 @@ const Quiz = () => {
     if (!exam && !initialTopic && !term) return;
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5000/api/questions", {
+      const res = await api.get("/api/questions", {
         params: {
           subject,
           exam,
@@ -1144,7 +1144,7 @@ const Quiz = () => {
     try {
       const token = localStorage.getItem("token");
       if (!token) return;
-      const response = await axios.post("http://localhost:5000/api/results", payload, {
+      const response = await api.post("/api/results", payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
       // Save the result ID for AI analysis

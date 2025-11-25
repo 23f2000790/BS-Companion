@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from '../api/axios';
 import { signInWithGoogle } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
@@ -41,7 +41,7 @@ const AuthPage = () => {
       const result = await signInWithGoogle();
       const { displayName, email, photoURL } = result.user;
 
-      const res = await axios.post("http://localhost:5000/auth/google", {
+      const res = await api.post("/auth/google", {
         name: displayName,
         email,
         photoURL,

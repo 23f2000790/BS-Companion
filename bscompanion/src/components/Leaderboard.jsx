@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import api from '../api/axios';
 import { useTheme } from '../context/ThemeContext';
 import gsap from 'gsap';
 import { FOUNDATIONAL_SUBJECTS, DIPLOMA_SUBJECTS } from '../constants';
@@ -24,7 +24,7 @@ const Leaderboard = ({ fullPage = false }) => {
       const token = localStorage.getItem('token');
       const params = activeTab !== 'Global' ? { subject: activeTab } : {};
       
-      const response = await axios.get('http://localhost:5000/api/leaderboard', {
+      const response = await api.get('/api/leaderboard', {
         params,
         headers: { Authorization: `Bearer ${token}` }
       });

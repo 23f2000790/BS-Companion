@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import ProtectedRoute from "./components/ProtectedRoute";
 import Quiz from "./components/Quiz";
 import CustomCursor from "./components/landing/CustomCursor";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 import { ThemeProvider } from "./context/ThemeContext";
 import "./components/Theme.css";
@@ -139,6 +140,7 @@ const App = () => {
   return (
     <ThemeProvider>
       <Router>
+        <AnalyticsTracker />
         {/* Hide default cursor only on landing and auth pages */}
         <style>
           {`

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from '../api/axios';
 
 const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const ProtectedRoute = ({ children }) => {
 
       try {
         // Verify token validity by fetching user
-        await axios.get("http://localhost:5000/getuser", {
+        await api.get("/getuser", {
           headers: { Authorization: `Bearer ${token}` },
         });
         // If successful, stay on the page (children will render)

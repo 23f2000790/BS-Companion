@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import { gsap } from "gsap";
-import axios from "axios";
+import api from '../api/axios';
 import { useTheme } from "../context/ThemeContext";
 import "./MagicBento.css";
 import StudyGuideModal from "./StudyGuideModal";
@@ -413,8 +413,8 @@ const MagicBento = ({
   const handleGenerateStudyGuide = async (subject, exam) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post(
-        'http://localhost:5000/api/study-guides/generate',
+      const response = await api.post(
+        '/api/study-guides/generate',
         { subject, exam },
         { headers: { Authorization: `Bearer ${token}` } }
       );

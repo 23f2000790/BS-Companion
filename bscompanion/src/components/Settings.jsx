@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api/axios';
 import { useTheme } from '../context/ThemeContext';
 import Dock from './Dock';
 import {
@@ -45,14 +45,14 @@ const Settings = () => {
       const token = localStorage.getItem('token');
       
       // Fetch user data
-      const userResponse = await axios.get('http://localhost:5000/getuser', {
+      const userResponse = await api.get('/getuser', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const user = userResponse.data.user;
       
       // Fetch quiz history
-      const historyResponse = await axios.get(
-        `http://localhost:5000/api/results/user/${user._id}`,
+      const historyResponse = await api.get(
+        `/api/results/user/${user._id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const quizHistory = historyResponse.data;
@@ -415,8 +415,8 @@ const Settings = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post(
-        'http://localhost:5000/api/feedback',
+      await api.post(
+        '/api/feedback',
         { feedback: feedbackText },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from '../api/axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'; // <--- IMPORT THIS
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -25,8 +25,8 @@ const StudyGuideView = () => {
           return;
         }
 
-        const response = await axios.get(
-          `http://localhost:5000/api/study-guides/${id}`,
+        const response = await api.get(
+          `/api/study-guides/${id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

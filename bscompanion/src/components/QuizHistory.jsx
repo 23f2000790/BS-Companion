@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import api from '../api/axios';
 import { useNavigate } from "react-router-dom";
 import Dock from "./Dock";
 import {
@@ -28,7 +28,7 @@ const QuizHistory = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:5000/getuser", {
+        const response = await api.get("/getuser", {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -50,8 +50,8 @@ const QuizHistory = () => {
         const token = localStorage.getItem("token");
 
         const params = filter !== "all" ? `?subject=${filter}` : "";
-        const response = await axios.get(
-          `http://localhost:5000/api/results/user/${userId}${params}`,
+        const response = await api.get(
+          `/api/results/user/${userId}${params}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 

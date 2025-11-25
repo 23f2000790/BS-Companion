@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../api/axios';
 import SkillRadarChart from './SkillRadarChart';
 import { useTheme } from '../context/ThemeContext';
 
@@ -13,7 +13,7 @@ const AcademicOverview = () => {
         const token = localStorage.getItem('token');
         if (!token) return;
 
-        const res = await axios.get('http://localhost:5000/api/stats/skills', {
+        const res = await api.get('/api/stats/skills', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setStats(res.data);
