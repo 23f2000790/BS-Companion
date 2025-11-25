@@ -1,0 +1,2017 @@
+[
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": null,
+        "question": "The ability of an application to work with different input modalities beyond keyboard highlights which of the following accessibility principle?",
+        "options": {
+            "A": "Perceivable",
+            "B": "Operable",
+            "C": "Understandable",
+            "D": "Robust"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which of the following is true about the term \u201cstateless\u201d in the client-server model?",
+        "options": {
+            "A": "The server responds to the client based on the previous state.",
+            "B": "Server is not required to maintain any state of client or session during transactions between client and server.",
+            "C": "The server uses FTP protocol to respond to the client's request.",
+            "D": "Server use the URL to convey information to the client."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which of the following encoding techniques occupies the most space to store 1500 lines with approximately 3000 alphanumeric characters (including space)?",
+        "options": {
+            "A": "UCS-4",
+            "B": "UCS-2",
+            "C": "ASCII",
+            "D": "Original 7 bit ASCII"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which of the following is true about Asynchronous Updates?",
+        "options": {
+            "A": "It is first necessary to load the main page, then load the additional data in the background.",
+            "B": "In every request, load the entire web page.",
+            "C": "User experience is improved due to quick response.",
+            "D": "As a result of asynchronous updates, server load has increased."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": null,
+        "question": "Which of the following flask view functions will return a 404 error for the URL: http://127.0.0.1:5000/details/1001/Michael ?",
+        "options": {
+            "A": "@app.route('/details/<int:id>/<string:name>')\ndef show(id, name):\n    details = {'student_id': id, 'student_name': name}\n    return details",
+            "B": "@app.route('/details/<string:id>/<string:name>')\ndef show(id, name):\n    details = {'student_id': id, 'student_name': name}\n    return details",
+            "C": "@app.route('/details/<id>/<name>')\ndef show(id, name):\n    details = {'student_id': id, 'student_name': name}\n    return details",
+            "D": "None of these."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following view function.\n\n@app.route('/weather', methods = ['GET', 'POST'])\ndef show_weather():\n    val = request.args\n    details = {\n        'City': val['city'],\n        'State': val['state'],\n        'Temperature(F)': val['temp']\n    }\n    return details",
+        "question": "If this flask app is running locally on http://127.0.0.1:5000, which of the following URLs will be handled by the controller correctly and return the weather details for a particular city?",
+        "options": {
+            "A": "http://127.0.0.1:5000/weather/Denver/Colorado/29",
+            "B": "http://127.0.0.1:5000/Denver/Colorado/29",
+            "C": "http://127.0.0.1:5000?endpoint=weather&city=Denver&state=Colorado&temp=29",
+            "D": "http://127.0.0.1:5000/weather?city=Denver&state=Colorado&temp=29"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Software Development Lifecycle & Testing",
+        "context": null,
+        "question": "Consider a time function A such that, T\u2090(N) = (k/l)\u1d3a where, k and l are parameters and k \u03b1 l. Then what will the time complexity of the time function A if N is the number of inputs?",
+        "options": {
+            "A": "Quadratic",
+            "B": "Logarithmic",
+            "C": "Exponential",
+            "D": "Linear"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Databases & ORM",
+        "context": "Consider the following Users table.\n\n| Email      | Password |\n|------------|----------|\n| 1@abc.com  | P1Wd     |\n| 2@abc.com  | P2Wd     |\n| 3@abc.com  | P3Wd     |",
+        "question": "Which of the following syntax is correct for creating a unique index in the Users table using Email column called email_index?",
+        "options": {
+            "A": "CREATE UNIQUE INDEX AS email_index Users(Email);",
+            "B": "CREATE UNIQUE INDEX email_index ON Users(Email);",
+            "C": "CREATE email_index ON Users(Email) CONSTRAINTS UNIQUE INDEX;",
+            "D": "CREATE UNIQUE INDEX email_index ON Email(Users);"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "Consider the following two statements:\n\nStatement 1: A process of authentication involves verifying the identity of someone or something.\nStatement 2: To control access to systems or data, the authorization process is used.",
+        "question": "Consider the following two statements:",
+        "options": {
+            "A": "Statement 1 is correct and statement 2 is incorrect.",
+            "B": "Statement 1 is incorrect and statement 2 is correct.",
+            "C": "Both statement 1 and statement 2 are correct.",
+            "D": "Both statement 1 and statement 2 are incorrect."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "from jinja2 import Template\n\ntemplate = \"\"\"{% for s in students %}\n\t\t\t\tstudent_name:{{s.name}}\n\t\t\t\tstudent_mark1:{{s.m1}}\n\t\t\t\tstudent_mark2:{{s.m2}}\n\t\t\t\t{% endfor %}\n\t\t\t\"\"\"\n\nstud = Template(template)\n\ns1=[{'name': \"venu\", \"m1\":76, \"m2\":88},{'name':\"renu\",\"m2\":92},\n\t{'name':\"seenu\",\"m1\":44},{'name':\"ragu\"} ]\n\nprint(stud.render(students=s1))",
+        "question": "What will be the output of the following Python program on the terminal.",
+        "options": {
+            "A": "student_name:venu\nstudent_mark1:76\nstudent_mark2:88",
+            "B": "student_name:venu\nstudent_mark1:76\nstudent_mark2:88\nstudent_name:renu\nstudent_mark2:92\nstudent_name:seenu\nstudent_mark1:44\nstudent_name:ragu",
+            "C": "name:venu\nm1:76\nm2:88\nname:renu\nm2:92\nname:seenu\nm1:44\nname:ragu",
+            "D": "student_name:venu\nstudent_mark1:76\nstudent_mark2:88\nstudent_name:renu\nstudent_mark1:\nstudent_mark2:92\nstudent_name:seenu\nstudent_mark1:44\nstudent_mark2:\nstudent_name:ragu\nstudent_mark1:\nstudent_mark2:"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application:\n\nfrom flask import Flask, request\napp = Flask(__name__)\n\n@app.route('/get_value')\ndef get_value():\n    val1 = request.args.get(\"val1\")\n    return 'The value is ' + val1\n\nif __name__ == '__main__':\n    app.run(host= '127.0.0.1', port = 5000, debug = True)",
+        "question": "Which of the following route(s) will return The value is 10 in the browser?",
+        "options": {
+            "A": "http://127.0.0.1:5000?val1=10",
+            "B": "http://127.0.0.1:5000/get_value?10",
+            "C": "http://127.0.0.1:5000/get_value?val1=10",
+            "D": "http://127.0.0.1:5000/get_value?val1=10&val2=10"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "from flask import Flask\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nSize_list = {1: \"Nano\", 2: \"Macro\", 3: \"Micro\"}\n\nclass size_list(Resource):\n    def get(self):\n        return size_list\n\nclass size(Resource):\n    def get(self, f_id):\n        return size_list[f_id]\n\napi.add_resource(size_list, '/')\napi.add_resource(size, '/<int:f_id>')\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "question": "If this flask app is running locally on \"http://127.0.0.1:5000\", then which of the following statements is/are true about the code snippet given above?",
+        "options": {
+            "A": "On the URL, \"http://127.0.0.1:5000/\", the browser will show 'page not found' error.",
+            "B": "On the URL, \"http://127.0.0.1:5000/\", the browser will render. {\"1\": \"Nano\", \"2\": \"Macro\", \"3\": \"Micro\"}",
+            "C": "On the URL, \"http://127.0.0.1:5000/3\", the browser will render \"Macro\"",
+            "D": "On the URL, \"http://127.0.0.1:5000/2\", the browser will render \"Macro\""
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which of the following is a valid JSON?",
+        "options": {
+            "A": "{\n  \"name\": \"Harvard\",\n  \"brands\": (\"Rolex\", \"Porsche\"),\n  \"max\":42\n}",
+            "B": "{\n  \"Cities\": [\"Mumbai\", \"Chennai\"],\n  \"stable\": True,\n  \"Objects\":\"{\\\"beverage\\\":\\\"Tea\\\",\\\"drinks\\\":\\\"Soft drinks\\\"}\"\n}",
+            "C": "{\n  \"Type\": \"Invitro\",\n  \"Success_rate\": \"31.56\",\n  \"Metal\": \"Aluminium\"\n}",
+            "D": "{\n  \"Cars\": [\"Audi X8\", \"Volvo S60\", \"Jeep\"],\n  \"failures\": None,\n  \"imported\": true,\n}"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "The lens of an HDD can read data on the rotating disk with the speed of 48,000 bits per second. The disk is designed such that 800 bits pass under the lens for every revolution of the disk, what should be the maximum speed of disk so that the lens does not miss any data?",
+        "options": {
+            "A": "60 RPM",
+            "B": "100 RPM",
+            "C": "3600 RPM",
+            "D": "6000 RPM"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "from flask import Flask, jsonify, request\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nclass Hi(Resource):\n    def get(self):\n        return jsonify({'message': 'Say, Hi'})\n\n    def post(self, name):\n        message = 'Say, Hi ' + name\n        return jsonify({'message': message})\n\nclass Bye(Resource):\n    def get(self):\n        return jsonify({'message': 'Say, Bye'})\n\n    def post(self, name):\n        message = 'Say, Bye ' + name\n        return jsonify({'message': message})\n\napi.add_resource(Hi, '/', '/<string:name>')\napi.add_resource(Bye, '/bye/', '/bye/<string:name>')\n\nif __name__ == '__main__':\n    app.run(debug = True)",
+        "question": "Assuming app.py is running locally, what will be the output if the command:\ncurl http://127.0.0.1:5000/ -H \"Content-type:application/json\" -X GET\nis run on a new terminal?",
+        "options": {
+            "A": "{\n  \"message\": \"Say, Hi\"\n}",
+            "B": "{\n  \"message\": \"Say, Hi Leo\"\n}",
+            "C": "{\n  \"message\": \"Say, Bye\"\n}",
+            "D": "{\n  \"message\": \"Say, Bye Leo\"\n}"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Databases & ORM",
+        "context": "Consider the table \"stud\" given below. The model class \"Student\" corresponds to the table \"stud\" in the SQLite database.\n\n| ID | First_name | Last_name | Email            |\n|----|------------|-----------|------------------|\n| 1  | Ram        | Kumar     | kumar@gmail.com  |\n| 2  | Raj        | Kumar     | raj@gmail.com    |\n| 3  | Ravi       | Kumar     | ravi@gmail.com   |\n| 4  | Anil       | kumar     | anil@gmail.com   |\n| 5  | Bala       | vignesh   | bala@gmail.com   |\n| 6  | Raj        | madhan    | madhan@gmail.com |",
+        "question": "What will be the output of the flask_sqlalchemy command given below?\n\n>>> user1= Student.query.filter_by(First_name=\"Raj\").first()\n>>> user1.First_name= \"Ragu\"\n>>> db.session.commit()\n>>> s1 = Student.query.all()\n>>> for stud in s1:\n      print(stud.First_name)",
+        "options": {
+            "A": "Ram\nRaj\nRavi\nAnil\nBala\nRaj",
+            "B": "Ram\nRagu\nRavi\nAnil\nBala\nRagu",
+            "C": "Ram\nRagu\nRavi\nAnil\nBala\nRaj",
+            "D": "Ragu\nRaj"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following code.\n\npython\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route('/home/')\ndef home1():\n    return \"This is homepage 1\"\n\n@app.route('/home/')\ndef home2():\n    return \"This is homepage 2\"\n\n@app.errorhandler(404)\ndef page_not_found(e):\n    return 'page not found'\n\napp.run(debug=True)\n",
+        "question": "If the flask application is running on http://127.0.0.1:5000, what will browser render for URL http://127.0.0.1:5000/home/",
+        "options": {
+            "A": "Page not found",
+            "B": "This is homepage 1",
+            "C": "This is homepage 2",
+            "D": "Code will throw error"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Flask code snippet.\n\npython\nfrom flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route('/greet/<name>')\ndef greet(name):\n    if name:\n        return f'<h1>Hi, Mr/Ms/ {name} welcome to flask</h1>'\n    else:\n        return f'<h1>Hi, Mr/Ms/ <unknown> welcome to flask</h1>'\n\napp.run(debug=True)\n",
+        "question": "If the application is running on a local server for the URL: https://127.0.0.1:5000, what will the browser render for the URL, http://127.0.0.1:5000/greet/?",
+        "options": {
+            "A": "Hi, Mr/Ms/ None welcome to flask",
+            "B": "Hi, Mr/Ms/ <unknown> welcome to flask",
+            "C": "Bad request, Invalid name provided",
+            "D": "Not Found"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "Consider the below statements about Cookies:\n\nStatement 1: Cookies enable the web app to recognize the users\nStatement 2: Cookies can include information about location, login data, and language etc.,",
+        "question": "Which of the below is the correct option?",
+        "options": {
+            "A": "Statement 1 is correct and Statement 2 is incorrect",
+            "B": "Statement 1 is incorrect and Statement 2 is correct",
+            "C": "Both Statement 1 and Statement 2 are correct",
+            "D": "Both Statement 1 and Statement 2 are incorrect"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the below Flask code snippet:\n\npython\nfrom flask import Flask, jsonify\napp = Flask(__name__)\n\n@app.route('/api/courses')\ndef get_courses():\n    courses = [{'id': 'CS1001', 'name': 'CT'}, {'id': 'CS1002', 'name': 'PDSA'}]\n    return jsonify(courses)\n",
+        "question": "If the application is running locally, what will be the status code and mimetype of the response for the URL http://127.0.0.1:5000/api/courses?",
+        "options": {
+            "A": "status=404 and mimetype='application/json'",
+            "B": "status=200 and mimetype='application/json'",
+            "C": "status=200 and mimetype='text/javascript'",
+            "D": "status=404 and mimetype='text/javascript'"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Consider a character set M, which consists of only those characters used in the statement, \"sphinx of black quartz judge my vow\" If this statement is to be saved in a document with minimum encoding, what will be the size of the document given that no other information or context is to be saved?",
+        "options": {
+            "A": "145 bits",
+            "B": "245 bits",
+            "C": "175 bits",
+            "D": "256 bits"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet.\n\npython\nfrom string import Template\n\ntext = \"The $color car is parked in front of the $building.\"\n\ntemplate = Template(text)\n\nprint(=== OUTPUT ===)\n",
+        "question": "Which of the following statements, when substituted in place of === OUTPUT ===, will throw a KeyError?",
+        "options": {
+            "A": "template.substitute({'color':'red'})",
+            "B": "template.substitute({'color':'blue', 'building':'office', 'place':'chennai'})",
+            "C": "template.safe_substitute({'color':'green'})",
+            "D": "template.safe_substitute({'color':'yellow', 'building':'apartment', 'place':'chennai'})"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Software Development Lifecycle & Testing",
+        "context": "Software packages A and B of complexity O(nlogn) and O(n\u00b2), respectively, spend exactly T\u2090(n) = C\u2090nlog\u2081\u2080(n) and T\u2091(n) = C\u2091n\u00b2 milliseconds to process n data items. During a test, the average time of processing n = 10\u2077 data items with the package A and B is 420 milliseconds and 350 milliseconds, respectively.",
+        "question": "The time taken (in milliseconds) by software package A and B to process 10\u2079 data items, respectively will be?",
+        "options": {
+            "A": "48 and 35",
+            "B": "480 and 350",
+            "C": "480 and 35000",
+            "D": "48000 and 35000"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Databases & ORM",
+        "context": null,
+        "question": "What is the correct output of the flask_sqlalchemy commands below?",
+        "options": {
+            "A": "1, Yes, All docs verified\n6, Yes, All docs verified\n7, Yes, All docs verified",
+            "B": "2, No, All docs verified\n3, No, All docs verified\n4, No, All docs verified",
+            "C": "1, No, All docs verified\n6, No, All docs verified\n7, No, All docs verified",
+            "D": "2, No, The mortgage doc is missing\n3, No, Payslip doc is not enclosed\n4, No, TDS doc is not enclosed"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764048011/may2023-1_w0ih0t.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet.\n\npython\ndef modify(func):\n    def wrapper(name):\n        print(\"Before function execution\")\n        result = func(name)\n        print(\"After function execution\")\n        return result\n    return wrapper\n\n@modify\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"Ram\"))\n",
+        "question": "What will be the output of the code on the terminal?",
+        "options": {
+            "A": "Before function execution\nAfter function execution\nHello, Ram!",
+            "B": "Hello, Ram!\nBefore function execution\nAfter function execution",
+            "C": "Before function execution\nHello, Ram!\nAfter function execution",
+            "D": "Hello, Ram!"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Software Development Lifecycle & Testing",
+        "context": "Consider the following Python code snippet.\n\npython\nimport logging\nimport sys\n\nlogging.basicConfig(level=logging.INFO,\n                    format='%(levelname)s - %(message)s')\n\nnum1, num2 = int(sys.argv[1]), int(sys.argv[2])\n\nlogging.info(\"This operation checks factors\")\n\nif num1 % num2 == 0:\n    logging.debug(f\"{num2} is a factor of {num1}\")\nelse:\n    logging.warning(f\"{num2} is not the factor of {num1}\")\n",
+        "question": "What will be the output of the above code on the terminal for the command: `python log.py 25 5`",
+        "options": {
+            "A": "INFO - This operation checks factors\nWARNING - 5 is not the factor of 25",
+            "B": "INFO - This operation checks factors\nDEBUG - 5 is a factor of 25",
+            "C": "INFO - This operation checks factors",
+            "D": "DEBUG - 5 is a factor of 25"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\napp.py\npython\nfrom flask import Flask, abort, request\n\napp = Flask(__name__)\n\n@app.route('/validate/<int:number>')\ndef validate_number(number):\n    if number % 2 == 0 and number % 3 == 1:\n        abort(400, \"Bad Request: Invalid number provided\")\n    return f'<h1>Valid Number: {number}</h1>'\n\napp.run(debug=True)\n",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+        "options": {
+            "A": "For URL http://127.0.0.1:5000/validate/4 the browser will render Valid Number: 4",
+            "B": "For URL http://127.0.0.1:5000/validate?number=5 the browser will render Bad Request: Invalid number provided",
+            "C": "For URL http://127.0.0.1:5000/validate/4 the browser will render Bad Request: Invalid number provided",
+            "D": "For URL http://127.0.0.1:5000/validate/5 the browser will render Valid Number: 5"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\napp.py\npython\nfrom flask import Flask, abort, request\n\napp = Flask(__name__)\n\n@app.route('/process')\ndef process():\n    username = request.args.get('uname', 'MAD-I')\n    if username.isnumeric():\n        abort(400, \"Bad Request: Numeric username provided\")\n    return f'<h1>Valid Username: {username}</h1>'\n\napp.run(debug=True)\n",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+        "options": {
+            "A": "For URL http://127.0.0.1:5000?uname=MAD-II the browser will render Valid Username: MAD-II",
+            "B": "For URL http://127.0.0.1:5000/process the browser will render Valid Username: MAD-I",
+            "C": "For URL http://127.0.0.1:5000/process?uname the browser will render Valid Username:",
+            "D": "For URL http://127.0.0.1:5000/process?uname=101MU the browser will render Bad Request: Numeric username provided"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\napp.py\npython\nfrom flask import Flask, abort, request\n\napp = Flask(__name__)\ndata = {'MAD-I':'CS2003', 'MAD-II':'CS2004', 'Java':'CS2005'}\n\n@app.route('/course/<course_name>')\ndef course(course_name):\n    course_id = request.args.get('id')\n    if course_id and data[course_name] == course_id:\n        return f'<h1>The Course ID for {course_name} is: {course_id}</h1>'\n    else:\n        abort(400, \"Bad Request: Invalid data\")\n\napp.run(debug=True)\n",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+        "options": {
+            "A": "For URL http://127.0.0.1:5000/MAD-I?id=CS2003 the browser will render; The Course ID for MAD-I is: CS2003",
+            "B": "For URL http://127.0.0.1:5000/course/Java?id=CS2005 the browser will render; The Course ID for Java is: CS2005",
+            "C": "For URL http://127.0.0.1:5000/course?course_name=MAD-II&id=CS2004 the browser will render; The Course ID for MAD-II is: CS2004",
+            "D": "For URL http://127.0.0.1:5000/course/MAD-II?id=CS2003 the browser will render Bad Request: Invalid data"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Databases & ORM",
+        "context": "Consider the below schema:",
+        "question": "Which of the below is the correct syntax to create a data model using flask_sqlalchemy?",
+        "options": {
+            "A": "python\nclass Employee(db.Model):\n    emp_id=db.Column(db.Integer, unique=True)\n    employee_name=db.Column(db.String, nullable=False)\n    basic_salary=db.Column(db.Float, nullable=True)\n",
+            "B": "python\nclass Employee(db.Model):\n    emp_id=db.Column(db.Integer, primary_key=True)\n    employee_name=db.Column(db.String, nullable=False)\n    basic_salary=db.Column(db.Float, nullable=False)\n",
+            "C": "python\nclass Employee(db.Model):\n    emp_id=db.Column(db.Integer, primary_key=True)\n    employee_name=db.Column(db.String, nullable=false)\n    basic_salary=db.Column(db.Float)\n",
+            "D": "python\nclass Employee(db.Model):\n    emp_id=db.Column(db.Integer, primary_key=True)\n    employee_name=db.Column(db.String, nullable=False)\n    basic_salary=db.Column(db.Float, nullable=True)\n"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764048193/may2023-2_icrl7g.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following HTML document.\nhtml\n<!DOCTYPE html>\n<html>\n<head>\n<title>Form Validation</title>\n<script>\nfunction validateForm() {\n    var username = document.forms[\"myForm\"][\"username\"].value;\n    var password = document.forms[\"myForm\"][\"password\"].value;\n    if (username == \"\") {\n        alert(\"Username must be filled out\");\n        return false;\n    }\n    if (password.length < 8) {\n        alert(\"Password must be at least 8 characters long\");\n        return false;\n    }\n}\n</script>\n</head>\n<body>\n<form name=\"myForm\" onsubmit=\"return validateForm()\">\n    <label for=\"username\">Username:</label>\n    <input type=\"text\" name=\"username\">\n    <label for=\"password\">Password:</label>\n    <input type=\"password\" name=\"password\" required>\n    <input type=\"submit\" value=\"Submit\">\n</form>\n</body>\n</html>\n",
+        "question": "Select the correct option(s).",
+        "options": {
+            "A": "The JavaScript function, `validateForm` performs the backend processing of form data.",
+            "B": "The JavaScript function, `validateForm` carries out the client side validation of form data.",
+            "C": "If the password field is left empty, on submission, the user will get a prompt \"Please fill out this field.\" near the password field.",
+            "D": "If the password field is left empty, on submission, the user will get a prompt \"Password must be at least 8 characters long\" from the browser."
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following api resources created using flask_restful. Assume that the app is connected to the database and is running on one terminal.\npython\nclass TestApi(Resource):\n    def get(self, admin):\n        # retrieves admin data from database and returns it.\n        return {\n            \"name\": \"mad1_admin\",\n            \"role\": \"admin\",\n        }\n\n    def post(self):\n        # fetches user data from request body and stores in the database.\n        return {\n            \"message\": \"user added successfully\"\n        }, 201\n\napi.add_resource(TestApi, \"/api/<string:admin>\", \"/<admin>\", \"/user_data\", \"/\")\n\napp.run()\n",
+        "question": "Select the correct option(s).",
+        "options": {
+            "A": "The base URL for the app is mapped with GET HTTP method.",
+            "B": "If we run the command: `curl http://127.0.0.1:5000/api/user -X GET` on a new terminal; it will return;\n\n{\n    \"name\": \"mad1_admin\",\n    \"role\": \"admin\"\n}\n",
+            "C": "The endpoint, `/<admin>` is mapped with GET HTTP method.",
+            "D": "If we run the command: `curl http://127.0.0.1:5000/user-data -X POST` on a new terminal; it will return;\n\n{\n    \"message\": \"user added successfully\"\n}\n"
+        },
+        "correctOption": [
+            "B",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Databases & ORM",
+        "context": "IIT Madras runs a BS Degree Program in Data Science & AI, which has thousands of students enrolled across multiple levels (Foundational, Diploma, and Degree). The institution needs a database system to manage:\n\nStudent enrollments, tracking performance across multiple subjects and semesters.\nFaculty assignments to courses, ensuring each instructor handles only specific subjects.\nCourse prerequisites (e.g., a student must complete Mad1 before Mad2).\nSecure storage of student grades and transcripts, ensuring only authorized access.\nHandling transactions such as course enrollments, fee payments, and refunds.",
+        "question": "Considering the above requirements, which type of database system is most appropriate?",
+        "options": {
+            "A": "NoSQL (Document-based database like MongoDB)",
+            "B": "Graph Database (e.g., Neo4j)",
+            "C": "RDBMS (e.g., PostgreSQL, MySQL, SQLite)",
+            "D": "Key-Value Store (e.g., Redis, DynamoDB)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which of the following best describes the primary advantage of asynchronous updates in web applications?",
+        "options": {
+            "A": "It ensures that all elements of a web page are loaded at the same time.",
+            "B": "It improves performance by allowing parts of a webpage to update without requiring a full reload.",
+            "C": "It forces the client to wait until the server responds before interacting with the page.",
+            "D": "It requires a high-speed internet connection to function correctly."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "Match the following:",
+        "question": "Choose the correct matching.",
+        "options": {
+            "A": "1-c, 2-d, 3-b, 4-a",
+            "B": "1-c, 2-b, 3-d, 4-a",
+            "C": "1-c, 2-d, 3-a, 4-b",
+            "D": "1-a, 2-d, 3-b, 4-c"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764048289/jan2025-1_prv3zb.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet.\n\npython\ndef update(func):\n    def wrapper(N):\n        out = []\n        for i in range(N):\n            if i%2 == 0:\n                out.append(i**3)\n            else:\n                out.append(i**2)\n        return out\n    return wrapper\n\n@update\ndef func(N):\n    if N%2 == 0:\n        return N**2\n    else:\n        return N**3\n\nprint(func(5))\n",
+        "question": "What will be the output of the above code in the terminal?",
+        "options": {
+            "A": "25",
+            "B": "125",
+            "C": "[0, 1, 4, 27, 16]",
+            "D": "[0, 1, 8, 9, 64]"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the HTML code given below:\n\nFile name: base_layout.html\nhtml\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>ABC App</title>\n</head>\n<body>\n    <h3>Welcome to ABC App</h3>\n    {% block abc %} {% endblock %}\n</body>\n</html>\n",
+        "question": "Which of the following is the correct implementation of template inheritance?",
+        "options": {
+            "A": "{% extends \"base_layout.html\" %}\n{% block abc %}\n<h4>Company Directors</h4>\n<ul>\n  <li>Ram</li>\n  <li>Rahim</li>\n  <li>David</li>\n</ul>\n{% endblock %}",
+            "B": "{% extends \"base_layout.html\" %}\n{% block %}\n<h4>Company Directors</h4>\n<ul>\n  <li>Ram</li>\n  <li>Rahim</li>\n  <li>David</li>\n</ul>\n{% endblock %}",
+            "C": "{% link template \"base_layout.html\" %}\n{% block abc %}\n<h4>Company Directors</h4>\n<ul>\n  <li>Ram</li>\n  <li>Rahim</li>\n  <li>David</li>\n</ul>\n{% endblock %}",
+            "D": "{% block \"base_layout.html\" %}\n<h4>Company Directors</h4>\n<ul>\n  <li>Ram</li>\n  <li>Rahim</li>\n  <li>David</li>\n</ul>\n{% endblock %}"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Flask code.\n\npython\nfrom flask import Flask, request\n\napp = Flask(__name__)\n\ndef is_odd(e):\n    return e % 2 == 0\n\n@app.route(\"/response\")\ndef get_response():\n    if request.args.get(\"n\"):\n        n = request.args.get(\"n\")\n        r = \"\"\n        for i in range(1, (int(n) + 1)):\n            if is_odd(i):\n                r = r + \"odd : \" + str(i) + \"\\n\"\n            else:\n                r = r + \"even : \" + str(i) + \"\\n\"\n        return r\n    else:\n        return \"missing parameter `n` with value\"\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n",
+        "question": "Assume the above code is running on http://127.0.0.1:5000. Which of the following request URL does not throw Not Found error?",
+        "options": {
+            "A": "http://127.0.0.1:5000/response/n=6",
+            "B": "http://127.0.0.1:5000/response/",
+            "C": "http://127.0.0.1:5000/response&n=6",
+            "D": "http://127.0.0.1:5000/response?n=6"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "A web server is handling requests and has an 8-core processor, 32 GB of RAM, and a network bandwidth of 500 Mbps. The application running on the server is capable of generating 100 HTML pages every second. Each of these pages includes an image file that is 500 KB in size. What is the maximum number of requests per second that the server can handle?",
+        "options": {
+            "A": "100 requests/sec",
+            "B": "125 requests/sec",
+            "C": "250 requests/sec",
+            "D": "400 requests/sec"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "The lens of an HDD can read data on the rotating disk with the speed of 36,000 bits per second. The disk is designed such that 600 bits pass under the lens for every revolution of the disk. What should be the maximum speed of the disk so that the lens does not miss any data?",
+        "options": {
+            "A": "60 RPM",
+            "B": "100 RPM",
+            "C": "3600 RPM",
+            "D": "6000 RPM"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Flask Restful API code:",
+        "question": "Based on the above table, choose the correct matching?",
+        "options": {
+            "A": "1-ii, 2-i, 3-iii, 4-iv, 5-v",
+            "B": "1-iii, 2-i, 3-ii, 4-v, 5-iv",
+            "C": "1-ii, 2-i, 3-iv, 4-v, 5-v",
+            "D": "1-ii, 2-iii, 3-i, 4-iii, 5-iii"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764048377/jan2025-2_fahvgr.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Databases & ORM",
+        "context": "Consider the table \"students\" given below. The model class \"Student\" corresponds to the table \"students\" in the SQLite database.",
+        "question": "What will be the output of the commands?",
+        "options": {
+            "A": "Arjun Kumar\nKarthik Kumar\nPranav Kumar\nSurya\nHarish Vignesh\nKarthik Ramesh\nKarthik Kumar",
+            "B": "Arjun Kumar\nVikram Kumar\nPranav Kumar\nSurya\nHarish Vignesh\nVikram Ramesh\nVikram Kumar",
+            "C": "Arjun Kumar\nVikram Kumar\nPranav Kumar\nSurya\nHarish Vignesh\nKarthik Ramesh\nKarthik Kumar",
+            "D": "Vikram Kumar\nKarthik Ramesh\nKarthik Kumar"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764048428/jan2025-3_kqimw2.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the flask code below.\n\npython\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route(\"/user/<id>\")\ndef get_user(id):\n    return \"User Id : \" + str(id)\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n",
+        "question": "Assume that the above flask application is running on http://127.0.0.1:5000. Which of the following URLs will render \"Not Found\" error?",
+        "options": {
+            "A": "http://127.0.0.1:5000/user/2001",
+            "B": "http://127.0.0.1:5000/user/id=2001",
+            "C": "http://127.0.0.1:5000/id=2001",
+            "D": "http://127.0.0.1:5000/2001"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application running locally on http://127.0.0.1:5000.\n\npython\nfrom flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route('/endpoint/<username>')\ndef func(username):\n    return {\n        \"username\": username\n    }, 200\n\n@app.errorhandler(404)\ndef notfound(error):\n    return {\n        \"message\": \"invalid endpoint!\"\n    }\n\napp.run(debug = True)\n",
+        "question": "Which of the following statements is/are correct for the URL: http://127.0.0.1:5000/endpoint/user1/developer",
+        "options": {
+            "A": "The output on the browser will be: { \"Username\" : \"user1\" }",
+            "B": "The output on the browser will be: { \"message\": \"invalid endpoint!\" }",
+            "C": "The status code of the response will be 200",
+            "D": "The status code of the response will be 404"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Databases & ORM",
+        "context": "Consider the following Salesman table/model and answer the following question.",
+        "question": "Which of the following Flask SQLAlchemy code will retrieve Salesman data, where sales_amount is between 5000 and 10000 (both inclusive)?",
+        "options": {
+            "A": "sales_man=Salesman.query.filter((Salesman.sales_amount >= 5000) & (Salesman.sales_amount <= 10000)).all()",
+            "B": "sales_man=Salesman.query.filter(and_(Salesman.sales_amount >= 5000, Salesman.sales_amount <= 10000)).all()",
+            "C": "sales_man=Salesman.query.filter(sales_amount >= 5000 and sales_amount <= 10000)",
+            "D": "sales_man=Salesman.query.filter_by(sales_amount >= 5000, sales_amount <= 10000)"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764048603/jan2025-4_fxhypm.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Flask application:\n\npython\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef home():\n    return \"Welcome to Home Page\"\n\n@app.route('/user/<name>')\ndef user(name):\n    return f\"Hello, {name}!\"\n\n@app.route('/profile/<int:user_id>')\ndef profile(user_id):\n    return f\"User Profile ID: {user_id}\"\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n",
+        "question": "Assume the Flask application is running on http://127.0.0.1:5000/ Which of the following statements about this application are correct?",
+        "options": {
+            "A": "Accessing http://127.0.0.1:5000/user/John will return: Hello, John!",
+            "B": "Accessing http://127.0.0.1:5000/user/07 will return: Hello, !",
+            "C": "Accessing http://127.0.0.1:5000/profile/10 will return: User Profile ID: 10",
+            "D": "Accessing http://127.0.0.1:5000/user/ will result in a 404 error."
+        },
+        "correctOption": [
+            "A",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Flask-RESTful API implementation:\n\npython\nfrom flask import Flask, request\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nstudents = {\n    1: {\"name\": \"Arjun\", \"grade\": \"A\"},\n    2: {\"name\": \"Kiran\", \"grade\": \"B\"},\n    3: {\"name\": \"Meera\", \"grade\": \"A\"},\n}\n\nclass Student(Resource):\n    def get(self, student_id):\n        if student_id in students:\n            return students[student_id], 200\n        return {\"message\": \"Student not found\"}, 404\n\n    def put(self, student_id):\n        data = request.json\n        if student_id in students:\n            students[student_id][\"grade\"] = data.get(\"grade\")\n            return {\"message\": \"Student record updated\", \"student\": students[student_id]}, 200\n        return {\"message\": \"Student not found\"}, 404\n\napi.add_resource(Student, \"/student/<int:student_id>\")\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n",
+        "question": "The API is running on http://127.0.0.1:5000/. Which of the following statements about this API's behavior is correct?",
+        "options": {
+            "A": "Sending a GET request to http://127.0.0.1:5000/student/2 will return: {\"name\": \"Kiran\", \"grade\": \"B\"} HTTP Status Code: 200",
+            "B": "Sending a PUT request to http://127.0.0.1:5000/student/4 with the following JSON payload: {\"grade\": \"A\"} will return: {\"message\": \"Student record updated\", \"student\": {\"name\": \"Unknown\", \"grade\": \"A\"}} HTTP Status Code: 200",
+            "C": "Sending a GET request to http://127.0.0.1:5000/student/10 will return: {\"message\": \"Student not found\"} HTTP Status Code: 404",
+            "D": "Sending a PUT request to http://127.0.0.1:5000/student/1 with the following JSON payload: {\"grade\": \"A\"} will return: {\"message\": \"Student record updated\", \"student\": {\"name\": \"Arjun\", \"grade\": \"A\"}} HTTP Status Code: 200"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Jan 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\n\napp.py\npython\nfrom flask import Flask, render_template, url_for\n\napp = Flask(__name__)\n\n@app.route(\"/if\")\ndef ifelse():\n    user = \"MAD I\"\n    return f\"Welcome {user}!\"\n\n@app.route(\"/for\")\ndef for_loop():\n    user = \"MAD II\"\n    return f\"Welcome {user}!\"\n\n@app.route(\"/choice/<pick>\")\ndef choice(pick):\n    if pick == 'if':\n        return url_for('ifelse')\n    if pick == 'for':\n        return (url_for('for_loop'))\n\nif __name__ == \"__main__\":\n    app.run(debug=False)\n",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+        "options": {
+            "A": "For URL, http://127.0.0.1:5000/choice/for browser will display Welcome MAD II! as output",
+            "B": "For URL, http://127.0.0.1:5000/choice/if browser will render Welcome MAD II as output",
+            "C": "For URL, http://127.0.0.1:5000/choice/for browser will display /for as output.",
+            "D": "For URL, http://127.0.0.1:5000/choice/if browser will display /if as output."
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/work')\n@app.route('/home')\ndef my_task():\n    return \"<h1>Hello! Reporting for my task</h1>\"\n\napp.run()\n",
+        "question": "Consider the flask application above. If the application is running locally on http://127.0.0.1:5000, which statement is correct?",
+        "options": {
+            "A": "The application will return 200 OK status code for /home endpoint only",
+            "B": "The application will return 200 OK status code for /work endpoint only",
+            "C": "The application will return 200 OK status code for both the endpoints",
+            "D": "The application will throw an AssertionError for both the endpoints"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which of the following statements about OpenAPI Specification (OAS) is true?",
+        "options": {
+            "A": "OAS is a programming language used for building APIs.",
+            "B": "OAS is a way to describe interfaces for building RESTful APIs.",
+            "C": "OAS is a tool used for testing the performance of APIs.",
+            "D": "OAS is a software library used for authenticating API requests."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Databases & ORM",
+        "context": null,
+        "question": "Map the terms in column A with their correct interpretations in column B.",
+        "options": {
+            "A": "a \u2192 3, b \u2192 1, c \u2192 2, d \u2192 4",
+            "B": "a \u2192 4, b \u2192 2, c \u2192 1, d \u2192 3",
+            "C": "a \u2192 4, b \u2192 3, c \u2192 1, d \u2192 2",
+            "D": "a \u2192 3, b \u2192 2, c \u2192 1, d \u2192 4"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764048733/may2023-3_yizg3c.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following view function.\npython\n@app.route('/student', methods = ['GET', 'POST'])\ndef show_student():\n    std = request.args\n    details = {\n        'Department': std['dept'],\n        'Course-level': std['level'],\n        'Course': std['course']\n    }\n    return details\n",
+        "question": "If this flask app is running locally on http://127.0.0.1:5000, which of the following URLs will be handled by the controller correctly?",
+        "options": {
+            "A": "http://127.0.0.1:5000/student/Electrical/Diploma/MAD1",
+            "B": "http://127.0.0.1:5000/Electrical/Diploma/MAD1",
+            "C": "http://127.0.0.1:5000/student?dept=Electrical&level=Diploma&course=MAD1",
+            "D": "http://127.0.0.1:5000?endpoint=student&dept=Electrical&level=Diploma&course=MAD1"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "python\ndef modify(n):\n    def modifier(n):\n        ser = [0,1]\n        for i in range(n-2):\n            new = ser[i]+ser[i+1]\n            ser.append(new)\n        print(ser)\n    return modifier\n\n@modify\ndef list_num(n):\n    nums = []\n    for i in range(n):\n        nums.append(i+1)\n    print(nums)\n\nlist_num(10)\n",
+        "question": "What will be the output of the following Python code snippet on the terminal?",
+        "options": {
+            "A": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+            "B": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+            "C": "[0, 1, 1, 2, 3, 5, 8, 13, 21]",
+            "D": "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following HTML Document file given below.\nindex.html\nhtml\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Document</title>\n    <style>\n        input:invalid {\n            background: red;\n        }\n        input:valid {\n            background: green;\n        }\n    </style>\n</head>\n<body>\n    <form>\n        <label for=\"uname\">Enter a valid e-mail:</label>\n        <input type=\"text\" name=\"uname\" minlength=\"8\">\n    </form>\n</body>\n</html>\n",
+        "question": "Suppose the index.html is rendered on the browser. What will be the background color of the input box when the user enters the name \"madcourse.mail.com\"?",
+        "options": {
+            "A": "red",
+            "B": "white",
+            "C": "green",
+            "D": "insufficient information"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet.\npython\nfrom flask import Flask\nfrom flask_restful import Api, Resource\n\napp = Flask(__name__)\napi = Api(app)\n\nclass MyApi(Resource):\n    def get(self):\n        return {\"greet\":\"Hello from GET Api!\"}\n    def put(self):\n        return {\"greet\":\"Hello from PUT Api!\"}\n\napi.add_resource(MyApi, '/api/get', '/api/put', '/api/post')\n\napp.run()\n\nIf this application is running locally on http://127.0.0.1:5000, which of the following curl commands will throw an error?\n1. curl http://127.0.0.1:5000/api/get -X get\n2. curl http://127.0.0.1:5000/api/put -X put\n3. curl http://127.0.0.1:5000/api/post -X post\n4. curl http://127.0.0.1:5000/api/get -X put\n5. curl http://127.0.0.1:5000/api/put -X get\n6. curl http://127.0.0.1:5000/api/post -X get",
+        "question": "Which of the listed curl commands will throw an error?",
+        "options": {
+            "A": "Only 3",
+            "B": "Only 3 and 4",
+            "C": "Only 5 and 6",
+            "D": "Only 3, 4, 5 and 6"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following code.\npython\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route('/')\ndef generate1():\n    return \"This is generate1\"\n\n@app.route('/')\ndef generate2():\n    return \"This is generate2\"\n\n@app.errorhandler(404)\ndef page_not_found(e):\n    # setting 404 status explicitly\n    return 'page not found'\n\napp.run()\n",
+        "question": "If the flask application is running on http://127.0.0.1:5000, what will the browser render for the URL http://127.0.0.1:5000// ?",
+        "options": {
+            "A": "Page not found",
+            "B": "This is generate2",
+            "C": "This is generate1",
+            "D": "Code will throw error"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Databases & ORM",
+        "context": "python\nfrom sqlalchemy import ForeignKey\nfrom sqlalchemy.orm import Integer, Column\nfrom sqlalchemy.orm import DeclarativeBase\nfrom sqlalchemy.orm import relationship\n\nclass Base(DeclarativeBase):\n    pass\n\nclass Parent(Base):\n    __tablename__ = \"parent_table\"\n    id = Column(Integer, primary_key=True)\n    # write your code 1 here\n\nclass Child(Base):\n    __tablename__ = \"child_table\"\n    id = Column(Integer, primary_key=True)\n    # write your code 2 here\n",
+        "question": "In the code snippet given, what should come in place of code 1 and code 2 such that one parent can have multiple children and the converse does not hold true?",
+        "options": {
+            "A": "code 1: parent_id=Column(Integer, ForeignKey(\"child_table.id\"))\ncode 2: children = relationship(\"Parent\")",
+            "B": "code 1: children = relationship(\"Child\")\ncode 2: parent_id=Column(Integer, ForeignKey(\"parent_table.id\"))",
+            "C": "code 1: parent_id=Column(Integer, ForeignKey(\"parent_table.id\"))\ncode 2: children = relationship(\"child\")",
+            "D": "code 1: children = relationship(\"Parent\")\ncode 2: parent_id=Column(Integer, ForeignKey(\"child_table.id\"))"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Databases & ORM",
+        "context": "Consider the following models Brand and cellphone corresponding to tables brand and cellphone in SQLite database.\npython\nclass Brand(db.Model):\n    id = db.Column(db.Integer(), primary_key = True)\n    name = db.Column(db.String(), unique = True)\n\nclass Cellphone(db.Model):\n    id = db.Column(db.Integer(), primary_key = True)\n    name = db.Column(db.String(), unique = True)\n    brand = db.Column(db.Integer(), unique = True, db.ForeignKey(\"brand.id\"))\n",
+        "question": "Based on the model schemas, what relationship do the classes Brand and Cellphone share?",
+        "options": {
+            "A": "One-to-One",
+            "B": "One-to-Many",
+            "C": "Many-to-Many",
+            "D": "The tables are not at all related"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Databases & ORM",
+        "context": "Consider the schema for the Class Student.\nsql\nCREATE TABLE \"Student\" (\n    \"s_id\" INTEGER,\n    \"roll_number\" TEXT NOT NULL UNIQUE,\n    \"first_name\" TEXT NOT NULL,\n    \"last_name\" TEXT NOT NULL,\n    PRIMARY KEY(\"s_id\" AUTOINCREMENT)\n);\n\nWhat will be the output of the flask_sqlalchemy command given below?\npython\n>>> s1 = Student(roll_number = M01, first_name = \"Yash\", last_name = \"Raj\")\n>>> db.session.add(s1)\n>>> s2 = Student(roll_number = M02, first_name = \"Yash\", last_name = \"Maurya\")\n>>> db.session.add(s2)\n>>> s3 = Student(roll_number = M03, first_name = \"Ansh\", last_name = \"Raj\")\n>>> db.session.add(s3)\n>>> db.session.commit()\n>>> user1= Student.query.filter_by(first_name=\"Yash\").first()\n>>> user1.first_name=\"Ansh\"\n>>> user1.last_name=\"Maurya\"\n>>> db.session.commit()\n>>> s1 = Student.query.all()\n>>> for student in s1:\n...     print(student.first_name)\n...     print(student.last_name)\n",
+        "question": "What will be the output of the final loop?",
+        "options": {
+            "A": "Yash\nRaj\nYash\nMaurya\nAnsh\nRaj",
+            "B": "Ansh\nMaurya\nYash\nMaurya\nAnsh\nRaj",
+            "C": "Ansh\nMaurya\nAnsh\nMaurya\nYash\nMaurya\nAnsh\nRaj",
+            "D": "None"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following route in the flask for a signup page.\npython\n@app.route('/signup', methods=['GET', 'POST'])\ndef signup():\n    if request.method == 'GET':\n        return \"\"\"<form action='/signup' method='POST'>\n                    <label for='username'>Username</label>\n                    <input type='text' name='username' required>\n                    <label for='password'>Password</label>\n                    <input type='text' name='password' required minlength=\"8\">\n                    <input type='submit' value='Submit'>\n                  </form>\"\"\"\n    if request.method == 'POST':\n        if request.form.get('username') is None:\n            return redirect(url_for(signup))\n        if request.form.get('password') is None:\n            return redirect(url_for(signup))\n        if len(request.form.get('password')) < 8:\n            return redirect(url_for(signup))\n        return f\"<h1>Welcome, {request.form.get('username')}!</h1>\"\n",
+        "question": "Select the correct option(s) regarding the signup page.",
+        "options": {
+            "A": "The signup page is dynamically generated.",
+            "B": "The signup page uses server-side rendering.",
+            "C": "The signup page uses frontend validation only.",
+            "D": "The signup page uses backend validation."
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Software Development Lifecycle & Testing",
+        "context": "Consider the following flask app. Given that test_request_context() allows text to be printed on the terminal, which of the following statements is/are correct?\npython\nfrom flask import Flask, url_for\n\napp = Flask(__name__)\n\n@app.route('/home')\ndef index():\n    return 'Mad-I welcomes you!'\n\n@app.route('/user/<username>')\ndef profile(username):\n    return f'{username}\\'s profile'\n\nwith app.test_request_context():\n    #== print statement ==#\n",
+        "question": "Which of the following statements is/are correct?",
+        "options": {
+            "A": "If #== print statement ==# is replaced by print(url_for('home')), the output on the terminal will be Mad-I welcomes you!.",
+            "B": "If #== print statement ==# is replaced by print(url_for('profile', username='Harry')), the output on the terminal will be /user/Harry",
+            "C": "If #== print statement ==# is replaced by print(url_for('profile', username='Harry', next='course')), the output on the terminal will be /user/Harry/course",
+            "D": "If #== print statement ==# is replaced by print(url_for('index', username='Harry')), the output on the terminal will be /home?username=Harry"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which of the following is/are valid JSON format.",
+        "options": {
+            "A": "{\n    \"Age\": 27,\n    \"firstName\": \"John\",\n    \"lastName\": \"Pollard\",\n    \"married\": false,\n    \"phone_numbers\": [\"212-555-1234\", \"212-666-5678\"]\n}",
+            "B": "{\n    \"RollNumber\": 11,\n    \"firstName\": \"Nick\",\n    \"lastName\": \"Paul\",\n    \"phone_numbers\": [\"2125551234\", \"2124441234\"]\n}",
+            "C": "{\n    \"firstName\": \"Will\",\n    \"lastName\": \"Smith\",\n    \"address\": {\n        \"addressLine\": \"Lake Union Hill Way\",\n        \"city\": \"Atlanta\",\n        \"zipcode\": 50005\n    }\n}",
+            "D": "{\n    \"firstName\": \"Hannah\",\n    \"lastName\": \"Smith\",\n    \"cities\": [\"Dallas\", \"San Antonio\", \"Irving\"],\n    \"phone_numbers\": [\"212-555-1234\", \"212-666-5678\"]\n}"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\npython\nfrom flask import Flask, render_template, request\napp = Flask(__name__)\n\n@app.route('/')\ndef out():\n    val = request.args\n    if val['num'] == '':\n        return \"<html><body><h1>Invalid number</h1></body></html>\"\n    elif val['num'].isalpha() == True:\n        return \"<html><body><h1>Enter a valid number</h1></body></html>\"\n    else:\n        out = int(val['num']) * int(val['num'])\n        return f\"<html><body><h1>The output is {out}</h1></body></html>\"\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n",
+        "question": "If this flask app is running locally on http://localhost:5000 then which of the following statements is/are correct?",
+        "options": {
+            "A": "For URL: http://localhost:5000/?num=abc Output is: Invalid number",
+            "B": "For URL: http://localhost:5000/?num=abc Output is: Enter a valid number",
+            "C": "For URL: http://localhost:5000/?num= Output is: Invalid number",
+            "D": "For URL: http://localhost:5000/?num=12 Output is: The output is 1212"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\npython\nfrom flask import Flask, redirect, url_for\napp = Flask(__name__)\n\n@app.route('/admin')\ndef hello_admin():\n    return 'Hello Admin'\n\n@app.route('/guest/<guest>')\ndef hello_guest(guest):\n    return 'Hello ' + guest + ' as Guest'\n\n@app.route('/user/<name>')\ndef hello_user(name):\n    if name == 'admin':\n        return redirect(url_for('hello_admin'))\n    else:\n        return redirect(url_for('hello_guest', guest = name))\n\nif __name__ == '__main__':\n    app.run(debug = True)\n",
+        "question": "If this flask app is running locally on http://localhost:5000, what is the output for the following URL?\nInput: http://localhost:5000/user/admin?guest=appdev1",
+        "options": null,
+        "correctOption": "Hello Admin",
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Read the statements given below carefully and select the correct option.\n\nStatement 1: The GET method is the same as the HEAD method. It is used to transfer the header section only.\n\nStatement 2: The GET method retrieves information from the given server using a given URI.GET request can retrieve the data.",
+        "options": {
+            "A": "Both statements 1 and 2 are correct",
+            "B": "Both statements 1 and 2 are incorrect",
+            "C": "Statement 1 is correct but statement 2 is incorrect",
+            "D": "Statement 1 is incorrect but statement 2 is correct"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Databases & ORM",
+        "context": "Consider the below flask_sqlalchemy data models \"Product\", \"Supplier\" and \"Supply\" given in the code below.\n\nclass Product(db.Model):\n    __tablename__ = \"product\"\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String, nullable=False)\n\nclass Supplier(db.Model):\n    __tablename__ = \"supplier\"\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String, nullable=False)\n    address = db.Column(db.String, nullable=True)\n\nclass Supply(db.Model):\n    __tablename__ = \"supply\"\n    id = db.Column(db.Integer, primary_key=True)\n    product_id = db.Column(db.Integer, db.ForeignKey(\"product.id\"))\n    supplier_id = db.Column(db.Integer, db.ForeignKey(\"supplier.id\"))",
+        "question": "What will be the cardinality of the \u201cProduct\u201d and \u201cSupplier\u201d relationship?",
+        "options": {
+            "A": "One to One",
+            "B": "One to Many",
+            "C": "Many to Many"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "A certain video on the web occupies 3 gigabytes of memory of the server. If the number of viewers of the video over time is given by the curve shown below and assuming that each viewer requires an individual connection to the server to view the video, what should be the minimum RAM requirement of the server that can process requests from all the viewers simultaneously at any point of time?",
+        "question": "What should be the minimum RAM requirement of the server that can process requests from all the viewers simultaneously at any point of time?",
+        "options": {
+            "A": "1.9 GB",
+            "B": "5.7 GB",
+            "C": "1.9 TB",
+            "D": "5.7 TB"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": "A line graph showing 'No. of viewers (in Hundreds)' on the y-axis versus 'Time (minutes)' on the x-axis. The number of viewers peaks at just under 20 hundred (2000) around 25 minutes and again at around 17 hundred (1700) at 48 minutes."
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Databases & ORM",
+        "context": "Consider the following Python code.\napp.py\npython\nfrom flask import Flask\nfrom flask_sqlalchemy import SQLAlchemy\nimport os\n\napp_dir = os.path.dirname(os.path.abspath(__file__))\ndb_file = \"sqlite:///course_database.sqlite3\"\n\napp = Flask(__name__)\napp.app_context().push()\napp.config[\"SQLALCHEMY_DATABASE_URI\"] = db_file\napp.config[\"SQLALCHEMY_TRACK_MODIFICATIONS\"] = False\n\ndb = SQLAlchemy(app)\n\nclass MaxScores(db.Model):\n    __tablename__ = \"max_scores\"\n    course_id = db.Column(db.String(10), nullable=False, primary_key=True)\n    high_score = db.Column(db.Integer)\n    term_year = db.Column(db.String(10))\n",
+        "question": "Using MaxScores data model in the above \u201capp.py\u201d. What is the correct sequence of python commands to insert MaxScores record?",
+        "options": {
+            "A": ">>> from app.py import *\n>>> db.create_all()\n>>> s1 = MaxScores(course_id='cs2002', high_score=86, term_year='Jan-2023')\n>>> db.session.add(s1)\n>>> db.session.commit()",
+            "B": ">>> from app.py import *\n>>> db.create_all()\n>>> s1 = MaxScores('cs2002', 86, 'Jan-2023')\n>>> db.session.add(s1)\n>>> db.session.commit()",
+            "C": ">>> from app.py import *\n>>> db.create_all()\n>>> s1 = MaxScores('cs2002', 86, 'Jan-2023')\n>>> db.commit()\n>>> db.add(s1)",
+            "D": ">>> from app.py import *\n>>> db.create_all()\n>>> s1 = MaxScores(course_id='cs2002',high_score=86,term_year='Jan-2023')\n>>> db.session.commit()\n>>> db.session.add(s1)"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet, and select the correct output list if the code is run on the terminal.\npython\ndef modify(func):\n    def wrapper(l):\n        res = func(l)\n        return res[::-1]\n    return wrapper\n\ndef update(func):\n    def wrapper(l):\n        res = func(l)\n        return list(map(lambda x: x/2,res))\n    return wrapper\n\n@modify\n@update\ndef myList(l):\n    out_list = []\n    for i in l:\n        out_list.append(i**2)\n    return out_list\n\nprint(myList([2,4,1,7,5,9]))\n",
+        "question": "What is the correct output list if the code is run on the terminal?",
+        "options": {
+            "A": "[0.25, 1, 4, 6.26, 12.25, 20.25]",
+            "B": "[1, 4, 0.25, 12.25, 6.25, 20.25]",
+            "C": "[40.5, 12.5, 24.5, 0.5, 8.0, 2.0]",
+            "D": "[0.5, 2.0, 8.0, 12.5, 24.5, 40.5]"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\npython\nfrom flask import Flask, request\napp = Flask(__name__)\n\n@app.route('/home')\ndef home():\n    var_a = request.args.get('method')\n    if var_a == \"GET\":\n        return \"\"\"\n        <body style=\"background-color: lightgray; color: purple;text-align: center;font-weight: bold;\">\n        <p>IIIT</p>\n        <p>MADRAS</p>\n        </body>\n        \"\"\"\n    elif var_a == \"POST\":\n        return \"\"\"\n        <body style=\"background-color: lightgray; color: purple;text-align: center;font-weight: bold;\">\n        <p>IIIT</p>\n        <span>MADRAS</span>\n        </body>\n        \"\"\"\n    else:\n        return \"Invalid Method\"\n\napp.run(debug=True)\n",
+        "question": "If the application is running locally on http://127.0.0.1:5000 then which of the following statements are correct?",
+        "options": {
+            "A": "The browser will render aesthetically similar output for http://127.0.0.1:5000/home?method=POST and http://127.0.0.1:5000/home?method=GET",
+            "B": "The browser will render aesthetically different output for http://127.0.0.1:5000/home?method=POST and http://127.0.0.1:5000/home?method=GET",
+            "C": "The browser will render Method Not Allowed error for http://127.0.0.1:5000/home",
+            "D": "The browser will render Invalid Method error for http://127.0.0.1:5000/home"
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following code.\npython\nfrom flask import Flask\nfrom flask_restful import Resource, Api\n\ntrains_list = [\n    {\"train_no\": 12842, \"source\": \"Madras\", \"destination\": \"Howrah\"},\n    {\"train_no\": 12727, \"source\": \"VSKP\", \"destination\": \"HYD\"},\n    {\"train_no\": 12434, \"source\": \"Delhi\", \"destination\": \"Madras\"},\n]\n\napp = Flask(__name__)\napi = Api(app)\n\nclass TrainsApi1(Resource):\n    def get(self, tno):\n        for train in trains_list:\n            if train[\"train_no\"] == tno:\n                return train\n        return None\n\nclass TrainsApi2(Resource):\n    def get(self):\n        return trains_list\n\napi.add_resource(TrainsApi1, \"/api/ver1/<int:tno>\")\napi.add_resource(TrainsApi2, \"/api/ver2/\")\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n",
+        "question": "Assume that the above flask code is running locally on http://127.0.0.1:5000/. Which of the below URL(s) requests renders train data without errors?",
+        "options": {
+            "A": "http://127.0.0.1:5000/api/ver1/12727",
+            "B": "http://127.0.0.1:5000/api/12727",
+            "C": "http://127.0.0.1:5000/ver2/12727",
+            "D": "http://127.0.0.1:5000/api/ver2"
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application running locally on http://127.0.0.1:5000\napp.py\npython\nfrom flask import Flask, request\nimport sys\napp = Flask(__name__)\ndata = [\"Java\", \"Application Development\", \"DBMS\"]\n\n@app.route('/course')\ndef home():\n    course = request.args.get('course')\n    if course in sys.argv:\n        if sys.argv[1] in data:\n            return f\"Welcome to {sys.argv[1]}!\"\n        return f\"Welcome to {course}!\"\n    else:\n        return \"Invalid Data\"\n\napp.run(debug=True)\n\nBased on the above data, answer the given subquestions.",
+        "question": "What should be the code to run the application, and the URL respectively such that the browser gives output as: Welcome to Application Development!?",
+        "options": {
+            "A": "Code: python app.py Application Development Java\nURL: http://127.0.0.1:5000/course?course=Java",
+            "B": "Code: python app.py Application Development Java\nURL: http://127.0.0.1:5000/course=Application Development",
+            "C": "Code: python app.py \"Application Development\" Java\nURL: http://127.0.0.1:5000/course?course=Java",
+            "D": "Code: python app.py \"Application Development\" DBMS\nURL: http://127.0.0.1:5000/course?course=Application Development"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application running locally on http://127.0.0.1:5000\napp.py\npython\nfrom flask import Flask, request\nimport sys\napp = Flask(__name__)\ndata = [\"Java\", \"Application Development\", \"DBMS\"]\n\n@app.route('/course')\ndef home():\n    course = request.args.get('course')\n    if course in sys.argv:\n        if sys.argv[1] in data:\n            return f\"Welcome to {sys.argv[1]}!\"\n        return f\"Welcome to {course}!\"\n    else:\n        return \"Invalid Data\"\n\napp.run(debug=True)\n\nBased on the above data, answer the given subquestions.",
+        "question": "What will be the output given by browser if the application is run with command `python app.py Application Development DBMS` on terminal with URL `http://127.0.0.1:5000/course?course=DBMS` ?",
+        "options": {
+            "A": "Welcome to Application Development!",
+            "B": "Welcome to DBMS!",
+            "C": "Invalid Data",
+            "D": "Not Found"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "If the flask application is running locally on URL http://127.0.0.1:5000. Select the appropriate options for the given subquestions.\npython\nfrom flask import Flask, request\napp = Flask(__name__)\n\nusers = [\n    {\"id\": \"101\", \"name\": \"Ravi\", \"city\": \"Chennai\"},\n    {\"id\": \"102\", \"name\": \"Ram\", \"city\": \"Mumbai\"},\n    {\"id\": \"103\", \"name\": \"Rahim\", \"city\": \"Bhopal\"},\n    {\"id\": \"104\", \"name\": \"Robert\", \"city\": \"Delhi\"},\n]\n\ndef search_user(id):\n    for user in users:\n        if id == user.get(\"id\"):\n            return user\n    return None\n\n@app.route(\"/user/<string:id>\")\ndef user(id):\n    this_user = search_user(id)\n    return this_user\n\n@app.route(\"/user\")\ndef get_user():\n    this_user = search_user(request.args.get('id'))\n    return this_user\n\napp.run(debug=True)\n",
+        "question": "Which of the following is/are the correct URLs for retrieving the user from the database with \u201cid\u201d: \u201c103\u201d?",
+        "options": {
+            "A": "http://127.0.0.1:5000/103",
+            "B": "http://127.0.0.1:5000/user/103",
+            "C": "http://127.0.0.1:5000?id=103",
+            "D": "http://127.0.0.1:5000/user?id=103"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "If the flask application is running locally on URL http://127.0.0.1:5000. Select the appropriate options for the given subquestions.\npython\nfrom flask import Flask, request\napp = Flask(__name__)\n\nusers = [\n    {\"id\": \"101\", \"name\": \"Ravi\", \"city\": \"Chennai\"},\n    {\"id\": \"102\", \"name\": \"Ram\", \"city\": \"Mumbai\"},\n    {\"id\": \"103\", \"name\": \"Rahim\", \"city\": \"Bhopal\"},\n    {\"id\": \"104\", \"name\": \"Robert\", \"city\": \"Delhi\"},\n]\n\ndef search_user(id):\n    for user in users:\n        if id == user.get(\"id\"):\n            return user\n    return None\n\n@app.route(\"/user/<string:id>\")\ndef user(id):\n    this_user = search_user(id)\n    return this_user\n\n@app.route(\"/user\")\ndef get_user():\n    this_user = search_user(request.args.get('id'))\n    return this_user\n\napp.run(debug=True)\n",
+        "question": "Which of the following URLs will trigger the \u201cget_user\u201d controller in the given application.",
+        "options": {
+            "A": "http://127.0.0.1:5000/104",
+            "B": "http://127.0.0.1:5000/user/104",
+            "C": "http://127.0.0.1:5000?id=104",
+            "D": "http://127.0.0.1:5000/user?id=104"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "You have a DRAM module with bus width of 64 bits, clock speed of 400 MHz, and operating in DDR (double-data-rate or two values per clock cycle) mode. What is the maximum memory bandwidth in Gigabytes per second achievable with this module if it is working in dual channel mode (two memory interfaces are used)?",
+        "options": {
+            "A": "51.2",
+            "B": "102.4",
+            "C": "25.6",
+            "D": "12.8"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Databases & ORM",
+        "context": null,
+        "question": "Two data models \u201cStudent\u201d and \u201cSport\u201d are to be created in the database with one-to-many relationship using flask_sqlalchemy. Which of the following is the correct implementation of the above two data models?",
+        "options": {
+            "A": "class Student(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    Name = db.Column(db.String, nullable=False)\n    stud_id=db.Column(db.Integer, db.ForeignKey('sport.id'))\n    sports=db.relationship('Sport', backref='student')\n\nclass Sport(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    sport_name=db.Column(db.String, nullable=False)",
+            "B": "class Student(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    Name = db.Column(db.String, nullable=False)\n    sports=db.relationship('Sport', backref='sport')\n\nclass Sport(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    sport_name=db.Column(db.String, nullable=False)\n    stud_id=db.Column(db.Integer, db.ForeignKey('sport.id'))",
+            "C": "class Student(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    Name = db.Column(db.String, nullable=False)\n    sports=db.relationship('Sport', backref='student')\n\nclass Sport(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    sport_name=db.Column(db.String, nullable=False)\n    stud_id=db.Column(db.Integer, db.ForeignKey('student.id'))",
+            "D": "class Student(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    Name = db.Column(db.String, nullable=False)\n    sports=db.relationship('Sport', backref='student')\n\nclass Sport(db.model):\n    id=db.Column(db.Integer, primary_key=True)\n    sport_name=db.Column(db.String, nullable=False)\n    stud_id=db.Column(db.Integer, db.ForeignKey('student.id'))"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Software Development Lifecycle & Testing",
+        "context": "Consider the following Python code snippet.\nFilename: code.py\npython\nimport logging\nimport sys\n\nlogging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)\n\nlogging.warning('This is only for testing.')\n\nif sys.argv[1] == 'info':\n    logging.info('This code is working as expected.')\n\nif sys.argv[1] == 'debug':\n    logging.debug('This code may have issues, debugging...')\n\nlogging.warning('code execution complete!')\n",
+        "question": "What will be output on the terminal is the above code snippet is run on the terminal using command: `python code.py debug`",
+        "options": {
+            "A": "WARNING:This is only for testing.\nINFO:This code is working as expected\nWARNING:code execution complete!",
+            "B": "WARNING:This is only for testing.\nDEBUG:This code may have issues, debugging...\nWARNING:code execution complete!",
+            "C": "WARNING:This is only for testing.\nWARNING:code execution complete!",
+            "D": "INFO:This code is working as expected\nDEBUG:This code may have issues, debugging..."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\napp.py\npython\nfrom flask import Flask, abort, request\napp = Flask(__name__)\n\n@app.route('/login/<id>')\ndef login(id):\n    if id.isalpha():\n        abort(400, \"Bad Request: Invalid ID\")\n    return f'<h1>Your ID is: {id}</h1>'\n\napp.run(debug=True)\n",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000 ?",
+        "options": {
+            "A": "For URL http://127.0.0.1:5000/login?id=MAD-I the browser will render Bad Request: Invalid ID",
+            "B": "For URL http://127.0.0.1:5000/login/ the browser will render Invalid ID",
+            "C": "For URL http://127.0.0.1:5000/login/CS2003 the browser will render Your ID is: CS2003",
+            "D": "For URL http://127.0.0.1:5000/login/PDSA the browser will render Bad Request: Invalid ID"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following HTML Document and select the correct statement(s) from the following if a user types the password \u201cmad1password\u201d in the password field letter by letter.\nhtml\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Login Form</title>\n    <style>\n        input[type=\"password\"]:valid{\n            background-color: green;\n        }\n        input[type=\"password\"]:invalid{\n            background-color: red;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"login-form\">\n        <h2>Login</h2>\n        <form>\n            E-mail: <input type=\"email\" id=\"email\" name=\"email\" required>\n            Password: <input type=\"password\" id=\"password\" name=\"password\" required minlength=\"5\" maxlength=\"8\">\n            <input type=\"submit\" value=\"Login\">\n        </form>\n    </div>\n</body>\n</html>\n",
+        "question": "Select the correct statement(s) from the following if a user types the password \u201cmad1password\u201d in the password field letter by letter.",
+        "options": {
+            "A": "The HTML form is integrated with backend validation.",
+            "B": "The HTML form is integrated with Frontend HTML5 validation.",
+            "C": "The background colour of the password field remains red for the first 4 letters, then turns green for the next 4 letters, and then again turns red for the remaining letters.",
+            "D": "The background colour of the password field remains red for the first 4 letters, then turns green for the next 4 letters, and then remains green for the remaining allowable letters."
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Databases & ORM",
+        "context": "Consider the schema for the 'student' table created in SQLite database using flask-sqlalchemy.\n\nCREATE TABLE \"student\" (\n    \"s_id\" INTEGER,\n    \"roll_number\" TEXT NOT NULL UNIQUE,\n    \"first_name\" TEXT NOT NULL,\n    \"last_name\" TEXT NOT NULL,\n    PRIMARY KEY(\"s_id\" AUTOINCREMENT)\n);\n\n>>> s1 = Student(roll_number = \"M01\", first_name = \"John\", last_name = \"Doe\")\n>>> db.session.add(s1)\n>>> s2 = Student(roll_number = \"M02\", first_name = \"John\", last_name = \"Luther\")\n>>> db.session.add(s2)\n>>> s3 = Student(roll_number = \"M03\", first_name = \"Harry\", last_name = \"Doe\")\n>>> db.session.add(s3)\n>>> db.session.commit()\n>>> user1= Student.query.filter_by(first_name=\"John\").first()\n>>> user1.first_name= \"Harry\"\n>>> user1.last_name= \"Luther\"\n>>> db.session.commit()\n>>> s1 = Student.query.all()\n>>> for student in s1:\n...     print(student.first_name)\n...     print(student.last_name)\n...",
+        "question": "What will be the output of the flask_sqlalchemy command given below?",
+        "options": {
+            "A": "Harry\nLuther\nHarry\nLuther\nHarry\nDoe",
+            "B": "Harry\nLuther\nJohn\nLuther\nHarry\nDoe",
+            "C": "Harry\nLuther\nHarry\nDoe\nHarry\nDoe",
+            "D": "Harry\nDoe\nJohn\nLuther\nHarry\nDoe"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "from flask import Flask, abort\napp = Flask(__name__)\n\nusers = [\"admin\", \"user_1\", \"user_2\", \"user_3\"]\n\n@app.route('/home/<string:username>', methods = ['POST'])\ndef home(username):\n    if username in users:\n        return f\"<h1>Hello {username}, Welcome!</h1>\"\n    else:\n        abort(404)\n\n@app.errorhandler(404)\ndef user_error_1(error):\n    return \"<h1>The user you are looking for is invalid.</h1>\"\n\n@app.errorhandler(405)\ndef user_error_2(error):\n    return \"<h1>Please check the web request.</h1>\"\n\napp.run()",
+        "question": "If the application is running locally on http://127.0.0.1:5000, What will be rendered on the browser for url http://127.0.0.1:5000/home/user_4 ?",
+        "options": {
+            "A": "Hello user_4, Welcome!",
+            "B": "The user you are looking for is invalid.",
+            "C": "Not Found",
+            "D": "Please check the web request"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask app. Given that test_request_context() allows text to be printed on the terminal, which of the following statements is/are correct?\n\nfrom flask import Flask, url_for\napp = Flask(__name__)\n\n@app.route('/home')\ndef index():\n    return 'Mad-I Student Data'\n\n@app.route('/student/<student_name>/<int:student_id>')\ndef profile(student_name,student_id):\n    return f'Student Name:{student_name},Student ID:{student_id}'\n\nwith app.test_request_context():\n    #== print statement ==#",
+        "question": "Which of the following statements is/are correct?",
+        "options": {
+            "A": "If #== print statement ==# is replaced by; print(url_for('index')), the output on the terminal will be; Mad-I Student Data",
+            "B": "If #== print statement ==# is replaced by; print(url_for('profile', student_name='John', student_id=101)), the output on the terminal will be; /student?student_name=John&student_id=101",
+            "C": "If #== print statement ==# is replaced by; print(url_for('index')), the output on the terminal will be; /home",
+            "D": "If #== print statement ==# is replaced by; print(url_for('profile', student_name='John', student_id=101)), the output on the terminal will be; /student/John/101"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\napp.py\nfrom flask import Flask, abort\n\napp = Flask(__name__)\n\n@app.route('/<uname>')\ndef index(uname):\n    if uname[0].isdigit():\n        abort(400,\"Bad Request\")\n    return '<h1>Good Username</h1>'\n\napp.run(debug=True)",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000 ?",
+        "options": {
+            "A": "For URL http://127.0.0.1:5000/MAD1?uname=102 the browser will render Bad Request.",
+            "B": "For URL http://127.0.0.1:5000/MAD1?uname=102 the browser will render Good Username.",
+            "C": "For URL http://127.0.0.1:5000/102?uname=MAD1 the browser will render Bad Request.",
+            "D": "For URL http://127.0.0.1:5000/102?uname=MAD1 the browser will render Good Username."
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Databases & ORM",
+        "context": null,
+        "question": "In the context of in-memory databases, what is the primary function of an index?",
+        "options": {
+            "A": "To encrypt sensitive data",
+            "B": "To optimize query performance by speeding up data retrieval",
+            "C": "To manage data replication",
+            "D": "To store metadata about the database structure"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following python code snippet.\n\nfrom string import Template as T1\nfrom jinja2 import Template as T2\ntemp = \"A student needs to complete $c1 level to get to the {{c2}} level.\"\n\ntemp = T1(temp)\nout = temp.substitute({'c1':'foundation', 'c2':'diploma'})\nprint(out)\nout = T2(out)\nprint(out.render({'c2':'diploma'}))",
+        "question": "What is the generated output on python console?",
+        "options": {
+            "A": "A student needs to complete foundation level to get to the diploma level.\nA student needs to complete foundation level to get to the diploma level.",
+            "B": "A student needs to complete $c1 level to get to the {{c2}} level.\nA student needs to complete foundation level to get to the diploma level.",
+            "C": "A student needs to complete foundation level to get to the {{c2}} level.\nA student needs to complete foundation level to get to the diploma level.",
+            "D": "A student needs to complete foundation level to get to the {{diploma}} level.\nA student needs to complete foundation level to get to the diploma level."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "In the context of API documentation, what is typically provided to describe the available endpoints, request parameters and response formats?",
+        "options": {
+            "A": "API documentation or API reference",
+            "B": "API key",
+            "C": "Software source code",
+            "D": "OAuth tokens"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Databases & ORM",
+        "context": "Consider the models \"Channel\" and \"Video\" used to create the tables \"channel\" and \"video\" in SQLite database using flask-sqlalchemy and answer the given subquestions.\n\nclass Channel(db.Model):\n    id = db.Column(db.Integer, primary_key = True)\n    name = db.Column(db.String(50), unique = True, nullable = False)\n    videos = db.relationship(\"Video\", backref = \"playlist\")\n\nclass Video(db.Model):\n    id = db.Column(db.Integer, primary_key = True)\n    name = db.Column(db.String(50), unique = True, nullable = False)\n    channel = db.Column(db.Integer, db.ForeignKey(\"channel.id\"))",
+        "question": "What relationship do the tables \"channel\" and \"video\" share.",
+        "options": {
+            "A": "One-to-one",
+            "B": "One-to-many",
+            "C": "Many-to-one",
+            "D": "Many-to-many"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Databases & ORM",
+        "context": "Consider the models \"Channel\" and \"Video\" used to create the tables \"channel\" and \"video\" in SQLite database using flask-sqlalchemy and answer the given subquestions.\n\nclass Channel(db.Model):\n    id = db.Column(db.Integer, primary_key = True)\n    name = db.Column(db.String(50), unique = True, nullable = False)\n    videos = db.relationship(\"Video\", backref = \"playlist\")\n\nclass Video(db.Model):\n    id = db.Column(db.Integer, primary_key = True)\n    name = db.Column(db.String(50), unique = True, nullable = False)\n    channel = db.Column(db.Integer, db.ForeignKey(\"channel.id\"))",
+        "question": "If \"ch1\" is a channel object created in \"channel\" table with primary key 1, then the correct way(s) of creating a video object \"vid1\" in the video table that belongs to \"ch1\" object is/are ________ (let \"name\" of the video be \"Intro to Python\")",
+        "options": {
+            "A": ">>> vid1 = Video(name = \"Intro to Python\", channel = ch1)\n>>> db.session.add(vid1)\n>>> db.session.commit()",
+            "B": ">>> vid1 = Video(name = \"Intro to Python\", channel = 1)\n>>> db.session.add(vid1)\n>>> db.session.commit()",
+            "C": ">>> vid1 = Video(name = \"Intro to Python\", playlist = ch1)\n>>> db.session.add(vid1)\n>>> db.session.commit()",
+            "D": ">>> vid1 = Video(name = \"Intro to Python\", playlist = 1)\n>>> db.session.add(vid1)\n>>> db.session.commit()"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": null,
+        "question": "Map the api resources in column A with the correct URLs given in column B.\nColumn A\n1. GET\n2. PUT\n3. POST\nColumn B\na. http://127.0.0.1:5000/student\nb. http://127.0.0.1:5000/api/Meera\nc. http://127.0.0.1:5000/app/STU103/Sociology",
+        "options": {
+            "A": "1 \u2192 c, 2 \u2192 a, 3 \u2192 b",
+            "B": "1 \u2192 a, 2 \u2192 b, 3 \u2192 c",
+            "C": "1 \u2192 b, 2 \u2192 a, 3 \u2192 c",
+            "D": "1 \u2192 b, 2 \u2192 c, 3 \u2192 a"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764049376/sept2023-1_kb8hhu.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Databases & ORM",
+        "context": null,
+        "question": "If the app first receives the request,\n`curl http://127.0.0.1:5000/app/STU105/Robotics -X PUT`\nwhat will be the final output on the shell after writing the following lines of code one below the other in the Python shell?\n`>>> from app import *\n>>> students = Student.query.filter_by(name = \"Ramesh\").all()\n>>> for student in students:\n...     print(student.course)`",
+        "options": {
+            "A": "Physics\nPhysics",
+            "B": "Robotics\nRobotics",
+            "C": "Physics\nRobotics",
+            "D": "Robotics\nPhysics"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764049376/sept2023-1_kb8hhu.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Consider a client which is located 3000 km from the server makes a request through the cable. Suddenly after the request reaches the server, the cable breaks and the response is now to be sent to the client via air. This change of medium caused an additional delay of 30 ms at the server end. How long will the client have to wait for receiving the response? (speed on cable = 2e8 m/s and in air 3e8 m/s)",
+        "options": {
+            "A": "55 milliseconds",
+            "B": "50 milliseconds",
+            "C": "80 milliseconds",
+            "D": "60 milliseconds"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "The throughput of a Solid State Device (SSD) is 180 MB/sec. If it is to be replaced by a standard HDD whose lens can read data with the rate of 4.8 Megabits/revolution. What should be the speed of rotation (in RPM) of HDD to get a throughput equal to that of the SDD?",
+        "options": {
+            "A": "300",
+            "B": "900",
+            "C": "12000",
+            "D": "18000"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "def modify(func):\n    def wrapper(n):\n        mylist = []\n        for i in range(1, n + 1):\n            if n%i == 0:\n                mylist.append(i)\n        return mylist\n    return wrapper\n\n@modify\ndef myFunc(n):\n    mylist = []\n    for i in range(1, n + 1):\n        if i%2 == 0:\n            mylist.append(i)\n    return mylist\n\nprint(myFunc(14))",
+        "question": "What will be the output of the following Python code snippet?",
+        "options": {
+            "A": "[1, 3, 5, 7, 9, 11, 13]",
+            "B": "[2, 4, 6, 8, 10, 12, 14]",
+            "C": "[1, 2, 7, 14]",
+            "D": "[1, 3, 5, 7, 11, 13]"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Flask & Jinja Templating",
+        "context": "@app.route('/add', methods = ['GET', 'POST'])\ndef add_product():\n    if request.method == 'POST':\n        name = request.form.get('name')\n        category = request.form.get('category')\n        if name == \"\":\n            return redirect('/add')\n        if category == \"\":\n            return redirect('/add')\n        return f'Product {name} is added in {category} category.'\n\n    return \"\"\"\n    <form action=\"/add\" method=\"post\">\n        Product Name: <input type=\"text\" name=\"name\" minlength=\"2\"><br>\n        Product Category: <input type=\"text\" name=\"category\" required><br>\n        <input type=\"submit\" value=\"Add Product\">\n    </form>\n    \"\"\"",
+        "question": "Consider the following flask view function defined to add a product and select correct statement(s).",
+        "options": {
+            "A": "The form to add the product is statically generated.",
+            "B": "The form to add the product is dynamically generated.",
+            "C": "The form rendered for /add endpoint has frontend validation.",
+            "D": "The form rendered for /add endpoint has backend validation."
+        },
+        "correctOption": [
+            "B",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Software Development Lifecycle & Testing",
+        "context": "Consider the following Python code snippet.\n\nFilename: log.py\nimport logging\nimport sys\n\nlogging.basicConfig(level=logging.WARNING,\n                    format='%(levelname)s - %(message)s')\n\nnum1, num2 = int(sys.argv[1]), int(sys.argv[2])\n\nif num2 > 0:\n    logging.debug(f\"Division {num1}/{num2} is possible\")\nelse:\n    logging.critical(\"FATAL - Division by zero is not possible\")",
+        "question": "Which of the following statements is/are correct?",
+        "options": {
+            "A": "For the command: python log.py 12 24\nThe output on the terminal will be:\nDEBUG - Division 12/24 is possible",
+            "B": "For the command: python log.py 0 24\nThe output on the terminal will be:\nDEBUG - Division 0/24 is possible",
+            "C": "For the command: python log.py 15 0\nThe output on the terminal will be:\nCRITICAL - FATAL - Division by zero is not possible",
+            "D": "For the command: python log.py 0 0\nThe output on the terminal will be:\nCRITICAL - FATAL - Division by zero is not possible"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "You have a DRAM module with bus width of 64 bits, clock speed of 800 MHz, and operating in DDR (double-data-rate or two values per clock cycle) mode. What is the maximum memory bandwidth in Gigabytes per second achievable with this module if it is working in dual channel mode (two memory interfaces are used)?",
+        "options": {
+            "A": "51.2",
+            "B": "102.4",
+            "C": "25.6",
+            "D": "12.8"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Databases & ORM",
+        "context": "Consider the following table \"product\" created in SQLite database corresponding to model class \"Product\" using flask_sqlalchemy.",
+        "question": "Which of the following code snippets will change the type of edible liquids to 'perishable' and will increase their quantities by 450 correctly when typed in the Python console?",
+        "options": {
+            "A": ">>> prod = Product.query.filter_by(type = 'edible').all()\n>>> for item in prod:\n...     item.type = \"perishable\"\n...     item.quantity = 450\n...\n>>> db.session.commit()",
+            "B": ">>> prod = Product.query.filter_by(type='edible', form=\"liquid\").all()\n>>> for item in prod:\n...     item.type = \"perishable\"\n...     item.quantity += 450\n...\n>>> db.session.commit()",
+            "C": ">>> prod = Product.query.filter_by(type='edible', form=\"liquid\").all()\n>>> for item in prod:\n...     item.type = \"perishable\"\n...     item.quantity = 450\n...\n>>> db.session.commit()",
+            "D": ""
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764049376/sept2023-1_kb8hhu.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following python code.\n\nfrom flask import Flask\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nsalaries = {\n    1: {\"name\": \"Ravi\", \"basic\": 14500},\n    2: {\"name\": \"David\", \"basic\": 9500},\n    3: {\"name\": \"Tinu\", \"basic\": 15009},\n}\n\nclass Salaries(Resource):\n    def do_something(self):\n        global salaries\n        for s in salaries.keys():\n            salaries[s][\"hra\"] = salaries[s][\"basic\"] * 0.10\n\n    def get(self):\n        self.do_something()\n        return salaries\n\napi.add_resource(Salaries, \"/api/salaries\")\napp.run(debug=True)",
+        "question": "Consider that the above code is running locally on 'http://127.0.0.1:5000'. What will the output for the URL: 'http://127.0.0.1:5000/api/salaries'?",
+        "options": {
+            "A": "{\n    \"1\": {\"hra\": 1450.0 },\n    \"2\": {\"hra\": 950.0 },\n    \"3\": {\"hra\": 1500.9}\n}",
+            "B": "{\n    \"1\": {\n        \"name\": \"Ravi\",\n        \"basic\": 14500,\n        \"hra\": 1450.0\n    },\n    \"2\": {\n        \"name\": \"David\",\n        \"basic\": 9500,\n        \"hra\": 950.0\n    },\n    \"3\": {\n        \"name\": \"Tinu\",\n        \"basic\": 15009,\n        \"hra\": 1500.9\n    }\n}",
+            "C": "{\n    \"1\": {\n        \"name\": \"Ravi\",\n        \"basic\": 14500\n    },\n    \"2\": {\n        \"name\": \"David\",\n        \"basic\": 9500\n    },\n    \"3\": {\n        \"name\": \"Tinu\",\n        \"basic\": 15009\n    }\n}",
+            "D": "{\n    \"1\": {\n        \"basic\": 14500,\n        \"hra\": 1450.0\n    },\n    \"2\": {\n        \"basic\": 9500,\n        \"hra\": 950.0\n    },\n    \"3\": {\n        \"basic\": 15009,\n        \"hra\": 1500.9\n    }\n}"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\n\napp.py\npython\nfrom flask import Flask, abort, request\napp = Flask(__name__)\n\n@app.route('/login/<id>')\ndef login(id):\n    if id:\n        if id.isalnum():\n            abort(400, \"Bad Request: Invalid ID\")\n        return f'<h1>Your ID is: {id}</h1>'\n    return f'<h1>Invalid ID</h1>'\n\napp.run(debug=True)\n",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+        "options": {
+            "A": "For URL http://127.0.0.1:5000/login?id=MAD-I the browser will render Not Found",
+            "B": "For URL http://127.0.0.1:5000/login/ the browser will render Invalid ID",
+            "C": "For URL http://127.0.0.1:5000/login/cs2003 the browser will render Bad Request: Invalid ID",
+            "D": "For URL http://127.0.0.1:5000/login/PDSA the browser will render Bad Request: Invalid ID"
+        },
+        "correctOption": [
+            "A",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask application.\n\napp.py\npython\nfrom flask import Flask, abort, request\n\napp = Flask(__name__)\ndata = {'PDSA':'CS2003', 'DBMS':'CS2004', 'Java':'CS2005'}\n\n@app.route('/course/<course_name>')\ndef course(course_name):\n    course_id = request.args.get('id')\n    if course_name in data and course_id == data[course_name]:\n        return f'<h1>The Course ID for {course_name} is: {course_id}</h1>'\n    else:\n        abort(400, \"Bad Request: Invalid data\")\n\napp.run(debug=True)\n",
+        "question": "Which of the following statements is/are true if the application is running locally on http://127.0.0.1:5000?",
+        "options": {
+            "A": "For URL http://127.0.0.1:5000/PDSA?id=cs2003 the browser will render; Not Found",
+            "B": "For URL http://127.0.0.1:5000/course/Java?id=CS2005 the browser will render; The Course ID for Java is: CS2005",
+            "C": "For URL http://127.0.0.1:5000/course?course_name=DBMS&id=CS2004 the browser will render; The Course ID for DBMS is: CS2004",
+            "D": "For URL http://127.0.0.1:5000/course/DBMS?id=CS2003 the browser will render; Bad Request: Invalid data"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Filename: form.html\nhtml\n<!DOCTYPE html>\n<html>\n<head>\n<style>\ninput:valid {border: 2px solid red;}\n</style>\n</head>\n<body>\n\n<form action=\"/submit_form\" method=\"post\">\n  <label for=\"e-mail\">Please enter your email address</label>\n  <input id=\"e-mail\" name=\"e-mail\" required/>\n  <button>Submit</button>\n</form>\n\n</body>\n</html>\n\n\nFilename: app.py\npython\n@app.route('/submit_form', methods = ['GET', 'POST'])\ndef form_on_submit():\n    if request.method == 'POST':\n        email = request.form.get('e-mail')\n        if \"@\" in email:\n            return \"Form is validated\"\n    return render_template('form.html')\n",
+        "question": "Consider the following HTML document \u201cform.html\u201d and the flask route given in \u201capp.py\u201d. Assume all the required methods are imported, Which of the following statements is/are correct.",
+        "options": {
+            "A": "The above HTML document has frontend validation incorporated, using HTML5 form validation.",
+            "B": "The above HTML document has only backend validation incorporated.",
+            "C": "The above HTML document has both frontend and backend validation incorporated.",
+            "D": "If the e-mail input field is left blank, the border colour of the input field will be red."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following flask code.\n\npython\nfrom flask import Flask\nimport json\nfrom flask_restful import Resource, Api\n\napp = Flask(__name__)\napi = Api(app)\n\nclass Car:\n    def __init__(self, brand, model):\n        self.brand = brand\n        self.model = model\n\n    def __str__(self) -> str:\n        result = {\n            \"brand\": self.brand,\n            \"model\": self.model,\n        }\n        return str(result)\n\nclass MyApi(Resource):\n    def get(self, brand, model):\n        c = Car(brand, model)\n        return json.dumps(c, default=vars)\n\napi.add_resource(MyApi, \"/api/<string:brand>/<string:model>\")\napp.run(debug=True)\n",
+        "question": "If the flask server is running locally on 'http://127.0.0.1:5000'. Which of the following URLs will result in a Not Found error?",
+        "options": {
+            "A": "http://127.0.0.1:5000/api/maruti/swift",
+            "B": "http://127.0.0.1:5000/api/brand=Hundai/model=Creta",
+            "C": "http://127.0.0.1:5000/api/brand=Ford.model=Fiesta",
+            "D": "http://127.0.0.1:5000/api/Honda&City",
+            "E": "http://127.0.0.1:5000/api/model=Accent/brand=Hundai"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the flask code below.\n\npython\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef get_home():\n    a = [i for i in range(11)]\n    t = \",\".join(map(str, a))\n    return t\n\n@app.route(\"/numbers/<int:n>\")\ndef get_numbers(n):\n    a = [i for i in range(n + 1)]\n    t = \",\".join(map(str, a))\n    return t\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n",
+        "question": "Assume that the above flask application is running on http://127.0.0.1:5000. Which of the following statements is/are True for the above code snippet?",
+        "options": {
+            "A": "URL: http://127.0.0.1:5000/\nOutput: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
+            "B": "URL: http://127.0.0.1:5000/numbers/5\nOutput: 0, 1, 2, 3, 4, 5",
+            "C": "URL: http://127.0.0.1:5000/7\nOutput: 0, 1, 2, 3, 4, 5, 6, 7",
+            "D": "URL: http://127.0.0.1:5000/7\nOutput: Not Found"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Consider a character set Q, which consists of only those characters used in the sentence, \"the five boxing wizards jump quickly!\" If this sentence is to be saved in a document with minimum encoding, what will be the size of the document given that no other information or context is to be saved?",
+        "options": {
+            "A": "175 bits",
+            "B": "180 bits",
+            "C": "252 bits",
+            "D": "256 bits"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Databases & ORM",
+        "context": null,
+        "question": "We are trying to create two models 'Student' and 'Assignment' and they are related by one-to-many relationship(i.e., one student will attempt multiple assignments). Assuming that flask_sqlalchemy is to be used to create data models, which of the following will correctly achieve the requirements?",
+        "options": {
+            "A": "class Student(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    name=db.Column(db.String(50))\n\nclass Assignment(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    type=db.Column(db.String(4))\n    marks=db.Column(db.Integer)\n    student_id=db.Column(db.Integer)",
+            "B": "class Student(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    name=db.Column(db.String(50))\n    assignments=db.relationship('Assignment', backref='student')\n\nclass Assignment(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    type=db.Column(db.String(4))\n    marks=db.Column(db.Integer)\n    student_id=db.ForeignKey('student.id')",
+            "C": "class Student(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    name=db.Column(db.String(50))\n    assignments=db.relationship('Assignment', backref='student')\n\nclass Assignment(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    type=db.Column(db.String(4))\n    marks=db.Column(db.Integer)\n    student_id=db.Column(db.Integer, db.ForeignKey('student.id'))",
+            "D": "class Student(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    name=db.Column(db.String(50))\n    assign_id=db.Column(db.Integer, db.ForeignKey('Assignment.id'))\n\nclass Assignment(db.Model):\n    id=db.Column(db.Integer, primary_key=True)\n    type=db.Column(db.String(4))\n    marks=db.Column(db.Integer)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following resource created using Flask, assume that the application is running on a terminal 1 and being accessed using CURL on terminal 2. Answer the given subquestions.\n\npython\nfrom flask_restful import Api, Resource\nfrom flask import Flask\n\napp = Flask(__name__)\napi = Api(app)\n\nclass TestApi(Resource):\n    def get(self):\n        # Logic to retrieve data from backend\n        return {\n            \"val1\": \"value1\",\n            \"val2\": \"value2\",\n            \"val3\": \"value3\"\n        }\n\n    def delete(self, val):\n        # Logic to delete the value from data w.r.t \"val\" argument provided\n        return {\n            \"message\": \"Value deleted successfully\",\n            \"value\": val\n        }, 200\n\n    def put(self, val):\n        # Logic to update the value from data w.r.t \"val\" argument provided\n        return {\n            \"message\": \"Value updated successfully\",\n            \"value\": val\n        }, 200\n\napi.add_resource(TestApi, '/get_values', '/delete/<val>', '/update/<val>')\n\napp.run()\n",
+        "question": "What will be returned on the terminal 2 for the command:\n\n`curl http://127.0.0.1:5000/delete/val1`",
+        "options": {
+            "A": "{\"message\": \"Value deleted successfully\", \"value\": \"val1\"}",
+            "B": "{\"message\": \"Value updated successfully\", \"value\": \"val1\"}",
+            "C": "{\"val1\": \"value1\"}",
+            "D": "None of these."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following resource created using Flask, assume that the application is running on a terminal 1 and being accessed using CURL on terminal 2. Answer the given subquestions.\n\npython\nfrom flask_restful import Api, Resource\nfrom flask import Flask\n\napp = Flask(__name__)\napi = Api(app)\n\nclass TestApi(Resource):\n    def get(self):\n        # Logic to retrieve data from backend\n        return {\n            \"val1\": \"value1\",\n            \"val2\": \"value2\",\n            \"val3\": \"value3\"\n        }\n\n    def delete(self, val):\n        # Logic to delete the value from data w.r.t \"val\" argument provided\n        return {\n            \"message\": \"Value deleted successfully\",\n            \"value\": val\n        }, 200\n\n    def put(self, val):\n        # Logic to update the value from data w.r.t \"val\" argument provided\n        return {\n            \"message\": \"Value updated successfully\",\n            \"value\": val\n        }, 200\n\napi.add_resource(TestApi, '/get_values', '/delete/<val>', '/update/<val>')\n\napp.run()\n",
+        "question": "What will be returned on the terminal 2 for the command:\n\n`curl http://127.0.0.1:5000/delete/val1 -X PUT`",
+        "options": {
+            "A": "{\"message\": \"Value deleted successfully\", \"value\": \"val1\"}",
+            "B": "{\"message\": \"Value updated successfully\", \"value\": \"val1\"}",
+            "C": "{\"val1\": \"value1\"}",
+            "D": "None of these."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": null,
+        "question": "Which of the following statements are correct?",
+        "options": {
+            "A": "HTML defines the styling, while CSS defines the content",
+            "B": "HTML defines the content, while CSS defines the styling",
+            "C": "Javascript is always the core part of an application's frontend",
+            "D": "Javascript provides additional functionality at the frontend"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "Identify the correct order of tasks that take place when a client makes a request on the URL: https://example.com/home.html.\n\n1. The web browser sends an HTTPS request to the server, requesting a copy of home.html.\n2. The web browser assembles the response and displays it.\n3. The server responds either with the requested resource or an error code.\n4. The web browser connects to the DNS server to get the server IP address, for example.com.",
+        "question": "Identify the correct order of tasks that take place when a client makes a request on the URL: https://example.com/home.html.",
+        "options": {
+            "A": "1-4-3-2",
+            "B": "4-1-3-2",
+            "C": "1-3-4-2",
+            "D": "4-3-1-2"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Consider the following statements and select the correct option.\nStatement 1: Redundancy is used to improve performance and decrease server load.\nStatement 2: Replication ensures data is not lost if a copy gets destroyed.",
+        "options": {
+            "A": "Statement 1 is true & statement 2 is false",
+            "B": "Statement 2 is true & statement 1 is false",
+            "C": "Both statements 1 and 2 are true",
+            "D": "Both statements 1 and 2 are false"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "The term \"stateless\" in the context of a server means that __________",
+        "options": {
+            "A": "it is not physically located on any particular machine",
+            "B": "it does not have any information about the state of the client",
+            "C": "it is ephemeral",
+            "D": "All of these"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    }
+]

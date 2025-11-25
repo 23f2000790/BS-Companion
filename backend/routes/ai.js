@@ -34,7 +34,7 @@ router.post("/analyze", async (req, res) => {
     2. **youtube_resources**: Provide 3 highly specific YouTube search queries based on their WEAKEST areas. Do NOT provide direct URLs (they break). Provide the search terms.
     3. **skill_radar_data**: Estimate the user's proficiency (0-100) in these 5 cognitive areas based on their answers: "Syntax Knowledge", "Debugging Logic", "System Architecture", "Security Best Practices", "Performance Optimization".
     4. **weak_areas**: Specific concept gaps with corrections.
-    5. **follow_up_question**: Generate ONE new multiple-choice question targeting their biggest mistake to test immediate learning.`;
+    5. **follow_up_question**: Generate ONE new multiple-choice question targeting their biggest mistake to test immediate learning. MUST include an "options" array with 4 choices.`;
 
     // 2. Structure the User Data
     const questionDetails = questions.map((q, idx) => ({
@@ -107,17 +107,22 @@ router.post("/analyze", async (req, res) => {
             description: "A generated practice question based on weak areas",
             properties: {
                 question: { type: SchemaType.STRING },
-                options: { type: SchemaType.ARRAY, items: { type: SchemaType.STRING } },
+                options: { 
+                    type: SchemaType.ARRAY, 
+                    items: { type: SchemaType.STRING },
+                    description: "Array of 4 possible answers strings"
+                },
                 correct_answer: { type: SchemaType.STRING },
                 explanation: { type: SchemaType.STRING }
-            }
+            },
+            required: ["question", "options", "correct_answer", "explanation"]
         }
       },
       required: ["summary", "youtube_resources", "skill_radar_data", "weak_areas", "follow_up_question"]
     };
 
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash-exp",
       generationConfig: {
         responseMimeType: "application/json",
         responseSchema: schema

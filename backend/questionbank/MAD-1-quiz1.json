@@ -1578,5 +1578,840 @@
     },
     "correctOption": "D",
     "questionType": "single"
-  }
+  },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": null,
+        "question": "Which of the following is the correct way of calling an external CSS file using HTML?",
+        "options": {
+            "A": "<head>\n<link url=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">\n</head>",
+            "B": "<head>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">\n</head>",
+            "C": "<head>\n<link rel=\"stylesheet\" type=\"text/css\" file=\"mystyle.css\">\n</head>",
+            "D": "<head>\n<link url=\"stylesheet\" type=\"text/css\" file=\"mystyle.css\">\n</head>"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Which command would you use to get detailed information about the HTTP request and response, including headers, and to help debug the HTTP request when using curl?",
+        "options": {
+            "A": "curl -i <URL>",
+            "B": "curl -v <URL>",
+            "C": "curl --headers <URL>",
+            "D": "curl -X GET <URL>"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Read the statements given below carefully and select the correct option.\nStatement 1: If an element that belongs to two different classes is styled externally using both the classes, then for the same attribute, it will acquire styling from the latest class in order.\nStatement 2: If an element having an ID and a class is styled externally using both its ID and the class, then for the same attribute, it will acquire styling from the ID selector.",
+        "question": "Read the statements given below carefully and select the correct option.",
+        "options": {
+            "A": "Both statements 1 and 2 are correct",
+            "B": "Both statements 1 and 2 are incorrect",
+            "C": "Statement 1 is correct but statement 2 is incorrect",
+            "D": "Statement 2 is correct but statement 1 is incorrect"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Databases & ORM",
+        "context": null,
+        "question": "Which of the following options represents a one-to-one relationship in the Entity-Relationship Diagram?",
+        "options": {
+            "A": "Diagram 1",
+            "B": "Diagram 2",
+            "C": "Diagram 3",
+            "D": "Diagram 4"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764050132/jan2025-1_lojgxg.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following HTML document:\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<style>\n  #container {\n    border-style: dashed;\n    background-color: red;\n  }\n  .content {\n    border-style: solid;\n    border-color: green;\n    background-color: orange;\n  }\n  div {\n    width: 250px;\n    border: 3px dotted black;\n    border-color: yellow;\n  }\n</style>\n</head>\n<body>\n  <div id=\"container\" class=\"content\" style=\"background-color: yellow;\">\n    <h2>Welcome to Web Dev</h2>\n  </div>\n</body>\n</html>",
+        "question": "How will the browser render the above HTML document?",
+        "options": {
+            "A": "Image 1",
+            "B": "Image 2",
+            "C": "Image 3",
+            "D": "Image 4"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764050511/Gemini_Generated_Image_lxh3e3lxh3e3lxh3_txyand.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following HTML code:\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>Document</title>\n  <style>\n    div {\n      color: blue;\n    }\n    #s1 {\n      color: yellow;\n    }\n    .s2 {\n      color: green;\n    }\n    h3 {\n      color: red;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"s2\" id=\"s1\"><h3>IITM Online BS Degree Program</h3></div>\n</body>\n</html>",
+        "question": "What is the colour of the printed text \"IITM Online BS Degree Program\"?",
+        "options": {
+            "A": "BLUE",
+            "B": "YELLOW",
+            "C": "GREEN",
+            "D": "RED"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the template code and Python code given below:\n\nTemplate code: \"output.html\"\nhtml\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n</head>\n<body>\n  <ol>\n    {% for p in products %}\n      {% if \"i\" in p.name|string %}\n        <li>{{p.id}}, {{p.name}}, {{p.qty}}, {{p.price}}</li>\n      {% endif %}\n    {% endfor %}\n  </ol>\n</body>\n</html>\n\n\nPython code: \"main.py\"\npython\nfrom jinja2 import Template\n\nproducts = [\n    {\"id\": \"101\", \"name\": \"Food\", \"qty\": 78, \"price\": 100},\n    {\"id\": \"102\", \"name\": \"Electrical\", \"qty\": 4, \"price\": 16},\n    {\"id\": \"103\", \"name\": \"Stationary\", \"qty\": 7, \"price\": 14},\n    {\"id\": \"104\", \"name\": \"Electronics\", \"qty\": 10, \"price\": 145},\n]\n\nwith open(\"output.html\") as r:\n    t = Template(r.read())\n    print(t.render(products=products))\n",
+        "question": "What will the output of the above Python code be?",
+        "options": {
+            "A": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n</head>\n<body>\n  <ol>\n    <li>101, Food, 78, 100</li>\n    <li>103, Stationary, 7, 14</li>\n  </ol>\n</body>\n</html>",
+            "B": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n</head>\n<body>\n  <ol>\n    <li>102, Electrical, 4, 16</li>\n    <li>103, Stationary, 7, 14</li>\n    <li>104, Electronics, 10, 145</li>\n  </ol>\n</body>\n</html>",
+            "C": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n</head>\n<body>\n  <ol>\n    <li>103, Stationary, 7, 14</li>\n  </ol>\n</body>\n</html>",
+            "D": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n</head>\n<body>\n  <ol>\n    <li>102, Electrical, 4, 16</li>\n    <li>104, Electronics, 10, 145</li>\n  </ol>\n</body>\n</html>"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet:\nPython code: \"main.py\"\npython\nimport sys\nmovie_ratings = {\n    \"Kalki\": [5, 1, 2, 1, 1],\n    \"Jailer\": [7, 3, 1, 2, 1],\n    \"Leo\": [4, 3, 2, 2, 1],\n}\n\ndef do_something(movie_name):\n    avg_ratings = {}\n    for movie in movie_ratings:\n        if movie == movie_name:\n            avg_ratings[movie] = sum(movie_ratings[movie]) / len(movie_ratings[movie])\n            return avg_ratings\n    return \"Movie not found\"\n\nargs = sys.argv\nprint(do_something(args[1]))\n",
+        "question": "The above file will result in the output as \"2.8\", for which of the following command line input?",
+        "options": {
+            "A": "python main.py Kalki",
+            "B": "python main.py Leo",
+            "C": "python main.py Pushpa2",
+            "D": "python main.py Jailer"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider two python files, mad1.py and mad2.py with following code snippets.\n\nFile1: mad1.py\npython\nimport sys\nimport mad2\nprint('Welcome' + ' ' + sys.argv[1])\n\n\nFile2: mad2.py\npython\nimport sys\nprint('Welcome' + ' ' + sys.argv[0])\n",
+        "question": "What is the output of the following command \"python mad1.py mad2.py MAD-I MAD-II\"?",
+        "options": {
+            "A": "Welcome MAD-I.py\nWelcome MAD-II.py",
+            "B": "Welcome mad2.py\nWelcome mad1.py",
+            "C": "Welcome mad1.py\nWelcome mad2.py",
+            "D": "Welcome MAD-II.py\nWelcome MAD-I.py"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Based on the provided latency and response size information, which of the following statements is/are correct? (Assume the speed of light in cable as 2x10^8 m/s for all the options and ms is a millisecond)",
+        "options": {
+            "A": "The speed of light in a cable is approximately 2x10^8 m/s, resulting in a latency of approximately 5 ms(millisecond) for a 1000 km distance.",
+            "B": "For a data centre located 2000 km away, a one-way request will take approximately 10 ms, to reach the server, assuming the speed of light in the cable.",
+            "C": "The round-trip latency for communication with a data centre 2000 km away is approximately 50ms.",
+            "D": "If a response size is 1 KB, a maximum of 50 requests per second can be handled considering a round-trip latency of 20ms."
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Databases & ORM",
+        "context": "Consider the following two tables in an SQLite database:",
+        "question": "Which of the following SQL queries correctly retrieves a list of unique gift names with a price less than 200 rupees and a rating above 4? (Note: Displaying the rating in the result is optional, but duplicate gift names should not appear.)",
+        "options": {
+            "A": "SELECT GiftName, Price FROM Gifts,Reviews WHERE Price < 200 AND Rating > 4;",
+            "B": "SELECT g.GiftName, g.Price FROM Gifts g JOIN Reviews r ON g.GiftID = r.GiftID WHERE g.Price < 200 AND r.Rating > 4;",
+            "C": "SELECT g.GiftName, g.Price, r.Rating FROM Gifts, Reviews WHERE g.Price < 200 AND r.Rating > 4;",
+            "D": "SELECT g.GiftName, g.Price, r.Rating FROM Gifts g, Reviews r WHERE g.GiftID = r.GiftID AND g.Price < 200 AND r.Rating > 4;"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764050477/jan2025-2_k0qbqm.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "A server S requests to retrieve data from two data centers DC\u2081 and DC\u2082, which are located at distances of D\u2081 and D\u2082 meters respectively from the server S. The speed of data travelling through the medium that connects S with DC\u2081 is m\u2081 m/sec and that connects S with DC\u2082 is m\u2082 m/sec. With the given media for data transfer between S \u2192 DC\u2081 and S \u2192 DC\u2082, it takes an additional 200 milliseconds for the data to reach S from DC\u2082 than it takes from DC\u2081 if the complete response is ready only when the data is available to S from both the datacenters. Figure out the value of m\u2082 (in m/sec) in terms of D\u2081, D\u2082, and m\u2081. [Note: The data centers send responses only when they receive a request from the server]",
+        "options": {
+            "A": "m\u2082 = (D\u2082m\u2081) / (D\u2081 - 0.2m\u2081)",
+            "B": "m\u2082 = (D\u2082m\u2081) / (D\u2081 + 0.2m\u2081)",
+            "C": "m\u2082 = (2D\u2082m\u2081) / (2D\u2081 - 0.2m\u2081)",
+            "D": "m\u2082 = (2D\u2082m\u2081) / (2D\u2081 + 0.2m\u2081)"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "Consider two fictitious addressing systems, IPv5 and IPv8, used to store the IP address of a machine. Following are the forms of storing addresses for each system.\n\nIPv5: It is a 45-bit long address denoted by 5 sets of 3-digit octal numbers separated by a hyphen (-).\ne.g. xxx - xxx - xxx - xxx - xxx\n\nIPv8: It is a 64-bit long address denoted by 4 sets of 4-bit hexadecimal numbers separated by colon (:).\ne.g. XXXX:XXXX:XXXX:XXXX",
+        "question": "How would an IPv5 address, 145-123-010-235-453 be represented in IPv8 format based on information given above?",
+        "options": {
+            "A": "0000:3B2B:9821:0652",
+            "B": "3B2B:9821:0652:0000",
+            "C": "0000:0652:9821:3B2B",
+            "D": "0652:9821:3B2B:0000"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following code:\npython\nimport pyhtml as html\n\ntable = {'table': [[1,2,3],[4,5,6]]}\n\ndef f_table(ctx):\n    template_str = html.html(\n        html.head(\n            html.title('Title')\n        ),\n        html.body(\n            html.table(\n                html.tr(\n                    [html.td(cell) for cell in row]\n                ) for row in ctx['table']\n            )\n        )\n    )\n    return (template_str)\n\ntemplate = f_table(table)\nprint(template.render())\n",
+        "question": "What will the output of the above PyHTML code be?",
+        "options": {
+            "A": "<!DOCTYPE html>\n<html>\n<head><title>Title</title></head>\n<body>\n<table>\n<tr><td>1</td><td>2</td><td>3</td></tr>\n<tr><td>4</td><td>5</td><td>6</td></tr>\n</table>\n</body>\n</html>",
+            "B": "<!DOCTYPE html>\n<html>\n<head><title>Title</title></head>\n<body>\n<table>\n<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>\n</table>\n</body>\n</html>",
+            "C": "AttributeError: module 'pyhtml' has no attribute 'html'.",
+            "D": "None of these"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Based on the above program, answer the given subquestions.\n\napp.py\npython\nimport sys\nfrom string import Template as T1\nfrom jinja2 import Template as T2\n\ntemp = \"The book title is $title and it costs {{price}}.\"\n\nif sys.argv[1] == 'string':\n    temp = T1(temp)\n    out = temp.substitute({'title': 'Python Basics', 'price': '$20'})\nelif sys.argv[1] == 'jinja 2':\n    temp = T2(temp)\n    out = temp.render({'title': 'Python Basics', 'price': '$20'})\nelse:\n    out = 'Invalid input'\n\nprint(out)\n",
+        "question": "What will be the output of the given Python code snippet on the terminal for the command `python app.py string`?",
+        "options": {
+            "A": "The book title is Python Basics and it costs $20.",
+            "B": "The book title is $title and it costs $20.",
+            "C": "The book title is Python Basics and it costs {{price}}.",
+            "D": "The book title is $title and it costs {{price}}."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Jan2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Based on the above program, answer the given subquestions.\n\napp.py\npython\nimport sys\nfrom string import Template as T1\nfrom jinja2 import Template as T2\n\ntemp = \"The book title is $title and it costs {{price}}.\"\n\nif sys.argv[1] == 'string':\n    temp = T1(temp)\n    out = temp.substitute({'title': 'Python Basics', 'price': '$20'})\nelif sys.argv[1] == 'jinja 2':\n    temp = T2(temp)\n    out = temp.render({'title': 'Python Basics', 'price': '$20'})\nelse:\n    out = 'Invalid input'\n\nprint(out)\n",
+        "question": "What will be the output of the given Python code snippet on the terminal for the command `python app.py jinja 2`?",
+        "options": {
+            "A": "The book title is Python Basics and it costs $20.",
+            "B": "The book title is $title and it costs $20.",
+            "C": "The book title is Python Basics and it costs {{price}}.",
+            "D": "Invalid input"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "<!DOCTYPE html>\n<html>\n<head>\n<title>Test List</title>\n</head>\n<body>\n<dl>\n  <dt>Flask</dt>\n  <dd>A Python web framework.</dd>\n  <dt>SQLAlchemy</dt>\n  <dd>A database toolkit for Python.</dd>\n</dl>\n</body>\n</html>",
+        "question": "What will be the output of the following HTML code?",
+        "options": {
+            "A": "Flask\n  A Python web framework.\nSQLAlchemy\n  A database toolkit for Python.",
+            "B": "Flask\nA Python web framework.\nSQLAlchemy\nA database toolkit for Python.",
+            "C": "Flask\n - A Python web framework.\nSQLAlchemy\n - A database toolkit for Python.",
+            "D": "Flask\nA Python web framework.\nSQLAlchemy\nA database toolkit for Python."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": null,
+        "question": "Mayur and Manoj are playing a friendly cricket match. You are building a Flask web application to display their scores. Which of the following Flask route functions will correctly display the score when the user visits http://127.0.0.1/score ?(Assume that the score.html exists)",
+        "options": {
+            "A": "@app.route('/score')\ndef score():\n    return render('score.html', mayur=50, manoj=45)",
+            "B": "@app.route('/score')\ndef score():\n    return render_template('score.html', mayur=50, manoj=45)",
+            "C": "def score():\n    return render_template('score.html', mayur=50, manoj=45)\n@app.route('/score')",
+            "D": "@app.route('/score')\ndef score():\n    return 'score.html', mayur=50, manoj=45"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "filename: index.html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>CSS Document</title>\n    <style>\n        .container p.highlight { background-color: red; }\n        .content .special { background-color: blue; }\n        span.highlight { background-color: green; }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <p class=\"highlight\">Welcome to our site</p>\n        <div class=\"content\">\n            <p>This is regular content</p>\n            <p class=\"highlight special\">Important information</p>\n            <span class=\"highlight\">Notice</span>\n        </div>\n        <p class=\"highlight\">Footer text</p>\n    </div>\n    <p class=\"highlight\">Welcome to our site</p>\n</body>\n</html>",
+        "question": "Which elements from the above document will have a red background color?",
+        "options": {
+            "A": "All elements with the class \"highlight\".",
+            "B": "Only the <p> elements that are direct children of .container and have the class \"highlight\"",
+            "C": "All <p> elements with the class \"highlight\" that are descendants of .container",
+            "D": "Only the first <p> element with class \"highlight\""
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Filename: code.py\n\nfrom string import Template as string_template\nfrom jinja2 import Template as jinja_template\n\ntemplate1 = string_template('Hello $name, welcome to $city!')\ntemplate2 = jinja_template('{{product}} costs {{price}}')\n\nresult1 = template1.substitute(name='Alice')\nresult2 = template1.substitute(name='Alice', city='Boston', state='Massachusetts')\nresult3 = template2.render({\"product\": \"laptop\"})\nresult4 = template2.render({\"product\": \"laptop\", \"price\": \"45000\", \"currency\": \"rupees\"})\n\nprint(result1)\nprint(result2)\nprint(result3)\nprint(result4)",
+        "question": "Which of the following statements will throw a key error?",
+        "options": {
+            "A": "template1.substitute(name='Alice')",
+            "B": "template1.substitute(name='Alice', city='Boston', state='Massachusetts')",
+            "C": "template2.render({\"product\": \"laptop\"})",
+            "D": "template2.render({\"product\": \"laptop\", \"price\": \"45000\", \"currency\": \"rupees\"})"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "{% macro greet(name) %}\nHello, {{ name }}!\n{% endmacro %}\n\n<!DOCTYPE html>\n<html>\n<head>\n\t<title>Jinja2 Macro Test</title>\n</head>\n<body>\n\t{{ greet(\"Alice\") }}\n\t{{ greet(\"Bob\") }}\n</body>\n</html>",
+        "question": "What will be the output of the following Jinja2 template when rendered in Flask?",
+        "options": {
+            "A": "Hello, Alice! Hello, Bob!",
+            "B": "jinja2.exceptions.UndefinedError: 'greet' is undefined",
+            "C": "Hello, Alice!\nHello, Bob!",
+            "D": "{{ greet(\"Alice\") }}\n{{ greet(\"Bob\") }}"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "from flask import Flask, url_for, request, redirect\napp = Flask(__name__)\n\n@app.route(\"/signin/user\")\ndef login():\n    return url_for(\"login\")\n\n@app.route(\"/\")\ndef home():\n    return redirect(url_for(\"login\"))\n\napp.run(debug=True)",
+        "question": "Assume the above code is running on server http://127.0.0.1:5000/ . What will be the output on a web browser for the URL: http://127.0.0.1:5000/ ?",
+        "options": {
+            "A": "http://127.0.0.1:5000/signin/user",
+            "B": "/signin/user",
+            "C": "http://127.0.0.1:5000",
+            "D": "Not Found"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "<!DOCTYPE html>\n<html>\n<head>\n<style>\np {\n    color: blue;\n}\n#highlight {\n    color: green;\n}\n.important {\n    color: red;\n}\n</style>\n</head>\n<body>\n<p class=\"important\" id=\"highlight\">This is a paragraph.</p>\n</body>\n</html>",
+        "question": "What will be the color of the paragraph text when rendered in a browser?",
+        "options": {
+            "A": "Blue",
+            "B": "Green",
+            "C": "Red",
+            "D": "The browser default (black)"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "File: \"output.py\"\nfrom jinja2 import Template\noutput = \"\"\"<!DOCTYPE html>\n<body>\n<ul>\n<!--Missing Jinja2 implementation-->\n</ul>\n</body>\n</html>\n\"\"\"\nl = [5, 4, 3, 2, 1]\nt = Template(output)\noutput = t.render(sl=l)\nprint(output)",
+        "question": "Which of the following code snippet when placed at <!--Missing Jinja2 implementation--> will render the below unordered list as shown below?\n- 1\n- 2\n- 3\n- 4\n- 5",
+        "options": {
+            "A": "{% for item in sl|sort(reverse=True)%}<li>{{item}}</li>{%endfor%}",
+            "B": "{% for item in sl%}<li>{{item}}</li>{%endfor%}",
+            "C": "{% for item in sl|sort%}<li>{{item}}</li>{%endfor%}",
+            "D": "{% for item in sl.sort()%}<li>{{item}}</li>{%endfor%}"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Software Development Lifecycle & Testing",
+        "context": "Consider the following Python code snippet:\nmain.py\n\nimport sys\ndef process(v):\n    # Missing code 1\n    v = sys.argv\n    # Missing code 2\n    print(output)",
+        "question": "We are executing above main.py in command line with command `python main.py 1 2 3 4 5`. Which of the following codes when replaced at #Missing code 1 and #Missing code 2 will render the output below: 1,2,3,4,5",
+        "options": {
+            "A": "#Missing code 1\nst = \",\".join(v)\nreturn st\n\n#Missing code 2\noutput = process(v)",
+            "B": "#Missing code 1\nst = str(join(v,\",\"))\nreturn st\n\n#Missing code 2\noutput = process(v)",
+            "C": "#Missing code 1\nst = str{join(v,\",\")}\nreturn st\n\n#Missing code 2\noutput = process(v[1:])",
+            "D": "#Missing code 1\nst = \",\".join(v)\nreturn st\n\n#Missing code 2\noutput = process(v[1:])"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "We want to use an online grammar checking tool, which takes each word from the client and sends it to the web server. The available network bandwidth between the client and the server is 2 Gbps. What should be the maximum allowed size(in MBs) of a document containing the word sent from the client to the server per second for the grammar check? (Use: 1KB=1000Bytes, 1MB=1000KB and so on.)",
+        "options": null,
+        "correctOption": 250,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": null,
+        "question": "Consider a client which is located 3000 km from the server makes a request through the cable. Suddenly after the request reaches the server, the cable breaks and the response is now to be sent to the client via air. This change of medium caused an additional delay of 47 ms at the server end. How long will the client have to wait before receiving the response (in ms)? ( speed on cable = 2e8 m/s and in air 3e8 m/s)",
+        "options": null,
+        "correctOption": 72,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet and answer the given subquestions\n\nfilename: webapp.py\n\nimport sys\nfrom jinja2 import Template\n\nargs = sys.argv\n\nframeworks = {\n    'django': 'python',\n    'react': 'javascript',\n    'flask': 'python',\n    'vue': 'javascript'\n}\n\nlanguages = {\n    'python': 'server-side',\n    'javascript': 'client-side'\n}\n\ntemplate = Template(\"{{ framework }} is a {{ lang_type }} {{ language }} framework.\")\n\nif len(args) >= 3 and args[1] in frameworks:\n    framework_name = args[1]\n    language = frameworks[framework_name]\n\n    if args[2] == 'type' and language in languages:\n        lang_type = languages[language]\n        print(template.render(framework=framework_name, language=language, lang_type=lang_type))\n    else:\n        print(\"Invalid second argument or language not found!\")\nelse:\n    print(\"Invalid command\")",
+        "question": "Which command line input will produce the output:\nflask is a server-side python framework.?",
+        "options": {
+            "A": "python webapp.py flask python type",
+            "B": "python webapp.py flask type server-side",
+            "C": "python webapp.py flask type",
+            "D": "python webapp.py type flask python",
+            "E": "python webapp.py flask server-side"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet and answer the given subquestions\n\nfilename: webapp.py\n\nimport sys\nfrom jinja2 import Template\n\nargs = sys.argv\n\nframeworks = {\n    'django': 'python',\n    'react': 'javascript',\n    'flask': 'python',\n    'vue': 'javascript'\n}\n\nlanguages = {\n    'python': 'server-side',\n    'javascript': 'client-side'\n}\n\ntemplate = Template(\"{{ framework }} is a {{ lang_type }} {{ language }} framework.\")\n\nif len(args) >= 3 and args[1] in frameworks:\n    framework_name = args[1]\n    language = frameworks[framework_name]\n\n    if args[2] == 'type' and language in languages:\n        lang_type = languages[language]\n        print(template.render(framework=framework_name, language=language, lang_type=lang_type))\n    else:\n        print(\"Invalid second argument or language not found!\")\nelse:\n    print(\"Invalid command\")",
+        "question": "What will be the output for command line input, `python webapp.py react type`?",
+        "options": {
+            "A": "react is a client-side javascript framework",
+            "B": "react is a server-side python framework",
+            "C": "Invalid second argument or language not found!",
+            "D": "Invalid command"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet and answer the given subquestions\n\nfilename: webapp.py\n\nimport sys\nfrom jinja2 import Template\n\nargs = sys.argv\n\nframeworks = {\n    'django': 'python',\n    'react': 'javascript',\n    'flask': 'python',\n    'vue': 'javascript'\n}\n\nlanguages = {\n    'python': 'server-side',\n    'javascript': 'client-side'\n}\n\ntemplate = Template(\"{{ framework }} is a {{ lang_type }} {{ language }} framework.\")\n\nif len(args) >= 3 and args[1] in frameworks:\n    framework_name = args[1]\n    language = frameworks[framework_name]\n\n    if args[2] == 'type' and language in languages:\n        lang_type = languages[language]\n        print(template.render(framework=framework_name, language=language, lang_type=lang_type))\n    else:\n        print(\"Invalid second argument or language not found!\")\nelse:\n    print(\"Invalid command\")",
+        "question": "What will be the output for command line input, `python webapp.py django python`?",
+        "options": {
+            "A": "django is a client-side javascript framework",
+            "B": "django is a server-side python framework",
+            "C": "Invalid second argument or language not found!",
+            "D": "Invalid command"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Given the following code, answer the given subquestions:\n\nfrom flask import Flask, request, render_template_string\n\napp = Flask(__name__)\n\ntemplate = \"\"\"\n<!DOCTYPE html>\n<html>\n<head><title>Protein RDA</title></head>\n<body>\n<h2>Recommended Daily Protein Intake</h2>\n<p>Gender: {{ gender }}</p>\n<p>Weight: {{ weight_raw }}</p>\n<p>Recommended Intake: <strong>{{ rda }} grams</strong></p>\n</body>\n</html>\n\"\"\"\n\ndef parse_weight(weight_raw):\n    if weight_raw.endswith('kg'):\n        return float(weight_raw[:-2])\n    elif weight_raw.endswith('lb'):\n        return float(weight_raw[:-2]) * 0.453592\n    return float(weight_raw)\n\ndef protein_rda(gender, weight_kg):\n    return weight_kg * (0.8 if gender.lower() == 'male' else 0.75)\n\n@app.route('/protein', methods=['GET'])\ndef protein():\n    gender = request.args.get('gender', 'male')\n    weight_raw = request.args.get('weight', '60kg')\n    weight_kg = parse_weight(weight_raw)\n    rda = int(round(protein_rda(gender, weight_kg)))\n    return render_template_string(template, gender=gender, weight_raw=weight_raw, rda=rda)\n\napp.run(debug=True)",
+        "question": "The Flask route and template given in the main data, what will be rendered in the browser when the user visits /protein?gender=FeMaLe&weight=154lb",
+        "options": {
+            "A": "Recommended Daily Protein Intake\nGender: male\nWeight: 60kg\nRecommended Intake: 48 grams",
+            "B": "Recommended Daily Protein Intake\nGender: FeMaLe\nWeight: 154lb\nRecommended Intake: 52 grams",
+            "C": "Recommended Daily Protein Intake\nGender: FeMaLe\nWeight: 154lb\nRecommended Intake: 70 grams",
+            "D": "Recommended Daily Protein Intake\nGender: female\nWeight: 154lb\nRecommended Intake: 70 grams"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "May 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Given the following code, answer the given subquestions:\n\nfrom flask import Flask, request, render_template_string\n\napp = Flask(__name__)\n\ntemplate = \"\"\"\n<!DOCTYPE html>\n<html>\n<head><title>Protein RDA</title></head>\n<body>\n<h2>Recommended Daily Protein Intake</h2>\n<p>Gender: {{ gender }}</p>\n<p>Weight: {{ weight_raw }}</p>\n<p>Recommended Intake: <strong>{{ rda }} grams</strong></p>\n</body>\n</html>\n\"\"\"\n\ndef parse_weight(weight_raw):\n    if weight_raw.endswith('kg'):\n        return float(weight_raw[:-2])\n    elif weight_raw.endswith('lb'):\n        return float(weight_raw[:-2]) * 0.453592\n    return float(weight_raw)\n\ndef protein_rda(gender, weight_kg):\n    return weight_kg * (0.8 if gender.lower() == 'male' else 0.75)\n\n@app.route('/protein', methods=['GET'])\ndef protein():\n    gender = request.args.get('gender', 'male')\n    weight_raw = request.args.get('weight', '60kg')\n    weight_kg = parse_weight(weight_raw)\n    rda = int(round(protein_rda(gender, weight_kg)))\n    return render_template_string(template, gender=gender, weight_raw=weight_raw, rda=rda)\n\napp.run(debug=True)",
+        "question": "The Flask route and template given in the main data, what will be rendered in the browser when the user visits /protein?gender=FEMALE&weight=60",
+        "options": {
+            "A": "Recommended Daily Protein Intake\nGender: \nWeight: \nRecommended Intake: grams",
+            "B": "Recommended Daily Protein Intake\nGender: FEMALE\nWeight: 60\nRecommended Intake: 45 grams",
+            "C": "Recommended Daily Protein Intake\nGender: FEMALE\nWeight: 60kg\nRecommended Intake: 45 grams",
+            "D": "Recommended Daily Protein Intake\nGender: male\nWeight: 60kg\nRecommended Intake: 48 grams"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": null,
+        "question": "Which of the following is the correct syntax to display the total number of courses in a jinja2 template?",
+        "options": {
+            "A": "{{ courses | len }}",
+            "B": "{{ courses | length }}",
+            "C": "{{ len(courses) }}",
+            "D": "None of these"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following code:\n\napp.py\npython\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef port():\n    return \"This is the port question.\"\n\nif __name__ == \"__main__\":\n    app.run(port=5008)\n",
+        "question": "You are running a Flask web application locally using the command: python app.py. On which URL will the application be accessible on the browser?",
+        "options": {
+            "A": "http://127.0.0.1:5000/",
+            "B": "http://localhost:0000/",
+            "C": "http://0.0.0.0:5000/",
+            "D": "http://localhost:5008/"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following statements and select the correct option.\n\nStatement 1: The <span> elements will start on new lines, while the <div> elements will appear inline with surrounding content.\n\nStatement 2: The <p> and <div> elements will each start on new lines and take up the full width of their container, while <span>, <strong>, and <em> will flow inline with surrounding content.",
+        "question": "Consider the following statements and select the correct option.",
+        "options": {
+            "A": "Statement 1 is correct, but statement 2 is incorrect.",
+            "B": "Statement 2 is correct, but statement 1 is incorrect.",
+            "C": "Both statements 1 and 2 are correct",
+            "D": "Both statements 1 and 2 are incorrect"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": null,
+        "question": "Which of the following Flask view functions will return a 404 error for the URL: http://127.0.0.1:5000/profile/user123/active/2024?",
+        "options": {
+            "A": "python\n@app.route('/profile/<username>/<status>/<int:year>')\ndef profile(username, status, year):\n    info = {'username': username, 'status': status, 'year': year}\n    return info\n",
+            "B": "python\n@app.route('/profile/<string:username>/<string:status>/<string:year>')\ndef profile(username, status, year):\n    info = {'username': username, 'status': status, 'year': year}\n    return info\n",
+            "C": "python\n@app.route('/profile/<username>/<status>/<year>')\ndef profile(username, status, year):\n    info = {'username': username, 'status': status, 'year': year}\n    return info\n",
+            "D": "python\n@app.route('/profile/user/<username>/<status>/<year>')\ndef profile(username, status, year):\n    info = {'username': username, 'status': status, 'year': year}\n    return info\n"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "Consider two Python files, main.py and utils.py with the following code snippets.\n\nFile1: main.py\npython\nimport sys\nimport utils\nprint('Processing: ' + sys.argv[2])\n\n\nFile2: utils.py\npython\nimport sys\nprint('Module: ' + sys.argv[0])\n",
+        "question": "What is the output of the following command \"python main.py data.txt output.txt\" when run on terminal?",
+        "options": {
+            "A": "Module: utils.py\nProcessing: data.txt",
+            "B": "Processing: data.txt\nModule: utils.py",
+            "C": "Module: main.py\nProcessing: output.txt",
+            "D": "Processing: output.txt\nModule: main.py"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Match the following web development concepts with their correct descriptions:",
+        "question": "Match the following web development concepts with their correct descriptions:",
+        "options": {
+            "A": "1 \u2192 B, 2 \u2192 C, 3 \u2192 D, 4 \u2192 A",
+            "B": "1 \u2192 A, 2 \u2192 B, 3 \u2192 C, 4 \u2192 D",
+            "C": "1 \u2192 B, 2 \u2192 D, 3 \u2192 C, 4 \u2192 A",
+            "D": "1 \u2192 C, 2 \u2192 D, 3 \u2192 A, 4 \u2192 B"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764050830/sept2025-1_xlmscz.png"
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet.\npython\nfrom jinja2 import Template as JTemplate\nfrom string import Template as STemplate\n\ndata = {'name1': 'Alice', 'name2': 'name1',\n        'age1': '25', 'age2': 'age1',\n        'job1': 'Engineer', 'job2': 'job1'}\n\njt = JTemplate(\"{{name2}} is {{age2}} years old and works as a {{job2}}.\")\nresult1 = jt.render(data)\nprint(result1) #first print statement\n\nst = STemplate(result1)\nresult2 = st.substitute(data)\nprint(result2) #second print statement\n",
+        "question": "If the above Python code runs on the terminal, which of the following statements is/are correct?",
+        "options": {
+            "A": "The first print statement will output: \"name1 is age1 years old and works as a job1.\"",
+            "B": "The second print statement will output: \"Alice is 25 years old and works as a Engineer.\"",
+            "C": "Jinja2 templates use double curly braces {{}} for variable substitution",
+            "D": "String templates use dollar signs $ for variable substitution in the substitute() method",
+            "E": "The code will raise a KeyError exception during execution"
+        },
+        "correctOption": [
+            "A",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": null,
+        "question": "Which of the following Flask view functions will NOT throw any error for the URL: http://127.0.0.1:5000/user?username=mad1&role=admin?",
+        "options": {
+            "A": "python\n@app.route('/user')\ndef profile():\n    creds = request.args\n    info = {'username': creds[\"username\"], 'role': creds[\"role\"]}\n    return info\n",
+            "B": "python\n@app.route('/user/<username>/<role>')\ndef profile(username, role):\n    info = {'username': username, 'role': role}\n    return info\n",
+            "C": "python\n@app.route('/user')\ndef profile():\n    return {'message': 'data retrieved successfully'}\n",
+            "D": "All of these"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following HTML and CSS code:\nhtml\n<html>\n<head>\n<style>\ndiv {\n    width: 0px;\n    margin: 0px;\n}\n.container {\n    width: 200px;\n    padding: 15px;\n    border: 5px solid black;\n}\n#box {\n    margin: 10px;\n}\n</style>\n</head>\n<body>\n<div class=\"container\" id=\"box\">Hello World</div>\n</body>\n</html>\n",
+        "question": "What is the total width (approximately) of the div with class=\"container\" and id=\"box\", including content, padding, and border but excluding margin?",
+        "options": {
+            "A": "200 px",
+            "B": "230 px",
+            "C": "240 px",
+            "D": "250 px"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following code:\npython\nfrom flask import Flask, request, render_template_string\n\napp = Flask(__name__)\n\n@app.route('/', methods=['GET', 'POST'])\ndef home():\n    if request.method == 'POST':\n        name = request.form['name']\n        template = \"Hello, {{ name }}\"\n        return render_template_string(template, name=name)\n    return '''\n        <form method=\"POST\">\n            Enter Your Name: <input type=\"text\" name=\"name\">\n            <button>Submit</button>\n        </form>\n    '''\n\nif __name__ == '__main__':\n    app.run(debug=True)\n",
+        "question": "You are building a Flask web application that takes user input from an HTML form and displays it using Jinja2 templates. Suppose the user runs this app locally and submits the name Alice in the form. Which of the following represents the correct sequence of concepts that occur when the user submits the form with the name Alice ?",
+        "options": {
+            "A": "HTML Form Rendering \u2192 HTTP 404 Not Found Error \u2192 User Submits Form \u2192 Flask Routing \u2192 Template Rendering",
+            "B": "User Submits Form (HTTP POST) \u2192 Check URL Structure \u2192 Network Transfer (Bandwidth & Latency) \u2192 Flask Routing",
+            "C": "User Accesses URL (Form at \"/\") \u2192 User Submits Form (HTTP POST) \u2192 Flask Request Handling (request.form) \u2192 Jinja2 Template Rendering",
+            "D": "Flask Request Handling \u2192 Network Round Trip (RTT) \u2192 HTML Table Rendering \u2192 Jinja2 Template Rendering"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Web Concepts, Security & Performance",
+        "context": "Consider the web URL.\nhttp://localhost:5000/",
+        "question": "Which of the following is/are True?",
+        "options": {
+            "A": "http is the protocol.",
+            "B": "5000 is the port number.",
+            "C": "The trailing / represents the base URL.",
+            "D": "5000 is the status code."
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Frontend Technologies (HTML, CSS, DOM)",
+        "context": "Consider the following HTML snippet:\n<img src=\"logo.png\" alt=\"Company Logo\" />",
+        "question": "Which of the following is true?",
+        "options": {
+            "A": "If logo.png fails to load, the text \"Company Logo\" will be shown.",
+            "B": "If the image file is missing, browsers display it as a broken image.",
+            "C": "The alt attribute is mandatory in HTML5.",
+            "D": "logo.png fails to load because the <img> tag only allows \"jpeg/jpg\" files."
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet.\nFilename: server.py\npython\nfrom flask import Flask, request\nimport sys\n\napp = Flask(__name__)\n\n@app.route('/api/data', methods=sys.argv[1:])\ndef handle_data():\n    if request.method == 'GET':\n        return \"<h1>Data retrieved successfully</h1>\"\n    elif request.method == 'PUT':\n        return \"<h1>Data updated successfully</h1>\"\n    elif request.method == 'DELETE':\n        return \"<h1>Data deleted successfully</h1>\"\n    else:\n        return \"<h1>Unsupported operation</h1>\"\n\napp.run(debug=True)\n\nBased on the above data, answer the given subquestions.",
+        "question": "If the given Flask app is run using the command `python server.py GET PUT POST` in one terminal, what will be the output on another terminal for the command `curl -X POST http://127.0.0.1:5000/api/data`?",
+        "options": {
+            "A": "<h1>Data added successfully</h1>",
+            "B": "<h1>Unsupported operation</h1>",
+            "C": "<h1>Method not Allowed</h1>",
+            "D": "<h1>404 Not Found</h1>"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Python code snippet.\nFilename: server.py\npython\nfrom flask import Flask, request\nimport sys\n\napp = Flask(__name__)\n\n@app.route('/api/data', methods=sys.argv[1:])\ndef handle_data():\n    if request.method == 'GET':\n        return \"<h1>Data retrieved successfully</h1>\"\n    elif request.method == 'PUT':\n        return \"<h1>Data updated successfully</h1>\"\n    elif request.method == 'DELETE':\n        return \"<h1>Data deleted successfully</h1>\"\n    else:\n        return \"<h1>Unsupported operation</h1>\"\n\napp.run(debug=True)\n\nBased on the above data, answer the given subquestions.",
+        "question": "If the given Flask app is run using the command `python server.py GET PUT POST` in one terminal, what will be the output on another terminal for the command `curl -X DELETE http://127.0.0.1:5000/api/data`?",
+        "options": {
+            "A": "<h1>Data deleted successfully</h1>",
+            "B": "<h1>Unsupported operation</h1>",
+            "C": "<h1>Method not Allowed</h1>",
+            "D": "<h1>404 Not Found</h1>"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Flask code:\npython\nfrom flask import Flask, render_template, request\n\napp = Flask(__name__)\n\n@app.route('/login', method=\"GET\")\ndef login(id):\n    name = request.form.get('name', 'Guest')\n    return render_template(\"login.html\", name=name)\n\nif __name__ == '__main__':\n    app.run(debug=True)\n\n\nlogin.html\nhtml\n<body>\n    {{ name }}\n    <form action=\"/login\" method=\"POST\">\n        <input type=\"text\" name=\"name\" placeholder=\"Enter your name\">\n        <button type=\"submit\">Submit</button>\n    </form>\n</body>\n\nBased on the above data, answer the given subquestions.",
+        "question": "From the given options, select which part of the code (if any) will throw an error first in the terminal and prevent the Flask application from running successfully ?",
+        "options": {
+            "A": "method=\"GET\" is not correct, it should be methods=[\"GET\"]",
+            "B": "def login(id) can throw error because no id is passed in /login url",
+            "C": "name will throw error because no name will be written in the starting of app",
+            "D": "There is no error, Flask application will run correctly."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MAD 1",
+        "exam": "quiz1",
+        "term": "Sept 2025",
+        "topic": "Flask & Jinja Templating",
+        "context": "Consider the following Flask code:\npython\nfrom flask import Flask, render_template, request\n\napp = Flask(__name__)\n\n@app.route('/login', method=\"GET\")\ndef login(id):\n    name = request.form.get('name', 'Guest')\n    return render_template(\"login.html\", name=name)\n\nif __name__ == '__main__':\n    app.run(debug=True)\n\n\nlogin.html\nhtml\n<body>\n    {{ name }}\n    <form action=\"/login\" method=\"POST\">\n        <input type=\"text\" name=\"name\" placeholder=\"Enter your name\">\n        <button type=\"submit\">Submit</button>\n    </form>\n</body>\n\nBased on the above data, answer the given subquestions.",
+        "question": "Assume the terminal error has already been fixed. Now, if you hit the /login URL in the browser, which of the following is the correct option in this case?",
+        "options": {
+            "A": "method=\"GET\" is not correct, it should be methods=[\"GET\"]",
+            "B": "def login(id) can throw error because no id is passed in /login url",
+            "C": "name will throw error because no name will be written in the starting of app",
+            "D": "There is no error, Flask application will run correctly."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    }
 ]

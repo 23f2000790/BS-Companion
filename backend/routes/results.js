@@ -99,7 +99,14 @@ router.get("/:id", verifyToken, async (req, res) => {
 
       // Enrich the result questions with original details
       enrichedQuestions = result.questions.map(q => {
-        const originalQ = questionMap.get(q.questionId ? q.questionId.toString() : "");
+        let lookupKey = q.questionId ? q.questionId.toString() : "";
+        
+        // Sanitize malformed ObjectIds (e.g. "new ObjectId('...')")
+        if (lookupKey.startsWith("new ObjectId('")) {
+            lookupKey = lookupKey.replace("new ObjectId('", "").replace("')", "");
+        }
+
+        const originalQ = questionMap.get(lookupKey);
         if (originalQ) {
           return {
             ...q.toObject(),

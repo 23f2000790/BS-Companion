@@ -31,6 +31,76 @@
   z-index: 10;
 }
 
+/* --- Button Card Special Styling --- */
+.card--button {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.15) 0%,
+    rgba(168, 85, 247, 0.15) 100%
+  );
+  border: 2px solid var(--accent-primary);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card--button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.card--button:hover::before {
+  left: 100%;
+}
+
+.card--button:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.4);
+  border-color: #a855f7;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.25) 0%,
+    rgba(168, 85, 247, 0.25) 100%
+  );
+}
+
+.card--button .card__title {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.card--button .card__description {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+
 /* --- Card Content --- */
 .card__header {
   display: flex;

@@ -508,7 +508,7 @@
 .radar-wrapper {
   flex: 1;
   width: 100%;
-  min-height: 0; /* Fix for flex child height */
+  min-height: 300px; /* Fix for flex child height and Recharts warning */
 }
 
 /* Weak Areas Panel */
@@ -787,10 +787,11 @@
   padding: 1rem;
 }
 
-.question-detail-modal {
-  background: #1e1e1e;
-  width: 95%;
-  max-width: 1200px; /* Increased width */
+.modal-content.question-detail-modal {
+background: #1e1e1e;
+  width: 95%;               
+  max-width: 1200px;        
+  height: auto;
   max-height: 90vh;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -798,6 +799,7 @@
   flex-direction: column;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .modal-header {
@@ -878,16 +880,37 @@
 }
 
 .question-image-container {
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.question-image-container:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  border-color: rgba(224, 218, 179, 0.3);
 }
 
 .question-image-container img {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
+  max-height: 80vh;
+  object-fit: contain;
   display: block;
+  transition: transform 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.question-image-container:hover img {
+  transform: scale(1.02);
 }
 
 .question-text-large {

@@ -2,6 +2,7 @@ import express from "express";
 import nodemailer from "nodemailer";
 import { verifyToken } from "../middleware/auth.js";
 import User from "../models/User.js";
+import logger from "../utils/logger.js";
 
 const router = express.Router();
 
@@ -66,8 +67,8 @@ router.post("/", verifyToken, async (req, res) => {
     console.error("Error sending feedback:", error);
    
     // For development without email config, just log the feedback
-    console.log("📧 Feedback received from user:", userId);
-    console.log("Feedback content:", req.body.feedback);
+    logger("📧 Feedback received from user:", userId);
+    logger("Feedback content:", req.body.feedback);
     
     return res.status(200).json({ 
       message: "Feedback received (development mode - check server logs)",

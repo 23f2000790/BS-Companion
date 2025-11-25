@@ -1,0 +1,2802 @@
+[
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "A. Select suitable model\nB. Train the model\nC. Pre-process the data\nD. Collect data\nE. Fine tune model\nF. Present your solution",
+        "question": "[String Matching] Enter the sequence of steps to be followed, in general, in end to end machine learning project. Enter the answer as a 6-character string. For example, entering the answer as (without quotes) 'BADCFE' implies that the first step is B, followed by the second step A and so on.",
+        "options": null,
+        "correctOption": "DCABEF",
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following APIs can be used to construct an ML pipeline for data preprocessing and modeling?",
+        "options": {
+            "A": "Pipeline",
+            "B": "ColumnTransformer",
+            "C": "FeatureUnion",
+            "D": "All of these"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider following data:\ndata = [{'age': 4, 'height':96.0}, {'age': 1, 'height':73.9}, {'age': 3, 'height':88.9}, {'age': 2, 'height':81.6}]",
+        "question": "Which one of the following APIs can be used to extract features from the above data?",
+        "options": {
+            "A": "DictVectorizer",
+            "B": "HashingVectorizer",
+            "C": "FeatureHasher"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider following data:",
+        "question": "What will be the output of the following code? (Assume necessary imports)",
+        "options": {
+            "A": "7,6",
+            "B": "6,6",
+            "C": "6,7",
+            "D": "7,7"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764051203/jan2023-1_tdna6l.png"
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Suppose that we load a data set that contains 1000 samples in a Pandas Dataframe. Each sample has 30 features. However, a few samples in the data set miss the values for all features. Therefore, those samples need to be dropped. Choose the method that removes such samples from the dataset?",
+        "options": {
+            "A": "drop(columns=['all'])",
+            "B": "drop(how='all')",
+            "C": "dropna(how='all')",
+            "D": "dropna.all()"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "The statement that each feature in the input data set has a (physical) meaning associated with it is",
+        "options": {
+            "A": "True, for all ML problems",
+            "B": "True, for some ML problems",
+            "C": "False, for all ML problems",
+            "D": "can not be decided"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "A company collects 40000 samples (examples) to build a Machine Learning model for an application. They decide to use 30% of the total samples for testing (to be stored in the variable testset) and the rest 70% for training (to be stored in the variable trainset). They also want to sample the same set of samples across multiple runs. Which of the following line (statement) achieves this task? Assume that all samples are stored in the variable data.",
+        "options": {
+            "A": "testset, trainset = train_test_split(data, test_size=0.3, random_state=42)",
+            "B": "trainset, testset = train_test_split(data, test_size=0.3)",
+            "C": "trainset, testset = train_test_split(data, test_size=0.3, random_state=42)",
+            "D": "testset, trainset = train_test_split(data, test_size=0.3)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following utilities of sklearn.datasets helps us to get the realworld data from the internet?",
+        "options": {
+            "A": "load_",
+            "B": "fetch_",
+            "C": "generate_",
+            "D": "get_"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following ML task/steps for a regression dataset:\n1. Read the data from a file (named 'dataset.csv'). It has 7 columns. The last column is the target variable, the rest of them are numerical features.\n2. Drop rows with missing values.\n3. After removing samples with missing values, split the data into training and test sets. Take about the first 80% of rows in the training set and the rest of them into the test set.\n4. Train a simple linear regression model, with intercept, on the training set.\n5. Report R2 score on the test set.",
+        "question": "Which of the following code snippets correctly accomplishes the above task? Assume necessary imports.",
+        "options": {
+            "A": "data = pd.read_csv('dataset.csv')\ndata = data.dropna()\nrows, cols = data.shape\ndata_train = data[:int(0.8*rows)]\ndata_test = data[int(0.8*rows):]\nX_train = data_train[data.columns[:-1]]\ny_train = data_train[data.columns[-1]]\nX_test = data_test[data.columns[:-1]]\ny_test = data_test[data.columns[-1]]\nmodel = LinearRegression().fit(X_train,y_train)\nmodel.score(X_test, y_test)",
+            "B": "data = pd.read_csv('dataset.csv')\ndata = data.dropna()\nrows, cols = data.shape\ndata_train = data[:int(0.2*rows)]\ndata_test = data[int(0.2*rows):]\nX_train = data_train[data.columns[:-1]]\ny_train = data_train[data.columns[-1]]\nX_test = data_test[data.columns[:-1]]\ny_test = data_test[data.columns[-1]]\nmodel = LinearRegression().fit(X_train,y_train)\nmodel.score(X_test, y_test)",
+            "C": "data = pd.read_csv('dataset.csv')\ndata = data.dropna()\nrows, cols = data.shape\ndata_train = data[:int(0.2*rows)]\ndata_test = data[int(0.2*rows):]\nX_train = data_train[data.columns[:-1]]\ny_train = data_train[data.columns[-1]]\nX_test = data_test[data.columns[:-1]]\ny_test = data_test[data.columns[-1]]\nmodel = LinearRegression().fit(X_test,y_test)\nmodel.score(X_test, y_test)",
+            "D": "data = pd.read_csv('dataset.csv')\ndata = data.dropna()\nrows, cols = data.shape\ndata_train = data[:int(0.8*rows)]\ndata_test = data[int(0.2*rows):]\nX_train = data_train[data.columns[:-1]]\ny_train = data_train[data.columns[-1]]\nX_test = data_test[data.columns[:-1]]\ny_test = data_test[data.columns[-1]]\nmodel = LinearRegression().fit(X_train,y_test)\nmodel.score(X_train, y_train)"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.linear_model import SGDRegressor\nsgd = SGDRegressor(learning_rate='constant', eta0=1e-2)\nsgd.fit(X_train, y_train)\nsgd.predict(X_test)\nscore = sgd.score(X_test, y_test)",
+        "question": "Which evaluation metric will be contained in the 'score'?",
+        "options": {
+            "A": "mean_squared_error",
+            "B": "mean_absolute_error",
+            "C": "R2_score",
+            "D": "Accuracy"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "How to make SGDRegressor stop after 1000 epochs?",
+        "options": {
+            "A": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(max_epoch=1000)",
+            "B": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(stopping_criteria=1000)",
+            "C": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(max_iter=1000)",
+            "D": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(stop_after_iter=1000)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Suppose we want to transform features in a dataset using polynomial transformation. The sklearn API provides the functionality in which of the following modules?",
+        "options": {
+            "A": "sklearn.dataset",
+            "B": "sklearn.model_selection",
+            "C": "sklearn.preprocessing",
+            "D": "sklearn.featureSelection",
+            "E": "sklearn.featureExtraction"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider following dataset:",
+        "question": "Which one of the following code snippets will correctly preprocess above data? Assume necessary imports. The data is stored in a dataframe named X.",
+        "options": {
+            "A": "num_tranform = Pipeline(\n    steps=[(\"imputer\", SimpleImputer(strategy=\"median\")),\n           (\"scaler\", StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown=\"ignore\")\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(\n    transformers=[\n        (\"num\", num_tranform, ['HouseAge', 'AveRoom', 'Population']),\n        (\"cat\", cat_transfom, ['City']),\n        (\"ord\", ordinal_encoder, ['IncomeGroup'])\n    ])\npreprocessor.fit_transform(X)",
+            "B": "num_tranform = Pipeline(\n    steps=[(\"scaler\", StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown=\"ignore\")\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(\n    transformers=[\n        (\"num\", num_tranform, ['HouseAge', 'AveRoom', 'Population']),\n        (\"cat\", cat_transfom, ['City']),\n        (\"ord\", ordinal_encoder, ['IncomeGroup'])\n    ])\npreprocessor.fit_transform(X)",
+            "C": "num_tranform = Pipeline(\n    steps=[(\"imputer\", SimpleImputer(strategy=\"median\")),\n           (\"scaler\", StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown=\"ignore\")\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(\n    transformers=[\n        (\"num\", num_tranform, ['HouseAge', 'City', 'Population']),\n        (\"cat\", cat_transfom, ['AveRoom']),\n        (\"ord\", ordinal_encoder, ['IncomeGroup'])\n    ])\npreprocessor.fit_transform(X)",
+            "D": "num_tranform = Pipeline(\n    steps=[(\"imputer\", SimpleImputer(strategy=\"median\")),\n           (\"scaler\", StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown=\"ignore\")\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(\n    transformers=[\n        (\"num\", num_tranform, ['IncomeGroup', 'AveRoom', 'Population']),\n        (\"cat\", cat_transfom, ['City']),\n        (\"ord\", ordinal_encoder, ['HouseAge'])\n    ])\npreprocessor.fit_transform(X)"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764051288/jan2023-2_d3312k.png"
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.model_selection import cross_val_score\nfrom sklearn.model_selection import LeaveOneOut\nfrom sklearn.linear_model import LinearRegression\nlin_reg = LinearRegression()\nloocv = LeaveOneOut()\nscore = cross_val_score(lin_reg, X, y, cv=loocv)\nNote: X is the feature matrix and y is the target vector.",
+        "question": "For a dataset with 1000 data points and 100 features, the following code will generate how many models during execution?",
+        "options": {
+            "A": "1000",
+            "B": "100",
+            "C": "99",
+            "D": "999"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following cross-validation strategy:\ncv = ShuffleSplit(n_splits=40, test_size=0.3, random_state=0)",
+        "question": "Assume we apply this strategy to some data set. Which of the following options is/are correct?",
+        "options": {
+            "A": "Every data point will be used only once for training.",
+            "B": "Every data point will be used only once for validation.",
+            "C": "The code will result in an error as n_splits * test_size should be equal to 1.",
+            "D": "None of these."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following code is correct if we want the mean absolute error to be minimized during the computation of cross_val_score?",
+        "options": {
+            "A": "cross_val_score(lin_reg, X, y, cv=5, performance='neg_mean_absolute_error')",
+            "B": "cross_val_score(lin_reg, X, y, cv=5, performance='mean_absolute_error')",
+            "C": "cross_val_score(lin_reg, X, y, cv=5, scoring='neg_mean_absolute_error')",
+            "D": "cross_val_score(lin_reg, X, y, cv=5, scoring='mean_absolute_error')"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "X = np.random.randn(2,2)\npoly = PolynomialFeatures(degree=2, interaction_only=True, include_bias=False)\npoly_X = poly.fit_transform(X)",
+        "question": "What is the shape of the variable poly_X?",
+        "options": {
+            "A": "(2,2)",
+            "B": "(2,6)",
+            "C": "(6,2)",
+            "D": "(2,3)",
+            "E": "(3,2)",
+            "F": "(2,5)",
+            "G": "(5,2)"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "A team has built a dataset for a regression problem. It contains 1000 samples. Each sample x is of size 2. All the features are binary, that is, x\u1d62 \u2208 {0, 1}. The team decided to use polynomial feature transformation of degree 2 as follows,\nX = np.random.randint(0,2,size=(10,2))\npoly = PolynomialFeatures(degree=2)\npoly_X = poly.fit_transform(X)",
+        "question": "The transformed features are stored in the variable poly_X. There are N redundant column(s) (they are the exact copy of some column) in the variable poly_X. What is the value of N?",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "4",
+            "D": "0"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider a regression problem with L2 regularization. Suppose we instantiate the model as shown below,\nfrom sklearn.linear_model import Ridge\nmodel = Ridge(alpha)",
+        "question": "What is the range of 'alpha'?",
+        "options": {
+            "A": "(-\u221e, \u221e)",
+            "B": "(0, \u221e)",
+            "C": "(0, 1)",
+            "D": "No range, a constant 1.0"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider a data set shown below. The data set was loaded using Pandas and stored in the variable 'data' as a data frame.\ndata_url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'\ndata = pd.read_csv(data_url, sep=';')",
+        "question": "(Multiple Select) Suppose that we want to get the value of 'chlorides' of the third sample (2nd by index). Which of the following lines of code does this?",
+        "options": {
+            "A": "data.chlorides[2]",
+            "B": "data['chlorides'][2]",
+            "C": "data[2][4]",
+            "D": "data.iloc[2,4]"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764051401/jan2023-3_dfe7p3.png"
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "[MSQ] Suppose that we plot the histogram of numerical features in a data set. This reveals which of the following information?",
+        "options": {
+            "A": "Scale of the features",
+            "B": "(left or right) Skew of the distribution",
+            "C": "Modes in the distribution",
+            "D": "Deduce total number of samples in the dataset"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "[MSQ] Why is data preprocessing necessary?",
+        "options": {
+            "A": "While recording or noting down, the data collector forgot the values to be recorded and entered blanks.",
+            "B": "Some columns have values only between 0 and 1.",
+            "C": "The data is divided into multiple files and has to be combined.",
+            "D": "The data has only numbers in all the columns."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "[MSQ] Which of the following will produce constantly reducing learning rates?",
+        "options": {
+            "A": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(learning_rate='constant', eta0=1e-2)",
+            "B": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(learning_rate='invscaling', eta0=1e-2, power_t = 0.25)",
+            "C": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(learning_rate='adaptive', eta0=1e-2)",
+            "D": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(learning_rate='optimal', eta0=1e-2)"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": ">>> import pandas as pd\n>>> df = pd.read_csv('titanic.csv')\n>>> print(df)\n\n      sex   age  sibsp  parch      fare   class  embark_town  alive  alone\n0    male  22.0      1      0    7.2500   Third  Southampton     no  False\n1  female  38.0      1      0   71.2833   First    Cherbourg    yes  False\n2  female  26.0      0      0    7.9250   Third  Southampton    yes   True\n3  female  35.0      1      0   53.1000   First  Southampton    yes  False\n4    male  35.0      0      0    8.0500   Third  Southampton     no   True\n5    male   NaN      0      0    8.4583   Third   Queenstown     no   True\n6    male  54.0      0      0   51.8625   First  Southampton     no   True\n7    male   2.0      3      1   21.0750   Third  Southampton     no  False\n8  female  27.0      0      2   11.1333   Third  Southampton    yes  False\n9  female  14.0      1      0   30.0708  Second    Cherbourg    yes  False\n10 female   4.0      1      1   16.7000   Third  Southampton    yes  False\n11 female  58.0      0      0   26.5500   First  Southampton    yes   True\n12   male  20.0      0      0    8.0500   Third  Southampton     no   True\n13   male  39.0      1      5   31.2750   Third  Southampton     no  False\n14 female  14.0      0      0    7.8542   Third   Queenstown     no   True\n15 female  55.0      0      0   16.0000  Second  Southampton    yes   True\n\nBased on the above data, answer the given subquestions.",
+        "question": "Choose the correct options to determine the count of NULL values in each column of a pandas DataFrame named 'df'",
+        "options": {
+            "A": "df.isnull().sum()",
+            "B": "df.null().sum()",
+            "C": "df.NA().sum()",
+            "D": "df.isNaN().sum()"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": ">>> import pandas as pd\n>>> df = pd.read_csv('titanic.csv')\n>>> print(df)\n\n      sex   age  sibsp  parch      fare   class  embark_town  alive  alone\n0    male  22.0      1      0    7.2500   Third  Southampton     no  False\n1  female  38.0      1      0   71.2833   First    Cherbourg    yes  False\n2  female  26.0      0      0    7.9250   Third  Southampton    yes   True\n3  female  35.0      1      0   53.1000   First  Southampton    yes  False\n4    male  35.0      0      0    8.0500   Third  Southampton     no   True\n5    male   NaN      0      0    8.4583   Third   Queenstown     no   True\n6    male  54.0      0      0   51.8625   First  Southampton     no   True\n7    male   2.0      3      1   21.0750   Third  Southampton     no  False\n8  female  27.0      0      2   11.1333   Third  Southampton    yes  False\n9  female  14.0      1      0   30.0708  Second    Cherbourg    yes  False\n10 female   4.0      1      1   16.7000   Third  Southampton    yes  False\n11 female  58.0      0      0   26.5500   First  Southampton    yes   True\n12   male  20.0      0      0    8.0500   Third  Southampton     no   True\n13   male  39.0      1      5   31.2750   Third  Southampton     no  False\n14 female  14.0      0      0    7.8542   Third   Queenstown     no   True\n15 female  55.0      0      0   16.0000  Second  Southampton    yes   True\n\nBased on the above data, answer the given subquestions.",
+        "question": "Which option will help in selecting data of odd indexed columns only? (ie. age, parch are odd indexed 1 and 3 respectively)",
+        "options": {
+            "A": "df.iloc[1::2]",
+            "B": "df.iloc[:,1::2]",
+            "C": "df[:,1::2]",
+            "D": "df.loc[:,1::2]"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": ">>> import pandas as pd\n>>> df = pd.read_csv('titanic.csv')\n>>> print(df)\n\n      sex   age  sibsp  parch      fare   class  embark_town  alive  alone\n0    male  22.0      1      0    7.2500   Third  Southampton     no  False\n1  female  38.0      1      0   71.2833   First    Cherbourg    yes  False\n2  female  26.0      0      0    7.9250   Third  Southampton    yes   True\n3  female  35.0      1      0   53.1000   First  Southampton    yes  False\n4    male  35.0      0      0    8.0500   Third  Southampton     no   True\n5    male   NaN      0      0    8.4583   Third   Queenstown     no   True\n6    male  54.0      0      0   51.8625   First  Southampton     no   True\n7    male   2.0      3      1   21.0750   Third  Southampton     no  False\n8  female  27.0      0      2   11.1333   Third  Southampton    yes  False\n9  female  14.0      1      0   30.0708  Second    Cherbourg    yes  False\n10 female   4.0      1      1   16.7000   Third  Southampton    yes  False\n11 female  58.0      0      0   26.5500   First  Southampton    yes   True\n12   male  20.0      0      0    8.0500   Third  Southampton     no   True\n13   male  39.0      1      5   31.2750   Third  Southampton     no  False\n14 female  14.0      0      0    7.8542   Third   Queenstown     no   True\n15 female  55.0      0      0   16.0000  Second  Southampton    yes   True\n\nBased on the above data, answer the given subquestions.",
+        "question": "What is datatype of sex column in the given titanic dataset",
+        "options": {
+            "A": "number",
+            "B": "bool",
+            "C": "str",
+            "D": "object"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": ">>> import pandas as pd\n>>> df = pd.read_csv('titanic.csv')\n>>> print(df)\n\n      sex   age  sibsp  parch      fare   class  embark_town  alive  alone\n0    male  22.0      1      0    7.2500   Third  Southampton     no  False\n1  female  38.0      1      0   71.2833   First    Cherbourg    yes  False\n2  female  26.0      0      0    7.9250   Third  Southampton    yes   True\n3  female  35.0      1      0   53.1000   First  Southampton    yes  False\n4    male  35.0      0      0    8.0500   Third  Southampton     no   True\n5    male   NaN      0      0    8.4583   Third   Queenstown     no   True\n6    male  54.0      0      0   51.8625   First  Southampton     no   True\n7    male   2.0      3      1   21.0750   Third  Southampton     no  False\n8  female  27.0      0      2   11.1333   Third  Southampton    yes  False\n9  female  14.0      1      0   30.0708  Second    Cherbourg    yes  False\n10 female   4.0      1      1   16.7000   Third  Southampton    yes  False\n11 female  58.0      0      0   26.5500   First  Southampton    yes   True\n12   male  20.0      0      0    8.0500   Third  Southampton     no   True\n13   male  39.0      1      5   31.2750   Third  Southampton     no  False\n14 female  14.0      0      0    7.8542   Third   Queenstown     no   True\n15 female  55.0      0      0   16.0000  Second  Southampton    yes   True\n\nBased on the above data, answer the given subquestions.",
+        "question": "Which option will help in filtering data to find females who are alive after titanic incident?",
+        "options": {
+            "A": "df[(df['sex'] == 'female') & (df['alive'] == 'yes')]",
+            "B": "df.select([(df['sex'] == 'female') & (df['alive'] == 'yes')])",
+            "C": "df.isin([(df['sex'] == 'female') & (df['alive'] == 'yes')])",
+            "D": "df.group((df['sex'] == 'female') & (df['alive'] == 'yes'))"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": ">>> def is_adult(age):\n...     if age > 18:\n...         return True\n...     return False\n>>> df['isAdult'] = df['age'].apply(is_adult)",
+        "question": "What is the given code below trying to accomplish for the given titanic dataset ?",
+        "options": {
+            "A": "It will print the rows which have age greater than 18.",
+            "B": "It will throw an error since while calling the function input variable is not given.",
+            "C": "A new column named 'isAdult' will be added to the dataframe which will contain True and False based on age column.",
+            "D": "None of these"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.feature_extraction import DictVectorizer\nX = [{'feature_1': 3, 'feature_2': 1}, {'feature_1': 2, 'feature_3': 3}]\nextractor = DictVectorizer(sparse=False)\nprint(extractor.fit_transform(X))",
+        "question": "What will be the output of the following code:",
+        "options": {
+            "A": "[[3. 1.]\n [2. 3.]]",
+            "B": "[[3. 1.]\n [3. 0.]]",
+            "C": "[[3. 1. 0.]\n [2. 0. 3.]]",
+            "D": "[[3. 1. 0.]\n [2. 3. 0.]]"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "You are working on a machine learning project that aims to predict housing prices based on various features of the houses. As the first step, you decide to perform exploratory data analysis and visualize the data to understand its structure and relationships. Which of the following visualization techniques or principles is LEAST likely to provide meaningful insights for this kind of regression problem?",
+        "options": {
+            "A": "Plotting a heatmap of the correlation matrix to understand the linear relationship between the numeric features.",
+            "B": "Using a scatter plot to visualize the relationship between the square footage of a house and its price.",
+            "C": "Visualizing the distribution of housing prices using a pie chart.",
+            "D": "Creating box plots for housing prices, grouped by the number of bedrooms, to detect outliers and understand the distribution across different categories."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "A company collects 40000 samples (examples) to build a Machine Learning model for an application. They decide to use 30% of the total samples for testing (to be stored in the variable testset) and the rest 70% for training (to be stored in the variable trainset). They also want to sample the same set of samples across multiple runs. Which of the following line (statement) achieves this task? Assume that all samples are stored in the variable data.",
+        "options": {
+            "A": "testset, trainset = train_test_split(data, test_size=0.3, random_state=42)",
+            "B": "trainset, testset = train_test_split(data, test_size=0.3)",
+            "C": "trainset, testset = train_test_split(data, test_size=0.3, random_state=42)",
+            "D": "testset, trainset = train_test_split(data, test_size=0.3)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Choose the option based on the following statements:\n\nStatement 1: The train-test split allows us to simulate the model's performance on new data by reserving a portion of the dataset for testing.\n\nStatement 2: Separating the dataset into training and testing sets helps prevent data leakage, where information from the test set unintentionally influences the model during training. This ensures a fair assessment of the model's generalization capabilities.",
+        "question": "Choose the option based on the following statements:",
+        "options": {
+            "A": "Statement 1 is True and statement 2 is False",
+            "B": "Statement 1 is False and statement 2 is True",
+            "C": "Both the statements are False",
+            "D": "Both the statements are True"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "In which of the following scenarios is data cleaning most required?",
+        "options": {
+            "A": "Data has missing values and categorical string data.",
+            "B": "Data consists a lot of outliers based on values in target(y) column",
+            "C": "The data consists solely of numerical values and are on a similar scale.",
+            "D": "None of the choices"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the below code:\n\ndata = [[-3, 1],\n        [-3, 1],\n        [3, 5],\n        [3, 5]]\n\nfrom sklearn.preprocessing import StandardScaler\nss = StandardScaler()\nprint(ss.fit_transform(data))",
+        "question": "What will be the output of the code snippet given above?",
+        "options": {
+            "A": "[[0, -1],\n [0, -1],\n [1, 1],\n [1, 1]]",
+            "B": "[[-0.5, -2],\n [-0.5, -2],\n [1, 2],\n [1, 2]]",
+            "C": "[[0, 1],\n [0, 1],\n [0, 1],\n [0, 1]]",
+            "D": "[[-1, -1],\n [-1, -1],\n [1, 1],\n [1, 1]]"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following metrics indicate higher their value, better the regression model's performance?",
+        "options": {
+            "A": "RMSE",
+            "B": "R2",
+            "C": "Mean absolute error",
+            "D": "Mean squared error"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.linear_model import SGDRegressor\nfrom sklearn.datasets import load_diabetes\n\nX, y = load_diabetes(return_X_y=True)\n\nparams = [\n    {'alpha': [0.01,0.1,1],'learning_rate': ['constant','optimal']},\n    {'loss': ['squared_error', 'huber'], 'alpha': [0.0001,0.001],'learning_rate':['constant','invscaling']}]\n\ngrid = GridSearchCV(estimator= SGDRegressor(),\n                  param_grid = params,\n                  scoring = 'neg_mean_squared_error',\n                  return_train_score=True,\n                  verbose = 2,\n                  n_jobs = -1\n                  )\ngrid.fit(X,y)",
+        "question": "How many models with different combinations of parameter values will get trained in the following code?",
+        "options": {
+            "A": "10",
+            "B": "12",
+            "C": "14",
+            "D": "16"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "from sklearn.linear_model import SGDRegressor\nmodel = SGDRegressor(early_stopping=True,\n                   validation_fraction=0.2,\n                   tol=0.001,\n                   n_iter_no_change=5)\nmodel.fit(X, y)",
+        "question": "What is the purpose of the tol parameter of the SGDRegressor() in the given code below?",
+        "options": {
+            "A": "It controls the learning rate of the stochastic regressor during training.",
+            "B": "It determines the maximum number of iterations for the training process.",
+            "C": "It defines the fraction of the validation set used for early stopping.",
+            "D": "It specifies the tolerance level for early stopping based on the change in the validation error."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.datasets import make_regression\nfrom sklearn.datasets import make_classification\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.linear_model import LogisticRegression\n\nX_r, y_r = make_regression()\nlr = LinearRegression()\nlr.fit(X_r, y_r)\nscore1 = lr.score(X_r, y_r)\n\nX_c, y_c = make_classification()\nlogr = LogisticRegression()\nlogr.fit(X_c, y_c)\nscore2 = logr.score(X_c, y_c)\n\nprint(score1)\nprint(score2)",
+        "question": "Which metrics will be contained in score1 and score2 respectively?",
+        "options": {
+            "A": "Accuracy, Accuracy",
+            "B": "R2 score, R2 score",
+            "C": "Accuracy, R2 score",
+            "D": "R2 score, Accuracy",
+            "E": "F1 score, Precision",
+            "F": "MAE, MSE",
+            "G": "The code will result in an error."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider following dataset:\n\n| HouseAge | AveRooms | Population | City    | IncomeGroup |\n|----------|----------|------------|---------|-------------|\n| 41.0     | 6.98     | 322.0      | Delhi   | Low         |\n| 21.0     | 6.23     | 2401.0     | Kolkata | High        |\n| 52.0     | 8.28     | 496.0      | Agra    | Medium      |\n| 52.0     | ...      | 558.0      | Kolkata | Medium      |\n| 52.0     | 6.28     | 565.0      | Mumbai  | Medium      |\n\nThe data is stored in a dataframe named X.",
+        "question": "Which one of the following code snippets will correctly preprocess above data? Assume necessary imports.",
+        "options": {
+            "A": "num_tranform = Pipeline(steps=[('imputer', SimpleImputer(strategy='median')), ('scaler', StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown='ignore')\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(transformers=[\n    ('num', num_tranform, ['HouseAge', 'AveRooms', 'Population']),\n    ('cat', cat_transfom, ['City']),\n    ('ord', ordinal_encoder, ['IncomeGroup'])])",
+            "B": "num_tranform = Pipeline(steps=[('scaler', StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown='ignore')\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(transformers=[\n    ('num', num_tranform, ['HouseAge', 'Population']),\n    ('cat', cat_transfom, ['City']),\n    ('ord', ordinal_encoder, ['IncomeGroup'])])",
+            "C": "num_tranform = Pipeline(steps=[('imputer', SimpleImputer(strategy='median')), ('scaler', StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown='ignore')\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(transformers=[\n    ('num', num_tranform, ['HouseAge', 'City', 'Population']),\n    ('cat', cat_transfom, ['AveRooms']),\n    ('ord', ordinal_encoder, ['IncomeGroup'])])",
+            "D": "num_tranform = Pipeline(steps=[('imputer', SimpleImputer(strategy='median')), ('scaler', StandardScaler())])\ncat_transfom = OneHotEncoder(handle_unknown='ignore')\nordinal_encoder = OrdinalEncoder()\npreprocessor = ColumnTransformer(transformers=[\n    ('num', num_tranform, ['IncomeGroup', 'AveRooms', 'Population']),\n    ('cat', cat_transfom, ['City']),\n    ('ord', ordinal_encoder, ['HouseAge'])])"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Suppose that we plot the histogram of numerical features in a data set. This reveals which of the following information?",
+        "options": {
+            "A": "Scale of the features",
+            "B": "(left or right) Skew of the distribution",
+            "C": "Modes in the distribution",
+            "D": "Missing values"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import numpy as np\nfrom sklearn.datasets import fetch_california_housing\nhouse = fetch_california_housing(as_frame=True)",
+        "question": "Choose the correct option(s) for the below code",
+        "options": {
+            "A": "house.data.shape will give the count of number of rows and columns for features and labels(target) both",
+            "B": "house.target_names will give the name of the target column",
+            "C": "house.data.head() will show last 5 rows of the data",
+            "D": "house.feature_names will give a list of names of the columns of the feature matrix"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following are valid loss functions for SGDClassifier?",
+        "options": {
+            "A": "Squared Loss",
+            "B": "Hinge Loss",
+            "C": "Log Loss",
+            "D": "Mean Absolute Error"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import numpy as np\nfrom sklearn.feature_selection import VarianceThreshold\n\ndata = np.array([[ 95, 0.332, 112,  1,   0.56 ],\n                 [ 146, 0.332, 177,  1,   9.2  ],\n                 [ -96, 0.332, -139, 1,  -0.82 ],\n                 [ 116, 0.332, 117,  1,   4.8  ],\n                 [ -87, 0.332, -63,  1,  -1.1  ]])\n\nvf = VarianceThreshold(threshold=0)\nselected_data = vf.fit_transform(data)\nselected_data",
+        "question": "Which columns will not be included in the selected data within the code below?",
+        "options": {
+            "A": "Column indexed at 0",
+            "B": "Column indexed at 1",
+            "C": "Column indexed at 2",
+            "D": "Column indexed at 3",
+            "E": "Column indexed at 4",
+            "F": "No columns"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following Evaluation metrics can be used in a regression problem?",
+        "options": {
+            "A": "Mean Squared Error",
+            "B": "Accuracy",
+            "C": "F1-Score",
+            "D": "Mean Absolute Error",
+            "E": "credit score",
+            "F": "CGPA"
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the below code:\n\n- >>>: Represents input code\n- ... : Represents code continuation\n- Without any symbols at the beginning of a line then it is output of just above input line of code\n- arrow pointing towards right is code continuation to another line.\n\n>>> from sklearn.feature_selection import SelectKBest, chi2\n>>> from sklearn.datasets import load_wine\n>>> X,y = load_wine(return_X_y=True,as_frame=True)\n>>> print(X.shape)\n(178, 13)\n>>> print(X.columns)\n['alcohol', 'malic_acid', 'ash', 'alcalinity_of_ash', 'magnesium', 'total_phenols', 'flavanoids', 'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'od280/od315_of_diluted_wines', 'proline']\n>>> skb = SelectKBest(chi2, k=3)\n>>> X_selected = skb.fit_transform(X, y)\n>>> print(skb.scores_)\n[5.44, 28.06, 0.74, 29.38, 45.02, 15.62, 63.33, 1.81, 9.38, 109.01, 5.18, 23.38, 16640.06]\n>>> print(skb.pvalues_)\n[6.56e-02, 8.03e-07, 0.68, 4.16e-07, 1.66e-10, 4.05e-04, 1.76e-14, 0.40, 9.24e-03, 2.12e-24, 0.074, 8.33e-06, 0]\n>>> print(skb.pvalues_.argsort())\n[12, 9, 6, 4, 3, 1, 11, 5, 8, 0, 10, 7, 2]",
+        "question": "Which of the following feature(s) will be selected in X_selected from X?",
+        "options": {
+            "A": "malic_acid",
+            "B": "magnesium",
+            "C": "flavanoids",
+            "D": "proanthocyanins",
+            "E": "color_intensity",
+            "F": "proline"
+        },
+        "correctOption": [
+            "C",
+            "E",
+            "F"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.preprocessing import LabelEncoder\ndata = [\"cat\", \"dog\", \"fish\", \"cat\", \"bird\", \"dog\", \"bird\"]\nencoder = LabelEncoder()\nencoded_data = encoder.fit_transform(data)\nprint(encoded_data)",
+        "question": "Given the following code snippet, which statement is true regarding the use of LabelEncoder?",
+        "options": {
+            "A": "encoded_data will contain only the values 0, 1, 2, and 3.",
+            "B": "If [\"elephant\"] is passed to encoder.transform(), it will be successfully transformed to an integer.",
+            "C": "LabelEncoder assigns higher integer values to more frequently occurring labels.",
+            "D": "After calling encoder.inverse_transform([2]), the result will be \"dog\"."
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "data = [['apple', 120],\n        ['apple', 125],\n        ['grapes',120]]\nfrom sklearn.preprocessing import OneHotEncoder\nohe = OneHotEncoder(sparse_output=False)\nohe.fit(data)\nprint(ohe.transform(data).shape[1])",
+        "question": "What will be the output of the following code ?",
+        "options": null,
+        "correctOption": 4,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "What is the primary risk of not performing a train-test split in a machine learning workflow?",
+        "options": {
+            "A": "The training time will increase.",
+            "B": "The model might overfit the training data and perform poorly on new data.",
+            "C": "The dataset may become unbalanced.",
+            "D": "The model may fail to converge."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Why is data preprocessing necessary before using it for model building?",
+        "options": {
+            "A": "The data may contain outliers or missing values due to errors in data collection.",
+            "B": "Features may have different scales, affecting model performance.",
+            "C": "The dataset may include non-numerical features that need to be converted to numerical representations.",
+            "D": "All of these"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.linear_model import SGDRegressor\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn.datasets import load_breast_cancer\n\nX,y = load_breast_cancer(return_X_y=True)\n\nmodel = SGDRegressor(early_stopping=True,\n                     validation_fraction=0.2,\n                     tol=0.001,\n                     n_iter_no_change=5)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y,\n                                                    test_size=0.2,\n                                                    random_state=42)\n\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\nmse = mean_squared_error(y_test, y_pred)",
+        "question": "What is the purpose of the tol parameter in the fit method of the stochastic regressor?",
+        "options": {
+            "A": "It specifies the tolerance level for early stopping based on the change in the validation error.",
+            "B": "It controls the learning rate of the stochastic regressor during training.",
+            "C": "It determines the maximum number of iterations for the training process.",
+            "D": "It defines the fraction of the validation set used for early stopping."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Suppose we want to transform features in a dataset using polynomial transformation. The sklearn API provides the functionality in which of the following modules?",
+        "options": {
+            "A": "sklearn.dataset",
+            "B": "sklearn.model_selection",
+            "C": "sklearn.preprocessing",
+            "D": "sklearn.featureSelection",
+            "E": "sklearn.featureExtraction"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "For a dataset with 1000 data points and 100 features, the following code will generate how many models during execution?\nNote: X is the feature matrix and y is the target vector.\n\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.model_selection import LeaveOneOut\nfrom sklearn.linear_model import LinearRegression\nlin_reg = LinearRegression()\nloocv = LeaveOneOut()\nscore = cross_val_score(lin_reg, X, y, cv=loocv)",
+        "question": "For a dataset with 1000 data points and 100 features, the following code will generate how many models during execution? Note: X is the feature matrix and y is the target vector.",
+        "options": {
+            "A": "1000",
+            "B": "100",
+            "C": "99",
+            "D": "999"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following code:\n\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\nX = np.array([[1, 1], [1, 2], [2, 2], [2, 3], [2, 1], [3, 3]])\n# y = 1 * x_0 + 2 * x_1 + 3\ny = np.dot(X, np.array([1, 2])) + 3\n\nreg1 = LinearRegression(fit_intercept = False).fit(X, y)\ns1 = reg1.score(X, y)\n\nreg2 = LinearRegression(fit_intercept = True).fit(X, y)\ns2 = reg2.score(X, y)",
+        "question": "Which of the following is more likely to be true?",
+        "options": {
+            "A": "s1 = s2",
+            "B": "s1 < s2",
+            "C": "s1 > s2"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.preprocessing import LabelEncoder\n\ndata = [\"cat\", \"dog\", \"fish\", \"cat\", \"bird\", \"dog\", \"bird\"]\n\nencoder = LabelEncoder()\nencoded_data = encoder.fit_transform(data)\n\nprint(encoded_data)",
+        "question": "Given the following code snippet, which statement is true regarding the use of LabelEncoder?",
+        "options": {
+            "A": "encoded_data will contain only the values 0, 1, 2, and 3.",
+            "B": "If [\"elephant\"] is passed to encoder.transform(), it will be successfully transformed to an integer.",
+            "C": "LabelEncoder assigns higher integer values to more frequently occurring labels.",
+            "D": "After calling encoder.inverse_transform([2]), the result will be \"dog\"."
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following evaluation metrics can be used in a regression problem?",
+        "options": {
+            "A": "Mean Squared Error",
+            "B": "Accuracy",
+            "C": "F1-Score",
+            "D": "Mean Absolute Error",
+            "E": "credit score",
+            "F": "CGPA"
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import numpy as np\nfrom sklearn.impute import SimpleImputer\nimputer = SimpleImputer(missing_values = -4, strategy ='median')\ndata = np.array([[1, 2, 3], [5, 0, 1], [3, -1, 4]])\ndata_imputed = imputer.fit_transform(data)\nprint(data_imputed[1,2])",
+        "question": "What will be the output of the following code:",
+        "options": null,
+        "correctOption": 3.5,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "For LinearRegression with equation Y = W\u2080X\u2080 + W\u2081X\u2081 + W\u2082X\u2082 and given that W\u2080 = 2 + W\u2081, What will be the value of the W\u2082 for the below code if the model doesn't make any error?\n(Write the answer correct upto one decimal)\nWhere X\u2081 and X\u2082 are column1 and column2 respectively and W\u2081 and W\u2082 are weights associated to the respected columns while fitting\n\nfrom sklearn.linear_model import LinearRegression\nX_train = [[1,2],[2,4],[3,6],[4,8]]\ny_train = [1,2,3,4]\nreg = LinearRegression(fit_intercept=False) #intercept=0\nreg.fit(X_train,y_train)\nprint(reg.coef_[1])",
+        "question": "For LinearRegression with equation Y = W\u2080X\u2080 + W\u2081X\u2081 + W\u2082X\u2082 and given that W\u2080 = 2 + W\u2081, What will be the value of the W\u2082 for the below code if the model doesn't make any error? (Write the answer correct upto one decimal) Where X\u2081 and X\u2082 are column1 and column2 respectively and W\u2081 and W\u2082 are weights associated to the respected columns while fitting",
+        "options": null,
+        "correctOption": 0.4,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the given Table 1: Banking data for the given subquestions stored as pandas dataframe in variable df\n\n>>> import pandas as pd\n>>> df = pd.read_csv('dataset.csv')\n>>> print(df)\n\n| Age | Job          | Marital   | Education | Balance | Housing | Contact   |\n|-----|--------------|-----------|-----------|---------|---------|-----------|\n| 21  | unemployed   | married   | secondary | 77387   | no      | telephone |\n| 49  | management   | married   | tertiary  | 2037    | no      | nan       |\n| 72  | self-employed| married   | tertiary  | 132     | no      | cellular  |\n| 31  | blue-collar  | married   | secondary | 298     | yes     | nan       |\n| 28  | admin        | single    | secondary | 2831    | yes     | nan       |\n| 39  | technician   | single    | secondary | 15      | yes     | cellular  |\n| 32  | blue-collar  | married   | primary   | 131     | yes     | nan       |\n| 59  | management   | married   | tertiary  | 5314    | no      | cellular  |\n| 27  | technician   | single    | secondary | 155     | yes     | cellular  |\n| 47  | blue-collar  | married   | primary   | 259     | no      | cellular  |",
+        "question": "Which of the columns in the banking data are nominal features?",
+        "options": {
+            "A": "Job",
+            "B": "Marital",
+            "C": "Education",
+            "D": "Housing",
+            "E": "Contact"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D",
+            "E"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the given Table 1: Banking data for the given subquestions stored as pandas dataframe in variable df\n\n>>> import pandas as pd\n>>> df = pd.read_csv('dataset.csv')\n>>> print(df)\n\n| Age | Job          | Marital   | Education | Balance | Housing | Contact   |\n|-----|--------------|-----------|-----------|---------|---------|-----------|\n| 21  | unemployed   | married   | secondary | 77387   | no      | telephone |\n| 49  | management   | married   | tertiary  | 2037    | no      | nan       |\n| 72  | self-employed| married   | tertiary  | 132     | no      | cellular  |\n| 31  | blue-collar  | married   | secondary | 298     | yes     | nan       |\n| 28  | admin        | single    | secondary | 2831    | yes     | nan       |\n| 39  | technician   | single    | secondary | 15      | yes     | cellular  |\n| 32  | blue-collar  | married   | primary   | 131     | yes     | nan       |\n| 59  | management   | married   | tertiary  | 5314    | no      | cellular  |\n| 27  | technician   | single    | secondary | 155     | yes     | cellular  |\n| 47  | blue-collar  | married   | primary   | 259     | no      | cellular  |",
+        "question": "Choose the correct option to find the number of null values (represented as nan) present in the Contact column",
+        "options": {
+            "A": "df[\"Contact\"].isnull().sum()",
+            "B": "df[\"Contact\"].isnull.sum()",
+            "C": "df[\"Contact\"].sum().isnull()",
+            "D": "df[\"Contact\"].sum.isnull"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the given Table 1: Banking data for the given subquestions stored as pandas dataframe in variable df\n\n>>> import pandas as pd\n>>> df = pd.read_csv('dataset.csv')\n>>> print(df)\n\n| Age | Job          | Marital   | Education | Balance | Housing | Contact   |\n|-----|--------------|-----------|-----------|---------|---------|-----------|\n| 21  | unemployed   | married   | secondary | 77387   | no      | telephone |\n| 49  | management   | married   | tertiary  | 2037    | no      | nan       |\n| 72  | self-employed| married   | tertiary  | 132     | no      | cellular  |\n| 31  | blue-collar  | married   | secondary | 298     | yes     | nan       |\n| 28  | admin        | single    | secondary | 2831    | yes     | nan       |\n| 39  | technician   | single    | secondary | 15      | yes     | cellular  |\n| 32  | blue-collar  | married   | primary   | 131     | yes     | nan       |\n| 59  | management   | married   | tertiary  | 5314    | no      | cellular  |\n| 27  | technician   | single    | secondary | 155     | yes     | cellular  |\n| 47  | blue-collar  | married   | primary   | 259     | no      | cellular  |",
+        "question": "In Contact column which of the following statistical measures can be used to replace nan values?",
+        "options": {
+            "A": "Mean",
+            "B": "Median",
+            "C": "Mode",
+            "D": "Variance"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the given Table 1: Banking data for the given subquestions stored as pandas dataframe in variable df\n\n>>> import pandas as pd\n>>> df = pd.read_csv('dataset.csv')\n>>> print(df)\n\n| Age | Job          | Marital   | Education | Balance | Housing | Contact   |\n|-----|--------------|-----------|-----------|---------|---------|-----------|\n| 21  | unemployed   | married   | secondary | 77387   | no      | telephone |\n| 49  | management   | married   | tertiary  | 2037    | no      | nan       |\n| 72  | self-employed| married   | tertiary  | 132     | no      | cellular  |\n| 31  | blue-collar  | married   | secondary | 298     | yes     | nan       |\n| 28  | admin        | single    | secondary | 2831    | yes     | nan       |\n| 39  | technician   | single    | secondary | 15      | yes     | cellular  |\n| 32  | blue-collar  | married   | primary   | 131     | yes     | nan       |\n| 59  | management   | married   | tertiary  | 5314    | no      | cellular  |\n| 27  | technician   | single    | secondary | 155     | yes     | cellular  |\n| 47  | blue-collar  | married   | primary   | 259     | no      | cellular  |",
+        "question": "Which of the following options can be used to compute the median of the Balance column for each category in the Marital feature?",
+        "options": {
+            "A": "df.pivot_table(values='Balance', index='Marital', aggfunc=\"median\")",
+            "B": "df.groupby('Marital').mean()",
+            "C": "df.apply('Marital').agg({'Balance': 'median'})",
+            "D": "df.groupby('Marital').agg({'Balance': 'median'})"
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the given Table 1: Banking data for the given subquestions stored as pandas dataframe in variable df\n\n>>> import pandas as pd\n>>> df = pd.read_csv('dataset.csv')\n>>> print(df)\n\n| Age | Job          | Marital   | Education | Balance | Housing | Contact   |\n|-----|--------------|-----------|-----------|---------|---------|-----------|\n| 21  | unemployed   | married   | secondary | 77387   | no      | telephone |\n| 49  | management   | married   | tertiary  | 2037    | no      | nan       |\n| 72  | self-employed| married   | tertiary  | 132     | no      | cellular  |\n| 31  | blue-collar  | married   | secondary | 298     | yes     | nan       |\n| 28  | admin        | single    | secondary | 2831    | yes     | nan       |\n| 39  | technician   | single    | secondary | 15      | yes     | cellular  |\n| 32  | blue-collar  | married   | primary   | 131     | yes     | nan       |\n| 59  | management   | married   | tertiary  | 5314    | no      | cellular  |\n| 27  | technician   | single    | secondary | 155     | yes     | cellular  |\n| 47  | blue-collar  | married   | primary   | 259     | no      | cellular  |",
+        "question": "What will be the value of the following code:\nprint(df[\"Age\"].median())",
+        "options": null,
+        "correctOption": 35.5,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the given Table 1: Banking data for the given subquestions stored as pandas dataframe in variable df\n\n>>> import pandas as pd\n>>> df = pd.read_csv('dataset.csv')\n>>> print(df)\n\n| Age | Job          | Marital   | Education | Balance | Housing | Contact   |\n|-----|--------------|-----------|-----------|---------|---------|-----------|\n| 21  | unemployed   | married   | secondary | 77387   | no      | telephone |\n| 49  | management   | married   | tertiary  | 2037    | no      | nan       |\n| 72  | self-employed| married   | tertiary  | 132     | no      | cellular  |\n| 31  | blue-collar  | married   | secondary | 298     | yes     | nan       |\n| 28  | admin        | single    | secondary | 2831    | yes     | nan       |\n| 39  | technician   | single    | secondary | 15      | yes     | cellular  |\n| 32  | blue-collar  | married   | primary   | 131     | yes     | nan       |\n| 59  | management   | married   | tertiary  | 5314    | no      | cellular  |\n| 27  | technician   | single    | secondary | 155     | yes     | cellular  |\n| 47  | blue-collar  | married   | primary   | 259     | no      | cellular  |",
+        "question": "What will be the value of the following code:\ndf_new = df[\"Age\"] + df[\"Balance\"]\nprint(df_new[4])",
+        "options": {
+            "A": "secondary",
+            "B": "329",
+            "C": "2859",
+            "D": "Error: Datatype not matching"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the Following codeblock for the given subquestions.\n\nimport pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.compose import ColumnTransformer\n\ndata = {'fruits': ['apple','orange','banana','orange','apple'],\n        'price': [10,20,5,20,10],\n        'color': ['red','orange','yellow','orange','red']}\ndf = pd.DataFrame(data)\n\ntransformers = [\n    ('ohe', OneHotEncoder(), [0,2]),\n    ('scaler', StandardScaler(), [1])\n]\n\nct = ColumnTransformer(transformers = transformers)\n\ntransformed_df = ct.fit_transform(df)",
+        "question": "What will be the output of the following code?\nprint(transformed_df.shape)",
+        "options": {
+            "A": "(7,5)",
+            "B": "(3,5)",
+            "C": "(5,3)",
+            "D": "(5,7)"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the Following codeblock for the given subquestions.\n\nimport pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.compose import ColumnTransformer\n\ndata = {'fruits': ['apple','orange','banana','orange','apple'],\n        'price': [10,20,5,20,10],\n        'color': ['red','orange','yellow','orange','red']}\ndf = pd.DataFrame(data)\n\ntransformers = [\n    ('ohe', OneHotEncoder(), [0,2]),\n    ('scaler', StandardScaler(), [1])\n]\n\nct = ColumnTransformer(transformers = transformers)\n\ntransformed_df = ct.fit_transform(df)",
+        "question": "What will be the output of the following code?\nprint(ct.transformers_[1][1].mean_)",
+        "options": null,
+        "correctOption": 13,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the Following codeblock for the given subquestions.\n\nimport pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.compose import ColumnTransformer\n\ndata = {'fruits': ['apple','orange','banana','orange','apple'],\n        'price': [10,20,5,20,10],\n        'color': ['red','orange','yellow','orange','red']}\ndf = pd.DataFrame(data)\n\ntransformers = [\n    ('ohe', OneHotEncoder(), [0,2]),\n    ('scaler', StandardScaler(), [1])\n]\n\nct = ColumnTransformer(transformers = transformers)\n\ntransformed_df = ct.fit_transform(df)",
+        "question": "What will be the output of the following code?\nprint(ct.transformers_[1][1].var_)",
+        "options": null,
+        "correctOption": 36,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Jan 2025",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the Following codeblock for the given subquestions.\n\nimport pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.compose import ColumnTransformer\n\ndata = {'fruits': ['apple','orange','banana','orange','apple'],\n        'price': [10,20,5,20,10],\n        'color': ['red','orange','yellow','orange','red']}\ndf = pd.DataFrame(data)\n\ntransformers = [\n    ('ohe', OneHotEncoder(), [0,2]),\n    ('scaler', StandardScaler(), [1])\n]\n\nct = ColumnTransformer(transformers = transformers)\n\ntransformed_df = ct.fit_transform(df)",
+        "question": "What will be the output of the following code?\ndf_new = pd.DataFrame([['orange',22,'orange']], columns=['fruits','price','color'])\nprint(ct.transform(df_new))",
+        "options": {
+            "A": "[[2, 0, 0.61]]",
+            "B": "[[0, 0, 1, 0, 0, 1, 1.50]]",
+            "C": "[[0, 1, 0, 0, 1, 0, 0.25]]",
+            "D": "[[0, 0, 1, 1, 0, 0, 1.50]]",
+            "E": "[[0, 0, 1, 1, 0, 0, 0.25]]"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following things can be observed from a Histogram ?",
+        "options": {
+            "A": "The range of scale of a numerical feature in the data",
+            "B": "The distribution of a numerical feature in the data",
+            "C": "The null values present in a feature of the data",
+            "D": "The correlation between features and labels in the data"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following are use cases of ColumnTransformer?",
+        "options": {
+            "A": "Data has some numerical and some categorical features.",
+            "B": "Data has only categorical features and all of them are nominal.",
+            "C": "Data has only categorical features, however, some features are ordinal and some are nominal.",
+            "D": "Data has only numerical features, and all of them are uniformly distributed in range of 0 and 1 (both inclusive)."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider a regression dataset, the features are \"Temperature\" and \"Humidity\", and the label is \"Precipitation\" (i.e. rain fall in centimeter), both the features are numerical and there are no missing values in the dataset. Following code snippet trains a simple model on this dataset, assume necessary imports:\n\ndata = pd.read_csv('dataset.csv')\nX = data[data.columns[:-1]]\ny = data[data.columns[-1]]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.8)\n\nmms = MinMaxScaler()\nX_train['Temperature'] = mms.fit_transform(X_train['Temperature'])\nX_train['Humidity'] = mms.fit_transform(X_train['Humidity'])\n\nX_test['Temperature'] = mms.fit_transform(X_test['Temperature'])\nX_test['Humidity'] = mms.fit_transform(X_test['Humidity'])\n\nlr = LinearRegression().fit(X_train,y_train)\n\nChoose the correct statements from the options:",
+        "question": "Choose the correct statements from the options:",
+        "options": {
+            "A": "The training set will have 20% of the data, which is a good practice.",
+            "B": "The training set size is smaller than the test set size.",
+            "C": "The train and test samples are not scaled appropriately.",
+            "D": "One of the fundamental assumption of Machine Learning, which is, training and test data belong to same distribution, is not upheld."
+        },
+        "correctOption": [
+            "B",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following options is/are correct?",
+        "options": {
+            "A": "If the data contains many outliers, scaling using the mean and variance of the data is likely to not work very well.",
+            "B": "RFE first removes a few features which are not important and then fits and removes again and fits. It repeats this iteration until it reaches a suitable number of features.",
+            "C": "A pipeline cannot have any feature selection steps.",
+            "D": "If you will execute model.fit() for a second time, it will start training again using passed data and will remove the existing results."
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import numpy as np\nimport pandas as pd\nfrom sklearn.datasets import fetch_california_housing\nhouse = fetch_california_housing(as_frame=True)",
+        "question": "Choose the correct option(s) for the below code",
+        "options": {
+            "A": "house.data.shape will give the count of number of rows and columns for features(attributes) and labels(target) both",
+            "B": "house.target_names will show the name of the target column",
+            "C": "house.data.tail() will show first 5 rows of the data",
+            "D": "house.feature_names will give a list of names of the columns of the feature matrix"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "For the below code which option will provide the samples(rows) containing outliers according to the standard Boxplot in the weight feature ?\n\ndataset = {\n    \"height\" : [100,103,102,102,176,150,143,133,122,200,230,222,143],\n    \"weight\" : [30,32,33,34,33,33,37,48,44,51,100,123,111]\n}\ndata = pd.DataFrame(dataset,columns=['height','weight'])\nq1 = data['weight'].quantile(0.25)\nq3 = data['weight'].quantile(0.75)\niqr = q3-q1",
+        "question": "For the below code which option will provide the samples(rows) containing outliers according to the standard Boxplot in the weight feature ?",
+        "options": {
+            "A": "data(data['weight'] > (1.5*iqr + q3))",
+            "B": "data[['weight'] > (1.5*iqr + q3)]",
+            "C": "data[data['weight'] > (1.5*iqr + q3)]",
+            "D": "None of these"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import OneHotEncoder\n\ndata = {\"fruits\": ['apple','orange','banana','orange','apple'],\n        \"price\": [10,20,5,20,10]}\ndf = pd.DataFrame(data)\nohe = OneHotEncoder()\nprint(ohe.fit_transform(df[['fruits']]).toarray())",
+        "question": "What will be the output of the following code snippet ?",
+        "options": {
+            "A": "[0 1 2 1 2]",
+            "B": "[[0. 0. 0],[1. 1. 1],[2. 2. 2],[1. 1. 1],[2. 2. 2]]",
+            "C": "[[1. 0. 0],[0. 1. 0],[0. 0. 1],[0. 1. 0],[0. 0. 1]]",
+            "D": "This code snippet will throw an error"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.compose import ColumnTransformer\n\ndata = {\"fruits\": ['apple','orange','banana','orange','apple'],\n        \"price\": [10,20,5,20,10],\n        'color': ['red','orange','yellow','orange','red']}\ndf = pd.DataFrame(data)\n\ntransformers = [\n    ('ohe', OneHotEncoder(), [0,2]),\n    ('scaler', StandardScaler(), [1])\n]\nct = ColumnTransformer(transformers = transformers)\n\ntransformed_df = ct.fit_transform(df)\nprint(transformed_df.shape)",
+        "question": "What will be the output of the following code ?",
+        "options": {
+            "A": "(7,5)",
+            "B": "(3,5)",
+            "C": "(5,3)",
+            "D": "(5,7)"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Statement 1: A dataset is splitted into the train set and the test set to obtain the better performance for the unseen data\nstatement 2: We should not use the learning, observations and information gained from the test set while training the model",
+        "question": "Which of the following is(are) true statements?",
+        "options": {
+            "A": "Statement 1 is True and statement 2 is False",
+            "B": "Statement 1 is False and statement 2 is True",
+            "C": "Statement 1 and statement 2 both are True",
+            "D": "Both the statements are False"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider following code snippet, assume necessary imports:\npipe = Pipeline([('reduce_dim', PCA()), ('clf', SVC())])",
+        "question": "Which of the following represents correct method to tune hyper parameters with above pipeline object:",
+        "options": {
+            "A": "param_grid = dict(reduce_dim__n_components=[2, 5, 10], clf__C=[0.1, 10, 100])\ngrid_search = GridSearchCV(pipe, param_grid=param_grid)",
+            "B": "param_grid = dict(n_components__reduce_dim=[2, 5, 10], C__clf=[0.1, 10, 100])\ngrid_search = GridSearchCV(pipe, param_grid=param_grid)",
+            "C": "param_grid = dict(n_components=[2, 5, 10], C=[0.1, 10, 100])\ngrid_search = GridSearchCV(pipe, param_grid=param_grid)",
+            "D": "param_grid = dict(reduce_dim['n_components']=[2, 5, 10], clf['C']=[0.1, 10, 100])\ngrid_search = GridSearchCV(pipe, param_grid=param_grid)"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code:\n\nfrom sklearn.datasets import make_regression\nfrom sklearn.datasets import make_classification\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.linear_model import LogisticRegression\n\nX_r, y_r = make_regression()\nlr = LinearRegression()\nlr.fit(X_r, y_r)\nscore1 = lr.score(X_r, y_r)\n\nX_c, y_c = make_classification()\nlogr = LogisticRegression()\nlogr.fit(X_c, y_c)\nscore2 = logr.score(X_c, y_c)\n\nprint(score1)\nprint(score2)",
+        "question": "Which metrics will be contained in score1 and score2 respectively?",
+        "options": {
+            "A": "Accuracy, Accuracy",
+            "B": "R2 score, R2 score",
+            "C": "Accuracy, R2 score",
+            "D": "R2 score, Accuracy",
+            "E": "F1 score, Precision",
+            "F": "Precision, Recall",
+            "G": "MAE, MSE",
+            "H": "The code will result in an error"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "from sklearn.linear_model import SGDRegressor\n\nmodel = SGDRegressor(warm_start=True)\n\nX_train = [[0, 0], [1, 1]]\ny_train = [0, 1]\nmodel.fit(X_train, y_train)\n\n# Call fit() again with different training data\nX_train_new = [[2, 2], [3, 3]]\ny_train_new = [2, 3]\nmodel.fit(X_train_new, y_train_new)",
+        "question": "Suppose you have a trained stochastic gradient regressor model by enabling warm start parameter. What happens if you call the fit method again with the same model instance and different training data?",
+        "options": {
+            "A": "The new training data is ignored, and the model continues training from the previously learned weights.",
+            "B": "The new training data is used to update the model weights, but the previous weights are discarded.",
+            "C": "An error is raised, indicating that the model has already been trained.",
+            "D": "The model weights are reset, and the model begins training again from scratch."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "from sklearn.linear_model import SGDRegressor\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\n\nmodel = SGDRegressor()\n\nX_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)\n\nmodel.fit(X_train, y_train, early_stopping=True, validation_data=(X_val, y_val), validation_fraction=0.2, tol=0.001, n_iter_no_change=5)\n\ny_pred = model.predict(X_test)\n\nmse = mean_squared_error(y_test, y_pred)",
+        "question": "What is the purpose of the tol parameter in the fit method of the stochastic regressor?",
+        "options": {
+            "A": "It specifies the tolerance level for early stopping based on the change in the validation error.",
+            "B": "It controls the learning rate of the stochastic regressor during training.",
+            "C": "It determines the maximum number of iterations for the training process.",
+            "D": "It defines the fraction of the validation set used for early stopping."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.datasets import make_regression\nX, y = make_regression(n_samples = 8, n_features = 3)\nfrom sklearn.preprocessing import PolynomialFeatures\npoly_transform = PolynomialFeatures(degree=3, interaction_only=True)\nX_trans = poly_transform.fit_transform(X,y)\nprint(X_trans.shape)",
+        "question": "What will be the output of the following code?",
+        "options": {
+            "A": "(8,4)",
+            "B": "(8,5)",
+            "C": "(8,8)",
+            "D": "(8,10)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.linear_model import SGDRegressor\n\nparams = [\n    {'alpha': [0.001,0.01,0.1],'learning_rate': ['constant','optimal'], 'warm_start':[True]},\n    {'alpha': [0.0001,0.001],'learning_rate':['constant','invscaling']}\n]\n\ngrid= GridSearchCV(estimator= SGDRegressor(),\n                   param_grid = params,\n                   cv=5,\n                   scoring = 'neg_mean_squared_error',\n                   return_train_score=True\n                  )\n\ngrid.fit(X_train,y_train)",
+        "question": "How many models with different combinations of parameter values will get trained in the following code?",
+        "options": {
+            "A": "10",
+            "B": "12",
+            "C": "14",
+            "D": "16"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.linear_model import Ridge\nimport numpy as np\nmodel = Ridge(________ = 0.001)\nmodel.fit(X_train,y_train)",
+        "question": "Which of the following will be the correct option for the below code to control the regularization rate ?",
+        "options": {
+            "A": "max_iter",
+            "B": "lambda",
+            "C": "alpha",
+            "D": "solver"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "\u2022 Variable name df contains all the data as pandas.core.frame.DataFrame type\n\u2022 Assume all the necessary imports are made",
+        "question": "To see the distribution of the data along each numerical feature which of the following codes will show all the histograms?",
+        "options": {
+            "A": "df.hist()",
+            "B": "df.histplot()",
+            "C": "pandas.hist(df)",
+            "D": "seaborn.histogram(df)"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following can affect performance of the Simple linear Regression while training the model?",
+        "options": {
+            "A": "Scaling",
+            "B": "Kernel",
+            "C": "Range of the target column",
+            "D": "r2_score"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "which of the following methods come under sklearn's model_selection module ?",
+        "options": {
+            "A": "train_test_split",
+            "B": "ColumnTransformer",
+            "C": "GridSearchCV",
+            "D": "Pipeline",
+            "E": "StratifiedShuffleSplit",
+            "F": "KFold",
+            "G": "mean_absolute_error",
+            "H": "cross_val_score",
+            "I": "trees"
+        },
+        "correctOption": [
+            "A",
+            "C",
+            "E",
+            "F",
+            "H"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code block:\n\nfrom sklearn.linear_model import linear_regression\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.model_selection import ShuffleSplit\n\nlin_reg = linear_regression()\nshuffle_split = ShuffleSplit(n_splits=5, test_size=0.2, random_state=42)\nscore = cross_val_score(lin_reg, X, y, cv=shuffle_split, scoring='_________')",
+        "question": "Which of the following may be appropriate to be filled in the blank space?",
+        "options": {
+            "A": "mean_squared_error",
+            "B": "neg_mean_squared_error",
+            "C": "r2",
+            "D": "neg_r2",
+            "E": "accuracy",
+            "F": "neg_accuracy"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following are correct statements?",
+        "options": {
+            "A": "Data with missing values can not be used to train a logistic or linear regression model.",
+            "B": "KNN model is agnostic to scale of numerical features.",
+            "C": "Like KNN imputer, other models e.g. decision tree, can also be used for imputation.",
+            "D": "Filling 0 (zero) in place of missing values, is always the best approach for imputation."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.feature_extraction import DictVectorizer\n\nX = [{'feature_1': 3, 'feature_2': 1}, {'feature_1': 2, 'feature_3': 3}]\ntransformer = DictVectorizer(sparse= False)\nprint(transformer.fit_transform(X))",
+        "question": "What will be the output of the following code:",
+        "options": {
+            "A": "[[3. 1.]\n [2. 3.]]",
+            "B": "[[3. 1.]\n [3. 0.]]",
+            "C": "[[3. 1. 0.]\n [2. 0. 3.]]",
+            "D": "[[3. 1. 0.]\n [2. 3. 0.]]"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "import numpy as np\nfrom sklearn.model_selection import ShuffleSplit\nx = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [1, 3], [2, 3], [3, 3], [4, 3]])\ny = np.array([0, 1, 0, 1, 0, 1, 0, 1, 0, 1])\nrs = ShuffleSplit(n_splits=5, test_size=.25, random_state=0)\nfor each in rs.split(X):\n    print(each[0], each[1])",
+        "question": "Which of the following may be the correct output of the above code?:",
+        "options": {
+            "A": "[1 7 3 0 5 4] [6 2]\n[3 7 0 4 2 5] [1 6]\n[3 4 7 0 6 1] [5 2]\n[6 7 3 4 1 0] [2 5]\n[1 6 3 2 0 7] [4 5]",
+            "B": "[1 7 3 0 5] [4 6 2]\n[3 7 0 4 2] [5 1 6]\n[3 4 7 0 6] [1 5 2]\n[6 7 3 4 1] [0 2 5]\n[1 6 3 2 0] [7 4 5]",
+            "C": "[1 7 3 0] [5 4 6 2]\n[3 7 0 4] [2 5 1 6]\n[3 4 7 0] [6 1 5 2]\n[6 7 3 4] [1 0 2 5]\n[1 6 3 2] [0 7 4 5]",
+            "D": "[1 7 3 0 5] [5 6 2]\n[3 7 0 4 2] [4 1 6]\n[3 4 7 0 6] [7 5 2]\n[6 7 3 4 1] [6 2 5]\n[1 6 3 2 0] [1 4 5]"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\nX = np.array([[1, 1], [1, 2], [2, 2], [2, 3], [1, 1], [3, 3]])\n# y = 1 * x_0 + 2 * x_1 + 3\ny = np.dot(X, np.array([1, 2])) + 3\n\nreg1 = LinearRegression(fit_intercept = False).fit(X, y)\ns1 = reg1.score(X, y)\n\nreg2 = LinearRegression(fit_intercept = True).fit(X, y)\ns2 = reg2.score(X, y)",
+        "question": "Which of the following is more likely to be true?",
+        "options": {
+            "A": "s1 = s2",
+            "B": "s1 < s2",
+            "C": "s1 > s2"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\ncolumns = [\"Name\", \"Manufacturer\", \"Year_of_purchase\", \"Price_in_lacs\", \"Fuel_type\"]\ndata = [[\"800 AC\", \"Maruti\", 2007, 0.6, \"Petrol\"],\n        [\"Wagon R\", \"Maruti\", 2007, 1.35, \"Petrol\"],\n        [\"Verna\", \"Hyundai\", 2012, 6.0, \"Diesel\"],\n        [\"Corolla\", \"Toyota\", 2018, 16.5, \"Petrol\"],\n        [\"Amaze\", \"Honda\", 2014, 4.5, \"Diesel\"],\n        [\"Alto\", \"Maruti\", 2007, 1.4, \"Petrol\"]]\ndf = pd.DataFrame(data=data, columns=columns)",
+        "question": "What will be the output of the following code snippet?\n\n`print(np.sum(df.shape))`",
+        "options": null,
+        "correctOption": 11,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\ncolumns = [\"Name\", \"Manufacturer\", \"Year_of_purchase\", \"Price_in_lacs\", \"Fuel_type\"]\ndata = [[\"800 AC\", \"Maruti\", 2007, 0.6, \"Petrol\"],\n        [\"Wagon R\", \"Maruti\", 2007, 1.35, \"Petrol\"],\n        [\"Verna\", \"Hyundai\", 2012, 6.0, \"Diesel\"],\n        [\"Corolla\", \"Toyota\", 2018, 16.5, \"Petrol\"],\n        [\"Amaze\", \"Honda\", 2014, 4.5, \"Diesel\"],\n        [\"Alto\", \"Maruti\", 2007, 1.4, \"Petrol\"]]\ndf = pd.DataFrame(data=data, columns=columns)",
+        "question": "What will be the output of the following code snippet?\n\n`t = df['Year_of_purchase'].value_counts()`\n`print(t[2007])`",
+        "options": null,
+        "correctOption": 3,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\ncolumns = [\"Name\", \"Manufacturer\", \"Year_of_purchase\", \"Price_in_lacs\", \"Fuel_type\"]\ndata = [[\"800 AC\", \"Maruti\", 2007, 0.6, \"Petrol\"],\n        [\"Wagon R\", \"Maruti\", 2007, 1.35, \"Petrol\"],\n        [\"Verna\", \"Hyundai\", 2012, 6.0, \"Diesel\"],\n        [\"Corolla\", \"Toyota\", 2018, 16.5, \"Petrol\"],\n        [\"Amaze\", \"Honda\", 2014, 4.5, \"Diesel\"],\n        [\"Alto\", \"Maruti\", 2007, 1.4, \"Petrol\"]]\ndf = pd.DataFrame(data=data, columns=columns)",
+        "question": "What will be the output of the following code snippet?\n\n`print(df.describe().T.shape[0])`",
+        "options": null,
+        "correctOption": 2,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\ncolumns = [\"Name\", \"Manufacturer\", \"Year_of_purchase\", \"Price_in_lacs\", \"Fuel_type\"]\ndata = [[\"800 AC\", \"Maruti\", 2007, 0.6, \"Petrol\"],\n        [\"Wagon R\", \"Maruti\", 2007, 1.35, \"Petrol\"],\n        [\"Verna\", \"Hyundai\", 2012, 6.0, \"Diesel\"],\n        [\"Corolla\", \"Toyota\", 2018, 16.5, \"Petrol\"],\n        [\"Amaze\", \"Honda\", 2014, 4.5, \"Diesel\"],\n        [\"Alto\", \"Maruti\", 2007, 1.4, \"Petrol\"]]\ndf = pd.DataFrame(data=data, columns=columns)",
+        "question": "What will be the output of the following code snippet?\n\n`t=df.query(\"Year_of_purchase >=2008 and Fuel_type!='Petrol'\")`\n`print(t.shape[0])`",
+        "options": null,
+        "correctOption": 2,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\ncolumns = [\"Name\", \"Manufacturer\", \"Year_of_purchase\", \"Price_in_lacs\", \"Fuel_type\"]\ndata = [[\"800 AC\", \"Maruti\", 2007, 0.6, \"Petrol\"],\n        [\"Wagon R\", \"Maruti\", 2007, 1.35, \"Petrol\"],\n        [\"Verna\", \"Hyundai\", 2012, 6.0, \"Diesel\"],\n        [\"Corolla\", \"Toyota\", 2018, 16.5, \"Petrol\"],\n        [\"Amaze\", \"Honda\", 2014, 4.5, \"Diesel\"],\n        [\"Alto\", \"Maruti\", 2007, 1.4, \"Petrol\"]]\ndf = pd.DataFrame(data=data, columns=columns)",
+        "question": "Given the data, which of the following options will provide the same output?",
+        "options": {
+            "A": "df.iloc[3]['Year_of_purchase']",
+            "B": "df.loc[3,'Year_of_purchase']",
+            "C": "df.iloc[3,2]",
+            "D": "df.iloc[-3,2]",
+            "E": "df[df['Price_in_lacs'] >=10.0].Year_of_purchase.iloc[0]",
+            "F": "All options will provide different outputs."
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import pandas as pd\nimport numpy as np\ncolumns = [\"Name\", \"Manufacturer\", \"Year_of_purchase\", \"Price_in_lacs\", \"Fuel_type\"]\ndata = [[\"800 AC\", \"Maruti\", 2007, 0.6, \"Petrol\"],\n        [\"Wagon R\", \"Maruti\", 2007, 1.35, \"Petrol\"],\n        [\"Verna\", \"Hyundai\", 2012, 6.0, \"Diesel\"],\n        [\"Corolla\", \"Toyota\", 2018, 16.5, \"Petrol\"],\n        [\"Amaze\", \"Honda\", 2014, 4.5, \"Diesel\"],\n        [\"Alto\", \"Maruti\", 2007, 1.4, \"Petrol\"]]\ndf = pd.DataFrame(data=data, columns=columns)",
+        "question": "If you would like to see the most frequent car manufacturers in the dataset, which of the following can be used?",
+        "options": {
+            "A": "df.Manufacturer.value_counts()",
+            "B": "df.groupby(by='Manufacturer')['Fuel_type'].count()",
+            "C": "df.groupby(by='Fuel_type')['Manufacturer'].count()",
+            "D": "df.Manufacturer.count_values()",
+            "E": "None of these"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following choice(s) are correct ?",
+        "options": {
+            "A": "Null values cannot be interpreted by the model hence we need to handle them accordingly.",
+            "B": "Null values cannot be replaced because we can not manipulate the dataset.",
+            "C": "We should let the sklearn or software automatically decide how to handle different kinds of missing values.",
+            "D": "Different types of representation of missing values could be seen in the dataset."
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following options are true about Pearson correlation matrix ?",
+        "options": {
+            "A": "Correlation coefficient values in the matrix are in the range of -1 to +1.",
+            "B": "Higher correlation coefficient among the features leads to better model predictions.",
+            "C": "Correlation matrix can be represented graphically using the heatmap.",
+            "D": "Correlation coefficient values in the matrix could be in the range of -\u221e to +\u221e."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "which of the following methods come under sklearn's model_selection module ?",
+        "options": {
+            "A": "ColumnTransformer",
+            "B": "GridSearchCV",
+            "C": "Pipeline",
+            "D": "StratifiedShuffleSplit",
+            "E": "mean_absolute_error",
+            "F": "trees"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "We need to preprocess the data before using it for model building due to which of the following reasons ?",
+        "options": {
+            "A": "Due to errors in data capture, data may contain outliers or missing values.",
+            "B": "Different features may be at different scales.",
+            "C": "Data contains non numerical features.",
+            "D": "All of these"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Unsupervised Learning (Clustering & Dimensionality Reduction)",
+        "context": "Consider following data and answer the given subquestions:\n\n`data = np.array([[1,2,3,4],\n                 [3, np.nan, 4, 1],\n                 [np.nan, 2,3, 5],\n                 [np.nan, np.nan, np.nan, 10]])`\n\nEach row represents a data point. There are exactly 4 points. The index of points starts from 0 and ends at 3 (included).",
+        "question": "Which of the following pairs have the highest euclidean distance? Note: take care of the missing values and adjust accordingly. The options refer to the indices of points.",
+        "options": {
+            "A": "1 and 2",
+            "B": "0 and 2",
+            "C": "1 and 3",
+            "D": "2 and 3",
+            "E": "0 and 1",
+            "F": "There is a tie between two or more options.",
+            "G": "None of these."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Unsupervised Learning (Clustering & Dimensionality Reduction)",
+        "context": "Consider following data and answer the given subquestions:\n\n`data = np.array([[1,2,3,4],\n                 [3, np.nan, 4, 1],\n                 [np.nan, 2,3, 5],\n                 [np.nan, np.nan, np.nan, 10]])`\n\nEach row represents a data point. There are exactly 4 points. The index of points starts from 0 and ends at 3 (included).",
+        "question": "Which of the following pairs have the smallest euclidean distance? Note: take care of the missing values and adjust accordingly. The options refer to the indices of points.",
+        "options": {
+            "A": "1 and 2",
+            "B": "0 and 2",
+            "C": "1 and 3",
+            "D": "2 and 3",
+            "E": "0 and 1",
+            "F": "There is a tie between two or more options.",
+            "G": "None of these."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the above data, answer the given subquestions.\n\npython\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import MinMaxScaler, OrdinalEncoder, MaxAbsScaler\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.pipeline import Pipeline\nimport numpy as np\n\nX = np.array([[5, 4, 'cat'],\n              [8, -1, 'dog'],\n              [6, 1, 'bird'],\n              [np.nan, 3, 'cat']])\n\nimpute_scale_pipe = Pipeline([('impute', SimpleImputer()),\n                              ('scale', MinMaxScaler())])\n\nct = ColumnTransformer([('impute_scale', impute_scale_pipe, [0,1]),\n                        ('scale_only', MaxAbsScaler(), [1]),\n                        ('categorical', OrdinalEncoder(), [2])])\n\ntransformed_X = ct.fit_transform(X)\n",
+        "question": "What will be the output of the following code snippet:\n\n`print(transformed_X.shape[1])`",
+        "options": null,
+        "correctOption": 4,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the above data, answer the given subquestions.\n\npython\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import MinMaxScaler, OrdinalEncoder, MaxAbsScaler\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.pipeline import Pipeline\nimport numpy as np\n\nX = np.array([[5, 4, 'cat'],\n              [8, -1, 'dog'],\n              [6, 1, 'bird'],\n              [np.nan, 3, 'cat']])\n\nimpute_scale_pipe = Pipeline([('impute', SimpleImputer()),\n                              ('scale', MinMaxScaler())])\n\nct = ColumnTransformer([('impute_scale', impute_scale_pipe, [0,1]),\n                        ('scale_only', MaxAbsScaler(), [1]),\n                        ('categorical', OrdinalEncoder(), [2])])\n\ntransformed_X = ct.fit_transform(X)\n",
+        "question": "What will be the output of the following code snippet:\n\n`print(transformed_X[3,0])`",
+        "options": null,
+        "correctOption": 0.5,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the above data, answer the given subquestions.\n\npython\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import MinMaxScaler, OrdinalEncoder, MaxAbsScaler\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.pipeline import Pipeline\nimport numpy as np\n\nX = np.array([[5, 4, 'cat'],\n              [8, -1, 'dog'],\n              [6, 1, 'bird'],\n              [np.nan, 3, 'cat']])\n\nimpute_scale_pipe = Pipeline([('impute', SimpleImputer()),\n                              ('scale', MinMaxScaler())])\n\nct = ColumnTransformer([('impute_scale', impute_scale_pipe, [0,1]),\n                        ('scale_only', MaxAbsScaler(), [1]),\n                        ('categorical', OrdinalEncoder(), [2])])\n\ntransformed_X = ct.fit_transform(X)\n",
+        "question": "What will be the output of the following code snippet:\n\n`print(transformed_X[0,-1])`",
+        "options": null,
+        "correctOption": 1.0,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the above data, answer the given subquestions.\n\npython\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import MinMaxScaler, OrdinalEncoder, MaxAbsScaler\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.pipeline import Pipeline\nimport numpy as np\n\nX = np.array([[5, 4, 'cat'],\n              [8, -1, 'dog'],\n              [6, 1, 'bird'],\n              [np.nan, 3, 'cat']])\n\nimpute_scale_pipe = Pipeline([('impute', SimpleImputer()),\n                              ('scale', MinMaxScaler())])\n\nct = ColumnTransformer([('impute_scale', impute_scale_pipe, [0,1]),\n                        ('scale_only', MaxAbsScaler(), [1]),\n                        ('categorical', OrdinalEncoder(), [2])])\n\ntransformed_X = ct.fit_transform(X)\n",
+        "question": "What will be the output of the following code snippet:\n\n`print(transformed_X[2,1])`",
+        "options": null,
+        "correctOption": 0.4,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the above data, answer the given subquestions.\n\npython\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import MinMaxScaler, OrdinalEncoder, MaxAbsScaler\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.pipeline import Pipeline\nimport numpy as np\n\nX = np.array([[5, 4, 'cat'],\n              [8, -1, 'dog'],\n              [6, 1, 'bird'],\n              [np.nan, 3, 'cat']])\n\nimpute_scale_pipe = Pipeline([('impute', SimpleImputer()),\n                              ('scale', MinMaxScaler())])\n\nct = ColumnTransformer([('impute_scale', impute_scale_pipe, [0,1]),\n                        ('scale_only', MaxAbsScaler(), [1]),\n                        ('categorical', OrdinalEncoder(), [2])])\n\ntransformed_X = ct.fit_transform(X)\n",
+        "question": "Which of the following can be used to get the simpleimputer object?",
+        "options": {
+            "A": "impute_scale_pipe.steps[1][1]",
+            "B": "impute_scale_pipe['impute']",
+            "C": "impute_scale_pipe[0]",
+            "D": "impute_scale_pipe.get_step('impute')",
+            "E": "impute_scale_pipe.get_step(0)",
+            "F": "ct[0][0][0]",
+            "G": "None of these."
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Go through the code snippet given below and answer the given subquestions.\n\npython\nimport numpy as np\nfrom sklearn.linear_model import SGDRegressor\nfrom sklearn.pipeline import make_pipeline\nn_samples, n_features = 18, 4\nrng = np.random.RandomState(0)\ny = rng.randn(n_samples)\nX = rng.randn(n_samples, n_features)\nreg = SGDRegressor(max_iter=1000,\n                   tol=1e-3,\n                   eta0=0.04,\n                   power_t=5,\n                   n_iter_no_change=3,\n                   validation_fraction=0.3,\n                   random_state=42)\nreg.fit(X, y)\nprint(reg.coef_)\n",
+        "question": "Which of the following options will be the output of the given code?",
+        "options": {
+            "A": "[-0.02634908 0.01189399 0.0917284 0.08966849]",
+            "B": "array([-0.22622766, -0.00582008, -0.1820344 , 0.03518086, -0.14490955])",
+            "C": "array([-0.22622766, -0.00582008, -0.1820344])",
+            "D": "Given code will return an error because the data set is not given."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Go through the code snippet given below and answer the given subquestions.\n\npython\nimport numpy as np\nfrom sklearn.linear_model import SGDRegressor\nfrom sklearn.pipeline import make_pipeline\nn_samples, n_features = 18, 4\nrng = np.random.RandomState(0)\ny = rng.randn(n_samples)\nX = rng.randn(n_samples, n_features)\nreg = SGDRegressor(max_iter=1000,\n                   tol=1e-3,\n                   eta0=0.04,\n                   power_t=5,\n                   n_iter_no_change=3,\n                   validation_fraction=0.3,\n                   random_state=42)\nreg.fit(X, y)\n",
+        "question": "Which of the following could be the possible output of print(reg.score())?",
+        "options": {
+            "A": "-0.528",
+            "B": "1",
+            "C": "0.528",
+            "D": "Given code will return an error"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code:\n\npython\nimport numpy as np\nfrom sklearn.model_selection import ShuffleSplit\ndata = np.random.randn(10,3) # 10x3 matrix\nrs = ShuffleSplit(n_splits=1, test_size=.3)\nfor data_train, data_test in rs.split(data):\n    print(data_train, data_test)\n",
+        "question": "Which of the following may be the correct output of the above code?:",
+        "options": {
+            "A": "[ 2 9 1 7 4 5 8 0 ] [ 3 6 ]\n[ 3 9 1 6 0 8 2 4 ] [ 7 5 ]\n[ 8 4 7 1 6 9 0 3 ] [ 2 5 ]",
+            "B": "[ 8 6 9 7 0 4 5 ] [ 3 2 1 ]\n[ 1 7 6 2 5 0 3 ] [ 8 4 9 ]\n[ 9 1 5 4 3 6 8 ] [ 0 7 2 ]",
+            "C": "[ 2 3 7 1 0 8 ] [ 5 6 9 4 ]\n[ 0 2 1 5 8 4 ] [ 3 7 6 9 ]\n[ 7 6 3 9 4 0 ] [ 5 1 8 2 ]",
+            "D": "[ 6 3 9 2 8 ] [ 0 4 1 5 7 ]\n[ 6 7 8 4 0 ] [ 1 5 3 2 9 ]\n[ 0 4 6 3 2 ] [ 9 1 7 8 5 ]",
+            "E": "None of these"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following code:\n\npython\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\nX = np.array([[1, 1], [1, 2], [2, 2], [2, 3], [2, 1], [3, 3]])\n# y = 1 * x_0 + 2 * x_1 + 3\ny = np.dot(X, np.array([1, 2])) + 3\nreg1 = LinearRegression(fit_intercept = False).fit(X, y)\ns1 = reg1.score(X, y)\nreg2 = LinearRegression(fit_intercept = True).fit(X, y)\ns2 = reg2.score(X, y)\n",
+        "question": "Which of the following is more likely to be true?",
+        "options": {
+            "A": "s1 = s2",
+            "B": "s1 < s2",
+            "C": "s1 > s2"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "python\nfrom sklearn.metrics import r2_score\ny_test = [4, -1, 3, 6]\ny_pred = [3.5, -0.5, 2, 8]\nr2_score(y_test, y_pred)\n",
+        "question": "What will be the output of the following code?",
+        "options": null,
+        "correctOption": {
+            "min": 0.76,
+            "max": 0.8
+        },
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "python\nfrom sklearn.linear_model import SGDRegressor\nmodel = SGDRegressor(early_stopping=True,\n                     validation_fraction=0.2,\n                     tol=0.001,\n                     n_iter_no_change=5)\nmodel.fit(X, y)\n",
+        "question": "What is the purpose of the tol parameter of the SGDRegressor() in the given code below?",
+        "options": {
+            "A": "It controls the learning rate of the stochastic regressor during training.",
+            "B": "It determines the maximum number of iterations for the training process.",
+            "C": "It defines the fraction of the validation set used for early stopping.",
+            "D": "It specifies the tolerance level for early stopping based on the change in the validation error."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code block and if needed make appropriate assumptions:\n\npython\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.model_selection import ShuffleSplit\nshuffle_split = ShuffleSplit(n_splits=5, test_size=0.2, random_state=42)\nscore = cross_val_score(estimator= LinearRegression(),\n                        X= X_train,\n                        y= y_train,\n                        cv= shuffle_split,\n                        scoring='________________')\n",
+        "question": "Which of the following may be appropriate to be filled in the blank space value for scoring parameter?",
+        "options": {
+            "A": "mean_squared_error",
+            "B": "neg_mean_squared_error",
+            "C": "r2",
+            "D": "neg_r2",
+            "E": "accuracy",
+            "F": "neg_accuracy"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "You have a dataset of student grades in a Pandas DataFrame called grades_df. The columns are: StudentName, Subject, and Score. Consider the following code:\naverage_scores = grades_df.groupby('StudentName')['Score'].mean()\nAfter executing the above code, what will average_scores contain?",
+        "options": {
+            "A": "The highest score for each student.",
+            "B": "A list of subjects sorted by their average scores.",
+            "C": "The average score of each student across all subjects.",
+            "D": "A DataFrame with the scores of all students for each subject."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "You are working on a machine learning project and have received a dataset containing numeric and categorical features. The dataset has some missing values and potential outliers. Given the following data cleaning steps:\n1. Use One-Hot Encoding for categorical variables.\n2. Impute missing values with feature's mean for numeric features.\n3. Remove duplicates.\n4. Standardize numeric features using Z-score normalization.\n5. Identify and handle outliers using the IQR method.\nWhich of the following represents the MOST appropriate sequence for preparing the data for a machine learning model?",
+        "options": {
+            "A": "1 \u2192 4 \u2192 2 \u2192 3 \u2192 5",
+            "B": "3 \u2192 2 \u2192 1 \u2192 4 \u2192 5",
+            "C": "2 \u2192 3 \u2192 1 \u2192 5 \u2192 4",
+            "D": "3 \u2192 5 \u2192 2 \u2192 1 \u2192 4"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "You're working with a dataset that consists of training data ('train_data') and test data ('test_data'). The dataset contains both numerical and categorical features. You decide to employ a combination of 'StandardScaler' (for numerical columns) and 'OneHotEncoder' (for categorical columns) from 'scikit-learn' using the 'ColumnTransformer' utility. Which of the following actions is MOST likely to introduce data leakage or potential modeling issues?",
+        "options": {
+            "A": "You utilize 'fit_transform' on 'train_data' and then 'transform' on 'test_data' using the 'ColumnTransformer'.",
+            "B": "After observing a new category in the test data that was not present in the training data, you set the 'handle_unknown' parameter to 'ignore' in 'OneHotEncoder'.",
+            "C": "You first apply 'fit' on the 'test_data' and then 'transform' on 'train_data' using the 'ColumnTransformer'.",
+            "D": "Before using 'ColumnTransformer', you independently apply 'fit_transform' to 'train_data' for both 'StandardScaler' and 'OneHotEncoder'."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "You are working on a machine learning project that aims to predict housing prices based on various features of the houses. As the first step, you decide to perform exploratory data analysis and visualize the data to understand its structure and relationships. Which of the following visualization techniques or principles is LEAST likely to provide meaningful insights for this kind of regression problem?",
+        "options": {
+            "A": "Plotting a heatmap of the correlation matrix to understand the linear relationship between the numeric features.",
+            "B": "Using a scatter plot to visualize the relationship between the square footage of a house and its price.",
+            "C": "Visualizing the distribution of housing prices using a pie chart.",
+            "D": "Creating box plots for housing prices, grouped by the number of bedrooms, to detect outliers and understand the distribution across different categories."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "python\n1 from sklearn.datasets import load_diabetes\n2 from sklearn.model_selection import train_test_split\n3 from sklearn.preprocessing import MinMaxScaler\n4 from sklearn.linear_model import LinearRegression\n5 \n6 X,y = load_diabetes(return_X_y=True)\n7 X_train,X_test,y_train,y_test= train_test_split(X,y,test_size=0.2, random_state=42)\n8 \n9 mms = MinMaxScaler()\n10 \n11 X_train = mms.fit_transform(X_train)\n12 X_test = mms.fit_transform(X_test)\n13 \n14 lr = LinearRegression()\n15 lr.fit(X_train,y_train)\n16 \n17 print(\"linearRegression R2 Score :\", lr.score(X_test,y_test))\n",
+        "question": "What potentially incorrect steps were taken in the following code snippet?",
+        "options": {
+            "A": "Important parameter in MinMaxScaler was missing while transforming the data.",
+            "B": "train_test_split shouldn't be done while setting random_state parameter.",
+            "C": "X_test was transformed incorrectly.",
+            "D": "All the steps are correct"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Imagine you've loaded a dataset with 1000 samples into a Pandas DataFrame, and each sample has 30 features. Unfortunately, some samples have missing values for a few features, and you want to remove samples with more than 3 null values present. Please select the method to accomplish this task.",
+        "options": {
+            "A": "drop(how= 27)",
+            "B": "drop(columns=['all'])",
+            "C": "dropna(thresh = 27)",
+            "D": "dropna(how='any')",
+            "E": "dropna(thresh=3)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Choose the options with respect to the given statements:\nStatement1 : To apply various sklearn methods from in series on a column we should use Pipeline.\nStatement2 : To apply various sklearn methods on various columns in parallel we should use ColumnTransformer.",
+        "options": {
+            "A": "Statement 1 False, Statement 2 False",
+            "B": "Statement 1 True, Statement 2 False",
+            "C": "Statement 1 False, Statement 2 True",
+            "D": "Both statements are True"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code:\npython\nimport numpy as np\nfrom sklearn.model_selection import ShuffleSplit\n\nX = np.array([[24, 13], [19, 18],\n              [25, 18], [27, 23],\n              [11, 25], [22, 12],\n              [27, 16], [17, 25]])\ny = np.array([-1, 1, -1, 1, 1, -1, 1, -1])\n\nss = ShuffleSplit(n_splits=3, test_size=.25, random_state= 42)\n\nfor train_index, test_index in ss.split(X):\n    print(train_index,test_index)\n",
+        "question": "Which of the following may be the correct output of the above code?:",
+        "options": {
+            "A": "[[24 13] [17 25] [25 18] [11 25] [27 23] [27 16]] [[24 13] [11 25] [22 12] [25 18] [19 18] [27 16]] [[27 23] [19 18] [11 25] [22 12] [25 18] [17 25]]",
+            "B": "[0 7 2 4 3 6] [1 5]\n[0 4 5 2 1 6] [3 7]\n[3 1 4 5 2 7] [0 6]",
+            "C": "[2 0 4 3 1] [6 4 1]\n[0 4 7 2 5] [4 0 7]\n[5 7 1 0 3] [6 2 5]",
+            "D": "Error in the code block"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Which of the following is likely to be the correct output of the code given below?\npython\nfrom sklearn import linear_model\nclf = linear_model.Ridge(alpha=0.01)\nX= [[1, 1], [1, 2], [2, 1], [3, 2]]\ny= [1, 2, 2, 1]\nclf.fit(X, y)\nlinear_model.Ridge(alpha=0.01,max_iter=1000, tol=0.0001,fit_intercept=True)\nclf.score(X,y)\n",
+        "question": "Which of the following is likely to be the correct output of the code given below?",
+        "options": {
+            "A": "5",
+            "B": "99",
+            "C": "0.999",
+            "D": "No evaluation metrics is mentioned, hence it will produce error."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "You are working on optimizing a machine learning model for predicting the energy efficiency of buildings. To capture potential non-linear relationships between features like floor area, wall area, and roof area, you decide to introduce polynomial features. However, considering the risk of multicollinearity due to the introduction of these polynomial features, you also want to ensure the data is appropriately scaled. You construct the following pipeline:\npython\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import PolynomialFeatures, MinMaxScaler\n\npipeline = Pipeline([\n    ('poly', PolynomialFeatures(degree=2, interaction_only=True)),\n    ('scaler', MinMaxScaler())\n])\n",
+        "question": "Given this setup, which of the following statements accurately describes the operation of this pipeline on the training data?",
+        "options": {
+            "A": "The pipeline will generate polynomial features (including squared terms) and then scale these features to a range between 0 and 1.",
+            "B": "The transformed data will consist of the original features, their squares, and interaction terms, all scaled between 0 and 1.",
+            "C": "The pipeline scales the original features between 0 and 1, then subsequently generates polynomial combinations including both square terms and interaction terms.",
+            "D": "Only interaction terms between features are generated by the pipeline, which are then scaled between 0 and 1, without including the squared terms of individual features."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "You're developing a regression model for predicting house prices based on various attributes of a house. Given that some features might be redundant or irrelevant, you consider Lasso regression to help with feature selection. To determine the most appropriate regularization strength \u03b1, you decide to use LassoCV from scikit-learn. Here's a part of your implemented code:\npython\nfrom sklearn.datasets import make_regression\nfrom sklearn.linear_model import LassoCV\n\nX, y = make_regression(n_samples=400, n_features=25, noise=1.0, random_state=7)\nlasso = LassoCV(cv=10)\nlasso.fit(X, y)\n",
+        "question": "Given the nature of Lasso regression and the purpose of the code, which potential benefit are you hoping to achieve?",
+        "options": {
+            "A": "Optimize the model's complexity by automatically determining the best \u03b1 through cross-validation.",
+            "B": "Reduce overfitting by incorporating 10-fold cross-validation during model selection.",
+            "C": "Make predictions using an ensemble of 10 different Lasso models trained on different subsets of the data.",
+            "D": "Maximize the number of features retained in the model, ensuring a complex model representation."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "You are working on a regression problem and decide to use the SGDRegressor from scikit-learn. You set up two different regressors with distinct parameter values and train them on the same dataset:\npython\nfrom sklearn.linear_model import SGDRegressor\n\n# First SGDRegressor\nsgd1 = SGDRegressor(max_iter=1000, tol=None, penalty='none')\nsgd1.fit(X_train, y_train)\n\n# Second SGDRegressor\nsgd2 = SGDRegressor(max_iter=5, tol=None, penalty='none')\nsgd2.fit(X_train, y_train)\n",
+        "question": "Given the configurations above, which SGDRegressor is more likely to underfit the training data?",
+        "options": {
+            "A": "sgd1",
+            "B": "sgd2"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which columns may not be included in the selected data within the code below?",
+        "options": {
+            "A": "Column indexed at 0",
+            "B": "Column indexed at 1",
+            "C": "Column indexed at 2",
+            "D": "Column indexed at 3",
+            "E": "Column indexed at 4",
+            "F": "No columns"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764052498/sept2023-1_uaykdd.png"
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following code blocks will correctly take the learning rate as 'optimal'?",
+        "options": {
+            "A": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = SGDRegressor(learning_rate='optimal', eta0=1e-3)",
+            "B": "from sklearn.linear_model import SGDRegressor\nlinear_regressor = (SGDRegressor(learning_rate='adaptive',eta0=1e-2))",
+            "C": "from sklearn.model_selection import SGDRegressor\nSQD_regressor = LinearRegressor(learning_rate='optimal',eta0=1e-2)",
+            "D": "None of these"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "While performing exploratory data analysis (EDA) on a dataset, you come across some columns with a high percentage of missing values. Along with that, a few categorical columns have a large number of unique categories. Which of the following actions would typically be a recommended initial approach during EDA? (Choose multiple correct options.)",
+        "options": {
+            "A": "Visualizing the data distribution of columns to understand their characteristics.",
+            "B": "Using dimensionality reduction techniques, like PCA, to handle columns with many unique categories.",
+            "C": "Visualizing the distribution of missing values across the dataset to ascertain any patterns or systematic missingness.",
+            "D": "Removing columns that have more than 90% missing values without any context."
+        },
+        "correctOption": [
+            "A",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Given the following code snippet involving GridSearchCV for hyperparameter tuning of a LinearRegression model:\npython\nfrom sklearn.datasets import make_regression\nfrom sklearn.linear_model import SGDRegressor\nfrom sklearn.model_selection import GridSearchCV\n\nX, y = make_regression(n_samples=200,\n                       n_features=15,\n                       noise=0.5,\n                       random_state=24)\n\nparams = {'penalty': ['l1', 'l2'], 'max_iter': [500, 1000]}\nreg = GridSearchCV(estimator=SGDRegressor(),\n                   param_grid=params,\n                   scoring='neg_mean_squared_error',\n                   refit=True)\n\nreg.fit(X, y)\n",
+        "question": "Select all statements that are TRUE given this code snippet:",
+        "options": {
+            "A": "The best model chosen by GridSearchCV will be the one that minimizes the negative mean squared error.",
+            "B": "With the given param_grid, the GridSearchCV will evaluate the SGDRegressor model using a total of 4 combinations of hyperparameters to identify the best set for the regression task.",
+            "C": "The optimal model will be refit on the entire data after determining the best hyperparameters using cross-validation.",
+            "D": "The optimal model will be refit on only a subset of the data after determining the best hyperparameters using cross-validation."
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "python\nimport pandas as pd\n\n# Creating a DataFrame\ndata = { 'X': ['apple', 'orange', 'apple', 'banana', 'banana', 'orange'],\n         'Y': [1, 2, 3, 3, 2, 2]}\ndf = pd.DataFrame(data)\n\ndf['Z'] = df['X'] + df['Y'].astype(str)\n",
+        "question": "Given the following code snippet, how many unique values will be present in the column 'Z' of the resulting DataFrame df?",
+        "options": null,
+        "correctOption": 5,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "python\ndata = [['apple', 120],\n        ['cherry', 130],\n        ['apple', 122],\n        ['apple', 125],\n        ['grapes', 70]]\n\nfrom sklearn.preprocessing import OneHotEncoder\nohe = OneHotEncoder(sparse_output=False)\nohe.fit(data)\nprint(ohe.transform(data).shape[1])\n",
+        "question": "What will be the output of the following code ?",
+        "options": null,
+        "correctOption": 8,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "python\nfrom sklearn.preprocessing import MinMaxScaler, StandardScaler\n\ndata = [[0, 5],\n        [8, 3],\n        [7, 2],\n        [7, 9]]\n\nscaler = StandardScaler()\nscaler.fit(data)\nprint(scaler.var_[0])\n",
+        "question": "What will be the output of the following code ?",
+        "options": null,
+        "correctOption": 9.2,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "You're using GridSearchCV to optimize a Ridge regression model from scikit-learn. Consider the following hyperparameter grid:\npython\nfrom sklearn.linear_model import Ridge\nfrom sklearn.model_selection import GridSearchCV\n\nparam_grid = {\n    'alpha': [0.001, 0.01, 0.1, 1, 10, 100],\n    'fit_intercept': [True, False],\n    'solver': ['auto', 'lsqr', 'sag']\n}\n\ngrid_search = GridSearchCV(Ridge(), param_grid, cv=5)\n",
+        "question": "How many combinations will GridSearchCV evaluate?",
+        "options": null,
+        "correctOption": 36,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "For LinearRegression with equation Y = W\u2080X\u2080+W\u2081X\u2081+W\u2082X\u2082+c and given that W\u2082 = (5/7) * W\u2081 and c = 0. What will be the value of the W\u2081 for the below code? (Write 3 digits after the decimal)\nWhere X\u2081 and X\u2082 are column1 and column2 respectively and W\u2081 and W\u2082 are weights associated to the respected columns while fitting\npython\nfrom sklearn.linear_model import LinearRegression\nX_train = [[0,0], [2,1.43], [4,2.86], [6,4.29]]\ny_train = [0,1,2,3]\nreg = LinearRegression(fit_intercept=False) #intercept=0\nreg.fit(X_train,y_train)\nprint(reg.coef_[0])\n",
+        "question": "For LinearRegression with equation Y = W\u2080X\u2080+W\u2081X\u2081+W\u2082X\u2082+c and given that W\u2082 = (5/7) * W\u2081 and c = 0. What will be the value of the W\u2081 for the below code? (Write 3 digits after the decimal)",
+        "options": null,
+        "correctOption": {
+            "min": 0.327,
+            "max": 0.333
+        },
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Go through the code snippet given below and answer the given subquestions.\npython\nfrom sklearn.linear_model import SGDRegressor\nfrom sklearn.pipeline import make_pipeline\nimport numpy as np\nn_samples, n_features = 18, 4\nrng = np.random.RandomState(0)\ny = rng.randn(n_samples)\nX = rng.randn(n_samples, n_features)\nreg = SGDRegressor(max_iter=1000,\n                   tol=1e-3,\n                   eta0=0.04,\n                   power_t=0,\n                   n_iter_no_change=3,\n                   validation_fraction=0.3,\n                   random_state=42)\n\nreg.fit(X, y)\n",
+        "question": "Which of the following options will be the output of the given code? (The code prints `reg.coef_`)",
+        "options": {
+            "A": "[-0.02634908 0.01189399 0.0917284 0.08966849]",
+            "B": "array([-0.22622766, -0.00582008, -0.1820344, 0.03518086, -0.14490955])",
+            "C": "array([-0.22622766, -0.00582008, -0.1820344])",
+            "D": "Given code will return an error because the data set is not given."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Go through the code snippet given below and answer the given subquestions.\npython\nfrom sklearn.linear_model import SGDRegressor\nfrom sklearn.pipeline import make_pipeline\nimport numpy as np\nn_samples, n_features = 18, 4\nrng = np.random.RandomState(0)\ny = rng.randn(n_samples)\nX = rng.randn(n_samples, n_features)\nreg = SGDRegressor(max_iter=1000,\n                   tol=1e-3,\n                   eta0=0.04,\n                   power_t=0,\n                   n_iter_no_change=3,\n                   validation_fraction=0.3,\n                   random_state=42)\n\nreg.fit(X, y)\n",
+        "question": "Which of the following could be the possible output of print(reg.score())?",
+        "options": {
+            "A": "-0.528",
+            "B": "1",
+            "C": "0.528",
+            "D": "Given code will return an error"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the data from the provided table.\nCode: \nimport pandas as pd\ndf = pd.read_csv('dataset.csv')\nprint(df)",
+        "question": "Which option will give the total count of canceled flights in the dataset?",
+        "options": {
+            "A": "df['Cancelled'].sum()",
+            "B": "df['Cancelled'].count()",
+            "C": "df['Cancelled'].isnull().sum()",
+            "D": "df['Cancelled'].len()"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764052621/sept2024-1_uzwtt2.png"
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the data from the provided table.\nCode: \nimport pandas as pd\ndf = pd.read_csv('dataset.csv')\nprint(df)",
+        "question": "Which of the following code snippets will add a new column 'OnTime' that shows True if the flight was not delayed, else False?",
+        "options": {
+            "A": "df['OnTime'] = df['DelayMinutes'] <= 0",
+            "B": "df['OnTime'] = df['DelayMinutes'] >= 0",
+            "C": "df['OnTime'] = df['Cancelled'] == False",
+            "D": "df['OnTime'] = df['Diverted'] == False"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the data from the provided table.\nCode: \nimport pandas as pd\ndf = pd.read_csv('dataset.csv')\nprint(df)",
+        "question": "How can you filter the flights that have a delay due to 'Weather'?",
+        "options": {
+            "A": "df[df['DelayReason'].str.contains('Weather')]",
+            "B": "df.loc[df['DelayReason'] == 'Weather']",
+            "C": "df[df['DelayReason'] == 'Weather']",
+            "D": "df[df['Weather'] == True]"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the data from the provided table.\nCode: \nimport pandas as pd\ndf = pd.read_csv('dataset.csv')\nprint(df)",
+        "question": "Which option will sort the flights first by `Airline` in ascending order, then by DelayMinutes in descending order?",
+        "options": {
+            "A": "df.sort_values(by=['Airline', 'DelayMinutes'], ascending=[True, False])",
+            "B": "df.sort(by=['Airline', 'DelayMinutes'], ascending=[True, False])",
+            "C": "df.sort_values(by=['Airline', 'DelayMinutes'], ascending=[False, True])",
+            "D": "df.sort(['Airline', 'DelayMinutes'], ascending=False)"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Based on the data from the provided table.\nCode: \nimport pandas as pd\ndf = pd.read_csv('dataset.csv')\nprint(df)",
+        "question": "Which option will give the count of flights that have a delay greater than the average delay?",
+        "options": {
+            "A": "df[df['DelayMinutes'] > df['DelayMinutes'].mean()].shape[0]",
+            "B": "df[df['DelayMinutes'] > df['DelayMinutes'].median()].count()",
+            "C": "df[df['DelayMinutes'] > df['DelayMinutes'].mean()].count()",
+            "D": "df[df['DelayMinutes'] < df['DelayMinutes'].mean()].shape[0]"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the following dataset and transformer pipeline:\n\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import MinMaxScaler, OneHotEncoder\nfrom sklearn.impute import KNNImputer\nfrom sklearn.pipeline import Pipeline\nimport numpy as np\n\nX = np.array([[2.5, 'red', 1],\n              [0.85, 'blue', np.nan],\n              [4.2, 'green', 2],\n              [3.2, 'red', 1]])\n\npipe = Pipeline([('impute', KNNImputer(n_neighbors=2)),\n                 ('scale', MinMaxScaler())])\n\nct = ColumnTransformer([('num', pipe, [0, 2]),\n                        ('cat', OneHotEncoder(), [1])])\n\ntransformed_X = ct.fit_transform(X)",
+        "question": "What will be the shape of the transformed array transformed_X after fitting the pipeline?",
+        "options": {
+            "A": "(4, 5)",
+            "B": "(4, 6)",
+            "C": "(4, 7)",
+            "D": "(4, 8)",
+            "E": "None of these"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the following dataset and transformer pipeline:\n\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import MinMaxScaler, OneHotEncoder\nfrom sklearn.impute import KNNImputer\nfrom sklearn.pipeline import Pipeline\nimport numpy as np\n\nX = np.array([[2.5, 'red', 1],\n              [0.85, 'blue', np.nan],\n              [4.2, 'green', 2],\n              [3.2, 'red', 1]])\n\npipe = Pipeline([('impute', KNNImputer(n_neighbors=2)),\n                 ('scale', MinMaxScaler())])\n\nct = ColumnTransformer([('num', pipe, [0, 2]),\n                        ('cat', OneHotEncoder(), [1])])\n\ntransformed_X = ct.fit_transform(X)",
+        "question": "What is the value of transformed_X[1,2]?",
+        "options": {
+            "A": "0.0",
+            "B": "0.5",
+            "C": "-0.5",
+            "D": "1",
+            "E": "None of these"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following preprocessing techniques helps in handling categorical features in a dataset?",
+        "options": {
+            "A": "One-hot encoding",
+            "B": "StandardScaler",
+            "C": "Label encoding",
+            "D": "MinMaxScaler"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "Which of the following imputation strategies can be used for handling missing values?",
+        "options": {
+            "A": "Filling with mean or median",
+            "B": "Deleting the rows with missing values",
+            "C": "Using a predictive model to estimate missing values",
+            "D": "Using a random generator to fill missing values"
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following is correct about cross-validation in machine learning?",
+        "options": {
+            "A": "Cross-validation helps prevent overfitting.",
+            "B": "It is a technique to improve the model's accuracy.",
+            "C": "K-Fold cross-validation is one of the most popular types of cross-validation.",
+            "D": "Cross-validation is not suitable for small datasets."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following are valid loss functions for SGDClassifier?",
+        "options": {
+            "A": "Squared Loss",
+            "B": "Hinge Loss",
+            "C": "Log Loss",
+            "D": "Mean Absolute Error"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "import numpy as np\nfrom sklearn.model_selection import StratifiedKFold\nX = np.random.rand(8, 2)\ny = np.array([0, 0, 1, 1, 1, 0])\nskf = StratifiedKFold(n_splits=2)\nfor train_index, test_index in skf.split(X, y):\n    print(\"TRAIN:\", train_index, \"TEST:\", test_index)",
+        "question": "Which of the following could be a correct output from the following code?",
+        "options": {
+            "A": "TRAIN: [2 5 6 7] TEST: [0 1 3 4]",
+            "B": "TRAIN: [0 1 2 3 7] TEST: [4 5 6]",
+            "C": "TRAIN: [0 2 4 7] TEST: [1 3 5 6]",
+            "D": "TRAIN: [0 1 3 4] TEST: [2 5 6 7]"
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the following data and code:\n\nimport numpy as np\ndata = np.array([[1, 2, 3, 4],\n                 [np.nan, 5, np.nan, 1],\n                 [3, 4, 5, np.nan],\n                 [2, 2, np.nan, 10]])",
+        "question": "Which of the following pairs of data points have the second largest Manhattan distance after imputing the missing values with the column mean?",
+        "options": {
+            "A": "0 and 1",
+            "B": "2 and 3",
+            "C": "0 and 3",
+            "D": "1 and 3"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the following data and snippet:\n\nfrom sklearn.preprocessing import FunctionTransformer\nimport numpy as np\n\ndata = np.array([[5, np.nan, 3],\n                 [2, 1, np.nan],\n                 [np.nan, 4, 6]])\n\ndef replace_missing(X):\n    return np.nan_to_num(X, nan=0)\n\nft = FunctionTransformer(replace_missing)\ntransformed_data = ft.fit_transform(data)",
+        "question": "Which of the following correctly represents the value of transformed_data[2,0] after the transformation?",
+        "options": {
+            "A": "0",
+            "B": "4",
+            "C": "6",
+            "D": "None of these"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code where a 'Pipeline' is used for feature scaling, polynomial feature transformation, and applying a 'SGDRegressor'. The hyperparameter search is performed using 'GridSearchCV'.\n\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler, PolynomialFeatures\nfrom sklearn.linear_model import SGDRegressor\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn.datasets import make_regression\n\nX, y = make_regression(n_samples=100, n_features=5, noise=0.1)\n\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('poly', PolynomialFeatures()),\n    ('regressor', SGDRegressor(max_iter=1000, tol=1e-3))\n])\n\nparam_grid = {\n    'poly__degree': [1, 2, 3],\n    'regressor__alpha': [0.01, 0.1, 1],\n    'regressor__penalty': ['l2', 'l1'],\n    'regressor__learning_rate': ['constant', 'optimal']\n}\n\ngrid = GridSearchCV(estimator=pipeline, param_grid=param_grid, scoring='r2', n_jobs=-1, cv=3)\ngrid.fit(X, y)",
+        "question": "How many different models will be trained during this grid search process?",
+        "options": {
+            "A": "36",
+            "B": "54",
+            "C": "72",
+            "D": "108"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "You are working on a machine learning project and have received a dataset containing numeric and categorical features. The dataset has some missing values and potential outliers. Given the following data cleaning steps:\n1. Use One-Hot Encoding for categorical variables.\n2. Impute missing values with feature's mean for numeric features.\n3. Remove duplicates.\n4. Standardize numeric features using Z-score normalization.\n5. Identify and handle outliers using the IQR method.",
+        "question": "Which of the following represents the MOST appropriate sequence for preparing the data for a machine learning model?",
+        "options": {
+            "A": "1 \u2192 4 \u2192 2 \u2192 3 \u2192 5",
+            "B": "3 \u2192 2 \u2192 1 \u2192 4 \u2192 5",
+            "C": "2 \u2192 3 \u2192 1 \u2192 5 \u2192 4",
+            "D": "3 \u2192 5 \u2192 2 \u2192 1 \u2192 4"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Unsupervised Learning (Clustering & Dimensionality Reduction)",
+        "context": "Consider the following code snippet:\n\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.decomposition import PCA\nfrom sklearn.impute import SimpleImputer\n\npipe = Pipeline([('impute', SimpleImputer(strategy='most_frequent')),\n                 ('scale', StandardScaler()),\n                 ('reduce', PCA(n_components=2))])\n\ndata = np.array([[3, np.nan, 5],\n                 [1, 2, np.nan],\n                 [np.nan, 4, 6]])\n\ntransformed_data = pipe.fit_transform(data)",
+        "question": "How many components does the PCA reduce the data to, after transformation?",
+        "options": {
+            "A": "2",
+            "B": "3",
+            "C": "1",
+            "D": "None of these"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the below code:\n\ndata = [[-3, 1],\n        [-3, 1],\n        [3, 5],\n        [3, 5]]\n\nfrom sklearn.preprocessing import StandardScaler\nss = StandardScaler()\nprint(ss.fit_transform(data))",
+        "question": "What will be the output of the code snippet given above?",
+        "options": {
+            "A": "[[0, -1], [0, -1], [1, 1], [1, 1]]",
+            "B": "[[-0.5, -2], [-0.5, -2], [1, 2], [1, 2]]",
+            "C": "[[0, 1], [0, 1], [0, 1], [0, 1]]",
+            "D": "[[-1, -1], [-1, -1], [1, 1], [1, 1]]"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "from sklearn.linear_model import SGDRegressor\nmodel = SGDRegressor(early_stopping=True, \n                     validation_fraction=0.2, \n                     tol=0.001, \n                     n_iter_no_change=5)\nmodel.fit(X, y)",
+        "question": "What is the purpose of the tol parameter of the SGDRegressor() in the given code below?",
+        "options": {
+            "A": "It controls the learning rate of the stochastic regressor during training.",
+            "B": "It determines the maximum number of iterations for the training process.",
+            "C": "It defines the fraction of the validation set used for early stopping.",
+            "D": "It specifies the tolerance level for early stopping based on the change in the validation error."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.feature_extraction import DictVectorizer\nX = [{'feature_1': 3, 'feature_2': 1}, {'feature_1': 2, 'feature_3': 3}]\nextractor = DictVectorizer(sparse=False)\nprint(extractor.fit_transform(X))",
+        "question": "What will be the output of the following code:",
+        "options": {
+            "A": "[[3. 1.] [2. 3.]]",
+            "B": "[[3. 1.] [3. 0.]]",
+            "C": "[[3. 1. 0.] [2. 0. 3.]]",
+            "D": "[[3. 1. 0.] [2. 3. 0.]]"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\nX = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])\ny = np.dot(X, np.array([1, 2])) + 3\nreg = LinearRegression().fit(X, y)\nprint(reg.intercept_, reg.coef_)",
+        "question": "What will be the output of the following code?",
+        "options": {
+            "A": "Intercept: 3.0, Coefficients: [1.0, 2.0]",
+            "B": "Intercept: 3.0, Coefficients: [0.0, 2.0]",
+            "C": "Intercept: 0.0, Coefficients: [1.0, 2.0]",
+            "D": "Given code will return an error."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz1",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following best describes the purpose of n_iter_no_change parameter in SGDRegressor()?",
+        "options": {
+            "A": "Controls the total number of iterations.",
+            "B": "Specifies the tolerance level for early stopping.",
+            "C": "Defines the number of iterations with no improvement to stop training.",
+            "D": "Sets the learning rate schedule."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    }
+]

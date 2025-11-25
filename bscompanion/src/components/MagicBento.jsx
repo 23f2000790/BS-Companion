@@ -2,8 +2,11 @@ import React, { useRef, useEffect, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
 import { gsap } from "gsap";
+import axios from "axios";
 import { useTheme } from "../context/ThemeContext";
 import "./MagicBento.css";
+import StudyGuideModal from "./StudyGuideModal";
+import "./StudyGuideModal.css";
 
 // Import 3D Assets for Premium Look
 import bookImg from "../assets/images/book.png";
@@ -399,6 +402,31 @@ const MagicBento = ({
   const isMobile = useMobileDetection();
   const shouldDisableAnimations = disableAnimations || isMobile;
 
+  // Study Guide Modal State
+  const [showStudyGuideModal, setShowStudyGuideModal] = useState(false);
+
+  const handleOpenStudyGuide = () => {
+    playSoundEffect('modal-open');
+    setShowStudyGuideModal(true);
+  };
+
+  const handleGenerateStudyGuide = async (subject, exam) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.post(
+        'http://localhost:5000/api/study-guides/generate',
+        { subject, exam },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      
+      // Navigate to study guide view with the ID
+      navigate(`/study-guide/${response.data.studyGuide._id}`);
+    } catch (error) {
+      console.error('Error generating study guide:', error);
+      throw error; // Re-throw to let modal handle the error
+    }
+  };
+
   const subjects = user?.subjects || [];
   const subjectSlots = Array(12).fill(null);
   subjects.forEach((sub, i) => {
@@ -425,16 +453,19 @@ const MagicBento = ({
     { type: "subjects", image: bookImg },
     { type: "subjects", image: bookImg },
     {
-      label: "Contact Information",
-      title: user?.email || "N/A",
-      description: "Contact via registered email",
-      image: planeImg, // Paper plane for contact
+      label: "Study Guide",
+      title: "GET QUIZ READY!!",
+      description: "Generate AI-powered study guides",
+      image: planeImg,
+      onClick: handleOpenStudyGuide,
+      isButton: true, // Special flag for button-style card
     },
     {
-      label: "Account Security",
-      title: "Enhanced Protection",
-      description: "Your account is secure",
-      image: paperImg, // Paper/document for security/records
+      label: "Study Guide Library",
+      title: "Your Study Guides",
+      description: "Access all your generated guides",
+      image: paperImg,
+      onClick: () => navigate('/study-guide-history'),
     },
   ];
 
@@ -459,7 +490,7 @@ const MagicBento = ({
             textAutoHide ? "card--text-autohide" : ""
           } ${enableBorderGlow ? "card--border-glow" : ""} ${
             isSubjectsCard ? "card--subjects" : ""
-          }`;
+          } ${card.isButton ? "card--button" : ""}`;
           const cardProps = {
             className: baseClassName,
             style: { "--glow-color": glowColor },
@@ -486,7 +517,7 @@ const MagicBento = ({
                   {subjectSlice.map((item, i) => {
                     const iconUrl = item && !item.isAction ? getSubjectIconUrl(item.name) : null;
                     return (
-                      <button
+                      <div
                         key={i}
                         className={`sub-grid-item ${
                           item?.isAction ? "action" : ""
@@ -501,7 +532,21 @@ const MagicBento = ({
                             openQuizModal(item.name);
                           }
                         }}
-                        disabled={!item}
+                        role="button"
+                        tabIndex={item ? 0 : -1}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            if (!item) return;
+                            if (item.isAction) {
+                              playSoundEffect('modal-open');
+                              openAddSubjectsModal();
+                            } else {
+                              playSoundEffect('button');
+                              openQuizModal(item.name);
+                            }
+                          }
+                        }}
+                        style={{ cursor: item ? 'pointer' : 'default' }}
                       >
                         {/* Trash icon for normal subjects */}
                         {item && !item.isAction && (
@@ -536,7 +581,7 @@ const MagicBento = ({
                         {item && (item.isAction || !iconUrl) && (
                           <span className="subject-name">{item.name}</span>
                         )}
-                      </button>
+                      </div>
                     );
                   })}
                 </div>
@@ -612,6 +657,14 @@ const MagicBento = ({
           );
         })}
       </BentoCardGrid>
+
+      {/* Study Guide Modal */}
+      <StudyGuideModal
+        show={showStudyGuideModal}
+        onClose={() => setShowStudyGuideModal(false)}
+        userSubjects={user?.subjects || []}
+        onGenerate={handleGenerateStudyGuide}
+      />
     </>
   );
 };

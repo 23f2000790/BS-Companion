@@ -169,6 +169,41 @@ html, body {
   border-radius: 8px;
 }
 
+/* Image Container - Aesthetic and Contained */
+.quiz-page-wrapper .image-container {
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.quiz-page-wrapper .image-container:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+}
+
+.quiz-page-wrapper .image-container img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+  background: var(--bg-input);
+}
+
+.quiz-page-wrapper .image-container:hover img {
+  transform: scale(1.02);
+}
+
 .quiz-page-wrapper .options-container {
   display: flex;
   flex-direction: column;

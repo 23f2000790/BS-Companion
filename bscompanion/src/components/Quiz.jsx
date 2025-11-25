@@ -1163,15 +1163,28 @@ const Quiz = () => {
 
   const renderContent = () => {
     if (loading) return <div className="loading-spinner"></div>;
-    if (finished && quizResultPayload)
+    if (finished && quizResultPayload) {
+      // Extract enriched question details from quizResultPayload
+      const formattedQuestions = quizResultPayload.questions.map(q => ({
+        question: q.question || '',
+        context: q.context,
+        options: q.options || {},
+        correctOption: q.correctOption,
+        image: q.image,
+        explanation: q.explanation,
+        questionType: q.questionType || 'mcq',
+        topic: q.topic
+      }));
+      
       return (
         <QuizResults
-          results={quizResultPayload}
-          originalQuestions={questions}
+         results={quizResultPayload}
+          originalQuestions={formattedQuestions}
           resultId={quizResultId}
           savedAiAnalysis={savedAiAnalysis}
         />
       );
+    }
 
     if (questions.length > 0 && current < questions.length) {
       const q = questions[current];

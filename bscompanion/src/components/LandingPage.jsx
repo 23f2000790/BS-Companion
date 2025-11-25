@@ -8,7 +8,6 @@ import { FaBrain, FaTrophy, FaFileAlt, FaRocket } from "react-icons/fa";
 // New Components
 import ScrambleText from "./landing/ScrambleText";
 import MagneticButton from "./landing/MagneticButton";
-import CustomCursor from "./landing/CustomCursor";
 import MiniQuizCard from "./landing/MiniQuizCard";
 import ActivityTicker from "./landing/ActivityTicker";
 import JourneyLine from "./landing/JourneyLine";
@@ -91,11 +90,9 @@ const LandingContent = ({ navigate }) => {
       style={{ 
         overflowX: "hidden", 
         background: "#0a0a0a", 
-        color: "#fff", 
-        cursor: "none" // Hide default cursor for CustomCursor
+        color: "#fff"
       }}
     >
-      <CustomCursor />
       <Navbar />
 
       {/* Hero Section */}
@@ -184,7 +181,6 @@ const LandingContent = ({ navigate }) => {
               color: "#dad7b6",
               border: "2px solid #dad7b6",
               borderRadius: "50px",
-              cursor: "none", // Let CustomCursor handle it
               marginTop: "20px",
               fontWeight: "bold",
               display: "inline-flex",

@@ -1,6 +1,10 @@
 import express from "express";
+import helmet from "helmet";
 import mongoose from "mongoose";
 import cors from "cors";
+import rateLimit from "express-rate-limit";
+import compression from "compression";
+import morgan from "morgan";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
@@ -15,13 +19,56 @@ import userRouter from "./routes/user.js";
 import feedbackRouter from "./routes/feedback.js";
 import leaderboardRoutes from "./routes/leaderboard.js";
 import statsRoutes from "./routes/stats.js";
+import studyGuidesRouter from "./routes/study-guides.js";
 
 dotenv.config();
 const app = express();
 
-// ---------- Middleware ----------
-app.use(cors());
-app.use(express.json());
+// Security headers
+app.use(helmet());
+
+// CORS configuration
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  process.env.CLIENT_URL,
+].filter(Boolean); // Remove undefined values
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true,
+}));
+
+// Compression middleware
+app.use(compression());
+
+// Rate limiting - 500 requests per 15 minutes (adjusted for quiz usage)
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 500, // Increased from 100 to accommodate quiz sessions
+  message: "Too many requests from this IP, please try again after 15 minutes",
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+app.use(limiter);
+
+// HTTP request logger
+app.use(morgan("dev"));
+
+// Body parser with size limit
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// API Routes
 app.use("/api/topics", topicsRoute);
 app.use("/api/questions", questionsRoute);
 app.use("/api/terms", termsRouter);
@@ -31,9 +78,18 @@ app.use("/api/user", userRouter);
 app.use("/api/feedback", feedbackRouter);
 app.use("/api/leaderboard", leaderboardRoutes);
 app.use("/api/stats", statsRoutes);
+app.use("/api/study-guides", studyGuidesRouter);
 
-const JWT_SECRET = process.env.JWT_SECRET || "yoursecretkey";
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+  console.error("FATAL ERROR: JWT_SECRET is not defined.");
+  process.exit(1);
+}
 const MONGO_URI = process.env.MONGO_URI;
+if (!MONGO_URI) {
+  console.error("FATAL ERROR: MONGO_URI is not defined.");
+  process.exit(1);
+}
 
 // ---------- Register ----------
 app.post("/auth/register", async (req, res) => {
@@ -206,11 +262,15 @@ app.put("/user/update-subjects", verifyToken, async (req, res) => {
   }
 });
 
+const PORT = process.env.PORT || 5000;
 // ---------- MongoDB connection ----------
 mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log("✅ MongoDB connected");
-    app.listen(5000, () => console.log("🚀 Server running on port 5000"));
+    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   })
-  .catch((err) => console.error("❌ MongoDB connection error:", err));
+  .catch((err) => {
+    console.error("❌ MongoDB connection error:", err);
+    process.exit(1);
+  });

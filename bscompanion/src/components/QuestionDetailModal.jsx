@@ -1,6 +1,7 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import "./quiz-results.css";
 
 const QuestionDetailModal = ({ question, userAnswer, status, term, exam, onClose }) => {
   if (!question) return null;
