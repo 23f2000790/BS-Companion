@@ -30,10 +30,10 @@ const ActivityTicker = () => {
 
   const items = [
     "🔥 User123 just aced Stats 1",
-    "📚 New Resource: Python Cheatsheet added",
+    "📚 New Resource: Python Study guide added",
     "🏆 50 Students currently online",
     "💡 Tip: Check the Leaderboard for weekly rankings",
-    "🚀 BS Companion v2.0 is live"
+    "🚀 BS Companion v1.0 is live"
   ];
 
   return (

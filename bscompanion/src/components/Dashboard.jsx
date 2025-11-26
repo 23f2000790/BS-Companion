@@ -253,18 +253,8 @@ const Dashboard = () => {
         <h1>Welcome, {user.name} 👋</h1>
       </div>
 
-      <div className="dashboard-grid" style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-        gap: '20px', 
-        padding: '20px',
-        maxWidth: '1200px',
-        margin: '0 auto'
-      }}>
-
-
-        {/* Subject Grid */}
-        <div className="bento-item" style={{ gridColumn: 'span 2' }}>
+      <div className="dashboard-grid">
+        <div className="bento-item">
           <MagicBento 
             user={user}
             openQuizModal={openQuizModal}

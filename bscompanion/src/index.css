@@ -61,31 +61,33 @@ body {
   top: 40px;
 }
 
-.navbar {
+.navbar-container {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  z-index: 100;
+  padding: 20px;
 }
 
-.quote {
-  color: #dad7b6;
-  font-size: 28px;
-  position: absolute;
-  top: 45px;
-  left: 220px;
+.navbar-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.companion {
-  color: var(--text-primary); /* Changed from fixed color to variable */
-  font-size: 100px;
-  position: absolute;
-  left: 380px;
-  bottom: 147px !important;
+/* Center navbar buttons on mobile */
+@media (max-width: 767px) {
+  .navbar-buttons {
+    justify-content: center;
+  }
 }
 
 .button {
-  position: absolute;
+  position: relative;
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
@@ -99,6 +101,13 @@ body {
   transition: color 0.3s ease;
   z-index: 1;
 }
+
+.nav-button {
+  white-space: nowrap;
+  font-size: clamp(13px, 3vw, 16px);
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
+}
+
 
 .button::before {
   content: "";
@@ -147,11 +156,14 @@ body {
   content: "";
   position: absolute;
   bottom: -700px; /* start offscreen */
-  left: 85px; /* same as your original x position */
-  width: 650px;
-  height: 650px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 400px;
+  height: 90vw;
+  max-height: 400px;
   background-image: url("./assets/images/blding.png");
-  background-size: 600px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   animation: slideUp 1.5s ease forwards;
@@ -168,7 +180,42 @@ body {
 /* Keyframes for image slide up */
 @keyframes slideUp {
   to {
-    bottom: 40px; /* final y position */
+    bottom: 60px; /* final y position for mobile */
+  }
+}
+
+/* Tablet and above: adjust building image */
+@media (min-width: 768px) {
+  .auth::before {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 500px;
+    max-height: 500px;
+  }
+  
+  @keyframes slideUp {
+    to {
+      bottom: 50px;
+    }
+  }
+}
+
+/* Desktop: original positioning */
+@media (min-width: 1024px) {
+  .auth::before {
+    left: 85px;
+    transform: none;
+    width: 650px;
+    height: 650px;
+    max-width: none;
+    max-height: none;
+    background-size: 600px;
+  }
+  
+  @keyframes slideUp {
+    to {
+      bottom: 40px;
+    }
   }
 }
 

@@ -37,8 +37,8 @@ const ProblemSection = () => {
           Drowning in <span style={{ color: "#ef4444" }}>Disorganized</span> Study Materials?
         </h2>
         <p style={{ fontSize: "1.5rem", color: "#aaa", lineHeight: 1.6 }}>
-          Scattered PDFs. Missed deadlines. Isolation. <br />
-          The BS Data Science degree is hard enough without the chaos.
+          Multiple PYQ papers. Last minute Revisions. <br />
+          The BS Data Science degree is hard enough with these chaos.
         </p>
       </motion.div>
     </section>

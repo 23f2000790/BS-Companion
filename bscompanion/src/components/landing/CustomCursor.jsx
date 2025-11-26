@@ -1,11 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
   const followerRef = useRef(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  // Detect touch device
+  useEffect(() => {
+    // Check if device has fine pointer (mouse/trackpad) capability
+    // This will be true for laptops/desktops, false for phones/tablets
+    const hasPointer = window.matchMedia('(pointer: fine)').matches;
+    
+    // Only hide cursor on devices without fine pointer (pure touch devices)
+    setIsTouchDevice(!hasPointer);
+  }, []);
 
   useEffect(() => {
+    if (isTouchDevice) return; // Don't initialize on touch devices
+    
     const cursor = cursorRef.current;
     const follower = followerRef.current;
     
@@ -31,7 +44,12 @@ const CustomCursor = () => {
     return () => {
       window.removeEventListener("mousemove", moveCursor);
     };
-  }, []);
+  }, [isTouchDevice]);
+
+  // Don't render cursor on touch devices
+  if (isTouchDevice) {
+    return null;
+  }
 
   return (
     <>

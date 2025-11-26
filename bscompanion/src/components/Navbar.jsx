@@ -14,29 +14,28 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar" style={{ zIndex: 100 }}>
-      <button
-        className="button"
-        style={{ top: 40, right: 30 }}
-        onMouseMove={handleMouseMove}
-        onClick={() => navigate("/auth")}
-      >
-        &ensp;&ensp;&ensp;&ensp;SignIn&ensp;&ensp;&ensp;&ensp;
-      </button>
-      <button
-        className="button"
-        style={{ top: 40, right: 159 }}
-        onMouseMove={handleMouseMove}
-      >
-        &ensp;About&ensp;
-      </button>
-      <button
-        className="button"
-        style={{ top: 40, right: 244 }}
-        onMouseMove={handleMouseMove}
-      >
-        &ensp;BS Documents&ensp;
-      </button>
+    <div className="navbar-container">
+      <div className="navbar-buttons">
+        <button
+          className="button nav-button"
+          onMouseMove={handleMouseMove}
+        >
+          BS Documents
+        </button>
+        <button
+          className="button nav-button"
+          onMouseMove={handleMouseMove}
+        >
+          About
+        </button>
+        <button
+          className="button nav-button"
+          onMouseMove={handleMouseMove}
+          onClick={() => navigate("/auth")}
+        >
+          SignIn
+        </button>
+      </div>
     </div>
   );
 };

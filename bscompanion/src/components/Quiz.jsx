@@ -396,7 +396,53 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
   const [loadingAI, setLoadingAI] = useState(false);
   const [aiError, setAiError] = useState(null);
   const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [aiUsageRemaining, setAiUsageRemaining] = useState(3);
+  const [aiUsageLoading, setAiUsageLoading] = useState(true);
 
+  // Check AI usage limit on component mount
+  useEffect(() => {
+    const checkAIUsage = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const response = await api.get("/getuser", {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        
+        const user = response.data.user;
+        const now = new Date();
+        // Use flat fields matching database
+        const lastReset = new Date(user.aiAnalysisResetDate || user.aiUsage?.lastResetDate || Date.now());
+        const currentCount = user.aiAnalysisCount !== undefined ? user.aiAnalysisCount : (user.aiUsage?.count || 0);
+        
+        // Check if same month
+        const isSameMonth = now.getMonth() === lastReset.getMonth() && 
+                           now.getFullYear() === lastReset.getFullYear();
+        
+        if (isSameMonth) {
+          setAiUsageRemaining(Math.max(0, 3 - currentCount));
+        } else {
+          // New month - reset in DB and show full 3
+          try {
+             await api.put("/api/user/update-ai-usage", 
+               { count: 0, lastResetDate: now },
+               { headers: { Authorization: `Bearer ${token}` }}
+             );
+             setAiUsageRemaining(3);
+          } catch (resetError) {
+             console.error("Error resetting monthly usage:", resetError);
+             setAiUsageRemaining(3); // Optimistically show 3
+          }
+        }
+      } catch (error) {
+        console.error("Error checking AI usage:", error);
+        setAiUsageRemaining(3); 
+      } finally {
+        setAiUsageLoading(false);
+      }
+    };
+    
+    checkAIUsage();
+  }, []);
 
   const stats = useMemo(() => {
     if (!results) return null;
@@ -446,6 +492,7 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
   }, [results]);
 
   const formatTime = (secs) => `${Math.floor(secs / 60)}m ${secs % 60}s`;
+  
   const formatCorrectAnswer = (option) => {
     if (Array.isArray(option)) return option.join(", ");
     if (
@@ -460,6 +507,12 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
   };
 
   const handleAnalyzeWithAI = async () => {
+    // Check usage limit before proceeding
+    if (aiUsageRemaining <= 0) {
+      setAiError("You've reached your monthly limit of 3 AI analyses. Resets next month.");
+      return;
+    }
+
     setLoadingAI(true);
     setAiError(null);
     try {
@@ -489,6 +542,24 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
         }
       );
       setAiAnalysis(response.data.analysis);
+      
+      // Increment usage count after successful analysis
+      try {
+        const userResponse = await api.get("/getuser", {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const user = userResponse.data.user;
+        const currentCount = user.aiAnalysisCount !== undefined ? user.aiAnalysisCount : (user.aiUsage?.count || 0);
+        
+        await api.put("/api/user/update-ai-usage",
+          { count: currentCount + 1 },
+          { headers: { Authorization: `Bearer ${token}` }}
+        );
+        
+        setAiUsageRemaining(Math.max(0, 2 - currentCount));
+      } catch (updateError) {
+        console.error("Error updating AI usage count:", updateError);
+      }
     } catch (error) {
       console.error("Error fetching AI analysis:", error);
       setAiError(
@@ -509,10 +580,18 @@ const QuizResults = ({ results, originalQuestions, resultId, savedAiAnalysis }) 
               <button
                 className="btn btn-ai-analyze"
                 onClick={handleAnalyzeWithAI}
-                disabled={loadingAI}
+                disabled={loadingAI || aiUsageLoading || aiUsageRemaining === 0}
               >
-                {loadingAI ? "Analyzing..." : "🤖 Analyze Performance with AI"}
+                {loadingAI ? "Analyzing..." : 
+                 aiUsageLoading ? "Checking availability..." :
+                 aiUsageRemaining === 0 ? "🔒 No AI Analyses Remaining" :
+                 `🤖 Analyze Performance with AI (${aiUsageRemaining}/3 remaining)`}
               </button>
+              {aiUsageRemaining === 0 && !aiAnalysis && (
+                <div className="ai-error">
+                  You've used all 3 AI analyses for this month. Resets next month.
+                </div>
+              )}
               {aiError && <div className="ai-error">{aiError}</div>}
            </div>
         )}
@@ -964,6 +1043,8 @@ const Quiz = () => {
     // Mark the *current* question (the one we are leaving) as visited
     setVisitedQuestions(prev => new Set(prev).add(current));
     setCurrent(index);
+    // Reset feedback when navigating to a new question in practice mode
+    setShowFeedback(false);
   };
 
   const handleAnswer = (index, value, multiple = false) => {

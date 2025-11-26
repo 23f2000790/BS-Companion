@@ -171,4 +171,33 @@ router.put('/update-profile', verifyToken, async (req, res) => {
   }
 });
 
+// @route   PUT api/user/update-ai-usage
+// @desc    Update AI analysis usage stats
+// @access  Private
+router.put('/update-ai-usage', verifyToken, async (req, res) => {
+  try {
+    const { count, lastResetDate } = req.body;
+    const userId = req.user.id;
+
+    const update = {};
+    if (count !== undefined) update.aiAnalysisCount = count;
+    if (lastResetDate) update.aiAnalysisResetDate = lastResetDate;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      update,
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json({ user: updatedUser });
+  } catch (error) {
+    console.error('Error updating AI usage:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 export default router;

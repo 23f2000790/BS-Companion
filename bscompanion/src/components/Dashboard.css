@@ -73,6 +73,38 @@
   font-weight: 500;
 }
 
+/* === DASHBOARD GRID === */
+.dashboard-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bento-item {
+  width: 100%;
+}
+
+/* Mobile: reduce padding and adjust header */
+@media (max-width: 700px) {
+  .dashboard {
+    padding: 2rem 1rem;
+    padding-bottom: 8rem;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  .dashboard-grid {
+    padding: 0 0.5rem;
+  }
+}
+
 .modal-box {
   margin-bottom: 1.5rem;
 }

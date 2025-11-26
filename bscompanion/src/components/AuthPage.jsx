@@ -4,6 +4,7 @@ import { signInWithGoogle } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
+import "./AuthPage.css";
 
 // Floating elements
 import benchele from "../assets/images/benchele.png";
@@ -152,67 +153,30 @@ const AuthPage = () => {
         className="button"
         onClick={() => navigate("/")}
         onMouseMove={handleMouseMove}
-        style={{
-          top: "12px",
-          left: "12px",
-          padding: "3px 10px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
       >
         <IoIosArrowBack style={{ fontSize: "1.5rem", color: "#1e1e1e" }} />
       </button>
 
       {/* Auth content */}
-      <div
-        className="auth-content"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-          paddingLeft: "650px",
-          width: "100%",
-        }}
-      >
-        <h1 style={{ marginBottom: "20px", color: "#dad7b6" }}>
-          Sign In
-        </h1>
+      <div className="auth-content">
+        <h1>Sign In</h1>
 
         {/* Google sign-in */}
         <button
+          className="google-signin-btn"
           onClick={handleGoogleSignIn}
           disabled={loading}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            padding: "12px 24px",
-            fontSize: "16px",
-            borderRadius: "50px",
-            border: "none",
-            backgroundColor: "#fff",
-            color: "#1e1e1e",
-            cursor: loading ? "not-allowed" : "pointer",
-            marginBottom: "20px",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-            transition: "transform 0.2s ease",
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-          onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
         >
           {loading ? (
             "Signing in..."
           ) : (
             <>
-              <FcGoogle style={{ fontSize: "1.5rem" }} /> Sign in with Google
+              <FcGoogle /> Sign in with Google
             </>
           )}
         </button>
 
-        {error && <p style={{ color: "red", marginTop: "15px" }}>{error}</p>}
+        {error && <p className="auth-error">{error}</p>}
       </div>
     </div>
   );

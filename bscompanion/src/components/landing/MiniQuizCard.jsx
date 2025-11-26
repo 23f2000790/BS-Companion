@@ -95,20 +95,7 @@ const MiniQuizCard = () => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 1, duration: 0.8 }}
-      style={{
-        background: "rgba(255, 255, 255, 0.05)",
-        backdropFilter: "blur(10px)",
-        padding: "20px",
-        borderRadius: "15px",
-        border: "1px solid rgba(255, 255, 255, 0.1)",
-        maxWidth: "300px",
-        position: "absolute",
-        right: "10%",
-        top: "50%",
-        transform: "translateY(-50%)",
-        zIndex: 2,
-        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
-      }}
+      className="mini-quiz-card"
     >
       <AnimatePresence mode="wait">
         {!answered ? (

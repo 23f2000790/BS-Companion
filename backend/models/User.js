@@ -13,6 +13,8 @@ const userSchema = new mongoose.Schema({
   bloodGroup: String,
   currentLevel: String,
   subjects: [String],
+  aiAnalysisCount: { type: Number, default: 0 },
+  aiAnalysisResetDate: { type: Date, default: Date.now },
   onboardingCompleted: { type: Boolean, default: false },
 });
 

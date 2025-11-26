@@ -23,6 +23,7 @@ import studyGuidesRouter from "./routes/study-guides.js";
 
 dotenv.config();
 const app = express();
+app.set('trust proxy', 1);
 
 // Security headers
 app.use(helmet());
@@ -50,6 +51,27 @@ app.use(cors({
 
 // Compression middleware
 app.use(compression());
+
+// Cache-Control middleware for static assets
+app.use((req, res, next) => {
+  // Cache images for 1 year (immutable assets)
+  if (req.url.match(/\.(jpg|jpeg|png|gif|svg|webp|ico)$/i)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+  // Cache fonts, CSS, and JS for 30 days
+  else if (req.url.match(/\.(woff|woff2|ttf|eot|css|js)$/i)) {
+    res.setHeader('Cache-Control', 'public, max-age=2592000');
+  }
+  // Cache API responses - Disable caching for dynamic data
+  else if (req.url.startsWith('/api/')) {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+  }
+  // Enable ETag for better cache validation
+  res.setHeader('ETag', 'W/"' + Date.now() + '"');
+  next();
+});
 
 // Rate limiting - 500 requests per 15 minutes (adjusted for quiz usage)
 const limiter = rateLimit({
@@ -173,6 +195,14 @@ app.get("/getuser", async (req, res) => {
 
     const user = await User.findById(decoded.id);
     if (!user) return res.status(404).json({ message: "User not found" });
+
+    // Lazy migration: Initialize AI usage fields for existing users if missing
+    if (user.aiAnalysisCount === undefined) {
+      user.aiAnalysisCount = 0;
+      user.aiAnalysisResetDate = new Date();
+      await user.save();
+    }
+
     res.json({ user, needsOnboarding: !user.onboardingCompleted });
   } catch (err) {
     res.status(500).json({ error: err.message });

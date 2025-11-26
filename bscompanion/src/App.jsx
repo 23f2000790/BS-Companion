@@ -20,32 +20,14 @@ const LeaderboardPage = lazy(() => import("./pages/LeaderboardPage"));
 const StudyGuideView = lazy(() => import("./components/StudyGuideView"));
 const StudyGuideHistory = lazy(() => import("./components/StudyGuideHistory"));
 
-// Wrapper component to handle custom cursor visibility
+// Wrapper component for app content
 const AppContent = () => {
   const location = useLocation();
-  
-  // Only show custom cursor on landing and auth pages
-  const showCustomCursor = location.pathname === '/' || location.pathname === '/auth';
-
-  // Add body classes for cursor styling
-  useEffect(() => {
-    document.body.classList.remove('landing-page', 'auth-page');
-    
-    if (location.pathname === '/') {
-      document.body.classList.add('landing-page');
-    } else if (location.pathname === '/auth') {
-      document.body.classList.add('auth-page');
-    }
-    
-    return () => {
-      document.body.classList.remove('landing-page', 'auth-page');
-    };
-  }, [location.pathname]);
 
   return (
     <>
-      {/* Custom cursor only on landing and sign-in pages */}
-      {showCustomCursor && <CustomCursor />}
+      {/* Custom cursor enabled app-wide */}
+      <CustomCursor />
       
       <Suspense
         fallback={
@@ -141,15 +123,11 @@ const App = () => {
     <ThemeProvider>
       <Router>
         <AnalyticsTracker />
-        {/* Hide default cursor only on landing and auth pages */}
+        {/* Hide default cursor globally */}
         <style>
           {`
-            body.landing-page,
-            body.auth-page {
-              cursor: none !important;
-            }
-            body.landing-page *,
-            body.auth-page * {
+            body,
+            body * {
               cursor: none !important;
             }
           `}
