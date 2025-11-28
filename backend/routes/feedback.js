@@ -9,11 +9,16 @@ const router = express.Router();
 // This MUST be YOUR account (or a dedicated app account)
 // This account effectively "delivers" the message.
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.EMAIL_USER, // Your App's Email
-    pass: process.env.EMAIL_PASS, // Your App's 16-char Password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
+  connectionTimeout: 10000,
+  greetingTimeout: 10000,
+  socketTimeout: 10000
 });
 
 router.post("/", verifyToken, async (req, res) => {
