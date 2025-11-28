@@ -1,0 +1,2000 @@
+[
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "If the aim is to highlight the behaviour of the product sales in the past year, then which of the following visualizations would be best suited?",
+    "options": {
+      "A": "Graph 1",
+      "B": "Graph 2",
+      "C": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764248875/Minimalist_Black_and_White_Blank_Paper_Document_19_qil0gv.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "If the aim is to highlight the market share of the products in the past year, then which of the following visualizations would be best suited?",
+    "options": {
+      "A": "Graph 1",
+      "B": "Graph 2",
+      "C": "Graph 3",
+      "D": "Graph 4"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249175/Minimalist_Black_and_White_Blank_Paper_Document_21_payprz.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A company sells two products (A and B) in two different marketplaces. In the first marketplace, the sales are made at the Forenoon (FN). In the second marketplace, sales are made during the Afternoon (AN). Table-2 provides the data on the sales in the two marketplaces for the two products in the first 10 days on January 2023. Using this data, answer the given subquestions.",
+    "question": "If the total sales of both products (A&B) on any given day are expected to be uniformly distributed across both marketplaces, then what is the expected total sales on any given day? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 123,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764248023/agent_extracts/BA_Jan%202023_quiz1/ct5dygaq78sgtkltrx5u.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A company sells two products (A and B) in two different marketplaces. In the first marketplace, the sales are made at the Forenoon (FN). In the second marketplace, sales are made during the Afternoon (AN). Table-2 provides the data on the sales in the two marketplaces for the two products in the first 10 days on January 2023. Using this data, answer the given subquestions.",
+    "question": "To test the hypothesis that the total sales of both products (A&B) are uniformly distributed across both marketplaces (FN&AN), a chi-square goodness-of-fit test is conducted. If the days are taken as the buckets, then what is the value of the computed test statistic? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 3.45,
+      "max": 3.55
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764248023/agent_extracts/BA_Jan%202023_quiz1/ct5dygaq78sgtkltrx5u.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A company sells two products (A and B) in two different marketplaces. In the first marketplace, the sales are made at the Forenoon (FN). In the second marketplace, sales are made during the Afternoon (AN). Table-2 provides the data on the sales in the two marketplaces for the two products in the first 10 days on January 2023. Using this data, answer the given subquestions.",
+    "question": "In the Goodness-of-Fit test, if the computed test statistic is greater than the tabulated value of the test statistic at a given significance level, then (choose all that is applicable)",
+    "options": {
+      "A": "Reject the null hypothesis and conclude that there is strong evidence that the data does not come from a population with a specified distribution",
+      "B": "At the specified significance level, reject the null hypothesis and conclude that there is strong evidence that the data does not come from a population with a specified distribution",
+      "C": "Do not reject the null hypothesis and conclude that there is strong evidence that the data does not come from a population with a specified distribution",
+      "D": "At the specified significance level, do not reject the null hypothesis and conclude that there is strong evidence that the data does not come from a population with a specified distribution",
+      "E": "None of these"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764248023/agent_extracts/BA_Jan%202023_quiz1/ct5dygaq78sgtkltrx5u.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A company sells two products (A and B) in two different marketplaces. In the first marketplace, the sales are made at the Forenoon (FN). In the second marketplace, sales are made during the Afternoon (AN). Table-2 provides the data on the sales in the two marketplaces for the two products in the first 10 days on January 2023. Using this data, answer the given subquestions.",
+    "question": "In the Goodness-of-fit test, if the days are taken as the buckets, what is the number of degrees of freedom if the total sales of both products (A&B) across both markets (FN&AN) is assumed to be normally distributed? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 7,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764248023/agent_extracts/BA_Jan%202023_quiz1/ct5dygaq78sgtkltrx5u.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A company sells two products (A and B) in two different marketplaces. In the first marketplace, the sales are made at the Forenoon (FN). In the second marketplace, sales are made during the Afternoon (AN). Table-2 provides the data on the sales in the two marketplaces for the two products in the first 10 days on January 2023. Using this data, answer the given subquestions.",
+    "question": "The question of whether sales of products A and B are independent across the different markets is being checked. Then what is the value of the computed test statistic? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 0.73,
+      "max": 0.77
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764248023/agent_extracts/BA_Jan%202023_quiz1/ct5dygaq78sgtkltrx5u.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A company sells two products (A and B) in two different marketplaces. In the first marketplace, the sales are made at the Forenoon (FN). In the second marketplace, sales are made during the Afternoon (AN). Table-2 provides the data on the sales in the two marketplaces for the two products in the first 10 days on January 2023. Using this data, answer the given subquestions.",
+    "question": "The question of whether sales of products A and B are independent across the different markets is being checked. Then what is the number of degrees of freedom for the test?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764248023/agent_extracts/BA_Jan%202023_quiz1/ct5dygaq78sgtkltrx5u.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Predictive Modeling and Classification",
+    "context": "The linear demand response for product-A is modelled as a simple linear regression represented as D(P) = 1500 - 20*P, where D(P) is the demand at price-P. Then, answer the given subquestions.",
+    "question": "What is the elasticity of the demand-response curve when the price is Rs. 50? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Predictive Modeling and Classification",
+    "context": "The linear demand response for product-A is modelled as a simple linear regression represented as D(P) = 1500 - 20*P, where D(P) is the demand at price-P. Then, answer the given subquestions.",
+    "question": "What is the satiating price for the demand-response curve? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 75,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You want to apply for a student visa to country X. You can do this through any one of the two application centres, \u201cA\u201d or \u201cB\u201d. To determine which application centre to choose, you collect data. Currently, the embassy has decided to receive 65% of the applications from centre A, and 35% from centre B. Historically, 70% of the applications from centre A have been granted the visa, and 80% of the applications from centre B have been granted the visa. Then answer the given subquestions.",
+    "question": "What is your probability of applying for a student visa through centre A and it is granted?",
+    "options": null,
+    "correctOption": {
+      "min": 0.45,
+      "max": 0.47
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You want to apply for a student visa to country X. You can do this through any one of the two application centres, \u201cA\u201d or \u201cB\u201d. To determine which application centre to choose, you collect data. Currently, the embassy has decided to receive 65% of the applications from centre A, and 35% from centre B. Historically, 70% of the applications from centre A have been granted the visa, and 80% of the applications from centre B have been granted the visa. Then answer the given subquestions.",
+    "question": "What is your probability of applying for a student visa through centre B and it is granted?",
+    "options": null,
+    "correctOption": {
+      "min": 0.27,
+      "max": 0.29
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You want to apply for a student visa to country X. You can do this through any one of the two application centres, \u201cA\u201d or \u201cB\u201d. To determine which application centre to choose, you collect data. Currently, the embassy has decided to receive 65% of the applications from centre A, and 35% from centre B. Historically, 70% of the applications from centre A have been granted the visa, and 80% of the applications from centre B have been granted the visa. Then answer the given subquestions.",
+    "question": "Say you find someone who had applied for a student visa in the past, and the application was rejected. However, that person (someone) has not told you which application centre was chosen to submit the application. Then which application centre will you choose, given this additional information?",
+    "options": {
+      "A": "Centre A",
+      "B": "Centre B"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "From the Figure-1, which of the below statements are true?",
+    "options": {
+      "A": "There is a positive correlation between the number of pirates and the global average temperature increase",
+      "B": "There is no correlation between the number of pirates and the global average temperature increase",
+      "C": "More data is required to arrive at a conclusion",
+      "D": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249754/jan24-1_sr3xo4.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "The p-value of the chi-square goodness of fit test represents __________",
+    "options": {
+      "A": "None of these",
+      "B": "The chance of observing the sample when the alternative hypothesis is true",
+      "C": "The chance of observing the sample at the specified level of significance",
+      "D": "The chance of observing the sample when the null hypothesis is true"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "Which of the following distributions is/are symmetric in nature (Select all that are applicable)?",
+    "options": {
+      "A": "Standard normal distribution",
+      "B": "Exponential distribution",
+      "C": "Uniform distribution between [-1 to +1]",
+      "D": "Poisson distribution"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "A data set with 450 data points provides information on 13 variables. Chi-square goodness of fit test is conducted on a variable in the data-set, to see if it follows a normal distribution. If the dataset is binned into 15 bins, then how many degrees of freedom does the chi-square statistic have?",
+    "options": null,
+    "correctOption": 12,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "The linear demand response for a product-X is modelled as a simple linear regression represented as D(P) = 5000 \u2013 20*P, where D(P) is the demand at price-P. Then, answer the given subquestions.",
+    "question": "What is the elasticity of this curve when the price is Rs.100? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": {
+      "min": 0.65,
+      "max": 0.67
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "The linear demand response for a product-X is modelled as a simple linear regression represented as D(P) = 5000 \u2013 20*P, where D(P) is the demand at price-P. Then, answer the given subquestions.",
+    "question": "What is the satiating price for this curve? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": 250,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "Using the excel regression output given in Figure-2 answer the given sub questions.",
+    "question": "What is the value of \u201cX1\u201d?",
+    "options": null,
+    "correctOption": 12,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249803/jan24-2_ahmpry.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "Using the excel regression output given in Figure-2 answer the given sub questions.",
+    "question": "What is the value of \u201cX2\u201d? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 18493221.0,
+      "max": 18493222.0
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249803/jan24-2_ahmpry.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "Using the excel regression output given in Figure-2 answer the given sub questions.",
+    "question": "What is the value of \u201cX3\u201d? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 132407.0,
+      "max": 132408.0
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249803/jan24-2_ahmpry.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "Using the excel regression output given in Figure-2 answer the given sub questions.",
+    "question": "What is the value of \u201cX4\u201d?",
+    "options": null,
+    "correctOption": {
+      "min": 138.0,
+      "max": 140.0
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249803/jan24-2_ahmpry.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Data Visualization Techniques",
+    "context": "Given the imaginary demand response curve in the below figure, answer the given subquestions.",
+    "question": "Which of the following statements are true? (choose all that is applicable)",
+    "options": {
+      "A": "As price increases, latent demand decreases",
+      "B": "As it is a linear curve, there is no impact of price on latent demand",
+      "C": "The curve does not have any latent demand region",
+      "D": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249803/jan24-3_ty7dz8.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "Given the imaginary demand response curve in the below figure, answer the given subquestions.",
+    "question": "What is the elasticity between any two points of the given demand response curve? (Note-1: Do not assume that it is linear and do not assume that it is a constant elasticity curve) (Note-2: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249803/jan24-3_ty7dz8.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "Given the imaginary demand response curve in the below figure, answer the given subquestions.",
+    "question": "Based on the computed elasticity, what kind of demand is being exhibited by the product?",
+    "options": {
+      "A": "Elastic demand",
+      "B": "Inelastic demand",
+      "C": "Demand for an inferior good",
+      "D": "Demand for a normal good"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764249803/jan24-3_ty7dz8.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You are given the following contingency table (Table-1) based on sample data where different cities and their brand preferences are provided. You perform a chi-squared test of independence to make inferences about the population from this sample. Table-1 shows: Chennai (Brand A: 350, Brand B: 120), Mumbai (Brand A: 280, Brand B: 204).",
+    "question": "From the given contingency table, find the expected frequency of Chennai people preferring brand B? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": {
+      "min": 159.0,
+      "max": 160.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You are given the following contingency table (Table-1) based on sample data where different cities and their brand preferences are provided. You perform a chi-squared test of independence to make inferences about the population from this sample. Table-1 shows: Chennai (Brand A: 350, Brand B: 120), Mumbai (Brand A: 280, Brand B: 204).",
+    "question": "What is the calculated value of chi-squared? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": {
+      "min": 28.0,
+      "max": 30.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You are given the following contingency table (Table-1) based on sample data where different cities and their brand preferences are provided. You perform a chi-squared test of independence to make inferences about the population from this sample. Table-1 shows: Chennai (Brand A: 350, Brand B: 120), Mumbai (Brand A: 280, Brand B: 204).",
+    "question": "At the significance level 0.01, chi-squared tabular value is 6.63. What do you conclude?",
+    "options": {
+      "A": "Reject the null hypothesis and conclude that the categorical variables are not independent",
+      "B": "Fail to reject the null hypothesis and conclude that the categorical variables are not independent",
+      "C": "Fail to reject the null hypothesis and conclude that the categorical variables are independent",
+      "D": "Reject the null hypothesis and conclude that the categorical variables are independent"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "The application for the degree \u201cMaster in Being Useless (MBU)\u201d has begun at \u201cStar University (SU)\u201d. The applicants to SU are from three professional categories namely \u201cTV Watcher\u201d, \u201cMobile Gamer\u201d and \u201cProcrastinator\u201d. The previous year admissions indicate that 20% of the total applications are Procrastinators, 40% are Mobile Gamers and the rest are TV Watchers. When examining past applications submitted by the three professional categories, it is seen that the applications are either \u201cFully Completed\u201d, \u201cHalf Completed\u201d or \u201cBlank\u201d. It is observed that among the \u201cMobile Gamer\u201d applications that are received, 30% are \u201cFully Completed\u201d and 60% is \u201cHalf Completed\u201d. For TV Watcher applications that are received, 40% are \u201cHalf Completed\u201d and 20% are \u201cBlank\u201d. Among all received Procrastinator applications, 50% have submitted \u201cBlank\u201d applications and 40% have submitted \u201cHalf Completed\u201d applications. Assuming the necessary mutual exclusiveness, answer the given subquestions.",
+    "question": "What is the probability that an application for the coming admission will be \u201cFully Completed\u201d? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": {
+      "min": 0.29,
+      "max": 0.31
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "The application for the degree \u201cMaster in Being Useless (MBU)\u201d has begun at \u201cStar University (SU)\u201d. The applicants to SU are from three professional categories namely \u201cTV Watcher\u201d, \u201cMobile Gamer\u201d and \u201cProcrastinator\u201d. The previous year admissions indicate that 20% of the total applications are Procrastinators, 40% are Mobile Gamers and the rest are TV Watchers. When examining past applications submitted by the three professional categories, it is seen that the applications are either \u201cFully Completed\u201d, \u201cHalf Completed\u201d or \u201cBlank\u201d. It is observed that among the \u201cMobile Gamer\u201d applications that are received, 30% are \u201cFully Completed\u201d and 60% is \u201cHalf Completed\u201d. For TV Watcher applications that are received, 40% are \u201cHalf Completed\u201d and 20% are \u201cBlank\u201d. Among all received Procrastinator applications, 50% have submitted \u201cBlank\u201d applications and 40% have submitted \u201cHalf Completed\u201d applications. Assuming the necessary mutual exclusiveness, answer the given subquestions.",
+    "question": "If a total of 550 applications are expected to be received for the upcoming admission, then how many would you expect to be \u201cBlank\u201d? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d)",
+    "options": null,
+    "correctOption": 121,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "The application for the degree \u201cMaster in Being Useless (MBU)\u201d has begun at \u201cStar University (SU)\u201d. The applicants to SU are from three professional categories namely \u201cTV Watcher\u201d, \u201cMobile Gamer\u201d and \u201cProcrastinator\u201d. The previous year admissions indicate that 20% of the total applications are Procrastinators, 40% are Mobile Gamers and the rest are TV Watchers. When examining past applications submitted by the three professional categories, it is seen that the applications are either \u201cFully Completed\u201d, \u201cHalf Completed\u201d or \u201cBlank\u201d. It is observed that among the \u201cMobile Gamer\u201d applications that are received, 30% are \u201cFully Completed\u201d and 60% is \u201cHalf Completed\u201d. For TV Watcher applications that are received, 40% are \u201cHalf Completed\u201d and 20% are \u201cBlank\u201d. Among all received Procrastinator applications, 50% have submitted \u201cBlank\u201d applications and 40% have submitted \u201cHalf Completed\u201d applications. Assuming the necessary mutual exclusiveness, answer the given subquestions.",
+    "question": "SU is planning spend money on advertising to increase applications. Once the advertising is completed, a total of 600 applications are expected. Then, what is the expected revenue that can be generated from \u201cTV Watcher\u201d category if an application fee of Rs. 500 is charged for \u201cBlank\u201d applications, Rs. 200 is charged for \u201cHalf Completed\u201d applications and Rs. 100 is for \u201cFully Completed\u201d applications? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c1.234\u201d, then enter it as\u201d1.23\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 131999.0,
+      "max": 132001.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "The application for the degree \u201cMaster in Being Useless (MBU)\u201d has begun at \u201cStar University (SU)\u201d. The applicants to SU are from three professional categories namely \u201cTV Watcher\u201d, \u201cMobile Gamer\u201d and \u201cProcrastinator\u201d. The previous year admissions indicate that 20% of the total applications are Procrastinators, 40% are Mobile Gamers and the rest are TV Watchers. When examining past applications submitted by the three professional categories, it is seen that the applications are either \u201cFully Completed\u201d, \u201cHalf Completed\u201d or \u201cBlank\u201d. It is observed that among the \u201cMobile Gamer\u201d applications that are received, 30% are \u201cFully Completed\u201d and 60% is \u201cHalf Completed\u201d. For TV Watcher applications that are received, 40% are \u201cHalf Completed\u201d and 20% are \u201cBlank\u201d. Among all received Procrastinator applications, 50% have submitted \u201cBlank\u201d applications and 40% have submitted \u201cHalf Completed\u201d applications. Assuming the necessary mutual exclusiveness, answer the given subquestions.",
+    "question": "Recently, you saw a person applying to \u201cSU\u201d. The person had submitted the application \u201cHalf Completed\u201d. Then which category would you suspect the person to belong to?",
+    "options": {
+      "A": "TV Watcher",
+      "B": "Procrastinator",
+      "C": "Mobile Gamer",
+      "D": "None of these, as I do not know how to solve"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "You are given a data of size 1000, which is centred at 50 and has a variance of 25. The median, mode, max and min values are 40, 22, 75 and 1 respectively.Then",
+    "options": {
+      "A": "The data is right-tailed",
+      "B": "The data is left-tailed",
+      "C": "The data is symmetric",
+      "D": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "When is a \u201cPie Chart\u201d the best visualisation option for presenting data (choose all that is/are applicable)?",
+    "options": {
+      "A": "When the outliers in the data need to be shown",
+      "B": "When trends in the data need to be shown",
+      "C": "When relationship between variables need to be shown",
+      "D": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Predictive Modeling and Classification",
+    "context": "(The following comprehension is purely imaginary)\nA restaurant (\u201cMilo\u2019s Kitchen\u201d) has data pertaining to customers ordering three types of starters \u201cPaneer Tikka (PT)\u201d, \u201cBaby Corn Manchurian (BCM)\u201d and \u201cMasala Papad (MP)\u201d.\nFor simplicity assume that the orders for starters is mutually exclusive and that a customer does not order more than one starter. Moreover, the customers who order these starters are predominantly one of the three types of eaters, \u201cRoti Eaters\u201d, \u201cPoori Eaters\u201d or \u201cRice Eaters\u201d (Note: customers can be \u201cother eaters\u201d as well. Hence, the list is not exhaustive). From past footfall data, it is seen that 25% of the customer\u2019s order \u201cBCM\u201d and another 40% order \u201cPT\u201d. The remaining customers order \u201cMP\u201d. It is observed that,\na. Of the people ordering \u201cBCM\u201d, 30% are \u201cRoti Eaters\u201d and 60% are \u201cPoori Eaters\u201d.\nb. For \u201cPT\u201d orders, it is observed that 40% are \u201cRice Eaters\u201d, 20% are \u201cPoori Eaters\u201d and another 20% are \u201cRoti Eaters\u201d.\nc. 50% of the customers who order \u201cMP\u201d are \u201cRice Eaters\u201d and 40% are \u201cPoori Eaters\u201d\nd. \u201cBCM\u201d is never ordered by \u201cRice Eaters\u201d and \u201cMP\u201d is never opted for by \u201cRoti Eaters\u201d\nAssuming any other necessary mutual exclusiveness, and answer the given sub questions.",
+    "question": "If 1,000 customers come to the restaurant, how many will/may be \u201cRice Eaters\u201d? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c10.235\u201d, then enter it as \u201c10.24\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": 335,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Predictive Modeling and Classification",
+    "context": "(The following comprehension is purely imaginary)\nA restaurant (\u201cMilo\u2019s Kitchen\u201d) has data pertaining to customers ordering three types of starters \u201cPaneer Tikka (PT)\u201d, \u201cBaby Corn Manchurian (BCM)\u201d and \u201cMasala Papad (MP)\u201d.\nFor simplicity assume that the orders for starters is mutually exclusive and that a customer does not order more than one starter. Moreover, the customers who order these starters are predominantly one of the three types of eaters, \u201cRoti Eaters\u201d, \u201cPoori Eaters\u201d or \u201cRice Eaters\u201d (Note: customers can be \u201cother eaters\u201d as well. Hence, the list is not exhaustive). From past footfall data, it is seen that 25% of the customer\u2019s order \u201cBCM\u201d and another 40% order \u201cPT\u201d. The remaining customers order \u201cMP\u201d. It is observed that,\na. Of the people ordering \u201cBCM\u201d, 30% are \u201cRoti Eaters\u201d and 60% are \u201cPoori Eaters\u201d.\nb. For \u201cPT\u201d orders, it is observed that 40% are \u201cRice Eaters\u201d, 20% are \u201cPoori Eaters\u201d and another 20% are \u201cRoti Eaters\u201d.\nc. 50% of the customers who order \u201cMP\u201d are \u201cRice Eaters\u201d and 40% are \u201cPoori Eaters\u201d\nd. \u201cBCM\u201d is never ordered by \u201cRice Eaters\u201d and \u201cMP\u201d is never opted for by \u201cRoti Eaters\u201d\nAssuming any other necessary mutual exclusiveness, and answer the given sub questions.",
+    "question": "If 4,000 customers had visited the shop on 10th December 2024, then how many \u201cBCMs\u201d will you expect to serve? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c10.235\u201d, then enter it as \u201c10.24\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": 1000,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Predictive Modeling and Classification",
+    "context": "(The following comprehension is purely imaginary)\nA restaurant (\u201cMilo\u2019s Kitchen\u201d) has data pertaining to customers ordering three types of starters \u201cPaneer Tikka (PT)\u201d, \u201cBaby Corn Manchurian (BCM)\u201d and \u201cMasala Papad (MP)\u201d.\nFor simplicity assume that the orders for starters is mutually exclusive and that a customer does not order more than one starter. Moreover, the customers who order these starters are predominantly one of the three types of eaters, \u201cRoti Eaters\u201d, \u201cPoori Eaters\u201d or \u201cRice Eaters\u201d (Note: customers can be \u201cother eaters\u201d as well. Hence, the list is not exhaustive). From past footfall data, it is seen that 25% of the customer\u2019s order \u201cBCM\u201d and another 40% order \u201cPT\u201d. The remaining customers order \u201cMP\u201d. It is observed that,\na. Of the people ordering \u201cBCM\u201d, 30% are \u201cRoti Eaters\u201d and 60% are \u201cPoori Eaters\u201d.\nb. For \u201cPT\u201d orders, it is observed that 40% are \u201cRice Eaters\u201d, 20% are \u201cPoori Eaters\u201d and another 20% are \u201cRoti Eaters\u201d.\nc. 50% of the customers who order \u201cMP\u201d are \u201cRice Eaters\u201d and 40% are \u201cPoori Eaters\u201d\nd. \u201cBCM\u201d is never ordered by \u201cRice Eaters\u201d and \u201cMP\u201d is never opted for by \u201cRoti Eaters\u201d\nAssuming any other necessary mutual exclusiveness, and answer the given sub questions.",
+    "question": "Milo\u2019s Kitchen is planning spend money on purchasing a refrigerator (for \u201cPaneer\u201d and \u201cBaby Corn\u201d storage). If the 600 \u201cPoori Eaters\u201d are expected to arrive, then what is the expected revenue generated from them if the restaurant charges Rs. 350 per PT order, Rs. 250 per BCM order and Rs. 80 per MP order? (Note: Enter the answer \u201cin Rupees\u201d rounded to two decimal places. For example, if the answer is \u201cRs. 10.235\u201d, then enter it as \u201c10.24\u201d. DO NOT ENTER ANY SYMBOLS OR LETTERS)",
+    "options": null,
+    "correctOption": 46020,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Predictive Modeling and Classification",
+    "context": "(The following comprehension is purely imaginary)\nA restaurant (\u201cMilo\u2019s Kitchen\u201d) has data pertaining to customers ordering three types of starters \u201cPaneer Tikka (PT)\u201d, \u201cBaby Corn Manchurian (BCM)\u201d and \u201cMasala Papad (MP)\u201d.\nFor simplicity assume that the orders for starters is mutually exclusive and that a customer does not order more than one starter. Moreover, the customers who order these starters are predominantly one of the three types of eaters, \u201cRoti Eaters\u201d, \u201cPoori Eaters\u201d or \u201cRice Eaters\u201d (Note: customers can be \u201cother eaters\u201d as well. Hence, the list is not exhaustive). From past footfall data, it is seen that 25% of the customer\u2019s order \u201cBCM\u201d and another 40% order \u201cPT\u201d. The remaining customers order \u201cMP\u201d. It is observed that,\na. Of the people ordering \u201cBCM\u201d, 30% are \u201cRoti Eaters\u201d and 60% are \u201cPoori Eaters\u201d.\nb. For \u201cPT\u201d orders, it is observed that 40% are \u201cRice Eaters\u201d, 20% are \u201cPoori Eaters\u201d and another 20% are \u201cRoti Eaters\u201d.\nc. 50% of the customers who order \u201cMP\u201d are \u201cRice Eaters\u201d and 40% are \u201cPoori Eaters\u201d\nd. \u201cBCM\u201d is never ordered by \u201cRice Eaters\u201d and \u201cMP\u201d is never opted for by \u201cRoti Eaters\u201d\nAssuming any other necessary mutual exclusiveness, and answer the given sub questions.",
+    "question": "If a total of 10,000 customers visit Milo\u2019s Kitchen in a month, how many (in Total) will you expect to be non-Rice Eater, Non-Poori Eater and Non-Roti Eater? (Note: Enter the answer rounded to two decimal places. For example, if the answer is \u201c10.235\u201d, then enter it as \u201c10.24\u201d. DO NOT ENTER PERCENTAGE VALUES)",
+    "options": null,
+    "correctOption": 1400,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Predictive Modeling and Classification",
+    "context": "(The following comprehension is purely imaginary)\nA restaurant (\u201cMilo\u2019s Kitchen\u201d) has data pertaining to customers ordering three types of starters \u201cPaneer Tikka (PT)\u201d, \u201cBaby Corn Manchurian (BCM)\u201d and \u201cMasala Papad (MP)\u201d.\nFor simplicity assume that the orders for starters is mutually exclusive and that a customer does not order more than one starter. Moreover, the customers who order these starters are predominantly one of the three types of eaters, \u201cRoti Eaters\u201d, \u201cPoori Eaters\u201d or \u201cRice Eaters\u201d (Note: customers can be \u201cother eaters\u201d as well. Hence, the list is not exhaustive). From past footfall data, it is seen that 25% of the customer\u2019s order \u201cBCM\u201d and another 40% order \u201cPT\u201d. The remaining customers order \u201cMP\u201d. It is observed that,\na. Of the people ordering \u201cBCM\u201d, 30% are \u201cRoti Eaters\u201d and 60% are \u201cPoori Eaters\u201d.\nb. For \u201cPT\u201d orders, it is observed that 40% are \u201cRice Eaters\u201d, 20% are \u201cPoori Eaters\u201d and another 20% are \u201cRoti Eaters\u201d.\nc. 50% of the customers who order \u201cMP\u201d are \u201cRice Eaters\u201d and 40% are \u201cPoori Eaters\u201d\nd. \u201cBCM\u201d is never ordered by \u201cRice Eaters\u201d and \u201cMP\u201d is never opted for by \u201cRoti Eaters\u201d\nAssuming any other necessary mutual exclusiveness, and answer the given sub questions.",
+    "question": "Recently, the owner found a CCTV footage of a customer stealing a starter (but was not able to see which starter was stolen). The owner was sure that the food stealing customer was not a \u201cRice Eater\u201d, \u201cPoori Eater\u201d or \u201cRoti Eater\u201d. Then which starter would the owner suspect the stealing customer to have stolen?",
+    "options": {
+      "A": "PT",
+      "B": "BCM",
+      "C": "MP",
+      "D": "None of these as Milo's Kitchen owner does not have a working CCTV (P.S: This is not an answer so don't choose this option. Just relax, think and answer the question)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. It is assumed that the blood sugar level is distributed Normally with a mean of 50mg/dL and standard deviation of 10 mg/dL. You are asked to perform your analysis by using the following bins. The bins are suggested such that the probability space is split into equal areas.\n\nBin-1: [0 mg/dL to 50 mg/dL]\nBin-2: [>50 mg/dL to 70 mg/dL]\nBin-3: [>70 mg/dL to 90 mg/dL]\nBin-4: [>90 mg/dL to 100 mg/dL]\n\n+------------+---------+------------------------------+\n| Patient ID | Gender  | Blood sugar level (mg/dL)    |\n+------------+---------+------------------------------+\n|    P1      |  MALE   |             71               |\n|    P2      |  MALE   |             84               |\n|    P3      |  MALE   |             76               |\n|    P4      |  MALE   |             78               |\n|    P5      |  MALE   |             89               |\n|    P6      | FEMALE  |             92               |\n|    P7      | FEMALE  |             97               |\n|    P8      | FEMALE  |             95               |\n|    P9      | FEMALE  |             83               |\n|    P10     | FEMALE  |             72               |\n+------------+---------+------------------------------+",
+    "question": "What is the expected frequency in Bin-2 for the statistical test to be performed? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 2.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. It is assumed that the blood sugar level is distributed Normally with a mean of 50mg/dL and standard deviation of 10 mg/dL. You are asked to perform your analysis by using the following bins. The bins are suggested such that the probability space is split into equal areas.\n\nBin-1: [0 mg/dL to 50 mg/dL]\nBin-2: [>50 mg/dL to 70 mg/dL]\nBin-3: [>70 mg/dL to 90 mg/dL]\nBin-4: [>90 mg/dL to 100 mg/dL]\n\n+------------+---------+------------------------------+\n| Patient ID | Gender  | Blood sugar level (mg/dL)    |\n+------------+---------+------------------------------+\n|    P1      |  MALE   |             71               |\n|    P2      |  MALE   |             84               |\n|    P3      |  MALE   |             76               |\n|    P4      |  MALE   |             78               |\n|    P5      |  MALE   |             89               |\n|    P6      | FEMALE  |             92               |\n|    P7      | FEMALE  |             97               |\n|    P8      | FEMALE  |             95               |\n|    P9      | FEMALE  |             83               |\n|    P10     | FEMALE  |             72               |\n+------------+---------+------------------------------+",
+    "question": "What is the value of the computed test statistic for the statistical test to be performed? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 33,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. It is assumed that the blood sugar level is distributed Normally with a mean of 50mg/dL and standard deviation of 10 mg/dL. You are asked to perform your analysis by using the following bins. The bins are suggested such that the probability space is split into equal areas.\n\nBin-1: [0 mg/dL to 50 mg/dL]\nBin-2: [>50 mg/dL to 70 mg/dL]\nBin-3: [>70 mg/dL to 90 mg/dL]\nBin-4: [>90 mg/dL to 100 mg/dL]\n\n+------------+---------+------------------------------+\n| Patient ID | Gender  | Blood sugar level (mg/dL)    |\n+------------+---------+------------------------------+\n|    P1      |  MALE   |             71               |\n|    P2      |  MALE   |             84               |\n|    P3      |  MALE   |             76               |\n|    P4      |  MALE   |             78               |\n|    P5      |  MALE   |             89               |\n|    P6      | FEMALE  |             92               |\n|    P7      | FEMALE  |             97               |\n|    P8      | FEMALE  |             95               |\n|    P9      | FEMALE  |             83               |\n|    P10     | FEMALE  |             72               |\n+------------+---------+------------------------------+",
+    "question": "What is the number of degrees of freedom for the statistical test to be performed? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. It is assumed that the blood sugar level is distributed Normally with a mean of 50mg/dL and standard deviation of 10 mg/dL. You are asked to perform your analysis by using the following bins. The bins are suggested such that the probability space is split into equal areas.\n\nBin-1: [0 mg/dL to 50 mg/dL]\nBin-2: [>50 mg/dL to 70 mg/dL]\nBin-3: [>70 mg/dL to 90 mg/dL]\nBin-4: [>90 mg/dL to 100 mg/dL]\n\n+------------+---------+------------------------------+\n| Patient ID | Gender  | Blood sugar level (mg/dL)    |\n+------------+---------+------------------------------+\n|    P1      |  MALE   |             71               |\n|    P2      |  MALE   |             84               |\n|    P3      |  MALE   |             76               |\n|    P4      |  MALE   |             78               |\n|    P5      |  MALE   |             89               |\n|    P6      | FEMALE  |             92               |\n|    P7      | FEMALE  |             97               |\n|    P8      | FEMALE  |             95               |\n|    P9      | FEMALE  |             83               |\n|    P10     | FEMALE  |             72               |\n+------------+---------+------------------------------+",
+    "question": "If the p-value for the test is 0.85, then what can be the level of significance if the Null Hypothesis is NOT TO BE REJECTED (select all that is/are applicable)",
+    "options": {
+      "A": "0.9",
+      "B": "0.15",
+      "C": "Any value between 0 and 1",
+      "D": "Cannot say without more data."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "(The following comprehension is purely imaginary)\nA local grosser has observed that the demand for Milk follows a linear demand response curve. Hence, he has decided to raise the \u201cMilk\u201d price by Rs. 5 rupees per litre to Rs. 45 per litre. If the demand was 300 litres per day before the rise and is now 100 litres per day after the rise, then answer the given subquestions.",
+    "question": "What is the elasticity of the linear demand response curve? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 40,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "(The following comprehension is purely imaginary)\nA local grosser has observed that the demand for Milk follows a linear demand response curve. Hence, he has decided to raise the \u201cMilk\u201d price by Rs. 5 rupees per litre to Rs. 45 per litre. If the demand was 300 litres per day before the rise and is now 100 litres per day after the rise, then answer the given subquestions.",
+    "question": "What is the market size for milk? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 1900,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "(The following comprehension is purely imaginary)\nA local grosser has observed that the demand for Milk follows a linear demand response curve. Hence, he has decided to raise the \u201cMilk\u201d price by Rs. 5 rupees per litre to Rs. 45 per litre. If the demand was 300 litres per day before the rise and is now 100 litres per day after the rise, then answer the given subquestions.",
+    "question": "What is the satiating price for the Milk\u2019s demand response curve? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is \u201c10.1253\u201d, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 47.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Performance and Efficiency Analysis",
+    "context": "(The following comprehension is purely imaginary)\nA local grosser has observed that the demand for Milk follows a linear demand response curve. Hence, he has decided to raise the \u201cMilk\u201d price by Rs. 5 rupees per litre to Rs. 45 per litre. If the demand was 300 litres per day before the rise and is now 100 litres per day after the rise, then answer the given subquestions.",
+    "question": "Given the computed elasticity, what can you say about the \u201cMilk\u201d demand? (choose all that is/are applicable)",
+    "options": {
+      "A": "It is elastic",
+      "B": "It is inelastic",
+      "C": "It is a luxury",
+      "D": "It is a necessity",
+      "E": "Cannot say, insufficient information"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "(The following comprehension is purely imaginary)\nYou are given the following contingency table based on a sample data where different cities and their brand preferences are provided.\n\n+---------+----------+----------+--------+\n|         | Brand A  | Brand B  | Total  |\n+---------+----------+----------+--------+\n| Chennai |   200    |   145    |  345   |\n| Mumbai  |   600    |   255    |  855   |\n| Total   |   800    |   400    | 1200   |\n+---------+----------+----------+--------+\n\nThen answer the given subquestions.",
+    "question": "From the given contingency table, find the expected frequency of Chennai people preferring brand B? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 115,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "(The following comprehension is purely imaginary)\nYou are given the following contingency table based on a sample data where different cities and their brand preferences are provided.\n\n+---------+----------+----------+--------+\n|         | Brand A  | Brand B  | Total  |\n+---------+----------+----------+--------+\n| Chennai |   200    |   145    |  345   |\n| Mumbai  |   600    |   255    |  855   |\n| Total   |   800    |   400    | 1200   |\n+---------+----------+----------+--------+\n\nThen answer the given subquestions.",
+    "question": "What is the calculated value of chi-squared? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 65.4,
+      "max": 65.8
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "(The following comprehension is purely imaginary)\nYou are given the following contingency table based on a sample data where different cities and their brand preferences are provided.\n\n+---------+----------+----------+--------+\n|         | Brand A  | Brand B  | Total  |\n+---------+----------+----------+--------+\n| Chennai |   200    |   145    |  345   |\n| Mumbai  |   600    |   255    |  855   |\n| Total   |   800    |   400    | 1200   |\n+---------+----------+----------+--------+\n\nThen answer the given subquestions.",
+    "question": "At the significance level 0.05, chi-squared tabular value is 3.84. What do you conclude? (choose all that is/are applicable)",
+    "options": {
+      "A": "Reject the null hypothesis and conclude that the categorical variables are not independent",
+      "B": "Fail to reject the null hypothesis and conclude that the categorical variables are not independent",
+      "C": "Reject the null hypothesis and conclude that the categorical variables are independent",
+      "D": "Fail to reject the null hypothesis and conclude that the categorical variables are independent",
+      "E": "Accept the null hypothesis and conclude that the categorical variables are not independent",
+      "F": "Do not accept the null hypothesis and conclude that the categorical variables are not independent",
+      "G": "Accept the null hypothesis and conclude that the categorical variables are independent",
+      "H": "Do not accept the null hypothesis and conclude that the categorical variables are independent",
+      "I": "None of these"
+    },
+    "correctOption": ["A"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "When is a \u201cTable\u201d the best visualisation option for presenting data?",
+    "options": {
+      "A": "When the outliers in the data need to be shown",
+      "B": "When trends in the data need to be shown",
+      "C": "When proportions in the data need to be shown",
+      "D": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "The table below provides the summary statistic for a random variable.\n\n| Summary Statistic      | Value |\n|------------------------|-------|\n| Number of observations | 300   |\n| Mean                   | 20    |\n| Median                 | 22    |\n| Mode                   | 20    |\n| Std. Deviation         | 3     |\n| Minimum                | 2     |\n| Maximum                | 50    |",
+    "question": "Then what distribution could be a good fit for this random variable?",
+    "options": {
+      "A": "Poisson distribution",
+      "B": "Normal distribution",
+      "C": "Uniform distribution",
+      "D": "Standard normal distribution"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": null,
+    "question": "For a linear demand response curve, the satiating price is _",
+    "options": {
+      "A": "The price at which the profits are maximum",
+      "B": "The price at which demand is zero",
+      "C": "The price beyond which the consumer surplus exists",
+      "D": "The price beyond which latent demand exists"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "Which of the following distributions is/are not symmetric in nature (select all that are applicable)?",
+    "options": {
+      "A": "Standard Normal distribution",
+      "B": "Standard Binomial distribution",
+      "C": "Uniform distribution between [-1 to +1]",
+      "D": "Poisson distribution"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "A distribution is left tailed if (select all that is applicable)",
+    "options": {
+      "A": "Coefficient of variation is positive",
+      "B": "Skewness is positive",
+      "C": "Skewness is negative",
+      "D": "Cannot say without the histogram"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": null,
+    "question": "For a demand response curve which has constant elasticity, which of the following statements are true (choose all that are applicable)",
+    "options": {
+      "A": "If the curve is for an inelastic product, the revenue is increased only by setting price close to zero",
+      "B": "If the curve is for an inelastic product, the revenue is increased by simply increasing the prices",
+      "C": "If the curve is for an elastic product, the revenue is increased by simply increasing the prices",
+      "D": "If the curve is for an elastic product, the revenue is increased only by setting price close to zero"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "Suppose a factory manufactures products on three machines A, B and C. Suppose 65% of total output comes from machine A, 30% of total output comes from machine B and 5% of total output comes from machine C. From the past data, it is known that 1% of products by machine A are defectives, 2% of products by machine B are defectives and 10% of products by machine C are defectives. What is the probability that the product has come from machine B, given that it is defective?",
+    "options": null,
+    "correctOption": {
+      "min": 0.32,
+      "max": 0.36
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table-1 specifies the win results for the teams that batted first during the PARADOX Cricket Games. You are now interested to generate more data on win margins for Teams that bat first during future PARADOX games, which will be used as part of your business proposal to improve the pitch. Accordingly, you are told that the win margins are uniformly distributed between 1 and 10 runs U[1,10] for any given game in the future. Then answer the given subquestions.\n\nTable-1\n| Game   | Result for Team Batting First |\n|--------|-------------------------------|\n| Game-1 | Won by 5 Runs                 |\n| Game-2 | Won by 4 Runs                 |\n| Game-3 | Won by 6 Runs                 |\n| Game-4 | Won by 3 Runs                 |\n| Game-5 | Won by 7 Runs                 |",
+    "question": "What is the expected number of runs by which a team batting first will win a game? Note: Round your answer to one decimal point. Example, if your answer is \"1.245\", enter the answer as \"1.2\".",
+    "options": null,
+    "correctOption": 5.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table-1 specifies the win results for the teams that batted first during the PARADOX Cricket Games. You are now interested to generate more data on win margins for Teams that bat first during future PARADOX games, which will be used as part of your business proposal to improve the pitch. Accordingly, you are told that the win margins are uniformly distributed between 1 and 10 runs U[1,10] for any given game in the future. Then answer the given subquestions.\n\nTable-1\n| Game   | Result for Team Batting First |\n|--------|-------------------------------|\n| Game-1 | Won by 5 Runs                 |\n| Game-2 | Won by 4 Runs                 |\n| Game-3 | Won by 6 Runs                 |\n| Game-4 | Won by 3 Runs                 |\n| Game-5 | Won by 7 Runs                 |",
+    "question": "What is the value of the computed test statistic? Note: Round your answer to one decimal point. Example, if your answer is \"1.245\", enter the answer as \"1.2\".",
+    "options": null,
+    "correctOption": {
+      "min": 2.0,
+      "max": 2.2
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table-1 specifies the win results for the teams that batted first during the PARADOX Cricket Games. You are now interested to generate more data on win margins for Teams that bat first during future PARADOX games, which will be used as part of your business proposal to improve the pitch. Accordingly, you are told that the win margins are uniformly distributed between 1 and 10 runs U[1,10] for any given game in the future. Then answer the given subquestions.\n\nTable-1\n| Game   | Result for Team Batting First |\n|--------|-------------------------------|\n| Game-1 | Won by 5 Runs                 |\n| Game-2 | Won by 4 Runs                 |\n| Game-3 | Won by 6 Runs                 |\n| Game-4 | Won by 3 Runs                 |\n| Game-5 | Won by 7 Runs                 |",
+    "question": "What is the number of degrees of freedom for the test?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table-1 specifies the win results for the teams that batted first during the PARADOX Cricket Games. You are now interested to generate more data on win margins for Teams that bat first during future PARADOX games, which will be used as part of your business proposal to improve the pitch. Accordingly, you are told that the win margins are uniformly distributed between 1 and 10 runs U[1,10] for any given game in the future. Then answer the given subquestions.\n\nTable-1\n| Game   | Result for Team Batting First |\n|--------|-------------------------------|\n| Game-1 | Won by 5 Runs                 |\n| Game-2 | Won by 4 Runs                 |\n| Game-3 | Won by 6 Runs                 |\n| Game-4 | Won by 3 Runs                 |\n| Game-5 | Won by 7 Runs                 |",
+    "question": "The p-value of the chi-square goodness of fit test represents _",
+    "options": {
+      "A": "The chance of observing the sample when the null hypothesis is false",
+      "B": "The chance of observing the sample when the alternative hypothesis is true",
+      "C": "The chance of observing the sample at the specified level of significance",
+      "D": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table-1 specifies the win results for the teams that batted first during the PARADOX Cricket Games. You are now interested to generate more data on win margins for Teams that bat first during future PARADOX games, which will be used as part of your business proposal to improve the pitch. Accordingly, you are told that the win margins are uniformly distributed between 1 and 10 runs U[1,10] for any given game in the future. Then answer the given subquestions.\n\nTable-1\n| Game   | Result for Team Batting First |\n|--------|-------------------------------|\n| Game-1 | Won by 5 Runs                 |\n| Game-2 | Won by 4 Runs                 |\n| Game-3 | Won by 6 Runs                 |\n| Game-4 | Won by 3 Runs                 |\n| Game-5 | Won by 7 Runs                 |",
+    "question": "If the p-value for the test is 0.75, then what should be the minimum level of significance needed if we need to conclude that the sample indeed comes from a U[1,10]\nNote: Round your answer to one decimal point. Example, if your answer is \"1.245\", enter the answer as \"1.2\".",
+    "options": null,
+    "correctOption": {
+      "min": 0.75,
+      "max": 0.76
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say Table-2, provides the data on the number of enrolments in the three BSc courses for \u201cMale\u201dand \u201cFemale\u201d gender students. Given this information, answer the given subquestions.\n\nTable-2\n|        | Diploma in Data Science | Diploma in Programming | BS in Electronic Systems |\n|--------|-------------------------|------------------------|--------------------------|\n| Male   | 30                      | 40                     | 30                       |\n| Female | 55                      | 20                     | 25                       |",
+    "question": "What is the value for the computed test statistic? (Note-1: round your final answer to two decimal places. Example: If your answer is \u201c1.2345\u201d enter it as \u201c1.23\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 14.0,
+      "max": 15.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say Table-2, provides the data on the number of enrolments in the three BSc courses for \u201cMale\u201dand \u201cFemale\u201d gender students. Given this information, answer the given subquestions.\n\nTable-2\n|        | Diploma in Data Science | Diploma in Programming | BS in Electronic Systems |\n|--------|-------------------------|------------------------|--------------------------|\n| Male   | 30                      | 40                     | 30                       |\n| Female | 55                      | 20                     | 25                       |",
+    "question": "If a 20% confidence interval is considered, then which of the following statements is/are true (choose all that is applicable)",
+    "options": {
+      "A": "If the p-value for the test is 0.35, conclude that the course enrolments are independent of gender",
+      "B": "If the p-value for the test is 0.35, conclude that the course enrolments are not independent of gender",
+      "C": "If the computed test statistic is less than the chi-square tabulated, then conclude that the course enrolments are not independent of gender",
+      "D": "If the computed test statistic is greater than the chi-square tabulated, then conclude that the course enrolments are independent of gender"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": "Your local grosser has observed that the demand for Butter Milk follows a linear demand response curve. Hence, he has decided to raise the \u201cButter Milk\u201d price by Rs. 5 rupees per bottle to Rs. 15 per bottle. If the demand was 100 units per day before the rise and is now 80 units per day after the rise, then answer the given subquestions.",
+    "question": "What is the elasticity of demand?",
+    "options": null,
+    "correctOption": {
+      "min": 0.4,
+      "max": 0.42
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": "Your local grosser has observed that the demand for Butter Milk follows a linear demand response curve. Hence, he has decided to raise the \u201cButter Milk\u201d price by Rs. 5 rupees per bottle to Rs. 15 per bottle. If the demand was 100 units per day before the rise and is now 80 units per day after the rise, then answer the given subquestions.",
+    "question": "Given the computed elasticity, what can you say about the \u201cButter Milk\u201d demand? (choose all that are applicable)",
+    "options": {
+      "A": "It is elastic",
+      "B": "It is inelastic",
+      "C": "It is a luxury",
+      "D": "It is a necessity",
+      "E": "Cannot say, insufficient information"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Data Visualization Techniques",
+    "context": "Dr. Milo is exploring the attendance of employees (number of sick days taken) in an organisation. He needs to make a presentation to the company's top management. Table-1 specifies the total number of sick days taken by the employees of three different teams \u201cTeam-A\u201d, \u201cTeam-B\u201d and \u201cTeam-C\u201d over the past 12 months. Then answer the given sub questions",
+    "question": "If the aim is to indicate the team which has the highest number of sick days in the whole year, then which of the following visualizations would be best suited?",
+    "options": {
+      "A": "Graph 1",
+      "B": "Graph 2",
+      "C": "Graph 3",
+      "D": "Graph 4"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250275/Minimalist_Black_and_White_Blank_Paper_Document_22_x4sbhq.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Data Visualization Techniques",
+    "context": "Dr. Milo is exploring the attendance of employees (number of sick days taken) in an organisation. He needs to make a presentation to the company's top management. Table-1 specifies the total number of sick days taken by the employees of three different teams \u201cTeam-A\u201d, \u201cTeam-B\u201d and \u201cTeam-C\u201d over the past 12 months. Then answer the given sub questions",
+    "question": "If the aim is to display team wise pattern in total sick days over the months in the year, then which of the following graphs will be best suited?",
+    "options": {
+      "A": "Graph 1",
+      "B": "Graph 2",
+      "C": "Graph 3",
+      "D": "Graph 4"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250275/Minimalist_Black_and_White_Blank_Paper_Document_22_x4sbhq.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "If the life of the RO filter is expected to follow a uniform distribution, then what is the value of the computed test statistic? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 22,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "If the life of the RO filter is expected to follow a uniform distribution, then what is the expected frequency in any given bin? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 21,
+      "max": 23
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "If the life of the RO filter is expected to follow a uniform distribution, then what is the degrees of freedom for the corresponding statistical test to verify the same? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "If the life of the RO filter is expected to follow a normal distribution with a mean of 60 and standard deviation of 24, then what is the expected frequency in the \u201cMedium Life\u201d bin? (Note-1: The bins DO NOT SPILT the sample space into equal areas) (Note-2: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 2.4,
+      "max": 2.8
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "If the life of the RO filter is expected to follow a normal distribution with a mean of 60 and standard deviation of 24, then what is the expected frequency in the \u201cExcellent Life\u201d bin? (Note-1: The bins DO NOT SPILT the sample space into equal areas) (Note-2: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 4.1,
+      "max": 4.3
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "If the life of the RO filter is expected to follow a normal distribution with a mean of 60 and standard deviation of 24, then what is the value of the computed test statistic? (Note-1: The bins DO NOT SPILT the sample space into equal areas) (Note-2: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 1.5,
+      "max": 2.5
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "If the life of the RO filter is expected to follow a normal distribution with a mean of 60 and standard deviation of 24, then what is the degrees of freedom for the corresponding statistical test to verify the same? (Note-1: The bins DO NOT SPILT the sample space into equal areas) (Note-2: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cAqua Aqua (AA)\u201d is a manufacturer of water purifiers. AA wants to understand the life of its RO filters. The life of a filter is measured in terms of \u201cLitres of Water Purified (LWP)\u201d before a warning light is raised for maintenance. A sample of 20 water purifiers were tested and the time (LWP) after which the warning light is raised for maintenance of the RO Filter was noted (data provided in Table-2). With this data, AA wants to understand the possible distribution for the life of the RO filter. To this end, it is proposed to bin the data in 4 groups \u201cLow Life (LWP <=25)\u201d, \u201cMedium Life (25<LWP<=40)\u201d, \u201cHigh Life (40<LWP<=80)\u201d, \u201cExcellent Life (LWP>80)\u201d.\nThe following \u03a6 values are given to you, where \u03a6(z) indicates the area under the curve (between \u201c0\u201d to \u201cLWP\u201d) for a normal distribution with a mean of 60 and standard deviation of 24.",
+    "question": "Assume that a common value of 8.79 is identified for the tabulated test statistic (for both uniform and normal distribution tests), then (choose all that is applicable)",
+    "options": {
+      "A": "REJECT the null hypothesis and conclude that the life of the RO filter is not UNIFORMLY distributed",
+      "B": "At the specified significance level, REJECT the null hypothesis and conclude that the life of the RO filter is not UNIFORMLY distributed",
+      "C": "REJECT the null hypothesis and conclude that the life of the RO filter is not NORMALLY distributed",
+      "D": "At the specified significance level, REJECT the null hypothesis and conclude that the life of the RO filter is not NORMALLY distributed",
+      "E": "DO NOT REJECT the null hypothesis and conclude that the life of the RO filter is UNIFORMLY distributed",
+      "F": "At the specified significance level, DO NOT REJECT the null hypothesis and conclude that the life of the RO filter is UNIFORMLY distributed",
+      "G": "DO NOT REJECT the null hypothesis and conclude that the life of the RO filter is NORMALLY distributed",
+      "H": "At the specified significance level, DO NOT REJECT the null hypothesis and conclude that the life of the RO filter is NORMALLY distributed"
+    },
+    "correctOption": ["B", "H"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764250346/may24-2_prrfsj.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "The linear demand response for product-A is modelled as a simple linear regression represented as D(P) = 2800 \u2013 40*P, where D(P) is the demand at price-P. Then, answer the given sub questions",
+    "question": "What is the elasticity of the demand response curve when the price is Rs.50? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 2.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "The linear demand response for product-A is modelled as a simple linear regression represented as D(P) = 2800 \u2013 40*P, where D(P) is the demand at price-P. Then, answer the given sub questions",
+    "question": "What is the satiating price for the demand response curve? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 70,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cBro\u201d has always had a passion for data and the science behind it. Hence, to gain a formal education, Bro has explored and identified three different certificate programme provides: \u201cThe IITM BSc Program\u201d, \u201cIITM NPTEL Analytics Certification\u201d and \u201cA Random Dude Certification\u201d. Before, opting for one, Bro has decided to identify the success of the program providers in terms of job opportunities after completion. The success is measured in three levels, \u201cLevel-1: Placement with High Package\u201d, \u201cLevel-2: Placement with Low Package\u201d and \u201cLevel-3: No placement\u201d. From past data, it is seen that of all students who completed the \u201cThe IITM BSc Program\u201d 30% of past students are in Level-1 and 45% are in Level-2. Similarly, of all students who completed the \u201cIITM NPTEL Analytics Certification\u201d, 45% are in Level-1 and 30% are in level 2. Finally, of all students who completed the \u201cA Random Dude Certification\u201d, 25% are in the Level-1 and the rest are in Level-3.\nBased on past admission trends, it is seen that 40% of the student population are in the \u201cThe IITM BSc Program\u201d, 30% are in the \u201cIITM NPTEL Analytics Certification\u201d and the remaining have opted for \u201cA Random Dude Certification\u201d.\nAssuming the necessary mutual exclusiveness criteria, answer the given sub questions.",
+    "question": "If Bro wants to be a Level-1 student, then which certification program should he choose?",
+    "options": {
+      "A": "The IITM BSc Program",
+      "B": "IITM NPTEL Analytics Certification",
+      "C": "A Random Dude Certification",
+      "D": "Cannot answer, as I do not know how to solve the problem"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cBro\u201d has always had a passion for data and the science behind it. Hence, to gain a formal education, Bro has explored and identified three different certificate programme provides: \u201cThe IITM BSc Program\u201d, \u201cIITM NPTEL Analytics Certification\u201d and \u201cA Random Dude Certification\u201d. Before, opting for one, Bro has decided to identify the success of the program providers in terms of job opportunities after completion. The success is measured in three levels, \u201cLevel-1: Placement with High Package\u201d, \u201cLevel-2: Placement with Low Package\u201d and \u201cLevel-3: No placement\u201d. From past data, it is seen that of all students who completed the \u201cThe IITM BSc Program\u201d 30% of past students are in Level-1 and 45% are in Level-2. Similarly, of all students who completed the \u201cIITM NPTEL Analytics Certification\u201d, 45% are in Level-1 and 30% are in level 2. Finally, of all students who completed the \u201cA Random Dude Certification\u201d, 25% are in the Level-1 and the rest are in Level-3.\nBased on past admission trends, it is seen that 40% of the student population are in the \u201cThe IITM BSc Program\u201d, 30% are in the \u201cIITM NPTEL Analytics Certification\u201d and the remaining have opted for \u201cA Random Dude Certification\u201d.\nAssuming the necessary mutual exclusiveness criteria, answer the given sub questions.",
+    "question": "If a total of 1000 students are taken (across all three programmes) then how many will be in \u201cLevel-2\u201d? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": 770,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "\u201cBro\u201d has always had a passion for data and the science behind it. Hence, to gain a formal education, Bro has explored and identified three different certificate programme provides: \u201cThe IITM BSc Program\u201d, \u201cIITM NPTEL Analytics Certification\u201d and \u201cA Random Dude Certification\u201d. Before, opting for one, Bro has decided to identify the success of the program providers in terms of job opportunities after completion. The success is measured in three levels, \u201cLevel-1: Placement with High Package\u201d, \u201cLevel-2: Placement with Low Package\u201d and \u201cLevel-3: No placement\u201d. From past data, it is seen that of all students who completed the \u201cThe IITM BSc Program\u201d 30% of past students are in Level-1 and 45% are in Level-2. Similarly, of all students who completed the \u201cIITM NPTEL Analytics Certification\u201d, 45% are in Level-1 and 30% are in level 2. Finally, of all students who completed the \u201cA Random Dude Certification\u201d, 25% are in the Level-1 and the rest are in Level-3.\nBased on past admission trends, it is seen that 40% of the student population are in the \u201cThe IITM BSc Program\u201d, 30% are in the \u201cIITM NPTEL Analytics Certification\u201d and the remaining have opted for \u201cA Random Dude Certification\u201d.\nAssuming the necessary mutual exclusiveness criteria, answer the given sub questions.",
+    "question": "Bro finds Dr. Milo (a poor student and a very strict BA course instructor) who is not placed, then which program would you suspect Dr.Milo has completed?",
+    "options": {
+      "A": "The IITM BSc Program",
+      "B": "IITM NPTEL Analytics Certification",
+      "C": "A Random Dude Certification",
+      "D": "Cannot answer, as Dr. Milo is too dumb to even qualify for any of these"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Competitive eating a very popular sport in Western Countries. Competitive eating, or speed eating, is a sport in which participants compete against each other to eat large quantities of food, usually in a short time period. There is a general myth that people who have larger waist sizes eat faster and hence have a better chance of winning such competitions. Hence, to check if this is a dependence between waist size and eating speed, the data (as specified in Table-3) was collected from interested and willing participants. In this data, the time to complete a A2B Family Dosa (which is equivalent to ~4 Dosas) was considered. The time was grouped into three categories as (i) Fast (less than 2 mins), (ii) Medium (greater than 2 mins but less than 4 minutes) and (iii) Slow (a time greater than 4 minutes). The participants who took part in the study where categorised into five categories based on their waist size as (i) S, (ii) M, (iii) L, (iv) XL, (v) XXL. The entry in a cell indicates the number of participants who completed the dosa in the specified time bucket and have the indicated waist size. Given this information,answer the subquestions.\n\nTable-3:\n\n+------------+-------+---------+-------+\n| Waist Size | Fast  | Medium  | Slow  |\n+------------+-------+---------+-------+\n| S          | 20    | 27      | 23    |\n| M          | 13    | 22      | 19    |\n| L          | 13    | 19      | 12    |\n| XL         | 20    | 27      | 22    |\n| XXL        | 18    | 24      | 21    |\n+------------+-------+---------+-------+",
+    "question": "How many participants with a waist size of \u201cL\u201d are expected to complete the Family Dosa with \u201cMedium\u201d speed? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 17.0,
+      "max": 18.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Competitive eating a very popular sport in Western Countries. Competitive eating, or speed eating, is a sport in which participants compete against each other to eat large quantities of food, usually in a short time period. There is a general myth that people who have larger waist sizes eat faster and hence have a better chance of winning such competitions. Hence, to check if this is a dependence between waist size and eating speed, the data (as specified in Table-3) was collected from interested and willing participants. In this data, the time to complete a A2B Family Dosa (which is equivalent to ~4 Dosas) was considered. The time was grouped into three categories as (i) Fast (less than 2 mins), (ii) Medium (greater than 2 mins but less than 4 minutes) and (iii) Slow (a time greater than 4 minutes). The participants who took part in the study where categorised into five categories based on their waist size as (i) S, (ii) M, (iii) L, (iv) XL, (v) XXL. The entry in a cell indicates the number of participants who completed the dosa in the specified time bucket and have the indicated waist size. Given this information,answer the subquestions.\n\nTable-3:\n\n+------------+-------+---------+-------+\n| Waist Size | Fast  | Medium  | Slow  |\n+------------+-------+---------+-------+\n| S          | 20    | 27      | 23    |\n| M          | 13    | 22      | 19    |\n| L          | 13    | 19      | 12    |\n| XL         | 20    | 27      | 22    |\n| XXL        | 18    | 24      | 21    |\n+------------+-------+---------+-------+",
+    "question": "What is the value of the computed test statistic used to perform the desired hypothesis test? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 0.5,
+      "max": 1.5
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Competitive eating a very popular sport in Western Countries. Competitive eating, or speed eating, is a sport in which participants compete against each other to eat large quantities of food, usually in a short time period. There is a general myth that people who have larger waist sizes eat faster and hence have a better chance of winning such competitions. Hence, to check if this is a dependence between waist size and eating speed, the data (as specified in Table-3) was collected from interested and willing participants. In this data, the time to complete a A2B Family Dosa (which is equivalent to ~4 Dosas) was considered. The time was grouped into three categories as (i) Fast (less than 2 mins), (ii) Medium (greater than 2 mins but less than 4 minutes) and (iii) Slow (a time greater than 4 minutes). The participants who took part in the study where categorised into five categories based on their waist size as (i) S, (ii) M, (iii) L, (iv) XL, (v) XXL. The entry in a cell indicates the number of participants who completed the dosa in the specified time bucket and have the indicated waist size. Given this information,answer the subquestions.\n\nTable-3:\n\n+------------+-------+---------+-------+\n| Waist Size | Fast  | Medium  | Slow  |\n+------------+-------+---------+-------+\n| S          | 20    | 27      | 23    |\n| M          | 13    | 22      | 19    |\n| L          | 13    | 19      | 12    |\n| XL         | 20    | 27      | 22    |\n| XXL        | 18    | 24      | 21    |\n+------------+-------+---------+-------+",
+    "question": "How many degrees of freedom is present for the test statistic, used to perform the desired hypothesis test",
+    "options": null,
+    "correctOption": 8,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Competitive eating a very popular sport in Western Countries. Competitive eating, or speed eating, is a sport in which participants compete against each other to eat large quantities of food, usually in a short time period. There is a general myth that people who have larger waist sizes eat faster and hence have a better chance of winning such competitions. Hence, to check if this is a dependence between waist size and eating speed, the data (as specified in Table-3) was collected from interested and willing participants. In this data, the time to complete a A2B Family Dosa (which is equivalent to ~4 Dosas) was considered. The time was grouped into three categories as (i) Fast (less than 2 mins), (ii) Medium (greater than 2 mins but less than 4 minutes) and (iii) Slow (a time greater than 4 minutes). The participants who took part in the study where categorised into five categories based on their waist size as (i) S, (ii) M, (iii) L, (iv) XL, (v) XXL. The entry in a cell indicates the number of participants who completed the dosa in the specified time bucket and have the indicated waist size. Given this information,answer the subquestions.\n\nTable-3:\n\n+------------+-------+---------+-------+\n| Waist Size | Fast  | Medium  | Slow  |\n+------------+-------+---------+-------+\n| S          | 20    | 27      | 23    |\n| M          | 13    | 22      | 19    |\n| L          | 13    | 19      | 12    |\n| XL         | 20    | 27      | 22    |\n| XXL        | 18    | 24      | 21    |\n+------------+-------+---------+-------+",
+    "question": "If the p-value for the hypothesis test is 0.17, then which of the following statements are TRUE (choose all that is applicable)?",
+    "options": {
+      "A": "At a 5% level of significance, conclude that there is DEPENDENCE between the waist size and eating speed",
+      "B": "At a 5% level of significance, conclude that there is INDEPENDENCE between the waist size and eating speed",
+      "C": "At a 25% level of significance, conclude that there is DEPENDENCE between the waist size and eating speed",
+      "D": "At a 25% level of significance, conclude that there is INDEPENDENCE between the waist size and eating speed",
+      "E": "None of these are TRUE"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "When is a \u201cPie Chart\u201d the best visualisation option for presenting data?",
+    "options": {
+      "A": "When the outliers in the data need to be shown",
+      "B": "When trends in the data need to be shown",
+      "C": "When proportions in the data need to be shown",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "Given Figure-1, what is the message that can be best conveyed through the graph?",
+    "options": {
+      "A": "Message: \u201cMileages trend for different Models\u201d",
+      "B": "Message: \u201cRelationship between Car Weight and Mileage\u201d",
+      "C": "Message: \u201cRelationship between Models and their Car Weights\u201d",
+      "D": "Message: \u201cCar Model wise minimum and maximum Avg. Mileage and Avg. Car Weights\u201d",
+      "E": "Message: \u201cModel wise relationship between Car Weight and Mileage\u201d",
+      "F": "Message: \u201cCar weight wise Mileage trend for different Models\u201d",
+      "G": "Message: \u201cMileage wise relationship between Models and their Car Weights\u201d"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764252116/may25-1_wvo8du.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "For the summary statistics provided in Table-1, which of the following is true?\n\n+------------------+-------+\n|    Parameter     | Value |\n+------------------+-------+\n| 25th Quantile    |   3   |\n| 50th Quantile    |   6   |\n| 75th Quantile    |   8   |\n| First Moment     |  12   |\n| Second Moment    |   4   |\n| Third Moment     |   2   |\n+------------------+-------+\nTable-1",
+    "question": "For the summary statistics provided in Table-1, which of the following is true?",
+    "options": {
+      "A": "The distribution is right skewed",
+      "B": "The distribution is symmetric",
+      "C": "The distribution is left skewed",
+      "D": "Cannot say without the skewness value"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "Four teams (1, 2, 3 and 4) have qualified for the final of the cricket world cup. Team 1 plays Team 2. Team 3 plays Team 4. The winners then play in the final. In a game between Team \u201ci\u201d and Team \u201cj\u201d, the probability of team \u201ci\u201d winning is given by (i / (i+j)). Then what is the conditional probability that \u201cTeam 1\u201d will win the World Cup? (Note: Enter your answer in decimals rounded to two decimal places. For example, if your answer is \u201c0.245\u201d, enter it as \u201c0.25\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 0.06,
+      "max": 0.09
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Milo\u2019s Wheels sells bicycles. DrMilo, the owner of the shop, is curious to know about his customer base. Hence, he collects data on the total sales made to different age groups in the year 2024. This data is given in Table-2. He hires you (a student in the BA course) as a data analyst and asks for your opinion. Then answer the given subquestions.\n\n(Note: For all questions in this comprehension, if your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)\n\n+------------------------+-------------------------------+\n|       Age group        | Actual number of cycles sold  |\n+------------------------+-------------------------------+\n|  less than 10 years    |               25              |\n|    11 to 15 years      |               50              |\n|    16 to 20 years      |               30              |\n|    21 to 24 years      |               30              |\n|    25 to 30 years      |               25              |\n|    31 to 40 years      |               20              |\n|  greater than 41 years |               50              |\n+------------------------+-------------------------------+",
+    "question": "Based on Table-2, you think the data is normally distributed such that the buckets split the distribution into areas that have equal probability. Then what is the probability of selling a cycle in any given bucket?",
+    "options": null,
+    "correctOption": {
+      "min": 0.13,
+      "max": 0.15
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Milo\u2019s Wheels sells bicycles. DrMilo, the owner of the shop, is curious to know about his customer base. Hence, he collects data on the total sales made to different age groups in the year 2024. This data is given in Table-2. He hires you (a student in the BA course) as a data analyst and asks for your opinion. Then answer the given subquestions.\n\n(Note: For all questions in this comprehension, if your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)\n\n+------------------------+-------------------------------+\n|       Age group        | Actual number of cycles sold  |\n+------------------------+-------------------------------+\n|  less than 10 years    |               25              |\n|    11 to 15 years      |               50              |\n|    16 to 20 years      |               30              |\n|    21 to 24 years      |               30              |\n|    25 to 30 years      |               25              |\n|    31 to 40 years      |               20              |\n|  greater than 41 years |               50              |\n+------------------------+-------------------------------+",
+    "question": "Based on Table-2, you think the data is normally distributed such that the buckets split the distribution into areas that have equal probability. Then what is the expected number of cycles that will be sold to the age group of \u201c25 to 30 years\u201d?",
+    "options": null,
+    "correctOption": {
+      "min": 35.0,
+      "max": 36.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Milo\u2019s Wheels sells bicycles. DrMilo, the owner of the shop, is curious to know about his customer base. Hence, he collects data on the total sales made to different age groups in the year 2024. This data is given in Table-2. He hires you (a student in the BA course) as a data analyst and asks for your opinion. Then answer the given subquestions.\n\n(Note: For all questions in this comprehension, if your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)\n\n+------------------------+-------------------------------+\n|       Age group        | Actual number of cycles sold  |\n+------------------------+-------------------------------+\n|  less than 10 years    |               25              |\n|    11 to 15 years      |               50              |\n|    16 to 20 years      |               30              |\n|    21 to 24 years      |               30              |\n|    25 to 30 years      |               25              |\n|    31 to 40 years      |               20              |\n|  greater than 41 years |               50              |\n+------------------------+-------------------------------+",
+    "question": "What is the value of the computed test statistic to perform a test to check if the data in Table-2 follows a normal distribution?",
+    "options": null,
+    "correctOption": {
+      "min": 29.0,
+      "max": 33.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Milo\u2019s Wheels sells bicycles. DrMilo, the owner of the shop, is curious to know about his customer base. Hence, he collects data on the total sales made to different age groups in the year 2024. This data is given in Table-2. He hires you (a student in the BA course) as a data analyst and asks for your opinion. Then answer the given subquestions.\n\n(Note: For all questions in this comprehension, if your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)\n\n+------------------------+-------------------------------+\n|       Age group        | Actual number of cycles sold  |\n+------------------------+-------------------------------+\n|  less than 10 years    |               25              |\n|    11 to 15 years      |               50              |\n|    16 to 20 years      |               30              |\n|    21 to 24 years      |               30              |\n|    25 to 30 years      |               25              |\n|    31 to 40 years      |               20              |\n|  greater than 41 years |               50              |\n+------------------------+-------------------------------+",
+    "question": "How many (count of) degrees of freedom is present for the performed test (to check if the data in Table-2 follows a normal distribution)?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Milo\u2019s Wheels sells bicycles. DrMilo, the owner of the shop, is curious to know about his customer base. Hence, he collects data on the total sales made to different age groups in the year 2024. This data is given in Table-2. He hires you (a student in the BA course) as a data analyst and asks for your opinion. Then answer the given subquestions.\n\n(Note: For all questions in this comprehension, if your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)\n\n+------------------------+-------------------------------+\n|       Age group        | Actual number of cycles sold  |\n+------------------------+-------------------------------+\n|  less than 10 years    |               25              |\n|    11 to 15 years      |               50              |\n|    16 to 20 years      |               30              |\n|    21 to 24 years      |               30              |\n|    25 to 30 years      |               25              |\n|    31 to 40 years      |               20              |\n|  greater than 41 years |               50              |\n+------------------------+-------------------------------+",
+    "question": "If the \u201cNull Hypothesis\u201d is rejected at a significance level of 0.1, then what will be the conclusion at a significance level of 0.5?",
+    "options": {
+      "A": "Cannot say, insufficient data",
+      "B": "Null Hypothesis is rejected",
+      "C": "Null Hypothesis is not rejected"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Milo\u2019s Wheels sells bicycles. DrMilo, the owner of the shop, is curious to know about his customer base. Hence, he collects data on the total sales made to different age groups in the year 2024. This data is given in Table-2. He hires you (a student in the BA course) as a data analyst and asks for your opinion. Then answer the given subquestions.\n\n(Note: For all questions in this comprehension, if your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \u201c10.256\u201d, enter it as \u201c10.26\u201d)\n\n+------------------------+-------------------------------+\n|       Age group        | Actual number of cycles sold  |\n+------------------------+-------------------------------+\n|  less than 10 years    |               25              |\n|    11 to 15 years      |               50              |\n|    16 to 20 years      |               30              |\n|    21 to 24 years      |               30              |\n|    25 to 30 years      |               25              |\n|    31 to 40 years      |               20              |\n|  greater than 41 years |               50              |\n+------------------------+-------------------------------+",
+    "question": "What is the sample size that Dr.Milo has provided for your analysis?",
+    "options": null,
+    "correctOption": 250,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Data Visualization Techniques",
+    "context": "A cosmetics brand \u201cSwamilsBeautiful\u201d manufactures three products, \u201cFace Creams (FC)\u201d, \u201cBody Lotion (BL)\u201d and \u201cLip Gloze (LG)\u201d. The company believes displaying all their products together in a single shelf at a retailer store will help boost their sales, as people tend to pick up the items together. Hence, they are currently spending a lot of money to make sure that the retailers display the products together. However, on hearing this, Dr.Milo feels sceptical as it is counter intuitive. He feels that the sales of the products are independent. To check his theory, data in Table-3 was collected. Table-3 contains the total sales (in quantity) of the three products across retail stores. Here, the retail stores were classified in two types: \u201cType-1: The three products are displayed together\u201d, \u201cType-2: The three products are not displayed together\u201d. Given this information answer the given subquestions.\n\n +----------+---------------------------+\n | Product  |     Retail Store Type     |\n |          |   Type-1   |   Type-2     |\n +----------+------------+--------------+\n |   FC     |    288     |     124      |\n |   BL     |    622     |     204      |\n |   LG     |    212     |     128      |\n +----------+------------+--------------+",
+    "question": "What type of representation is Table-3?",
+    "options": {
+      "A": "Contingency Table",
+      "B": "Frequency Table",
+      "C": "None of these",
+      "D": "Both Contingency Table & Frequency Table"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A cosmetics brand \u201cSwamilsBeautiful\u201d manufactures three products, \u201cFace Creams (FC)\u201d, \u201cBody Lotion (BL)\u201d and \u201cLip Gloze (LG)\u201d. The company believes displaying all their products together in a single shelf at a retailer store will help boost their sales, as people tend to pick up the items together. Hence, they are currently spending a lot of money to make sure that the retailers display the products together. However, on hearing this, Dr.Milo feels sceptical as it is counter intuitive. He feels that the sales of the products are independent. To check his theory, data in Table-3 was collected. Table-3 contains the total sales (in quantity) of the three products across retail stores. Here, the retail stores were classified in two types: \u201cType-1: The three products are displayed together\u201d, \u201cType-2: The three products are not displayed together\u201d. Given this information answer the given subquestions.\n +----------+---------------------------+\n | Product  |     Retail Store Type     |\n |          |   Type-1   |   Type-2     |\n +----------+------------+--------------+\n |   FC     |    288     |     124      |\n |   BL     |    622     |     204      |\n |   LG     |    212     |     128      |\n +----------+------------+--------------+",
+    "question": "What is the expected frequency for \u201cBL\u201d in Type-2 stores?",
+    "options": null,
+    "correctOption": {
+      "min": 237.0,
+      "max": 239.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A cosmetics brand \u201cSwamilsBeautiful\u201d manufactures three products, \u201cFace Creams (FC)\u201d, \u201cBody Lotion (BL)\u201d and \u201cLip Gloze (LG)\u201d. The company believes displaying all their products together in a single shelf at a retailer store will help boost their sales, as people tend to pick up the items together. Hence, they are currently spending a lot of money to make sure that the retailers display the products together. However, on hearing this, Dr.Milo feels sceptical as it is counter intuitive. He feels that the sales of the products are independent. To check his theory, data in Table-3 was collected. Table-3 contains the total sales (in quantity) of the three products across retail stores. Here, the retail stores were classified in two types: \u201cType-1: The three products are displayed together\u201d, \u201cType-2: The three products are not displayed together\u201d. Given this information answer the given subquestions.\n +----------+---------------------------+\n | Product  |     Retail Store Type     |\n |          |   Type-1   |   Type-2     |\n +----------+------------+--------------+\n |   FC     |    288     |     124      |\n |   BL     |    622     |     204      |\n |   LG     |    212     |     128      |\n +----------+------------+--------------+",
+    "question": "What is the value of the computed test statistic for the hypothesis test that Dr.Milo will perform to check if his intuition is correct?",
+    "options": null,
+    "correctOption": {
+      "min": 18.0,
+      "max": 22.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A cosmetics brand \u201cSwamilsBeautiful\u201d manufactures three products, \u201cFace Creams (FC)\u201d, \u201cBody Lotion (BL)\u201d and \u201cLip Gloze (LG)\u201d. The company believes displaying all their products together in a single shelf at a retailer store will help boost their sales, as people tend to pick up the items together. Hence, they are currently spending a lot of money to make sure that the retailers display the products together. However, on hearing this, Dr.Milo feels sceptical as it is counter intuitive. He feels that the sales of the products are independent. To check his theory, data in Table-3 was collected. Table-3 contains the total sales (in quantity) of the three products across retail stores. Here, the retail stores were classified in two types: \u201cType-1: The three products are displayed together\u201d, \u201cType-2: The three products are not displayed together\u201d. Given this information answer the given subquestions.\n +----------+---------------------------+\n | Product  |     Retail Store Type     |\n |          |   Type-1   |   Type-2     |\n +----------+------------+--------------+\n |   FC     |    288     |     124      |\n |   BL     |    622     |     204      |\n |   LG     |    212     |     128      |\n +----------+------------+--------------+",
+    "question": "What is the Null Hypothesise for the hypothesis test that Dr.Milo will be performing? (choose all that is applicable)",
+    "options": {
+      "A": "The total sales is independent among the different products and different retail store types",
+      "B": "The total sales is not independent among the different products and different retail store types",
+      "C": "The total sales is uniformly distributed among the different products and different retail store types",
+      "D": "The total sales is uniformly distributed only among the different products",
+      "E": "The total sales is uniformly distributed only among the different retail store types",
+      "F": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "A cosmetics brand \u201cSwamilsBeautiful\u201d manufactures three products, \u201cFace Creams (FC)\u201d, \u201cBody Lotion (BL)\u201d and \u201cLip Gloze (LG)\u201d. The company believes displaying all their products together in a single shelf at a retailer store will help boost their sales, as people tend to pick up the items together. Hence, they are currently spending a lot of money to make sure that the retailers display the products together. However, on hearing this, Dr.Milo feels sceptical as it is counter intuitive. He feels that the sales of the products are independent. To check his theory, data in Table-3 was collected. Table-3 contains the total sales (in quantity) of the three products across retail stores. Here, the retail stores were classified in two types: \u201cType-1: The three products are displayed together\u201d, \u201cType-2: The three products are not displayed together\u201d. Given this information answer the given subquestions.\n +----------+---------------------------+\n | Product  |     Retail Store Type     |\n |          |   Type-1   |   Type-2     |\n +----------+------------+--------------+\n |   FC     |    288     |     124      |\n |   BL     |    622     |     204      |\n |   LG     |    212     |     128      |\n +----------+------------+--------------+",
+    "question": "Given Figure-2, at a 20% level of significance, what will be the conclusion of the hypothesis test? (choose all that is applicable)",
+    "options": {
+      "A": "Reject the Null Hypothesis",
+      "B": "Do Not Reject the Null Hypothesis",
+      "C": "Reject the Alternative Hypothesis",
+      "D": "Do Not Reject the Alternative Hypothesis",
+      "E": "Accept the Null Hypothesis",
+      "F": "Do Not Accept the Null Hypothesis",
+      "G": "Accept the Alternative Hypothesis",
+      "H": "Do Not Accept the Alternative Hypothesis"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764252116/may25-2_sj2chl.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Data Visualization Techniques",
+    "context": null,
+    "question": "When is a \u201cPie Chart\u201d the best visualisation option for presenting data?",
+    "options": {
+      "A": "When the outliers in the data need to be shown",
+      "B": "When trends in the data need to be shown",
+      "C": "When proportions in the data need to be shown",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "Which of the following distributions is/are symmetric in nature (select all that are applicable)?",
+    "options": {
+      "A": "Standard Normal distribution",
+      "B": "Standard Binomial distribution",
+      "C": "Uniform distribution",
+      "D": "Poisson distribution"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. If the people in the locality have a nominal sugar level (which is between 70 mg/dL and 100 mg/dL), then it is expected that the number of people in any given sugar level is uniformly distributed between 1 and 9. If you want to validate this claim, then, answer the given subquestions.\n\nTable 1:\n| Patient ID | Gender | Blood sugar level (in mg/dL) |\n|------------|--------|------------------------------|\n| P1         | MALE   | 71                           |\n| P2         | MALE   | 84                           |\n| P3         | MALE   | 76                           |\n| P4         | MALE   | 78                           |\n| P5         | MALE   | 89                           |\n| P6         | FEMALE | 92                           |\n| P7         | FEMALE | 97                           |\n| P8         | FEMALE | 95                           |\n| P9         | FEMALE | 83                           |\n| P10        | FEMALE | 72                           |",
+    "question": "What is the expected value for the statistical test to be performed? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. If the people in the locality have a nominal sugar level (which is between 70 mg/dL and 100 mg/dL), then it is expected that the number of people in any given sugar level is uniformly distributed between 1 and 9. If you want to validate this claim, then, answer the given subquestions.\n\nTable 1:\n| Patient ID | Gender | Blood sugar level (in mg/dL) |\n|------------|--------|------------------------------|\n| P1         | MALE   | 71                           |\n| P2         | MALE   | 84                           |\n| P3         | MALE   | 76                           |\n| P4         | MALE   | 78                           |\n| P5         | MALE   | 89                           |\n| P6         | FEMALE | 92                           |\n| P7         | FEMALE | 97                           |\n| P8         | FEMALE | 95                           |\n| P9         | FEMALE | 83                           |\n| P10        | FEMALE | 72                           |",
+    "question": "If three bins of equal sizes (that is Bin-1 = [70-80), Bin-2= [80 to 90) and Bin-3 = [90 to 100]) are considered. Then, what is the value of the computed test statistic for the statistical test to be performed? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 1.6,
+      "max": 1.9
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. If the people in the locality have a nominal sugar level (which is between 70 mg/dL and 100 mg/dL), then it is expected that the number of people in any given sugar level is uniformly distributed between 1 and 9. If you want to validate this claim, then, answer the given subquestions.\n\nTable 1:\n| Patient ID | Gender | Blood sugar level (in mg/dL) |\n|------------|--------|------------------------------|\n| P1         | MALE   | 71                           |\n| P2         | MALE   | 84                           |\n| P3         | MALE   | 76                           |\n| P4         | MALE   | 78                           |\n| P5         | MALE   | 89                           |\n| P6         | FEMALE | 92                           |\n| P7         | FEMALE | 97                           |\n| P8         | FEMALE | 95                           |\n| P9         | FEMALE | 83                           |\n| P10        | FEMALE | 72                           |",
+    "question": "What is the number of degrees of freedom for the statistical test to be performed? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. If the people in the locality have a nominal sugar level (which is between 70 mg/dL and 100 mg/dL), then it is expected that the number of people in any given sugar level is uniformly distributed between 1 and 9. If you want to validate this claim, then, answer the given subquestions.\n\nTable 1:\n| Patient ID | Gender | Blood sugar level (in mg/dL) |\n|------------|--------|------------------------------|\n| P1         | MALE   | 71                           |\n| P2         | MALE   | 84                           |\n| P3         | MALE   | 76                           |\n| P4         | MALE   | 78                           |\n| P5         | MALE   | 89                           |\n| P6         | FEMALE | 92                           |\n| P7         | FEMALE | 97                           |\n| P8         | FEMALE | 95                           |\n| P9         | FEMALE | 83                           |\n| P10        | FEMALE | 72                           |",
+    "question": "What does the p-value of the performed statistical test refer to?",
+    "options": {
+      "A": "The chance of observing the sample in Table 1 given that the locality has people who are uniformly distributed between 1 and 9 with the nominal sugar levels.",
+      "B": "The chance of observing the sample in Table 1 when the locality has a blood sugar levels which are uniformly distributed between 70mg/ dL and 100 mg/dL.",
+      "C": "The chance of observing the sample in Table 1 given that the locality has people who are uniformly distributed between 1 and 9 at any given sugar level.",
+      "D": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say, Table 1 specifies the blood sugar level (in mg/dL) for the male and female patients who visit a hospital. If the people in the locality have a nominal sugar level (which is between 70 mg/dL and 100 mg/dL), then it is expected that the number of people in any given sugar level is uniformly distributed between 1 and 9. If you want to validate this claim, then, answer the given subquestions.\n\nTable 1:\n| Patient ID | Gender | Blood sugar level (in mg/dL) |\n|------------|--------|------------------------------|\n| P1         | MALE   | 71                           |\n| P2         | MALE   | 84                           |\n| P3         | MALE   | 76                           |\n| P4         | MALE   | 78                           |\n| P5         | MALE   | 89                           |\n| P6         | FEMALE | 92                           |\n| P7         | FEMALE | 97                           |\n| P8         | FEMALE | 95                           |\n| P9         | FEMALE | 83                           |\n| P10        | FEMALE | 72                           |",
+    "question": "If the p-value for the test is 0.75, then what can be the maximum level of significance if the Null Hypothesis is NOT TO BE REJECTED.",
+    "options": {
+      "A": "0.74",
+      "B": "0.26",
+      "C": "Any value between 0 and 1",
+      "D": "Cannot say without more data"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say Table 2, provides the data on the number of enrolments who complete the \u201cFoundation\u201d, \u201cDiploma\u201d, and \u201cDegree\u201d and the number of enrolments who \u201cdiscontinue\u201d the IITM BSc program for \u201cMale\u201d and \u201cFemale\u201d gender students. Given this information, answer the subquestions.\n\nTable 2:\n|        | Completed Foundation | Completed Diploma | Completed Degree | Discontinued |\n|--------|----------------------|-------------------|------------------|--------------|\n| Male   | 30                   | 40                | 30               | 23           |\n| Female | 55                   | 20                | 25               | 15           |",
+    "question": "If the aim is to understand if the \u201cGender\u201d categories and \u201cCompletion\u201d categories (including completion of any degree and discontinuation) are independent of each other, then what is the value for the computed test statistic? (Note: round your final answer to two decimal places. Example: if your answer is \u201c1.2354\u201d enter it as \u201c1.24\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 15.5,
+      "max": 16.3
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say Table 2, provides the data on the number of enrolments who complete the \u201cFoundation\u201d, \u201cDiploma\u201d, and \u201cDegree\u201d and the number of enrolments who \u201cdiscontinue\u201d the IITM BSc program for \u201cMale\u201d and \u201cFemale\u201d gender students. Given this information, answer the subquestions.\n\nTable 2:\n|        | Completed Foundation | Completed Diploma | Completed Degree | Discontinued |\n|--------|----------------------|-------------------|------------------|--------------|\n| Male   | 30                   | 40                | 30               | 23           |\n| Female | 55                   | 20                | 25               | 15           |",
+    "question": "What is the number of degrees of freedom for the statistical test to be performed? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "Say Table 2, provides the data on the number of enrolments who complete the \u201cFoundation\u201d, \u201cDiploma\u201d, and \u201cDegree\u201d and the number of enrolments who \u201cdiscontinue\u201d the IITM BSc program for \u201cMale\u201d and \u201cFemale\u201d gender students. Given this information, answer the subquestions.\n\nTable 2:\n|        | Completed Foundation | Completed Diploma | Completed Degree | Discontinued |\n|--------|----------------------|-------------------|------------------|--------------|\n| Male   | 30                   | 40                | 30               | 23           |\n| Female | 55                   | 20                | 25               | 15           |",
+    "question": "If a 20% significance level is considered, then which of the following statements is/are true for the performed statistical test (choose all that are applicable)",
+    "options": {
+      "A": "If the p-value for the test is 0.25, conclude that the course completions are independent of gender",
+      "B": "If the p-value for the test is 0.15, conclude that the course completions are not independent of gender",
+      "C": "If the p-value for the test is 0.25, conclude that the course completions are not independent of gender",
+      "D": "If the p-value for the test is 0.15, conclude that the course completions are independent of gender",
+      "E": "If the computed test statistic is less than the chi-square tabulated, then conclude that the course enrolments are independent of gender",
+      "F": "If the computed test statistic is greater than the chi-square tabulated, then conclude that the course enrolments are not independent of gender",
+      "G": "If the computed test statistic is less than the chi-square tabulated, then conclude that the course enrolments are not independent of gender",
+      "H": "If the computed test statistic is greater than the chi-square tabulated, then conclude that the course enrolments are independent of gender"
+    },
+    "correctOption": ["A", "B", "E", "F"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "A distribution is right-tailed if (select all that is applicable)",
+    "options": {
+      "A": "Coefficient of variation is positive",
+      "B": "Skewness is positive",
+      "C": "Skewness is negative",
+      "D": "Cannot say without the histogram"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": "The manager at a restaurant has observed that the \u201cLunch Buffet\u201d follows a linear demand response curve. Hence, the manager has decided to raise the \u201cLunch Buffet\u201d price by Rs. 250 rupees per person to Rs. 500 per person. The demand was 300 people per Lunch before the raise and is 200 people per lunch after the raise. Then answer the given subquestions.",
+    "question": "What is the market size for the \u201cLunch Buffet\u201d at the restaurant? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 400,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": "The manager at a restaurant has observed that the \u201cLunch Buffet\u201d follows a linear demand response curve. Hence, the manager has decided to raise the \u201cLunch Buffet\u201d price by Rs. 250 rupees per person to Rs. 500 per person. The demand was 300 people per Lunch before the raise and is 200 people per lunch after the raise. Then answer the given subquestions.",
+    "question": "What is the elasticity of the linear demand response curve at a price of 500? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": {
+      "min": 0.4,
+      "max": 0.41
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": "The manager at a restaurant has observed that the \u201cLunch Buffet\u201d follows a linear demand response curve. Hence, the manager has decided to raise the \u201cLunch Buffet\u201d price by Rs. 250 rupees per person to Rs. 500 per person. The demand was 300 people per Lunch before the raise and is 200 people per lunch after the raise. Then answer the given subquestions.",
+    "question": "What is the satiating price of the linear demand response curve for the \u201cLunch Buffet\u201d demand at the restaurant? (Note: give only a numerical value rounded to 2 decimal places. For example, if your answer is 10.1253, then input the answer as \u201c10.13\u201d)",
+    "options": null,
+    "correctOption": 1000,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Linear Programming and Optimization",
+    "context": "The manager at a restaurant has observed that the \u201cLunch Buffet\u201d follows a linear demand response curve. Hence, the manager has decided to raise the \u201cLunch Buffet\u201d price by Rs. 250 rupees per person to Rs. 500 per person. The demand was 300 people per Lunch before the raise and is 200 people per lunch after the raise. Then answer the given subquestions.",
+    "question": "At the satiating price, what can be said about the \u201cLunch Buffet\u201d demand? (choose all that are applicable)",
+    "options": {
+      "A": "It is perfectly elastic",
+      "B": "It is perfectly inelastic",
+      "C": "It is for an \"inferior good\"",
+      "D": "It is for a \"luxury good\"",
+      "E": "Cannot say, insufficient information"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "Your family is seeking an alliance for you and has found three matrimonial services \u201cA\u201d, \u201cB\u201d and \u201cC\u201d. Assume that the enrolment in the matrimonial services is mutually exclusive. A market survey indicates that 30% of total enrolments are in \u201cA\u201d, 30% are in \u201cB\u201d and the remaining are in \u201cC\u201d. The market survey also indicates that 15% of registrations in \u201cA\u201d do not find a suitable match, 12% in \u201cB\u201d do not find a suitable match, and 30% in \u201cC\u201d do not find a suitable match. Recently, your family has heard the news that a relative \u201cX\u201d has found a suitable match after enrolling in one of the matrimonial services. Then which matrimonial service would you suspect \u201cX\u201d to have enrolled in?",
+    "options": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "Cannot say, require more information."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": null,
+    "question": "A hypothesis test is conducted to check if a data set follows a normal distribution. If the p-value is 0.67, then which of the following statements are TRUE (select all that is applicable)",
+    "options": {
+      "A": "At a 5% level of significance REJECT the null hypothesis and conclude that the data does not follow a normal distribution",
+      "B": "At a 5% level of significance DO NOT REJECT the null hypothesis and conclude that the data follows a normal distribution",
+      "C": "At a 5% level of significance REJECT the null hypothesis and conclude that the data follows a normal distribution",
+      "D": "At a 5% level of significance DO NOT REJECT the null hypothesis and conclude that the data does not follow a normal distribution",
+      "E": "At a 10% level of significance REJECT the alternative hypothesis and conclude that the data does not follow a normal distribution",
+      "F": "At a 10% level of significance DO NOT REJECT the alternative hypothesis and conclude that the data does not follow a normal distribution",
+      "G": "At a 10% level of significance REJECT the alternative hypothesis and conclude that the data follows a normal distribution",
+      "H": "At a 10% level of significance DO NOT REJECT the alternative hypothesis and conclude that the data follows a normal distribution"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "The aim is to explore if the total box-office collection during the weekdays (Monday to Thursday) and Sunday and the total box-office collection during the weekends (Friday, Saturday and Sunday) are independent across the two heroes. Then how many DOFs does the test have? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "The aim is to explore if the total box-office collection during the weekends (Friday, Saturday and Sunday) and the total box-office collection during the weekdays (Monday to Thursday) are independent across the two heroes. Then what is the expected box-office collection for MK ON WEEKENDS? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 103.0,
+      "max": 105.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "The aim is to explore if the total box-office collection during the weekends (Friday, Saturday and Sunday) and the total box-office collection during the weekdays (Monday to Thursday) are independent across the two heroes. Then what is the expected box-office collection for YV ON WEEKDAYS? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 46.0,
+      "max": 48.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "The aim is to explore if the total box-office collection during the weekends (Friday, Saturday and Sunday) and the total box-office collection during the weekdays (Monday to Thursday) are independent across the two heroes. Then what is value for the computed test statistic? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 0.85,
+      "max": 0.92
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "The aim is to explore if the total box-office collection during the weekends (Friday, Saturday and Sunday) and the total box-office collection during the weekdays (Monday to Thursday) are independent across the two heroes. Then given the below Table-2, at a 95% confidence level, what is the conclusion?",
+    "options": {
+      "A": "Do Not Reject the Null",
+      "B": "Reject the Null",
+      "C": "Accept the Null",
+      "D": "Do Not Accept the Null",
+      "E": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764251539/sep24-1_au9ubf.png"
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "There is a presumption that total box-office collection (of both actors) in Million INR on DIFFERENT DATES, follows a uniform distribution with a minimum value of 11 Million INR and maximum value of 30 Million INR. A statistical test is performed to check this presumption. The bins considered for the test are [11 to 15], [16 to 20], [21 to 25] and [26 to 30]. Then, for performing the statistical test, what is the expected frequency in any given bin? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": 3.75,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "There is a presumption that total box-office collection (of both actors) in Million INR on DIFFERENT DATES, follows a uniform distribution with a minimum value of 11 Million INR and maximum value of 30 Million INR. A statistical test is performed to check this presumption. The bins considered for the test are [11 to 15], [16 to 20], [21 to 25] and [26 to 30]. Then, for performing the statistical test, what is the DOF? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "MSS is a firm that specializes in social media analytics. MSS has acquired data (in Table-1) on the past movie releases of two Heroes nick-named \u201cManda Kasayam (MK)\u201d and \u201cYouth Vodhavaka (YV)\u201d in the Tamil Film industry. The data is on the Box-Office collections for the movies of MK and YV on different dates in january-1950. Then answer the given subquestions,with the presumption that the other necessary conditions required for the questions are met.\n\nTable-1:\n+-------------+-----------+---------------------------+---------------------------+\n|     Date    |    Day    |   MK Collection (INR Mn)  |   YV Collection (INR Mn)  |\n+-------------+-----------+---------------------------+---------------------------+\n| 01-Jan-1950 |  Sunday   |            11             |            10             |\n| 02-Jan-1950 |  Monday   |             9             |            10             |\n| 03-Jan-1950 |  Tuesday  |            15             |             9             |\n| 04-Jan-1950 | Wednesday |             8             |             6             |\n| 05-Jan-1950 | Thursday  |            18             |             2             |\n| 06-Jan-1950 |  Friday   |            16             |            10             |\n| 07-Jan-1950 | Saturday  |            19             |             7             |\n| 08-Jan-1950 |  Sunday   |             8             |             6             |\n| 09-Jan-1950 |  Monday   |            10             |             1             |\n| 10-Jan-1950 |  Tuesday  |            19             |             3             |\n| 11-Jan-1950 | Wednesday |            19             |             5             |\n| 12-Jan-1950 | Thursday  |            19             |             8             |\n| 13-Jan-1950 |  Friday   |            15             |             8             |\n| 14-Jan-1950 | Saturday  |            17             |             5             |\n| 15-Jan-1950 |  Sunday   |            15             |             2             |\n+-------------+-----------+---------------------------+---------------------------+",
+    "question": "There is a presumption that total box-office collection (of both actors) in Million INR on DIFFERENT DATES, follows a uniform distribution with a minimum value of 11 Million INR and maximum value of 30 Million INR. A statistical test is performed to check this presumption. The bins considered for the test are [11 to 15], [16 to 20], [21 to 25] and [26 to 30]. Then, for performing the statistical test, what is the value of the computed test statistic? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 1.7,
+      "max": 1.9
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "The linear demand response for product-A is modelled as a simple linear regression represented as D(P) = 4500 - 30*P, where D(P) is the demand at price-P. Then, answer the given subquestions.",
+    "question": "What is the elasticity of the demand response curve when the price is Rs.50? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 0.49,
+      "max": 0.51
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "The linear demand response for product-A is modelled as a simple linear regression represented as D(P) = 4500 - 30*P, where D(P) is the demand at price-P. Then, answer the given subquestions.",
+    "question": "What is the satiating price for the demand response curve? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 149.99,
+      "max": 150.99
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Predictive Modeling and Classification",
+    "context": "The linear demand response for product-A is modelled as a simple linear regression represented as D(P) = 4500 - 30*P, where D(P) is the demand at price-P. Then, answer the given subquestions.",
+    "question": "What is the market size for the demand response curve? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": 4500,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You want to apply for a student visa to country \u201cX\u201d. You can do this through any one of the five application centres, \u201cA\u201d, \u201cB\u201d, \u201cC\u201d, \u201cD\u201d or \u201cE\u201d. To determine which application centre to choose, you collect data. Currently, the embassy has decided to receive 15% of the applications from centre A, 10% from centre B, 25% each from centres C, D and E. Historically, 60% of the applications that come from centre A have been granted the visa, and 80% of the applications from centre B have been granted the visa. Centres C, D and E each had a 50-50 chance of granting a visa or not granting a visa respectively. Then answer the given subquestions.",
+    "question": "What is your probability of applying for a student visa through centre A and it is granted? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 0.09,
+      "max": 0.1
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You want to apply for a student visa to country \u201cX\u201d. You can do this through any one of the five application centres, \u201cA\u201d, \u201cB\u201d, \u201cC\u201d, \u201cD\u201d or \u201cE\u201d. To determine which application centre to choose, you collect data. Currently, the embassy has decided to receive 15% of the applications from centre A, 10% from centre B, 25% each from centres C, D and E. Historically, 60% of the applications that come from centre A have been granted the visa, and 80% of the applications from centre B have been granted the visa. Centres C, D and E each had a 50-50 chance of granting a visa or not granting a visa respectively. Then answer the given subquestions.",
+    "question": "What is your probability of applying for a student visa through centre B and it is not-granted? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 0.01,
+      "max": 0.03
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You want to apply for a student visa to country \u201cX\u201d. You can do this through any one of the five application centres, \u201cA\u201d, \u201cB\u201d, \u201cC\u201d, \u201cD\u201d or \u201cE\u201d. To determine which application centre to choose, you collect data. Currently, the embassy has decided to receive 15% of the applications from centre A, 10% from centre B, 25% each from centres C, D and E. Historically, 60% of the applications that come from centre A have been granted the visa, and 80% of the applications from centre B have been granted the visa. Centres C, D and E each had a 50-50 chance of granting a visa or not granting a visa respectively. Then answer the given subquestions.",
+    "question": "If a total of 500 applications have been granted a visa, then how many would you expect to have come from centres \"C\", \"D\" and \"E\" (totally from the three centres)? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 187.0,
+      "max": 188.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "Business Analytics",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Statistical Inference and Hypothesis Testing",
+    "context": "You want to apply for a student visa to country \u201cX\u201d. You can do this through any one of the five application centres, \u201cA\u201d, \u201cB\u201d, \u201cC\u201d, \u201cD\u201d or \u201cE\u201d. To determine which application centre to choose, you collect data. Currently, the embassy has decided to receive 15% of the applications from centre A, 10% from centre B, 25% each from centres C, D and E. Historically, 60% of the applications that come from centre A have been granted the visa, and 80% of the applications from centre B have been granted the visa. Centres C, D and E each had a 50-50 chance of granting a visa or not granting a visa respectively. Then answer the given subquestions.",
+    "question": "Say you find Dr.MS had applied for a student visa in the past, and the application was not granted. However, Dr.MS has not told you which application centre was chosen to submit the application. Then what is the probability that Dr. MS has applied though centre C? (Note: If your answer is in decimal, enter it rounded to two decimal places. For example, if your answer is \"10.256\", enter it as \"10.26\")",
+    "options": null,
+    "correctOption": {
+      "min": 0.26,
+      "max": 0.28
+    },
+    "questionType": "numerical",
+    "image": null
+  }
+]

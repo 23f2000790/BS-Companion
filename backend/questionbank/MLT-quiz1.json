@@ -1,0 +1,2055 @@
+[
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Standard-PCA is performed on a centered dataset in R\u00b3. Two principal components are given below:\n\n(1/2) \u00b7 [ 1 ]\n        [\u221a2 ]\n        [-1 ]\n\n(1/\u221a2) \u00b7 [ 1 ] \n         [ 0 ]\n         [ 1 ]\n\nWhich of the following could be the third?",
+    "options": {
+      "A": "(1/2) \u00b7 [ 1 ]\n        [-\u221a2]\n        [-1 ]",
+      "B": "[0 0 0]\u1d40",
+      "C": "(1/\u221a2) * [1 0 1]\u1d40",
+      "D": "(1/\u221a3) * [\u221a2  -1  0]\u1d40"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider that 1000 data points belonging to d-dimensional space have a non-linear relationship. We apply kernel PCA to reduce the dimension of the data points and take the first k principal components. Can the value of k be larger than d?",
+    "options": {
+      "A": "Yes",
+      "B": "No"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let X be the data matrix of shape d x n with d > n for a centered dataset. The eigenvector corresponding to the largest eigenvalue \u03bb of X\u1d40X is \u03b1\u2081. What will be the first principal component of the dataset?",
+    "options": {
+      "A": "\u03b1\u2081",
+      "B": "\u03b1\u2081/\u221a\u03bb",
+      "C": "X\u03b1\u2081",
+      "D": "X\u03b1\u2081/\u221a\u03bb"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Is the following statement true or false?\nFor any desired transformation \u03c6(x), we can design a kernel function k(x\u2081, x\u2082) that will evaluate \u03c6(x\u2081)\u1d40\u03c6(x\u2082).",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following could be the first principal component? Recall that the first P.C is the most important one.",
+    "options": {
+      "A": "[1, 0]\u1d40",
+      "B": "[0, 1]\u1d40",
+      "C": "(1/\u221a2) * [1, 1]\u1d40",
+      "D": "(1/\u221a2) * [-1, 1]\u1d40"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764309869/jan23-1_ldm6mc.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "In standard PCA, which of the following are correct formulations of the optimization problem? The dataset {x\u2081,\u00b7\u00b7\u00b7,x\u2099}, is centered, each point lies in \u211d\u1d48, and C is the covariance matrix. w \u2208 \u211d\u1d48 is the variable that we are optimizing over.",
+    "options": {
+      "A": "min_w (1/n) * \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - (x\u1d62\u1d40w)w||\u00b2 subject to ||w|| = 1",
+      "B": "max_w w\u1d40Cw subject to ||w|| = 1",
+      "C": "max_w (1/n) * \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - (x\u1d62\u1d40w)w||\u00b2 subject to ||w|| = 1",
+      "D": "min_w w\u1d40Cw subject to ||w|| = 1"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider a GMM with 3 components that is used to model a dataset that has 100 points. The EM algorithm is run on this dataset to estimate the parameters of the GMM. After convergence, some of the values of \u03bb\u2096\u2071 for the specific point x\u2081\u2080 are given below:\n\u03bb\u2081\u00b9\u2070 = 0.2, \u03bb\u2082\u00b9\u2070 = 0.5\nSelect all true statements.",
+    "options": {
+      "A": "If a point is picked randomly from the dataset of 100 points, then there is 20% chance that it comes from the first component.",
+      "B": "\u03bb\u2083\u00b9\u2070 = 0.3",
+      "C": "\u03a3\u1d62\u208c\u2081\u00b9\u2070\u2070 \u03bb\u2083\u2071 = 1",
+      "D": "There is a 50% chance that the point x\u2081\u2080 comes from the second component."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider a dataset with n points and a GMM with K components. If we fix \u03bb and maximize for \u03b8, what is our estimate for the mean of the k\u1d57\u02b0 component?",
+    "options": {
+      "A": "It is the weighted mean of the n points, where the weight for point i in component k is given by \u03bb\u2096\u2071",
+      "B": "It is the mean of the n points.",
+      "C": "\u03bc\u0302\u2096 = (1/n) \u03a3\u1d62\u208c\u2081\u207f x\u1d62",
+      "D": "\u03bc\u0302\u2096 = (\u03a3\u1d62\u208c\u2081\u207f \u03bb\u2096\u2071 x\u1d62) / (\u03a3\u1d62\u208c\u2081\u207f \u03bb\u2096\u2071)"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "With respect to the Lloyd's algorithm, choose the correct statements:",
+    "options": {
+      "A": "The partition configuration cannot repeat themselves.",
+      "B": "After doing the reassignments (consider at least one point reassigned to the new cluster), we might get the same means for all clusters.",
+      "C": "Objective function after making the re-assignments strictly reduces.",
+      "D": "Objective function after making the re-assignments may increase.",
+      "E": "A change in the objective function's value indicates that the partition configuration has changed.",
+      "F": "For partitioning n data points across k partitions, Lloyd's algorithm takes k\u207f iterations to converge."
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset of 20 points where the i\u1d57\u02b0 data-point is given by:\nx\u1d62 = a\u1d62 * [1, 1, 0, 2]\u1d40 + b\u1d62 * [-1, 1, 3, 0]\u1d40\nwhere, a\u1d62 and b\u1d62 are real numbers such that \u03a3\u1d62\u208c\u2081\u00b2\u2070 a\u1d62 = \u03a3\u1d62\u208c\u2081\u00b2\u2070 b\u1d62 = 0. Standard PCA is performed on this dataset. If the top two principal components are retained and used to reconstruct the dataset, what is the reconstruction error?\nHint: Think about what happens in \u211d\u00b2 or \u211d\u00b3 for a similar situation and extend this idea to \u211d\u2074.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider the following prior for the parameter p of a Bernoulli distribution:\np ~ Beta(3, 2)\nThe dataset observed is as follows:\n{1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1}\nWhat is p\u0302, a point estimate for the parameter of the Bernoulli distribution, if we use the expectation of the posterior as the method of estimation? Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.6,
+      "max": 0.62
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "A dataset containing 200 examples in three-dimensional space has been transformed into a higher-dimensional space using a polynomial kernel of degree two. What will be the dimension of the transformed feature space?",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a centered dataset in \u211d\u00b9\u2070\u2070 that has 1000 data-points. Call this dataset D\u2081. Standard PCA is performed on D\u2081 and the scalar projections of D\u2081 on the top 5 principal components are computed. Call the resulting dataset D\u2082.\nNOTE: D\u2082 is only made up of the scalar projections. All the principal components are thrown out after computing the scalar projections and are not a part of D\u2082.",
+    "question": "Each data-point in D\u2082 belongs to \u211d\u1d4f. What is the value of k?",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a centered dataset in \u211d\u00b9\u2070\u2070 that has 1000 data-points. Call this dataset D\u2081. Standard PCA is performed on D\u2081 and the scalar projections of D\u2081 on the top 5 principal components are computed. Call the resulting dataset D\u2082.\nNOTE: D\u2082 is only made up of the scalar projections. All the principal components are thrown out after computing the scalar projections and are not a part of D\u2082.",
+    "question": "if each real number occupies unit storage space in the memory, compute: size(D\u2081)/size(D\u2082)",
+    "options": null,
+    "correctOption": 20,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Assume that you have a dataset of five points {x\u2081, x\u2082, x\u2083, x\u2084, x\u2085}, all of which are non-negative. You hypothesise that the data points are iid random variables with the following density:\nf(x; \u03bb) = { \u03bbe\u207b\u02e1\u02e3, if x \u2265 0; 0, if x < 0 }.",
+    "question": "What is the log-likelihood of this dataset under this distribution? ln represents the natural logarithm or log\u2091.",
+    "options": {
+      "A": "\u03a0\u1d62\u208c\u2081\u2075 \u03bbe\u207b\u02e1\u02e3\u1d62",
+      "B": "\u03a3\u1d62\u208c\u2081\u2075 \u03bbe\u207b\u02e1\u02e3\u1d62",
+      "C": "\u03a3\u1d62\u208c\u2081\u2075 [ln(\u03bb) - \u03bbx\u1d62]",
+      "D": "\u03a0\u1d62\u208c\u2081\u2075 [ln(\u03bb) - \u03bbx\u1d62]"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Assume that you have a dataset of five points {x\u2081, x\u2082, x\u2083, x\u2084, x\u2085}, all of which are non-negative. You hypothesise that the data points are iid random variables with the following density:\nf(x; \u03bb) = { \u03bbe\u207b\u02e1\u02e3, if x \u2265 0; 0, if x < 0 }.",
+    "question": "You are given the actual values of these observations: x\u2081 = 1, x\u2082 = 2, x\u2083 = 3, x\u2084 = 4, x\u2085 = 5. What is the maximum likelihood estimate for \u03bb? Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.32,
+      "max": 0.34
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "How many points belong to cluster 3 (mean \u03bc\u2083) for the initial clusters?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764309874/jan23-2_mfjmqy.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "What will be the mean \u03bc\u2083 after 1\u02e2\u1d57 iteration? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 16.23,
+      "max": 16.27
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764309874/jan23-2_mfjmqy.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "How many points belong to cluster 2 (mean \u03bc\u2082) after the 1\u02e2\u1d57 iteration?",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764309874/jan23-2_mfjmqy.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "How many iterations will it take for the algorithm to converge with the given initial clusters?",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764309874/jan23-2_mfjmqy.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "What will be the final cluster means?",
+    "options": {
+      "A": "\u03bc\u2081 = -15, \u03bc\u2082 = 0, \u03bc\u2083 = 5",
+      "B": "\u03bc\u2081 = -10, \u03bc\u2082 = 0, \u03bc\u2083 = 15",
+      "C": "\u03bc\u2081 = -12.5, \u03bc\u2082 = 0, \u03bc\u2083 = 16.25",
+      "D": "\u03bc\u2081 = -12.5, \u03bc\u2082 = 2.5, \u03bc\u2083 = 16.25",
+      "E": "\u03bc\u2081 = -12.5, \u03bc\u2082 = 2.5, \u03bc\u2083 = 20"
+    },
+    "correctOption": "E",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764309874/jan23-2_mfjmqy.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "A k-means++ algorithm with k = 3 was applied to following 2D points:\n(0,0),(1,2),(3,1),(4,7),(-1,9),(4,-2)\n(0,0) is chosen as the first cluster mean.",
+    "question": "Which point has the highest probability of being chosen as the 2\u207f\u1d48 cluster mean? Use the manhattan distance to compute the distances.",
+    "options": {
+      "A": "(3,1)",
+      "B": "(4,7)",
+      "C": "(-1,9)",
+      "D": "(4,-2)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "A k-means++ algorithm with k = 3 was applied to following 2D points:\n(0,0),(1,2),(3,1),(4,7),(-1,9),(4,-2)\n(0,0) is chosen as the first cluster mean.",
+    "question": "If the point with the highest score is chosen as the 2\u207f\u1d48 cluster mean( answer from previous question ), Which point has the highest probability of being chosen as 3\u02b3\u1d48 the cluster mean? Use the manhattan distance to compute the distances.",
+    "options": {
+      "A": "(3,1)",
+      "B": "(4,7)",
+      "C": "(-1,9)",
+      "D": "(4,-2)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Suppose a dataset lies in R\u00b3 and undergoes Principal Component Analysis (PCA) after being centered. The resulting first and second principal components are given by:\n\n(1/\u221a3) * [-1  1  1]\u1d40, (1/\u221a3) * [1  0  -1]\u1d40",
+    "question": "Which of the following could be the third principal component?",
+    "options": {
+      "A": "(1/\u221a2) * [1  1  0]\u1d40",
+      "B": "(1/\u221a3) * [1  1  1]\u1d40",
+      "C": "(1/\u221a2) * [-1  1  0]\u1d40",
+      "D": "(1/\u221a3) * [0  1  1]\u1d40"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let k: R \u00d7 R \u2192 R be a valid kernel. Is sin(x\u2081)cos(x\u2082)k(x\u2081, x\u2082) a valid kernel? Here, x\u2081, x\u2082 \u2208 R?",
+    "options": {
+      "A": "Yes",
+      "B": "No"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following kernel:\nk: R\u00b2 \u00d7 R\u00b2 \u2192 R\nk(x, y) = (x\u1d40y)\u00b2 + 1",
+    "question": "Which of the following transformation mapping \u03d5 may correspond to the kernel k?",
+    "options": {
+      "A": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081\u00b2, \u221a2x\u2081x\u2082, x\u2082\u00b2, 1]\u1d40",
+      "B": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081\u00b2, x\u2081 + x\u2082, x\u2082\u00b2, 1]\u1d40",
+      "C": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081, \u221a2x\u2081\u00b2x\u2082, x\u2082, 1]\u1d40",
+      "D": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081, x\u2081x\u2082, x\u2082, 1]\u1d40"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset consisting of 1000 samples in a 20-dimensional space. You apply Kernel PCA with a polynomial kernel of degree 3 to reduce the dimensionality of the data. Which of the following statements regarding Kernel PCA is true?",
+    "options": {
+      "A": "Kernel PCA always results in a lower-dimensional representation of the data compared to standard PCA.",
+      "B": "Kernel PCA can only be applied to datasets that are linearly separable.",
+      "C": "Choosing a higher degree polynomial kernel in Kernel PCA can lead to increased flexibility in capturing non-linear relationships.",
+      "D": "None of these."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Standard PCA has been performed on a centered dataset in R\u00b3. The first two principal components are given below:\nw\u2081 = (1/\u221a3) * [1, 1, 1]\u1d40, w\u2082 = (1/\u221a2) * [-1, 1, 0]\u1d40\n\nConsider the data point in the dataset: [2, 1, -1]\u1d40. (a, b) is the representation of this point in the coordinate system formed by the two principal components given above. The first and second coordinates correspond to PC-1 and PC-2 respectively.\n\nBased on the above data, answer the given subquestions.",
+    "question": "What is the value of a? Enter your answer correctly to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 1.1,
+      "max": 1.2
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Standard PCA has been performed on a centered dataset in R\u00b3. The first two principal components are given below:\nw\u2081 = (1/\u221a3) * [1, 1, 1]\u1d40, w\u2082 = (1/\u221a2) * [-1, 1, 0]\u1d40\n\nConsider the data point in the dataset: [2, 1, -1]\u1d40. (a, b) is the representation of this point in the coordinate system formed by the two principal components given above. The first and second coordinates correspond to PC-1 and PC-2 respectively.\n\nBased on the above data, answer the given subquestions.",
+    "question": "What is the value of b? Enter your answer correctly to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.65,
+      "max": 0.75
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the data points shown in the following image:\nBased on the above data, answer the given subquestions.",
+    "question": "Perform K-means clustering with K = 2 and initial cluster centers at (0, 0) and (6, 0). What are the final means of clusters after convergence?",
+    "options": {
+      "A": "(2, 0) and (8, 0)",
+      "B": "(2, 0) and (8.5, 0)",
+      "C": "(0, 0) and (8, 0)",
+      "D": "(0, 0) and (8.5, 0)",
+      "E": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764311793/jan24-1_bo3msl.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the data points shown in the following image:\nBased on the above data, answer the given subquestions.",
+    "question": "After introducing a new data point (7, 0), the cluster centers were updated. Enter the sum of the updated x-coordinates for both cluster centers accurately, rounding your answer to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 8.18,
+      "max": 8.22
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764311793/jan24-1_bo3msl.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Assume that you have a dataset of six points {x\u2081, x\u2082, x\u2083, x\u2084, x\u2085, x\u2086}, all of which are non-negative. You hypothesise that the data points are iid random variables with the following density:\nf(x; \u03bb) = { \u03bbe^(-\u03bbx), x \u2265 0; 0, x < 0 }\n\nBased on the above data, answer the given subquestions.",
+    "question": "What is the log-likelihood of this dataset under this distribution? In represents the natural logarithm or loge.",
+    "options": {
+      "A": "\u03a0\u1d62\u208c\u2081\u2076 \u03bbe^(-\u03bbx\u1d62)",
+      "B": "\u03a3\u1d62\u208c\u2081\u2076 \u03bbe^(-\u03bbx\u1d62)",
+      "C": "\u03a0\u1d62\u208c\u2081\u2076 [ln(\u03bb) - \u03bbx\u1d62]",
+      "D": "\u03a3\u1d62\u208c\u2081\u2076 [ln(\u03bb) - \u03bbx\u1d62]"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Assume that you have a dataset of six points {x\u2081, x\u2082, x\u2083, x\u2084, x\u2085, x\u2086}, all of which are non-negative. You hypothesise that the data points are iid random variables with the following density:\nf(x; \u03bb) = { \u03bbe^(-\u03bbx), x \u2265 0; 0, x < 0 }\n\nBased on the above data, answer the given subquestions.",
+    "question": "You are given the actual values of these observations: x\u2081 = 1, x\u2082 = 2, x\u2083 = 3, x\u2084 = 4, x\u2085 = 5, x\u2086 = 6. What is the maximum likelihood estimate for \u03bb? Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.25,
+      "max": 0.35
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider Lloyd's algorithm used for k-means clustering and choose the correct statements:",
+    "options": {
+      "A": "K-means algorithm may get stuck at local minima.",
+      "B": "It guarantees finding the optimal clustering (global minimum) in every run.",
+      "C": "In practice, k should be as large as possible.",
+      "D": "If the resources are limited and the data set is huge, it will be good to prefer K-means over K-means++."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "For the given Beta distribution, choose the correct option.",
+    "options": {
+      "A": "Red line denotes the mean for the given Beta distribution, i.e. mean = 2/7",
+      "B": "Green line denotes the mean for the given Beta distribution, i.e. mean = 2/7",
+      "C": "Red line denotes the mode for the given Beta distribution, i.e. mode = 1/5",
+      "D": "Green line denotes the mode for the given Beta distribution, i.e. mode = 1/5"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764311793/jan24-2_jgc4ki.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a dataset with 100 total data points. Each data point is classified as either type A or type B. We model this using a Bernoulli distribution, where p is the probability of a data point being type A. If the maximum likelihood estimate (MLE) of p based on the dataset is 0.4, how many data points of type B are there in this dataset?",
+    "options": null,
+    "correctOption": 60,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "For the Lloyd's algorithm, what would be the correct relationship among the following three quantities?\n(1) \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - \u03bc\u00b2\ud835\udc67\u1d62||\u00b2,\n(2) \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - \u03bc\u00b9\ud835\udc67\u1d62||\u00b2,\n(3) \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - \u03bc\u00b9\ud835\udc67\u1d62\u207a\u00b9||\u00b2\nwhere \u03bc\u00b9\ud835\udc67\u1d62 and \u03bc\u00b2\ud835\udc67\u1d62\u207a\u00b9 refer to means of cluster z\u1d62 in iterations, t and t+1 respectively, and \u03bc\u00b9\ud835\udc67\u1d62\u207a\u00b9 refer to the mean of the cluster z\u1d62 where x\u1d62 is going to move in the next iteration, i.e., (t+1)-th iteration.",
+    "options": {
+      "A": "(1) > (2) > (3)",
+      "B": "(1) < (2) < (3)",
+      "C": "(3) < (1) < (2)",
+      "D": "(2) < (3) < (1)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "K-means clustering is run on a dataset of 100 points with K = 3. If you know that the points [0 1]\u1d40 and [1 1]\u1d40 are a part of the same cluster C1, then which of the following points will definitely lie in C1?",
+    "options": {
+      "A": "[-1 1]\u1d40",
+      "B": "[1 2]\u1d40",
+      "C": "[0.2 1]\u1d40",
+      "D": "[0 0]\u1d40"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let x\u2081, x\u2082, ..., x\u2099 be d-dimensional data points (d > n) and X be the matrix of shape d \u00d7 n containing the data points. The k\u1d57\u02b0 largest eigenvalue and corresponding unit eigenvector of X\u1d40X is \u03bb and \u03b1\u2096, respectively. What will be the projection of x\u1d62 on the k\u1d57\u02b0 principal component?",
+    "options": {
+      "A": "x\u1d62\u1d40\u03b1\u2096",
+      "B": "(x\u1d62\u1d40\u03b1\u2096) / \u221an\u03bb",
+      "C": "(x\u1d62\u1d40X\u03b1\u2096) / \u221a\u03bb",
+      "D": "x\u1d62\u1d40X\u03b1\u2096"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following matrices are appropriate matrix K = X\u1d40X for some data matrix X? Choose the most appropriate answer.",
+    "options": {
+      "A": "K =  [4 1 2]\n     [1 5 3]\n     [2 3 6]",
+      "B": "K =  [-2 -1  0]\n     [-1 -3 -1]\n     [ 0 -1 -1]",
+      "C": "K =  [1 -2  1]\n     [2  5 -2]\n     [1 -2  2]",
+      "D": "K =  [3 1 0]\n     [1 4 1]\n     [0 1 5]"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following statements is/are true?",
+    "options": {
+      "A": "k: \u211d\u00b2 \u00d7 \u211d\u00b2 \u2192 \u211d, k(x\u2081, x\u2082) = (x\u2081\u1d40x\u2082)\u00b3 is a valid kernel.",
+      "B": "k: \u211d\u207f \u00d7 \u211d\u207f \u2192 \u211d, k(x\u2081, x\u2082) = e\u207b||x\u2081-x\u2082||\u00b2 is a valid kernel.",
+      "C": "The trace of XX\u1d40 is equal to the trace of X\u1d40X.",
+      "D": "Eigenvectors of XX\u1d40 are the same as eigenvectors of X\u1d40X."
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let X be a data matrix of shape (d, n) for a centered dataset. The first principal component of the dataset is given as [\u221a2/2, \u221a2/2]\u1d40. What will be the scalar proxy of the point [3, 4]\u1d40 onto the first principal component?",
+    "options": null,
+    "correctOption": {
+      "min": 4.92,
+      "max": 4.98
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset that has 1000 samples, where each sample belongs to \u211d\u00b2\u2070. PCA is run on this dataset and the top 5 principal components are retained, the rest being discarded. If it takes one unit of memory to store a real number, find the percentage decrease in storage space of the dataset by moving to its compressed representation. Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 74.0,
+      "max": 75.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "A scatter plot is shown with points at (1,0), (1,1), (0,3), (2,4), and (2,5).",
+    "question": "K-means++ algorithm was run on the following dataset with K = 2. If we use the point (1, 1) as the first cluster mean, then find the probability of the point that has the least chance of being chosen as the second cluster mean. Enter the answer correct to two decimal places. Use Euclidean distance to calculate the distance.",
+    "options": null,
+    "correctOption": {
+      "min": 0.07,
+      "max": 0.11
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764317036/jan25-1_lypdep.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose you toss a coin four times and observe no heads. You then give the coin to your friend, who tosses it until the first head occurs. Your friend tosses the coin a total of five times. Let p denote the probability that the coin comes up heads. Find the maximum likelihood estimate of p.",
+    "options": null,
+    "correctOption": {
+      "min": 0.1,
+      "max": 0.12
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose we fit a Gaussian Mixture Model with K = 2 for the following dataset: D = {x\u2081 = 1, x\u2082 = 3, x\u2083 = 2, x\u2084 = 5}. At the beginning of the t-th time step of the EM algorithm, we have \u03b8\u207d\u1d57\u207e as follows: \u03c0\u2081 = 0.5, \u03c0\u2082 = 0.5; \u03bc\u2081 = 1, \u03bc\u2082 = 3; \u03c3\u2081\u00b2 = 1, \u03c3\u2082\u00b2 = 1. What is the probability that x\u2081 belongs to the first component? Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.86,
+      "max": 0.9
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following dataset consisting of four points, all of which are collinear: S = {[0 0]\u1d40, [1 2]\u1d40, [3 6]\u1d40, [5 10]\u1d40}",
+    "question": "Among the vectors given below, choose a representative that has unit length.",
+    "options": {
+      "A": "[1/3  2/3]\u1d40",
+      "B": "[1/\u221a5 2/\u221a5]\u1d40",
+      "C": "[3/\u221a5 6/\u221a5]\u1d40",
+      "D": "[3/5  4/5]\u1d40"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following dataset consisting of four points, all of which are collinear: S = {[0 0]\u1d40, [1 2]\u1d40, [3 6]\u1d40, [5 10]\u1d40}",
+    "question": "If standard PCA is performed on this dataset, what is the variance along the first principal component? Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 43.0,
+      "max": 44.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Suppose that 100 items are sampled from a manufacturing process and 10 are found to be defective. Let p denote the proportion of defective items. Assume that the prior distribution for p is Beta(1, 1).",
+    "question": "Select the correct options from the following:",
+    "options": {
+      "A": "Posterior distribution for p is Beta(91, 11).",
+      "B": "Posterior distribution for p is Beta(11, 91).",
+      "C": "Posterior distribution for p is Bernoulli(0.1).",
+      "D": "Posterior distribution for p is Bernoulli(0.9)."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Suppose that 100 items are sampled from a manufacturing process and 10 are found to be defective. Let p denote the proportion of defective items. Assume that the prior distribution for p is Beta(1, 1).",
+    "question": "Find the posterior mean. Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.1,
+      "max": 0.11
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider the following kernel function:\nk : \u211d\u00b2 \u00d7 \u211d\u00b2 \u2192 \u211d\nk([x\u2081, x\u2082]\u1d40, [y\u2081, y\u2082]\u1d40) = 1 + x\u2081y\u2081 + x\u2082y\u2082 + x\u2081\u00b2y\u2081\u00b2x\u2082y\u2082 + x\u2081y\u2081x\u2082\u00b2y\u2082\u00b2\nFind the appropriate transformation mapping \u03d5 for the given kernel.",
+    "options": {
+      "A": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081x\u2082, x\u2081\u00b2x\u2082\u00b2]",
+      "B": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081, x\u2082, x\u2081\u00b2x\u2082\u00b2]",
+      "C": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081, x\u2082, x\u2081\u00b2x\u2082, x\u2081x\u2082\u00b2]",
+      "D": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081, x\u2082, x\u2081x\u2082, x\u2081\u00b2x\u2082\u00b2]"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider the following Hard K-means clustering problem with four points: P(1, 1), Q(2, 1), R(4, 3), and S(5, 4). Consider the number of clusters to be k = 2 and the initial centroids to be C\u2081 = (0, 0) and C\u2082 = (4, 4). After how many iterations will the algorithm terminate and what will be the final centroids? Use euclidean distance metric to calculate distance.",
+    "options": {
+      "A": "2, (1, 1), (4, 4)",
+      "B": "3, (1, 1), (4, 4)",
+      "C": "2, (1.5, 1), (4.5, 3.5)",
+      "D": "4, (1.5, 1), (4.5, 3.5)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Select all true statements regarding standard PCA applied on a centered dataset.",
+    "options": {
+      "A": "The variance of the dataset along the first principal component is maximum.",
+      "B": "The variance of the dataset along the first principal component is minimum.",
+      "C": "The first principal component is the unit norm eigenvector corresponding to the largest eigenvalue of the covariance matrix.",
+      "D": "The first principal component is the unit norm eigenvector corresponding to the smallest eigenvalue of the covariance matrix."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset of 2000 points all of which lie in \u211d\u00b3\u2070. If all these points lie in four dimensional low subspace then after applying the PCA algorithm which of the following statements is/are true?",
+    "options": {
+      "A": "The covariance matrix corresponding to this dataset has 30 non-zero eigenvalues.",
+      "B": "The covariance matrix corresponding to this dataset has only four non-zero eigenvalues.",
+      "C": "The residues will become zero after four rounds",
+      "D": "By utilizing four principal component vectors and their corresponding coefficients, we are able to reconstruct the complete dataset using representatives."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following statements about kernel PCA is/are always true?",
+    "options": {
+      "A": "The number of principal components corresponding to nonzero eigenvalues obtained using kernel PCA on a d dimensional dataset cannot be more than d.",
+      "B": "For every transformation mapping \u03d5 : \u211d\u1d48 \u2192 \u211d\u1d30, there exists a valid kernel function.",
+      "C": "For two valid kernels k\u2081, k\u2082 : \u211d\u1d48 x \u211d\u1d48 \u2192 \u211d, ak\u2081 + bk\u2082 is a valid kernel function. Here both a and b are positive real numbers.",
+      "D": "The output of a valid kernel function can never be a negative real number."
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Which of the following clusters cannot be obtained as final clusters using Lloyd's algorithm? Assume that Lloyd's algorithm was run on these datasets with k = 2.",
+    "options": {
+      "A": "Graph 1",
+      "B": "Graph 2",
+      "C": "Graph 3",
+      "D": "Graph 4"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764310749/may23-1_t49pmh.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following statements is/are true?",
+    "options": {
+      "A": "k : \u211d\u00b2 \u00d7 \u211d\u00b2 \u2192 \u211d, k(x\u2081, x\u2082) = (x\u2081\u1d40x\u2082)\u00b3 is a valid kernel.",
+      "B": "k : \u211d\u00b2 \u00d7 \u211d\u00b2 \u2192 \u211d, k(x\u2081, x\u2082) = \u2212(x\u2081\u1d40x\u2082)\u00b3 is a valid kernel.",
+      "C": "nonzero Eigenvalues of XX\u1d40 and X\u1d40X are the same.",
+      "D": "Eigenvectors of XX\u1d40 are same as eigenvectors of X\u1d40X."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider the following dataset in \u211d: {\u22123, \u22121, 0, 1, 4, 299, 300, 301}. Lloyd's algorithm (K = 2) is run on this dataset with the points \u221210 and 310 as the initial cluster centers. Let a, b be the final cluster centers on convergence, what is the value of the product ab?",
+    "options": null,
+    "correctOption": 60,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a dataset that has 100 data-points, each of which is either a zero or one. The Bernoulli distribution is used to model this data. If the MLE estimate for the parameter p of the Bernoulli distribution is 0.3, how many zeros does the dataset have?",
+    "options": null,
+    "correctOption": 70,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a dataset with 60 points in which all points are either 0 or 1. We use a Bernoulli distribution with the parameter p to model this problem. The prior and posterior distributions for the parameter p are Beta(10,5) and Beta(30,45) respectively. How many data points have the value 0 in this dataset? Note that p = P(x = 1) as usual.",
+    "options": null,
+    "correctOption": 40,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a GMM with two components:\n\u03c0\u2081 = 0.3, \u03c0\u2082 = 0.7\n\u03bc\u2081 = 0, \u03c3\u2081\u00b2 = 1\n\u03bc\u2082 = 1, \u03c3\u2082\u00b2 = 2\nUse the following table for your reference. Here, N(x, \u03bc, \u03c3\u00b2) is the density of the Gaussian with mean \u03bc and variance \u03c3\u00b2 evaluated at x.\n------------------------\nμ    σ²    N(1.2, μ, σ²)\n------------------------\n0    1        0.194\n0    2        0.197\n1    1        0.391\n1    2        0.279\n------------------------ ",
+    "question": "What is the probability that the point x = 1.2 comes from the first component? Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.15,
+      "max": 0.35
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Standard PCA has been performed on a centered dataset in \u211d\u00b3. The first two principal components are given below:\nw\u2081 = (1/\u221a5) [1, 0, 2]\u1d40, w\u2082 = (1/\u221a6) [-2, 1, 1]\u1d40.\nConsider the following data-point in the dataset: [1 2 1]\u1d40. (a, b) is the representation of this point in the coordinate system formed by the two principal components given above. The first and second coordinates correspond to PC-1 and PC-2 respectively.\nBased on the above data, answer the given subquestions.",
+    "question": "What is the value of a? Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 1.25,
+      "max": 1.5
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Standard PCA has been performed on a centered dataset in \u211d\u00b3. The first two principal components are given below:\nw\u2081 = (1/\u221a5) [1, 0, 2]\u1d40, w\u2082 = (1/\u221a6) [-2, 1, 1]\u1d40.\nConsider the following data-point in the dataset: [1 2 1]\u1d40. (a, b) is the representation of this point in the coordinate system formed by the two principal components given above. The first and second coordinates correspond to PC-1 and PC-2 respectively.\nBased on the above data, answer the given subquestions.",
+    "question": "What is the value of b? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.25,
+      "max": 0.55
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let w\u2081 and w\u2082 be the top two principal components of the covariance matrix of a centered dataset. Let x \u2208 \u211d\u1d48 be a data-point. Which of the following is the reconstruction error of the data-point after projecting it onto the top two principal components?",
+    "options": {
+      "A": "||x \u2212 (x\u1d40w\u2081)w\u2081 \u2212 (x\u1d40w\u2082)w\u2082||\u00b2",
+      "B": "||x \u2212 (x\u1d40w\u2081)w\u2081||\u00b2 + ||x \u2212 (x\u1d40w\u2082)w\u2082||\u00b2",
+      "C": "(x\u1d40w\u2081)\u00b2 + (x\u1d40w\u2082)\u00b2",
+      "D": "||x \u2212 w\u2081||\u00b2 + ||x \u2212 w\u2082||\u00b2"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let x = [x\u2081 x\u2082]\u1d40 and y = [y\u2081 y\u2082]\u1d40 be two vectors in \u211d\u00b2. Let k\u2081 and k\u2082 be two functions defined from \u211d\u00b2 \u00d7 \u211d\u00b2 \u2192 \u211d:\nk\u2081(x,y) = x\u2081y\u2081 + x\u2082y\u2082 + x\u2081x\u2082y\u2081y\u2082\nk\u2082(x,y) = x\u2081y\u2081 + x\u2082y\u2082 + x\u2081y\u2082y\u2081 + 1\nWhich of the following statements is true?",
+    "options": {
+      "A": "Both k\u2081 and k\u2082 are valid kernels.",
+      "B": "k\u2081 is a valid kernel, but k\u2082 is not a valid kernel.",
+      "C": "k\u2082 is a valid kernel, but k\u2081 is not a valid kernel.",
+      "D": "Neither k\u2081 nor k\u2082 is a valid kernel."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a covariance matrix C for a mean-centered dataset in \u211d\u00b3. After performing standard PCA, the three principal components turn out to be [1 0 0]\u1d40, [0 1 0]\u1d40, [0 0 1]\u1d40. Which of the following statements are true? You can assume that C is not the zero matrix.",
+    "options": {
+      "A": "C is a diagonal matrix.",
+      "B": "The diagonal entries of C are non-negative.",
+      "C": "The diagonal entries of C are strictly greater than zero.",
+      "D": "C is a matrix of the form kI, where k > 0 and I is the identity matrix."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Kernel PCA with a polynomial kernel of degree 3 is run on a dataset of 100 data-points. Let \u03d5 be the transformation corresponding to this kernel. If the largest eigenvalue of the centered kernel matrix is 10, find the largest eigenvalue of the covariance matrix of the transformed dataset, where \u03d5 is used to effect the transformation.",
+    "options": null,
+    "correctOption": 0.1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "The EM algorithm is run on a dataset of 100 points modeled using a GMM with three components. Let \u03bb\u1d62\u1d4f be the values obtained in the E-step in the final iteration. Here, i is the index of the data-point and k is the index of a component. Also, let \u03c0\u2081 = 0.3, \u03c0\u2082 = 0.5, \u03c0\u2083 = 0.2 be the estimates of the mixture probabilities. x\u209a represent one of the data-points, for some constant p. If \u03bb\u209a\u00b9 + \u03bb\u209a\u00b3 = 0.2, what is the probability that the second component generated x\u209a given that we have seen the data-point?",
+    "options": null,
+    "correctOption": 0.8,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "k : \u211d\u00b2\u00d7\u211d\u00b2 \u2192 \u211d is a polynomial kernel of degree 4. Find the value of k([1 -1]\u1d40, [2 1]\u1d40).",
+    "options": null,
+    "correctOption": 16,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the k-means++ algorithm with k = 2 for a dataset that has 7 points: D = {x\u2081, ..., x\u2087}. The data-point x\u2087 has been chosen as the first mean, that is, \u03bc\u2081 = x\u2087. The Euclidean distance of the remaining points from this mean is given below:\n----------------------\nPoint    d(xᵢ, μ₁)\n----------------------\nx₁          1\nx₂          2\nx₃         √2\nx₄         √3\nx₅         √5\nx₆          1\n----------------------",
+    "question": "What is the probability of choosing x\u2082 as the second mean given that x\u2087 has been chosen as the first mean?",
+    "options": null,
+    "correctOption": 0.25,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Let C be the covariance matrix of a mean-centered dataset:\nC = [[2, 1], [1, 2]]\nStandard PCA is performed on this dataset. The first two PCs are given below:\nw\u2081 = (1/\u221a2) * [1, 1]\u1d40\nw\u2082 = (1/\u221a2) * [-1, 1]\u1d40",
+    "question": "Find the variance of the dataset along the first principal component.",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Let C be the covariance matrix of a mean-centered dataset:\nC = [[2, 1], [1, 2]]\nStandard PCA is performed on this dataset. The first two PCs are given below:\nw\u2081 = (1/\u221a2) * [1, 1]\u1d40\nw\u2082 = (1/\u221a2) * [-1, 1]\u1d40",
+    "question": "Find the variance of the dataset along the x-axis.",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Let C be the covariance matrix of a mean-centered dataset:\nC = [[2, 1], [1, 2]]\nStandard PCA is performed on this dataset. The first two PCs are given below:\nw\u2081 = (1/\u221a2) * [1, 1]\u1d40\nw\u2082 = (1/\u221a2) * [-1, 1]\u1d40",
+    "question": "Find the coordinates of the point [2 2]\u1d40 in the new coordinate system formed by the principal components.",
+    "options": {
+      "A": "[2\u221a2 0]\u1d40",
+      "B": "[1 0]\u1d40",
+      "C": "[0 2]\u1d40",
+      "D": "[2 0]\u1d40"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following dataset of six points in \u211d\u00b2:\n----------\nx     y\n----------\n-1    -4\n 5     6\n-2    -2\n 4     5\n-3    -3\n 3     4\n----------\nK-means clustering is run on this dataset with k = 2. In this version, the means are initialized first. The mean of the first cluster is initialized to (\u22124, \u22124) and the mean of the second cluster is initialized to (6, 6).",
+    "question": "If (x\u2081, y\u2081) is the mean of the first cluster after convergence, find the value of x\u2081 + y\u2081.",
+    "options": null,
+    "correctOption": -5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following dataset of six points in \u211d\u00b2:\n----------\nx     y\n----------\n-1    -4\n 5     6\n-2    -2\n 4     5\n-3    -3\n 3     4\n----------\nK-means clustering is run on this dataset with k = 2. In this version, the means are initialized first. The mean of the first cluster is initialized to (\u22124, \u22124) and the mean of the second cluster is initialized to (6, 6).",
+    "question": "If (x\u2082, y\u2082) is the mean of the second cluster after convergence, find the value of x\u2082 + y\u2082.",
+    "options": null,
+    "correctOption": 9,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "In the context of Bayesian estimation, consider a Beta prior for the parameter p of a Bernoulli distribution:\np ~ Beta(4, 3)\nThe dataset has 8 ones and 5 zeros.",
+    "question": "What is the posterior?",
+    "options": {
+      "A": "Beta(12, 8)",
+      "B": "Beta(11, 7)",
+      "C": "Br(0.5)",
+      "D": "Beta(8, 5)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "In the context of Bayesian estimation, consider a Beta prior for the parameter p of a Bernoulli distribution:\np ~ Beta(4, 3)\nThe dataset has 8 ones and 5 zeros.",
+    "question": "If we use the expected value of the posterior as a point-estimate for the parameter of the Bernoulli distribution, what is p\u0302?",
+    "options": null,
+    "correctOption": 0.6,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a dataset of n data-points all of which are non-negative integers. These data-points are sampled from a Poisson distribution, whose probability mass function is given below:\nf(x; \u03bb) = (e\u207b\u02e1\u03bb\u02e3) / x!, \u03bb > 0\nHere \u03bb is a parameter.",
+    "question": "Find the log-likelihood of the dataset under this distribution.",
+    "options": {
+      "A": "\u03a3\u1d62\u208c\u2081\u207f [\u2212\u03bb + x\u1d62 log \u03bb \u2212 log (x\u1d62!)]",
+      "B": "\u03a0\u1d62\u208c\u2081\u207f (e\u207b\u02e1\u03bb\u02e3\u2071) / x\u1d62!",
+      "C": "\u03a3\u1d62\u208c\u2081\u207f [\u2212\u03bb + x\u1d62 log \u03bb \u2212 log (x\u1d62!)]",
+      "D": "\u03a0\u1d62\u208c\u2081\u207f [\u2212\u03bb + x\u1d62 log \u03bb \u2212 log (x\u1d62!)]"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a dataset of n data-points all of which are non-negative integers. These data-points are sampled from a Poisson distribution, whose probability mass function is given below:\nf(x; \u03bb) = (e\u207b\u02e1\u03bb\u02e3) / x!, \u03bb > 0\nHere \u03bb is a parameter.\nConsider a dataset that has 25 data-points. The data-point x\u1d62 and its frequency is given in the following table:\n--------------------\nxᵢ    Frequency\n--------------------\n0         1\n1         4\n2         6\n3         9\n4         5\n--------------------\nIn case the table is not clear: the value 0 appears once in the dataset, the value 1 appears four times in the dataset, and so on.",
+    "question": "Find the maximum likelihood estimate for the parameter \u03bb of the Poisson distribution given this dataset.",
+    "options": null,
+    "correctOption": 2.52,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "How does K-means++ algorithm enhance the initialization process as compared to the standard K-means algorithm?",
+    "options": {
+      "A": "It ensures the algorithm converges in a fixed number of iterations.",
+      "B": "It improves centroid initialization by spreading them out, leading to better separated clusters.",
+      "C": "It automatically calculates the best value of K.",
+      "D": "It removes the need to run the algorithm multiple times."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "In a K-means algorithm with K = 3, the objective value F(z\u2081, ..., z\u2099) = \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - \u03bcz\u1d62||\u2082\u00b2 is recorded after each iteration as follows:\nIteration 1: 800, Iteration 2: 500, Iteration 3: 400, Iteration 4: 400, Iteration 5: 400.",
+    "question": "At which iteration is the algorithm most likely to reach convergence?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "5",
+      "D": "4"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let k: \u211d\u1d48\u00d7\u211d\u1d48 \u2192 \u211d be a valid kernel function such that k(x, y) = \u03d5(x)\u1d40\u03d5(y), where \u03d5: \u211d\u1d48 \u2192 \u211d\u1d30, where d < D. Define k\u2081(x, y) = (100k(x, y)) / \u221a(k(x, x)k(y, y)). Find \u03d5\u2081: \u211d\u1d48 \u2192 \u211d\u1d30 such that k\u2081(x, y) = \u03d5\u2081(x)\u1d40\u03d5\u2081(y). Note: ||x||\u2082 = \u221a(x\u1d40x).",
+    "options": {
+      "A": "\u03d5\u2081(x) = 100\u03d5(x) / ||\u03d5(x)||\u2082",
+      "B": "\u03d5\u2081(x) = \u03d5(x) / (10||\u03d5(x)||\u2082)",
+      "C": "\u03d5\u2081(x) = 10\u03d5(x) / ||\u03d5(x)||\u2082",
+      "D": "Such a \u03d5\u2081 does not exist, i.e., k\u2081 is not a valid kernel."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Kernel PCA with a polynomial kernel is applied on the following dataset with three features:\nX = [[1, 0], [0, 1], [0, 0]]\nThe k-th principal component is given by w\u2096 = \u03d5(X)\u03b1\u2096, where \u03d5 is the transformation mapping corresponding to the kernel k(x\u1d62, x\u2c7c) = (1 + x\u1d62\u1d40x\u2c7c)\u00b2 for some \u03b1\u2096 \u2208 \u211d\u207f. Find the centered kernel matrix K\u1d9c.\nHint: k\u1d9c\u1d62\u2c7c = k\u1d62\u2c7c - \u03b8\u1d62\u1d401\u2c7c - 1\u1d62\u03b8\u2c7c\u1d40 + P1\u1d621\u2c7c\u1d40, where \u03b8\u1d62 = (1/n)\u03a3\u2096\u208c\u2081\u207f k\u1d62\u2096, \u2200 i, P = (1/n\u00b2)\u03a3\u1d62,\u2c7c k\u1d62\u2c7c.",
+    "question": "Find the centered kernel matrix K\u1d9c.",
+    "options": {
+      "A": " [-1.5 1.5]\n [1.5 -1.5]",
+      "B": " [1.5 -1.5]\n [-1.5 1.5]",
+      "C": " [4 1]\n [1 4]",
+      "D": " [1 -1]\n [4 -4]"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "You are presented with a dataset that has latent variables that influences your data. You are asked to use Expectation-Maximization algorithm to best capture the data. How would you define the steps in the EM (Expectation and Maximization) algorithm?",
+    "options": {
+      "A": "E-step: Estimate the latent variables in the dataset, M-step: Maximize the likelihood over the model parameters.",
+      "B": "E-step: Estimate the number of latent variables in the dataset, M-step: Maximize the likelihood over the model parameters.",
+      "C": "E-step: Estimate the likelihood over the model parameters, M-step: Maximize the number of latent variables in the dataset.",
+      "D": "E-step: Estimate the likelihood over the model parameters, M-step: Maximize the number of parameters in the model."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Which of the following statements is/are true?",
+    "options": {
+      "A": "EM algorithm converges to a global optimum.",
+      "B": "Lloyd's algorithm converges to a local optimum.",
+      "C": "Poor initialization does not affect the clusters produced by EM algorithm.",
+      "D": "Poor initialization leads to a slower convergence of Lloyd's algorithm.",
+      "E": "Lloyd's algorithm is sensitive to the number of clusters (k)."
+    },
+    "correctOption": ["B", "D", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "For a linear regression problem, which among the following are true? Select all that apply.",
+    "options": {
+      "A": "Gradient descent will converge to a global minimum.",
+      "B": "Gradient descent will converge to a local minimum (which is not a global minimum).",
+      "C": "Stochastic gradient descent is guaranteed to converge to a global minimum.",
+      "D": "Gradient descent will take lesser number of iterations to converge to a local minimum than stochastic gradient descent."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset X of shape (d, n), with d > n. The k-th principal component of the dataset can be written as w\u2096 = \u03a3\u1d62\u208c\u2081\u207f \u03b1\u2096\u1d62x\u1d62, where the vector x\u1d62 is the i-th data point. The k-th largest eigenvalue and the corresponding eigenvector of X\u1d40X are 10 and [2/\u221a54 3/\u221a54 4/\u221a54 6/\u221a54 7/\u221a54]\u1d40, respectively. What will be the value of \u03b1\u2082? Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.12,
+      "max": 0.13
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Let X\u2081, X\u2082, ..., X\u2099 be an i.i.d. sample drawn from a Pareto distribution with the following probability density function:\nf(x|\u03b8) = \u03b8x\u207b\u1dbf\u207b\u00b9, x \u2265 1, \u03b8 > 1.\nYou are given the following sample of 5 observations:\nX = {2.5, 1.8, 3.2, 2.0, 2.7}.",
+    "question": "What is the maximum likelihood estimator of \u03b8 for the above sample? Enter the answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 1.147,
+      "max": 1.15
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset {x\u2081, x\u2082, ..., x\u2085\u2080}, where x\u1d62 \u2208 \u211d\u00b9\u2070\u2070\u2070. After performing PCA on the dataset, suppose that the residues become zero after the fifth round. Then, how many numbers do we need to store for this dataset?",
+    "options": null,
+    "correctOption": 5250,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following data points:\nx\u2081 = [0, 0]\u1d40, x\u2082 = [2, 1]\u1d40, x\u2083 = [1, 2]\u1d40.\nStandard PCA is run on this dataset.",
+    "question": "Which of the following represents the covariance matrix C?",
+    "options": {
+      "A": "(1/3) *  [5  4]\n         [4  5]",
+      "B": "(1/3) *  [2  1]\n         [1  2]",
+      "C": "(1/3) *  [0  0]\n         [0  5]\n         [4  5]",
+      "D": "(1/3) *  [0  0]\n         [0  2]\n         [0  1]\n         [1  2]"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following data points:\nx\u2081 = [0, 0]\u1d40, x\u2082 = [2, 1]\u1d40, x\u2083 = [1, 2]\u1d40.\nStandard PCA is run on this dataset.",
+    "question": "What is the variance of the dataset along the first principal component?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following data points:\nx\u2081 = [0, 0]\u1d40, x\u2082 = [2, 1]\u1d40, x\u2083 = [1, 2]\u1d40.\nStandard PCA is run on this dataset.",
+    "question": "Find the residues after projecting the data points onto the first principal component. Note: Here x'\u1d62 represents the residues of the data point x\u1d62.",
+    "options": {
+      "A": "x'\u2081 = [0, 0]\u1d40, x'\u2082 = [0.5, 0.5]\u1d40, x'\u2083 = [0.5, 0.5]\u1d40",
+      "B": "x'\u2081 = [0, 0]\u1d40, x'\u2082 = [0.5, -0.5]\u1d40, x'\u2083 = [-0.5, 0.5]\u1d40",
+      "C": "x'\u2081 = [0, 0]\u1d40, x'\u2082 = [1, 2]\u1d40, x'\u2083 = [2, 1]\u1d40",
+      "D": "x'\u2081 = [0, 0]\u1d40, x'\u2082 = [0, -1]\u1d40, x'\u2083 = [-1, 0]\u1d40"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset with feature vector x and label y:\n--------------------\nx          y\n--------------------\n[4 1]ᵀ      2\n[2 8]ᵀ     -14\n[1 4]ᵀ     -7\n[3 2]ᵀ     -1\n--------------------",
+    "question": "Fit the linear regression model y = wx, w = [w\u2081 w\u2082]\u1d40 using the squared error.",
+    "options": {
+      "A": "y = x\u2081 + 2x\u2082",
+      "B": "y = x\u2081 - 2x\u2082",
+      "C": "y = x\u2081 - x\u2082",
+      "D": "y = x\u2081 + x\u2082"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "May 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset with feature vector x and label y:\n--------------------\nx          y\n--------------------\n[4 1]ᵀ      2\n[2 8]ᵀ     -14\n[1 4]ᵀ     -7\n[3 2]ᵀ     -1\n--------------------",
+    "question": "Find the mean squared error for the training dataset.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "In the K-means algorithm, cluster centroids (\u03bck) are updated at each iteration to minimize the sum of squared distances between data points and their assigned centroids. The formula used for this update is:\n\u03bck = (\u03a3 x\u1d62I(z\u1d62 = k)) / (\u03a3 I(z\u1d62 = k))\nHere:\n- x\u1d62 represents i\u1d57\u02b0 data point in the dataset.\n- z\u1d62 represents the cluster assignment for data point x\u1d62, where z\u1d62 is an integer indicating the cluster index (k).\nSuppose you have a dataset of 9 two-dimensional data points and are performing K-means clustering with K = 3 clusters. After the first iteration, clusters C\u2081, C\u2082, and C\u2083 have the following data points:\nC\u2081: {(2, 2), (3, 3), (4, 4)}\nC\u2082: {(6, 6), (7, 7),(8, 8)}\nC\u2083: {(10, 10), (11, 11), (12, 12)}",
+    "question": "After the second iteration, which of the following options represents the updated cluster centroid \u03bck for C\u2081 using the provided formula?",
+    "options": {
+      "A": "\u03bc1 = (2.5, 2.5)",
+      "B": "\u03bc1 = (4.5, 4.5)",
+      "C": "\u03bc1 = (3, 3)",
+      "D": "\u03bc1 = (5.5, 5.5)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider 9 data points x\u2081, x\u2082, ..., x\u2089: (2,3),(1,2),(3,1),(5,6),(7,8),(9,9),(6,7),(10,10),(11,11). Suppose we aim to form 3 clusters from these points using the K-means algorithm. After the first iteration, clusters C\u2081, C\u2082, C\u2083 have the following data points:\nC\u2081: (1, 2), (3, 1)\nC\u2082: (2, 3), (5, 6), (6,7)\nC\u2083: (9, 9), (7, 8), (10, 10), (11, 11)",
+    "question": "After the second iteration, to which cluster will the data point (2, 3) be reassigned?",
+    "options": {
+      "A": "C\u2081",
+      "B": "C\u2082",
+      "C": "C\u2083",
+      "D": "It remains in the same cluster as in the first iteration"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following statements are true regarding applying standard PCA on a centered dataset?",
+    "options": {
+      "A": "The variance of the dataset along the first principal component is maximum.",
+      "B": "Eigenvectors are always orthogonal to each other in PCA.",
+      "C": "The first principal component is the eigenvector corresponding to the largest eigenvalue of the covariance matrix.",
+      "D": "The first principal component is the eigenvector corresponding to the smallest eigenvalue of the covariance matrix."
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a dataset that has 200 data-points, each of which is either a zero or one. The Bernoulli distribution is used to model this data. If the MLE estimate for the parameter p of the Bernoulli distribution is 0.3, how many zeros does the dataset have?",
+    "options": null,
+    "correctOption": 140,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a dataset that has 4 points in R\u00b2 that lie on a line passing through the origin:\nD = { [-10, -30], [-5, -15], [5, 15], [10, 30] }",
+    "question": "If normal PCA is performed on this dataset, what is the variance along the first principal component?",
+    "options": null,
+    "correctOption": 625,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a dataset of 50 points all of which lie in R\u2075. The eigenvalues of the covariance matrix are given below:\n1.7, 1.4, 0.25, 0.20, 0.005",
+    "question": "If we run the PCA algorithm on this dataset and retain the top-k principal components, what is a good choice of k? (Hint: A good precise mean it captures atleast 95% of variance)",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "A GMM is fit for a dataset with 5 points. At some time-step in the EM algorithm, the following are the values of \u03bb\u1d62\u1d4f for all points in the dataset for the k\u1d57\u02b0 mixture after the E-step:\n\u03bb\u2081\u1d4f = 0.3, \u03bb\u2082\u1d4f = 0.1, \u03bb\u2083\u1d4f = 0.5, \u03bb\u2084\u1d4f = 0.5, \u03bb\u2085\u1d4f = 0.3",
+    "question": "What is the estimate of \u03c0k after the M-step? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.3,
+      "max": 0.4
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Suppose you have been given a task of estimating the conversion rate of a google click of new online advertisement campaign. You have collected data from a limited sample of 50 users, where 15 of them have converted. You want to use Bayesian estimation with a prior distribution to provide a more robust estimate of the conversion rate.\nAssume you have prior information and you decide to use a beta distribution as your prior. You choose a beta distribution with parameters \u03b1 = 3 and \u03b2 = 4 to capture your prior beliefs.",
+    "question": "Calculate the posterior mean? Enter your answer correctly up to two decimals",
+    "options": null,
+    "correctOption": {
+      "min": 0.2,
+      "max": 0.3
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "A k-means++ algorithm with k= 3 was applied to the following 2D points:\n(2, 2), (3, 3), (4, 4), (10, 10), (12, 12), (13, 13)\n(2, 2) is chosen as the first cluster mean.",
+    "question": "Which point has the highest probability of being chosen as the 2\u207f\u1d48 cluster mean? Use the Manhattan distance to compute the distances.",
+    "options": {
+      "A": "(4, 4)",
+      "B": "(12, 12)",
+      "C": "(10, 10)",
+      "D": "(13, 13)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "A k-means++ algorithm with k= 3 was applied to the following 2D points:\n(2, 2), (3, 3), (4, 4), (10, 10), (12, 12), (13, 13)\n(2, 2) is chosen as the first cluster mean.",
+    "question": "Let's assume that (3, 3), (10, 10), and (12, 12) are the cluster means. You introduce a new data point, (\u22125, 10). Which cluster mean is the data point (\u22125, 10) closest to when using the Euclidean distance method?",
+    "options": {
+      "A": "(3, 3)",
+      "B": "(10, 10)",
+      "C": "(12, 12)",
+      "D": "None of these"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Suppose that we have a dataset (data matrix) X \u2208 R\u1d48\u02e3\u207f, where d denotes the number of features and n denotes the number of samples. Assume that d >> n and the data is centered. The representative line is given by the unit vector, pointing in the direction of the line, w. In all the cases, we maximize the objective function given below f(w) = w\u1d40Cw where C = (1/n)XX\u1d40 is a covariance matrix. The kernel matrix is defined to be K = X\u1d40X.",
+    "question": "Which of the following statements are true?",
+    "options": {
+      "A": "The eigenvectors of C and K are related by a scaling factor r \u2208 R",
+      "B": "Computing eigenvectors using the matrix K reduces number of computations significantly than using the matrix C",
+      "C": "Suppose the maximum eigenvalue of C is \u03bb\u2081, then the maximum eigenvalue of XX\u1d40 is n\u03bb\u2081",
+      "D": "The eigenvectors of C \u2208 R\u1d48 and K \u2208 R\u1d48",
+      "E": "The eigenvalues of both C and K are non-negative"
+    },
+    "correctOption": ["B", "C", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Suppose that we have a dataset (data matrix) X \u2208 R\u1d48\u02e3\u207f, where d denotes the number of features and n denotes the number of samples. Assume that d >> n and the data is centered. The representative line is given by the unit vector, pointing in the direction of the line, w. In all the cases, we maximize the objective function given below f(w) = w\u1d40Cw where C = (1/n)XX\u1d40 is a covariance matrix. The kernel matrix is defined to be K = X\u1d40X.",
+    "question": "Which of the following matrices helps in transforming the eigenvectors of K to the eigenvectors of C?",
+    "options": {
+      "A": "X",
+      "B": "X\u1d40",
+      "C": "C\u207b\u00b9",
+      "D": "K\u207b\u00b9",
+      "E": "X\u207b\u00b9"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Suppose that we have a dataset (data matrix) X \u2208 R\u1d48\u02e3\u207f, where d denotes the number of features and n denotes the number of samples. Assume that d >> n and the data is centered. The representative line is given by the unit vector, pointing in the direction of the line, w. In all the cases, we maximize the objective function given below f(w) = w\u1d40Cw where C = (1/n)XX\u1d40 is a covariance matrix. The kernel matrix is defined to be K = X\u1d40X.",
+    "question": "Suppose that the 95% of the variance of the data is captured using d \u2212 1 eigenvectors. This implies that",
+    "options": {
+      "A": "The features are highly correlated (or dependent)",
+      "B": "The features have low correlation (or independent)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Let x = [x\u2081 x\u2082]\u1d40 and y = [y\u2081 y\u2082]\u1d40 be vectors in \u211d\u00b2. Define the functions k\u2081 and k\u2082 as:\nk\u2081(x, y) = x\u2081y\u2081 + x\u2082y\u2082 + (x\u2081 + x\u2082)(y\u2081 + y\u2082)\nk\u2082(x, y) = x\u2081y\u2081 + x\u2082y\u2082 + (x\u2081\u00b2 + y\u2082\u00b2) + 3",
+    "question": "Which of the following statements is true?",
+    "options": {
+      "A": "Both k\u2081 and k\u2082 are valid kernels.",
+      "B": "k\u2081 is a valid kernel, but k\u2082 is not a valid kernel.",
+      "C": "k\u2082 is a valid kernel, but k\u2081 is not a valid kernel.",
+      "D": "Neither k\u2081 nor k\u2082 is a valid kernel."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following kernel:\nk : \u211d\u00b2 \u00d7 \u211d\u00b2 \u2192 \u211d\nk(x, y) = (x\u1d40y)\u00b2 + 1",
+    "question": "Which of the following transformation mapping \u03d5 may correspond to the kernel k?",
+    "options": {
+      "A": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081\u00b2, \u221a2x\u2081x\u2082, x\u2082\u00b2, 1]\u1d40",
+      "B": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081\u00b2, x\u2081 + x\u2082, x\u2082\u00b2, 1]\u1d40",
+      "C": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081, \u221a2x\u2081\u00b2x\u2082\u00b2, x\u2082, 1]\u1d40",
+      "D": "\u03d5([x\u2081, x\u2082]\u1d40) = [x\u2081, x\u2081x\u2082, x\u2082, 1]\u1d40"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Given n data points in a d-dimensional space with a non-linear relationship, we apply kernel PCA to reduce the dimensionality and select the first k principal components. Is it possible for k to be greater than d?",
+    "options": {
+      "A": "yes",
+      "B": "No"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Which of the following expressions is the reconstruction error for a dataset of n points, with respect to a line passing through the origin represented by the vector w. Note that ||w|| = 1.",
+    "options": {
+      "A": "(1/n) \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - (x\u1d62\u1d40w)w||\u00b2",
+      "B": "(1/n) \u03a3\u1d62\u208c\u2081\u207f [x\u1d62 - (x\u1d62\u1d40w)w]\u1d40 [x\u1d62 - (x\u1d62\u1d40w)w]",
+      "C": "(1/n) \u03a3\u1d62\u208c\u2081\u207f [x\u1d62\u1d40x\u1d62 | (x\u1d62\u1d40w)\u00b2]",
+      "D": "(1/n) \u03a3\u1d62\u208c\u2081\u207f (x\u1d62\u1d40w)\u00b2"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Let X\u2081, X\u2082, ..., Xn be n i.i.d. samples with parameter \u03b8, which follows one of the following PDFs:\nFor \u03b8 = -1, we have\nf(x|\u03b8) = { 5x\u2074, if 0 < x < 1; 0, otherwise }\nFor \u03b8 = 1, we have\nf(x|\u03b8) = { 1, if 0 < x < 1; 0, otherwise }",
+    "question": "Suppose we wish to find the maximum likelihood estimate of \u03b8, then which among the following are true?",
+    "options": {
+      "A": "If \u03a0\u1d62\u208c\u2081\u207f 5x\u1d62\u2074 < 1, then \u03b8\u0302_MLE = 1",
+      "B": "If \u03a0\u1d62\u208c\u2081\u207f 5x\u1d62\u2074 > 1, then \u03b8\u0302_MLE = 1",
+      "C": "If \u03a0\u1d62\u208c\u2081\u207f 5x\u1d62\u2074 < 1, then \u03b8\u0302_MLE = -1",
+      "D": "If \u03a0\u1d62\u208c\u2081\u207f 5x\u1d62\u2074 > 1, then \u03b8\u0302_MLE = -1"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "The eigenvalues of the covariance matrix of a centered dataset in \u211d\u2075 are 30, 10, 10, 0, 0. Standard PCA is performed on this dataset. What is the variance captured by the top two principal components expressed as a percentage of total variance?",
+    "options": null,
+    "correctOption": 80,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following data points for k-means clustering.\n(-1, 0), (-1, 1), (-1, -1), (2, 0), (3, 1), (3, -1), (4, 0)\nIn the initialization step of k-means with k = 2, suppose p\u00b9\u03bc = (-1, 0) and p\u00b2\u03bc = (2, 0).\nDistances of datapoints from initial cluster means is tabulated below:\n----------------------------------------------------------\nxᵢ        ||xᵢ − p¹μ||₂²        ||xᵢ − p²μ||₂²\n----------------------------------------------------------\n(-1, 0)          0                 9\n(-1, 1)          1                10\n(-1, -1)         1                10\n(2, 0)           9                 0\n(3, 1)          17                 2\n(3, -1)         17                 2\n(4, 0)          25                 4\n----------------------------------------------------------\nAs per these cluster centers, the data points are then assigned to either cluster 1 or cluster 2. After this assignment, what will be the value of the objective function?\nNote: Objective function is given by\nF(z\u2081, z\u2082, ..., z\u2099) = \u03a3\u1d62\u208c\u2081\u207f ||x\u1d62 - \u03bcz\u1d62||\u2082\u00b2",
+    "question": "After this assignment, what will be the value of the objective function?",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a GMM for 5 points:\nx\u2081 = 1, x\u2082 = 1.2, x\u2083 = 2, x\u2084 = 1.5, x\u2085 = 0.5\nAt some time-step in the EM algorithm, following are the values of \u03bb\u1d62\u1d4f for the k-th mixture after the E-step:\n\u03bb\u2081\u1d4f = 0.3, \u03bb\u2082\u1d4f = 0.1, \u03bb\u2083\u1d4f = 2.5, \u03bb\u2084\u1d4f = 0.6, \u03bb\u2085\u1d4f = 0.8",
+    "question": "What is the estimate of \u03bc\u2096 after the M-step? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 1.5,
+      "max": 1.6
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a dataset with 100 total data points. Each data point is classified as either type A or type B. We model this using a Bernoulli distribution, where p is the probability of a data point being type A. If the maximum likelihood estimate (MLE) of p based on the dataset is 0.4, how many data points of type B are there in this dataset?",
+    "options": null,
+    "correctOption": 60,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Given the vector x = [3 4]\u1d40 and the line passing through the origin represented by the vector w = [1 1]\u1d40.",
+    "question": "Find the length of the projection of x onto the line defined by w. Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 4.8,
+      "max": 5.1
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Given the vector x = [3 4]\u1d40 and the line passing through the origin represented by the vector w = [1 1]\u1d40.",
+    "question": "Calculate the magnitude(norm) of reconstruction error after projecting x onto the line defined by w. Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.5,
+      "max": 0.9
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "A k-means++ algorithm with k = 3 is applied on the following 2D points:\n(0, 1), (1, 0), (1, 2), (2, 1), (2, 3), (2, 4), (3, 2)\nFirst cluster mean \u03bc\u00b9 is chosen as (2, 1).\nSuppose the point with the highest score is chosen as the 2nd cluster mean \u03bc\u00b2.",
+    "question": "What is \u03bc\u00b2? Use squared distance to calculate the scores.",
+    "options": {
+      "A": "(0,1)",
+      "B": "(2,3)",
+      "C": "(3,2)",
+      "D": "(2,4)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "A k-means++ algorithm with k = 3 is applied on the following 2D points:\n(0, 1), (1, 0), (1, 2), (2, 1), (2, 3), (2, 4), (3, 2)\nFirst cluster mean \u03bc\u00b9 is chosen as (2, 1).\nSuppose the point with the highest score is chosen as the 2nd cluster mean \u03bc\u00b2.",
+    "question": "Which point has the lowest probability of being chosen as the 3rd cluster mean? Use squared distance to calculate the scores.",
+    "options": {
+      "A": "(1,0)",
+      "B": "(2,3)",
+      "C": "(3,2)",
+      "D": "(1,2)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Which among the following is true with respect to the Lloyds' algorithm?",
+    "options": {
+      "A": "It always converges.",
+      "B": "It may fail to converge for an initialization while it may converge for other initialization.",
+      "C": "It is sensitive to outliers.",
+      "D": "The solution produced is always the optimal."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset consisting of 5000 points in \u211d\u2075\u2070. If all these points lie in a 6-dimensional linear subspace, then which of the following will be true after applying the PCA?",
+    "options": {
+      "A": "There will be 50 non-zero eigenvalues of the covariance matrix.",
+      "B": "There will be 6 non-zero eigenvalues of the covariance matrix.",
+      "C": "Using the first 5 principal components, the dataset can be reconstructed with zero residue.",
+      "D": "The variance captured by the top 6 principal components equals the total variance of the dataset."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider the dataset consisting of the following points:\n(0, 0), (0, 2), (2, 0), (2, 2).\nWe want to run the K-means++ algorithm with K = 2. Suppose the first cluster center chosen is (0, 0). Which of the following statements are correct?\nHint: The score of a datapoint x is given by S(x) = min_{j=1,2,...,l} (||x - \u03bc\u2070\u2c7c||\u00b2), where \u03bc\u2070\u2c7c is the initial cluster center.",
+    "options": {
+      "A": "The points (0, 2), (2, 0), and (2, 2) have the equal probability of being chosen as the second cluster center.",
+      "B": "The probability of selecting (2, 2) as the second cluster center is twice that of selecting (0, 2).",
+      "C": "If (2, 2) is chosen as the second cluster center, the algorithm will always converge in one iteration.",
+      "D": "The tie-breaking rule will affect the final cluster centers."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose that 100 items are sampled from a manufacturing process, where three items are found to be defective. Consider Beta(a, b) as a prior distribution for the proportion \u03b8 of defective items with the following parameters:\n\n\u2022 a = 1, b = 1\n\u2022 a = 0.5, b = 0.5\n\nIf posterior mean is used as the estimate for \u03b8, then which of the following is correct?\nHint: Expectation of a Beta(a, b) is given by a / (a + b).",
+    "options": {
+      "A": "Posterior mean for Beta(1, 1) is 0.039.",
+      "B": "Posterior mean for Beta(1, 1) is 0.03.",
+      "C": "Posterior mean for Beta(0.5, 0.5) is 0.025.",
+      "D": "Posterior mean for Beta(0.5, 0.5) is 0.034."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following are valid kernel functions? Select all that apply.",
+    "options": {
+      "A": "K(x, y) = exp(-(||x - y||\u00b2)/(2\u03c3\u00b2)), \u03c3 > 0, x, y \u2208 \u211d\u207f",
+      "B": "K(x, y) = (x\u00b7y + c)\u1d48, c \u2265 0, d \u2208 \u2115, x, y \u2208 \u211d\u207f",
+      "C": "K(x, y) = ||x - y||, x, y \u2208 \u211d\u207f",
+      "D": "K(x, y) = exp(-(||x - y||)/\u03c3), \u03c3 > 0, x, y \u2208 \u211d\u207f"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a mean-centered dataset consisting of 150 patients from the health-care domain with 6 features. The dataset is represented as a 150 \u00d7 6 matrix X. PCA is performed on this dataset, and it is observed that the reconstruction error (residue) vanishes completely after k components. A domain expert provides the following insights about the columns of X, denoted by c\u2081, c\u2082, ..., c\u2086:\n\n(a) The set {c\u2081, c\u2082, c\u2083} is linearly independent.\n(b) The following relationships hold:\n\u2022 c\u2084 = 2c\u2081 - c\u2082\n\u2022 c\u2085 = c\u2082 + c\u2083\n\u2022 c\u2086 = 4c\u2081 - 3c\u2083\n\nWhat is the value of k?",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset X \u2208 \u211d\u1d48\u02e3\u207f with sample size n = 100 (i.e., X has d features and 100 examples), where d > 100. Suppose the first five eigenvalues of the matrix X\u1d40X are: 10, 5, 3, 2, 1, and all remaining eigenvalues are zero. What is the proportion of variance explained along the first principal component? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.45,
+      "max": 0.5
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "What is the covariance matrix of the dataset?",
+    "options": {
+      "A": " [5 4]\n [4 5]",
+      "B": " [2.5  2]\n [2  2.5]",
+      "C": " [3.5 2.5]\n [2.5 3.5]",
+      "D": " [4  3]\n [3  4]"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764318734/sep25-1_y2p1po.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "If standard PCA is performed on this dataset, what is the variance along the first principal component? Enter the answer correct to one decimal place.",
+    "options": null,
+    "correctOption": 4.5,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764318734/sep25-1_y2p1po.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "If standard PCA is performed on this dataset, what is the variance along the second principal component? Enter the answer correct to one decimal place.",
+    "options": null,
+    "correctOption": 0.5,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764318734/sep25-1_y2p1po.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Consider clustering 1D data with a mixture of 2 Gaussians using the EM algorithm. You are given the data points x\u2081 = 1, x\u2082 = 10, x\u2083 = 20.",
+    "question": "Which among the following represents the likelihood function L(\u03b8) for GMM? Here, \u03b8 is the set of parameters \u03bc\u2081, \u03bc\u2082, \u03c3\u2081, \u03c3\u2082, \u03c0\u2081, \u03c0\u2082.",
+    "options": {
+      "A": "L(\u03b8; x\u2081, x\u2082, x\u2083) = \u03a0_{i=1 to 3} \u03a3_{k=1 to 2} (1 / (\u03c3\u2096\u221a(2\u03c0))) exp(-1/2 * ((x\u1d62 - \u03bc\u2096)/\u03c3\u2096)\u00b2)",
+      "B": "L(\u03b8; x\u2081, x\u2082, x\u2083) = \u03a0_{i=1 to 3} \u03a3_{k=1 to 2} \u03c0\u2096 (1 / (\u03c3\u2096\u221a(2\u03c0))) exp(-1/2 * ((x\u1d62 - \u03bc\u2096)/\u03c3\u2096)\u00b2)",
+      "C": "L(\u03b8; x\u2081, x\u2082, x\u2083) = \u03a0_{i=1 to 2} \u03a3_{k=1 to 2} (1 / (\u03c3\u2096\u221a(2\u03c0))) exp(-1/2 * ((x\u1d62 - \u03bc\u2096)/\u03c3\u2096)\u00b2)",
+      "D": "L(\u03b8; x\u2081, x\u2082, x\u2083) = \u03a3_{k=1 to 2} \u03a0_{i=1 to 3} \u03c0\u2096 (1 / (\u03c3\u2096\u221a(2\u03c0))) exp(-1/2 * ((x\u1d62 - \u03bc\u2096)/\u03c3\u2096)\u00b2)"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Consider clustering 1D data with a mixture of 2 Gaussians using the EM algorithm. You are given the data points x\u2081 = 1, x\u2082 = 10, x\u2083 = 20.\nSuppose at the t-th iteration of the EM algorithm, the parameters are:\n\u03c0\u2081 = 0.3, \u03c0\u2082 = 0.7, \u03bc\u2081 = 2, \u03bc\u2082 = 3, \u03c3\u2081\u00b2 = 1, \u03c3\u2082\u00b2 = 1.\nThe densities of the data points given each mixture component are provided below:\n----------------------------------------------------------\nxᵢ      f(xᵢ | zᵢ = 1)      f(xᵢ | zᵢ = 2)\n----------------------------------------------------------\n1            0.242              0.054\n10           0.399              0.242\n20           0.242              0.399\n----------------------------------------------------------",
+    "question": "What is the value of \u03bb\u2081\u00b9? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.64,
+      "max": 0.68
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Perform K-means clustering with K = 2 and initial cluster centers at (-2, 3) and (2, -1). What are the final means of clusters after convergence?",
+    "options": {
+      "A": "(-1.75, 2.5) and (1.5, -1.5)",
+      "B": "(-2, 3) and (2, -1)",
+      "C": "(-1.33, 3.66) and (0, -1.33)",
+      "D": "(1.33, 1) and (2.66, 2)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764318734/sep25-2_qxswsm.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz1",
+    "term": "Sept 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Suppose we introduce a new data point (0, 0) to the existing dataset and perform K means with the same initial cluster centers. How many iterations would it require now for convergence?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764318734/sep25-2_qxswsm.png"
+  }
+]

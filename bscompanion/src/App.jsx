@@ -20,6 +20,8 @@ const LeaderboardPage = lazy(() => import("./pages/LeaderboardPage"));
 const StudyGuideView = lazy(() => import("./components/StudyGuideView"));
 const StudyGuideHistory = lazy(() => import("./components/StudyGuideHistory"));
 
+import SmoothScroll from "./components/SmoothScroll";
+
 // Wrapper component for app content
 const AppContent = () => {
   const location = useLocation();
@@ -29,6 +31,7 @@ const AppContent = () => {
       {/* Custom cursor enabled app-wide */}
       <CustomCursor />
       
+      <SmoothScroll>
       <Suspense
         fallback={
           <div className="loader-container">
@@ -114,6 +117,7 @@ const AppContent = () => {
           />
         </Routes>
       </Suspense>
+      </SmoothScroll>
     </>
   );
 };

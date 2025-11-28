@@ -1,26 +1,26 @@
 import React from "react";
 
 // Import All Subject Images
-import imgMath1 from "../assets/subject-icons/Math 1.png";
-import imgMath2 from "../assets/subject-icons/Math 2.jpg";
-import imgEnglish1 from "../assets/subject-icons/English 1.jpg";
-import imgEnglish2 from "../assets/subject-icons/English 2.png";
-import imgStats1 from "../assets/subject-icons/Statistics 1.jpg";
-import imgStats2 from "../assets/subject-icons/Statistics 2.jpg";
-import imgCT from "../assets/subject-icons/Computational Thinking.jpg";
-import imgPython from "../assets/subject-icons/python.jpg";
-import imgJava from "../assets/subject-icons/java.jpg";
-import imgMAD1 from "../assets/subject-icons/mad1.jpg";
-import imgMAD2 from "../assets/subject-icons/mad2.jpg";
-import imgDBMS from "../assets/subject-icons/dbms.jpg";
-import imgPDSA from "../assets/subject-icons/pdsa.jpg";
-import imgTerminal from "../assets/subject-icons/system_commands.jpg";
-import imgMLF from "../assets/subject-icons/mlf.jpg";
-import imgMLT from "../assets/subject-icons/mlt.jpg";
-import imgMLP from "../assets/subject-icons/mlp.jpg";
-import imgBDM from "../assets/subject-icons/bdm.jpg";
-import imgTDS from "../assets/subject-icons/tds.jpg";
-import imgAnalytics from "../assets/subject-icons/business analytics.jpg";
+const imgMath1 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143162/Math_1_sfs7uk.png";
+const imgMath2 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143184/Math_2_opmqpm.jpg";
+const imgEnglish1 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143136/English_1_lubo1b.jpg";
+const imgEnglish2 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143144/English_2_rtjj45.png";
+const imgStats1 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143196/Statistics_1_hlnuuv.jpg";
+const imgStats2 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143195/Statistics_2_eiy4ek.jpg";
+const imgCT = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143150/Computational_Thinking_ya5kbf.jpg";
+const imgPython = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143177/python_h4l216.jpg";
+const imgJava = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143155/java_ipj3yo.jpg";
+const imgMAD1 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143160/mad1_ghgt82.jpg";
+const imgMAD2 = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143163/mad2_pxgnfn.jpg";
+const imgDBMS = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143143/dbms_dgjjly.jpg";
+const imgPDSA = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143186/pdsa_ck2qo9.jpg";
+const imgTerminal = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143152/system_commands_ijermn.jpg";
+const imgMLF = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143180/mlf_csoa3a.jpg";
+const imgMLT = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143171/mlt_saxs2k.jpg";
+const imgMLP = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143182/mlp_prmjwc.jpg";
+const imgBDM = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143134/bdm_efkehm.jpg";
+const imgTDS = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143140/tds_nondoe.jpg";
+const imgAnalytics = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143153/business_analytics_ycuj1r.jpg";
 
 /**
  * Get the background image URL for a subject based on its name

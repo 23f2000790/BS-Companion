@@ -30,7 +30,7 @@ body {
 /*-------------------------------------------LANDING PAGE CSS---------------------------------------- */
 /*--------------------------------------------------------------------------------------------------- */
 .landing {
-  background-image: url("./assets/images/book.png");
+  background-image: url("https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143779/book_mwaulm.png");
   background-color: var(--bg-page);
   background-size: 1000px;
   background-repeat: no-repeat;

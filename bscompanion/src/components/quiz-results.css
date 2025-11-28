@@ -508,6 +508,7 @@
 .radar-wrapper {
   flex: 1;
   width: 100%;
+  height: 300px; /* Explicit height for Recharts */
   min-height: 300px; /* Fix for flex child height and Recharts warning */
 }
 
@@ -1027,8 +1028,396 @@ background: #1e1e1e;
   cursor: pointer;
 }
 
-.clickable-result-item:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(224, 218, 179, 0.3);
-  transform: translateX(5px);
+/* ========================================
+   MOBILE-FIRST RESPONSIVENESS
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* 1. GLOBAL CONTAINER SPACING - Reduced for wider content */
+  .results-dashboard {
+    padding: 1rem 0.75rem; /* Reduced horizontal padding */
+    padding-bottom: 120px;
+  }
+
+  /* 2. CARD COMPONENTS - Reduced padding for more content space */
+  .stat-card {
+    padding: 1rem; /* Reduced from 1.75rem - less space wasted */
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .chart-card {
+    padding: 1rem; /* Reduced from 1.75rem */
+    width: 100%;
+    margin-bottom: 1.25rem; /* Less vertical gap */
+  }
+
+  .topic-list-card {
+    padding: 1rem; /* Reduced from 1.75rem */
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  .detailed-review {
+    padding: 1rem; /* Reduced from 1.75rem */
+    width: 100%;
+  }
+
+  .skill-radar-container,
+  .weak-areas-panel {
+    padding: 1rem; /* Reduced from 1.75rem */
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  /* CRITICAL: Analysis Hero - Make it single layer */
+  .analysis-hero {
+    padding: 1rem; /* Reduced from 1.75rem */
+    margin-bottom: 1.25rem;
+  }
+
+  /* Fix the narrow insight box */
+  .hero-insight {
+    display: block; /* Changed from flex to allow full width */
+    padding: 1rem; /* Reduced padding */
+    margin: 0; /* No extra margin */
+  }
+
+  .hero-insight p {
+    font-size: 0.95rem;
+    line-height: 1.5; /* Tighter line height */
+    margin: 0;
+    width: 100%; /* Full width */
+  }
+
+  .insight-icon {
+    display: inline; /* Make icon inline with text */
+    margin-right: 0.5rem;
+  }
+
+  .redemption-arc {
+    padding: 1rem; /* Reduced from 1.75rem */
+    margin-bottom: 1.25rem;
+  }
+
+  .redemption-card {
+    padding: 1rem; /* Reduced inner padding */
+  }
+
+  .resource-card {
+    padding: 1rem; /* Reduced from 1.5rem */
+  }
+
+  /* 3. TYPOGRAPHY & READABILITY - More compact */
+  body,
+  .results-dashboard,
+  .result-item,
+  .resource-reason,
+  .correction-text {
+    line-height: 1.5; /* Tighter for mobile */
+  }
+
+  .results-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .results-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .stat-card__value {
+    font-size: 1.6rem; /* Slightly smaller */
+  }
+
+  .stat-card__label {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .redemption-question {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* 4. CHART RESPONSIVENESS (CRITICAL) */
+  .chart-container {
+    width: 100%;
+    height: 280px; /* Slightly smaller for mobile */
+    min-height: 280px;
+  }
+
+  .radar-wrapper {
+    width: 100%;
+    height: 280px;
+    min-height: 280px;
+  }
+
+  /* Ensure ResponsiveContainer works properly */
+  .chart-container > div,
+  .radar-wrapper > div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Chart label minimum sizes */
+  .recharts-text,
+  .recharts-label {
+    font-size: 11px !important;
+  }
+
+  /* 5. FLEXBOX ADJUSTMENTS */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem; /* Reduced gap */
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .ai-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .strengths-weaknesses {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .redemption-options {
+    grid-template-columns: 1fr;
+    gap: 0.75rem; /* Less gap */
+  }
+
+  /* Result items */
+  .result-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem; /* Reduced padding */
+    position: relative;
+  }
+
+  .result-item__icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  /* 6. SPECIFIC SECTION SPACING - More compact */
+  .results-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .ai-analysis-section {
+    margin-bottom: 1.5rem; /* Reduced */
+  }
+
+  .resource-library {
+    margin-bottom: 1.5rem;
+  }
+
+  .resource-library h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* 7. PREVENT OVERFLOW */
+  .results-dashboard * {
+    box-sizing: border-box;
+  }
+
+  .results-dashboard,
+  .chart-card,
+  .analysis-hero,
+  .redemption-arc,
+  .detailed-review {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 8. BADGES AND SMALL ELEMENTS */
+  .topic-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+  }
+
+  /* 9. BUTTONS - Better touch targets but less padding */
+  .redemption-opt {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .btn-ai-analyze {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* 10. TOPIC PILLS - More compact */
+  .topic-pills-container {
+    gap: 0.5rem;
+  }
+
+  .topic-pill {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8rem;
+  }
+
+  /* 11. QUESTION TEXT & ANSWERS - More compact */
+  .question-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .answers-comparison {
+    gap: 0.75rem;
+  }
+
+  .user-answer,
+  .correct-answer {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* 12. WEAK AREAS - More compact */
+  .weak-area-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .weak-areas-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .correction-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* 13. MODAL ADJUSTMENTS */
+  .modal-content.question-detail-modal {
+    width: 95%;
+    max-width: 100%;
+    margin: 1rem;
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem;
+  }
+
+  .modal-title-group h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  /* 14. RESOURCE CARDS - More compact */
+  .resource-content h4 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+  }
+
+  .resource-topic {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .resource-reason {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* 15. CONTEXT & EXPLANATION BOXES */
+  .question-context {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .question-context-box {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .explanation-box {
+    padding: 1rem;
+  }
+
+  .explanation-box div {
+    line-height: 1.5;
+  }
+
+  /* 16. FIX ICON SIZES */
+  .stat-card__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .resource-icon {
+    font-size: 1.5rem;
+  }
+
+  /* 17. HEADINGS - More compact */
+  .chart-card h3,
+  .skill-radar-container h3,
+  .topic-list-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .detailed-review .review-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .redemption-header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .redemption-header p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  /* 18. ENSURE PROPER TOUCH TARGETS */
+  button,
+  .clickable-result-item {
+    min-height: 44px;
+  }
 }

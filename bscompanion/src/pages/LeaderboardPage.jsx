@@ -30,7 +30,7 @@ const LeaderboardPage = () => {
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <h1 style={{ marginBottom: '20px' }}>Global Rankings 🏆</h1>
-        <div style={{ height: 'calc(100vh - 150px)' }}>
+        <div>
           <Leaderboard fullPage={true} />
         </div>
       </div>

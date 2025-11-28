@@ -1,0 +1,2326 @@
+[
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Ashok has to train a logistic regression model on a dataset with gradient descent approach. Which of the following solvers can he use?",
+        "options": {
+            "A": "newton-cg",
+            "B": "lbfgs",
+            "C": "liblinear",
+            "D": "sag",
+            "E": "saga"
+        },
+        "correctOption": [
+            "D",
+            "E"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider following code snippet:\n\nfrom sklearn.utils.multiclass import type_of_target\nimport numpy as np\nprint(type_of_target(np.array([[0, 1], [1, 1]])))\nprint(type_of_target([[1.0, 0.0, 3.0]]))\nprint(type_of_target(['a', 'b', 'a']))",
+        "question": "What will be the output of the above code snippet in the correct sequence?",
+        "options": {
+            "A": "'multilabel-indicator'\n'multiclass'\n'binary'",
+            "B": "'multiclass'\n'multiclass'\n'binary'",
+            "C": "'binary'\n'multiclass'\n'multilabel-indicator'",
+            "D": "'multilabel-indicator'\n'continuous'\n'binary'"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Brajesh wrote following code snippet:\n\nclf = Perceptron(max_iter=100, random_state=1729)\n\nHe learnt that every time he calls fit() method on 'clf', the parameters learnt from the previous training session (i.e. previous call to 'fit()') are lost.",
+        "question": "What should he change in code so that this problem is removed?",
+        "options": {
+            "A": "Set 'warm_start=True'",
+            "B": "Combine training data from different training sessions",
+            "C": "Set 'retain_parameters=True'",
+            "D": "This problem can not be solved."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider following variants of gradient descent algorithm:\n1. full batch gradient descent\n2. mini batch gradient descent\n3. stochastic gradient descent",
+        "question": "Which of the following variants of gradient descent can be implemented with SGDClassifier?",
+        "options": {
+            "A": "only 3",
+            "B": "1, 2 and 3",
+            "C": "1 and 2 only",
+            "D": "2 and 3 only"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Suppose we have a multi-class classification problem with n classes. Which of the following methods require exactly n classifiers to solve this problem?",
+        "options": {
+            "A": "OneVsRestClassifier",
+            "B": "OneVsOneClassifier",
+            "C": "OutputCodeClassifier",
+            "D": "MultiOutputClassifier"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.feature_extraction.text import CountVectorizer\ncorpus = [\"Hello World great\"]\nvectorizer = CountVectorizer()\nX = vectorizer.fit_transform(corpus)\nprint(X.toarray())",
+        "question": "What might be the possible output of the following code:",
+        "options": {
+            "A": "[[1 2 1]]",
+            "B": "[[1 2 3]]",
+            "C": "[[0 1 1]]",
+            "D": "[[1 1 1]]"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import numpy as np\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import MinMaxScaler\nfrom sklearn.linear_model import LinearRegression\nsteps = [\n    ('imputer', SimpleImputer(missing_values=np.nan, strategy='mean')),\n    ('scaler', MinMaxScaler()),\n    ('model', LinearRegression())\n]\npipe = Pipeline(steps=steps)",
+        "question": "From the above code what pipe[1].fit_transform(X) does ? where X is a feature matrix",
+        "options": {
+            "A": "Replaces missing values with mean value of feature",
+            "B": "Applies MinMaxScaling on the X",
+            "C": "LinearRegression model fitting",
+            "D": "None of these"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.metrics import mean_absolute_error\ny_true = [3, -0.5, 2, 7]\ny_pred = [2.5, 0.0, 2, 8]\nmean_absolute_error(y_true, y_pred)",
+        "question": "What might be the possible output of the following code:",
+        "options": {
+            "A": "0.00",
+            "B": "0.50",
+            "C": "0.72",
+            "D": "1.00"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.metrics import precision_score\ny_true = [1,1,0,1,0,0,1,0,1]\ny_pred = [0,1,0,1,0,1,1,1,1]\nprecision_score(y_true,y_pred)",
+        "question": "What might be the possible output of the following code:",
+        "options": {
+            "A": "0.00",
+            "B": "0.33",
+            "C": "0.66",
+            "D": "0.99"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Mention TRUE or FALSE: Feature scaling does not impact KNN model performance",
+        "options": {
+            "A": "TRUE",
+            "B": "FALSE"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "By using all features of a dataset accuracy score of 100% is achieved on the training set, but accuracy score of 70% on test set, which of the following statements is most relevant?",
+        "options": {
+            "A": "Model is underfitting",
+            "B": "Model is overfitting",
+            "C": "Nothing, the model is perfect"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Which of the following code snippets correctly sets up a RandomizedSearchCV object to perform hyperparameter tuning on a RandomForestClassifier with the following parameters to be tested:\n\u2022 Number of estimators: 50, 100, 150\n\u2022 Maximum depth of the tree: 5, 10, 15\n\u2022 Minimum number of samples to enable a split: 2, 4, 6",
+        "question": "Select the correct code snippet.",
+        "options": {
+            "A": "rfc = RandomForestClassifier(random_state=0)\nparam_distributions = {n_estimators: [50, 100, 150], max_depth: [5, 10, 15], min_samples_split: [2, 4, 6]}\nrandomized_search = RandomizedSearchCV(rfc, param_distributions=param_distributions, cv=5)",
+            "B": "rfc = RandomForestClassifier(random_state=0)\nparam_distributions = ['n_estimators': [50, 100, 150], 'max_depth': [5, 10, 15], 'min_samples_split': [2, 4, 6]]\nrandomized_search = RandomizedSearchCV(rfc, param_distributions=param_distributions, cv=5)",
+            "C": "rfc = RandomForestClassifier(random_state=0)\nparam_distributions = ['n_estimators': {50, 100, 150}, 'max_depth': {5, 10, 15}, 'min_samples_split': {2, 4, 6}]\nrandomized_search = RandomizedSearchCV(rfc, param_distributions=param_distributions, cv=5)",
+            "D": "rfc = RandomForestClassifier(random_state=0)\nparam_distributions = {'n_estimators': [50, 100, 150], 'max_depth': [5, 10, 15], 'min_samples_split': [2, 4, 6]}\nrandomized_search = RandomizedSearchCV(rfc, param_distributions=param_distributions, cv=5)"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "Decision Trees are prone to:",
+        "options": {
+            "A": "Low bias, low variance",
+            "B": "High bias, low variance",
+            "C": "Low bias, high variance",
+            "D": "High bias, high variance"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.ensemble import BaggingRegressor\nfrom sklearn.model_selection import GridSearchCV\nparam_grid = [{'max_depth':range(1, 20, 2)}]\ngs = GridSearchCV(DecisionTreeClassifier(), param_grid, cv = 10)\ngs.fit(X,y)",
+        "question": "Consider the following code. How many DecisionTreeClassifier models will be trained internally?",
+        "options": {
+            "A": "1000",
+            "B": "20",
+            "C": "10000",
+            "D": "100",
+            "E": "90"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "The precision-recall curve",
+        "options": {
+            "A": "plots a graph with precision value on X-axis and recall value on Y-axis",
+            "B": "computes precision-recall pairs for different probability thresholds",
+            "C": "computes precision-recall pairs for one singular probability threshold",
+            "D": "plots a graph with recall value on X-axis and precision value on Y-axis"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Consider a classification dataset with 98% negative samples and 2% positive samples. A model is trained on this data, which of the following evaluation metrics are suitable for measuring effectiveness of this model:",
+        "options": {
+            "A": "accuracy",
+            "B": "precision",
+            "C": "recall",
+            "D": "F-1 score"
+        },
+        "correctOption": [
+            "B",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider following code snippet:\n\nfrom sklearn.naive_bayes import MultinomialNB\nestimator = MultinomialNB()\nestimator.fit(X, y)\n\nwhere X and y are training data.",
+        "question": "Which of the following statements are true?",
+        "options": {
+            "A": "MultinomialNB is best suited when feature matrix X contains text data and not the word counts.",
+            "B": "MultinomialNB is best suited when feature matrix X contains word counts for text data.",
+            "C": "The MultinomialNB classifier is suitable for classification with continuous features.",
+            "D": "None of these"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following option(s) are correct regarding regularization?",
+        "options": {
+            "A": "It is a technique used to minimize the adjusted loss function and avoid overfitting.",
+            "B": "It increases the bias and variance of the training model",
+            "C": "Elastic net regularization is a combination of L1 and L2 regularization both.",
+            "D": "It controls the number of passes a training dataset takes in an algorithm."
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following statements are true? (Multiple options may be correct.)",
+        "options": {
+            "A": "KNN models with low values of K produces complex decision boundaries.",
+            "B": "KNN models with high values of K produces smooth decision boundaries.",
+            "C": "In KNN models K does not impact the decision boundaries.",
+            "D": "None of these"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "from sklearn.svm import SVC\nclf = SVC(kernel = ______)\nclf.fit(X, y)",
+        "question": "Fill in the missing parameter value in the following estimator that can be used to classify the data",
+        "options": {
+            "A": "'poly'",
+            "B": "'lasso'",
+            "C": "'rbf'",
+            "D": "'scale'"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "Which of the following is/are correct?",
+        "options": {
+            "A": "Decision trees are prone to underfitting.",
+            "B": "By increasing the 'max_depth' parameter in 'DecisionTreeClassifier', the tree is likely to underfit",
+            "C": "By increasing the 'min_samples_leaf' parameter in 'DecisionTreeClassifier', the tree is likely to overfit.",
+            "D": "By increasing the 'min_samples_split' parameter in 'DecisionTreeClassifier', the tree is likely to overfit.",
+            "E": "By increasing the 'ccp_alpha' parameter in 'DecisionTreeClassifier', the tree is likely to overfit.",
+            "F": "None of these"
+        },
+        "correctOption": "F",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following options are true for regularization parameter C in sklearn.svm.SVC ?",
+        "options": {
+            "A": "Large value of the regularization parameter C will overfit the training set and complex decision boundaries will form.",
+            "B": "Large value of the regularization parameter C will underfit the training set and smooth decision boundaries will form.",
+            "C": "Small value of the regularization parameter C will overfit the training set and complex decision boundaries will form.",
+            "D": "Small value of the regularization parameter C will underfit the training set and smooth decision boundaries will form.",
+            "E": "None of these"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": "from sklearn.datasets import load_breast_cancer\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import train_test_split\nX,y = load_breast_cancer(as_frame = True, return_X_y = True)\nX_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.2, random_state = 1)\nclf = DecisionTreeClassifier(min_samples_split = 5, min_samples_leaf = 5, random_state = 5)\nclf.fit(X_train, y_train)\nprint(clf.score(X_test, y_test))",
+        "question": "In which of the following scenarios, the split will NOT be made at node N?",
+        "options": {
+            "A": "Number of samples at node N = 10. If it is split, it will result in 4 nodes in the left child and 6 nodes in the right child.",
+            "B": "Number of samples at node N = 6. If it is split, it will result in 3 nodes in the left child and 3 nodes in the right child.",
+            "C": "Number of samples at node N = 12. If it is split, it will result in 2 nodes in the left child and 10 nodes in the right child.",
+            "D": "Number of samples at node N = 4. If it is split, it will result in 3 nodes in the left child and 1 node in the right child."
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": "from sklearn.datasets import load_wine\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import train_test_split\nX,y = load_wine(return_X_y = True)\nX_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.10, random_state = 12)\nclf = DecisionTreeClassifier(max_depth = 6, min_samples_split = 2, min_samples_leaf=3, random_state = 81)\nclf.fit(X_train, y_train)\nprint(clf.score(X_train, y_train))",
+        "question": "Assume that the output of the above code is 0.852. If we increase the value of the parameter 'max_depth', which of the following is more likely to happen?:",
+        "options": {
+            "A": "The output score is likely to increase.",
+            "B": "The output score is likely to decrease.",
+            "C": "The change in 'max_depth' is not likely to have any effect on the output.",
+            "D": "If we increase the value of 'max_depth' beyond 6, the code will throw an error, as the max_depth can not be more than the product of 'min_samples_split' and 'min_samples_leaf'."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider following code snippet:\n\npython\nfrom sklearn.utils.multiclass import type_of_target\nimport numpy as np\nprint(type_of_target(np.array([[('horror','fantasy')],\n                                 ['adventure','fantasy'],\n                                 ['adventure','fantasy']])))\nprint(type_of_target([72, 17.89, 83.00]))\nprint(type_of_target([0, 1, 1, 0]))\n",
+        "question": "What will be the output of the above code snippet in the correct sequence?",
+        "options": {
+            "A": "'multilabel-indicator'\n'multiclass'\n'binary'",
+            "B": "'multiclass'\n'multiclass'\n'binary'",
+            "C": "'binary'\n'multiclass'\n'multilabel-indicator'",
+            "D": "'multilabel-multioutput'\n'continuous'\n'binary'"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following code snippet and assume all the dependencies are imported:\n\npython\nfrom sklearn.linear_model import Perceptron\nclf = Perceptron(max_iter=100,random_state=1729)\n",
+        "question": "He learnt that every time he calls fit() method on 'clf', the parameters learnt from the previous training session (i.e. previous call to 'fit()') are lost. What should he change in code so that this problem is removed?",
+        "options": {
+            "A": "Set warm_start=True",
+            "B": "Combine training data from different training sessions",
+            "C": "Set retain_parameters=True",
+            "D": "This problem can not be solved."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Consider a binary classification dataset with labeled as 98% negative samples and 2% positive samples. A model is trained on this data, which of the following evaluation metrics are suitable for measuring effectiveness of this model:",
+        "options": {
+            "A": "accuracy",
+            "B": "Mean Absolute Error",
+            "C": "smote",
+            "D": "F-1 score"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code block:\n\npython\nfrom sklearn.datasets import make_regression\nX, y = make_regression(n_samples = 1000,\n                     n_features = 5,\n                     n_informative = 2,\n                     random_state=42)\n\nfrom sklearn.linear_model import SGDRegressor\nsgd1 = SGDRegressor(alpha=1e-3,\n                  random_state=42,\n                  penalty='------------', )\nsgd1.fit(X, y)\nprint(sgd1.coef_)\n\nsgd2 = SGDRegressor(alpha=1e-3,\n                  random_state=42,\n                  penalty='------------')\nsgd2.fit(X, y)\nprint(sgd2.coef_)\n",
+        "question": "What are the most suitable values to be filled in the two blank spaces (in that order) in the code to expect the following output?:\n[1.68059576e+01, 1.89752021e+01, 7.49212536e-04, -6.53455275e-04, 3.01471918e-04]\n\n[16.82258106, 18.99248887, 0., 0., 0.]",
+        "options": {
+            "A": "'l1', 'l2'",
+            "B": "'l1', None",
+            "C": "'l2', 'l1'",
+            "D": "'l2', None"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "What might be the possible output of the following code:\n\npython\nfrom sklearn.metrics import mean_absolute_error\ny_true = [3, -0.5, 2, 7]\ny_pred = [2.5, 0.0, 2, 8]\nmean_absolute_error(y_true, y_pred)\n",
+        "question": "What might be the possible output of the following code:",
+        "options": {
+            "A": "0.00",
+            "B": "0.50",
+            "C": "0.72",
+            "D": "1.00"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "You're building a machine learning pipeline to preprocess data and train a model on a classification task. You decide to use a pipeline that includes data preprocessing and a support vector machine (SVM) classifier. The following code snippet demonstrates the pipeline creation and usage:\n\npython\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.svm import SVC\nfrom sklearn.preprocessing import StandardScaler\nimport numpy as np\n\n# Simulated data (features: X, target: y)\nX = np.array([[2, 3], [5, 7], [8, 10]])\ny = np.array([0, 1, 0])\n\n# Create a pipeline with StandardScaler and SVM classifier\npipeline = Pipeline([('scaler', StandardScaler()),\n                   ('svm', SVC())])\n\n# Fit the pipeline on training data\npipeline.fit(X, y)\n\n# Make predictions using the trained pipeline\npredictions = pipeline.predict(X)\n",
+        "question": "What is the purpose of using the pipeline in this code snippet?",
+        "options": {
+            "A": "The pipeline combines multiple models for better model performance.",
+            "B": "The pipeline allows for simultaneous training of the scaler and classifier.",
+            "C": "The pipeline simplifies the code by encapsulating preprocessing and modeling steps.",
+            "D": "The pipeline ensures that only linear SVM can be used for this classification task."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Given below code to load a huge file name as filename.csv and this file is not loading at once in the system which parameter should be added to pd.read_csv to load this file ?\n\npython\nimport pandas as pd\nfrom sklearn.linear_model import SGDRegressor\nfor train_df in pd.read_csv(\"filename.csv\", __________=1024):\n    X = train_df.iloc[:, :-1]\n    y = train_df.iloc[:, -1]\n    model = SGDRegressor()\n    model.partial_fit(prep_X,y)\n",
+        "question": "Given below code to load a huge file name as filename.csv and this file is not loading at once in the system which parameter should be added to pd.read_csv to load this file ?",
+        "options": {
+            "A": "max_depth",
+            "B": "C",
+            "C": "chunksize",
+            "D": "warm_start"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "What will the output for below code\n\npython\nfrom sklearn.feature_extraction.text import CountVectorizer\ncorpus = [ 'This is the first document.',\n           'This document is the second document.']\nvectorizer = CountVectorizer()\nvectorizer.fit_transform(corpus)\nprint(vectorizer.get_feature_names_out())\n",
+        "question": "What will the output for below code",
+        "options": {
+            "A": "{'this': 5, 'is': 2, 'the': 4, 'first': 1, 'document': 0, 'second': 3}",
+            "B": "[3,1,2,1,2,2]",
+            "C": "['document', 'first', 'is', 'second', 'the', 'this']",
+            "D": "[0,1,2,3,4,5]"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Imagine you're training a Perceptron using sklearn with the following code:\n\npython\nfrom sklearn.linear_model import Perceptron\nX = [[0, 0.5], [1, 1.5], [1, 2], [2, 3]]\ny = [-1, 1, 1, 1]\nclf = Perceptron(eta0 = 1, tol=None, shuffle=True, random_state=42)\nclf.fit(X, y)\niterations = clf.n_iter_\n",
+        "question": "Given the linearly separable nature of the data, how many iterations would it most likely take for the perceptron to converge? What will be the value of iterations?",
+        "options": {
+            "A": "iterations = 1",
+            "B": "iterations = 10",
+            "C": "iterations value can vary since the data is being shuffled in each epoch.",
+            "D": "iterations = 5"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code snippet using scikit-learn:\n\npython\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.svm import SVC\nfrom sklearn.model_selection import GridSearchCV\n\npipeline = Pipeline([('scaler', StandardScaler()),\n                   ('classifier', SVC())])\n\nparam_grid = {'scaler__with_mean': [True, False],\n            'classifier__C': [0.1, 1, 10],\n            'classifier__kernel': ['linear', 'rbf'],\n            'classifier__gamma': [0.1, 1, 10]}\n\ngrid_search = GridSearchCV(estimator= pipeline,\n                         param_grid= param_grid,\n                         cv=5,\n                         scoring='accuracy',\n                         verbose=2)\n\ngrid_search.fit(X_train, y_train)\n",
+        "question": "Assuming that X_train and y_train are given and the features are not sparse, which of the following statements about the given code is correct?",
+        "options": {
+            "A": "The StandardScaler will scale both X_train and y_train before training a classifier.",
+            "B": "All the classifiers will not be trained on the scaled data with zero mean and unit variance.",
+            "C": "The pipeline always uses a radial basis function ('rbf') as the kernel for the SVC() classifier.",
+            "D": "A total of 18 different combinations of hyperparameters were trained during the GridSearchCV fitting."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code snippet that employs LogisticRegression from sklearn on a feature matrix X and corresponding label vector y:\n\npython\nfrom sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression(class_weight='balanced', C=0.5)\nmodel.fit(X, y)\n",
+        "question": "Given the code above, which of the following statements is true?",
+        "options": {
+            "A": "The logistic regression model will give equal importance to both classes in an imbalanced dataset.",
+            "B": "The model does not use any regularization because the parameter C is set.",
+            "C": "The model will perform equally well on both imbalanced and balanced datasets due to the class_weight parameter.",
+            "D": "The value of C indicates that the model will apply a regularization."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following is true for a hard margin SVM algorithm ?",
+        "options": {
+            "A": "It does not create hyperplanes as a classification decision boundary",
+            "B": "It is robust to outliers",
+            "C": "It will correctly classify all the datapoints if the data is linearly separable.",
+            "D": "It is mostly used for clustering the data"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following is/are correct regarding RadiusNeighborsClassifier",
+        "options": {
+            "A": "Only n_neighbors in the range of some radius R are used to compute the label of a sample.",
+            "B": "All the neighbours in the range of some radius R are used to compute the label of a sample.",
+            "C": "Feature Scaling helps in improving the score of RadiusNeighborsClassifier model",
+            "D": "LabelEncoder helps in improving the score of RadiusNeighborsClassifier model"
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following is correct?",
+        "options": {
+            "A": "SGDClassifier(loss=\"perceptron\") is a stochastic version of a perceptron model",
+            "B": "SGDClassifier(loss=\"percept\") is a stochastic version of a perceptron model",
+            "C": "SGDClassifier(loss=\"log_loss\") is a stochastic version of a logistic classifier model",
+            "D": "SGDClassifier(loss=\"sigmoid\") is a stochastic version of a logistic classifier model"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following option(s) are correct for the precision-recall curve",
+        "options": {
+            "A": "A high area under the curve represents both high recall and high precision.",
+            "B": "The precision-recall curve shows the trade-off between precision and recall for different threshold values.",
+            "C": "The precision-recall curve used to evaluate unsupervised algorithm for imbalanced clustered data.",
+            "D": "None of these"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following statements are true?",
+        "options": {
+            "A": "KNeighborsClassifier with low values of n_neighbors produces complex decision boundaries.",
+            "B": "KNeighborsClassifier with low values of n_neighbors produces smooth decision boundaries.",
+            "C": "In KNeighborsClassifier the scale of the features(columns) can impact the decision boundaries.",
+            "D": "None of these"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following code snippet that employs LogisticRegression from sklearn on a feature matrix X and corresponding label vector y:\n\npython\nfrom sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression(C=0.8, multi_class='multinomial', max_iter=1000)\nmodel.fit(X, y)\n",
+        "question": "Given the code above, which of the following statements is true?",
+        "options": {
+            "A": "The LogisticRegression model is set up for binary classification.",
+            "B": "The model does not use any regularization because the parameter C is set.",
+            "C": "The model has been specifically set up to handle a multi-class classification problem using a softmax regression approach.",
+            "D": "The model might iterate through the data multiple times, with a maximum limit set at 1000 iterations."
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Fill in the missing parameter value in the following estimator that can be used to classify the data\n\npython\nfrom sklearn.svm import SVC\nclf = SVC(kernel = ______)\nclf.fit(X, y)\n",
+        "question": "Fill in the missing parameter value in the following estimator that can be used to classify the data",
+        "options": {
+            "A": "'poly'",
+            "B": "'lasso'",
+            "C": "'scale'",
+            "D": "'sigmoid'"
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Unsupervised Learning (Clustering & Dimensionality Reduction)",
+        "context": "Consider the following code snippet:\n\npython\nfrom sklearn.datasets import load_iris\nfrom sklearn.decomposition import PCA\nfrom sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.pipeline import FeatureUnion\nX = load_iris().data # X.shape = (150,4)\n\npoly_feature = PolynomialFeatures(degree=2, include_bias=True)\nunion = FeatureUnion([('poly', poly_feature),\n                    ('pca', PCA(n_components=2))])\n\nX_transformed = union.fit_transform(X)\nprint(X_transformed.shape)\n",
+        "question": "If the shape of X is (150,4). How many total columns are there in the X_transformed ?",
+        "options": null,
+        "correctOption": 17,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Please consider the following data and code for a regression problem with symbols in mind:\n\u25cf >>>: Represents input code\n\u25cf # : Represents comment in a code\n\u25cf ... : Represents code continuation\n\u25cf Without any symbols at the beginning of a line then it is output of just above input line of code.\n\npython\n>>> import pandas as pd\n>>> from sklearn.preprocessing import OneHotEncoder\n>>> from sklearn.linear_model import LinearRegression\n>>> data_array = [[19, 'Black', 74],\n...               [19, 'Blue', 75],\n...               [19, 'Red', 85],\n...               [24, 'Black', 70],\n...               [24, 'Blue', 70],\n...               [24, 'Red', 89],\n...               [30, 'Black', 78],\n...               [30, 'Blue', 76],\n...               [30, 'Red', 90]]\n...\n>>> data = pd.DataFrame(data_array,columns=[\"Age\",\n...                                          \"Car_color\",\n...                                          \"Accidents_per_1000_Driver\"])\n>>> X = data.drop(\"Accidents_per_1000_Driver\", axis=1)\n>>> y = data[\"Accidents_per_1000_Driver\"]\n>>> ohe = OneHotEncoder(sparse_output=False)\n>>> X[['Black', 'Blue', 'Red']] = ohe.fit_transform(X[[\"Car_color\"]])\n>>> X.drop(\"Car_color\", axis=1, inplace=True)\n>>> lr = LinearRegression().fit(X, y)\n>>> print(lr.coef_)\n[0.32, -4.55, -4.88, 9.44]\n>>> print(lr.intercept_)\n70.75\n",
+        "question": "How many Accidents per 1000 Driver predicted by the model for Age 27 and driving a Red car ?",
+        "options": null,
+        "correctOption": {
+            "min": 88.3,
+            "max": 89.3
+        },
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "After training a multi-class classifier, you obtain the following confusion matrix. The image shows a 3x3 matrix with true labels (0, 1, 2) on the y-axis and predicted labels (0, 1, 2) on the x-axis. The values are: Row 0: [4, 0, 4], Row 1: [2, 1, 2], Row 2: [4, 2, 1].",
+        "question": "What will be the weighted average of the recall score for each class?",
+        "options": null,
+        "correctOption": {
+            "min": 0.295,
+            "max": 0.315
+        },
+        "questionType": "numerical",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764057152/jan2024-1_qrivjy.png"
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Jan 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "What is the output of the following code?\n\npython\nfrom sklearn.neighbors import KNeighborsClassifier\nX = [[2,3], [5,6], [8,9], [10, 11], [15,16], [20,21]]\ny = [2, 1, 0, 1, 2, 1]\nknn = KNeighborsClassifier(n_neighbors=3,\n                         metric='euclidean',\n                         weights='uniform')\nknn.fit(X, y)\nprint(knn.predict([[8,9]]))\n",
+        "question": "What is the output of the following code?",
+        "options": null,
+        "correctOption": 1,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code and its output:\nCode:\npython\nfrom sklearn.datasets import load_iris\nfrom sklearn.linear_model import LogisticRegression\n\nX, y = load_iris(return_X_y=True)\nclf = LogisticRegression(random_state=0).fit(X, y)\n\nprint(y[70:80])\nprint(clf.predict(X[70:80, :]))\n\nOutput:\n\n[1 1 1 1 1 1 1 1 1 1]\n[2 1 1 1 1 1 1 2 1 1]\n\nWhat will be the output of the following code? Enter your answer correct to one decimal place.\n\n`print(clf.score(X[70:80, :], y[70:80]))`",
+        "question": "What will be the output of the following code? Enter your answer correct to one decimal place.\n\n`print(clf.score(X[70:80, :], y[70:80]))`",
+        "options": null,
+        "correctOption": 0.8,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "What might be the possible output of the following code:\npython\nfrom sklearn.metrics import precision_score\ny_true = [1,1,0,1,0,0,1,0,1]\ny_pred = [1,1,0,0,0,0,0,0,1]\nprint(precision_score(y_true,y_pred))\n",
+        "question": "What might be the possible output of the following code:",
+        "options": null,
+        "correctOption": 1.0,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "What will be the output of the following code?\npython\nfrom sklearn.neighbors import KNeighborsClassifier\nX_train = [[1,100],[4,400],[5,500],[6,600],[8,800],[9,900],\n           [11,1100],[12,1200],[15,1500],[18,1800],[19,1900]]\ny_train = [0,0,1,1,1,2,2,2,2,2,2]\n\nX_test = [[2,200]]\n\nknn = KNeighborsClassifier(n_neighbors=len(y_train),\n                           metric='euclidean',\n                           weights='uniform')\n\nknn.fit(X_train,y_train)\n\nprint(knn.predict(X_test))\n",
+        "question": "What will be the output of the following code?",
+        "options": null,
+        "correctOption": 2,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "What will be the output of the following code?\npython\nimport numpy as np\nfrom sklearn.impute import KNNImputer\nX = np.array([[5,6,3],[np.nan,1,5],[0,2,8],[4,4,2]])\nknn = KNNImputer(n_neighbors=2,weights=\"uniform\")\nX_trf= knn.fit_transform(X)\nprint(X_trf[1][0])\n",
+        "question": "What will be the output of the following code?",
+        "options": null,
+        "correctOption": 2,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "The parameter C in a logistic regression is:",
+        "options": {
+            "A": "similar to the parameter alpha in a ridge regressor.",
+            "B": "similar to 1 / alpha where alpha is the parameter of a ridge regressor.",
+            "C": "not controlling the regularization.",
+            "D": "Weights associated with classes while fitting the model."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Your task to design a model that can predict label of an article, in order to help an online news website. The labels could be \u201cpolitical\u201d, \u201csports\u201d and \u201cinternational\u201d.\nFollowing is the label matrix for random 3 articles:\n[[1 0 0],\n [1 1 0],\n [0 0 1]]",
+        "question": "What type of classification problem is this?",
+        "options": {
+            "A": "Binary class, single label classification.",
+            "B": "Binary class, multi label classification.",
+            "C": "Multi class, multi label classification.",
+            "D": "Multi class, single label classification."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "How does strong correlation between features given the labels impact the classification performance in Naive Bayes?",
+        "options": {
+            "A": "It has no impact because Naive Bayes assumes feature independence.",
+            "B": "It improves the classification performance.",
+            "C": "It degrades the classification performance.",
+            "D": "It depends on the type of Naive Bayes variant used."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "When might the Precision-Recall curve be more informative than the ROC curve?",
+        "options": {
+            "A": "When the dataset is imbalanced.",
+            "B": "When the dataset has equal numbers of positive and negative instances.",
+            "C": "When the classifier has high accuracy.",
+            "D": "When the classifier produces balanced precision and recall values."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Given ordinal data of the sizes of cups used in a coffee shop. Which of the following code will correctly transform the dataset as given in output array ?\ndataset = [['Small'],['Large'],['Large'],['Large'],['Normal'],['Small'],['Large'],['Normal']]\noutput = [[0],[2],[2],[2],[1],[0],[2],[1]]",
+        "question": "Which of the following code will correctly transform the dataset as given in output array ?",
+        "options": {
+            "A": "from sklearn.preprocessing import OrdinalEncoder\noe = OrdinalEncoder()\nprint(oe.fit_transform(dataset))",
+            "B": "from sklearn.preprocessing import OrdinalEncoder\noe = OrdinalEncoder(categories = [['Small', 'Normal', 'Large']])\nprint(oe.fit_transform(dataset))",
+            "C": "from sklearn.preprocessing import OrdinalEncoder\noe = OrdinalEncoder()\nprint(oe.transform(dataset))",
+            "D": "from sklearn.preprocessing import OrdinalEncoder\noe = OrdinalEncoder({'small\"=0, \"Normal\"=1, \"Large\"=2})\nprint(oe.fit_transform(dataset))"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following parameters learned by the KNN(KNeighborRegressor) model while training?",
+        "options": {
+            "A": "coef_",
+            "B": "n_neighbors",
+            "C": "weight",
+            "D": "None of these"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "For a support vector machine model, let X\u1d62 be an input instance with label y\u1d62. If X\u1d62 is a support vector what will be the output of this formula : \ny\u1d62 * (X\u1d62\u1d40W + W\u2080)\nW\u2080 and W are the estimated parameters from the model",
+        "question": "For a support vector machine model, let X\u1d62 be an input instance with label y\u1d62. If X\u1d62 is a support vector what will be the output of this formula : y\u1d62 * (X\u1d62\u1d40W + W\u2080)",
+        "options": {
+            "A": "> 1",
+            "B": "< 1",
+            "C": "= 1",
+            "D": "Cannot be determined"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider below code which of the following option is true for that\npython\nfrom sklearn.neighbors import NearestNeighbors\nneigh = NearestNeighbors(n_neighbors=4)\nneigh.fit(X_train)\nprint(neigh.kneighbors(X_test[0:1]))\n\nAssume X_train and X_test are of type numpy.ndarray.",
+        "question": "Consider the code below. Which of the following options is true?",
+        "options": {
+            "A": "It will print nearest neighbours from the test point.",
+            "B": "It will print the distance of test point from all the training points.",
+            "C": "It will print the distance and the index of the n_neighbors (in training set) for the test point.",
+            "D": "It will throw an error."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "Which of these may NOT help in handling overfitting in decision trees?",
+        "options": {
+            "A": "Increasing the value of min_samples_split",
+            "B": "Increasing the value of the pruning parameter",
+            "C": "Increasing the value of min_samples_leaf",
+            "D": "Increasing the depth of the tree"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "In a BaggingClassifier or BaggingRegressor, the parameter base_estimator can be:",
+        "options": {
+            "A": "Any predictor",
+            "B": "only a decision tree predictor",
+            "C": "only a linear model predictor",
+            "D": "only a support vector predictor"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "You are working on a classification problem using sklearn.ensemble.RandomForestClassifier. After training the model, you want to evaluate its performance on a test dataset. Which of the following method(s) can be used to obtain the predicted class probabilities for the test samples?",
+        "options": {
+            "A": "predict",
+            "B": "predict_proba",
+            "C": "decision_function",
+            "D": "score"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "For which of the following cases, f1-score is the most suitable evaluation metric?",
+        "options": {
+            "A": "There are 10,000 images, each contains either a cat or a dog. Exactly 500 contain cats and others contain dogs. Your task is to train a binary classifier.",
+            "B": "Train a binary classifier to detect if an MRI image contains carcinogenic cells or not. Number of true positives are 2%.",
+            "C": "Predicting if a chest x-ray belongs to a male patient or a female patient. There are nearly equal number of samples of each category.",
+            "D": "Based on a student's senior secondary marks and other features, predicting if he will fail a particular exam. The exam clearing rate is 98.23%."
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following is correct?",
+        "options": {
+            "A": "SGDClassifier(loss=\"percept\") is stochastic version of a perceptron model",
+            "B": "SGDClassifier(loss=\"log_loss\") is stochastic version of a logistic classifier model",
+            "C": "SGDClassifier(loss=\"log_loss\") is stochastic version of a SVM model",
+            "D": "SGDClassifier(loss=\"hinge\") is stochastic version of a SVM model"
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following option is true?",
+        "options": {
+            "A": "Distance between the datapoints varies as we change the n_neighbors parameter in KNeighborsClassifier.",
+            "B": "KNeighborsClassifier model couldn't able to predict labels for the samples outside of the training dataset because it does not learn from dataset.",
+            "C": "MinMaxScaler can impact the KNeighborsClassifier's accuracy score",
+            "D": "KNeighborsClassifier can help in outlier detection"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following value of C can overfit the SVM classifier model for the linearly inseparable data?",
+        "options": {
+            "A": "0.0001",
+            "B": "1",
+            "C": "1000",
+            "D": "Cannot be determined"
+        },
+        "correctOption": "C",
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "What will be the output of the following code:\npython\nfrom sklearn.feature_extraction.text import HashingVectorizer\ncorpus = ['You can have it all. Just not all at once.',\n          'Train your mind to see the good in every situation.',\n          'What we think, we become.',\n          'If I got rid of my demons, I\u2019d lose my angels.']\nvectorizer = HashingVectorizer(n_features=12,lowercase=True)\nX = vectorizer.fit_transform(corpus)\nprint(X.shape[1])\n",
+        "question": "What will be the output of the following code:",
+        "options": null,
+        "correctOption": 12,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code. \npython\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn.datasets import load_iris\n\nX, y = load_iris(as_frame = True, return_X_y = True)\n\nparam_grid = [{'max_depth':range(1, 10, 2),\n               'min_samples_split': range(2, 10, 3)},\n              {'min_samples_leaf': range(1, 11, 3)}]\n\ngs = GridSearchCV(DecisionTreeClassifier(),\n                  param_grid, cv = 5)\ngs.fit(X,y)\n",
+        "question": "How many different parameter combinations will be tried in GridSearchCV?",
+        "options": {
+            "A": "12",
+            "B": "80",
+            "C": "60",
+            "D": "19"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": "python\nfrom sklearn.datasets import load_wine\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import train_test_split\nX,y = load_wine(as_frame = True, return_X_y = True)\n\nX_train,X_test,y_train,y_test = train_test_split(X,\n                                                  y,\n                                                  test_size = 0.10,\n                                                  random_state = 12)\n\nclf1 = DecisionTreeClassifier(ccp_alpha = 0.1,\n                              random_state = 81)\n\nclf2 = DecisionTreeClassifier(ccp_alpha = 0.25,\n                              random_state = 81)\n\nclf1.fit(X_train, y_train)\nclf2.fit(X_train, y_train)\n\nprint(clf1.score(X_train, y_train))\nprint(clf2.score(X_train, y_train))\nprint(clf1.get_depth())\nprint(clf2.get_depth())\n",
+        "question": "Which of the following is the most expected output for the code given below:",
+        "options": {
+            "A": "0.9875\n0.9125\n2\n3",
+            "B": "0.9125\n0.9875\n2\n3",
+            "C": "0.9875\n0.9125\n3\n2",
+            "D": "0.9125\n0.9875\n3\n2"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": "Consider the following block of code:\npython\nfrom sklearn.datasets import load_wine\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import train_test_split\nX,y = load_breast_cancer(as_frame = True,\n                         return_X_y = True)\nX_train,X_test,y_train,y_test = train_test_split(X,y,\n                                                  test_size = 0.2,\n                                                  random_state = 1)\n\nclf = DecisionTreeClassifier(min_samples_split = 8,\n                             min_samples_leaf = 5,\n                             random_state = 5)\n\nclf.fit(X_train, y_train)\nprint(clf.score(X_test,y_test))\n",
+        "question": "In which of the following scenarios, the split will be done at a node N?",
+        "options": {
+            "A": "Number of samples at node N = 5. If it is split, it will result in 3 samples in the left child and 2 samples in the right child.",
+            "B": "Number of samples at node N = 10. If it is split, it will result in 5 samples in the left child and 5 samples in the right child.",
+            "C": "Number of samples at node N = 15. If it is split, it will result in 9 samples in the left child and 6 samples in the right child.",
+            "D": "Number of samples at node N = 8. If it is split, it will result in 5 samples in the left child and 3 samples in the right child."
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Given the following code for Polynomial Regression:\n\npython\nfrom sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\n\nX = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)\ny = np.array([1, 4, 9, 16, 25])\n\npoly = PolynomialFeatures(degree=2,interaction_only=False)\nX_poly = poly.fit_transform(X)\nmodel = LinearRegression()\nmodel.fit(X_poly, y)\n\nprint(model.coef_)\n",
+        "question": "What are the coefficients of the model?",
+        "options": {
+            "A": "[0, 1, 1]",
+            "B": "[0, 2, 1]",
+            "C": "[0, 0, 1]",
+            "D": "[0, 0, 2]"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "What is 'naive' assumption in classifiers based on Naive Bayes?",
+        "options": {
+            "A": "All the classes are conditionally independent of each other.",
+            "B": "All the classes are conditionally dependent on each other.",
+            "C": "All the features are conditionally dependent on each other.",
+            "D": "All the features are conditionally independent of each other."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider following code snippet:\n\npython\nestimator = RidgeClassifier(normalize=False, _ _ _ _ _=0)\npipe_ridge = make_pipeline(MinMaxScaler(),estimator)\npipe_ridge.fit(x,y)\n",
+        "question": "If we want to apply the ridge classifier on X with no regularization, what will be the missing attribute.",
+        "options": {
+            "A": "cv",
+            "B": "reg_rate",
+            "C": "alpha",
+            "D": "lambda"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "What is the effect of increasing the regularization parameter alpha in Ridge Regression?",
+        "options": {
+            "A": "It increases the complexity of the model.",
+            "B": "It reduces the complexity of the model.",
+            "C": "It has no effect on the model.",
+            "D": "It increases the model's sensitivity to the training data."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Given the code below:\n\npython\nfrom sklearn.datasets import fetch_california_housing\nfrom sklearn.linear_model import LinearRegression\n\ndata = fetch_california_housing()\nX, y = data.data, data.target\n\nmodel = LinearRegression()\nmodel.fit(X, y)\n\nprint(model.coef_)\n",
+        "question": "What do the coefficients represents?",
+        "options": {
+            "A": "The importance of each feature in predicting the target.",
+            "B": "The residuals of the model.",
+            "C": "The intercept of the regression line.",
+            "D": "It represents the values of hyperparameters of the model."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "How can we use both Ridge and Lasso Regularization in a machine learning model?",
+        "options": {
+            "A": "By setting penalty parameter to l2",
+            "B": "By setting penalty parameter to l1",
+            "C": "By setting penalty parameter to elasticnet",
+            "D": "By setting penalty parameter to l3"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following types of classification problems is being solved when a model predicts multiple labels(greater than 2) for each instance?",
+        "options": {
+            "A": "Binary class, single label classification.",
+            "B": "Multi class, multi label classification.",
+            "C": "Binary class, multi label classification.",
+            "D": "Multi class, single label classification."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Given the code snippet and assume if any necessary requirements:\n\npython\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn.linear_model import LogisticRegression\nparam_grid = {'C':[0.1, 1, 10],\n              'penalty': ['l1', 'l2'],\n              'solver': ['liblinear']}\nclf = GridSearchCV(LogisticRegression(), param_grid, cv=5)\nclf.fit(X_train, y_train)\nprint(clf.best_params_)\n",
+        "question": "What does cv=5 signify in this context?",
+        "options": {
+            "A": "The training data is split into 5 different datasets, each used to train a separate model.",
+            "B": "The model is trained and evaluated using 5-fold cross-validation for hyperparameter tuning",
+            "C": "Five different models are trained on 5 resampled datasets of training data.",
+            "D": "The dataset is divided into 5 parts and trained in a single pass without cross-validation."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code and assume all the imports being made:\n\npython\nfrom sklearn.linear_model import Perceptron\n\nX_train, X_test, y_train, y_test = MNIST()\nclf = Perceptron()\nclf.fit(X_train, y_train)\n\nprint(clf.score(X_test, y_test))\n",
+        "question": "What does the score method compute in this context?",
+        "options": {
+            "A": "The number of correctly classified samples.",
+            "B": "The accuracy of the classifier.",
+            "C": "The loss function value.",
+            "D": "The number of misclassified samples."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Given the following code snippet for a multi-label classification problem:\n\npython\nfrom sklearn.multioutput import MultiOutputClassifier\nfrom sklearn.linear_model import LogisticRegression\n\nmodel = MultiOutputClassifier(LogisticRegression())\nmodel.fit(X_train, y_train)\n\ny_pred = model.predict(X_test)\n",
+        "question": "What does MultiOutputClassifier do in this context?",
+        "options": {
+            "A": "Trains a single Logistic Regression model for all labels.",
+            "B": "Combines Logistic Regression with another model.",
+            "C": "Trains a separate Logistic Regression model for each label.",
+            "D": "Applies Logistic Regression in a one-vs-rest strategy for multi-class classification."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "What is the main advantage of using RandomizedSearchCV over GridSearchCV?",
+        "options": {
+            "A": "RandomizedSearchCV is always faster.",
+            "B": "RandomizedSearchCV evaluates all possible combinations of hyperparameters.",
+            "C": "RandomizedSearchCV can sample a larger hyperparameter space with fewer iterations.",
+            "D": "RandomizedSearchCV always finds the best model."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "When using the SGDClassifier with loss='squared_loss' and penalty='l2' which of the model given in option are you training?",
+        "options": {
+            "A": "LogisticRegression",
+            "B": "Perceptron",
+            "C": "RidgeClassifier",
+            "D": "Support Vector Machine (SVM)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "What type of classification problem is the Perceptron algorithm best suited for?",
+        "options": {
+            "A": "Linearly separable binary classification problems.",
+            "B": "Non-linear classification problems.",
+            "C": "Regression problems.",
+            "D": "Unsupervised Learning Problems"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "What will be the output of the following code? Given that output of iris.target_names is ['setosa', 'versicolor', 'virginica']\n\npython\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\n\niris = load_iris()\nX = iris.data\ny = iris.target\nX_train, X_test, y_train, y_test = train_test_split(X, y, \n                                                    test_size=0.4, \n                                                    random_state=1)\n\nfrom sklearn.naive_bayes import GaussianNB\ngnb = GaussianNB()\ngnb.fit(X_train, y_train)\ngnb.classes_\n",
+        "question": "What will be the output of the following code? Given that output of iris.target_names is ['setosa', 'versicolor', 'virginica']",
+        "options": {
+            "A": "[0, 1, 2]",
+            "B": "[0, 1]",
+            "C": "['setosa', 'versicolor', 'virginica']",
+            "D": "['setosa', 'versicolor']"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "What is the default loss value in SGDClassifier API and it gives which classifier?",
+        "options": {
+            "A": "'log loss', LogisticRegressor",
+            "B": "'log loss', LogisticClassifier",
+            "C": "'hinge', SVM",
+            "D": "'hinge', Perceptron"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "You are working with a dataset containing 1000 samples, aiming to classify them using the KNeighborsClassifier from scikit-learn. After trying an initial configuration, you observe that the model seems to be overfitting, with the following accuracies:\n\npython\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score\n\n# Initial Configuration\nknn = KNeighborsClassifier(n_neighbors=4)\nknn.fit(X_train, y_train)\ntrain_acc = accuracy_score(y_train, knn.predict(X_train))\nval_acc = accuracy_score(y_val, knn.predict(X_val))\n\n\n- Training accuracy: 98%\n- Validation accuracy: 65%",
+        "question": "After observing such performance of the model, Which of the following values for n_neighbors would be most suitable to try next?",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "10",
+            "D": "500"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Calculate the precision score for the class \"dog\" in the following code:\n\npython\nfrom sklearn.metrics import confusion_matrix\ny_true = [\"dog\", \"cat\", \"dog\", \"dog\", \"cat\", \"mouse\"]\ny_pred = [\"cat\", \"cat\", \"dog\", \"dog\", \"dog\", \"mouse\"]\ncm = confusion_matrix(y_true, y_pred, labels=[\"cat\", \"dog\", \"mouse\"])\n",
+        "question": "Calculate the precision score for the class \"dog\" in the following code:",
+        "options": null,
+        "correctOption": 0.67,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "python\nimport numpy as np\nfrom sklearn.neighbors import KNeighborsClassifier\n\nX_train = np.array([[1,100],[4,400],[5,500],[6,600],[8,800],[9,900],\n                    [11,1100],[12,1200],[15,1500],[18,1800],[19,1900]])\n\ny_train = np.array([0,0,1,1,1,2,2,2,2,2,2])\n\nX_test = np.array([[2,200]])\n\nknn = KNeighborsClassifier(n_neighbors=len(y_train),\n                           metric='euclidean',\n                           weights='uniform')\n\nknn.fit(X_train,y_train)\nprint(knn.predict(X_test))\n",
+        "question": "What will be the output of the following code?",
+        "options": null,
+        "correctOption": 2,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "python\nimport numpy as np\nfrom sklearn.impute import KNNImputer\nX = np.array([[5,6,3],[np.nan,1,5],[0,2,8],[4,4,2]])\nknn = KNNImputer(n_neighbors=2,weights=\"uniform\")\nX_trf= knn.fit_transform(X)\nprint(X_trf[1][0])\n",
+        "question": "What will be the output of the following code?",
+        "options": null,
+        "correctOption": 2,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Fill in the missing parameter value in the following estimator that can be used to classify the data\n\npython\nfrom sklearn.svm import SVC\nclf = SVC(kernel = ______)\nclf.fit(X, y)\n",
+        "question": "Fill in the missing parameter value in the following estimator that can be used to classify the data",
+        "options": {
+            "A": "'poly'",
+            "B": "'lasso'",
+            "C": "'rbf'",
+            "D": "'scale'"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following scikit-learn model supports incremental learning through partial_fit method?",
+        "options": {
+            "A": "SGDClassifier",
+            "B": "LinearRegression",
+            "C": "Perceptron",
+            "D": "SVC"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "May 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following options are true for regularization parameter C in sklearn.svm.SVC ?",
+        "options": {
+            "A": "Large value of the regularization parameter C will overfit the training set and complex decision boundaries will form.",
+            "B": "Large value of the regularization parameter C will underfit the training set and smooth decision boundaries will form.",
+            "C": "Small value of the regularization parameter C will overfit the training set and complex decision boundaries will form.",
+            "D": "Small value of the regularization parameter C will underfit the training set and smooth decision boundaries will form."
+        },
+        "correctOption": [
+            "A",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "You are working with a dataset containing 1000 samples, aiming to classify them using the KNeighborsClassifier from scikit-learn. After trying an initial configuration, you observe that the model seems to be overfitting, with the following accuracies:\n\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score\n\n# Initial Configuration\nknn = KNeighborsClassifier(n_neighbors=3)\nknn.fit(X_train, y_train)\ntrain_acc = accuracy_score(y_train, knn.predict(X_train))\nval_acc = accuracy_score(y_val, knn.predict(X_val))\n\n* Training accuracy: 98%\n* Validation accuracy: 65%",
+        "question": "After observing such performance of the model, Which of the following values for n_neighbors would be more suitable to try next?",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "10",
+            "D": "500"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the following code segment which uses CountVectorizer on a set of documents:\n\nfrom sklearn.feature_extraction.text import CountVectorizer\n\ndocuments = [\n'apple orange banana',\n'apple apple',\n'banana orange',\n'apple banana orange orange'\n]\n\nvectorizer = CountVectorizer()\nX = vectorizer.fit_transform(documents)",
+        "question": "After executing the code, what will be the shape of matrix X?",
+        "options": {
+            "A": "(4, 3)",
+            "B": "(3, 4)",
+            "C": "(4, 4)",
+            "D": "(3, 3)"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Assume train data (X_train, y_train) and test data (X_test) is given as numpy array and you build and train a LogisticRegression model. Which of the following options might possibly be the predicted class of first two samples(rows) of the test data according to the code given below?\n\n>>> from sklearn.linear_model import LogisticRegression\n>>> log_reg = LogisticRegression()\n>>> log_reg.fit(X_train,y_train)\n\n>> print(log_reg.classes_)\n[0,1,2] #output of above code\n\n>>> print(log_reg.predict_proba(X_test[[0]]))\n[[2.73e-45, 1.21e-51, 1.00e+00]] #output of above code\n\n>>> print(log_reg.predict_proba(X_test[[1]]))\n[[7.09e-29, 1.00e+00, 2.02e-36]] #output of above code\n\n>>> print(log_reg.predict(X_test[0:2]))",
+        "question": "Which of the following options might possibly be the predicted class of first two samples(rows) of the test data according to the code given below?",
+        "options": {
+            "A": "[2.73, 1.00]",
+            "B": "[True, False]",
+            "C": "[2, 1]",
+            "D": "cannot be found"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the block of code given below:\n\nfrom sklearn.metrics import confusion_matrix\ny_true = [\"cat\", \"ant\", \"cat\", \"cat\", \"ant\", \"bird\"]\ny_pred = [\"ant\", \"ant\", \"cat\", \"cat\", \"ant\", \"cat\"]\ncm = confusion_matrix(y_true, y_pred, labels=[\"ant\", \"bird\", \"cat\"])\nprint(cm)",
+        "question": "Which of the following option represents the print output :",
+        "options": {
+            "A": "[[2, 0, 0],\n [0, 0, 1],\n [1, 0, 2]]",
+            "B": "[[1, 0, 2],\n [2, 0, 0],\n [0, 0, 1]]",
+            "C": "[[1, 0, 2],\n [0, 0, 1],\n [2, 0, 0]]",
+            "D": "[[2, 0, 0],\n [1, 0, 2]]"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "data = [[1, 3],\n [2, 4],\n [3, 5]]\nfrom sklearn.preprocessing import PolynomialFeatures\npf = PolynomialFeatures(degree=3,interaction_only=True)\nprint(pf.fit_transform(data))",
+        "question": "Choose the correct output of the following code?",
+        "options": {
+            "A": "[[1, 2, 3, 2],\n [1, 2, 4, 6, 8],\n [1, 2, 5, 10, 12]]",
+            "B": "[[1, 1, 3, 3],\n [1, 2, 4, 8],\n [1, 3, 5, 15]]",
+            "C": "[[1, 1, 3, 1, 3, 9, 1, 3, 9, 27],\n [1, 2, 4, 4, 8, 16, 8, 16, 32, 64],\n [1, 3, 5, 9, 15, 25, 27, 45, 75, 125]]",
+            "D": "[[1, 1, 2, 2, 3, 3, 4, 4],\n [1, 1, 4, 4, 9, 9, 16, 16],\n [1, 1, 9, 9, 27, 27, 64, 64]]"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "from sklearn.linear_model import LogisticRegression\nlogreg = LogisticRegression()\nlogreg.fit(X,y)\n\nwhere X and y are the training data.",
+        "question": "What will following code implement?",
+        "options": {
+            "A": "It will perform regression on the given data.",
+            "B": "It will generate synthetic regression data.",
+            "C": "It will perform classification on the given data.",
+            "D": "It will generate synthetic classification data."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which method of classification needs more than n classifiers, where n is the number of classes?",
+        "options": {
+            "A": "OneVsRestClassifier",
+            "B": "OneVsOneClassifier",
+            "C": "OutputCodeClassifier",
+            "D": "MultiOutputClassifier"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider following code snippet:\n\nestimator = RidgeClassifier(normalize=False, _______='auto')\npipe_ridge = make_pipeline(MinMaxScaler(),estimator)\npipe_ridge.fit(x,y)",
+        "question": "If we want to apply the ridge classifier on X and choose the appropriate algorithm to train on the data, what will be the missing attribute?",
+        "options": {
+            "A": "alpha",
+            "B": "tol",
+            "C": "solver",
+            "D": "learner",
+            "E": "algo",
+            "F": "algorithm"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following code?\n\nfrom sklearn.neighbors import KNeighborsClassifier\nimport numpy as np\n\nX_train = np.array([[1, 0.5], [2, 1], [3, 1.5], [4, 2], [5, 2.5], [6, 3], [7, 3.5], [8, 4], [9, 4.5], [10, 5]])\n\ny_train = [0, 0, 1, 1, 2, 2, 2, 2, 2, 2]\n\nknn = KNeighborsClassifier(n_neighbors=7)\nknn.fit(X_train, y_train)\n\nGiven a single test data point X_test, what will be the output of the following code?\n\nprint(knn.predict(X_test))",
+        "question": "Given a single test data point X_test, what will be the output of the following code?\n\nprint(knn.predict(X_test))",
+        "options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "Can not be determined without knowing the test data point."
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following statements accurately describes the difference between SVC and LinearSVC in scikit-learn?",
+        "options": {
+            "A": "SVC supports only non-linear kernels while LinearSVC supports only linear kernels.",
+            "B": "LinearSVC is designed specifically for linear SVM problems and does not support the use of kernels, while SVC supports both linear and non-linear kernel functions.",
+            "C": "Both SVC and LinearSVC are optimized for non-linear problems and make use of kernel functions.",
+            "D": "LinearSVC is a regression model while SVC is a classification model."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following classifier and select the correct option.\nestimator = SGDClassifier(loss='log', penalty='l2', max_iter=1, warm_start=True, alpha=0.01, learning_rate='constant', random_state=1729)",
+        "question": "Consider the following classifier and select the correct option.",
+        "options": {
+            "A": "It applies the perceptron classification with regularization.",
+            "B": "It applies the perceptron classification without regularization.",
+            "C": "It applies the logistic regression with regularization.",
+            "D": "It applies the logistic regression without regularization."
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider below code for a given training data:\n\nfrom sklearn.model_selection import RandomizedSearchCV\nfrom sklearn.ensemble import RandomForestClassifier\n\nparam_distributions = {\n    \"n_estimators\": range(3,100,2),\n    \"max_depth\": range(3,40,2),\n    \"min_samples_split\": [3,4,5,6,7]}\n\nRS_CV = RandomizedSearchCV(estimator=RandomForestClassifier(random_state=0),\n                           param_distributions=param_distributions,\n                           cv=3,\n                           n_iter=12)\n\nRS_CV.fit(X_train,y_train)",
+        "question": "Which of the following option(s) are True ?",
+        "options": {
+            "A": "A total of 12 estimators will be trained, with each estimator using 3-fold crossvalidation",
+            "B": "The parameter combination will be the same in every run because random_state is set to 0.",
+            "C": "Given code will throw an error because all the parameters are not presented as a list",
+            "D": "All of the options are incorrect"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "According to DecisionTreeClassifier parameters which of the following option will have least fitting(underfit) for the same data.",
+        "options": {
+            "A": "DecisionTreeClassifier(max_depth = None, min_samples_split= 20, min_samples_leaf = 10)",
+            "B": "DecisionTreeClassifier(max_depth = 20, min_samples_split= 15, min_samples_leaf = 8)",
+            "C": "DecisionTreeClassifier(max_depth = 2, min_samples_split= 30, min_samples_leaf = 15)",
+            "D": "DecisionTreeClassifier(max_depth = 5, min_samples_split= 18, min_samples_leaf = 12)"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": null,
+        "question": "For the given X_train (in pandas DataFrame) below which of the following options can successfully impute the null values ?",
+        "options": {
+            "A": "from sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\npipe = Pipeline([\n    (\"weight_si\", SimpleImputer(strategy=\"median\")),\n    (\"education_si\", SimpleImputer(strategy=\"most_frequent\"))\n])\nX_train = pipe.fit_transform(X_train)",
+            "B": "from sklearn.pipeline import FeatureUnion\nfrom sklearn.impute import SimpleImputer\nunion = FeatureUnion([\n    (\"weight_si\", SimpleImputer(strategy=\"median\")),\n    (\"education_si\", SimpleImputer(strategy=\"most_frequent\"))\n])\nX_train = union.fit_transform(X_train)",
+            "C": "from sklearn.impute import SimpleImputer\nweight_si = SimpleImputer(strategy=\"median\")\nX_train['Weight'] = weight_si.fit_transform(X_train[['Weight']])\neducation_si = SimpleImputer(strategy=\"most_frequent\")\nX_train['Education'] = education_si.fit_transform(X_train[['Education']])",
+            "D": "from sklearn.compose import ColumnTransformer\nfrom sklearn.impute import SimpleImputer\nct = ColumnTransformer(transformers=[\n    (\"weight_si\", SimpleImputer(strategy=\"median\"), [\"Weight\"]),\n    (\"education_si\", SimpleImputer(strategy=\"most_frequent\"), [\"Education\"])\n])\nX_train = ct.fit_transform(X_train)"
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764183388/sept2023-1_pselvy.png"
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "Which of the following is/are true about DummyClassifier?",
+        "options": {
+            "A": "DummyClassifier makes predictions that ignore the input features.",
+            "B": "DummyClassifier serves as a simple baseline to compare against other more complex classifiers.",
+            "C": "The predictions of DummyClassifier typically depend on values observed in the y parameter passed to fit().",
+            "D": "The predictions of DummyClassifier typically depend on values observed in the X parameter passed to fit().",
+            "E": "All of these."
+        },
+        "correctOption": [
+            "A",
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which solver in LogisticRegression() is a better choice for a large dataset?",
+        "options": {
+            "A": "sag",
+            "B": "saga",
+            "C": "lbfgs",
+            "D": "liblinear"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "You are analyzing a dataset with features X_train and targets y_train. After standardizing the feature set, you decide to apply the KNeighborsClassifier from scikit-learn to classify data points. You use the following code:\n\nfrom sklearn.neighbors import KNeighborsClassifier\n\nmodel = KNeighborsClassifier(n_neighbors=5, weights='distance', metric='minkowski', p=1)\n\nmodel.fit(X_train, y_train)",
+        "question": "Given the above code configuration for KNeighborsClassifier, which of the following statements are true? (Select all that apply)",
+        "options": {
+            "A": "The classifier is using the Euclidean distance metric.",
+            "B": "Outliers will have a stronger influence on predictions.",
+            "C": "The classifier is using the Manhattan distance metric and will calculate distance as the sum of absolute differences for each feature.",
+            "D": "When weights is set to distance, points closer to the decision boundary will have a stronger influence on predictions than those farther away."
+        },
+        "correctOption": [
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following Python code where you are using the SVC classifier to categorize data from a binary classification problem:\n\nfrom sklearn.svm import SVC\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import make_pipeline\n\nclf = make_pipeline(StandardScaler(), SVC(C=1.0, kernel='rbf', gamma='scale'))\n\nclf.fit(X_train, y_train)\nprediction = clf.predict(X_test)\n\nAssume that X_train, y_train, and X_test are training feature matrix, label vector, and test feature matrix, respectively.",
+        "question": "Which of the following statements is/are true using the code given above?",
+        "options": {
+            "A": "The model doesn't need scaling because SVMs are not sensitive to feature scales.",
+            "B": "Using a pipeline that incorporates StandardScaler before SVC. This ensures that each feature is scaled before fitting the model.",
+            "C": "The C parameter controls the trade-off between achieving a low error on the training data and maximizing the margin.",
+            "D": "The model is using a linear kernel due to the nature of the dataset."
+        },
+        "correctOption": [
+            "B",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "Which of the following are advantages of using ensemble methods in machine learning?",
+        "options": {
+            "A": "Improved model performance",
+            "B": "Reduced overfitting",
+            "C": "Faster model training",
+            "D": "Simplicity of model interpretation"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "Which of the following option(s) are True ?",
+        "options": {
+            "A": "ccp_alpha parameter helps in post-prunning and hence classifier will prioritize it more than pre-prunning parameters.",
+            "B": "In DecisionTreeClassifier if a sample (data point) meets the condition at the parent node (i.e., if it satisfies the split criteria), it goes to the left child node; Otherwise, it goes to the right child node.",
+            "C": "RandomForestClassifier is better than DecisionTreeClassifier because it's Loss function converges much faster while optimizing through gradient descent.",
+            "D": "In DecisionTreeClassifier there is no predefined priority in parameters. The tree will stop growing as soon as the first parameter condition is met."
+        },
+        "correctOption": [
+            "B",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Decision Trees & Ensemble Methods (Random Forest, Boosting)",
+        "context": null,
+        "question": "Suppose in a classification problem you want to use BaggingClassifier, which of the following estimator(s) could be used as base estimator in that?",
+        "options": {
+            "A": "tree.DecisionTreeClassifier()",
+            "B": "svm.SVC()",
+            "C": "linear_model.Perceptron()",
+            "D": "cluster.KMeans()",
+            "E": "impute.KNNImputer()"
+        },
+        "correctOption": [
+            "A",
+            "C"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider given below confusion matrix code :\n\nfrom sklearn.metrics import confusion_matrix\ny_true = [\"cat\", \"ant\", \"cat\", \"cat\", \"ant\", \"bird\"]\ny_pred = [\"ant\", \"ant\", \"cat\", \"cat\", \"ant\", \"cat\"]\ncm = confusion_matrix(y_true, y_pred, labels=[\"ant\", \"bird\", \"cat\"])",
+        "question": "Determine the recall score for class \u201cant\u201d in the given confusion_matrix?",
+        "options": null,
+        "correctOption": 1,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2023",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.preprocessing import MaxAbsScaler\na = [[-3], [0], [-2], [2], [-1], [-4]]\nmas = MaxAbsScaler()\nscaled_a = mas.fit_transform(a)\nprint(scaled_a.max())",
+        "question": "What will be the output of the following code:",
+        "options": null,
+        "correctOption": 0.5,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code for Ridge Regression:\nfrom sklearn.linear_model import Ridge\nimport numpy as np\n\nX = np.array([[1, 2], [2, 4], [3, 6], [4, 8]])\ny = np.array([1, 2, 3, 4])\n\nmodel = Ridge(alpha=10)\nmodel.fit(X, y)\ncoefficients = model.coef_\nprint(np.round(coefficients,2))",
+        "question": "What will be the output for the coefficients?",
+        "options": {
+            "A": "[0, 0.5]",
+            "B": "[0.2, 0.4]",
+            "C": "[0.25, 0.25]",
+            "D": "[0.5, 1.0]",
+            "E": "[0.14, 0.29]"
+        },
+        "correctOption": "E",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following code for Stochastic Gradient Descent (SGD) Classifier:\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.datasets import make_classification\n\nX_train, y_train = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)\nmodel = SGDClassifier(penalty='elasticnet', l1_ratio=0.5, alpha=0.01)\nmodel.fit(X_train, y_train)",
+        "question": "What is the significance of l1_ratio=0.5 in this context?",
+        "options": {
+            "A": "It assigns equal weightage to L1 and L2 regularizations.",
+            "B": "It applies only L2 regularization.",
+            "C": "It applies only L1 regularization.",
+            "D": "It disables regularization completely."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Given the following code for Polynomial Regression:\nfrom sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\n\nX = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)\ny = np.array([1, 4, 9, 16, 25])\n\npoly = PolynomialFeatures(degree=2, interaction_only=False)\nX_poly = poly.fit_transform(X)\nmodel = LinearRegression()\nmodel.fit(X_poly, y)\n\ny_pred = model.predict(X_poly)\nprint(y_pred)",
+        "question": "What will be the output of the code?",
+        "options": {
+            "A": "[1, 4, 9, 16, 25]",
+            "B": "[0, 0, 0, 0, 0]",
+            "C": "[1, 2, 3, 4, 5]",
+            "D": "[1, 3, 5, 7, 9]"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the following code implementation that utilizes sklearn to set up a machine learning model with preprocessing:\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.svm import SVC\nfrom sklearn.model_selection import GridSearchCV\n\npipeline = Pipeline([('scaler', StandardScaler()),\n                     ('classifier', SVC())])\n\nparam_grid = {'scaler__with_mean': [True, False],\n              'classifier__C': [0.1, 1, 10],\n              'classifier__kernel': ['linear', 'rbf'],\n              'classifier__gamma': [0.1, 1, 10]}\n\ngrid_search = GridSearchCV(estimator=pipeline,\n                         param_grid=param_grid,\n                         cv=5,\n                         scoring='accuracy',\n                         verbose=2)\n\ngrid_search.fit(X_train, y_train)",
+        "question": "Which of the following statements correctly describes the effect of setting scaler__with_mean=False?",
+        "options": {
+            "A": "The data will be standardized without centering, preserving the mean of the dataset.",
+            "B": "The data will be centered but not scaled, leading to variance issues.",
+            "C": "The parameter has no effect; the data will always be centered regardless of this setting.",
+            "D": "The scaling operation will be disabled entirely, leaving the data unchanged."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "Consider the following code snippet:\nfrom sklearn.utils.multiclass import type_of_target\nimport numpy as np\nprint(type_of_target(np.array([1, 0, 0, 1])))\nprint(type_of_target(np.array([[1, 2], [3, 4]])))\nprint(type_of_target([1.0, 2.7, 3.1]))",
+        "question": "What will be the output of the above code snippet in the correct sequence?",
+        "options": {
+            "A": "'binary', 'multilabel-indicator', 'continuous'",
+            "B": "'binary', 'multiclass-multioutput', 'continuous'",
+            "C": "'binary', 'multilabel-multioutput', 'multiclass'",
+            "D": "'multiclass', 'multilabel-indicator', 'continuous'"
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "Consider the following code:\nfrom sklearn.datasets import make_classification\nfrom sklearn.linear_model import Perceptron\n\nX_train, y_train = make_classification(n_samples=1000, n_features=5, n_classes=2, random_state=42)\n\nclf = Perceptron(max_iter=50, warm_start=True, random_state=42)\nclf.fit(X_train, y_train)",
+        "question": "What will be the behavior of the code?",
+        "options": {
+            "A": "The model will reset its parameters after each fit() call.",
+            "B": "The model will retain the parameters from the first training session and continue training in the second session.",
+            "C": "The model will throw an error because warm_start=True is not valid for Perceptron.",
+            "D": "The warm_start=True parameter has no effect in this case."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following code snippet:\nfrom sklearn.metrics import precision_score\ny_true = [0, 1, 1, 0, 1]\ny_pred = [1, 1, 0, 0, 1]\nprecision_score(y_true, y_pred)",
+        "question": "What will be the output?",
+        "options": {
+            "A": "0.75",
+            "B": "0.80",
+            "C": "0.50",
+            "D": "0.67"
+        },
+        "correctOption": "D",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "When using the SGDClassifier with loss='squared_error' and penalty='l2', which type of model are you training?",
+        "options": {
+            "A": "LogisticRegression",
+            "B": "Perceptron",
+            "C": "RidgeClassifier",
+            "D": "Support Vector Machine (SVM)",
+            "E": "LassoClassifer"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "You are working on a classification project using the Wine dataset. After fitting a Gaussian Naive Bayes model, you want to assess the probability of each class for the test samples.\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.naive_bayes import GaussianNB\n\nwine = load_wine()\nX = wine.data\ny = wine.target\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\ngnb = GaussianNB()\ngnb.fit(X_train, y_train)",
+        "question": "Which of the following methods will correctly return the class probabilities for the test samples after fitting the Gaussian Naive Bayes model?",
+        "options": {
+            "A": "Using gnb.predict(X_test) to obtain class labels and infer probabilities from them.",
+            "B": "Calling gnb.predict_proba(X_test) to directly get the probabilities of each class for the test samples.",
+            "C": "Manually calculating probabilities based on the predictions obtained from gnb.predict(X_test).",
+            "D": "Using gnb.score(X_test, y_test) to determine the probability of the predicted classes."
+        },
+        "correctOption": "B",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": null,
+        "question": "You are working with a multi-class classification problem using a One-vs-Rest strategy with Support Vector Machines (SVM) in sklearn.svm.SVC. What happens to the decision boundaries as the regularization parameter C increases?",
+        "options": {
+            "A": "The boundaries become more complex and tightly fitted to the training data.",
+            "B": "The boundaries become more regular and smooth.",
+            "C": "Decision boundaries are unaffected by C.",
+            "D": "The number of support vectors decreases."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.metrics import r2_score\ny_true = [3, -0.5, 2, 7]\ny_pred = [2.5, 0.0, 2, 8]\nprint(r2_score(y_true, y_pred))",
+        "question": "What will be the output of the following code when calculating the r2_score?",
+        "options": {
+            "A": "0.99",
+            "B": "0.87",
+            "C": "0.95",
+            "D": "0.80"
+        },
+        "correctOption": "C",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "from sklearn.svm import SVC\nX = [[-1,-1], [1, 1], [0.5,-1.5], [1,0], [0,-1], [0, 0]]\ny = [0, 1, 0, 1, 0, 0]\nclf = SVC(kernel='linear')\nclf.fit(X, y)\nprint(clf.predict([[1.5, 1]]))",
+        "question": "What will be the result of the following code when predicting the output using SVC?",
+        "options": {
+            "A": "[1]",
+            "B": "[0]",
+            "C": "[0, 1]",
+            "D": "[None of these.]"
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "What is the use of the parameter tol in SGDClassifier?",
+        "options": {
+            "A": "It defines the tolerance for stopping criteria.",
+            "B": "It defines the learning rate schedule.",
+            "C": "It controls regularization strength.",
+            "D": "It controls the number of iterations."
+        },
+        "correctOption": "A",
+        "questionType": "single",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": null,
+        "question": "Which of the following are valid kernels that can be used in the SVC estimator?",
+        "options": {
+            "A": "'linear'",
+            "B": "'quadratic'",
+            "C": "'rbf'",
+            "D": "'sigmoid'"
+        },
+        "correctOption": [
+            "A",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "You are a data scientist working on a binary classification problem to predict whether customers will buy a product based on various features such as age, income, and browsing history. You decide to use LogisticRegression from scikit-learn for this task. After some experimentation, you notice that the model is overfitting the training data, resulting in poor performance on the validation set.\n\nfrom sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression(penalty='...', C=...)",
+        "question": "Which of the following actions should you take to mitigate overfitting in your Logistic Regression model?",
+        "options": {
+            "A": "Increase the value of C.",
+            "B": "Use a regularization method by setting the penalty to 'l2' and decreasing C.",
+            "C": "Use feature selection techniques to remove irrelevant or redundant features from the dataset.",
+            "D": "Increase the size of the training dataset by collecting more data."
+        },
+        "correctOption": [
+            "B",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "Consider the following RidgeClassifier implementation in Python:\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import MinMaxScaler\nfrom sklearn.linear_model import RidgeClassifier\n\nX = [[1, 2], [2, 3], [3, 4]]\ny = [0, 1, 0]\n\npipeline = make_pipeline(MinMaxScaler(), RidgeClassifier(alpha=1.0, fit_intercept=True))\npipeline.fit(X, y)",
+        "question": "Which of the following statements are correct? (Select all that apply)",
+        "options": {
+            "A": "The RidgeClassifier uses L2 regularization to prevent overfitting.",
+            "B": "The fit_intercept parameter being True indicates that the model will not include an intercept term.",
+            "C": "The pipeline will scale the features before training the RidgeClassifier.",
+            "D": "The alpha parameter controls the strength of the regularization applied by the RidgeClassifier."
+        },
+        "correctOption": [
+            "A",
+            "C",
+            "D"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "You are working on a machine learning project involving a large dataset containing millions of records for binary classification. After preprocessing the data, you need to select an appropriate solver for the LogisticRegression() model in scikit-learn.",
+        "question": "Given the size of the dataset and the requirement for efficiency, which of the following solvers are the most suitable choices for handling large datasets? (Select all that apply.)",
+        "options": {
+            "A": "sag",
+            "B": "saga",
+            "C": "lbfgs",
+            "D": "liblinear"
+        },
+        "correctOption": [
+            "A",
+            "B"
+        ],
+        "questionType": "multiple",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Model Evaluation, Tuning & Regularization",
+        "context": "from sklearn.metrics import mean_squared_error\ny_true = [1.2, 2.4, 3.5, 4.6]\ny_pred = [1.0, 2.5, 3.6, 4.5]\nprint(mean_squared_error(y_true, y_pred))",
+        "question": "What will be the output of the following code using mean_squared_error?",
+        "options": null,
+        "correctOption": {
+            "min": 0.012,
+            "max": 0.022
+        },
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Supervised Learning Algorithms (SVM, KNN, Naive Bayes, SGD)",
+        "context": "import numpy as np\nfrom sklearn.neighbors import KNeighborsRegressor\nX_train = np.array([[1, 100], [4, 400], [5, 500], [6, 600], [8, 800], [9, 900], [11, 1100], [12, 1200], [15, 1500], [18, 1800], [19, 1900]])\ny_train = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110])\nX_test = np.array([[2, 200]])\nknn = KNeighborsRegressor(n_neighbors=len(y_train), metric='euclidean', weights='uniform')\nknn.fit(X_train, y_train)\nprint(knn.predict(X_test))",
+        "question": "What will be the output of the following code?",
+        "options": null,
+        "correctOption": 60,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "from sklearn.feature_extraction.text import CountVectorizer\n\ndocuments = [\n    \"The quick brown fox\",\n    \"jumps over the lazy dog\"\n]\n\nvectorizer = CountVectorizer(ngram_range=(2, 2))\nX = vectorizer.fit_transform(documents)\nbigrams = vectorizer.vocabulary_\nprint(f\"Number of bigrams: {len(bigrams)}\")",
+        "question": "In the following code snippet, how many bigrams will be generated when using CountVectorizer with ngram_range=(2, 2)?",
+        "options": null,
+        "correctOption": 7,
+        "questionType": "numerical",
+        "image": null
+    },
+    {
+        "subject": "MLP",
+        "exam": "quiz2",
+        "term": "Sept 2024",
+        "topic": "Data Preprocessing & Pandas Operations",
+        "context": "import numpy as np\nfrom sklearn.impute import KNNImputer\nX = np.array([[3, 6, 5], [7, np.nan, 2], [2, 4, 8], [9, 1, 3]])\nknn = KNNImputer(n_neighbors=2, weights=\"uniform\")\nX_trf = knn.fit_transform(X)\nprint(X_trf[1][1])",
+        "question": "What will be the output of the following code?",
+        "options": null,
+        "correctOption": 3.5,
+        "questionType": "numerical",
+        "image": null
+    }
+]

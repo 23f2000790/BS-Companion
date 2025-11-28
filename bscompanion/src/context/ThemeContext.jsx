@@ -73,7 +73,6 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     const selectedTrack = musicTracks.find(t => t.id === (quizPrefs.selectedMusicTrack || 'lofi'));
     if (selectedTrack && !audio.src) {
-      console.log('Initializing audio with track:', selectedTrack.name);
       audio.src = selectedTrack.url;
       audio.load();
     }
@@ -152,18 +151,14 @@ export const ThemeProvider = ({ children }) => {
     audio.loop = true;
     audio.volume = 0.3; // Low volume for background
 
-    console.log('Music enabled:', musicEnabled);
-    console.log('Current audio src:', audio.src);
 
     // Restore playback position from localStorage
     const savedPosition = localStorage.getItem('app-music-position');
     if (savedPosition && musicEnabled) {
       audio.currentTime = parseFloat(savedPosition);
-      console.log('Restored playback position:', savedPosition);
     }
 
     if (musicEnabled) {
-      console.log('Attempting to play music...');
       
       // Try to play immediately
       const playPromise = audio.play();

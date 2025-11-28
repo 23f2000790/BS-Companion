@@ -461,7 +461,7 @@ const MagicBento = ({
       isButton: true, // Special flag for button-style card
     },
     {
-      label: "Study Guide Library",
+      label: "Library",
       title: "Your Study Guides",
       description: "Access all your generated guides",
       image: paperImg,

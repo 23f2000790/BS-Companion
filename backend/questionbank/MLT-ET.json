@@ -1,0 +1,2602 @@
+[
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "A kernel k is defined as\nk: ℝ² × ℝ² → ℝ\nk([x₁, x₂]ᵀ, [y₁, y₂]ᵀ) = 1 + x₁y₁ + x₁²y₁² + x₂²y₂²\nWhich of the following transformation mappings corresponds to this kernel function?",
+    "options": {
+      "A": "ϕ([x₁, x₂]ᵀ) = [1, x₁² + x₂²]ᵀ",
+      "B": "ϕ([x₁, x₂]ᵀ) = [1, x₁ + x₁² + x₂²]ᵀ",
+      "C": "ϕ([x₁, x₂]ᵀ) = [1, x₁², x₂²]ᵀ",
+      "D": "ϕ([x₁, x₂]ᵀ) = [1, x₁, x₁², x₂²]ᵀ"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a Bayesian estimation problem for a dataset of six observations, where each observation is either one or zero. The prior (green) and posterior (blue) distributions are shown below. Recall that both are Beta distributions in this case. p denotes the parameter and f(p) denotes its pdf. Also recall that the observations are sampled from a Bernoulli distribution with parameter p.",
+    "question": "What can you say about the number of ones in the dataset? Choose the most appropriate option.",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "5"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257928/jan23-1_yqxqre.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "In LASSO, a higher value of the regularization parameter λ leads to more sparse weights.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Consider a decision stump. The information gain for the question at the parent is zero. If the entropy of the left-child is equal to the entropy of the parent, what is the entropy of the right child? Assume that each child has at least one data-point in it and that the entropy of the parent is non-zero.",
+    "options": {
+      "A": "The entropy of the right-child is equal to half the entropy of the left-child.",
+      "B": "The entropy of the right-child is equal to twice the entropy of the left-child.",
+      "C": "The entropy of the right-child is equal to the entropy of the parent.",
+      "D": "The entropy of the right-child is the sum of the entropies of the parent and the left-child."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following training dataset for a binary classification problem in ℝ².\n------------------------------\nx₁     x₂       y\n------------------------------\n 2     -1      -1\n 2      1      -1\n-6      0      -1\n 6      0       1\n-3      1       1\n-3     -1       1\n------------------------------",
+    "question": "If we try to learn a perceptron model for this dataset, will the algorithm ever converge to a weight vector? Select the most appropriate answer with the information available to you.",
+    "options": {
+      "A": "Yes, it will certainly converge to a weight vector.",
+      "B": "No, it will never converge."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a linearly separable binary classification problem. The training dataset is shown below. The symbol + corresponds to label 1 and − corresponds to label −1.",
+    "question": "Is w the optimal weight vector corresponding to a hard-margin, linear-SVM?",
+    "options": {
+      "A": "w shown in this diagram is the optimal weight vector for a hard-margin, linear-SVM",
+      "B": "w shown in this diagram is not the optimal weight vector for a hard-margin, linear-SVM"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257931/jan23-2_sqcl3u.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "A hard-margin, linear-SVM has been trained on a linearly separable training dataset in a binary classification problem. The optimal weight vector is w*. A test-data point x_test is taken up for prediction:\n\nw* = [1, -2, 0, 1]ᵀ, x_test = [0.5, 0, 0, 0.1]ᵀ",
+    "question": "What is the predicted label for this test point?",
+    "options": {
+      "A": "1",
+      "B": "-1",
+      "C": "Since 0 < w*ᵀ x_test < 1, this point violates the primal constraint and therefore cannot be classified.",
+      "D": "Since -1 < w*ᵀ x_test < 0, this point violates the primal constraint and therefore cannot be classified."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a hard-margin, linear-SVM trained for a linearly separable dataset in a binary classification problem in ℝ⁷. The training dataset has 5 points. If the optimal weight vector is some non-zero vector in ℝ⁷, which of the following could be the optimal α*, the optimal dual solution? Select the most appropriate answer.",
+    "options": {
+      "A": "[1, -1, 0, 0, 1]ᵀ",
+      "B": "[1, 2, 0, 0, 1, 3, 0]ᵀ",
+      "C": "[1, 1, 0, 0, 0]ᵀ",
+      "D": "[0, 0, 0, 0, 0]ᵀ"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider a linear regression model that was trained on dataset X of shape (d, n). Which of the following techniques could potentially decrease the loss on the training data (assuming the loss is the squared error)?",
+    "options": {
+      "A": "Adding a dummy feature in the dataset and learning the intercept w₀ as well.",
+      "B": "Penalizing the model weights with L2 regularization.",
+      "C": "Penalizing the model weights with L1 regularization.",
+      "D": "Training the kernel regression model of degree 2."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "The weight vector for two consecutive iterations of a perceptron model are given below:\nwₜ = [1, 3, -1]ᵀ, wₜ₊₁ = [0, 2, 1]ᵀ",
+    "question": "Select all possible data-points that could have been used for the update from wₜ to wₜ₊₁. The first entry in each option is the data-point, the second entry is its true label.",
+    "options": {
+      "A": "[-1, 1, 2]ᵀ, 1",
+      "B": "[1, 1, -2]ᵀ, -1",
+      "C": "[-1, 1, 2]ᵀ, -1",
+      "D": "[1, 1, -2]ᵀ, 1"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Let L be the set of loss functions:\nL = {Hinge loss, Logistic loss, Squared loss, 0-1 loss}",
+    "question": "All the loss functions mentioned are evaluated for a single data-point (x, y) and weight vector w. Select all true statements.",
+    "options": {
+      "A": "The hinge loss is always greater than the logistic loss.",
+      "B": "If (wᵀx)y = 1, then the logistic loss is greater than the following losses: squared loss, hinge loss, 0-1 loss",
+      "C": "The 0-1 loss is convex",
+      "D": "The squared loss has the maximum value among all the loss functions in L when (wᵀx)y is a very large number."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a supervised ML problem that has a training dataset and a validation dataset. A ML model is being trained on the training dataset using gradient descent and its performance is monitored on the validation dataset. The loss function L(t) at time step t is plotted against t.",
+    "question": "One of these curves corresponds to the model's loss on the training dataset and the other corresponds to the model's loss on the validation dataset. Identify the two curves. Consider a general scenario and not an extreme instance while answering this problem. Exactly two options are correct.",
+    "options": {
+      "A": "(1) is the loss on the validation dataset",
+      "B": "(2) is the loss on the training dataset",
+      "C": "(1) is the loss on the training dataset",
+      "D": "(2) is the loss on the validation dataset"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257932/jan23-3_ugouws.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let w*, ξ* be the optimal primal solutions, and α*, β* be the optimal dual solutions of the soft-margin SVM problem. If αᵢ* = 0, select the correct options.",
+    "options": {
+      "A": "The bribe paid by the iᵗʰ data point is equal to C.",
+      "B": "The bribe paid by the iᵗʰ data point is equal to 0.",
+      "C": "iᵗʰ data point lies on the supporting hyper-planes.",
+      "D": "w* classifies the iᵗʰ data point correctly."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Choose the correct statements.",
+    "options": {
+      "A": "If the performance of each estimator in the bagging algorithm is almost identical, the benefit of using bagging to combine them may be minimal or insignificant.",
+      "B": "Weak learners have low bias and high variance.",
+      "C": "In random forests, multiple decision trees (estimators) are trained simultaneously, allowing for parallel processing and faster model training.",
+      "D": "In the random forest algorithm, multiple decision trees are trained on the same dataset to create an ensemble model."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Standard-PCA was applied on a centered dataset in ℝ⁶. All the eigenvalues of the covariance matrix of this centered dataset are given below in decreasing order with λ > 1:\nλ₅, λ₄, λ₃, λ₂, λ, 1\nIf the sum of the variances along the first three principal components is exactly 88.88% of the total variance, what is the value of λ? Enter the nearest integer as your answer. Note that the total variance is the sum of the variances along each principal component.\nHint: λ² + λ + 1",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the K-means algorithm was run on the following two-dimensional dataset with K = 3. The initial cluster centroids are points A, B, and D as shown in the figure.",
+    "question": "How many cluster centroids in the final clusters will be the same as the initial cluster centroids? Use Euclidean distance to calculate the distance.",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257932/jan23-4_pliszr.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a logistic regression model that has been trained for a binary classification problem on a dataset in ℝ². Consider two data-points from the training set: (X₁, y₁) and (X₂, y₂). The model's weight vector and these two data-points (along with their labels) are drawn in the diagram given below. The symbol + corresponds to label 1 and − corresponds to label 0.",
+    "question": "refer the image.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257933/jan23-5_uadftl.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following architecture for a neural network:\n---------------------------------------\nLayer              Neurons\n---------------------------------------\nInput                 5\nHidden Layer-1       30\nHidden Layer-2       10\nOutput Layer          1\n---------------------------------------",
+    "question": "How many weights does this network have? Assume that there is no bias associated with any neuron.",
+    "options": null,
+    "correctOption": 460,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "The Gaussian Naive Bayes algorithm was run on the following dataset:\n-------------------------------------------------------\nfeature 1 (f₁)    feature 2 (f₂)    Label\n-------------------------------------------------------\n1.5                 1.6               1\n2.2                 2.4               1\n2.9                 1.5               0\n1.7                 0.8               1\n-------------------------------------------------------\nBased on the above data, answer the given subquestions.",
+    "question": "What will be the value of p̂? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.74,
+      "max": 0.76
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "The Gaussian Naive Bayes algorithm was run on the following dataset:\n-------------------------------------------------------\nfeature 1 (f₁)    feature 2 (f₂)    Label\n-------------------------------------------------------\n1.5                 1.6               1\n2.2                 2.4               1\n2.9                 1.5               0\n1.7                 0.8               1\n-------------------------------------------------------\nBased on the above data, answer the given subquestions.",
+    "question": "What will be the value of μ̂₀?",
+    "options": {
+      "A": "2.9",
+      "B": "2.2",
+      "C": "(1.8,1.6)",
+      "D": "(2.9,1.5)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "The Gaussian Naive Bayes algorithm was run on the following dataset:\n-------------------------------------------------------\nfeature 1 (f₁)    feature 2 (f₂)    Label\n-------------------------------------------------------\n1.5                 1.6               1\n2.2                 2.4               1\n2.9                 1.5               0\n1.7                 0.8               1\n-------------------------------------------------------\nBased on the above data, answer the given subquestions.",
+    "question": "What will be the value of μ̂₁?",
+    "options": {
+      "A": "2.9",
+      "B": "1.8",
+      "C": "(1.8,1.6)",
+      "D": "(2.9,1.5)"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider the following two-dimensional dataset with two classes: +1 for blue points and −1 for red points. An AdaBoost algorithm was run on this dataset using decision stumps as weak learners.\n\nWhen training the new weak learner hₜ(x) (decision stump at tᵗʰ iteration), we choose the split that minimizes the weighted misclassification error with respect to current weights Dₜ i.e. choose hₜ that minimizes Σᵢ Dₜ(i) * 1(hₜ(xᵢ) ≠ yᵢ).",
+    "question": "What will be the misclassification error incurred by the first decision stump?",
+    "options": null,
+    "correctOption": 0.2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257937/jan23-6_cwrjek.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider the following two-dimensional dataset with two classes: +1 for blue points and −1 for red points. An AdaBoost algorithm was run on this dataset using decision stumps as weak learners.\n\nWhen training the new weak learner hₜ(x) (decision stump at tᵗʰ iteration), we choose the split that minimizes the weighted misclassification error with respect to current weights Dₜ i.e. choose hₜ that minimizes Σᵢ Dₜ(i) * 1(hₜ(xᵢ) ≠ yᵢ).",
+    "question": "To train the second decision stump, which pair of points will be assigned equal weights to create the training dataset?",
+    "options": {
+      "A": "[2, 2]ᵀ, [2, 4]ᵀ",
+      "B": "[2, 2]ᵀ, [1, 4]ᵀ",
+      "C": "[1, 1]ᵀ, [1, 4]ᵀ",
+      "D": "[3, 1]ᵀ, [4, 1]ᵀ"
+    },
+    "correctOption": ["A", "C", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257937/jan23-6_cwrjek.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider the following two-dimensional dataset with two classes: +1 for blue points and −1 for red points. An AdaBoost algorithm was run on this dataset using decision stumps as weak learners.\n\nWhen training the new weak learner hₜ(x) (decision stump at tᵗʰ iteration), we choose the split that minimizes the weighted misclassification error with respect to current weights Dₜ i.e. choose hₜ that minimizes Σᵢ Dₜ(i) * 1(hₜ(xᵢ) ≠ yᵢ).",
+    "question": "What weight will be assigned to the point [1, 1]ᵀ when training the second decision stump, assuming the weights are not normalized to add up to one? Please enter your answer rounded to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.11,
+      "max": 0.15
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764257937/jan23-6_cwrjek.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Imagine a dataset characterized by two features, Feature 1 and Feature 2, demonstrating a perfect negative correlation of -1. When applying k-means clustering with k = 3 to this dataset, what is the most likely arrangement of cluster centers that minimizes the within-cluster sum of squares (WCSS)?",
+    "options": {
+      "A": "An equilateral triangle centered around the mean of the data.",
+      "B": "Cluster centers positioned along a straight line.",
+      "C": "A triangle with two acute angles, positioned strategically within the data distribution.",
+      "D": "A right-angled triangle with one center at the origin."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Model 1: \u0177 = w\u2080 + w\u2081x\nModel 2: \u0177 = w\u2081x\u00b2 + w\u2082x + w\u2083",
+    "question": "Consider the following two models fitted on a one-dimensional dataset:\nModel 1: \u0177 = w\u2080 + w\u2081x\nModel 2: \u0177 = w\u2081x\u00b2 + w\u2082x + w\u2083\nIf both models are trained on the same one-dimensional dataset and evaluated on the same test dataset, which model is more likely to have higher bias and lower variance?",
+    "options": {
+      "A": "Model 1",
+      "B": "Model 2",
+      "C": "Both models are equally sensitive to outliers",
+      "D": "Insufficient data"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "You are given two feature vectors:\nx\u2081 = [ 1] \u00a0 \u00a0 \u00a0x\u2082 = [-1]\n \u00a0 \u00a0 [\u221a3] \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 [\u221a3]\n\nHints:\n\u2022 To draw the weight vector w = [w\u2081, w\u2082]\u1d40, plot the point (w\u2081, w\u2082) and draw an arrow starting at the origin to this point.\n\u2022 tan(60\u00b0) = \u221a3",
+    "question": "Consider a logistic regression model for a binary classification problem with two features x\u2081 and x\u2082. The feature vector is [x\u2081, x\u2082]\u1d40 and labels lie in {0, 1}. The threshold for inference is 0.5. The dummy feature and the weight corresponding to it can be ignored for this problem. Let x\u2081 be the horizontal axis and x\u2082 be the vertical axis. The weight vector makes an angle of \u03b8 with the positive x\u2081 axis (horizontal). Each \u03b8 corresponds to a different classifier. For what range of values of \u03b8 are both x\u2081 and x\u2082 predicted to belong to class-1?",
+    "options": {
+      "A": "30\u00b0 < \u03b8 < 150\u00b0",
+      "B": "0\u00b0 < \u03b8 < 60\u00b0",
+      "C": "60\u00b0 < \u03b8 < 180\u00b0",
+      "D": "0\u00b0 < \u03b8 < 180\u00b0",
+      "E": "0\u00b0 < \u03b8 < 360\u00b0"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following statements accurately describes the characteristics of kernel functions? Assume the dataset to be mean-centered.",
+    "options": {
+      "A": "Kernel PCA can reconstruct original PCA if the kernel function is k(x\u1d62, x\u2c7c) = (x\u1d62\u1d40x\u2c7c + 1)\u00b2.",
+      "B": "The dimensionality of the transformed dataset \u03d5(X), computed using the kernel function, is always smaller than the original feature space.",
+      "C": "The dimensionality of the transformed dataset \u03d5(X), computed using the kernel function, can exceed the original feature space.",
+      "D": "The dimension of the transformed dataset \u03d5(X), whose inner products the kernel function computes, can be infinite."
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Let X be a data matrix of the shape (d, n) and y be the associated label vector of shape (n, 1). Assume that a linear regression model with loss as the sum of squared error is trained on the data (X, y). In which of the following cases, the loss on the training data will necessarily be zero? Assume that the solution of the model is obtained by the normal equation that is w* = (XX\u1d40)\u207b\u00b9Xy.",
+    "options": {
+      "A": "If y lies in the space spanned of row vectors of X.",
+      "B": "If y lies in the space spanned of row vectors of X\u1d40.",
+      "C": "If all the data points satisfy the equality x\u2081 + x\u2082 + ... + x\ud835\ude25 = 0, where x\u1d62 is the ith feature and y = 0 for all the data points.",
+      "D": "If all the data points satisfy the equality x\u2081\u00b3 + x\u2082\u00b3 + ... + x\ud835\ude25\u00b3 = 0, where x\u1d62 is the ith feature and y = 0 for all the data points."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following statements is/are true about this dataset?",
+    "options": {
+      "A": "Points {F, A, C, I} are the only support vectors.",
+      "B": "Points {A, N} are a subset of support vectors.",
+      "C": "Points {F, A, N} are a subset of support vectors.",
+      "D": "Points except {F, A, C, I, N} do not play any role in determining optimal weight vector.",
+      "E": "Points except {F, A, C, I} do not play any role in determining optimal weight vector."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764259972/jan25-1_z9nmz0.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Class 1 points: {(-2, 3), (-1, 1), (-1, 2), (-1, 4)}\nClass 0 points: {(1, 3), (1, 4), (2, 4), (2, 2)}",
+    "question": "Given a two-dimensional data set where points from class 1 are: {(-2, 3), (-1, 1), (-1, 2), (-1, 4)} And points from class 0 are: {(1, 3), (1, 4), (2, 4), (2, 2)}. Which of the following statements are true?",
+    "options": {
+      "A": "The given data points from classes 1 and 0 can be linearly separated using a Hard-margin SVM.",
+      "B": "A perceptron model and a hard margin SVM can give different decision boundary for this dataset.",
+      "C": "A Soft-margin SVM would be a more robust choice than a Hard-margin SVM for this dataset as the dataset is not linearly separable.",
+      "D": "The width of the separation between the two supporting hyperplanes is 4. (Hint:Calculate width using formulae 2/||w||)"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider the following two-dimensional dataset with two classes: +1 for blue points and -1 for red points. An AdaBoost algorithm was run on this dataset using decision stumps as weak learners.",
+    "question": "To train the second decision stump, which pair of points will be assigned equal weights to create the training data-set?",
+    "options": {
+      "A": "[2, 2]\u1d40, [1, 2]\u1d40",
+      "B": "[2, 2]\u1d40, [1, 4]\u1d40",
+      "C": "[1, 1]\u1d40, [1, 4]\u1d40",
+      "D": "[3, 1]\u1d40, [3, 4]\u1d40"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764259969/jan24-1_glc8pw.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The optimization problem for the soft-margin SVM is formulated as:\nMinimize (1/2)||w||\u00b2 + C\u03a3\u1d62\u208c\u2081\u1d3a \u03be\u1d62\nsubject to the constraints:\ny\u1d62(w\u00b7x\u1d62 + b) \u2265 1 - \u03be\u1d62 and \u03be\u1d62 \u2265 0 for all i",
+    "question": "Consider a soft-margin Support Vector Machine (SVM) for a binary classification problem with a dataset in a two-dimensional space. The optimization problem for the soft-margin SVM is formulated as shown. Where C is a positive constant. Let w*, \u03be*, be the optimal solutions, and \u03b1*, \u03b2* be the optimal dual solutions of the soft margin SVM problem. Which of the following statements about the soft-margin SVM is correct?",
+    "options": {
+      "A": "If i\u1d57\u02b0 data point lies on one of the supporting hyperplanes, then \u03b1\u1d62* = 0.",
+      "B": "If i\u1d57\u02b0 data point lies on the correct supporting hyperplane, it does not pay any bribes.",
+      "C": "A smaller value of C allows for a larger margin, potentially leading to less misclassifications on the training data.",
+      "D": "For a dataset with n data-points, there are 2n constraints for soft-margin SVM.",
+      "E": "As C approaches \u221e, the soft margin SVM is equal to the hard margin SVM.",
+      "F": "C can be negative, as long as the bribe(\u03be) each data point pays is non-negative."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The covariance matrix C of this dataset has three non-zero eigenvalues which follow the given linear equations:\n2\u03bb\u2081 + 3\u03bb\u2082 - \u03bb\u2083 = 5\n\u03bb\u2081 - 2\u03bb\u2082 + 4\u03bb\u2083 = 8\n3\u03bb\u2081 + \u03bb\u2082 - 2\u03bb\u2083 = 3",
+    "question": "Consider a dataset X in \u211d\u00b3. The dataset X consists of 4 samples with 3 features each. The covariance matrix C of this dataset has three non-zero eigenvalues which follow the given linear equations. Determine the variance of the given dataset.",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Dataset observations and corresponding group labels:\nGroup 1: {0, 1, 1, 0, 1}\nGroup 2: {1, 0, 1, 0, 1}",
+    "question": "Consider a dataset of n observations {x\u2081, x\u2082, ..., x\u2099}, where each x\u1d62 follows a Bernoulli distribution with parameter p, i.e., x\u1d62 ~ Bernoulli(p) for i = 1, 2, ..., n. However, you have reason to believe that the parameter p might differ for two distinct groups within the dataset. You suspect that there are two groups in the dataset, each with its own parameter(p\u2081 and p\u2082). Now, develop an algorithm to estimate the parameters p\u2081 and p\u2082 using maximum likelihood estimation. Then, apply your algorithm to a dataset with the following observations and corresponding group labels: {0, 1, 1, 0, 1} for group 1 and {1, 0, 1, 0, 1} for group 2 respectively. Calculate the maximum likelihood estimates of p\u2081 and rounded to two decimal places.",
+    "options": null,
+    "correctOption": 0.6,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Consider the following decision tree for a classification problem in which all the data-points are constrained to lie in the unit square in the first quadrant. That is 0 \u2264 x\u2081, x\u2082 \u2264 1. If a point is picked uniformly at random from the unit square, what is the probability that the decision tree predicts this point as belonging to class 1?",
+    "options": null,
+    "correctOption": 0.75,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764259969/jan24-2_sdzmsi.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "A table with 6 samples, 3 binary features, and a binary label is provided:\n--------------------------------------------\nsample    f1    f2    f3    y\n--------------------------------------------\nx1        1     1     0     1\nx2        0     1     0     1\nx3        1     1     1     0\nx4        0     1     1     0\nx5        1     0     1     0\nx6        1     1     1     1\n--------------------------------------------",
+    "question": "Assume that the features are conditionally independent given the label y. Suppose the test sample is x_test = [0, 1, 0]\u1d40. What is the estimated probability that the test point belongs to class 0 (that is, p(y = 0|x_test))?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider a linearly separable binary classification data set with 1000 data points and 100 features. Assume that there exists a w such that ||w|| = 1, y\u1d62(w\u1d40x\u1d62) \u2265 0.5 \u2200i. Also assume that ||x\u1d62||\u2082 \u2264 2 \u2200i. What is the maximum number of mistakes that the Perceptron algorithm can make in this data set?",
+    "options": null,
+    "correctOption": 16,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "A table showing a single iteration of the AdaBoost algorithm is provided:\n---------------------------------------------------------------------------\nData point    True label    Predicted label    Initial weight    Updated weight\n---------------------------------------------------------------------------\nX1               ?                  1                 1/3               1/2\nX2              -1                 -1                 1/3                ?\nX3              -1                  ?                 1/3               1/4\n---------------------------------------------------------------------------",
+    "question": "Consider a single iteration of the AdaBoost algorithm that was run on three sample points, starting with uniform weights on the sample points. The labels are either +1 or -1. In the table below, some values have been omitted. Based on the above data, what will be the updated weight for point x\u2082?",
+    "options": null,
+    "correctOption": 0.25,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Network Architecture:\n- Input layer: 3 neurons.\n- Hidden layer: 2 neurons, sigmoid activation.\n- Output layer: 1 neuron, linear activation.\n\nWeights and Biases:\n- Hidden Layer:\n \u00a0- Neuron 1: Weights: [0.5, -0.2, 0.8], Bias: 0.1\n \u00a0- Neuron 2: Weights: [0.4, 0, 0.2], Bias: -0.4\n- Output Layer:\n \u00a0- Neuron 1: Weights: [0.2, 0.4], Bias: -0.3\n\nInput values: [0.6, 0.3, 0.8]",
+    "question": "Consider a simple neural network with one hidden layer. The network has the following architecture and parameters. Assume that the input values are [0.6, 0.3, 0.8]. Calculate output of Neuron 1 in hidden layer.",
+    "options": null,
+    "correctOption": {
+      "min": 0.7,
+      "max": 0.8
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "For a given dataset, a 1-Nearest Neighbor (1-NN) and a 3-Nearest Neighbor (3-NN) classifier are applied. Which classifier is likely to exhibit a higher Leave-One-Out Cross Validation (LOOCV) error? In case of tie-breaker, assign a positive class (+) to the data point.",
+    "options": {
+      "A": "1-NN",
+      "B": "3-NN",
+      "C": "Both have the same error."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261462/jan25-11_o4l3lt.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider the following three weight vectors obtained by minimizing the ridge regression objective with penalty parameters λ = 0.1, 10, 50.\nθ₁ = [0.5 0.56 2.5]ᵀ\nθ₂ = [0.05 0.1 1.23]ᵀ\nθ₃ = [1.2 0.84 3.15]ᵀ\nSelect the most appropriate match for each weight vector corresponding to penalty parameter λ from the following options:",
+    "options": {
+      "A": "θ₁ corresponds to λ = 50, θ₂ to λ = 0.1, and θ₃ to λ = 10.",
+      "B": "θ₁ corresponds to λ = 0.1, θ₂ to λ = 10, and θ₃ to λ = 50.",
+      "C": "θ₁ corresponds to λ = 10, θ₂ to λ = 50, and θ₃ to λ = 0.1."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset with two features and the corresponding labels:\n--------------------------\nx₁     x₂       y\n--------------------------\n1      0       1.5\n2      2       4\n3      0       4.5\n4      2       7\n--------------------------",
+    "question": "Fit the linear regression model y = w₁x₁ + w₂x₂ using the normal equation obtained from the squared error loss.\nHint: The normal equation for linear regression is:\nw = (XᵀX)⁻¹Xᵀy",
+    "options": {
+      "A": "y = 2x₁ + x₂",
+      "B": "y = 1.5x₁ + 0.5x₂",
+      "C": "y = 1.8x₁ + 1.45x₂",
+      "D": "y = x₁ + 2x₂"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Consider a dataset with 4 datapoints, {(x₁, y₁), (x₂, y₂), (x₃, y₃), (x₄, y₄)}, where yᵢ ∈ {+1, -1} and xᵢ ∈ R². In the first iteration of the AdaBoost algorithm, suppose a decision stump f₁ is chosen, which correctly classifies the first three data points and incorrectly classifies the last data point. Assume the initial distribution of the dataset assigns equal weights to all data points, i.e., D₁(i) = 1/4 for i = 1, 2, 3, 4. What will be the updated distribution of the weights of the data points after the first iteration?",
+    "options": {
+      "A": "D₂(i) = { 1/3, i = 1, 2, 3; 0, i = 4 }",
+      "B": "D₂(i) = { 1/6, i = 1, 2, 3; 1/2, i = 4 }",
+      "C": "D₂(i) = { 1/4, i = 1, 2, 3, 4; 0, otherwise }",
+      "D": "D₂(i) = { 1/5, i = 1, 2, 3; 2/5, i = 4 }"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following statements correctly differentiates PCA and Kernel PCA?",
+    "options": {
+      "A": "PCA maximizes variance in the original feature space, while Kernel PCA maximizes variance in a higher-dimensional transformed space.",
+      "B": "PCA finds principal components using linear transformations in the original space, while Kernel PCA uses non-linear transformations to find principal components in a higher-dimensional space.",
+      "C": "Kernel PCA can capture non-linear patterns in data, making it useful when PCA fails to represent complex structures in a linear space.",
+      "D": "PCA and Kernel PCA always yield identical results regardless of the dataset structure."
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following formualtion of the soft margin SVM:\nmin_{w,ξ} (1/2)||w||² + C Σ_{i=1 to n} ξᵢ,   C ≥ 0\nsubject to (wᵀxᵢ)yᵢ + ξᵢ ≥ 1, ∀i\nξᵢ ≥ 0, ∀i",
+    "question": "Which of the following statements is/are correct?",
+    "options": {
+      "A": "When C = 0, the optimal value of the objective function is ∞.",
+      "B": "When C = 0, the optimal value of the objective function is 0.",
+      "C": "As C approaches 0, the soft-margin SVM is equivalent to the hard-margin SVM.",
+      "D": "As C approaches ∞, the soft-margin SVM is equivalent to the hard-margin SVM.",
+      "E": "A smaller value of C will create larger margin."
+    },
+    "correctOption": ["B", "D", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Which of the following statements are true for bagging?",
+    "options": {
+      "A": "The final model has lesser variance than the individual learners.",
+      "B": "The final model has a higher variance than the individual learners.",
+      "C": "Estimators in bagging can be trained parallely.",
+      "D": "If the number of data points is large, typically two-third of the data points remain unselected in bags."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "What is the effect of increasing the regularization parameter λ in Lasso regression?",
+    "options": {
+      "A": "It penalizes large coefficients to reduce overfitting.",
+      "B": "It shrinks the coefficients but does not set them to zero.",
+      "C": "It forces more coefficients to be exactly zero, performing feature selection.",
+      "D": "It has no effect on the regression model."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "For a decision tree, each node has exactly two child nodes (balanced tree). If the tree has a depth of 3, how many leaf nodes are there?",
+    "options": null,
+    "correctOption": 8,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following dataset in R²:\n{(1, 2), (3, 4), (5, 4), (7, 8), (9, 10)}",
+    "question": "Lloyd's algorithm (K-means) is run on this data set with points (1, 2) and (9, 10) as the initial cluster centers. Let (c₁, d₁) and (c₂, d₂) be the final cluster centers upon convergence. What is the value of the product c₁ × c₂?",
+    "options": null,
+    "correctOption": 24,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Let X₁, X₂, ..., Xₙ be i.i.d. samples from a Uniform distribution on the interval [0, θ], where θ is an unknown parameter. The probability density function (PDF) of continuous uniform distribution is given by:\nf(x; θ) = { 1/θ,  0 ≤ x ≤ θ\n        { 0,    otherwise",
+    "question": "Find the Maximum Likelihood Estimate (MLE) of θ based on a given sample 10, 15, 12, 20, 17.",
+    "options": null,
+    "correctOption": 20,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "You are building a Naive Bayes classifier to determine whether a person has a certain medical condition (Yes or No) based on three features: f₁ (Age), f₂ (Blood pressure level), and f₃ (Smoking status, Yes/No). Given that the features are conditionally independent for a given class, the continuous features f₁ and f₂ are modeled using a Gaussian distribution, while the binary feature f₃ follows a Bernoulli distribution. Determine the total number of parameters that need to be estimated for classification using this Naive Bayes model.",
+    "options": null,
+    "correctOption": 11,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following data set with three data points:\nD = {([1, 1]ᵀ, -1), ([0, 1]ᵀ, +1), ([-1, 1]ᵀ, +1)}.",
+    "question": "Find the squared length of the updated weight vector after one iteration (one pass through all the data points) of the perceptron algorithm, assuming w₀ = [0 0]ᵀ. While looking for mistakes, cycle through the data points form left to right.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following data set with three data points:\nD = {([1, 1]ᵀ, -1), ([0, 1]ᵀ, +1), ([-1, 1]ᵀ, +1)}.",
+    "question": "Will the algorithm converge after this update?",
+    "options": {
+      "A": "YES",
+      "B": "NO"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the transformation φ: R² → R⁶ associated with a polynomial kernel of degree 2:\nφ(x) = [1 x₁² x₂² √2x₁x₂ √2x₁ √2x₂]ᵀ\nA kernel-SVM is trained on a dataset with the above kernel. The optimal weight vector is w = [-25 1 2 0 0]ᵀ. Assume that the dataset is linearly separable in the transformed space.",
+    "question": "What is the shape of the decision boundary in R²?",
+    "options": {
+      "A": "It is a circle.",
+      "B": "It is a straight line.",
+      "C": "It is an ellipse.",
+      "D": "It is a parabola."
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the transformation φ: R² → R⁶ associated with a polynomial kernel of degree 2:\nφ(x) = [1 x₁² x₂² √2x₁x₂ √2x₁ √2x₂]ᵀ\nA kernel-SVM is trained on a dataset with the above kernel. The optimal weight vector is w = [-25 1 2 0 0]ᵀ. Assume that the dataset is linearly separable in the transformed space.",
+    "question": "Which of the following training data points are certainly not support vectors?",
+    "options": {
+      "A": "[1 2]ᵀ",
+      "B": "[2√2 3]ᵀ",
+      "C": "[4 2]ᵀ",
+      "D": "[3 2√2]ᵀ"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a single-layer neural network with two neurons in the hidden layer. The weight parameters of the network are given as follows:\nw₁⁽¹⁾ = 1/2, w₂⁽¹⁾ = 1/2\nw₁⁽²⁾ = 1/2, w₂⁽²⁾ = -1/2\nw_out = [1 -1]ᵀ\nwhere wⱼ⁽ⁱ⁾ represents the weight associated with the j-th neuron for the i-th input feature. Assume that we are solving a binary classification problem.",
+    "question": "The output layer of the neural network will return a probability p for the input x_test = [2 4]ᵀ. The sigmoid function is used as the activation function in both the hidden and the output layer of the neural network. Find the value of p. Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.64,
+      "max": 0.68
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Jan 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a single-layer neural network with two neurons in the hidden layer. The weight parameters of the network are given as follows:\nw₁⁽¹⁾ = 1/2, w₂⁽¹⁾ = 1/2\nw₁⁽²⁾ = 1/2, w₂⁽²⁾ = -1/2\nw_out = [1 -1]ᵀ\nwhere wⱼ⁽ⁱ⁾ represents the weight associated with the j-th neuron for the i-th input feature. Assume that we are solving a binary classification problem.",
+    "question": "If the model predicts the label as 1 for p greater than 0.5 and 0 otherwise, find the predicted label for x_test.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "When PCA is applied to certain dataset in R\u2075, eigenvalues of covariance matrix are 10, 15, 9, 0, 0 and corresponding eigen vectors are [\u221a1/2, \u221a1/2, 0, 0, 0]\u1d40, [\u2212\u221a1/2, \u221a1/2, 0, 0, 0]\u1d40, [0, 0, 1, 0, 0]\u1d40, [0, 0, 0, \u221a1/2, \u2212\u221a1/2]\u1d40, and [0, 0, 0, \u221a1/2, \u221a1/2]\u1d40. When we reconstruct the point [1, 2, 3, 0, 0]\u1d40 using first three principal components, then what is the reconstruction error?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose you have been given a task of estimating the conversion rate of google click of new online advertisement campaign. You have collected data from a limited sample of 50 users, where 12 of them have converted. You want to use Bayesian estimation with a prior distribution to provide a more robust estimate of the conversion rate. Assume you have prior information and you decide to use a beta distribution as your prior. You choose a beta distribution with parameters \u03b1 = 3 and \u03b2 = 4 to capture your prior beliefs. Calculate the posterior mean?",
+    "options": null,
+    "correctOption": {
+      "min": 0.2,
+      "max": 0.4
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "You have been asked to build a classifier to categorize news articles into two categories: \u201cTechnology\u201d and \u201cSports.\u201d You\u2019ve collected a dataset of 1000 articles, with 600 articles labeled as \u201cTechnology\u201d and 400 labeled as \u201cSports.\u201d You\u2019ve analyzed the articles and collected statistics on the occurrence of two words \u201csoftware\u201d and \u201cfootball\u201d in the articles:\n----------------------------------------------------------------------------------------\nKeyword      Label of email          Probability\n----------------------------------------------------------------------------------------\nSoftware     Technology              P(\"Software\" | Technology) = 0.45\nSoftware     Sports                  P(\"Software\" | Sports) = 0.05\nFootball     Technology              P(\"Football\" | Technology) = 0.30\nFootball     Sports                  P(\"Football\" | Sports) = 0.02\n----------------------------------------------------------------------------------------",
+    "question": "You receive a new email containing both the \u201cSoftware\u201d and \u201cFootball\u201d keywords and want to classify it using Naive Bayes. Use the Naive Bayes formula to calculate the probability that the new email is classified as \u201cTechnology.\u201d Hint: Assume that these are only two possible words (that is there are only two features)",
+    "options": null,
+    "correctOption": {
+      "min": 0.98,
+      "max": 1.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Which of the following matrices cannot be expressed as K = X\u1d40X for some data matrix X?",
+    "options": {
+      "A": " [2 1]\n [1 3]",
+      "B": " [4 2]\n [2 3]",
+      "C": " [-1 2]\n [2 \u00a04]"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset with two features.\n------------------------\nX          y\n------------------------\n[1, 1]      1\n[-1, 1]     1\n[2, 2]      3\n[-2, 2]     3\n------------------------",
+    "question": "Which of the following property does the solution w satisfy that fits the linear regression model y = w\u1d40x?",
+    "options": {
+      "A": "w \u2208 S where S = {u = [u\u2081, u\u2082]\u1d40 \u2208 R\u00b2 : u\u2081 = u\u2082}",
+      "B": "w \u2208 S where S = {u = [u\u2081, u\u2082]\u1d40 \u2208 R\u00b2 : u\u2081 = -u\u2082}",
+      "C": "w \u2208 S where S = {u = [u\u2081, u\u2082]\u1d40 \u2208 R\u00b2 : u\u2081 = -2u\u2082}",
+      "D": "w \u2208 S where S = {u = [u\u2081, u\u2082]\u1d40 \u2208 R\u00b2 : u\u2081 = 2u\u2082}"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Assuming that in the constrained version of ridge regression optimization problem, following are the weight vectors to be considered, along with the mean squared error (MSE) produced by each:\nw\u2081 = [2, 2, 3, 1], MSE = 25\nw\u2082 = [1, 1, 3, 1], MSE = 35\nw\u2083 = [3, 2, 4, 1], MSE = 15\nIn ridge regression we want to find w that minimizes MSE + ||w||\u00b2. So according to the given data, which of the above weight vectors will be selected as solution for ridge regression?",
+    "options": {
+      "A": "w\u2081",
+      "B": "w\u2082",
+      "C": "w\u2083",
+      "D": "Any of w\u2081, w\u2082 or w\u2083 can be the solution."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following training dataset for a binary classification problem in R\u00b2. Note that in the image blue color represents points labelled as +1 and red colored points are points labelled as -1.",
+    "question": "If we try to learn a perceptron model for this dataset, will the algorithm ever converge to a weight vector?",
+    "options": {
+      "A": "Yes, it will converge to a weight vector that can correctly classify all the datapoints irrespective of what we chose as w\u2070.",
+      "B": "Yes, it will converge for some w\u2070 but not for all w\u2070.",
+      "C": "Perceptron Algorithm cannot be applied here as the data is not linearly separable."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764258377/may23-1_uopuis.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a kernel-SVM trained on a dataset of 100 points with polynomial kernel of degree 2. If \u03b1* is the optimal dual solution, what is the predicted label for a test-point x_test?",
+    "options": {
+      "A": "\u03a3\u1d62\u208c\u2081\u00b9\u2070\u2070 \u03b1\u1d62* \u22c5 x_test\u1d40 \u22c5 x\u1d62 \u22c5 y\u1d62",
+      "B": "sign(\u03a3\u1d62\u208c\u2081\u00b9\u2070\u2070 \u03b1\u1d62* \u22c5 x_test\u1d40 \u22c5 x\u1d62 \u22c5 y\u1d62)",
+      "C": "\u03a3\u1d62\u208c\u2081\u00b9\u2070\u2070 \u03b1\u1d62* \u22c5 (1 + x_test\u1d40 \u22c5 x\u1d62)\u00b2 \u22c5 y\u1d62",
+      "D": "sign(\u03a3\u1d62\u208c\u2081\u00b9\u2070\u2070 \u03b1\u1d62* \u22c5 (1 + x_test\u1d40 \u22c5 x\u1d62)\u00b2 \u22c5 y\u1d62)"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Given a two-dimensional data set where points from class 1 are: {(1, 3), (2, 2), (2, 4)} And points from class 0 are: {(3, 3), (4, 4), (4, 2)} Which of the following statements are true?",
+    "options": {
+      "A": "The given data points from classes A and B can be linearly separated using a Hard-margin SVM.",
+      "B": "Points (2, 2) from class 1 and (3, 3) from class 0 will be on the decision boundary or support vectors.",
+      "C": "A Soft-margin SVM would be a more robust choice than a Hard-margin SVM for this dataset as the dataset is not linearly separable.",
+      "D": "A perceptron model and a hard margin SVM will always give the same decision sub-boundary for this dataset."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "A clustering of 100 data points in R\u00b2 was done using Lloyd's algorithm with K = 3. You are told that the points [2, 2]\u1d40, [0, 0]\u1d40, [2, 0]\u1d40 and [0, 2]\u1d40 are in the same cluster. Which of the following points will definitely lie in the same cluster? (If there are any ties with this cluster, they should be assigned exclusively to this cluster.)",
+    "options": {
+      "A": "[0.5, 0.5]\u1d40",
+      "B": "[2, 1]\u1d40",
+      "C": "[3, 3]\u1d40",
+      "D": "[-1, -1]\u1d40"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Which of the following statements is/are true regarding logistic regression and perceptron algorithm?",
+    "options": {
+      "A": "When perceptron algorithm is applied to a non-linearly separated dataset, then algorithm may not converge.",
+      "B": "Logistic regression can be applied to data that is not linearly separated.",
+      "C": "As w\u1d40x value increases, P(y = 1) returned by logistic regression decreases.",
+      "D": "As w\u1d40x value decreases, P(y = 0) returned by logistic regression increases."
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following dataset on which the soft margin SVM is applied.",
+    "question": "Which of the following statements is/are true about this dataset?",
+    "options": {
+      "A": "Points F, I can be the only support vectors.",
+      "B": "Points F, W, B, H are going to be support vectors.",
+      "C": "Points except F, I do not play any role in determining optimal weight vector.",
+      "D": "All points except F and I are important in determining optimal weight vector.",
+      "E": "The same dataset can be solved using hard margin SVM algorithm and result would be the same."
+    },
+    "correctOption": ["A", "C", "E"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764258536/may23-2_twhnmj.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "In a random forest model, let p < d be the number of randomly selected features that are used to identify the best split at any node of a tree. Here d is the total number of features. Which of the following is/are true?",
+    "options": {
+      "A": "Increasing p reduces the correlation between any two trees in the forest.",
+      "B": "Decreasing p reduces the correlation between any two trees in the forest.",
+      "C": "Decreasing p will underfit individual trees in the forest.",
+      "D": "As the value of p increases variance of the random forest model increases.",
+      "E": "As the value of p increases variance of the random forest model decreases."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Suppose you are working as a data scientist for a company that sells different types of phone. You are given a dataset containing information about customers and whether they purchased a phone (binary outcome). The dataset has three features: Age group, Income level, and Location.\n---------------------------------------------------------------------------------------\nCustomer     Age group     Income level     Location     Purchased Phone\n---------------------------------------------------------------------------------------\nRam          Young         High             Urban        Yes\nKarthik      Senior        Low              Suburban     Yes\nVishal       Young         Low              Rural        No\nNitin        Senior        High             Urban        Yes\nSrikanth     Young         Low              Suburban     No\n---------------------------------------------------------------------------------------\nYou want to build a decision tree to predict whether a customer will purchase a smartphone based on these features.",
+    "question": "Calculate the information gain for the \"Age Group\" feature.",
+    "options": null,
+    "correctOption": {
+      "min": 0.2,
+      "max": 0.6
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Suppose you are working as a data scientist for a company that sells different types of phone. You are given a dataset containing information about customers and whether they purchased a phone (binary outcome). The dataset has three features: Age group, Income level, and Location.\n---------------------------------------------------------------------------------------\nCustomer     Age group     Income level     Location     Purchased Phone\n---------------------------------------------------------------------------------------\nRam          Young         High             Urban        Yes\nKarthik      Senior        Low              Suburban     Yes\nVishal       Young         Low              Rural        No\nNitin        Senior        High             Urban        Yes\nSrikanth     Young         Low              Suburban     No\n---------------------------------------------------------------------------------------\nYou want to build a decision tree to predict whether a customer will purchase a smartphone based on these features.",
+    "question": "Calculate the information gain for the \"Income level\" feature.",
+    "options": null,
+    "correctOption": {
+      "min": 0.2,
+      "max": 0.6
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "You are working on a binary classification problem where you need to predict whether an email is spam (1) or not (0). You have trained a machine learning model that produces predicted probabilities for each email being spam. You have two different loss functions to consider: the 0-1 loss and the cross entropy loss.\nYou have a test dataset with the following true labels and predicted probabilities for a set of emails:\n-------------------------------------------------------------\nEmail    True label    Predicted probability\n-------------------------------------------------------------\n1            0                 0.8\n2            1                 0.2\n3            0                 0.6\n4            1                 0.9\n5            1                 0.3\n-------------------------------------------------------------\nFor the given data set if Predicted probability is greater than 0.5, the predicted label will be 1 and 0 otherwise.",
+    "question": "Which of the following statements are true?",
+    "options": {
+      "A": "The values of 0-1 loss function will be 3",
+      "B": "The values of cross entropy loss will be equals to 3.65",
+      "C": "The values of 0-1 loss equals 4.",
+      "D": "The values of cross entropy loss will be equals to 6.35"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a simple neural network with one hidden layer. The network has the following architecture:\nInput layer with 3 neurons.\nHidden layer with 2 neurons, using the sigmoid activation function.\nOutput layer with 1 neuron, using the linear activation function.\nThe weights and biases for the network are as follows:\nHidden Layer:\nNeuron 1:\nWeights: [0.5, -0.2, 0.8]\nBias: 0.1\nNeuron 2:\nWeights: [-0.3, 0.6, -0.7]\nBias: -0.4\nOutput Layer:\nNeuron 1:\nWeights: [0.2, 0.4]\nBias: -0.3\nAssume that the input values are [0.6, 0.3, 0.8].",
+    "question": "Calculate output of Neuron 1 in hidden layer",
+    "options": null,
+    "correctOption": {
+      "min": 0.6,
+      "max": 0.8
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider a linear regression problem. Which of the following is the gradient of the SSE function with respect to w ∈ ℝᵈ, the weight vector, for a single data-point x ∈ ℝᵈ? y is the true label and ŷ is the predicted label. Note that SSE refers to the sum of squared errors.",
+    "options": {
+      "A": "(ŷ − y)x",
+      "B": "(wᵀx)w",
+      "C": "ŷx",
+      "D": "xy"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The covariance matrix of a mean centered dataset in ℝ³ is:\nC =  [2.5  0  0.5]\n     [ 0   1   0]\n     [0.5  0  2.5]\nStandard PCA is performed on this dataset. If the first principal component is\nw₁ = [-1/√2, 0, -1/√2]ᵀ",
+    "question": "which of the following is the variance along w₁?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "6"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider a dataset for a regression problem. Ridge regression is applied on the problem for various values of λ. A value of λ = 0.1 is obtained as the best choice after cross validation. Select the most appropriate answer.",
+    "options": {
+      "A": "λ = 10⁻⁴ results in overfitting, λ = 10² results in underfitting",
+      "B": "λ = 10⁻⁴ results in underfitting, λ = 10² results in overfitting",
+      "C": "Both λ = 10⁻⁴ and λ = 10² result in underfitting",
+      "D": "Both λ = 10⁻⁴ and λ = 10² result in overfitting"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Match the characteristics given below with the appropriate ensemble technique.\n1. Decision stumps\n2. Deep decision trees\n3. Parallel execution\n4. Sequential execution",
+    "question": "Match the characteristics given below with the appropriate ensemble technique.",
+    "options": {
+      "A": "Bagging → (2), (3); Boosting → (1), (4)",
+      "B": "Bagging → (1), (4); Boosting → (2), (3)",
+      "C": "Bagging → (1), (3); Boosting → (2), (4)",
+      "D": "Bagging → (2), (4); Boosting → (1), (3)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a hard-margin SVM that has been trained on a linearly separable dataset with positive margin. Two test data-points are given below along with the decision boundary and the supporting hyperplanes.",
+    "question": "Which of the following is true?",
+    "options": {
+      "A": "The predicted labels for x₁ and x₂ are 1 and −1 respectively.",
+      "B": "The predicted labels for x₁ and x₂ are −1 and 1 respectively.",
+      "C": "The predicted label for both data-points is 1.",
+      "D": "The predicted label for both data-points is −1."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260707/may24-1_ihjib4.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "For a dataset with features in ℝ³, which of the following expresses the class conditional independence assumption in a Naive Bayes model? p(·) denotes probability.",
+    "options": {
+      "A": "p((x₁, x₂, x₃) | y) = p(x₁ | y) · p(x₂ | y) · p(x₃ | y)",
+      "B": "p((x₁, x₂, x₃), y) = p(y) · p(x₁) · p(x₂) · p(x₃)",
+      "C": "p((x₁, x₂, x₃) | y) = p((x₁, x₂, x₃, y)) / p(y)",
+      "D": "p(y | (x₁, x₂, x₃)) = p((x₁, x₂, x₃), y) / p(x₁, x₂, x₃)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "The result of k-means clustering on a dataset of eight points is displayed below. Four points belong to the cluster denoted by the ■ symbol and the rest belong to the cluster denoted by the x symbol. The cluster boundary is a line such that all points on it could belong to either of the two clusters.",
+    "question": "Which of the following is the equation of the cluster boundary?",
+    "options": {
+      "A": "2x₁ − x₂ = 0",
+      "B": "x₁ − 2x₂ = 0",
+      "C": "x₁ + x₂ = 0",
+      "D": "x₁ + 2x₂ = 0"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260707/may24-2_daohfa.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a logistic regression model trained for a binary classification problem with features in ℝ² and labels in {1, 0}. The probability that the test point [1, -3]ᵀ belongs to class 1 is equal to 0.75.",
+    "question": "What is the probability of the test point belonging to class 0?",
+    "options": {
+      "A": "0.75",
+      "B": "0.25",
+      "C": "0.5",
+      "D": "0.15"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider k: ℝ² × ℝ² → ℝ.",
+    "question": "Which of the following are valid kernels?",
+    "options": {
+      "A": "k((x₁, x₂), (y₁, y₂)) = x₁y₁² + x₂y₂²",
+      "B": "k((x₁, x₂), (y₁, y₂)) = 1 + x₁y₁ + x₂y₂ + x₁²y₁² + x₂²y₂²",
+      "C": "k((x₁, x₂), (y₁, y₂)) = (x₁ + x₂)(y₁ + y₂)²",
+      "D": "k((x₁, x₂), (y₁, y₂)) = (x₁ − x₂)(y₁ + y₂)"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a training dataset of 100 points for a binary classification problem with the following structure.\n• The features are in ℝ² and the labels are in {−1, 1}\n• For every data-point ((x₁, x₂), y) in the training dataset, x₁x₂ < 0 and x₁y > 0.",
+    "question": "Which of the following statements are true?",
+    "options": {
+      "A": "The dataset is linearly separable with a positive margin.",
+      "B": "The perceptron algorithm will terminate after a finite number of iterations when trained on this dataset.",
+      "C": "The dataset is linearly separable, but the margin may be zero.",
+      "D": "The dataset is not linearly separable."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "A hard-margin SVM is trained on a linearly separable dataset with a positive The features are in ℝ². The distance between the two supporting hyperplanes is 0.2.",
+    "question": "what is the norm of the optimal weight vector?",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a Beta prior for the parameter p of a Bernoulli distribution, which is given as: p ~ Beta(4, 3). The dataset has 11 ones and 2 zeros. We use the expected value of the posterior as a point-estimate for the parameter of the Bernoulli distribution.",
+    "question": "What is the value of this point-estimate p?",
+    "options": null,
+    "correctOption": 0.75,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider a dataset of eight points for a binary classification problem with one feature with labels in {1, −1}:\nD = {(-4, 1), (-3, 1), (-2, 1), (-1, 1), (1, -1), (2, -1), (3, -1), (4, 1)}\nEach element of D is of the form (x, y). A decision stump trained on this dataset results in the question x < 0 at the parent.",
+    "question": "Find the information gain. Use log₂. Recall that a decision stump has just one parent and two children. Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.5,
+      "max": 0.6
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a linearly separable dataset with a positive margin. The symbol αᵢ* in the context of SVMs has its usual meaning. Are the given statements true or false?",
+    "question": "The weight vector output by the perceptron algorithm can be expressed as a linear combination of the data-points where the coefficients of the linear combination are integers.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a linearly separable dataset with a positive margin. The symbol αᵢ* in the context of SVMs has its usual meaning. Are the given statements true or false?",
+    "question": "In the case of a hard-margin SVM, if αᵢ* > 0, the point xᵢ is a a support vector.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a linearly separable dataset with a positive margin. The symbol αᵢ* in the context of SVMs has its usual meaning. Are the given statements true or false?",
+    "question": "If a soft-margin SVM is trained on this dataset, the optimal weight vector it returns will be the same as the one returned by a hard-margin SVM, irrespective of the value of the hyperparameter C.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 5 that has been trained on a dataset with features in ℝ². The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class −1. Symbols ξ and α have their usual meanings. Assume that w, ξᵢ, αᵢ represent the optimal values.\nGreen: +1\nRed: -1",
+    "question": "What is ξ₁?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-3_jpbujx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 5 that has been trained on a dataset with features in ℝ². The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class −1. Symbols ξ and α have their usual meanings. Assume that w, ξᵢ, αᵢ represent the optimal values.\nGreen: +1\nRed: -1",
+    "question": "What is ξ₂?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-3_jpbujx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 5 that has been trained on a dataset with features in ℝ². The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class −1. Symbols ξ and α have their usual meanings. Assume that w, ξᵢ, αᵢ represent the optimal values.\nGreen: +1\nRed: -1",
+    "question": "What is ξ₃?",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-3_jpbujx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 5 that has been trained on a dataset with features in ℝ². The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class −1. Symbols ξ and α have their usual meanings. Assume that w, ξᵢ, αᵢ represent the optimal values.\nGreen: +1\nRed: -1",
+    "question": "What is α₁? If it cannot be determined exactly, enter −1.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-3_jpbujx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 5 that has been trained on a dataset with features in ℝ². The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class −1. Symbols ξ and α have their usual meanings. Assume that w, ξᵢ, αᵢ represent the optimal values.\nGreen: +1\nRed: -1",
+    "question": "What is α₃? If it cannot be determined exactly, enter −1.",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-3_jpbujx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 5 that has been trained on a dataset with features in ℝ². The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class −1. Symbols ξ and α have their usual meanings. Assume that w, ξᵢ, αᵢ represent the optimal values.\nGreen: +1\nRed: -1",
+    "question": "What is α₄? If it cannot be determined exactly, enter −1.",
+    "options": null,
+    "correctOption": -1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-3_jpbujx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the logistic loss.",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-4_ucntak.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the (SVM) hinge loss.",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-4_ucntak.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the perceptron loss.",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-4_ucntak.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the squared loss.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-4_ucntak.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Which of the following statements is true? ln = logₑ.",
+    "options": {
+      "A": "The logistic loss and the (SVM) hinge loss intersect when (wᵀx)y = ln(e − 1).",
+      "B": "The logistic loss and the (SVM) hinge loss do not intersect.",
+      "C": "The logistic loss and the (SVM) hinge loss intersect when (wᵀx)y = ln(1 - 1/e).",
+      "D": "The logistic loss and the (SVM) hinge loss intersect when (wᵀx)y = 1/e."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764260708/may24-4_ucntak.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following architecture of a neural network for a binary classification problem:\n-------------------------------------------------------\nLayer type         Number of neurons\n-------------------------------------------------------\nInput                    4\nHidden layer-1          10\nHidden layer-2          15\nOutput                   1\n-------------------------------------------------------",
+    "question": "How many learnable parameters does this network have? Ignore the biases in the computation.",
+    "options": null,
+    "correctOption": 205,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following architecture of a neural network for a binary classification problem:\n-------------------------------------------------------\nLayer type         Number of neurons\n-------------------------------------------------------\nInput                    4\nHidden layer-1          10\nHidden layer-2          15\nOutput                   1\n-------------------------------------------------------",
+    "question": "What is the most appropriate choice of activation function for the output layer if the binary cross-entropy loss is used?",
+    "options": {
+      "A": "Sigmoid",
+      "B": "Linear",
+      "C": "ReLU"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following architecture of a neural network for a binary classification problem:\n-------------------------------------------------------\nLayer type         Number of neurons\n-------------------------------------------------------\nInput                    4\nHidden layer-1          10\nHidden layer-2          15\nOutput                   1\n-------------------------------------------------------\nFor a particular data-point, the activations after the first hidden layer in the forward pass is given to be\n[0.4 0.3 1.8 0.3 0.1 0 0.7 1.9 1 0]ᵀ.",
+    "question": "What is the activation function used in the first hidden layer?",
+    "options": {
+      "A": "ReLU",
+      "B": "Sigmoid"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a dataset {x\u2081, x\u2082, ..., x\u2099}, where each x\u1d62 \u2208 \u211d\u2075. Principal Component Analysis (PCA) is applied to this dataset and all the five principal components are retained. Which of the following statements is/are correct?",
+    "options": {
+      "A": "PCA has reduced the dimensionality of the dataset because the combinations of features are de-correlated.",
+      "B": "PCA has not reduced the dimensionality of the dataset because all principal components are retained.",
+      "C": "PCA always reduces the dimensionality of the dataset regardless of the number of components retained.",
+      "D": "PCA can never be used for dimensionality reduction."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider the following kernel function:\nk : \u211d\u00b2 \u00d7 \u211d\u00b2 \u2192 \u211d\nk([x\u2081, x\u2082]\u1d40, [y\u2081, y\u2082]\u1d40) = 1 + x\u2081y\u2081 + x\u2082y\u2082 + x\u2081\u00b2y\u2081\u00b2x\u2082y\u2082 + x\u2081y\u2081x\u2082\u00b2y\u2082\u00b2\nFind the appropriate transformation mapping \u03d5 for the given kernel.",
+    "options": {
+      "A": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081x\u2082, x\u2081\u00b2x\u2082]",
+      "B": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081, x\u2082, x\u2081x\u2082\u00b2]",
+      "C": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081, x\u2082, x\u2081x\u2082, x\u2081\u00b2x\u2082]",
+      "D": "\u03d5([x\u2081, x\u2082]\u1d40) = [1, x\u2081, x\u2082, x\u2081x\u2082, x\u2081\u00b2x\u2082\u00b2]"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider clustering 1D data with a mixture of 2 Gaussians using the EM algorithm. You are given the data points x\u2081 = 1, x\u2082 = 10, x\u2083 = 20.\nSuppose the output of the E-step is as follows:\n\u03bb\u2081\u00b9 = 1, \u03bb\u2081\u00b2 = 0\n\u03bb\u2082\u00b9 = 0.4, \u03bb\u2082\u00b2 = 0.6\n\u03bb\u2083\u00b9 = 0.1, \u03bb\u2083\u00b2 = 0.9,\nwhere \u03bb\u1d62\u1d9c denotes the probability of the i-th data point to be in cluster C.",
+    "question": "After performing the M-step for the means \u03bc\u2081 and \u03bc\u2082, what are the updated means?",
+    "options": {
+      "A": "\u03bc\u2081 = 0.5, \u03bc\u2082 = 0.5",
+      "B": "\u03bc\u2081 = 0.5, \u03bc\u2082 = 1.6",
+      "C": "\u03bc\u2081 = 4.66, \u03bc\u2082 = 4.66",
+      "D": "\u03bc\u2081 = 4.66, \u03bc\u2082 = 16"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider a linearly separable binary classification problem in which the data-points are in \u211d\u00b9\u2070\u2070. The training dataset has 100 data-points, 40 from the positive class and 60 from the negative class. Now, consider a hard-margin linear SVM trained on this dataset. How many constraints does the primal problem have? Select the most appropriate answer.",
+    "options": {
+      "A": "40",
+      "B": "60",
+      "C": "100",
+      "D": "1"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Which among the following is TRUE for k-NN algorithm? Select all that apply.",
+    "options": {
+      "A": "1-nearest neighbour is sensitive to outliers.",
+      "B": "k-NN can only be applied to a classification problem.",
+      "C": "As k increases, the model is more likely to overfit.",
+      "D": "The bias increases with the increase in the value of k.",
+      "E": "The variance increases with the increase in the value of k."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Assume that perceptron algorithm is applied to a data set in which the maximum lengths of the data points is 5 and the value of margin (\u03b3) of the optimal separator is 1. If the algorithm has made 5 mistakes at some point of the execution of the algorithm, which of the following can be a valid squared length of the weight vector obtained in the 6th iteration?",
+    "options": {
+      "A": "30",
+      "B": "120",
+      "C": "50",
+      "D": "160"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Let w*, \u03be* be the optimal primal solutions, and \u03b1*, \u03b2* be the optimal dual solutions of the soft-margin SVM problem. If \u03b1\u1d62* = 0, select the correct options.",
+    "options": {
+      "A": "The bribe paid by the i-th data point is equal to C.",
+      "B": "The bribe paid by the i-th data point is equal to 0.",
+      "C": "i-th data point lies on the supporting hyper-planes.",
+      "D": "w* classifies the i-th data point correctly."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "With respect to the Lloyd's algorithm, choose the correct statements:",
+    "options": {
+      "A": "The partition configurations cannot repeat themselves.",
+      "B": "After doing the reassignments (consider at least one point reassigned to the new cluster), we might get the same means for all clusters.",
+      "C": "Objective function after making the re-assignments strictly reduces.",
+      "D": "Objective function after making the re-assignments strictly increases."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a naive Bayes classification problem with three binary features f\u2081, f\u2082, f\u2083 for a binary classification problem. We have a total of 8 training samples given in the table below:\n\n--------------------------------------------\nSample    f₁    f₂    f₃    y\n--------------------------------------------\nx₁        1     1     0     0\nx₂        1     0     0     0\nx₃        1     1     0     0\nx₄        1     0     0     0\nx₅        1     0     0     1\nx₆        1     1     0     1\nx₇        1     0     0     1\nx₈        1     1     0     1\n--------------------------------------------",
+    "question": "If a test point has label 0, what is the probability of x_test = [1 1 1]\u1d40? Assume that the Laplacian smoothing is done, (i.e., add two pseudo training examples x_pseudo\u2070 = [1 1 1]\u1d40 for class 0 and x_pseudo\u00b9 = [1 1 1]\u1d40 for class 1). Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.1,
+      "max": 0.14
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider a binary classification problem with three data points, denoted by {(x\u1d62, y\u1d62)}, where x\u1d62 represents a one-dimensional feature and y\u1d62 is the corresponding class label, as given below:\n{(1,+1), (2,\u22121), (3,+1)}\nEach data point gets uniform initial weights w\u2081\u207d\u2070\u207e = w\u2082\u207d\u2070\u207e = w\u2083\u207d\u2070\u207e = 1/3, where w\u1d62\u207d\u2070\u207e denotes the weight of i-th data point for 0-th iteration. Following are the two decision stumps given to us:\nh\u2081(x) = {+1, if x \u2264 2; -1, if x > 2}\nh\u2082(x) = {+1, if x \u2264 1; -1, if x > 1}",
+    "question": "We run the AdaBoost algorithm for one iteration by selecting the decision stump with the lowest training error. Then, find the value of w\u2081\u207d\u00b9\u207e + w\u2082\u207d\u00b9\u207e. Enter the answer correct to one decimal place.",
+    "options": null,
+    "correctOption": 0.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Suppose we are solving a binary classification task using a neural network with the following architecture:\n\n- Input: x = [1 1]\u1d40\n- Hidden layer: 2 neurons (ReLU activation)\n- Output layer: 1 neuron (sigmoid activation)\n\nThe weight parameters of the network are given as:\nW\u207d\u00b9\u207e = [[1, -1], [2, 0]], W\u207dout\u207e = [w\u2081\u207dout\u207e, w\u2082\u207dout\u207e]\u1d40 = [1, 0]\u1d40,\nwhere W\u207dj\u207e represents the weight associated with the j-th neuron for the i-th input feature.\n\nLoss function: L = \u2212[y log\u2091(\u0177) + (1 \u2212 y) log\u2091(1 \u2212 \u0177)], where \u0177 is the network output and y = 1 is the true label.",
+    "question": "Compute the cross-entropy loss L. Write the answer to correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.69,
+      "max": 0.696
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a linear regression problem with design matrix X \u2208 \u211d\u1d48\u02e3\u207f and target vector Y \u2208 \u211d\u207f\u02e3\u00b9, where n is the number of data points and d is the number of features. Let w \u2208 \u211d\u1d48\u02e3\u00b9 denote the vector of regression coefficients.\n\nX = [[1, 2], [3, 4]], Y = [5, 6]\u1d40",
+    "question": "Calculate w\u0302_ML and w\u0302_Ridge for the regularization parameter \u03bb = 1.",
+    "options": {
+      "A": "w\u0302_ML = [-1, 2]\u1d40, w\u0302_Ridge = [0.20, 1.49]\u1d40",
+      "B": "w\u0302_ML = [0.20, 1.49]\u1d40, w\u0302_Ridge = [-1.5, 3]\u1d40",
+      "C": "w\u0302_ML = [-1, 2]\u1d40, w\u0302_Ridge = [-1.5, 3]\u1d40",
+      "D": "w\u0302_ML = [-1, 2]\u1d40, w\u0302_Ridge = [0.37, 1.34]\u1d40"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a linear regression problem with design matrix X \u2208 \u211d\u1d48\u02e3\u207f and target vector Y \u2208 \u211d\u207f\u02e3\u00b9, where n is the number of data points and d is the number of features. Let w \u2208 \u211d\u1d48\u02e3\u00b9 denote the vector of regression coefficients.\n\nX = [[1, 2], [3, 4]], Y = [5, 6]\u1d40",
+    "question": "Repeat the ridge regression coefficients for \u03bb = 10. How do the estimate for w change as \u03bb increases?",
+    "options": {
+      "A": "The coefficients shrinks towards zero.",
+      "B": "The coefficients increases in magnitude.",
+      "C": "The coefficients remain unchanged."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "A medical researcher collects data to predict whether a patient has a certain disease based on the variables X\u2081 = age (in years), and X\u2082 = cholesterol level (in mg/dL). Let Y = 1 denotes the patients with the disease. A logistic regression model is fit which produces the estimates of w = [w\u2081, w\u2082]\u1d40 as:\nw\u0302\u2081 = \u22120.05, w\u0302\u2082 = 0.02.",
+    "question": "What is the probability that a 60-year-old patient with a cholesterol level of 200 mg/dL has the disease? Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.71,
+      "max": 0.75
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "A medical researcher collects data to predict whether a patient has a certain disease based on the variables X\u2081 = age (in years), and X\u2082 = cholesterol level (in mg/dL). Let Y = 1 denotes the patients with the disease. A logistic regression model is fit which produces the estimates of w = [w\u2081, w\u2082]\u1d40 as:\nw\u0302\u2081 = \u22120.05, w\u0302\u2082 = 0.02.",
+    "question": "How high should the cholesterol level be for the patient mentioned in the previous question to have a 50% chance of being diagnosed with the disease?",
+    "options": null,
+    "correctOption": 150,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the datapoints (\u22122,\u22122) with label +1 and (2, 2) with label \u22121. A hard margin SVM is applied on this dataset.",
+    "question": "Which of the following is the decision boundary for the given dataset?",
+    "options": {
+      "A": "x + y \u2265 0",
+      "B": "\u2212x \u2212 y \u2265 0",
+      "C": "x \u2212 y \u2265 0",
+      "D": "y \u2212 x \u2265 0"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "May 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the datapoints (\u22122,\u22122) with label +1 and (2, 2) with label \u22121. A hard margin SVM is applied on this dataset.",
+    "question": "The solution to the dual problem is given by \u03b1* = [1/16, 1/16]\u1d40. Find the width of the widest margin for this dataset. Enter the answer correct to two decimal places.\nNote: Width of the widest margin is given by 2/||w||.",
+    "options": null,
+    "correctOption": {
+      "min": 5.64,
+      "max": 5.68
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider the dataset D = {(-1, 1), (0, 0), (1, 1)}. What is the first principal component (i.e., the direction corresponding to the largest eigenvalue of the covariance matrix) for the above dataset?",
+    "options": {
+      "A": "[1]\n[0]",
+      "B": "[0]\n[1]",
+      "C": "[1]\n[1]",
+      "D": "[-1]\n[0]"
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "A team was given a dataset X ∈ ℝᵈˣⁿ where d denotes the number of features and n denotes the number of samples. They found that there are 20 samples in the dataset and each sample contains 100 features. Assume that the datapoints x₅ to x₂₀ are all linear combination of linearly independent data points {x₁, x₂, x₃, x₄}.",
+    "question": "Suppose the team applies linear PCA on the dataset and reconstructs the data points with zero error using k principal components (directions). For which value of k the reconstruction error would become zero?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "10",
+      "F": "100"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "A team was given a dataset X ∈ ℝᵈˣⁿ where d denotes the number of features and n denotes the number of samples. They found that there are 20 samples in the dataset and each sample contains 100 features. Assume that the datapoints x₅ to x₂₀ are all linear combination of linearly independent data points {x₁, x₂, x₃, x₄}.",
+    "question": "Suppose the team applies kernel PCA by computing the kernel matrix K = XᵀX on the dataset. Choose all the correct statements.",
+    "options": {
+      "A": "The principal directions given by the kernel PCA is the same as the one given by linear PCA",
+      "B": "Kernel PCA takes a lesser number of computations than linear PCA to find the principal directions",
+      "C": "The eigenvectors of the kernel matrix K are pointing in the same direction as the eigenvectors of the covariance matrix C",
+      "D": "Kernel PCA takes more computations than linear PCA to find the principal directions"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider Lloyd's algorithm for k-means clustering and choose the correct statements.",
+    "options": {
+      "A": "K-means algorithm may get stuck at local minima.",
+      "B": "It guarantees finding the optimal clustering(global minima) in every run.",
+      "C": "If the resources are limited and the data set is huge, it will be good to prefer K-means over K-means++.",
+      "D": "In practice, k should be as large as possible."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "We wish to fit a GMM with K = 2 for a dataset having 4 points. At the beginning of the tᵗʰ time step of the EM algorithm, we have θ⁽ᵗ⁾ as follows:\nπ₁ = 0.4, π₂ = 0.6\nμ₁ = 2, σ₁² = 1\nμ₂ = 3, σ₂² = 1\nThe density of the points given a particular mixture is given to you for all four points. f is the density of a Gaussian.\n----------------------------------------------------------\nxᵢ      f(xᵢ | zᵢ = 1)      f(xᵢ | zᵢ = 2)\n----------------------------------------------------------\n1            0.242              0.054\n2            0.399              0.242\n3            0.242              0.399\n4            0.054              0.242\n----------------------------------------------------------",
+    "question": "What is the value of λᵢₖ for i = 1 and k = 2 after the E-step? Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.22,
+      "max": 0.28
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a linearly independent set of data points\nX =  [ 1 1 -1]\n     [ 1 0  1]\n     [-1 1  1]\nand the corresponding label y = [0.5, 0, -0.5]ᵀ. Suppose we fit the data points using a simple linear regression model that minimizes squared error loss L(w) = Σ(wᵀxᵢ - yᵢ)².",
+    "question": "Compute the value of loss at w = w*, where w* = (XᵀX)⁻¹Xᵀy.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset with 3 features and 5 data points:\n------------------------------------------------------------\n        Feat₁    Feat₂    Feat₃       Y\n------------------------------------------------------------\n1         2        3        1       10.5\n2         3        1       d1         --\n3         1        2       9.5        --\n4         4        5       d2         --\n5         5        4       d3         --\n------------------------------------------------------------\n(d₁, d₂, d₃ ∈ ℝ)\nYou decide to train a linear regression model on this dataset. After training, you obtain the following weight vector\nw = [1.2, 0.5, 2.5]ᵀ\nNow, you decide to introduce L2 regularization to your model. You train the model again with a regularization parameter (λ) set to 0.5. The new regularized weight vector is:\nw_regularized = [0.9, 0.4, 1.5]ᵀ",
+    "question": "Based on the given data, using the regularized model, predict the target variable (Y) for the following data point.\nx_new = [2, 4, 3]ᵀ",
+    "options": {
+      "A": "7.9",
+      "B": "12.2",
+      "C": "11.9",
+      "D": "None of these"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset with 3 features and 5 data points:\n------------------------------------------------------------\n        Feat₁    Feat₂    Feat₃       Y\n------------------------------------------------------------\n1         2        3        1       10.5\n2         3        1       d1         --\n3         1        2       9.5        --\n4         4        5       d2         --\n5         5        4       d3         --\n------------------------------------------------------------\n(d₁, d₂, d₃ ∈ ℝ)\nYou decide to train a linear regression model on this dataset. After training, you obtain the following weight vector\nw = [1.2, 0.5, 2.5]ᵀ\nNow, you decide to introduce L2 regularization to your model. You train the model again with a regularization parameter (λ) set to 0.5. The new regularized weight vector is:\nw_regularized = [0.9, 0.4, 1.5]ᵀ\nThe target data point is x_new = [2, 4, 3]ᵀ.",
+    "question": "If you further reduce the regularization parameter (λ) to zero. What would be the new prediction for the target variable?",
+    "options": {
+      "A": "7.9",
+      "B": "12.2",
+      "C": "11.9",
+      "D": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider the following training dataset for a binary classification task:",
+    "question": "Q-1 is of form x < p. How many possible integer values can p take?",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764258791/sep23-1_qnjfak.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose you have a four-class classification problem where class label y ∈ {0, 1, 2, 3} and each training example xᵢ has binary features f₁, f₂, f₃ ∈ {0, 1}. How many parameters do we need to know to classify an example using Naive Bayes classifier?",
+    "options": null,
+    "correctOption": 15,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "The figure displays samples from dataset D, where each sample xᵢ ∈ ℝ². The green points belong to class 1 and red points belong to class 2.",
+    "question": "Suppose we run the perceptron learning algorithm by initializing the weight vector to zero. Does the algorithm converge (with zero error) in a finite number of iterations?",
+    "options": {
+      "A": "Yes, it will converge.",
+      "B": "No, it will never converge.",
+      "C": "Insufficient data"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764259406/sep23-2_ghqbck.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a logistic regression model that has been trained for a binary classification problem on a dataset in ℝ². The final weight vector learned by the model is w = [3/2, 5/12]ᵀ. Given a test data point as input to the model, it returns 1 as the predicted label if the probability output by the model is greater than 0.75 and 0 otherwise.",
+    "question": "What is the predicted label for the test data point x = [0, 2]ᵀ? Note that the probability output by a logistic regression model is P(y = 1 | x).",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a hard-margin SVM trained on a dataset in ℝ² for a binary classification task. Red points belong to class -1 and green points belong to class +1. The black-point is a test data-point. The dotted lines are the supporting hyperplanes for the SVM.",
+    "question": "What is the equation of the decision boundary? Select all options that are correct.",
+    "options": {
+      "A": "5x₁ + 6x₂ = 0",
+      "B": "(5/21)x₁ + (2/7)x₂ = 0",
+      "C": "(5/2)x₁ + 3x₂ = 0",
+      "D": "(27/2)x₁ + 21x₂ = 0"
+    },
+    "correctOption": ["A", "B", "C"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764259406/sep23-3_u9sppx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a hard-margin SVM trained on a dataset in ℝ² for a binary classification task. Red points belong to class -1 and green points belong to class +1. The black-point is a test data-point. The dotted lines are the supporting hyperplanes for the SVM.",
+    "question": "What is the width of the separation between the two supporting hyperplanes? Enter your answer correct to two decimal places. (Hint: Calculate width using formulae 2 / ||w||)",
+    "options": null,
+    "correctOption": {
+      "min": 5.32,
+      "max": 5.44
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764259406/sep23-3_u9sppx.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin Support Vector Machine (SVM) for a binary classification problem with a dataset in a two-dimensional space. The optimization problem for the soft-margin SVM is formulated as:\nMinimize (1/2)||w||² + C Σᵢ ξᵢ\nsubject to the constraints:\nyᵢ(w ⋅ xᵢ + b) ≥ 1 - ξᵢ and ξᵢ ≥ 0 for all i\nWhere C is a positive constant.",
+    "question": "Which of the following statements about the soft-margin SVM is correct?",
+    "options": {
+      "A": "When C = 0, the optimal value of the objective function of the soft-margin problem is 0.",
+      "B": "For a dataset with n data-points, there are 2n constraints for soft-margin SVM.",
+      "C": "A smaller value of C allows for a larger margin, potentially leading to less misclassifications on the training data.",
+      "D": "For a dataset with n data-points, there are n constraints for soft-margin SVM."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Which of the following statements are correct?",
+    "options": {
+      "A": "Underfitting models have high bias and low variance.",
+      "B": "Overfitting models have low bias and high variance.",
+      "C": "Generally, weak learners in the random forest tend to underfit.",
+      "D": "If the performance of each estimator in the bagging algorithm is almost identical, the benefit of using bagging to combine them may be minimal or insignificant.",
+      "E": "In random forests, multiple decision trees (estimators) are trained simultaneously, allowing for parallel processing and faster model training."
+    },
+    "correctOption": ["A", "B", "D", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Suppose we have trained four different models using the same training set D and have recorded the training error. The testing error for each model was also recorded using a separate test set. The recorded values are summarized in the table below\n------------------------------------------------------------\nModel    Training error    Test error\n------------------------------------------------------------\n1            0.2               1.8\n2            1.0               1.1\n3            0.5               0.7\n4            5.9               6.3\n------------------------------------------------------------",
+    "question": "Based on the above information, which of the following statement(s) is/are correct?",
+    "options": {
+      "A": "Model 4 tends to overfit.",
+      "B": "Model 4 tends to underfit.",
+      "C": "Model 1 tends to underfits.",
+      "D": "Model 1 tends to overfits."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a binary classification problem. Suppose that we have 10 samples and each sample belongs to a positive (+1) or a negative class (-1). Suppose we define the squared error loss as L(w) = Σ(h(xᵢ) - yᵢ)².",
+    "question": "For which of the following h(x) the loss function values can never be greater than 10?",
+    "options": {
+      "A": "h(xᵢ) = wᵀxᵢ",
+      "B": "h(xᵢ) = 1 / (1 + exp(-wᵀxᵢ))",
+      "C": "h(xᵢ) = sign(wᵀxᵢ)"
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Choose all the correct statements about neural networks",
+    "options": {
+      "A": "It can not be used for both regression and classification problems",
+      "B": "It can have more than two hidden layers",
+      "C": "The activation functions have to be non-linear to separate not linearly separable data points",
+      "D": "Each neuron in the neural network may or may not have bias associated with it"
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "The eigenvalues of the covariance matrix of a centered dataset in R\u2075 are 15, 5, 5, 0, 0. Standard PCA is performed on this dataset. What is the variance captured by the top two principal components expressed as a percentage of total variance?",
+    "options": {
+      "A": "80%",
+      "B": "60%",
+      "C": "20%",
+      "D": "15%"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "The user has provided an image showing a plot of Regularized Loss vs. f(\u03bb). The plot contains two curves, one for 'test' loss and one for 'train' loss. The 'test' loss curve is U-shaped, while the 'train' loss curve is monotonically decreasing as f(\u03bb) increases.",
+    "question": "Consider a regression problem that has a training and test dataset. Ridge regression is applied on the problem for various values of \u03bb. The training and test loss are plotted against some function of \u03bb, which we call f(\u03bb). Note that the continuous curves are obtained by connecting the points using a smooth curve. What is the most appropriate choice of f(\u03bb)? Recall that the regularized loss is the sum of the SSE and the regularization term. Note that SSE is the sum of squared errors.",
+    "options": {
+      "A": "1/\u03bb",
+      "B": "\u03bb",
+      "C": "\u03bb\u00b2",
+      "D": "log(\u03bb)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261153/sep24-1_oqtneu.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Match the characteristics given below with the appropriate ensemble technique.\n1. Decision stumps\n2. Deep decision trees\n3. Parallel execution\n4. Sequential execution",
+    "options": {
+      "A": "Bagging \u2192 (2), (3); Boosting \u2192 (1), (4)",
+      "B": "Bagging \u2192 (1), (4); Boosting \u2192 (2), (3)",
+      "C": "Bagging \u2192 (1), (3); Boosting \u2192 (2), (4)",
+      "D": "Bagging \u2192 (2), (4); Boosting \u2192 (1), (3)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The user has provided an image showing a hard-margin SVM decision boundary (w\u1d40x = 0) and supporting hyperplanes (w\u1d40x = 1 and w\u1d40x = -1). Two test data points, x\u2081 and x\u2082, are plotted. x\u2081 is in the region where w\u1d40x > 1, and x\u2082 is in the region where w\u1d40x < -1.",
+    "question": "Consider a hard-margin SVM that has been trained on a linearly separable dataset with positive margin. Two test data-points are given below along with the decision boundary and the supporting hyperplanes. Which of the following is true?",
+    "options": {
+      "A": "The predicted labels for x\u2081 and x\u2082 are 1 and -1 respectively.",
+      "B": "The predicted labels for x\u2081 and x\u2082 are -1 and 1 respectively.",
+      "C": "The predicted label for both data-points is 1.",
+      "D": "The predicted label for both data-points is -1."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261155/sep24-2_xs1wt7.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "For a dataset with features in R\u00b3, which of the following expresses the class conditional independence assumption in a Naive Bayes model? p(\u00b7) denotes probability.",
+    "options": {
+      "A": "p((x\u2081, x\u2082, x\u2083) | y) = p(x\u2081 | y) \u22c5 p(x\u2082 | y) \u22c5 p(x\u2083 | y)",
+      "B": "p((x\u2081, x\u2082, x\u2083) | y) = p(y) \u22c5 p(x\u2081 | y) \u22c5 p(x\u2082 | y) \u22c5 p(x\u2083)",
+      "C": "p((x\u2081, x\u2082, x\u2083) | y) = p((x\u2081, x\u2082, x\u2083), y) / p(y)",
+      "D": "p(y | (x\u2081, x\u2082, x\u2083)) = p((x\u2081, x\u2082, x\u2083), y) / p(x\u2081, x\u2082, x\u2083)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "The user has provided an image showing the result of k-means clustering on a dataset of eight points in a 2D plane (x\u2081, x\u2082). Four points belong to a cluster denoted by a filled square symbol, and the other four belong to a cluster denoted by an 'x' symbol. The square points are at (1,1), (1,0), (3,1), (3,0). The 'x' points are at (-3,-2), (-1,-2), (-1,-1), (0,-1).",
+    "question": "The result of k-means clustering on a dataset of eight points is displayed below. Four points belong to the cluster denoted by the filled square symbol and the rest belong to the cluster denoted by the x symbol. The cluster boundary is a line such that all points on it could belong to either of the two clusters. Which of the following is the equation of the cluster boundary?",
+    "options": {
+      "A": "2x\u2081 + x\u2082 = 0",
+      "B": "x\u2081 - 2x\u2082 = 0",
+      "C": "x\u2081 + x\u2082 = 0",
+      "D": "x\u2081 + 2x\u2082 = 0"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261154/sep24-3_frtn40.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "A hard-margin SVM is trained on a linearly separable dataset with a positive margin. The features are in R\u00b2. The optimal weight vector is [3, 4]\u1d40. Find the distance between the two supporting hyperplanes.",
+    "options": null,
+    "correctOption": 0.4,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a dataset for an unsupervised learning problem in which each data-point is either 1 or 0. This dataset is modeled using a Bernoulli distribution with parameter p. The MLE for p is 0.25. If the number of ones in the dataset is 10, find the number of zeros.",
+    "options": null,
+    "correctOption": 30,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Consider a decision stump (parent with two children). The parent node has 200 data-points out of which 50 belong to the positive class. The left child has 100 data-points out of which 50 belong to the positive class. Find the information gain. Use log\u2082. Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.26,
+      "max": 0.37
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Consider k : R\u1d48 \u00d7 R\u1d48 \u2192 R, a polynomial kernel of degree p. If the kernel always outputs a non-negative value, which of the following are possible values for p?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "3",
+      "D": "5"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a training dataset of 100 points for a binary classification problem with the following structure.\n\u2022 The features are in R\u00b2 and the labels are in {\u22121, 1}\n\u2022 For every data-point ((x\u2081, x\u2082), y) in the training dataset, x\u2081x\u2082 > 0 and x\u2081y > 0.",
+    "question": "Which of the following statements are true?",
+    "options": {
+      "A": "The dataset is linearly separable with a positive margin.",
+      "B": "The perceptron algorithm will terminate after a finite number of iterations when trained on this dataset.",
+      "C": "The dataset is linearly separable, but the margin may be zero.",
+      "D": "The dataset is not linearly separable."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a logistic regression model trained for a binary classification problem, with features in R\u00b2 and labels in {0, 1}. The probability that the test point [1, 1]\u1d40 belongs to class 1 is equal to 1 / (1 + e\u2070). Which of the following could be the weight vector of the logistic regression classifier? Select all possible answers.",
+    "options": {
+      "A": "[-1, 1]\u1d40",
+      "B": "[1, -3]\u1d40",
+      "C": "[1, 1]\u1d40",
+      "D": "[3, -1]\u1d40"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider a linearly separable dataset with a positive margin. The symbol \u03b1\u1d62* in the context of SVMs has its usual meaning. Are the following statements true or false?",
+    "question": "The weight vector output by the perceptron algorithm can be expressed as a linear combination of the data-points where the coefficients of the linear combination are integers.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a linearly separable dataset with a positive margin. The symbol \u03b1\u1d62* in the context of SVMs has its usual meaning. Are the following statements true or false?",
+    "question": "In the case of a hard-margin SVM, if \u03b1\u1d62* > 0, the point x\u1d62 is a support vector.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a linearly separable dataset with a positive margin. The symbol \u03b1\u1d62* in the context of SVMs has its usual meaning. Are the following statements true or false?",
+    "question": "If a soft-margin SVM is trained on this dataset, the optimal weight vector it returns will be the same as the one returned by a hard-margin SVM, irrespective of the value of the hyperparameter C.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 3 that has been trained on a dataset with features in R\u00b2. The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class -1. Symbols \u03be and \u03b1 have their usual meanings. Assume that w, \u03be\u1d62, \u03b1\u1d62 represent the optimal values.",
+    "question": "What is \u03be\u2081?",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261169/sep24-4_gwqu2s.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 3 that has been trained on a dataset with features in R\u00b2. The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class -1. Symbols \u03be and \u03b1 have their usual meanings. Assume that w, \u03be\u1d62, \u03b1\u1d62 represent the optimal values.",
+    "question": "What is \u03be\u2082?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261169/sep24-4_gwqu2s.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 3 that has been trained on a dataset with features in R\u00b2. The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class -1. Symbols \u03be and \u03b1 have their usual meanings. Assume that w, \u03be\u1d62, \u03b1\u1d62 represent the optimal values.",
+    "question": "What is \u03be\u2083?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261169/sep24-4_gwqu2s.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 3 that has been trained on a dataset with features in R\u00b2. The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class -1. Symbols \u03be and \u03b1 have their usual meanings. Assume that w, \u03be\u1d62, \u03b1\u1d62 represent the optimal values.",
+    "question": "What is \u03b1\u2081? If it cannot be determined exactly, enter -1.",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261169/sep24-4_gwqu2s.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 3 that has been trained on a dataset with features in R\u00b2. The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class -1. Symbols \u03be and \u03b1 have their usual meanings. Assume that w, \u03be\u1d62, \u03b1\u1d62 represent the optimal values.",
+    "question": "What is \u03b1\u2083? If it cannot be determined exactly, enter -1.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261169/sep24-4_gwqu2s.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a soft-margin SVM with C = 3 that has been trained on a dataset with features in R\u00b2. The decision boundary and the supporting hyperplanes are displayed below. Four points from the training dataset are also displayed. Green data-points belong to class 1 and red data-points belong to class -1. Symbols \u03be and \u03b1 have their usual meanings. Assume that w, \u03be\u1d62, \u03b1\u1d62 represent the optimal values.",
+    "question": "What is \u03b1\u2084? If it cannot be determined exactly, enter -1.",
+    "options": null,
+    "correctOption": -1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261169/sep24-4_gwqu2s.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Na\u00efve Bayes) and k-Nearest Neighbors",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the logistic loss.",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261170/sep24-5_s82d59.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the (SVM) hinge loss.",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261170/sep24-5_s82d59.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the perceptron loss.",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261170/sep24-5_s82d59.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Enter the number corresponding to the squared loss.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261170/sep24-5_s82d59.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The convex surrogates for the 0-1 loss are displayed below:",
+    "question": "Which of the following statements is true? ln = log\u2091.",
+    "options": {
+      "A": "The logistic loss and the (SVM) hinge loss intersect when (w\u1d40x)y = ln(e - 1).",
+      "B": "The logistic loss and the (SVM) hinge loss do not intersect.",
+      "C": "The logistic loss and the (SVM) hinge loss intersect when (w\u1d40x)y = ln(1 - 1/e).",
+      "D": "The logistic loss and the (SVM) hinge loss intersect when (w\u1d40x)y = 1/e."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764261170/sep24-5_s82d59.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following architecture of a neural network for a binary classification problem:\n-------------------------------------------------------\nLayer type         Number of neurons\n-------------------------------------------------------\nInput                    5\nHidden layer-1          10\nHidden layer-2          10\nOutput                   1\n-------------------------------------------------------",
+    "question": "How many learnable parameters does this network have? Ignore the biases in the computation.",
+    "options": null,
+    "correctOption": 160,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following architecture of a neural network for a binary classification problem:\n-------------------------------------------------------\nLayer type         Number of neurons\n-------------------------------------------------------\nInput                    5\nHidden layer-1          10\nHidden layer-2          10\nOutput                   1\n-------------------------------------------------------",
+    "question": "What is the most appropriate choice of activation function for the output layer if the binary cross-entropy loss is used?",
+    "options": {
+      "A": "Sigmoid",
+      "B": "Linear",
+      "C": "ReLU"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": "Consider the following architecture of a neural network for a binary classification problem:\n-------------------------------------------------------\nLayer type         Number of neurons\n-------------------------------------------------------\nInput                    5\nHidden layer-1          10\nHidden layer-2          10\nOutput                   1\n-------------------------------------------------------",
+    "question": "For a particular data-point, the activations after the first hidden layer in the forward pass is given to be [0.2 0.1 1.5 0.3 0.1 0 0.8 1.2 1 0]\u1d40. What is the activation function used in the first hidden layer?",
+    "options": {
+      "A": "ReLU",
+      "B": "Sigmoid"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "ET",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider a linear regression problem. Which of the following is the gradient of the SSE function with respect to w \u2208 R\u1d48, the weight vector, for a single data-point x \u2208 R\u1d48? y is the true label and \u0177 is the predicted label. Note that SSE is the sum of squared errors.",
+    "options": {
+      "A": "(\u0177 - y)x",
+      "B": "(w\u1d40x)w",
+      "C": "\u0177x",
+      "D": "xy"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  }
+]

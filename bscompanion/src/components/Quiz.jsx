@@ -145,6 +145,44 @@ const IconMusic = () => (
   </svg>
 );
 
+const IconMaximize = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M15 3h6v6" />
+    <path d="M9 21H3v-6" />
+    <path d="M21 3l-7 7" />
+    <path d="M3 21l7-7" />
+  </svg>
+);
+
+const IconMinimize = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M4 14h6v6" />
+    <path d="M20 10h-6V4" />
+    <path d="M14 10l7-7" />
+    <path d="M3 21l7-7" />
+  </svg>
+);
+
 // --- Chart Components (no changes here) ---
 const BreakdownChart = ({ data }) => {
   const chartRef = useRef(null);
@@ -901,6 +939,7 @@ const Quiz = () => {
 
   // --- NEW: Submission Modal State ---
   const [showSubmitModal, setShowSubmitModal] = useState(false);
+  const [isQuestionMaximized, setIsQuestionMaximized] = useState(false);
 
   const navContainerRef = useRef(null);
 
@@ -1333,11 +1372,19 @@ const Quiz = () => {
               }}
             />
           </div>
-          <div className="quiz-split">
+          <div className={`quiz-split ${isQuestionMaximized ? 'maximized' : ''}`}>
             <div 
               className="quiz-left" 
               ref={leftPanelRef}
+              data-scroll-stop
             >
+              <button 
+                className="btn-maximize-question"
+                onClick={() => setIsQuestionMaximized(!isQuestionMaximized)}
+                title={isQuestionMaximized ? "Minimize Question" : "Maximize Question"}
+              >
+                {isQuestionMaximized ? <IconMinimize /> : <IconMaximize />}
+              </button>
               <div className="question-block">
                 <div className="question-text">
                   <strong>Q{current + 1}:</strong>{" "}
@@ -1358,6 +1405,7 @@ const Quiz = () => {
             <div 
               className="quiz-right"
               ref={rightPanelRef}
+              data-scroll-stop
             >
               <div className="quiz-right-content">
                   <div className="options-container">

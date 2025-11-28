@@ -225,6 +225,53 @@ html, body {
   height: 100%; /* Ensure it fills the container */
 }
 
+.quiz-page-wrapper .quiz-split.maximized {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allow the main container to scroll */
+}
+
+.quiz-page-wrapper .quiz-split.maximized .quiz-left,
+.quiz-page-wrapper .quiz-split.maximized .quiz-right {
+  height: auto;
+  overflow: visible; /* Let content expand */
+  padding-right: 0;
+  margin-bottom: 2rem;
+}
+
+.quiz-page-wrapper .quiz-split.maximized .quiz-left {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.quiz-page-wrapper .btn-maximize-question {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.quiz-page-wrapper .btn-maximize-question:hover {
+  background: var(--bg-card-hover);
+  transform: scale(1.1);
+  border-color: var(--primary-color);
+}
+
+.quiz-page-wrapper .quiz-left {
+  position: relative; /* For absolute positioning of button */
+}
+
 .quiz-page-wrapper .quiz-left,
 .quiz-page-wrapper .quiz-right {
   min-width: 0;

@@ -7,13 +7,13 @@ import { FcGoogle } from "react-icons/fc";
 import "./AuthPage.css";
 
 // Floating elements
-import benchele from "../assets/images/benchele.png";
-import bookele from "../assets/images/bookele.png";
-import clockele from "../assets/images/clockele.png";
-import diceele from "../assets/images/diceele.png";
-import flowerele from "../assets/images/flowerele.png";
-import paperele from "../assets/images/paperele.png";
-import penele from "../assets/images/penele.png";
+const benchele = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143771/benchele_vri5fu.png";
+const bookele = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143899/bookele_btn8oe.png";
+const clockele = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143772/clockele_ismoxf.png";
+const diceele = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143772/diceele_lvgqvo.png";
+const flowerele = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143771/flowerele_typutl.png";
+const paperele = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143771/paperele_rf6ayo.png";
+const penele = "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764143772/penele_u4t7xi.png";
 
 const AuthPage = () => {
   const navigate = useNavigate();

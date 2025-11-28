@@ -1,0 +1,1942 @@
+[
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider that the three weight vectors w\u2081, w\u2082, and w\u2083 are learned for a six-dimensional dataset using a linear regression model or regularized linear regression model (Not in any particular order).\n\nw\u2081 = [0.5, 0, 0.25, 0, 0, \u22120.14]\nw\u2082 = [0.8, \u22120.23, 0.45, 0.2, 0.31, \u22120.54]\nw\u2083 = [0.24, \u22120.03, 0.1, 0.02, 0.09, \u22120.14]\n\nSelect the most appropriate match for these weight vectors.",
+    "question": "Select the most appropriate match for these weight vectors.",
+    "options": {
+      "A": "w\u2081 \u2192 Linear regression, w\u2082 \u2192 Ridge regression, w\u2083 \u2192 Lasso",
+      "B": "w\u2081 \u2192 Ridge regression, w\u2082 \u2192 Linear regression, w\u2083 \u2192 Lasso",
+      "C": "w\u2081 \u2192 Lasso, w\u2082 \u2192 Ridge regression, w\u2083 \u2192 Linear regression",
+      "D": "w\u2081 \u2192 Lasso, w\u2082 \u2192 Linear regression, w\u2083 \u2192 Ridge regression"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a binary classification dataset (classes are 0 and 1) with two binary features f\u2081, f\u2082 \u2208 {0, 1}. A Naive Bayes classifier is learned and the estimated parameters are given as:\nP(f\u2081 = 1|y = 0) = 0.2\nP(f\u2082 = 1|y = 0) = 0.5\nP(f\u2081 = 1|y = 1) = 0.6\nP(f\u2082 = 1|y = 1) = 0.4",
+    "question": "If a data point [1, 0] is predicted in class 0 by this classifier, what will be the possible values for the estimate of P(y = 1)? Assume that tie-breaking goes to class zero. Values in the options are correct to two decimal places.",
+    "options": {
+      "A": "(0, 0.22]",
+      "B": "[0.22, 1)",
+      "C": "(0, 0.29]",
+      "D": "[0.29, 1)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Is the following statement true or false:\nIf p\u2c7c\u02b8 = 0 for y = 0, then p\u2c7c\u02b8 = 1 for y = 1. Here, p\u2c7c\u02b8 denotes the estimate of the probability that j\u1d57\u02b0 feature value is 1 given that label is y (P(f\u2c7c = 1|y)).",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "A linear regression model trained on a dataset X \u2208 \u211d\u1d48\u02e3\u207f achieves zero training error for any label vector y. Which of the following options will necessarily hold true? Here I denotes an identity matrix of an appropriate size.",
+    "options": {
+      "A": "XX\u1d40 = I",
+      "B": "X\u1d40(XX\u1d40)\u207b\u00b9X = I",
+      "C": "(XX\u1d40)\u207b\u00b9Xy is a vector of all ones",
+      "D": "(XX\u1d40)\u207b\u00b9Xy is a vector of all zeros"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following three models for a one-dimensional dataset:\nModel 1: y = w\u2081x\u2081\nModel 2: y = w\u2081\u00b2x\u2081\nModel 3: y = w\u2081\u00b2x\u2081 + w\u2082x\u2081",
+    "question": "Select all the correct options. Assume that we have access to sufficiently large data points.",
+    "options": {
+      "A": "There may be some datasets for which model 1 performs better than model 2.",
+      "B": "There may be some datasets for which model 2 performs better than model 1.",
+      "C": "There may be some datasets for which model 3 performs better than model 1.",
+      "D": "There may be some datasets for which model 3 performs better than model 2.",
+      "E": "Model 1 and Model 3 perform equally well on all datasets."
+    },
+    "correctOption": ["A", "D", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Let w be the solution of the linear regression model and w\u0303 be the projection of w on the linear subspace spanned by the data points. Which of the following relationship is true?",
+    "options": {
+      "A": "training error for w = training error for w\u0303",
+      "B": "w = w\u0303",
+      "C": "training error for w \u2260 training error for w\u0303"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following statement:\nMAP estimate for linear regression weights w is equivalent to ridge regression.",
+    "question": "Which of the following conditions make the above statement true?",
+    "options": {
+      "A": "Prior for w is Laplace distribution with zero mean.",
+      "B": "Prior for w is N(0, \u03b3\u00b2I).",
+      "C": "y\u1d62|x\u1d62 ~ N(0, \u03c3\u00b2I)",
+      "D": "y\u1d62|x\u1d62 ~ N(w\u1d40x\u1d62, \u03c3\u00b2)"
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose you want to use a Naive Bayes classifier to predict the gender (male or female) of a person based on two features: their height (f\u2081) and whether their age is above 20 (f\u2082). Assume that the features f\u2081 and f\u2082 are conditionally independent given the gender of the person, and that the variances of the height distributions P(f\u2081|y = male) and P(f\u2081|y = female) are equal. How many parameters are required to classify a new example using this Naive Bayes classifier?",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a Naive Bayes model is trained on the following data matrix X of shape (d, n) and corresponding label vector y:\nX = [[1, 1, 0], [0, 1, 0]]\ny = [0, 1, 0]\u1d40\nAssume that p\u0302 and p\u0302\u2c7c\u02b8 are estimates for P(y = 1) and P(f\u2c7c = 1|y = y\u1d62), respectively. Here, f\u2c7c; i = 1, 2 is the i\u1d57\u02b0 feature. These parameters are estimated using MLE. If a test point has label 0, what will be the probability that the point is [0, 0]\u1d40?",
+    "question": "If a test point has label 0, what will be the probability that the point is [0, 0]\u1d40?",
+    "options": null,
+    "correctOption": 0.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Gaussian kernel regression with parameter \u03c3\u00b2 = 1/2 was applied to the following dataset with two features:\nX = [[1, 0, 1], [0, 1, 0]]\ny = [2.1, 1, 2, 1.2]\u1d40\nThe weight vector can be written as w = \u03d5(X)\u03b1, where \u03d5 is the transformation mapping corresponding to the kernel. The vector \u03b1 is given by [2.1, -2.1, 3, 0]\u1d40 which is obtained as (K)\u207b\u00b9y, where K is the kernel matrix.",
+    "question": "What will be the prediction for point [1, 1]\u1d40?",
+    "options": null,
+    "correctOption": 3,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose we have a binary classification dataset with 1000 data points, consisting of 600 points belonging to class 0 and 400 points belonging to class 1. If we use a k-nearest neighbor (k-NN) model with k = 900 to predict the class labels of the data points, how many data points will be classified correctly?",
+    "options": null,
+    "correctOption": 600,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Suppose we have 1000 training examples and want to compute the 10-fold Cross-Validation error. This error is calculated as the average of the errors obtained from n\u2081 iterations of the Cross-Validation process. Each iteration involves training a model on a subset of size n\u2082 of the training data and evaluating its performance on a disjoint subset of size n\u2083.",
+    "question": "What is the appropriate value of n\u2081?",
+    "options": null,
+    "correctOption": 10,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Suppose we have 1000 training examples and want to compute the 10-fold Cross-Validation error. This error is calculated as the average of the errors obtained from n\u2081 iterations of the Cross-Validation process. Each iteration involves training a model on a subset of size n\u2082 of the training data and evaluating its performance on a disjoint subset of size n\u2083.",
+    "question": "What is the appropriate value of n\u2082?",
+    "options": null,
+    "correctOption": 900,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Suppose we have 1000 training examples and want to compute the 10-fold Cross-Validation error. This error is calculated as the average of the errors obtained from n\u2081 iterations of the Cross-Validation process. Each iteration involves training a model on a subset of size n\u2082 of the training data and evaluating its performance on a disjoint subset of size n\u2083.",
+    "question": "What is the appropriate value of n\u2083?",
+    "options": null,
+    "correctOption": 100,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the label of leaf L\u2082? Enter 1 or \u22121.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321713/jan23-1_toxvbd.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the label of leaf L\u2084? Enter 1 or \u22121.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321713/jan23-1_toxvbd.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Select all true statements regarding the decision boundary of the decision tree.",
+    "options": {
+      "A": "The dotted line x\u2082 = d is not a part of the decision boundary. That is, not even a single point on x\u2082 = d is a part of the decision boundary.",
+      "B": "The entirety of the dotted line x\u2081 = a is a part of the decision boundary. That is, every single point on the dotted line is a part of the decision boundary.",
+      "C": "The entirety of the dotted line x\u2082 = c is a part of the decision boundary. That is, every single point on the dotted line is a part of the decision boundary.",
+      "D": "Only a finite segment of the dotted line x\u2081 = b is a part of the decision boundary. That is, there are some points on the dotted line that are not a part of the decision boundary."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321713/jan23-1_toxvbd.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the entropy of the leaf L\u2083? Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321713/jan23-1_toxvbd.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the entropy of the leaf L\u2084? Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.9,
+      "max": 0.93
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321713/jan23-1_toxvbd.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the information gain for the entire tree?\nUse the following formula:\nInformation gain = Entropy at root \u2212 Weighted entropy of leaves\n\n Enter your answer correct to three decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.58,
+      "max": 0.62
+    },
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321713/jan23-1_toxvbd.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Is the following statement true or false: The decision tree shown in the diagram is the \"best\" possible tree. That is, it achieves the greatest information gain from the root to the leaves.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321713/jan23-1_toxvbd.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "How many points are misclassified by the classifier?",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321711/jan23-2_fhfn4e.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2023",
+    "topic": "Neural Networks (Perceptron, MLP) and Clustering Algorithms (K-Means)",
+    "context": null,
+    "question": "Consider another linear classifier with w' = 3w. How many points are misclassified by this new classifier?",
+    "options": null,
+    "correctOption": 5,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764321711/jan23-2_fhfn4e.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a binary classification problem with a training dataset of 80 points, evenly distributed between two classes (40 points in each class). You decide to train a k-NN algorithm with k = 3. Each point is considered its own neighbor during classification.",
+    "question": "What is the minimum number of misclassifications that can occur in the training dataset when using this k-NN algorithm?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a binary classification problem with a training dataset of 80 points, evenly distributed between two classes (40 points in each class). You decide to train a k-NN algorithm with k = 3. Each point is considered its own neighbor during classification.",
+    "question": "Assuming there are outliers, the decision boundary becomes smoother with increasing value of k in a k-NN algorithm (Fill in 1 for yes and 0 for no)",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a regression problem where you are tasked with predicting the sale prices of houses based on their square footage. You decide to experiment with two different models:\nModel P: \u0177\u1d62 = w\u2080 + w\u2081x\nModel Q: \u0177\u1d62 = w\u2080 + w\u2081x + w\u2082x\u00b2\n\nThe training dataset consists of information on 200 houses, and you use the models to make predictions on a test dataset of 50 houses. The Mean Squared Error (MSE) is chosen as the evaluation metric.",
+    "question": "Considering the specific context of predicting house prices based on square footage, which model is more likely to provide accurate predictions on the training dataset?",
+    "options": {
+      "A": "Model P",
+      "B": "Model Q",
+      "C": "Both models are equally likely to provide accurate predictions",
+      "D": "It depends on the distribution of house prices in the dataset"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a regression problem where you are tasked with predicting the sale prices of houses based on their square footage. You decide to experiment with two different models:\nModel P: \u0177\u1d62 = w\u2080 + w\u2081x\nModel Q: \u0177\u1d62 = w\u2080 + w\u2081x + w\u2082x\u00b2\n\nThe training dataset consists of information on 200 houses, and you use the models to make predictions on a test dataset of 50 houses. The Mean Squared Error (MSE) is chosen as the evaluation metric.",
+    "question": "Identify the factors that could influence the model's performance on the training dataset in this housing price prediction scenario. Select all correct statements:",
+    "options": {
+      "A": "Model P may struggle to capture non-linear relationships present in house price data.",
+      "B": "Model Q might be sensitive to outliers in the square footage variable.",
+      "C": "The choice between Model P and Model Q depends on the budget constraints of potential homebuyers.",
+      "D": "Model Q will always perform well on the test dataset."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a naive Bayes model is trained on the following data matrix X of shape (d, n) and corresponding label vector y:\nX =  [1  0  0  0]\n     [0  1  0  1]\n     [0  1  1  0]\n\ny =  [1  0  1  1]\u1d40\n\nAssume that p\u0302 and p\u0302\u2c7c\u1d4f are estimates for P(y = 1) and P(f\u2c7c = 1|y = y\u2096), respectively. Here, f\u2c7c; j = 1, 2, 3 is the j\u1d57\u02b0 feature. These parameters are estimated using MLE.",
+    "question": "Calculate the value of p\u0302\u2082\u00b9",
+    "options": null,
+    "correctOption": {
+      "min": 0.3,
+      "max": 0.35
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a naive Bayes model is trained on the following data matrix X of shape (d, n) and corresponding label vector y:\nX =  [1  0  0  0]\n     [0  1  0  1]\n     [0  1  1  0]\n\ny =  [1  0  1  1]\u1d40\n\nAssume that p\u0302 and p\u0302\u2c7c\u1d4f are estimates for P(y = 1) and P(f\u2c7c = 1|y = y\u2096), respectively. Here, f\u2c7c; j = 1, 2, 3 is the j\u1d57\u02b0 feature. These parameters are estimated using MLE.",
+    "question": "Calculate the value of p\u0302\u2081\u00b9",
+    "options": null,
+    "correctOption": {
+      "min": 0.3,
+      "max": 0.35
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a dataset with the following data points and the target variable:\n\n--------------------\nSample No    x    y\n--------------------\n1            3    8\n2            0    3\n3            5    12\n4            6    13\n--------------------\n\nThe linear regression model is given by y = w\u2080 + w\u2081x. Assume that the Leave-One-Out Cross-Validation technique is applied.",
+    "question": "Enter the value of w\u2081 obtained when the 3rd sample is used as the validation data point.",
+    "options": null,
+    "correctOption": {
+      "min": 1.65,
+      "max": 1.7
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a dataset with the following data points and the target variable:\n\n--------------------\nSample No    x    y\n--------------------\n1            3    8\n2            0    3\n3            5    12\n4            6    13\n--------------------\n\nThe linear regression model is given by y = w\u2080 + w\u2081x. Assume that the Leave-One-Out Cross-Validation technique is applied.",
+    "question": "What will be the predicted value for the left-out data point?",
+    "options": {
+      "A": "12",
+      "B": "13",
+      "C": "12.3",
+      "D": "11.3",
+      "E": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "Kernel regression with a polynomial kernel of degree three is applied on a data set {X, y}. Let the weight vector be given by w = \u03d5(X)\u1d40[2.3, -1.0, 0.4, -0.7]\u1d40. Here \u03d5(X) is the transformed data matrix whose i\u1d57\u02b0 column is \u03d5(x\u1d62). What will be the prediction for the data point [0, 0, 0, 0]\u1d40?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose you have a five-class classification problem where class label y \u2208 {0, 1, 2, 3, 4} and each training example x\u1d62 has binary features f\u2081, f\u2082, f\u2083 \u2208 {0, 1}. How many parameters do we need to know to classify an example using Naive Bayes classifier?",
+    "options": null,
+    "correctOption": {
+      "min": 19.0,
+      "max": 20.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Let X be the data matrix of shape (d, n) and y be the corresponding label vector. A linear regression model of the form \u0177\u1d62 = w\u1d40x\u1d62 is fit using the squared error on the same dataset. If the solution w* to the optimization problem is orthogonal to the subspace spanned of the data point (columns of matrix X), what will be the squared error?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "||y||\u00b2",
+      "D": "Insufficient information to answer"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Given a design matrix X \u2208 \u211d\u1d48\u02e3\u207f and a target vector Y \u2208 \u211d\u207f\u02e3\u00b9, where d represents the number of features, n represents the number of data points, and the data is defined as:\nX = [[1, 2], [3, 4]]\nY = [[3], [5]]\nCalculate the coefficients \u03b2 for Ridge regression with \u03bb = 1.",
+    "options": {
+      "A": "\u03b2 = [0.5, 0.5]",
+      "B": "\u03b2 = [1, 0.5]",
+      "C": "\u03b2 = [0.54, 0.88]",
+      "D": "\u03b2 = [0.67, 0.33]",
+      "E": "None of these"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": null,
+    "question": "The training dataset for a binary classification problem is as follows:\n{ (u, 1), (-2u, 0), (3u, 1), (-4u, 0) }\nwhere u \u2208 \u211d\u1d48 is a constant, and the labels belong to 0, 1. Let w be the weight vector of a linear classifier. What condition should the weight vector satisfy for the zero-one loss to be zero on this dataset?",
+    "options": {
+      "A": "w\u1d40u < 0",
+      "B": "w\u1d40u > 0",
+      "C": "w\u1d40u = 0",
+      "D": "We can never find a w for which the zero-one loss becomes zero on this dataset."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "An image shows a 2D coordinate system with axes x\u2081 and x\u2082. A line with a negative slope passes through the origin, representing a decision boundary. A vector w is shown perpendicular to this line, pointing into the first quadrant. Five data points are plotted: x\u2081 and x\u2085 are in the second quadrant, x\u2082 and x\u2083 are in the first quadrant, and x\u2084 is in the fourth quadrant on the decision boundary.",
+    "question": "Consider the following data-points in a binary classification problem. w is the weight vector corresponding to a linear classifier. The labels are +1 and -1.\nWhich of the following statements are true?",
+    "options": {
+      "A": "0 < w\u1d40x\u2081 < w\u1d40x\u2082 < w\u1d40x\u2083",
+      "B": "w\u1d40x\u2084 = 0",
+      "C": "0 < w\u1d40x\u2082 < w\u1d40x\u2081 < w\u1d40x\u2083",
+      "D": "w\u1d40x\u2085 < 0",
+      "E": "w\u1d40x\u2083 < 0"
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322802/jan24-1_z1mq3d.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Select all true statements.",
+    "options": {
+      "A": "In Decision tree, if a question Q\u2081 is \"better\" than question Q\u2082, then information gains for Q\u2081 is greater than information gains Q\u2082 always.",
+      "B": "The training dataset is required while predicting the label of a test-point in the k-NN algorithm.",
+      "C": "A question of the form f\u2096 \u2264 \u03b8 always partitions the dataset into two non-empty sets.",
+      "D": "The depth of the tree is a hyperparameter and has to be chosen using cross validation.",
+      "E": "Decision trees are prone to overfit if the maximum depth is set too low."
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Below is the constrained version of the ridge regression optimization problem:\n\nmin_{w\u2208\u211d^d} \u03a3_{i=1 to n} (w\u1d40x\u1d62 - y\u1d62)\u00b2\nsubject to ||w||\u00b2 \u2264 \u03b8.\n\nFollowing are the weight vectors to be considered, along with the mean squared error (MSE) produced by each:\nw\u2081 = [1 1 1]\u1d40, MSE = 2\nw\u2082 = [0 2 1 3]\u1d40, MSE = 7\nw\u2083 = [1 2 0 1]\u1d40, MSE = 1\nw\u2084 = [2 1 1 2]\u1d40, MSE = 8",
+    "question": "If \u03b8 = 10, which of the following weight vectors will be selected as the final weight vector by ridge regression?",
+    "options": {
+      "A": "w\u2081",
+      "B": "w\u2082",
+      "C": "w\u2083",
+      "D": "w\u2084"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a k-class classification problem with five binary features f\u2081, f\u2082, f\u2083, f\u2084, and f\u2085, where k > 2.",
+    "question": "How many parameters need to be estimated to learn a Naive Bayes classifier?",
+    "options": {
+      "A": "5k",
+      "B": "6k \u2212 1",
+      "C": "(6k \u2212 1)\u2075",
+      "D": "3k - 3"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "p is the proportion of points with label 1 in some node in a decision tree.",
+    "question": "Which of the following statements are true?",
+    "options": {
+      "A": "As the value of p increases from 0 to 1, the impurity of the node increases.",
+      "B": "As the value of p increases from 0 to 1, the impurity of the node decreases.",
+      "C": "The impurity of the node does not depend on p.",
+      "D": "p = 0.5 correspond to the case of maximum impurity."
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "What is the main purpose of using Laplace smoothing in Na\u00efve Bayes?",
+    "options": {
+      "A": "To prevent numerical errors when calculating the variance of Gaussian features.",
+      "B": "To ensure that unseen categorical feature values receive small but nonzero probabilities.",
+      "C": "To strengthen the model's predictions by increasing the weight of certain features.",
+      "D": "To balance the likelihood values of all features before computing posterior probabilities."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider the following feature (x) along with its label (y):\n-----------------\nx    y\n-----------------\n-1   1\n1    1\n-2   1\n2    0\n3    0\n4    1\n-----------------\n\nIf you are provided with the following two questions, which one should you choose for the first(top) node of the decision tree?\n\n(a) x \u2264 -2\n(b) x \u2264 -1\n\nRecall: Information gain = Entropy(D) \u2212 \u03b3Entropy(D_yes) \u2212 (1 \u2212 \u03b3)Entropy(D_No)\n\nUse the following values if required:\nlog\u2082(3/4) = \u22120.41, log\u2082(4/5) = \u22120.32, log\u2082(1/5) = \u22122.32, log\u2082(1/4) = \u22122, log\u2082(1/2) = \u22121.",
+    "question": "Which one should you choose for the first(top) node of the decision tree?",
+    "options": {
+      "A": "(a)",
+      "B": "(b)",
+      "C": "Insufficient information"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Polynomial kernel in kernel regression model is expressed as:\nK(x, x') = (x\u1d40x' + 1)\u1d48",
+    "question": "What role does K(x, x') play in kernel regression?",
+    "options": {
+      "A": "It ensures that the regression model remains linear.",
+      "B": "It computes the similarity between data points in a transformed feature space.",
+      "C": "It allows the model to capture non-linear relationships by mapping data to a higher-dimensional space.",
+      "D": "It helps in reducing the variance of the model.",
+      "E": "It minimizes the loss function in regression problems."
+    },
+    "correctOption": ["B", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Let w\u0302R and w\u0302 be the ridge coefficient estimate and the least squares estimate, respectively, of the linear regression problem.",
+    "question": "Which of the following holds true?",
+    "options": {
+      "A": "For \u03bb = 0, ||w\u0302R||\u00b2 / ||w\u0302||\u00b2 = 1",
+      "B": "For \u03bb = 0, ||w\u0302R||\u00b2 / ||w\u0302||\u00b2 = 0",
+      "C": "For \u03bb = \u221e, ||w\u0302R||\u00b2 / ||w\u0302||\u00b2 = 0",
+      "D": "For \u03bb = \u221e, ||w\u0302R||\u00b2 / ||w\u0302||\u00b2 = 1"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a kernel regression problem on the following dataset with two features:\n{(x\u2081, y\u2081), (x\u2082, y\u2082), (x\u2083, y\u2083)}\nwhere:\nx\u2081 = [1 2]\u1d40, y\u2081 = 3,   x\u2082 = [2 3]\u1d40, y\u2082 = 5,   x\u2083 = [3 4]\u1d40, y\u2083 = 7\n\nThe kernel function is given as:\nK(x, x') = (1 + x\u1d40x')\u00b2\n\nand the optimal coefficients \u03b1\u1d62 are given as:\n\u03b1 = [0.5 1.0 1.5]\u1d40",
+    "question": "Then, what will be the predicted value for the data point [2 2]\u1d40?",
+    "options": null,
+    "correctOption": 483,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a Naive Bayes problem with three features, f\u2081, f\u2082 and f\u2083 for a binary classification problem. We have a total of 6 training samples given in the table below:\n-------------------------\nSample   f\u2081   f\u2082   f\u2083   y\n-------------------------\nx\u2081       0    1    1    0\nx\u2082       1    0    1    0\nx\u2083       0    0    1    0\nx\u2084       0    0    0    1\nx\u2085       1    0    1    1\nx\u2086       0    1    0    1\n-------------------------",
+    "question": "For x_test = [1 1 0]\u1d40, what output would Naive Bayes model predict assuming that no Laplacian smoothing has been done as part of the algorithm?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a linear regression model y\u1d62 = w\u1d40x\u1d62 with an initial weight w = [3].\n------------\nx\u1d62   y\n------------\n1    4\n2    7\n3    10\n4    13\n------------",
+    "question": "Using the squared loss function and a learning rate of \u03b7 = 0.2, compute the updated weight after one iteration of gradient descent for the following dataset:\nUse \u2207f(w) = 2(XX\u1d40)w - 2Xy",
+    "options": null,
+    "correctOption": 7,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a linear regression model y\u1d62 = w\u1d40x\u1d62 with an initial weight w = [3].\n------------\nx\u1d62   y\n------------\n1    4\n2    7\n3    10\n4    13\n------------",
+    "question": "If we stop the algorithm at the weight calculated in the previous question, what will be the predicted value for the data point, x\u2081 = 5?",
+    "options": null,
+    "correctOption": 35,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following 2D data points along with its labels:\n--------------------\nx             y\n--------------------\n[1  1]\u1d40       1\n[1 -1]\u1d40       1\n[2  1]\u1d40       1\n[2  2]\u1d40       1\n[2 -2]\u1d40       0\n[3 -3]\u1d40       0\n[4 -1]\u1d40       0\n--------------------",
+    "question": "If we use a k-NN algorithm with k= 3, what would be the predicted label for x_test = [4 0]\u1d40?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following 2D data points along with its labels:\n--------------------\nx             y\n--------------------\n[1  1]\u1d40       1\n[1 -1]\u1d40       1\n[2  1]\u1d40       1\n[2  2]\u1d40       1\n[2 -2]\u1d40       0\n[3 -3]\u1d40       0\n[4 -1]\u1d40       0\n--------------------",
+    "question": "Compute the Leave-one-out cross validation (LOOCV) error for the 3- nearest neighbour (3-NN) algorithm on this dataset. Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.41,
+      "max": 0.45
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Jan 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following 2D data points along with its labels:\n--------------------\nx             y\n--------------------\n[1  1]\u1d40       1\n[1 -1]\u1d40       1\n[2  1]\u1d40       1\n[2  2]\u1d40       1\n[2 -2]\u1d40       0\n[3 -3]\u1d40       0\n[4 -1]\u1d40       0\n--------------------",
+    "question": "Is it possible to reduce the cross-validation error obtained in the previous question by changing the label of certain points?",
+    "options": {
+      "A": "Yes",
+      "B": "No",
+      "C": "Cannot conclude from the given information."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a training dataset of n points for a regression problem. Assume that the model is linear. Let w\u2081 and w\u2082 be the optimal weight vectors obtained from solving the following optimization problems.\n\nw\u2081 = arg min_w \u03a3\u1d62\u208c\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b2\n\nw\u2082 = arg min_w \u03a3\u1d62\u208c\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b3",
+    "question": "Choose the most appropriate answer.",
+    "options": {
+      "A": "w\u2081 will generalize better than w\u2082 on the test dataset.",
+      "B": "w\u2082 will generalize better than w\u2081 on the test dataset.",
+      "C": "Both models will show identical performance on the test dataset."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "The training dataset for a binary classification problem is as follows:\n{ (u, 1), (\u2212u, 0), (2u, 1), (\u22122u, 0) }\nwhere, u \u2208 R\u1d48 is a non zero constant and each element in the set given above is a data-point of the form (x\u1d62, y\u1d62). The labels lie in {0, 1}. Consider a linear classifier with weight vector w.",
+    "question": "What condition should the weight vector satisfy for the zero-one loss to be zero on this dataset?",
+    "options": {
+      "A": "w\u1d40u < 0",
+      "B": "w\u1d40u > 0",
+      "C": "w\u1d40u = 0",
+      "D": "We can never find a w for which the zero-one loss becomes zero on this dataset."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a linear regression model that was trained on dataset X of shape (d, n).",
+    "question": "Which of the following techniques could potentially decrease the loss on the training data (assuming the loss is the squared error)?",
+    "options": {
+      "A": "Adding a dummy feature in the dataset and learning the intercept w\u2080 as well.",
+      "B": "Penalizing the model weights with L2 regularization.",
+      "C": "Penalizing the model weights with L1 regularization.",
+      "D": "Training the kernel regression model of degree 2."
+    },
+    "correctOption": ["A", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Which of the following statements are true about the decision tree algorithm?",
+    "options": {
+      "A": "Decision trees are prone to overfit if the maximum depth is set too low.",
+      "B": "Decision trees are prone to underfit if the maximum depth is set too low.",
+      "C": "Decision trees are sensitive to small perturbations in the dataset and can result in different tree structures.",
+      "D": "Decision trees can handle both numerical and categorical features."
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Which of the following statements is/are true regarding solution of Ridge regression problem?",
+    "options": {
+      "A": "If there are multiple w solutions for minimizing mean square error, then w_R will be the one with least norm.",
+      "B": "If there are multiple w solutions for minimizing mean square error, then w_R will be the one with highest norm.",
+      "C": "Prior for w is N(0, \u03b3\u00b2I) and y\u1d62|x\u1d62 ~ N(w\u1d40x\u1d62, \u03c3\u00b2)",
+      "D": "Prior for w is N(1, \u03b3\u00b2I) and y\u1d62|x\u1d62 ~ N(0, \u03c3\u00b2)"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider kernel regression with the kernel function (x\u1d40x\u2082 + 2)\u00b2 applied on the following dataset.\nX = [[1, 0, 2, 0, 3, 0], [0, 1, 0, 2, 0, 3], [0, 0, 0, 0, 0, 0]]\nThe optimal weight vector w* is given by:\nw* = \u03c6(X)[0.1, 2, 3.9, 5, 6, 8]\u1d40\nwhere \u03c6 is transformation mapping corresponding to the given kernel.",
+    "question": "What will be the prediction for the data point [0, 0, 1]\u1d40?",
+    "options": null,
+    "correctOption": 100,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a ridge regression model with the loss L(w) = ||X\u1d40w - y||\u00b2 + \u03bb||w||\u00b2 is trained on a given dataset with \u03bb = 0.1, 0, 1, 10, 100.",
+    "question": "Which of the following value of \u03bb is more likely to underfit the model?",
+    "options": null,
+    "correctOption": 100,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following data set: X = [8, 6, 10]\nAssuming a ridge penalty \u03bb = 100, what will be the value of w_ridge / w_MLE?\nHere w_ridge and w_MLE are the Ridge and MLE estimates of the weight vectors, respectively. Assume that the label vector y of shape (3, 1) is known.",
+    "question": "Enter your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.65,
+      "max": 0.7
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "A binary classification dataset contains only one feature and the data points given the label follow the Gaussian distributions whose means and variances are already estimated as:\nx|(y=0) ~ N(0, 1)\nx|(y=1) ~ N(2, 2)",
+    "question": "What will be the prediction for the point x = 1? Assume that p\u0302, an estimate for P(y=1), is 0.5.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider a binary classification problem and a decision tree that is being trained to classify the points. In one of the internal nodes in this tree, 75% of the data-points belong to one of the two classes and the rest belong to the other class. You are not given the information about which class is more numerous in this node.\nBased on the above data, answer the given subquestions.",
+    "question": "Do you have enough information to find the entropy of this node?",
+    "options": {
+      "A": "Yes",
+      "B": "No"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider a binary classification problem and a decision tree that is being trained to classify the points. In one of the internal nodes in this tree, 75% of the data-points belong to one of the two classes and the rest belong to the other class. You are not given the information about which class is more numerous in this node.\nBased on the above data, answer the given subquestions.",
+    "question": "If the answer to the previous questions is 'Yes', find the entropy of the node. Use log\u2082 and enter your answer correct to three decimal places. If the answer to the previous question is 'No', enter -1 as your answer.",
+    "options": null,
+    "correctOption": {
+      "min": 0.79,
+      "max": 0.83
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a probability distribution over (X, y) where features are one-dimensional and y \u2208 {+1, \u22121}. Let X|(y = 1) follow a uniform distribution over [0, 4] and X|(y = \u22121) follows a uniform distribution over [2, 4].\nBased on the above data, answer the given subquestions.",
+    "question": "If p = P(y = 1) is estimated to be 0.4, what will be the prediction for the point x = 3 using the Bayes classifier? Enter 1 or -1.",
+    "options": null,
+    "correctOption": -1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a probability distribution over (X, y) where features are one-dimensional and y \u2208 {+1, \u22121}. Let X|(y = 1) follow a uniform distribution over [0, 4] and X|(y = \u22121) follows a uniform distribution over [2, 4].\nBased on the above data, answer the given subquestions.",
+    "question": "Let x = 2 and let p\u0302 be the estimate for p = P(y = 1). Find conditions on p\u0302 such that the Bayes classifier predicts 1 for this x. Consider that the tie-breaker is predicted in class 1.",
+    "options": {
+      "A": "p\u0302 \u2264 1/4",
+      "B": "p\u0302 \u2265 1/4",
+      "C": "p\u0302 \u2264 2/3",
+      "D": "p\u0302 \u2265 2/3"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a probability distribution over (X, y) where features are one-dimensional and y \u2208 {+1, \u22121}. Let X|(y = 1) follow a uniform distribution over [0, 4] and X|(y = \u22121) follows a uniform distribution over [2, 4].\nBased on the above data, answer the given subquestions.",
+    "question": "If p = P(y = 1) is estimated to be 0.5 using MLE on a given training dataset, what will be the training error of the Bayes classifier for this problem?",
+    "options": null,
+    "correctOption": 0.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a naive Bayes model is trained on the following data matrix X of shape (d, n) and corresponding label vector y:\nX = [[1, 0, 0], [0, 1, 0], [0, 1, 1]], y = [1, 0, 1, 0]\u1d40\nAssume that p\u0302 and p\u0302\u2c7c\u02b8\u2071 are estimates for P(y=1) and P(f\u2c7c=1|y=y\u1d62), respectively. Here, f\u2c7c; i=1,2,3 is the i-th feature. These parameters are estimated using MLE. Do not apply any smoothing on the dataset.\nBased on the above data, answer the given subquestions.",
+    "question": "Calculate the value of p\u0302\u2082\u2070.",
+    "options": null,
+    "correctOption": 0.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a naive Bayes model is trained on the following data matrix X of shape (d, n) and corresponding label vector y:\nX = [[1, 0, 0], [0, 1, 0], [0, 1, 1]], y = [1, 0, 1, 0]\u1d40\nAssume that p\u0302 and p\u0302\u2c7c\u02b8\u2071 are estimates for P(y=1) and P(f\u2c7c=1|y=y\u1d62), respectively. Here, f\u2c7c; i=1,2,3 is the i-th feature. These parameters are estimated using MLE. Do not apply any smoothing on the dataset.\nBased on the above data, answer the given subquestions.",
+    "question": "Calculate the value of p\u0302\u2082\u00b9.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Which of the following classifiers are certainly capable of achieving zero training error for any binary classification problem with features in R\u00b2? Note: while computing the training error for KNN, each data-point is its own neighbor.",
+    "options": {
+      "A": "Decision tree",
+      "B": "KNN with k = 1",
+      "C": "KNN with k = 5",
+      "D": "Naive Bayes"
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following training dataset for a linear regression problem with one feature:\n\n------------------\nx\u1d62     y\u1d62\n------------------\n1      1.2\n-1     0.1\n2      2.1\n-2     -1\n------------------",
+    "question": "Find the value of w*, the optimal weight.",
+    "options": null,
+    "correctOption": 0.73,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider the following dataset for a kernel regression problem with a polynomial kernel of degree two along with the coefficient vector \u03b1:\n\nX = [[1, 0, -1, 0], [0, 1, 0, -1]], y = [1, -1, 2, -2]\u1d40, \u03b1 = [\u03b1\u2081, -0.625, \u03b1\u2083, \u03b1\u2084]\u1d40",
+    "question": "If the prediction for the data-point [1, 0]\u1d40 is 0, find the value of \u03b1\u2081.",
+    "options": null,
+    "correctOption": 0.625,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the minimum depth of this tree?",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322935/may24-1_ralfqz.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "If the next iteration of gradient descent is expressed as w\u207d\u1d57\u207a\u00b9\u207e = w\u207d\u1d57\u207e + \u03b7w\u2096 with \u03b7 > 0, what would be the value of k?",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322937/may24-2_ah2ah8.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "If w\u207d\u1d57\u207e = [0.4, 0.1]\u1d40 and \u03b7 = 1/\u221a10, find ||w\u207d\u1d57\u207a\u00b9\u207e||, where we use the usual L\u2082 norm.",
+    "options": null,
+    "correctOption": 0.1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322937/may24-2_ah2ah8.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "A dataset for ridge regression has 1000 data-points. k-fold cross validation is performed to estimate the value of \u03bb in ridge regression with k = 4. For a given value of \u03bb:",
+    "question": "How many models have to be trained?",
+    "options": null,
+    "correctOption": 4,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "A dataset for ridge regression has 1000 data-points. k-fold cross validation is performed to estimate the value of \u03bb in ridge regression with k = 4. For a given value of \u03bb:",
+    "question": "While training each of these models, how many data-points does the training set have?",
+    "options": null,
+    "correctOption": 750,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "What kind of a regression problem is this?",
+    "options": {
+      "A": "Ridge regression",
+      "B": "LASSO regression"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-3_lanfpi.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "What is the optimal value of w\u2081?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-3_lanfpi.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "What is the optimal value of w\u2082?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-3_lanfpi.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Which of the following statements is true?",
+    "options": {
+      "A": "Feature-1 can be discarded.",
+      "B": "Feature-2 can be discarded.",
+      "C": "Any one of the two features can be discarded.",
+      "D": "Both features are equally important and neither of them can be discarded."
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-3_lanfpi.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Which of the following statements are true? Exactly two options are correct.",
+    "options": {
+      "A": "c\u2081 > c\u2082",
+      "B": "c\u2081 < c\u2082",
+      "C": "Total loss at optimal point is c\u2081 + \u03bb",
+      "D": "Total loss at optimal point is c\u2082 + \u03bb"
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-3_lanfpi.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the value of a?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-4_b9euix.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the value of b?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-4_b9euix.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Find the entropy of the root node. Use log\u2082.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-4_b9euix.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "If E_R is the entropy of the root and E_L is the weighted entropy of all the leaves, what is E_R - E_L? Use log\u2082.",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-4_b9euix.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "What is the predicted label of the test data-point [3, -4]\u1d40?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764322938/may24-4_b9euix.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following dataset for a binary classification problem in which the features are from {0, 1}\u00b3 and the labels are from {0, 1}.\nX = [[1, 0, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0], [1, 0, 1, 1, 0, 1]]\ny = [1, 1, 1, 0, 0, 0]\u1d40\nA Naive Bayes classifier is trained on this dataset. The parameters to be estimated are represented as p\u1d62\u02b8, which are presented in the form of the table given below. Recall that p\u1d62\u02b8 is the probability of feature i taking a value 1 in class y.\n\n------------------\ni    y=0    y=1\n------------------\n1    a      b\n2    c      d\n3    e      f\n------------------\n\nAssume that there is no smoothing. Answer the given subquestions.",
+    "question": "Find the value of c + d.",
+    "options": null,
+    "correctOption": 1.25,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following dataset for a binary classification problem in which the features are from {0, 1}\u00b3 and the labels are from {0, 1}.\nX = [[1, 0, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0], [1, 0, 1, 1, 0, 1]]\ny = [1, 1, 1, 0, 0, 0]\u1d40\nA Naive Bayes classifier is trained on this dataset. The parameters to be estimated are represented as p\u1d62\u02b8, which are presented in the form of the table given below. Recall that p\u1d62\u02b8 is the probability of feature i taking a value 1 in class y.\n\n------------------\ni    y=0    y=1\n------------------\n1    a      b\n2    c      d\n3    e      f\n------------------\n\nAssume that there is no smoothing. Answer the given subquestions.",
+    "question": "Find the value of a + c + e.",
+    "options": null,
+    "correctOption": 1.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following dataset for a binary classification problem in which the features are from {0, 1}\u00b3 and the labels are from {0, 1}.\nX = [[1, 0, 1, 1, 0, 0], [0, 1, 0, 1, 1, 0], [1, 0, 1, 1, 0, 1]]\ny = [1, 1, 1, 0, 0, 0]\u1d40\nA Naive Bayes classifier is trained on this dataset. The parameters to be estimated are represented as p\u1d62\u02b8, which are presented in the form of the table given below. Recall that p\u1d62\u02b8 is the probability of feature i taking a value 1 in class y.\n\n------------------\ni    y=0    y=1\n------------------\n1    a      b\n2    c      d\n3    e      f\n------------------\n\nAssume that there is no smoothing. Answer the given subquestions.",
+    "question": "Find the predicted label for the test point [0, 1, 0]\u1d40.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a multi-class classification problem with 3 classes and 4 features, all of which are binary. A generative model is used to model the joint distribution of the features and labels.",
+    "question": "Find the total number of independent (free) parameters in the model if the class conditional independence assumption is not enforced.",
+    "options": null,
+    "correctOption": 47,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "May 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a multi-class classification problem with 3 classes and 4 features, all of which are binary. A generative model is used to model the joint distribution of the features and labels.",
+    "question": "Find the total number of independent (free) parameters in the model if the class conditional independence assumption is enforced.",
+    "options": null,
+    "correctOption": 14,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider a training set {X, y}, where X \u2208 \u211d\u1d48\u02e3\u207f and the target y \u2208 \u211d\u207f. Suppose a team decided to use linear regression model, h = w\u1d40X where w \u2208 \u211d\u1d48\u02e3\u00b9 that minimizes the objective function L(w) given below\nL(w) = \u03a3\u1d62\u208c\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b2\nBased on the above data, answer the given subquestions.",
+    "question": "Let the dimensions of d = 3 and n = 100. What is the sum of the elements of X(X\u1d40w - y)? If you think the given information is insufficient, enter -1.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Consider a training set {X, y}, where X \u2208 \u211d\u1d48\u02e3\u207f and the target y \u2208 \u211d\u207f. Suppose a team decided to use linear regression model, h = w\u1d40X where w \u2208 \u211d\u1d48\u02e3\u00b9 that minimizes the objective function L(w) given below\nL(w) = \u03a3\u1d62\u208c\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b2\nBased on the above data, answer the given subquestions.",
+    "question": "Suppose we transform the data points X using a mapping \u03a6(\u00b7). Assume there exists a kernel matrix K for the mapping \u03a6(\u00b7). Moreover, we categorize the model as parametric and non-parametric according to the following definitions.\n\n\u2022 Parametric: The samples in the training set are not necessary for making predictions on a test sample\n\u2022 non-Parametric: All the samples in the training set are necessary for making predictions on a test sample\n\nCheck all that is true about the kernel regression.",
+    "options": {
+      "A": "The kernel regression is parametric",
+      "B": "The kernel regression is non-parametric",
+      "C": "The Kernel matrix K is positive semi-definite",
+      "D": "In general, Kernel regression is computationally expensive than a simple linear regression"
+    },
+    "correctOption": ["B", "C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a training set {X, y}, where X \u2208 \u211d\u1d48\u02e3\u207f and the target y \u2208 \u211d\u207f. Suppose a team decided to use linear regression model, h = w\u1d40X where w \u2208 \u211d\u1d48\u02e3\u00b9 that minimizes the objective function L(w) given below\nL(w) = \u03a3\u1d62\u208c\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b2\nBased on the above data, answer the given subquestions.",
+    "question": "The team modifies the relation as y = X\u1d40w + \u03f5 where \u03f5 ~ N(0, \u03c3\u00b2). Suppose that \u03c3\u00b2 = 1, d = 3 and n = 100. Assume that \u03a3\u1d62\u208c\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b2 = 0 for w = w*. What is the negative log-likelihood of the dataset (X, y) at w*? Use logarithm to base 10.",
+    "options": null,
+    "correctOption": {
+      "min": 39.0,
+      "max": 40.0
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "In a Ridge regression scenario with the following dataset:\nX = [[-2, 3, 4]]\nAnd the corresponding target vector:\nY = [[-15], [18], [24]]\nThe regularization parameter is set at \u03bb = 3.",
+    "question": "Calculate the ratio of the Maximum Likelihood Estimate (MLE) weight vector (w_MLE) to the Ridge weight vector (w_Ridge) and select the correct range.",
+    "options": {
+      "A": "(1.05, 1.20)",
+      "B": "(0.85, 0.95)",
+      "C": "(1, 1.1)",
+      "D": "(3, 3.5)"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Which of the following is/are the primary advantages of using L1 regularization",
+    "options": {
+      "A": "L1 regularization reduces the risk of overfitting.",
+      "B": "L1 regularization tends to produce sparse models.",
+      "C": "L1 regularization always improves the model's predictive accuracy on large datasets.",
+      "D": "L1 regularization is primarily used to increase model complexity."
+    },
+    "correctOption": ["A", "B"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Select all the statements that are true about decision trees and k-Nearest Neighbors (k-NN) in machine learning:",
+    "options": {
+      "A": "Decision trees are a supervised learning algorithm used for classifications.",
+      "B": "The k-NN algorithm is a lazy learner, which means it doesn't build an explicit model during the training phase.",
+      "C": "In k-NN, the value of k represents the number of features used for classification.",
+      "D": "k-Nearest Neighbors (k-NN) is a parametric model that requires estimating probability distributions.",
+      "E": "The depth of the tree is a hyperparameter and is typically chosen using cross-validation."
+    },
+    "correctOption": ["A", "B", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider that the three weight vectors w\u2081, w\u2082, and w\u2083 are learned for an eight-dimensional dataset using different regression models (Not in any particular order).\nw\u2081 = [0.32, -0.12, 0, 0.42, -0.18, -0.05, 0.2, -0.09]\nw\u2082 = [0.25, -0.08, 0.38, -0.22, 0.14, -0.31, 0.19, -0.12]\nw\u2083 = [0.22, -0.11, 0.04, 0.16, 0.08, -0.03, 0.1, -0.14]",
+    "question": "Select the most appropriate match for these weight vectors.",
+    "options": {
+      "A": "w\u2081 \u2192 Lasso regression, w\u2082 \u2192 Linear regression, w\u2083 \u2192 Ridge regression",
+      "B": "w\u2081 \u2192 Ridge regression, w\u2082 \u2192 Lasso regression, w\u2083 \u2192 Linear regression",
+      "C": "w\u2081 \u2192 Linear regression, w\u2082 \u2192 Ridge regression, w\u2083 \u2192 Lasso regression",
+      "D": "w\u2081 \u2192 Ridge regression, w\u2082 \u2192 Linear regression, w\u2083 \u2192 Lasso regression"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Given a design matrix X \u2208 \u211d\u1d48\u02e3\u207f and a target vector Y \u2208 \u211d\u207f\u02e3\u00b9, where d represents the number of features, n represents the number of data points, and the data is defined as:\nX = [[2, 3], [4, 1]]\nY = [[2], [4]]",
+    "question": "Calculate the coefficients \u03b2 for Ridge regression with \u03bb = 2.",
+    "options": {
+      "A": "\u03b2 = [0.75, 0.75]",
+      "B": "\u03b2 = [1, 0.5]",
+      "C": "\u03b2 = [0.5, 1]",
+      "D": "\u03b2 = [0.85, 0.12]",
+      "E": "None of these"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "You are working on a decision tree algorithm to classify whether a bank loan applicant will default on their loan based on several financial factors. The dataset includes Credit Score, Annual Income, Loan Amount, Loan Term as features. The target variable is binary: 1 for \"Default\" and 0 for \"No Default.\"\nYou have a dataset of 500 loan applicants, and you want to construct a decision tree to predict loan default. To determine the first split (root node), you'll use the information gain as the criterion. Here's the distribution of loan default in the dataset:\nDefault: 150 applicants No Default: 350 applicants",
+    "question": "Calculate the Entropy for the initial dataset.",
+    "options": null,
+    "correctOption": {
+      "min": 0.83,
+      "max": 0.92
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider the problem of classifying an input text as positive sentiment or negative sentiment. For example, the text \"I am happy\" is positive and the text \"I am a bit worried\" is negative. The dictionary that is used to encode the text into a vector contains 12 words. Suppose we prefer to use a generative learning algorithm that estimates the joint probability P(x, y), where x \u2208 {0, 1}\u00b9\u00b2 and y \u2208 {0, 1}. Assume that the features x\u1d62 in a sample are not independent given the label. How many parameters do we need to estimate from the given data? (Enter -1 if you think the given information is insufficient to find the answer)",
+    "options": null,
+    "correctOption": 8191,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Given a training dataset with 100 data points, how many distances would we have to compute in the process of predicting the label of test-point in the k-NN algorithm with k = 5",
+    "options": null,
+    "correctOption": 100,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "If the proportion of points belonging to class 1 in a node is p, for what value of p is the node's entropy maximum?",
+    "options": null,
+    "correctOption": 0.5,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following dataset with 6 samples along with the corresponding labels. Each sample has three binary features f\u2081, f\u2082, and f\u2083.\n\n-----------------------------------\nsample    f\u2081    f\u2082    f\u2083    y\n-----------------------------------\nx\u2081        1     1     0     1\nx\u2082        1     0     0     1\nx\u2083        1     0     0     0\nx\u2084        0     0     1     0\nx\u2085        1     0     1     0\nx\u2086        1     1     1     1\n-----------------------------------\n\nAssume that the features are conditionally independent given the label y. Suppose the test sample is x_test = [0, 1, 1]\u1d40.\nBased on the above data answer the given subquestions.",
+    "question": "What is the estimated probability that the test point belongs to class 0 (that is, p(y = 0|x_test))?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2023",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following dataset with 6 samples along with the corresponding labels. Each sample has three binary features f\u2081, f\u2082, and f\u2083.\n\n-----------------------------------\nsample    f\u2081    f\u2082    f\u2083    y\n-----------------------------------\nx\u2081        1     1     0     1\nx\u2082        1     0     0     1\nx\u2083        1     0     0     0\nx\u2084        0     0     1     0\nx\u2085        1     0     1     0\nx\u2086        1     1     1     1\n-----------------------------------\n\nAssume that the features are conditionally independent given the label y. Suppose the test sample is x_test = [0, 1, 1]\u1d40.\nBased on the above data answer the given subquestions.",
+    "question": "What will be the predicted label according to the Naive Bayes decision rule?",
+    "options": null,
+    "correctOption": 1,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Kernel regression with a polynomial kernel is applied on the following dataset with two features:\nX = [[1, 0, 0], [0, 1, 0]]\u1d40, y = [2, 1, 2]\u1d40\nWeight vector can be written as w = \u03c6(X)\u03b1, where \u03c6 is the transformation mapping corresponding to the kernel k(x\u1d62, x\u2c7c) = (1 + x\u1d62\u1d40x\u2c7c)\u00b2. The vector \u03b1 is given by (K)\u207b\u00b9y, where K is the kernel matrix.",
+    "question": "Compute K.",
+    "options": {
+      "A": " [1  1  1]\n  [1  4  1]\n  [4  1  1]",
+      "B": " [1  4  1]\n  [1  4  1]\n  [4  1  1]",
+      "C": " [4  4  1]\n  [4  1  1]\n  [4  1  1]",
+      "D": " [4  1  1]\n  [1  4  1]\n  [1  1  1]"
+    },
+    "correctOption": "D",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Support Vector Machines (SVM) and Kernel Methods (Kernel PCA)",
+    "context": "Kernel regression with a polynomial kernel is applied on the following dataset with two features:\nX = [[1, 0, 0], [0, 1, 0]]\u1d40, y = [2, 1, 2]\u1d40\nWeight vector can be written as w = \u03c6(X)\u03b1, where \u03c6 is the transformation mapping corresponding to the kernel k(x\u1d62, x\u2c7c) = (1 + x\u1d62\u1d40x\u2c7c)\u00b2. The vector \u03b1 is given by (K)\u207b\u00b9y, where K is the kernel matrix.",
+    "question": "What will be the prediction for the data point [1, -1]\u1d40? Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 2.31,
+      "max": 2.35
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "A binary classification dataset has 2000 data points belonging to {0, 1}\u00b2. A Naive Bayes algorithm was run on the same dataset, resulting in the following estimates:\np\u0302, estimate for P(y = 1) = 0.4\np\u0302\u2080\u00b9, estimate for P(f\u2081 = 1 | y = 0) = 0.25\np\u0302\u2080\u00b2, estimate for P(f\u2082 = 1 | y = 0) = 0.35\np\u0302\u2081\u00b9, estimate for P(f\u2081 = 1 | y = 1) = 0.15\np\u0302\u2081\u00b2, estimate for P(f\u2082 = 1 | y = 1) = 0.05",
+    "question": "What is the estimated value of P(f\u2082 = 0 | y = 1)? Write your answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.94,
+      "max": 0.96
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "A binary classification dataset has 2000 data points belonging to {0, 1}\u00b2. A Naive Bayes algorithm was run on the same dataset, resulting in the following estimates:\np\u0302, estimate for P(y = 1) = 0.4\np\u0302\u2080\u00b9, estimate for P(f\u2081 = 1 | y = 0) = 0.25\np\u0302\u2080\u00b2, estimate for P(f\u2082 = 1 | y = 0) = 0.35\np\u0302\u2081\u00b9, estimate for P(f\u2081 = 1 | y = 1) = 0.15\np\u0302\u2081\u00b2, estimate for P(f\u2082 = 1 | y = 1) = 0.05",
+    "question": "What will be the predicted label for the data point [1, 0]?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset: D = {(1, 2), (2, 2), (0, 1)}.",
+    "question": "Assume that leave one out cross validation is applied on this dataset and the model used is y = w\u2080 + w\u2081x. Suppose w = [w\u2080, w\u2081]\u1d40 be the weight obtained when (2, 2) is used in the validation set. Then calculate ||w||\u2082\u00b2.",
+    "options": null,
+    "correctOption": 2,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following feature vectors in R\u00b3:\nx\u2081 = [1, 2, 3]\u1d40, x\u2082 = [-1, -2, 0]\u1d40, x\u2083 = [3, 0, 1]\u1d40, x\u2084 = [0, 1, 4]\u1d40, x\u2085 = [2, -1, -3]\u1d40\nThe labels of these points are:\ny\u2081 = 0, y\u2082 = 1, y\u2083 = 1, y\u2084 = 0, y\u2085 = 1",
+    "question": "If we use a k-NN algorithm with k = 3, what would be the predicted label for the following test point:\nx_test = [1, 1, 2]\u1d40",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Suppose you want to use a Naive Bayes classifier to predict whether a student will pass or fail an exam based on two features: the number of hours they studied and whether they attended review sessions. Assume that the features are conditionally independent given the exam outcome and that the variances of the study hours distributions are equal for both pass and fail categories. How many parameters are required to classify a new student using this Naive Bayes classifier?",
+    "options": null,
+    "correctOption": 6,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Select all true statements.",
+    "options": {
+      "A": "In Decision tree, if a question Q\u2081 is \"better\" than question Q\u2082, then information gains for Q\u2081 is greater than information gains Q\u2082 always.",
+      "B": "The training dataset is not required while predicting the label of a test-point in the k-NN algorithm.",
+      "C": "A question of the form f\u2096 \u2264 \u03b8 always partitions the dataset into two non-empty sets.",
+      "D": "The depth of the tree is a hyperparameter and has to be chosen using cross validation.",
+      "E": "Decision trees are prone to underfit if the maximum depth is set too low."
+    },
+    "correctOption": ["A", "D", "E"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a binary classification problem with a training dataset of 100 points, evenly distributed between two classes (50 points in each class). You decide to train a k-NN algorithm with k = 3. Each point is considered its own neighbor during classification.",
+    "question": "What is the minimum number of misclassifications that can occur in the training dataset when using this k-NN algorithm?",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider a binary classification problem with a training dataset of 100 points, evenly distributed between two classes (50 points in each class). You decide to train a k-NN algorithm with k = 3. Each point is considered its own neighbor during classification.",
+    "question": "Assuming there are outliers, the decision boundary becomes smoother with decreasing value of k in a k-NN algorithm.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following linear regression model y\u1d62 | x\u1d62 = w\u1d40x\u1d62 + \u03b5\u1d62, where the noise \u03b5 ~ Normal(0, 1).",
+    "question": "For some \u03bb > 0, where \u03bb \u2208 R, MSE of w\u0302_ML is greater than MSE of w\u0302_Ridge.",
+    "options": {
+      "A": "TRUE",
+      "B": "FALSE"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the Bayesian formulation of the linear regression problem, where the prior for w is assumed to be w ~ Laplace(0, 2/\u03bb).\nHint: If X ~ Laplace(\u03bc, b), then f\u2093(x) = (1/(2b))e^(-|x-\u03bc|/b).",
+    "question": "Then, which among the following is true?",
+    "options": {
+      "A": "w\u0302_MAP = arg min_w \u03a3(w\u1d40x\u1d62 - y\u1d62)\u00b2 + \u03bb||w||\u2082\u00b2, where ||w||\u2082\u00b2 = \u03a3w\u1d62\u00b2",
+      "B": "w\u0302_MAP = arg max_w \u03a3(w\u1d40x\u1d62 - y\u1d62)\u00b2 + \u03bb||w||\u2082\u00b2, where ||w||\u2082\u00b2 = \u03a3w\u1d62\u00b2",
+      "C": "w\u0302_MAP = arg min_w \u03a3(w\u1d40x\u1d62 - y\u1d62)\u00b2 + \u03bb||w||\u2081, where ||w||\u2081 = \u03a3|w\u1d62|",
+      "D": "w\u0302_MAP = arg max_w \u03a3(w\u1d40x\u1d62 - y\u1d62)\u00b2 + \u03bb||w||\u2081, where ||w||\u2081 = \u03a3|w\u1d62|"
+    },
+    "correctOption": "C",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider a binary classification problem in which a decision tree is classifying data points into two classes, A and B. In a particular node of the tree, 60% of the data points belong to class A, while the remaining 40% belong to class B.",
+    "question": "Do you have enough information to find the entropy of this node?",
+    "options": {
+      "A": "Yes",
+      "B": "No"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider a binary classification problem in which a decision tree is classifying data points into two classes, A and B. In a particular node of the tree, 60% of the data points belong to class A, while the remaining 40% belong to class B.",
+    "question": "If the answer to the previous question is 'Yes,' calculate the entropy of this node to three decimal places. If the answer to the previous question is 'No,' enter -1 as your answer.",
+    "options": null,
+    "correctOption": {
+      "min": 0.94,
+      "max": 1.01
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2024",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider a linear regression model with loss L(w) = \u03a3(w\u1d40x\u1d62 - y\u1d62)\u00b2, where x\u1d62's are the d-dimensional training data points and y\u1d62's are their corresponding labels. For the optimal weight vector w*, which among the following is correct?",
+    "options": {
+      "A": "If we double all the values of y\u1d62, w* will also get doubled.",
+      "B": "If we double all the values of y\u1d62's, w* will get halved.",
+      "C": "If we double all the values of x\u1d62, w* will get halved.",
+      "D": "If we double all the values of x\u1d62, w* will also get doubled."
+    },
+    "correctOption": ["A", "C"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider real-valued variables X and Y. The variable Y is generated conditional on X as\n\nY = wX + \u03b5,   \u03b5 ~ N(0, \u03c3\u00b2),\n\nwhere \u03b5 is independent across observations. Let {(x\u1d62, y\u1d62)}\u1d62=\u2081\u207f be the observed dataset (x\u1d62 may be treated as fixed regressors). Assume \u03c3 > 0 is known.\n\nBased on the above data, answer the given subquestions.",
+    "question": "Which of the following equations correctly represents the maximum likelihood problem for estimating w?",
+    "options": {
+      "A": "arg max_w \u03a0\u1d62=\u2081\u207f (1 / \u221a(2\u03c0\u03c3\u00b2)) exp(-(y\u1d62 - wx\u1d62)\u00b2 / (2\u03c3\u00b2))",
+      "B": "arg max_w \u03a0\u1d62=\u2081\u207f exp(-(y\u1d62 - wx\u1d62)\u00b2 / (2\u03c3\u00b2))",
+      "C": "arg max_w (1 / (2\u03c3\u00b2)) \u03a3\u1d62=\u2081\u207f (y\u1d62 - wx\u1d62)\u00b2",
+      "D": "arg min_w (1 / (2\u03c3\u00b2)) \u03a3\u1d62=\u2081\u207f (y\u1d62 - wx\u1d62)\u00b2",
+      "E": "All of these."
+    },
+    "correctOption": ["A", "B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider real-valued variables X and Y. The variable Y is generated conditional on X as\n\nY = wX + \u03b5,   \u03b5 ~ N(0, \u03c3\u00b2),\n\nwhere \u03b5 is independent across observations. Let {(x\u1d62, y\u1d62)}\u1d62=\u2081\u207f be the observed dataset (x\u1d62 may be treated as fixed regressors). Assume \u03c3 > 0 is known.\n\nBased on the above data, answer the given subquestions.",
+    "question": "Derive the maximum likelihood estimate of the parameter w in terms of the training examples {(x\u1d62, y\u1d62)}\u1d62=\u2081\u207f.",
+    "options": {
+      "A": "\u0175_ML = (\u03a3\u1d62=\u2081\u207f x\u1d62y\u1d62) / (\u03a3\u1d62=\u2081\u207f x\u1d62\u00b2)",
+      "B": "\u0175_ML = (\u03a3\u1d62=\u2081\u207f y\u1d62) / (\u03a3\u1d62=\u2081\u207f x\u1d62)",
+      "C": "\u0175_ML = (\u03a3\u1d62=\u2081\u207f (x\u1d62 - x\u0304)(y\u1d62 - \u0233)) / (\u03a3\u1d62=\u2081\u207f (x\u1d62 - x\u0304)\u00b2)",
+      "D": "\u0175_ML = (\u03a3\u1d62=\u2081\u207f x\u1d62y\u1d62) / n \u03a3\u1d62=\u2081\u207f x\u1d62\u00b2"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following dataset with 4 features {f\u2081, f\u2082, f\u2083, f\u2084} and three labels y = 0, -1, +1. Assume the features to be binary. Answer the given subquestions under the Naive Bayes assumptions.\n\n-------------------------------------------------\nSample   f\u2081   f\u2082   f\u2083   f\u2084   y\n-------------------------------------------------\n1        1    0    1    0    0\n2        0    1    0    0    0\n3        1    1    0    0    +1\n4        1    1    1    0    +1\n5        0    0    1    1    -1\n6        0    0    0    1    -1\n-------------------------------------------------",
+    "question": "Find the maximum likelihood estimate p\u0302\u2081, p\u0302\u2082, and p\u0302\u2083 of P(y = 0), P(y = +1), and P(y = -1), respectively.",
+    "options": {
+      "A": "p\u0302\u2081 = 1/2, p\u0302\u2082 = 1/4, p\u0302\u2083 = 1/4",
+      "B": "p\u0302\u2081 = 1/3, p\u0302\u2082 = 1/3, p\u0302\u2083 = 1/3",
+      "C": "p\u0302\u2081 = 1/6, p\u0302\u2082 = 1/2, p\u0302\u2083 = 1/3",
+      "D": "p\u0302\u2081 = 1/4, p\u0302\u2082 = 1/2, p\u0302\u2083 = 1/4"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the following dataset with 4 features {f\u2081, f\u2082, f\u2083, f\u2084} and three labels y = 0, -1, +1. Assume the features to be binary. Answer the given subquestions under the Naive Bayes assumptions.\n\n-------------------------------------------------\nSample   f\u2081   f\u2082   f\u2083   f\u2084   y\n-------------------------------------------------\n1        1    0    1    0    0\n2        0    1    0    0    0\n3        1    1    0    0    +1\n4        1    1    1    0    +1\n5        0    0    1    1    -1\n6        0    0    0    1    -1\n-------------------------------------------------",
+    "question": "What class would x_test = [1, 1, 1, 1]\u1d40 belong to? Assume that no Laplacian smoothing has been done.",
+    "options": null,
+    "correctOption": 0,
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider the following dataset:\n\n-----------------------\nSample   x\u2081   x\u2082   y\n-----------------------\n1        1    0    2\n2        0    1    3\n3        1    1    4\n-----------------------\n\nSuppose we fit a linear regression model of the form \u0177 = w\u2081x\u2081 + w\u2082x\u2082. Compute the mean squared error for the training data. Enter the answer correct to two decimal places.",
+    "question": "Suppose we fit a linear regression model of the form \u0177 = w\u2081x\u2081 + w\u2082x\u2082. Compute the mean squared error for the training data. Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.09,
+      "max": 0.13
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": "Consider the following trained decision tree learned for the dataset in Figure 1.",
+    "question": "Find the training error of the decision tree for the given dataset. Enter the answer correct to one decimal place.",
+    "options": null,
+    "correctOption": 0.4,
+    "questionType": "numerical",
+    "image": "https://res.cloudinary.com/dnzudjm0y/image/upload/v1764323453/sep25-1_ggwvyb.png"
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": "Consider the email filtering problem. Suppose an email can be either spam or ham with probabilities p\u209b(1) and p\u2095(2) respectively. Let {u\u2081, u\u2082, ..., u\u2099} denote a collection of special words whose appearance suggests that the message is likely to be spam. Define the random variable X\u1d62 as\nX\u1d62 = {1, if the word u\u1d62 appears in the message, 0, otherwise.}\nAssume that the features X\u2081, X\u2082, ..., X\u2099 are conditionally independent given the class label \u0398. Assume that the probability of an email being spam is 0.4. Suppose there are three special words with the following conditional probabilities:\n\n----------------------------------------------------\nWord   P(X\u1d62 = 1 | \u0398 = 1)   P(X\u1d62 = 1 | \u0398 = 2)\n----------------------------------------------------\nu\u2081     0.8                 0.1\nu\u2082     0.7                 0.2\nu\u2083     0.6                 0.3\n----------------------------------------------------\n\nA new email represented as X = (X\u2081, X\u2082, X\u2083) contains the words u\u2081 and u\u2083, but not u\u2082, then compute P(\u0398 = 1|X). Enter the answer correct to two decimal places.",
+    "question": "A new email represented as X = (X\u2081, X\u2082, X\u2083) contains the words u\u2081 and u\u2083, but not u\u2082, then compute P(\u0398 = 1|X). Enter the answer correct to two decimal places.",
+    "options": null,
+    "correctOption": {
+      "min": 0.77,
+      "max": 0.83
+    },
+    "questionType": "numerical",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a dataset of 1000 points for a classification problem using k-NN algorithm. Select the correct statements from the following:",
+    "options": {
+      "A": "If k = 5, it is enough if we store any 5 points in the training dataset.",
+      "B": "If k = 5, we need to store the entire dataset.",
+      "C": "The number of data-points that we have to store increases as k increases.",
+      "D": "The number of data-points that we have to store is independent of the value of k."
+    },
+    "correctOption": ["B", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Probabilistic Models (MLE, Naïve Bayes) and k-Nearest Neighbors",
+    "context": null,
+    "question": "Consider a Naive Bayes binary classifier with class label Y \u2208 {0, 1} and feature vector X = (X\u2081, X\u2082, ..., X\u2099). The classifier predicts class 1 if P(Y = 1|X) > P(Y = 0|X), and class 0 otherwise. Which of the following represents the decision boundary of this classifier?",
+    "options": {
+      "A": "{x : P(Y = 1|X) = 0}",
+      "B": "{x : P(Y = 0|X) = 0}",
+      "C": "{x : P(Y = 1|X) = P(Y = 0|X)}",
+      "D": "{x : P(Y = 1) \u03a0\u1d62\u208c\u2081\u207f P(X\u1d62|Y = 1) = P(Y = 0) \u03a0\u1d62\u208c\u2081\u207f P(X\u1d62|Y = 0)}"
+    },
+    "correctOption": ["C", "D"],
+    "questionType": "multiple",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Ensemble Learning (Bagging, AdaBoost) and Decision Trees",
+    "context": null,
+    "question": "Consider a dataset {x\u2081, x\u2082, ..., x\u2099}, where x\u1d62 \u2208 \u211d\u00b2. Each of the features is binary. Find the maximum number of leaf nodes possible in the decision tree.",
+    "options": {
+      "A": "n",
+      "B": "2",
+      "C": "6",
+      "D": "4"
+    },
+    "correctOption": "B",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Suppose we observe data sampled from the model y ~ N(w\u1d40x, \u03c3\u00b2). Since w is unknown, we would like to estimate it using linear regression. Adding priors to the parameter w, i.e. w\u2c7c ~ N(0, \u03bb\u00b2) is equivalent to adding a L\u2082 penalty on the parameters in the objective function defined by the log-likelihood.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider a training dataset of n points for a regression problem. Suppose that the model is linear. Let w\u2081 and w\u2082 be the optimal weight obtained from solving the following optimization problems:\nw\u2081 = arg min_w \u03a3\u1d62=\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b2\nw\u2082 = arg min_w \u03a3\u1d62=\u2081\u207f (w\u1d40x\u1d62 - y\u1d62)\u00b3\nWhich among the following will be true?",
+    "options": {
+      "A": "w\u2081 will generalize better than w\u2082 on the test dataset.",
+      "B": "w\u2082 will generalize better than w\u2081 on the test dataset.",
+      "C": "Both the models will show similar performance on the test dataset."
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": "Consider four regression models (A, B, C, and D) fitted on the same dataset using Ridge or Lasso regression with different regularization parameters.\n\nModels:\nA. Ridge regression with \u03bb = 0\nB. Ridge regression with \u03bb = 5\nC. Lasso regression with \u03bb = 5\nD. Ridge regression with \u03bb = 10\n\nRegularization Effects:\n1. No regularization \u2014 same as Ordinary Least Squares (OLS)\n2. Strong shrinkage \u2014 coefficients are small but non-zero\n3. Moderate shrinkage \u2014 coefficients are reduced but not zero\n4. Some coefficients are exactly zero due to sparsity.",
+    "question": "Which of the following correctly matches the models with their effects?",
+    "options": {
+      "A": "A-1, B-3, C-4, D-2",
+      "B": "A-1, B-2, C-4, D-3",
+      "C": "A-1, B-3, C-2, D-4",
+      "D": "A-2, B-1, C-3, D-4"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  },
+  {
+    "subject": "MLT",
+    "exam": "quiz2",
+    "term": "Sept 2025",
+    "topic": "Linear Regression and Regularization Techniques (Ridge, Lasso)",
+    "context": null,
+    "question": "Consider a linear regression problem for the dataset {(x\u2081, y\u2081), . . . , (x\u2099, y\u2099)}, where x\u1d62 \u2208 \u211d and y\u1d62 \u2208 \u211d for all i. Let w* be the least square solution for this problem. Then, which of the following will hold?",
+    "options": {
+      "A": "(1/n) \u03a3\u1d62=\u2081\u207f (y\u1d62 - w*x\u1d62)x\u1d62 = 0",
+      "B": "(1/n) \u03a3\u1d62=\u2081\u207f (y\u1d62 - w*x\u1d62)y\u1d62 = 0",
+      "C": "(1/n) \u03a3\u1d62=\u2081\u207f (y\u1d62 - w*x\u1d62)(y - y\u1d62) = 0",
+      "D": "(1/n) \u03a3\u1d62=\u2081\u207f y\u1d62 - w*x\u1d62)(x - x\u1d62) = 0"
+    },
+    "correctOption": "A",
+    "questionType": "single",
+    "image": null
+  }
+]

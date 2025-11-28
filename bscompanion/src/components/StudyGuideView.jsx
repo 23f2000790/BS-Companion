@@ -105,7 +105,7 @@ const StudyGuideView = () => {
             <span className="info-badge subject-badge">{studyGuide.subject}</span>
             <span className="info-badge exam-badge">{studyGuide.exam.toUpperCase()}</span>
             <span className="info-badge questions-badge">
-              {studyGuide.questionsCount} Questions Analyzed
+              PYQs Analyzed
             </span>
           </div>
           <div className="topics-container">

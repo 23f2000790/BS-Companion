@@ -110,15 +110,67 @@ router.post("/generate", verifyToken, async (req, res) => {
       });
     }
 
-    // 3. Randomly select 30 questions (or all if less than 30)
-    const questionCount = Math.min(30, allQuestions.length);
-    const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
-    const selectedQuestions = shuffled.slice(0, questionCount);
+    // 3. Filter and Select Questions
+    const ALLOWED_TERMS = ["Sept 2024", "Jan 2025", "May 2025", "Sept 2025"];
+
+    // Filter by allowed terms
+    const filteredQuestions = allQuestions.filter((q) =>
+      ALLOWED_TERMS.includes(q.term)
+    );
+
+    if (!filteredQuestions.length) {
+      return res.status(404).json({
+        message: `No questions found for ${subject} - ${exam} with allowed terms`,
+      });
+    }
+
+    // Group by topic
+    const questionsByTopic = {};
+    filteredQuestions.forEach((q) => {
+      const topic = q.topic || "General";
+      if (!questionsByTopic[topic]) {
+        questionsByTopic[topic] = [];
+      }
+      questionsByTopic[topic].push(q);
+    });
+
+    const topicKeys = Object.keys(questionsByTopic);
+
+    // Shuffle questions within each topic
+    topicKeys.forEach((topic) => {
+      questionsByTopic[topic].sort(() => 0.5 - Math.random());
+    });
+
+    // Select balanced questions (Round Robin)
+    const TOTAL_QUESTIONS_NEEDED = 30;
+    const selectedQuestions = [];
+    let topicIndex = 0;
+    let emptyTopics = new Set();
+
+    while (
+      selectedQuestions.length < TOTAL_QUESTIONS_NEEDED &&
+      emptyTopics.size < topicKeys.length
+    ) {
+      const currentTopic = topicKeys[topicIndex];
+
+      if (!emptyTopics.has(currentTopic)) {
+        const question = questionsByTopic[currentTopic].pop();
+        if (question) {
+          selectedQuestions.push(question);
+        } else {
+          emptyTopics.add(currentTopic);
+        }
+      }
+
+      topicIndex = (topicIndex + 1) % topicKeys.length;
+    }
 
     // 4. Extract unique topics
     const topics = [
       ...new Set(selectedQuestions.map((q) => q.topic).filter(Boolean)),
     ];
+
+    const questionCount = selectedQuestions.length;
 
     // 5. Prepare data for AI
     const questionsForAI = selectedQuestions.map((q, idx) => ({
@@ -138,7 +190,7 @@ router.post("/generate", verifyToken, async (req, res) => {
 - Total Questions Analyzed: ${questionCount}
 
 **Your Task:**
-Generate a detailed, well-structured study guide based *specifically* on the patterns found in the provided questions.
+Generate a detailed, well-structured study guide based *specifically* on the patterns found in the provided questions. Your goal is to implement the famous saying - 80% of the marks come from 20% of the topics. Teach everything important in detail. 
 
 **CRITICAL FORMATTING RULES:**
 1. **Technical Terms:** ALWAYS use inline code format (backticks) for technical terms, function names, keywords, and specific libraries.
